@@ -1,0 +1,30 @@
+/* CSS reset */
+html{background:#fff;font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.white,.white a{color:#fff}.blue,.blue a{color:#004499}.gray4,a.gray4{color:#999}
+.red, .red a, a.red{color:red;}.green{color:#0E774A}
+select optgroup{color:#CAC8BB;}
+header{ display:block}
+body{text-align: center;}
+.wrapper{width:1000px;margin:0 auto;text-align: left;overflow: hidden;}
+/*goods-list*/
+.goods-list{width:1000px;margin-bottom:20px;padding-bottom:16px;text-align: center;overflow: hidden;}
+.goods-list dl{float:left;display:inline;border:1px solid #ccc;background: #fff;}
+.goods-list a{color:#000;}
+.goods-list a:hover,.goods-list em{color:#900;}
+.goods-list h3,.goods-list em{font-weight:700;font-size:14px;}
+.goods-list p{padding-top:5px;}
+.goods-list .price{margin-left:10px;color:#900;}
+.goods-list .btn{width:169px;height:33px;display:inline-block;zoom:1;background:url(button.png) no-repeat -14px -39px ;}
+.line3 dl{padding:10px 10px 0;width:290px;margin:16px 0 0 16px;}
+.line4,.line5{padding-bottom:10px;}
+.line4 dl{padding:5px 5px 0;width:225px;margin:10px 0 0 11px;}
+.line5 dl{padding:5px 5px 0;width:180px;margin:10px 0 0 7px;}
+.line4 h3,.line4 em,.line5 h3,.line5 em{font-weight:400;font-size:12px;}
+.line4 p span,.line5 p span{display: block;}
+.line4 .price,.line5 .price{margin-left:0;}
+.line4 .price em,.line5 .price em{font-weight:700;}
+.goods-list dl.bg-blue{background-color:#d5e9f9;}
+.goods-list dl.bg-green{background-color:#f0ffe5;}
+.goods-list dl.bg-orange{background-color:#fff6d7;}
