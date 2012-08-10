@@ -93,7 +93,8 @@ body{text-align: center;padding:0;}
 #top_shoppingcartInfo td a,#top_shoppingcartInfo td a:link,#top_shoppingcartInfo td a:hover{ text-decoration:none;}
 #top_gwc_saleQty,#top_gwc_saleAmount{ color:#fc2a14; font-weight:bold;}
 #wfc_gwc_eleG{ text-align:center; cursor:pointer;}
-span.jiesuan{display:inline-block; cursor:pointer; width:74px; height:26px; line-height:26px; font-weight:bold; background:url(../images/loginbt.png) no-repeat; border:none; color:#ffffff; text-align:center;}
+span.btn{ background:url(../images/loginbt.gif) 0px 0px; height:27px; line-height:27px; display:inline-block; padding-left:10px;}
+span.btn a{display:inline-block;text-decoration:none;outline:none; cursor:pointer;height:27px; line-height:27px; padding-right:10px; font-weight:bold; background:url(../images/loginbt.gif) no-repeat right top; color:#ffffff; text-align:center;}
 
 .list_top{ width:270px; overflow:hidden; margin-left:-38px;}
 .list_top .Empty{ width:40px; height:25px; float:left;}

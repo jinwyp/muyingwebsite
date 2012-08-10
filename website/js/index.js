@@ -46,14 +46,6 @@ var subItem_hover = function () {
     //		$(this).children(".subitem").hide();
     //		$(this).children(".subNavs").removeClass("curr");
     //	});
-//    $('#brand-list-1s,#brand-list-2s,#brand-list-3s').bxCarousel({
-//        display_num: 2,
-//        move: 2,
-//        auto: true,
-//        controls: false,
-//        margin: 0,
-//        auto_hover: true
-    //    });
     $('#brand-list').bxCarousel({
         display_num: 1,
         move: 1,
@@ -74,10 +66,8 @@ var hover_ShopCart = function () {
         jQuery("#wfc_head_gwc_div").css("display", "none");
     });
     jQuery("#wfc_gwc_eleG").mouseover(function () {
-
         //trigergetshoppingcart();
         jQuery("#wfc_head_gwc_div").css("display", "block");
-
     }).mouseout(function () { handle = setTimeout(function () { jQuery("#wfc_head_gwc_div").css("display", "none"); }, 2000); });
 }
 var hover_search_quick_item_Fun = function () {
