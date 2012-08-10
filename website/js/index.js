@@ -46,20 +46,21 @@ var subItem_hover = function () {
     //		$(this).children(".subitem").hide();
     //		$(this).children(".subNavs").removeClass("curr");
     //	});
-    $('#brand-list-1s').bxCarousel({
-
-        display_num: 2,
-
-        move: 2,
-
+//    $('#brand-list-1s,#brand-list-2s,#brand-list-3s').bxCarousel({
+//        display_num: 2,
+//        move: 2,
+//        auto: true,
+//        controls: false,
+//        margin: 0,
+//        auto_hover: true
+    //    });
+    $('#brand-list').bxCarousel({
+        display_num: 1,
+        move: 1,
         auto: true,
-
         controls: false,
-
         margin: 0,
-
         auto_hover: true
-
     });
 }
 var hover_ShopCart = function () {
