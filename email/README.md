@@ -41,7 +41,7 @@ edm制作注意事项：
 
 12.若邮件模板内侧边或者上下有空白间距.不要用padding，必须得用标准的td来设定空白间距，否则会导致各个邮箱解析不同。
 
-13.在yahoo邮箱里line-height要定义时的注意事项:需在块元素里定义line-height.如果td里有<p>标签，则line-height也必须在P里定义。无论是td还是P，如果有超链接，则都必须在a便签里面定义line-height。如果只是在td或者p里面定义line-height的话，那yaho。邮箱将无法识别a里面的行高。
+13.在yahoo邮箱里line-height要定义时的注意事项:需在块元素里定义line-height.如果td里有<p>标签，则line-height也必须在P里定义。无论是td还是P，如果有超链接，则都必须在a便签里面定义line-height。如果只是在td或者p里面定义line-height的话，那yahoo邮箱将无法识别a里面的行高。
 
 
 三、EDM邮件设计链接要求
