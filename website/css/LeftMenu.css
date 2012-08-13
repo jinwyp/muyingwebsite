@@ -47,10 +47,10 @@ body{text-align: center;padding:20px 0;}
 .category-side .sort-sub .categorys-brands{padding-bottom:10px;}
 .category-side .sort-sub .categorys-brands li{display:inline-block;width:90px;padding:3px 8px 3px 0;}
 
-.brand-wrap {padding:19px 0;float:left; position: relative;z-index:1;border-top:0 none;}
+.brand-wrap {padding:19px 0; _width:236px; _padding-left:2px; _overflow:hidden; float:left; position: relative;z-index:1;border-top:0 none;}
 .brand-list{width:238px; height:140px; overflow:hidden;}
 
 .brand-list li{float:left; width:238px; height:140px; display:inline;}
-.brand-list li a{float:left; display:inline-block; width:110px;height:40px;margin:5px 0 0 8px;}
+.brand-list li a{float:left; display:inline-block; width:110px;height:40px;margin:5px 0 0 8px; _margin:5px 0 0 7px;}
 .brand-list li img{border:1px solid #ccc;}
 

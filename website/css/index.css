@@ -191,20 +191,20 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 .main_one_ping #time_priod a#a4_c:hover,.main_one_ping #time_priod a#a4_c.hover{ background-position:-470px 0px; width:154px;}
 .main_one_ping #time_priod a#a5_c:hover,.main_one_ping #time_priod a#a5_c.hover{ background-position:-638px 0px; width:115px; margin-left:1px; margin-right:0px;}
 /**/
-.Item_banner{ float:left;}
-.Item_banner h3{float:left; display:inline-block;height:44px;}
-.Item_banner h3.mot1c{width:240px; background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;}
-.Item_banner h3.mot2c{width:240px; background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;}
-.Item_banner h3.mot3c{width:240px; background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;}
-.Item_banner h3.mot4c{width:240px; background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;}
-.Item_banner h3.mot5c{width:240px; background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;}
-.Item_banner .ulc{ float:left; display:inline; border-bottom:3px #FFDA71 solid; height:41px; width:760px;}
-.Item_banner .ulc ul{ float:right;}
-.Item_banner .ulc ul li{ float:left; padding-top:11px; line-height:30px; margin-right:15px;}
+.Item_banner{ float:left; float:left\0; float:left\9\0; *float:none; _float:none;}
+.Item_banner h3{float:left; display:inline-block; height:44px; width:240px; overflow:hidden;}
+.Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;}
+.Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;}
+.Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;}
+.Item_banner h3.mot4c{background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;}
+.Item_banner h3.mot5c{background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;}
+.Item_banner .ulc{ float:left; display:inline; border-bottom:3px #FFDA71 solid; height:41px; width:760px; overflow:hidden;}
+.Item_banner .ulc ul{ float:right; display:inline;}
+.Item_banner .ulc ul li{ float:left; display:inline; padding-top:11px; line-height:30px; margin-right:15px;}
 .Item_banner .ulc ul li a,.Item_banner .ulc ul li a:link,.Item_banner .ulc ul li a:visited{color:#898989;}
 .Item_banner .ulc ul li a.more,.Item_banner .ulc ul li a.more:link,.Item_banner .ulc ul li a.more:visited,.Item_banner .ulc ul li a:hover,.Item_banner .ulc ul li a:active{color:#FF7800;}
 /**/
-.Item_banner dl{width:100%; float:left;}
+.Item_banner dl{width:1000px; float:left; overflow:hidden;}
 .Item_banner dl dd{float:left;}
 .Item_banner dl dd ul{width:530px; overflow:hidden; margin-left:10px;}
 .Item_banner dl dd ul li{float:left; display:inline; border:1px #DFDFDF solid; width:160px; height:235px; margin-left:14px; _margin-left:13px; text-align:center; line-height:22px;}
@@ -213,7 +213,7 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 .Item_banner dl dd ul li del{color:#88889E; font-weight:bold; display:block;}
 .Item_banner dl dd ul li .price{font-size:14px; font-weight:bold; color:#bd0303;display:block;}
 /**/
-.Item_banner dl dd .Ri_Mub{border:1px #DFDFDF solid; width:208px; margin-left:10px; text-align:center;}
+.Item_banner dl dd .Ri_Mub{border:1px #DFDFDF solid; width:208px; margin-left:10px; text-align:center; overflow:hidden;}
 .Item_banner dl dd .Ri_Mub a{ display:block; width:204px; height:78px; margin:auto;}
 .Item_banner dl dd .Ri_Mub a.xi_c{border-bottom:1px #DFDFDF solid;}
 /**/
@@ -221,7 +221,7 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 .Item_banner .brand_C a{ float:left; display:inline-block; width:90px; height:40px; margin-left:9px;}
 /**********pinlun*********/
 .mainleft12s h4{padding:3px 0px 3px 10px;border-bottom:1px #e7e7e7 solid; background-color:#f9fafa; color:#000000; font-weight:bold;}
-.mainleft12s ul{width:100%; float:left; display:inline-block; margin-top:15px; margin-bottom:10px; margin-left:1px;}
+.mainleft12s ul{width:999px; float:left; overflow:hidden; display:inline-block; margin-top:15px; margin-bottom:10px; margin-left:1px;}
 .mainleft12s ul li{ float:left; display:inline; height:90px; overflow:hidden; }
 .mainleft12s ul li a.imgs{ float:left; display:inline-block; border:1px #e7e7e7 solid; margin-right:5px;margin-left:5px;}
 .mainleft12s ul li img{ float:left; display:inline-block; vertical-align:middle; padding:3px; }
