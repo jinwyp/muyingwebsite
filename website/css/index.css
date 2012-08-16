@@ -193,11 +193,11 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 /**/
 .Item_banner{ float:left; float:left\0; float:left\9\0; *float:none; _float:none;}
 .Item_banner h3{float:left; display:inline-block; height:44px; width:240px; overflow:hidden;}
-.Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;}
-.Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;}
-.Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;}
-.Item_banner h3.mot4c{background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;}
-.Item_banner h3.mot5c{background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;}
+.Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot4c{background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot5c{background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;text-indent:-9999px;}
 .Item_banner .ulc{ float:left; display:inline; border-bottom:3px #FFDA71 solid; height:41px; width:760px; overflow:hidden;}
 .Item_banner .ulc ul{ float:right; display:inline;}
 .Item_banner .ulc ul li{ float:left; display:inline; padding-top:11px; line-height:30px; margin-right:15px;}
