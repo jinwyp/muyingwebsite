@@ -1,4 +1,4 @@
-/* comm css */
+﻿/* comm css */
 html{background:#fff;font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
 *{margin:0;padding:0;}
 html{border:0;width:100%;}
@@ -193,11 +193,11 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 /**/
 .Item_banner{ float:left; float:left\0; float:left\9\0; *float:none; _float:none;}
 .Item_banner h3{float:left; display:inline-block; height:44px; width:240px; overflow:hidden;}
-.Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;}
-.Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;}
-.Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;}
-.Item_banner h3.mot4c{background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;}
-.Item_banner h3.mot5c{background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;}
+.Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot4c{background:url(../images/Mom_Zone_Four.gif) no-repeat left bottom;text-indent:-9999px;}
+.Item_banner h3.mot5c{background:url(../images/Mom_Zone_Five.gif) no-repeat left bottom;text-indent:-9999px;}
 .Item_banner .ulc{ float:left; display:inline; border-bottom:3px #FFDA71 solid; height:41px; width:760px; overflow:hidden;}
 .Item_banner .ulc ul{ float:right; display:inline;}
 .Item_banner .ulc ul li{ float:left; display:inline; padding-top:11px; line-height:30px; margin-right:15px;}
