@@ -112,9 +112,18 @@ var tag_select_Fun = function () {
 }
 //#region 时间段事件
 var time_priod_a_Hover = function () {
+    var loadingFix_success = function () {
+        $(".Loading").show();
+    };
+    var loadingFix_Fail = function () {
+        $(".Loading").hide();
+    };
     $(".main_one_ping #time_priod a").hover(function () {
         $(".main_one_ping #time_priod a").removeClass("hover");
         $(this).addClass("hover");
+        loadingFix_success();
+    }, function () {
+        $(".Loading").hide();
     });
 }
 //#endregion
@@ -153,6 +162,7 @@ var Every_Day_Timer = function () {
     }
 }
 //#endregion
+
 
 $(document).ready(function (e) {
     Banner();
