@@ -27,16 +27,14 @@
 .category_sort li{padding:5px 0 5px 25px;}
 .category_sort .current{font-weight:800;}
 /*goods_sort*/
-.goods_sort li{padding:6px 9px 7px;width:180px;border-bottom:1px dashed #ebebeb;overflow:hidden;}
-.goods_sort .num{float:left;text-align:center;color:#fff;margin-right:5px;background:#b1b1b1;margin-top:3px;width:12px;height:12px;font:800 9px/12px  Verdana, Geneva, sans-serif;}
+.goods_sort dl{padding:6px 10px 7px 20px;width:166px;border-bottom:1px dashed #ebebeb;overflow:hidden;position:relative;}
+.goods_sort .num{position:absolute;top:5px;left:5px;text-align:center;color:#fff;margin-right:5px;background:#b1b1b1;margin-top:3px;width:12px;height:12px;font:800 9px/12px  Verdana, Geneva, sans-serif;}
 .goods_sort .n01{background:#e60000;}
 .goods_sort .n02,.goods_sort span.n03{background:#ff7800;}
-.goods_sort li.c dl dt{float:left;width:180px;margin-bottom:5px;}
-.goods_sort li.c dl dd{padding-left:20px;}
-.goods_sort li.c dl dd img{float:left;border:1px solid #dedede;margin-right:10px;}
-.goods_sort li.c dl dd span{float:left;}
-.goods_sort li.c{height:95px;display:none;background:#fff}
-.goods_sort li.d{display:block;}
+.goods_sort dd{display:none;}
+.goods_sort dd img{float:left;border:1px solid #dedede;margin-right:10px;}
+.goods_sort dd p{padding-left:80px;padding-bottom:5px;}
+.goods_sort del,.goods_sort span{display:block;}
 .goods_sort del{color:#666;}
 .goods_sort .price_now{color:#e60000;font-weight:700;}
 

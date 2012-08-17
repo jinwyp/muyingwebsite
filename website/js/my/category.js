@@ -1,11 +1,12 @@
 //热销商品排行
 jQuery(function(){
-    $(".top5 li.d:first").eq(0).hide();
-    $(".top5 li.c:first").eq(0).show();
-    $(".top5 li.d").mouseover(function(){
-        var dsb = $(".top5 li.d").index(this);
-        $(".top5 li.d").eq(dsb).hide().siblings(".d").show();
-        $(".top5 li.c").eq(dsb).show().siblings(".c").hide();
+    $("#top5 dl:first dt").hide();
+    $("#top5 dl:first dd").show();
+    $("#top5 dl dt").mouseover(function(){
+        $("#top5 dl dt").show();
+        $("#top5 dl dd").hide();
+        $(this).hide().siblings("dd").show();
+
     });
 });
 //商品列表背景变化
