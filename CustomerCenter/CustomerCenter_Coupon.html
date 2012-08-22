@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/customer.css" rel="stylesheet" />
+</head>
+<body>
+<div class="out_div">
+    <div class="navMenu_border floatL">
+        <div class="navMenu_Container">
+            <h3 class="floatL">
+                订单中心</h3>
+            <dl class="ptMTop floatL">
+                <dd>
+                    <a href="CustomerCenter_Order.aspx" id="CustomerCenter_Order">我的订单</a></dd>
+                <dd>
+                    <a href="CustomerCenter_favorites.aspx" id="CustomerCenter_favorites">我的收藏</a></dd>
+                <dd>
+                    <a href="CustomerCenter_StockRegister.aspx" id="CustomerCenter_StockRegister">我的到货通知</a></dd>
+            </dl>
+            <h3 class="floatL">
+                账户中心</h3>
+            <dl class="ptMTop floatL">
+                <dd>
+                    <a href="CustomerCenter_Info.aspx" id="CustomerCenter_Info">基本信息</a></dd>
+                <dd>
+                    <a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">修改密码</a></dd>
+                <dd>
+                    <a href="CustomerCenter_Baby.aspx" id="CustomerCenter_Baby">宝宝信息</a></dd>
+                <dd>
+                    <a href="CustomerCenter_Consignee.aspx" id="CustomerCenter_Consignee">收货地址</a></dd>
+                <dd>
+                    <a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></dd>
+                <dd>
+                    <a href="CustomerCenter_MyPresent.aspx" id="CustomerCenter_MyPresent">礼品礼券</a></dd>
+                <dd>
+                    <a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon">优惠券</a></dd>
+                <dd>
+                    <a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></dd>
+            </dl>
+            <h3 class="floatL">
+                社区中心</h3>
+            <dl class="ptMTop floatL">
+                <dd>
+                    <a href="CustomerCenter_Consult.aspx" id="CustomerCenter_Consult">商品咨询</a></dd>
+                <dd>
+                    <a href="CustomerCenter_Discussion.aspx" id="CustomerCenter_Discussion">我的评价</a></dd>
+                <dd>
+                    <a href="CustomerCenter_Suggestion.aspx" id="CustomerCenter_Suggestion">投诉与建议</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="center_right floatL">
+    <div id="ConMain" class="center_right_Div">
+        <h3>
+            优惠券</h3>
+        <table class="wfc_table" cellpadding="0" cellspacing="0">
+            <tr>
+                <th class="c_width_1s">
+                    优惠券名称
+                </th>
+                <th class="c_width_2s">
+                    类型
+                </th>
+                <th class="c_width_3s">
+                    有效期
+                </th>
+                <th class="c_width_4s">
+                    备注
+                </th>
+                <th class="c_width_5s">
+                    <select>
+                        <option value="-1">状态</option>
+                        <option value="1">未激活</option>
+                        <option value="2">可使用</option>
+                        <option value="3">已使用</option>
+                        <option value="4">已作废</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <td class="c_width_1s">
+                    仔力奇鲨鱼肝油软胶囊立减20
+                </td>
+                <td class="c_width_2s">
+                    现金抵用券
+                </td>
+                <td class="c_width_3s">
+                    2012-08-12至2012-08-15
+                </td>
+                <td class="c_width_4s">
+                    购指定消费品满100.00元可用
+                </td>
+                <td class="c_width_5s wfc_status">
+                    <a href="#" class="font_color_use">可使用</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c_width_1s font_color_expired">
+                    全场纸尿裤满200立减20
+                </td>
+                <td class="c_width_2s font_color_expired">
+                    满减券
+                </td>
+                <td class="c_width_3s font_color_expired">
+                    2012-08-12至2012-08-15
+                </td>
+                <td class="c_width_4s font_color_expired">
+                    购纸尿裤满200.00元可用
+                </td>
+                <td class="c_width_5s wfc_status">
+                    <a href="#" class="font_color_expired">已使用</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="c_width_1s font_color_expired">
+                    全场奶粉满399立减40
+                </td>
+                <td class="c_width_2s font_color_expired">
+                    满减券
+                </td>
+                <td class="c_width_3s font_color_expired">
+                    2012-0712至2012-07-15
+                </td>
+                <td class="c_width_4s font_color_expired">
+                    购奶粉满399.00元可用
+                </td>
+                <td class="c_width_5s wfc_status">
+                    <a href="#" class="font_color_expired">可过期</a>
+                </td>
+            </tr>
+        </table>
+        <div class="wfc_Paging">
+            1页/1页&nbsp;&nbsp;每页10条/共3条</div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

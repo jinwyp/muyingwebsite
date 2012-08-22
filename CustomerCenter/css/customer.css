@@ -1,0 +1,29 @@
+*{margin:0px; padding:0px;}
+body{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}
+
+.out_div{ margin:0px auto; width: 1000px;}
+.center_right{ margin-left: 10px; width: 820px;}
+/***菜单部分***/
+.floatL{ float:left;}
+.navMenu_border{border:1px #F4F4F4 solid; width:168px; overflow:hidden; text-align:left;}
+.navMenu_Container{ width:166px; border:1px #F7F7F7 solid; height:500px; padding:1px;}
+.navMenu_Container h3{ display:block; border:1px #FEE0B1 solid; border-bottom:none; background:url(../images/menu01s.jpg) repeat-x; height:27px; width:152px; line-height:27px; font-size:14px; padding-left:10px;}
+.navMenu_Container dl.ptMTop{ margin:5px auto 15px auto;}
+.navMenu_Container dl dd{ float:left; display:inline; border-bottom:1px #F7F7F7 solid; width:164px}
+.navMenu_Container dl dd a,.navMenu_Container dl dd a:link{ display:block; width:154px; height:30px; padding-left:10px; background:url(../images/arw.png) no-repeat 150px 12px; text-align:left; text-decoration:none; color:#000000; font-size:14px; line-height:30px;}
+.navMenu_Container dl dd a:hover,.navMenu_Container dl dd a.selected{ background-color:#EBEBEB;}
+/***内容部分***/
+.center_right_Div{border:1px #F4F4F4 solid;}
+.center_right_Div h3{display:block; background:url(../images/ond.jpg) repeat-x; height:31px; line-height:31px; padding-left:15px;}
+.center_right_Div .wfc_table,.center_right_Div .wfc_Paging{width:96%; margin:10px auto;}
+.center_right_Div .wfc_table th{text-align:left; padding-left:5px; background-color:#F2F2F2; height:30px; line-height:30px; color:#666666; font-weight:bold; overflow:hidden;}
+.center_right_Div .wfc_table td{text-align:left; padding-left:5px; border-bottom:1px dotted #666666; height:40px; line-height:40px; overflow:hidden;}
+.c_width_1s{width:29%;}
+.c_width_2s{width:09%;}
+.c_width_3s{width:24%;}
+.c_width_4s{width:24%;}
+.c_width_5s{width:09%;}
+.wfc_table .font_color_expired,.wfc_table a.font_color_expired,.wfc_table a.font_color_expired:link,.wfc_table a.font_color_expired:visited,.wfc_table a.font_color_expired:hover,.wfc_table a.font_color_expired:active{color:#696969; text-decoration:none;}
+.wfc_table .font_color_use,.wfc_table a.font_color_use,.wfc_table a.font_color_use:link,.wfc_table a.font_color_use:visited,.wfc_table a.font_color_use:hover,.wfc_table a.font_color_use:active{color:#90B34D; text-decoration:none;}
+.wfc_table select{border:1px #626262 solid;background-color:#fff; color:#626262;}
+.wfc_table select option{ background-color:#fff; color:#000; border:none;}
