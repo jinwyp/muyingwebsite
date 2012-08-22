@@ -4,12 +4,10 @@ define(function(require, exports, module) {
 	var Backbone = require('backbone');
 	var _ = require('underscore');
 	
-	var userviewTemplate = require('http://localhost:8080/assets/m/templates/web/userview.tpl');
+	var userviewTemplate = require('baseurl/templates/userview.tpl');
 
-	window.UserView = Backbone.View.extend({		
-	
-		
-	        
+	window.UserView = Backbone.View.extend({
+
 		initialize: function(){
 			this.render();
 		},
@@ -26,7 +24,7 @@ define(function(require, exports, module) {
 		events: {
 	        "change" : "change",
 	        "click #modify_button" : "SaveUser",
-	        "click #del_button" : "delUser",	        
+	        "click #del_button" : "delUser"
 	    },	
 	    
         change: function (event) {
@@ -61,11 +59,9 @@ define(function(require, exports, module) {
 	            }
 	        });
 	        return false;
-	    },
-	    
+	    }
 	    
 	});
-
 
 })
 

@@ -9,10 +9,10 @@ define(function(require, exports, module) {
 	
 	    defaults: {
 	        id: null,
-	        username: "",
-	        password: "",
-	        email: "",
-	        datecreated: ""
+	        username: "clock ",
+	        password: "11111",
+	        email: "11111",
+	        datecreated: "12222"
 	    }			
 	});	
 	

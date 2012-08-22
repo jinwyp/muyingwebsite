@@ -5,14 +5,12 @@ define(function(require, exports, module) {
 	var _ = require('underscore');
 	
 	
-	var userlistsingleviewTemplate = require('http://localhost:8080/assets/m/templates/web/userlistsingleview.tpl');	
+	var userlistsingleviewTemplate = require('baseurl/templates/userlistsingleview.tpl');	
 
 	window.UserListSingleView = Backbone.View.extend({
 
 	    tagName: "li",		
 	    className: "userspan",
-	
-		
 		
 	    initialize: function () {
 	        this.model.bind("change", this.render, this);
