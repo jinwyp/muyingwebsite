@@ -1,4 +1,4 @@
-*{margin:0px; padding:0px;}
+﻿*{margin:0px; padding:0px;}
 body{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}
 
 .out_div{ margin:0px auto; width: 1000px;}
@@ -15,14 +15,14 @@ body{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;}
 /***内容部分***/
 .center_right_Div{border:1px #F4F4F4 solid;}
 .center_right_Div h3{display:block; background:url(../images/ond.jpg) repeat-x; height:31px; line-height:31px; padding-left:15px;}
-.center_right_Div .wfc_table,.center_right_Div .wfc_Paging,.center_right_Div ul{width:96%; margin:0px auto;}
+.center_right_Div .wfc_table,.center_right_Div ul{width:96%; margin:0px auto;}
 
 .center_right_Div ul{border-bottom:2px #FF7800 solid; height:31px; margin-top:10px;}
 .center_right_Div ul li{ float:left; display:inline-block; margin-right:5px;}
 .center_right_Div ul li a,.center_right_Div ul li a:link,.center_right_Div ul li a:visited{ background:url(../images/Coupon_02s.gif) no-repeat 0px 0px; display:inline-block; width:93px; height:31px; line-height:31px; color:#000; text-align:center; text-decoration:none; font-size:15px;}
 .center_right_Div ul li a.hover,.center_right_Div ul li a:hover,.center_right_Div ul li a:active{ font-weight:bold; color:#fff; background:url(../images/Coupon_03s.gif) no-repeat 0px 0px;}
 
-.center_right_Div .wfc_Paging,.center_right_Div .wfc_table{ margin-bottom:10px; display:none;}
+.center_right_Div .wfc_table{ margin-bottom:10px; display:none;}
 .center_right_Div .wfc_table th{text-align:left; padding-left:5px; background-color:#fff; border-bottom:1px #F0F0F0 solid; height:30px; line-height:30px; color:#666666; font-weight:normal; overflow:hidden;}
 .center_right_Div .wfc_table td{text-align:left; padding-left:5px; padding-top:7px; padding-bottom:7px; border-bottom:1px dotted #666666; line-height:20px; overflow:hidden; vertical-align:top;}
 .td_top_border{border-top:1px #FAFAFA solid;}

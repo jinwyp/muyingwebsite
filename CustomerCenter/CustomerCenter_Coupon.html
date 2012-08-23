@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="css/customer.css" rel="stylesheet" />
+
 </head>
 <body>
 <div class="out_div">
@@ -33,9 +34,7 @@
                 <dd>
                     <a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></dd>
                 <dd>
-                    <a href="CustomerCenter_MyPresent.aspx" id="CustomerCenter_MyPresent">礼品礼券</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon">优惠券</a></dd>
+                    <a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon" class="selected">优惠券</a></dd>
                 <dd>
                     <a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></dd>
             </dl>
@@ -118,8 +117,6 @@
                 </td>
             </tr>
         </table>
-        <div class="wfc_Paging font_color_expired">
-            1页/1页&nbsp;&nbsp;每页10条/共3条</div>
         <table class="wfc_table" cellpadding="0" cellspacing="0">
             <tr>
                 <th class="c_width_1s">
@@ -178,8 +175,6 @@
                 </td>
             </tr>
         </table>
-        <div class="wfc_Paging font_color_expired">
-            1页/1页&nbsp;&nbsp;每页10条/共13条</div>
         <table class="wfc_table" cellpadding="0" cellspacing="0">
             <tr>
                 <th class="c_width_1s">
@@ -238,8 +233,6 @@
                 </td>
             </tr>
         </table>
-        <div class="wfc_Paging font_color_expired">
-            1页/1页&nbsp;&nbsp;每页10条/共23条</div>
     </div>
     </div>
     </div>
@@ -250,18 +243,11 @@
         $("#ConMain .wfc_table:first,#ConMain .wfc_Paging:first").css("display", "block");
         $("#ConMain ul li a").click(function () {
             var wfc_table = $("#ConMain .wfc_table");
-            var wfc_Paging = $("#ConMain .wfc_Paging");
             var curt_index = $(this).index("#ConMain ul li a");
-
             $("#ConMain ul li a").removeClass("hover");
             $(this).addClass("hover");
-
             wfc_table.css("display", "none");
-            wfc_Paging.css("display", "none");
-
             wfc_table.eq(curt_index).css("display", "block");
-            wfc_Paging.eq(curt_index).css("display", "block");
-
         });
     })(jQuery);
 </script>
