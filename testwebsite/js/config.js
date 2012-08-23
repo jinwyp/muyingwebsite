@@ -1,5 +1,3 @@
-define(function(require) {	
-
 
 	seajs.config({
 		alias: {
@@ -23,5 +21,3 @@ define(function(require) {
 	
 	seajs.use('baseurl/js/init');
 	
-	
-});
