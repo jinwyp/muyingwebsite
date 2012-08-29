@@ -7,17 +7,18 @@
 .tab-select .current {background-color: #ff7800;color:#fff;}
 
 /*category*/
+.category-select{margin-bottom:20px;overflow:hidden;}
 .category-select li{float:left;display: inline;width:84px;height: 30px;margin-left:15px;display:inline;line-height: 30px;background-color: #fff6d7;text-align: center;cursor: pointer;color: #ff7800;font-weight:700;}
-.category-all {margin-top:20px;float:left;}
 .category-all .m {width: 485px;margin-bottom:10px;}
 .category-all .mt {height: 30px;line-height: 30px;background: url("../images/bg_allcategory.gif") repeat scroll 0 0 transparent;}
 .category-all .mt h2 {width:86px;text-align:right;font-weight:800;}
 .category-all dl {padding: 5px 0; width: 485px;border-bottom: 1px dashed #f4f4f4; line-height: 24px;overflow: hidden; }
-.category-all dt { float: left;margin-right: 10px; width: 86px;color: #ff7800;font-weight: 800;text-align: right; }
+.category-all dt { float: left;margin-right: 10px; width: 100px;color: #ff7800;font-weight: 800;text-align: right; }
 .category-all dt a {color: #ff7800;}
-.category-all dd {float: left;width: 364px;}
+.category-all dd {float: left;width: 350px;}
 .category-all dd em {float: left;}
 .category-all dd a {margin-right: 16px;white-space: nowrap;}
+
 
 /*brand*/
 .brand-list{width:auto;height:auto;}
