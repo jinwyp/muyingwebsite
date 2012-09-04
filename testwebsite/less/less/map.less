@@ -1,0 +1,78 @@
+.fl{float:left;}
+.fr{float:right;}
+.fb{font-weight:700;}
+.bg{background-color: #fff;}
+.border-top-left-radius (@radius) {
+    border-top-left-radius: @radius;
+    -moz-border-top-left-radius: @radius;
+    -webkit-border-top-left-radius: @radius;
+}
+.border-top-right-radius (@radius) {
+    border-top-right-radius: @radius;
+    -moz-border-top-right-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+}
+.border (@width: 1px, @type: solid, @color: #dedede) {
+    border:@arguments;
+}
+.border-bottom (@width: 1px, @type: solid, @color: #f4f4f4) {
+    border-bottom:@arguments;
+}
+
+@m10:10px;
+@color:#ff7800;
+@base-url:"../images";
+
+/*tab-select*/
+.tab-select {
+    width:100%;.border-bottom(3px,solid,@color);overflow: hidden;
+    li {
+        .fl;margin-right:@m10;height:@m10 * 3.2;padding:0 @m10 * 2;font:400 18px/32px "Microsoft Yahei",SimHei;cursor: pointer;.border-top-left-radius(6px);.border-top-right-radius(6px);
+    }
+    .current {
+        background-color: @color;color:#fff;
+    }
+}
+
+/*category*/
+.category-select{
+    margin-bottom:@m10 * 2;overflow:hidden;
+    li{.fl;width:@m10 * 8.4;height: @m10 * 3;margin-left:@m10 * 1.5;display:inline;line-height: @m10 * 3;background-color: #fff6d7;text-align: center;cursor: pointer;color: @color;.fb;}
+}
+.category-all {
+    .m {width: @m10 * 48.5;margin-bottom:@m10;}
+    .mt {height: @m10 * 3;line-height: @m10 * 3;background: url("@{base-url}/bg_allcategory.gif") repeat scroll 0 0 transparent;
+        h2 {width:@m10 * 8.6;text-align:right;.fb;}
+    }
+    dl {padding:@m10 / 2 0; width: @m10 * 48.5;.border-bottom(1px,dashed); line-height:  @m10 * 2.4;overflow: hidden;
+        dt { .fl;margin-right: @m10; width: @m10 * 10;color: @color;.fb;text-align: right;
+            a {color: @color;}
+        }
+        dd {.fl;width: @m10 * 35;
+            em {.fl;}
+            a {margin-right: @m10 * 1.6;white-space: nowrap;}
+        }
+    }
+}
+
+/*brand*/
+.brand-list{
+    width:auto;height:auto;
+}
+.brand-recommend{
+    width:@m10 * 99.8;margin-bottom: @m10 * 3;padding-bottom:@m10 * 1.5;.border();background-color: #f4f4f4;overflow: hidden;
+    h2{padding:@m10 0 0 @m10 * 1.2;.fb}
+}
+.brand-list {
+    dl{.fl; margin: @m10 0 0 @m10;display:inline;padding:0 @m10 / 2;width: @m10 * 10;height: @m10 * 7; .bg; border: 1px solid #dedede; text-align: center;
+        dt{padding-top:@m10 / 2;.border-bottom();margin-bottom:@m10 / 2;}
+    }
+}
+.brand-select{
+    position:relative;z-index:10;
+    li{.fl;width: @m10 * 9.6;height:@m10 * 3;margin-right:@m10 / 2 ;line-height: @m10 * 3;background-color: @color;text-align: center;cursor: pointer;color: #fff;.border-top-left-radius(3px);.border-top-right-radius(3px);}
+    &.current{width:@m10 * 9.4;.bg;color:#000;.fb;.border();border-bottom:(#fff);margin-bottom: -1px;}
+}
+.brandWrap{
+    .fl;position:relative;width:@m10 * 99.8;padding-bottom:@m10 * 1.5;.border();overflow: hidden;z-index: 9;
+}
