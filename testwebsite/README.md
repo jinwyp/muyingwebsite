@@ -1,15 +1,10 @@
-﻿mobile muying
+﻿网站使用新技术的尝试
 ============
 
-web app for muying
--------------
 
 
 文档结构
 -------------
-- jquerymobile 文件夹下是 jQueryMobile的原生js和css 还有jQueryMobile自带图片图标文件 在jquerymobile/images下
-- js文件夹是我们自己的js文件 myapp是测试用的
-- style 是我们自己的css文件,该内容一部分是jQueryMobile的主题样式,通过[themeroller](http://jquerymobile.com/themeroller/) 工具制作的css
-- images 是我们自己的图片文件
+1.  backbonewebsite 文件夹 是使用backbone 前端框架 和 seajs 框架 加载js 文件  作为的网站前端代码重构的尝试
+2.  lesswebsite 是使用less 作为替换css 样式做的尝试
 
-af af af af a
