@@ -4,8 +4,7 @@ define(function(require, exports, module) {
 	require('./model/categorymodel');
 	require('./collection/categorycollection');
 	
-	require('./views/userlistview');
-	require('./views/userview');
+
 
 
 	window.app = {
@@ -17,25 +16,26 @@ define(function(require, exports, module) {
 	var AppRouter = Backbone.Router.extend({
 	    routes: {    		
     			        
-	        "" : "userList",			//Twitter Bootstrap app
+	        "categorylist" : "categorylist"			//Twitter Bootstrap app
 
 	    },
 	
 	    initialize: function () {
 	        
 	    },
-		
-		userList: function(pageno) {
-            var song1 = new CategoryModel({ id: "How Bizarre", categoryname: "妈妈专区" });
-            var song2 = new CategoryModel({ id: "Sexual Healing", categoryname: "宝宝专区" });
 
-            app.collection.categoryList1 = new CategoryCollection([ song1,song2            })
+        categorylist: function(pageno) {
 
-            $("#bodybox").html(new UserListView01({model: app.collection.userList1}).el);
 
-	       /* app.collection.userList1.fetch({success: function(){
+            app.collection.categoryList1 = new CategoryCollection();
+            app.collection.categoryList1.fetch({success: function(){
+                console.log( "123");
+                app.view.categorylisttitle = new CategoryListTitleView({ model: app.collection.categoryList1 , el: $("#js_categorySelect") });
+/* 	            $("#rightbox").append(new UserListView({model: app.collection.userList1, el: $("#userlist")}).el ); */
 
-	        }});*/
+            }});
+
+
 	    }
 
 	
