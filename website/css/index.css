@@ -140,8 +140,8 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 .Item_banner dl dd .Ri_Mub a{ display:block; border-bottom:1px #dfdfdf solid;width:204px; height:76px;padding-top:1px;margin:auto;}
 
 /**/
-.Item_banner .brand_C{ float:left; border:1px #DFDFDF solid; height:40px; width:998px; padding-top:10px; padding-bottom:10px; overflow:hidden;}
-.Item_banner .brand_C a{ float:left; display:inline-block; width:90px; height:40px; margin-left:9px;}
+.Item_banner .brand_C{ float:left; border:1px #DFDFDF solid; height:30px; width:998px; padding:5px 0; padding-bottom:10px; overflow:hidden;}
+.Item_banner .brand_C a{ float:left; display:inline; width:102px; height:36px; margin:0 3px 0 5px;}
 /**********pinlun*********/
 .mainleft12s h4{padding:3px 0px 3px 10px;border-bottom:1px #e7e7e7 solid; background-color:#f9fafa; color:#000000; font-weight:bold;}
 .mainleft12s ul{width:999px; float:left; overflow:hidden; display:inline-block; margin-top:15px; margin-bottom:10px; margin-left:1px;}

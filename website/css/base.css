@@ -125,15 +125,16 @@ h5,h6{font-size:12px;}
 .subitem{position:absolute;z-index:12;top:-20px;left:230px;border:2px solid #FE7402;width:650px;display:none;background:url(../images/LeftMenu/category-sub_bg.gif) repeat-y;}
 .subitem dl {padding: 4px 0;border-top: 1px solid #FFEFD7;overflow: hidden;}
 .subitem dl a {color: #333;}
-.subitem dl dt{margin-bottom:4px;font-weight:700;}
+.subitem dl dt{padding-top:4px;font-weight:700;}
 .subitem dd {text-align: left;width: 400px;}
-.subitem dd a { border-left: 1px solid #ccc;padding: 0 8px;margin:4px 0;height:14px;line-height:14px;text-decoration: none;}
+.subitem dd a {float:left; border-left: 1px solid #ccc;padding: 0 8px;margin:4px 0;height:14px;line-height:14px;text-decoration: none; white-space:nowrap;}
 .category-side .category-sub{float:left;padding:0 10px;width:400px;}
 .category-side .sort-sub{float:right;width:220px;}
 .category-side .sort-sub h3{background:none;padding-left:0;}
 .category-side .sort-sub li{padding:3px 0;}
 .category-side .sort-sub .categorys-brands{padding-bottom:10px;}
-.category-side .sort-sub .categorys-brands li{display:inline-block;width:90px;padding:3px 8px 3px 0;}
+.category-side .sort-sub .categorys-brands li{float:left;width:90px;padding:3px 8px 3px 0;}
+.category-side .sort-sub .categorys-promotions{clear:both;}
 
 .brand-wrap {padding:19px 0; _width:236px; _padding-left:2px; _overflow:hidden; float:left; position: relative;z-index:1;border-top:0 none;}
 .brand-list{width:238px; height:140px; overflow:hidden;}
