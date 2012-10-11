@@ -1455,7 +1455,7 @@
         $("#topsectionPic2240").remove().appendTo(floatMain);
         $("div#right_div_yi").after(floatMain);
 
-        var Top = $("div.txtlink-mod:eq(0)").position().top,
+        var Top = floatMain.position().top,
             fw = floatMain.width(),fh = floatMain.height(),floatStyle,
             isIE6 = $.browser.msie&&($.browser.version == "6.0")&&!$.support.style,
             ieStyle = $("<style type='text/css'>#floatPic{margin:0px;padding:0px}#floatPic img{margin: 0px;padding: 0px;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}html .fixed-bottom{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}</style>");
@@ -1472,7 +1472,7 @@
         };
 
         $(window).scroll(function(){
-            if($(document).scrollTop()+$(window).height()<Top-fh){
+            if($(document).scrollTop()+$(window).height()<Top+fh){
                 if(floatStyle){return false}
                 if(!isIE6){
                     floatMain.css({
