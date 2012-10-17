@@ -130,7 +130,7 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 .Item_banner dl{width:1000px; float:left; overflow:hidden;}
 .Item_banner dl dd{float:left;}
 .Item_banner dl dd ul{width:530px; overflow:hidden; margin-left:10px;}
-.Item_banner dl dd ul li{float:left; display:inline; border:1px #dfdfdf solid; width:160px; height:233px; margin-left:14px; _margin-left:13px; text-align:center; line-height:22px;}
+.Item_banner dl dd ul li{float:left; display:inline; border:1px #dfdfdf solid; width:160px; height:233px; margin-left:14px; _margin-left:13px; text-align:center; line-height:16px;}
 .Item_banner dl dd ul li a.imgs{ display:block;}
 .Item_banner dl dd ul li .title{ color:#000000; display:block; height:28px;line-height: 14px; padding:0 20px; overflow:hidden;}
 .Item_banner dl dd ul li del{color:#88889E; font-weight:bold; display:inline;float: left;margin: 5px 0 5px 6px;width:47%;}

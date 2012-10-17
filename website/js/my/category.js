@@ -23,24 +23,32 @@ jQuery(function(){
         $(".sift .order li a").removeClass("selected");
         $(this).addClass("selected");
     })
+	
+	   $(".sift .order #liprice").click(function(){
+        if ($(this).hasClass("order_desc")){		
+			$(this).removeClass("order_desc").addClass("order_asc");
+		}else{
+			$(this).addClass("order_desc").removeClass("order_asc");
+		}
+	   });
 });
 jQuery(function(){
    $(".attrSelect li").each(function(){
    if($(this).children("dl").height() > 60){
-       $(this).append("<span class=\"more\">更多</span>");
+       $(this).append("<span class=\"more\">展开</span>");
        $(this).children("dl").height(60);
        $(this).children(".more").toggle(function(){
             $(this).siblings("dl").css({height:"auto"});
             $(this).html("收起")},function(){
                $(this).siblings("dl").height(60);
-               $(this).html("更多")}
+               $(this).html("展开")}
        );
     }
     });
 });
 
 jQuery(function() {
-    $("a.switch_thumb").toggle(function(){
+    $(".switch_thumb").toggle(function(){
         $(this).addClass("swap");
         $(".goods_display").fadeOut("fast", function() {
             $(this).fadeIn("fast").addClass("list_view");

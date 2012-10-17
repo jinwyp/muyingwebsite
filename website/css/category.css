@@ -8,7 +8,7 @@
 .category_sort .current{font-weight:800;}
 /*goods_sort*/
 .goods_sort dl{padding:6px 10px 7px 20px;width:166px;border-bottom:1px dashed #ebebeb;overflow:hidden;position:relative;}
-.goods_sort .num{position:absolute;top:5px;left:5px;text-align:center;color:#fff;margin-right:5px;background:#b1b1b1;margin-top:3px;width:12px;height:12px;font:800 9px/12px  Verdana, Geneva, sans-serif;}
+.goods_sort .num{position:absolute;top:5px;left:5px;text-align:center;color:#fff;margin-right:5px;background:#b1b1b1;margin-top:4px;width:12px;height:12px;font:800 9px/12px  Verdana, Geneva, sans-serif;border-radius:4px;}
 .goods_sort .n01{background:#e60000;}
 .goods_sort .n02,.goods_sort span.n03{background:#ff7800;}
 .goods_sort dd{display:none;}
@@ -27,14 +27,9 @@
 .goods_list p{padding-top:5px;}
 .goods_list p del{color:#666;margin-right:5px;}
 .goods_list p .price_now{color:#e60000;font-size:14px;font-weight:700;}
-.goods_list dl.hover{background-color:#fff6d7;}
+.goods_list dl.hover{background-color:#fff6d7; text-decoration:none;}
 .goods_list .btn_m_o {margin-right:5px;}
 
-.list_view .goods_list dl{width:780px;margin: 10px 0 0;border-bottom:1px solid #dedede;background: #fff;}
-.list_view .goods_list dl dt{float:left;width:160px;}
-.list_view .goods_list dl dd{float:right;width:600px;text-align:left;}
-.list_view .goods_list p del,.id_list .goods_list p .price_now{display: block;padding-top:5px;}
-.list_view .goods_list p.price_wrap{margin-bottom:40px;}
 
 /*slide*/
 .slideCat{position:relative;overflow:hidden;margin-bottom:10px;}
@@ -54,13 +49,15 @@
 .attrSelect ul li dd{float:left;display:inline-block; padding-right:10px; height:30px; width:120px;}
 .attrSelect ul li dl{float:right;width:680px;overflow: hidden;}
 .attrSelect ul li strong{float:left;width:80px;text-align: center;font-weight:800;}
-.attrSelect dd a:hover,.attrSelect dd a.selected{ background-color:#ff7800; color:#fff; font-weight:bold;padding:3px 5px;}
+.attrSelect dd a:hover,.attrSelect dd a.selected{display:inline-block; height:22px;line-height:22px;padding:0 5px;background-color:#ff7800; color:#fff; font-weight:bold;text-decoration:none;border-radius: 4px;}
 .attrSelect ul li .more{position: absolute;right:0;top:10px;color:#e60000;cursor: pointer;}
 .sift {height:30px;line-height: 30px;margin-top:10px;border-bottom: 2px solid #ff7800;}
-.sift .order{float:left;width:350px;}
-.sift .order li{float:left;margin-right:2px;}
-.sift .order li a{width:66px;height:30px;display:block;background:#f4f4f4;font-weight:800;text-align:center;cursor: pointer}
-.sift .order li a.selected,.sift .order li a:hover{background: #ff7800;color:#fff;}
+.order{float:left;width:350px;}
+.order li{float:left;margin-right:2px;}
+.order a{width:66px;height:30px;display:block;background:#f4f4f4;font-weight:800;text-align:center;cursor: pointer;border-top-left-radius: 6px;border-top-right-radius:6px;}
+.order .selected,.order a:hover{background-color: #ff7800;color:#fff;text-decoration:none;}
+.order .order_desc{background:#ff7800 url(../images/icon_order.gif) no-repeat 2px 0;}
+.order .order_asc{background:#ff7800 url(../images/icon_order.gif) no-repeat 2px -30px;}
 .showStyle {float:left;margin-left:60px;_margin-top:8px;display:inline;}
 .showStyle a.switch_thumb{width:38px;height:16px;display:inline-block; vertical-align:middle;background:url(../images/icon_showstyle.gif) no-repeat 0 0;cursor: pointer;}
 .showStyle a.switch_thumb:hover{opacity: 0.75;}
