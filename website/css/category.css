@@ -28,7 +28,7 @@
 .goods_list p del{color:#666;margin-right:5px;}
 .goods_list p .price_now{color:#e60000;font-size:14px;font-weight:700;}
 .goods_list dl.hover{background-color:#fff6d7; text-decoration:none;}
-.goods_list .btn_m_o {margin-right:5px;}
+.goods_list .btn_m_o {margin-right:10px;_margin-right:5px;}
 
 
 /*slide*/
