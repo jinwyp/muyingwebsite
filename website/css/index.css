@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .first-screen{float:right;width:754px;height:950px;overflow:hidden}
 #mainleft03s{float:left;display:inline;width:545px}
 #main_children_Content{width:200px;float:right;display:inline;overflow:hidden}
@@ -76,7 +75,6 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 #time_priod a#a5_c:hover,#time_priod a#a5_c.hover{background-position:-638px 0;width:115px;margin-left:1px;margin-right:0}
 .Item_banner{float:left;float:left\0;float:left\9\0;*float:none;_float:none}
 .Item_banner h3{float:left;display:inline-block;height:44px;width:240px;overflow:hidden}
-=======
 
 .re_a{width: 1000px; margin: 0 auto;}
 .out_div{width:960px; margin:0 auto;font:12px/1.5 Verdana, Arial, Helvetica, sans-serif;}
@@ -194,7 +192,6 @@ a.wantGo,a.wantGo:link,a.wantGo:visited,a.wantGo:hover,a.wantGo:active{backgroun
 /**/
 .Item_banner{ float:left; float:left\0; float:left\9\0; *float:none; _float:none;clear:both;}
 .Item_banner h3{float:left; display:inline-block; height:44px; width:240px; overflow:hidden;}
->>>>>>> css reback
 .Item_banner h3.mot1c{background:url(../images/Mom_Zone_one.gif) no-repeat left bottom;text-indent:-9999px}
 .Item_banner h3.mot2c{background:url(../images/Mom_Zone_two.gif) no-repeat left bottom;text-indent:-9999px}
 .Item_banner h3.mot3c{background:url(../images/Mom_Zone_Three.gif) no-repeat left bottom;text-indent:-9999px}
