@@ -19,16 +19,19 @@ $(".goods_list dl").hover(function(){
 });
 //筛选
 jQuery(function(){
-    $(".sift .order li a").click(function(){
-        $(".sift .order li a").removeClass("selected");
-        $(this).addClass("selected");
+    $(".sift .order a:not(#liprice)").click(function(){		
+        $(".sift .order a").removeClass("selected order_desc order_asc");
+        $(this).addClass("selected");		
+		
     })
 	
-	   $(".sift .order #liprice").click(function(){
-        if ($(this).hasClass("order_desc")){		
+	   $(".sift .order a#liprice").click(function(){
+		$(".sift .order a").removeClass("selected");
+        if ($(this).hasClass("order_desc")){			 	
 			$(this).removeClass("order_desc").addClass("order_asc");
 		}else{
 			$(this).addClass("order_desc").removeClass("order_asc");
+			
 		}
 	   });
 });

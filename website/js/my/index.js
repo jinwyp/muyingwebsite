@@ -2,7 +2,7 @@ var Banner = function () {
     var Up = function () {
         jQuery("#banner").slideUp(1500);
         jQuery("#close").css("background", "url(http://img.muyingzhijia.com/images/close-open.png) no-repeat");
-    }
+    };
     //setTimeout(Up, 5000);
     jQuery("#close").click(function () {
         jQuery("#banner").slideToggle(600, function () {
@@ -14,7 +14,7 @@ var Banner = function () {
             }
         });
     });
-}
+};
 //顶部伸展广告
 var BannerTwo = function () {
     if (jQuery("#js_ads_banner_top_slide").length) {
@@ -30,7 +30,7 @@ var BannerTwo = function () {
             });
         }, 6000);
     }
-}
+};
 var subItem_hover = function () {
     $(".item").hover(function () {
         $(this).children(".subitem").show();
@@ -39,13 +39,6 @@ var subItem_hover = function () {
         $(this).children(".subitem").hide();
         $(this).removeClass("curr");
     });
-    //	$(".item").hover(function () {
-    //		$(this).children(".subitem").show();
-    //		$(this).children(".subNavs").addClass("curr");
-    //	}, function () {
-    //		$(this).children(".subitem").hide();
-    //		$(this).children(".subNavs").removeClass("curr");
-    //	});
     $('#brand-list').bxCarousel({
         display_num: 1,
         move: 1,
@@ -54,62 +47,47 @@ var subItem_hover = function () {
         margin: 0,
         auto_hover: true
     });
-}
+};
+
 var hover_ShopCart = function () {
     var handle = null;
-    jQuery("#wfc_head_gwc_div").mouseover(function () {
+    jQuery("#cartList").mouseover(function () {
         clearTimeout(handle);
-        if (jQuery("#wfc_head_gwc_div").is(":hidden")) {
-            jQuery("#wfc_head_gwc_div").css("display", "block");
+        if (jQuery("#cartList").is(":hidden")) {
+            jQuery("#cartList").show("");
         }
     }).mouseout(function () {
-        jQuery("#wfc_head_gwc_div").css("display", "none");
-    });
-    jQuery("#wfc_gwc_eleG").mouseover(function () {
-        //trigergetshoppingcart();
-        jQuery("#wfc_head_gwc_div").css("display", "block");
-    }).mouseout(function () { handle = setTimeout(function () { jQuery("#wfc_head_gwc_div").css("display", "none"); }, 2000); });
-}
+            jQuery("#cartList").hide("");
+        });
+    jQuery("#cartInfo").mouseover(function () {
+        jQuery("#cartList").show("");
+    }).mouseout(function () { handle = setTimeout(function () { jQuery("#cartList").hide(""); }, 2000); });
+};
+
+var hover_myContent = function () {
+      var handle = null;
+    jQuery("#myContent").mouseover(function () {
+        clearTimeout(handle);
+        if (jQuery("#myContent").is(":hidden")) {
+            jQuery("#myContent").show("");
+        }
+    }).mouseout(function () {
+            jQuery("#myContent").hide("");
+        });
+    jQuery("#myTitle").mouseover(function () {
+        jQuery("#myContent").show("");
+    }).mouseout(function () { handle = setTimeout(function () { jQuery("#myContent").hide(""); }, 2000); });
+};
+
 var hover_search_quick_item_Fun = function () {
-    $(".search-quick").hover(function () {
-        $("#search-quick-item").show();
-        $("#search-quick-item").hover(function () { $(this).show(); }, function () { $(this).hide(); });
+    $("#searchTitle").hover(function () {
+        $("#searchArea").show();
+        $("#searchArea").hover(function () { $(this).show(); }, function () { $(this).hide(); });
     }, function () {
-        $("#search-quick-item").hide();
+        $("#searchArea").hide();
     });
-}
-var tag_select_Fun = function () {
-    $("#search-quick-item span.select_span").click(function (event) {
-        var index_cur = $("#search-quick-item span.select_span").index(this);
-        var style_cs = $("#search-quick-item #sub" + index_cur).attr("style");
-        //alert(style_cs +":"+ "display: block");
-        $("#search-quick-item ul.sub").hide();
-        style_cs = style_cs == "display: block" ? $("#search-quick-item #sub" + index_cur).attr("style", "display: none") : $("#search-quick-item #sub" + index_cur).attr("style", "display: block");
-        //(event || window.event).cancelBubble = true;
+};
 
-        //鼠标划过
-        $("#search-quick-item #sub" + index_cur + " li").mouseover(function () {
-            this.className = "hover";
-        });
-        //鼠标离开
-        $("#search-quick-item #sub" + index_cur + " li").mouseout(function () {
-            this.className = "";
-        });
-        //鼠标点击
-        $("#search-quick-item #sub" + index_cur + " li").click(function () {
-            $("#search-quick-item span.select_span").eq(index_cur).html(this.innerHTML);
-            $("#search-quick-item ul.sub").hide();
-        });
-    });
-
-    $("#search-quick-item ul.sub").hide();
-
-
-//        $(document).click(function () {
-//            $("#search-quick-item ul.sub").hide();
-//        });
-
-}
 //#region 时间段事件
 var time_priod_a_Hover = function () {
     var loadingFix_success = function () {
@@ -125,7 +103,7 @@ var time_priod_a_Hover = function () {
     }, function () {
         $(".Loading").hide();
     });
-}
+};
 //#endregion
 
 //#region 新闻滚动
@@ -139,7 +117,7 @@ var News_scroll = function () {
         if (!stop) box.scrollTop == parseInt(box.scrollHeight / 2) ? box.scrollTop = 0 : box.scrollTop++;
         setTimeout(arguments.callee, box.scrollTop % 18 ? 10 : 1500);
     };
-}
+};
 //#endregion
 
 //#region 天天特价时间
@@ -160,7 +138,7 @@ var Every_Day_Timer = function () {
             window.clearInterval(InterValObj1);
         }
     }
-}
+};
 //#endregion
 
 
@@ -169,8 +147,8 @@ $(document).ready(function (e) {
     BannerTwo();
     subItem_hover();
     hover_ShopCart();
+    hover_myContent();
     hover_search_quick_item_Fun();
-    tag_select_Fun();
     time_priod_a_Hover();
     News_scroll();
     Every_Day_Timer();
