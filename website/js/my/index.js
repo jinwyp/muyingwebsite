@@ -96,8 +96,8 @@ var time_priod_a_Hover = function () {
     var loadingFix_Fail = function () {
         $(".Loading").hide();
     };
-    $(".main_one_ping #time_priod a").hover(function () {
-        $(".main_one_ping #time_priod a").removeClass("hover");
+    $("#time_guide a").hover(function () {
+        $("#time_guide a").removeClass("hover");
         $(this).addClass("hover");
         loadingFix_success();
     }, function () {
@@ -108,7 +108,7 @@ var time_priod_a_Hover = function () {
 
 //#region 新闻滚动
 var News_scroll = function () {
-    var box = document.getElementById("div1"), can = true;
+    var box = document.getElementById("notice"), can = true;
     box.innerHTML += box.innerHTML;
     box.onmouseover = function () { can = false };
     box.onmouseout = function () { can = true };
