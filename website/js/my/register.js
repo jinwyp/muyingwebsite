@@ -102,7 +102,7 @@ $(function(){
         .inputValidator({
             min:1,
             max:1,
-            onError:"你快给我选！！！！"
+            onError:"请选择"
         });
     $("#code")
         .formValidator({
@@ -114,7 +114,7 @@ $(function(){
         .inputValidator({
             min:4,
             max:4,
-            onError:"你快给我填！！！！"
+            onError:"请填写验证码"
         });
     $("#agreement")
         .formValidator({
