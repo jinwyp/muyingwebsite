@@ -181,7 +181,7 @@ input{border:0 none;vertical-align:middle}
 .txtlink-mod{padding-bottom:10px;margin-top:20px;background-color:#f4f4f4;font-family:"Microsoft Yahei",SimHei,Verdana, Geneva, sans-serif;overflow: hidden;}
 .my-culture dl{float:left;padding-left:30px;width:220px;height:46px;line-height: 46px;}
 .my-culture dl dt{float:left;margin-right:6px;font-size:24px;color: #ff7800;text-shadow: 0 1px 0 #fff;}
-.my-culture dl dd{float:left;padding-top:2px;color:#82be0e;}
+.my-culture dl dd{float:left;padding-top:6px;color:#666666;}
 
 .help-mod{float:left;margin-left:10px;padding:10px;display:inline;width:960px;background-color: #fff;border-radius: 6px;}
 .help-mod dl{float:left;padding-left:32px;width:148px;background:url("../images/icon_help_mod.gif") no-repeat;}
