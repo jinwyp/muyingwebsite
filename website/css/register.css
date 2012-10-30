@@ -40,21 +40,20 @@
     overflow: hidden;
     zoom:1;
 }
-.sign-right-list input{
-    width: auto;
-    margin: 0;
-    padding: 0;
-}
-.sign-right-list input.signin{
+.sign-right-list a.signin{
     width:101px;
     height:30px;
-    cursor: pointer;
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
     background: url(../images/sign-icons.png) no-repeat 0 -33px
 }
-.sign-right-list input.signup{
+.sign-right-list a.signup{
     width:101px;
     height:30px;
-    cursor: pointer;
+    display: block;
+    text-indent: -999em;
+    overflow: hidden;
     background: url(../images/sign-icons.png) no-repeat -101px -33px
 }
 .sign-right-list li{
