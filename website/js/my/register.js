@@ -129,7 +129,9 @@ $(function(){
             onError:"你还没有同意用户协议"
         });
 
-    selectView.keySwitch($(".sliderBox li"),$("#email"),$("#email"));
+    //selectView.keySwitch($(".sliderBox li"),$("#email"),$("#email"));
+    $("#email").selectView();
+    $("#login-email").selectView();
 });
 
 //登录部分
@@ -142,7 +144,7 @@ $(function(){
             });
             $this.keydown(function(){
                 $this.css({
-                    color:"#000",
+                    color:"#000"
                 });
             })
         }).blur(function(){
@@ -186,104 +188,108 @@ $(function(){
 });
 
 
-//邮箱地址下拉部分
-var selectView = {
-    keySwitch:function(oo,ele,valuer){
-        //参数说明：参数要为$对象，否则报错。{oo:列表项,ele:触发焦点，valuer：显示返回值}
-        var obj = oo.eq(0);
-        var oo = oo;
-        var valuer = valuer;
-
-        function PrintVal(v){
-            if(oo.parent().is(":hidden")){return false}
+//jQuery 邮箱地址下拉部分插件
+(function($){
+    $.fn.selectView = function(options){
+        var elist = ($("ul.sliderBox").length>0)?$("ul.sliderBox"):$('<ul class="sliderBox"><li class="seleceted">@sina.com</li><li>@163.com</li><li>@qq.com</li><li>@126.com</li><li>@vip.sina.com</li><li>@sina.cn</li><li>@hotmail.com</li><li>@gmail.com</li><li>@sohu.com</li><li>@yahoo.cn</li><li>@139.com</li><li>@wo.com.cn</li><li>@189.com</li><li>@21cn.com</li><li>@muyingzhijia.com</li></ul>').appendTo("body");
+        var defaults = {
+            valuer:options?(options.valuer||$(this)):$(this),//指定input
+            oo:options?(options.oo||elist):(elist)//邮箱地址列表
+            };
+        var opts = $.extend({},defaults ,options);
+        var obj = opts.oo.children("li:eq(0)");
+        var oo = opts.oo;
+        var valuer = opts.valuer;
+        var PrintVal = function (v){
+            if(oo.is(":hidden")){return false}
             valuer.val(v);
-            oo.parent().hide();
-        }
-
-        function SwitchTo(targ){
+            oo.hide();
+        };
+        var SwitchTo = function (targ){
             obj.removeClass("seleceted");
             obj = targ;
             obj.addClass("seleceted");
-        }
+        };
 
-        //鼠标选择
-        oo.click(function(event){
-            event.stopPropagation();
-            SwitchTo($(event.target));
-            valuer.val(obj.text());
-            oo.parent().hide();
-            if(valuer.parents("li").next().find("input").length>0)
-                valuer.parents("li").next().find("input").focus();
-            return false
-        });
+        return opts.valuer.each(function(){
+            //鼠标选择
+            var _ = $(this);
+            oo.click(function(event){
+                SwitchTo($(event.target));
+                _.val(obj.text());
+                oo.hide();
+                if(_.parents("li").next().find("input").length>0)
+                    _.parents("li").next().find("input").focus();
+                console.log("click")
+                return false
+            });
 
-        //焦点事件
-        valuer.focus(function(){
-                oo.parent().css({
-                    left:valuer.offset().left,
-                    top:valuer.offset().top+valuer.outerHeight(),
-                    width:valuer.outerWidth()-2
+            //焦点事件
+            _.focus(function(){
+                oo.css({
+                    left:_.offset().left,
+                    top:_.offset().top+_.outerHeight(),
+                    width:_.outerWidth()-2
                 });
             });
 
-        $(document).click(function(){
-            oo.parent().hide()
-        });
+            $(document).click(function(){
+                oo.hide()
+            });
 
-        //监听键盘事件
-        valuer.keyup(function(e){
-            e.stopPropagation();
-            e.preventDefault();
-            var v = $(this).val();
-            var m = v.split("@")[1]||"";
-            var r = [];
-            if(v==""){return false}
-
-            //判断邮箱地址是否输入完成
-            if(m.indexOf(".com")>-1||m.indexOf(".cn")>-1||m.indexOf(".net")>-1){
-                obj.parent().hide();
-            }else{
-                obj.parent().show()
-            }
-
-            oo.each(function(){
-                if($("span",this).length<1){
-                    var fstnode = this.childNodes[0];
-                    $("<span></span>").insertBefore(fstnode);
+            //监听键盘事件
+            _.keyup(function(e){
+                e.stopPropagation();
+                e.preventDefault();
+                var v = $(this).val();
+                var m = v.split("@")[1]||"";
+                var r = [];
+                if(v==""){return false}
+                //判断邮箱地址是否输入完成
+                if(m.indexOf(".com")>-1||m.indexOf(".cn")>-1||m.indexOf(".net")>-1){
+                    oo.hide();
+                }else{
+                    oo.show()
                 }
-                $("span",this)[0].innerHTML = v.split("@")[0];
-                //简单匹配
-                var M = this.innerHTML.split("@")[1];
-                if(M.indexOf(m)>-1 && m!==""){
-                    r.push(this)
+
+                $("li",oo).each(function(){
+                    if($("span",this).length<1){
+                        $("<span></span>").insertBefore(this.childNodes[0]);
+                    }
+                    $("span",this)[0].innerHTML = v.split("@")[0];
+                    //简单匹配
+                    var M = this.innerHTML.split("@")[1];
+                    if(M.indexOf(m)>-1 && m!==""){
+                        r.push(this)
+                    }
+                });
+
+                switch (e.which){
+                    case 40:
+                        if(obj.next().length==0||obj.prev().length==0){
+                            SwitchTo(obj.siblings().eq(0))
+                        }else{
+                            SwitchTo(obj.next())
+                        }
+                        break;
+                    case 38:
+                        if(obj.next().length==0||obj.prev().length==0){
+                            SwitchTo(obj.siblings().last())
+                        }else{
+                            SwitchTo(obj.prev())
+                        }
+                        break;
+                    case 13:
+                        PrintVal(obj.text());
+                        if(_.parents("li").next().find("input").length>0)
+                            _.parents("li").next().find("input").focus();
+                        break;
+                    default:
+                        SwitchTo(($(r[0]).length==0)?obj:$(r[0]))
+
                 }
             });
 
-            switch (e.which){
-                case 40:
-                    if(obj.next().length==0||obj.prev().length==0){
-                        SwitchTo(obj.siblings().eq(0))
-                    }else{
-                        SwitchTo(obj.next())
-                    }
-                    break;
-                case 38:
-                    if(obj.next().length==0||obj.prev().length==0){
-                        SwitchTo(obj.siblings().last())
-                    }else{
-                        SwitchTo(obj.prev())
-                    }
-                    break;
-                case 13:
-                    PrintVal(obj.text());
-                    if(valuer.parents("li").next().find("input").length>0)
-                    valuer.parents("li").next().find("input").focus();
-                    break;
-                default:
-                    SwitchTo(($(r[0]).length==0)?obj:$(r[0]))
-
-            }
-        });
-
-    }
-};
+        })
+    };
+})(jQuery);
