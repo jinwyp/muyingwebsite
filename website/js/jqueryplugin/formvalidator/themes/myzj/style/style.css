@@ -1,0 +1,247 @@
+@charset "utf-8";
+/*������ʽ*/
+.noticeWrap
+{
+    line-height : 166.6%;
+    color : #000;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 12px;
+    height: 19px;
+    padding:0 5px 0 2px;
+    display : inline-block;
+    vertical-align : middle;
+    margin:2px 0 0 8px;
+    overflow :hidden;
+}
+
+.noticeWrap-suc{
+    border: 1px solid rgba(7, 121, 5, 0.5);
+    background: rgba(131, 192, 113, 0.38);
+}
+
+.noticeWrap-err{
+    border: 1px solid #ff9900;
+    background: #ffedb5;
+    color: #e60000
+}
+/*onLoad״̬��ʾ�����ʽ*/
+
+
+/*onShow״̬��ʾ�����ʽ*/
+
+
+/*onCorrect״̬��ʾ�����ʽ*/
+.ico-succ
+{
+    line-height : 166.6%;
+    color : #000;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 14px;
+    display : inline-block;
+    vertical-align : middle;
+    background : url("../images/onSuccess.gif") no-repeat -2px -3px;
+    width : 18px;
+    height : 20px;
+    padding : 0;
+}
+.txt-succ
+{
+    line-height : 166.6%;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 12px;
+    color : #0e931c;
+}
+/*onError״̬��ʾ�����ʽ*/
+.ico-warning
+{
+    line-height : 166.6%;
+    color : #000;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 14px;
+    display : inline-block;
+    vertical-align : middle;
+    background : url("../images/onError.gif") no-repeat -2px -3px;
+    width : 18px;
+    height : 20px;
+    padding : 0;
+}
+.txt-err
+{
+    line-height : 166.6%;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 12px;
+    color : #f00;
+}
+/*onFocus״̬��ʾ�����ʽ*/
+
+
+
+/*������ʼ״̬����ʽ*/
+.g-ipt
+{
+    text-align:left;
+    font-family:Verdana, arial, sans-serif;
+    line-height:normal;
+    margin:0;
+    vertical-align:middle;
+    border: 1px solid #C1C1C1;
+    font-size: 12px;
+    height: 14px;
+    color:#dedede;
+    padding:5px 4px;
+    ime-mode:disabled;
+}
+
+/*������ý������ʽ*/
+.g-ipt-active
+{
+    padding: 4px;
+    font-family: Verdana,arial,sans-serif;
+    line-height:normal;
+    margin:0;
+    vertical-align:middle;
+    border: 1px solid #ffda71;
+    color: #444444;
+    font-size: 12px;
+    height: 14px;
+    text-align: left;
+    padding:5px 4px;
+}
+
+/*�������ݺϷ�ʱ����ʽ*/
+
+
+/*�������ݲ��Ϸ�ʱ����ʽ*/
+.g-ipt-err
+{
+    text-align:left;
+    font-family:Verdana, arial, sans-serif;
+    line-height:normal;
+    margin:0;
+    vertical-align:middle;
+    font-size: 12px;
+    height: 14px;
+    border:1px solid #e60000;
+    color:#e60000;
+    padding:5px 4px;
+}
+
+.onFocus{float:left}
+
+.g-ipt-cor
+{
+    font-family: Verdana,arial,sans-serif;
+    line-height:normal;
+    margin:0;
+    vertical-align:middle;
+    border: 1px solid rgba(7, 121, 5, 0.50);
+    color: #196605;
+    font-size: 12px;
+    height: 14px;
+    text-align: left;
+    padding:5px 4px;
+}
+
+/*����Ƶ�������*/
+.txt-info-mouseon
+{
+    line-height:166.6%;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    margin-top : -4px;
+    font-size : 12px;
+    color : #6e6e6e;
+    position: absolute;
+    left:3px;
+    top:5px;
+}
+
+/*����Ƶ�������*/
+.txt-info-mouseout
+{
+    /*line-height:166.6%;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    margin-top : -4px;
+    font-size : 12px;
+    color : #999;*/
+    display: none;
+}
+
+/*����ǿ����ʽ*/
+.pswState
+{
+    line-height : 166.6%;
+    color : #fff;
+    font-family : Verdana, arial, sans-serif;
+    text-align : center;
+    font-size : 12px;
+    padding : 0;
+    margin : 0;
+    border : 0;
+    vertical-align : middle;
+    margin-left : 10px;
+    overflow : hidden;
+    width:183px;
+    background: #b1b1b1;
+    float: left;
+    margin-top:2px;
+    position: relative;
+}
+.pswState .progress{
+    position: absolute;
+    z-index: 0;
+    height: 20px;
+    background: #82be0e
+}
+.pswState em{
+    float: left;
+    text-align: center;
+    width:60px;
+    border-right:1px solid #fff;
+    height: 20px;
+    color: #fff;
+    font-size:12px;
+    line-height: 20px;
+    font-style: normal;
+    position: relative;
+    z-index: 1
+}
+
+.progressImage
+{
+    line-height : 166.6%;
+    color : #000;
+    font-family : Verdana, arial, sans-serif;
+    text-align : left;
+    font-size : 14px;
+    display : inline-block;
+    vertical-align : middle;
+    background : url(../images/global2.png); BACKGROUND-REPEAT: no-repeat;
+    margin-right : 8px;
+    margin : 0 8px;
+    width : 147px;
+    height : 19px;
+    padding : 2px 0;
+}
+.prog0
+{
+    background-position : 0 -35px;
+}
+.prog1
+{
+    background-position : 0 -71px;
+}
+.prog2
+{
+    background-position : 0 -107px;
+}
+.prog3
+{
+    background-position : 0 -143px;
+}

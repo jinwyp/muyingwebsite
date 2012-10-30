@@ -1,0 +1,295 @@
+/* register */
+.sign-content{
+    display: block;
+    border: 1px solid #dedede;
+    overflow: hidden;
+    zoom:1;
+    padding: 20px 10px 10px
+}
+.sign-left{
+    float: left;
+    width: 704px
+}
+.sign-right{
+    float: left;
+    width:200px;
+    display: inline;
+    margin: 10px 0 20px 10px;
+    padding: 0 0 0 20px;
+    border-left: 1px solid #DEDEDE;
+    min-height: 450px;
+    _height:450px;
+}
+.sign-title{
+    height: 40px;
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: "微软雅黑";
+    border-bottom: 1px solid #dedede;
+    padding: 0 20px;
+    margin:0px 10px 10px
+}
+.sign-title-right{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "微软雅黑";
+    padding: 4px 0 0;
+}
+.sign-right-list{
+    display: block;
+    overflow: hidden;
+    zoom:1;
+}
+.sign-right-list input{
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.sign-right-list input.signin{
+    width:101px;
+    height:30px;
+    cursor: pointer;
+    background: url(../images/sign-icons.png) no-repeat 0 -33px
+}
+.sign-right-list input.signup{
+    width:101px;
+    height:30px;
+    cursor: pointer;
+    background: url(../images/sign-icons.png) no-repeat -101px -33px
+}
+.sign-right-list li{
+    display: block;
+    float: left;
+    clear: both;
+    padding: 6px 0;
+}
+.sign-right-list li.btn01{
+    padding: 15px 0
+}
+.sign-right-list li.othercount a{
+    display: block;
+    width: 120px;
+    height: 24px;
+    text-indent: -999em;
+    overflow: hidden;
+    font-size: 1px;
+    line-height: 0;
+    background: url(../images/sign-icons.png) no-repeat 0 0;
+}
+.sign-right-list li.othercount a.weibo{
+    background-position: 0 -63px
+}
+.sign-right-list li.othercount a.qq{
+    background-position: 0 -87px
+}
+.sign-right-list li.othercount a.taobao{
+    background-position: 0 -111px
+}
+.register-form{
+    display: block;
+    padding:10px;
+    overflow: hidden;
+    zoom:1
+}
+.register-form li{
+    display: block;
+    width: 100%;
+    clear: both;
+    padding: 5px 0;
+    float: left;
+    line-height: 20px
+}
+.login-form li{
+    padding: 10px 0;
+}
+.register-form li i{
+    color:red;
+    padding-right:5px
+}
+.register-form li label{
+    display: block;
+    float: left;
+    padding-right:5px;
+    font-size: 14px;
+    color: #898989
+}
+.register-form li label.label{
+    text-align: right;
+    width:20%;
+    padding-top: 2px
+}
+.register-form li .inputCont{
+    width: 76%;
+    float: left;
+    overflow: hidden;
+    zoom:1;
+}
+.register-form li .inputCont .floatTips{
+    display:block;
+    clear: both;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.register-form li input.focus{
+   border: 1px solid #ff9900;
+}
+.register-form li input.error{
+    border: 1px solid #fa2a14;
+    color: #fa2a14;
+}
+.register-form li input.passed{
+    border: 1px solid #468847;
+    color: #468847;
+}
+
+.register-form li input.agreement{
+    border: 0;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.register-form li .inputCont input{
+    width: 265px;
+    float: left;
+    vertical-align: baseline;
+}
+.register-form li .inputCont input.txt{
+    height: 14px;
+    font-size: 12px;
+    padding: 5px 4px;
+    border: 1px solid #dedede;
+    color: #dedede;
+}
+.register-form li .inputCont input.submit-signup{
+    border:0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: url(../images/sign-icons.png) no-repeat 0 0;
+    width: 109px;
+    height: 33px;
+}
+.register-form li .inputCont input.submit-signin{
+    border:0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: url(../images/sign-icons.png) no-repeat -109px 0;
+    width: 109px;
+    height: 33px;
+}
+.register-form li .inputCont label input{
+    width: auto;
+    float: none;
+}
+.register-form li .radioWrap{
+}
+.register-form li .radioWrap label{
+    padding-top:4px;
+}
+
+.register-form li .inputCont .codeWrap{
+    width:269px;
+    float: left;
+    display: inline;
+    margin-right: 5px
+}
+.register-form li .inputCont .codeWrap input{
+    width: 30%
+}
+.register-form li .inputCont .argWrap{
+    height: 24px;
+    width: 275px;
+    float: left;
+}
+.register-form li .inputCont .argWrap input{
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+.register-form li .inputCont .codeWrap img{
+    float: left;
+    width: 60px;
+    height:25px;
+    margin: 1px 5px;
+    background: #ccc
+}
+.register-form li .inputCont .codeWrap p{
+    display: block;
+    float: left;
+    font-size: 12px;
+    padding-top:5px
+}
+.register-form li .inputCont .argWrap p{
+    display: block;
+    float: left;
+    font-size: 12px;
+}
+.register-form li .inputCont .codeWrap p a{
+    color: rgba(42, 51, 199, 0.68);
+}
+.register-form li .inputCont .argWrap p a{
+    color: #000;
+}
+
+/* 首页登录部分 */
+
+.findpassword{
+    color: #619eb1;
+    float: left;
+    margin: 6px 0 0 40px
+}
+.otherwise{
+    clear: both;
+    display: block;
+    padding-left:20%;
+    border: 0;
+    width:auto;
+    min-height: 125px!important;
+    _height:125px!important;
+}
+.otherwise p{
+    display: block;
+    margin: 20px 0 0;
+}
+.otherwise p a{
+    color: #619EB1
+}
+.otherwise .sign-right-list{
+    width: 100%;
+    padding: 12px 10px 0 0
+}
+.otherwise .sign-right-list li{
+    float: left;
+    clear:none;
+    display: inline;
+    padding:0 20px 0 0;
+}
+
+/* 下拉邮箱列表 */
+.sliderBox{
+    position: absolute;
+    border: 1px solid #999;
+    border-top: 0;
+    background: #fff;
+    padding:0;
+    display: none
+}
+.sliderBox li{
+    display: block;
+    line-height: 22px;
+    font-size: 12px;
+    font-family: verdana;
+    padding:0px 10px;
+    cursor: pointer
+}
+.sliderBox li:hover{
+    background: #0044cc;
+    color:#f6f6f6;
+}
+.sliderBox li.seleceted{
+    background: #0044cc;
+    color:#f6f6f6;
+}
