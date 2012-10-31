@@ -5,7 +5,7 @@
  * Time: 下午2:16
  * To change this template use File | Settings | File Templates.
  */
-//主校验方法
+//注册页面 校验
 $(function(){
     $.formValidator.initConfig({
         theme:"myzj",
@@ -90,7 +90,7 @@ $(function(){
             operateor:"=",
             onError:"2次密码不一致,请确认"
         });
-    $(":radio[name='baby']")
+    $("#reg-form input:radio[name='baby']")
         .formValidator({
             relativeID:"",
             tipID:"babyTip",
@@ -128,14 +128,119 @@ $(function(){
             max:1,
             onError:"你还没有同意用户协议"
         });
-
-    //selectView.keySwitch($(".sliderBox li"),$("#email"),$("#email"));
     $("#email").selectView();
-    $("#login-email").selectView();
+
+
+
+//第三方登录注册页面
+    $("#third-us")
+        .formValidator({
+            onShowFixText:"6~12个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
+            onShowText:"请输入用户名",
+            onShow:"请输入用户名,只有输入\"maodong\"才是对的",
+            onCorrect:"该用户名可以注册"
+        })
+        .inputValidator({
+            min:6,
+            max:12,
+            onError:"你输入的用户长度不正确,请确认"
+        })
+        .regexValidator({
+            regExp:"username",
+            dataType:"enum",
+            onError:"用户名格式不正确"
+        });
+    /*.ajaxValidator({
+     dataType : "json",
+     async : true,
+     url : "http://www.fbair.net/ci/index.php/api/restful_user/user/id/23",
+     success : function(data){
+     if( data.username );
+     return "该用户名不可用，请更换用户名";
+     },
+     buttons: $("#button"),
+     error: function(jqXHR, textStatus, errorThrown){
+     alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);
+     },
+     onError : "该用户名不可用，请更换用户名",
+     onWait : "正在进行校验，请稍候..."
+     });*/
+    $("#third-email")
+        .formValidator({
+            onShowFixText:"6~18个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
+            onShow:"请输入邮箱",
+            onFocus:"邮箱6-100个字符,输入正确了才能离开焦点",
+            onCorrect:"恭喜你,你输对了"
+        })
+        .inputValidator({
+            min:6,max:100,onError:"你输入的邮箱长度非法,请确认"
+        })
+        .regexValidator({
+            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            ,onError:"你输入的邮箱格式不正确"
+        });
+    $("#third-password1")
+        .formValidator({
+            onShowFixText:"6~16个字符，包括字母、数字、特殊符号，区分大小写",
+            onShow:"请输入密码",onFocus:"至少1个长度",onCorrect:"密码合法"
+        })
+        .inputValidator({
+            min:6,max:20,
+            empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},
+            onError:"密码长度为6-20位字符"
+        })
+        .passwordValidator({
+            compareID:"third-us"
+        });
+    $("#third-password2")
+        .formValidator({
+            onShowFixText:"请再次输入密码",
+            onShow:"请再次输入密码",
+            onFocus:"至少1个长度",
+            onCorrect:"密码一致"
+        })
+        .inputValidator({
+            min:1,
+            empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},
+            onError:"重复密码不能为空,请确认"
+        })
+        .compareValidator({
+            desID:"third-password1",
+            operateor:"=",
+            onError:"2次密码不一致,请确认"
+        });
+    $("#third-reg-form input:radio[name='baby']")
+        .formValidator({
+            relativeID:"",
+            tipID:"third-babyTip",
+            tipCss :{"left":"60px"},
+            onShow:"",
+            onFocus:"",
+            onCorrect:"",
+            defaultValue:[""]})
+        .inputValidator({
+            min:1,
+            max:1,
+            onError:"请选择"
+        });
+    $("#third-code")
+        .formValidator({
+            onShowFixText:"请输入右侧图片中的验证码",
+            onShow:"请输入右侧图片中的验证码",
+            onFocus:"请输入右侧图片中的验证码",
+            onCorrect:"验证码正确"
+        })
+        .inputValidator({
+            min:4,
+            max:4,
+            onError:"请填写验证码"
+        });
+    $("#third-email").selectView();
 });
 
 //登录部分
 $(function(){
+    $("#login-email").selectView();
     $(".login-form input[class='txt']").each(function(){
         var $this = $(this)
         $this.focus(function(){
@@ -184,7 +289,14 @@ $(function(){
     $("#login-btn").click(function(){
         login_submit_check();
         $("#login-form").submit();
+    });
+
+
+    //第三方支付绑定
+    $("#third-bind-link").click(function(){
+        $("#third-bind-form").show()
     })
+
 });
 
 
@@ -220,7 +332,6 @@ $(function(){
                 oo.hide();
                 if(_.parents("li").next().find("input").length>0)
                     _.parents("li").next().find("input").focus();
-                console.log("click")
                 return false
             });
 
