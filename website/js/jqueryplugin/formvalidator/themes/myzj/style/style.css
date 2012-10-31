@@ -18,12 +18,14 @@
 .noticeWrap-suc{
     border: 1px solid rgba(7, 121, 5, 0.5);
     background: rgba(131, 192, 113, 0.38);
+    border-radius: 3px
 }
 
 .noticeWrap-err{
     border: 1px solid #ff9900;
     background: #ffedb5;
-    color: #e60000
+    color: #e60000;
+    border-radius: 3px
 }
 /*onLoad״̬��ʾ�����ʽ*/
 
