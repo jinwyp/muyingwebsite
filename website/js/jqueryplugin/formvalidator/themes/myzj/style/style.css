@@ -66,7 +66,7 @@
     font-size : 14px;
     display : inline-block;
     vertical-align : middle;
-    background : url("../images/onError.gif") no-repeat -2px -3px;
+    background : url("../images/onError.gif") no-repeat 0 0;
     width : 18px;
     height : 20px;
     padding : 0;
