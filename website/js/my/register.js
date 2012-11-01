@@ -173,7 +173,7 @@ $(function(){
             onCorrect:"恭喜你,你输对了"
         })
         .inputValidator({
-            min:6,max:100,onError:"你输入的邮箱长度非法,请确认"
+            min:6,max:100,onError:"你输入的邮箱不正确,请确认"
         })
         .regexValidator({
             regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
