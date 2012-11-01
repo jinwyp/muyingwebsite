@@ -36,12 +36,12 @@ $(function(){
      async : true,
      url : "http://www.fbair.net/ci/index.php/api/restful_user/user/id/23",
      success : function(data){
-         if( data.username );
-         return "该用户名不可用，请更换用户名";
+     if( data.username );
+     return "该用户名不可用，请更换用户名";
      },
      buttons: $("#button"),
      error: function(jqXHR, textStatus, errorThrown){
-         alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);
+     alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);
      },
      onError : "该用户名不可用，请更换用户名",
      onWait : "正在进行校验，请稍候..."
@@ -133,24 +133,24 @@ $(function(){
 
 
 //第三方登录注册页面
-    $("#third-us")
-        .formValidator({
-            onShowFixText:"6~12个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
-            onShowText:"请输入用户名",
-            onShow:"请输入用户名,只有输入\"maodong\"才是对的",
-            onCorrect:"该用户名可以注册"
-        })
-        .inputValidator({
-            min:6,
-            max:12,
-            onError:"你输入的用户长度不正确,请确认"
-        })
-        .regexValidator({
-            regExp:"username",
-            dataType:"enum",
-            onError:"用户名格式不正确"
-        });
-    /*.ajaxValidator({
+    /*$("#third-us")
+     .formValidator({
+     onShowFixText:"6~12个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
+     onShowText:"请输入用户名",
+     onShow:"请输入用户名,只有输入\"maodong\"才是对的",
+     onCorrect:"该用户名可以注册"
+     })
+     .inputValidator({
+     min:6,
+     max:12,
+     onError:"你输入的用户长度不正确,请确认"
+     })
+     .regexValidator({
+     regExp:"username",
+     dataType:"enum",
+     onError:"用户名格式不正确"
+     });
+     .ajaxValidator({
      dataType : "json",
      async : true,
      url : "http://www.fbair.net/ci/index.php/api/restful_user/user/id/23",
@@ -222,18 +222,6 @@ $(function(){
             min:1,
             max:1,
             onError:"请选择"
-        });
-    $("#third-code")
-        .formValidator({
-            onShowFixText:"请输入右侧图片中的验证码",
-            onShow:"请输入右侧图片中的验证码",
-            onFocus:"请输入右侧图片中的验证码",
-            onCorrect:"验证码正确"
-        })
-        .inputValidator({
-            min:4,
-            max:4,
-            onError:"请填写验证码"
         });
     $("#third-email").selectView();
 });
@@ -307,7 +295,7 @@ $(function(){
         var defaults = {
             valuer:options?(options.valuer||$(this)):$(this),//指定input
             oo:options?(options.oo||elist):(elist)//邮箱地址列表
-            };
+        };
         var opts = $.extend({},defaults ,options);
         var obj = opts.oo.children("li:eq(0)");
         var oo = opts.oo;
