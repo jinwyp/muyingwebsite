@@ -230,7 +230,7 @@ $(function(){
 $(function(){
     $("#login-email").selectView();
     $(".login-form input[class='txt']").each(function(){
-        var $this = $(this)
+        var $this = $(this);
         $this.focus(function(){
             $this.css({
                 border:"1px solid #999"
