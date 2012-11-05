@@ -2,22 +2,23 @@
 /*������ʽ*/
 .noticeWrap
 {
-    line-height : 166.6%;
+    line-height : 16px;
     color : #000;
+    float: left;
     font-family : Verdana, arial, sans-serif;
     text-align : left;
     font-size : 12px;
-    height: 19px;
-    padding:0 5px 0 2px;
+    padding:2px 5px 2px 2px;
     display : inline-block;
     vertical-align : middle;
     margin:2px 0 0 8px;
     overflow :hidden;
+    height: 16px;
 }
 
 .noticeWrap-suc{
-    border: 1px solid rgba(7, 121, 5, 0.5);
-    background: rgba(131, 192, 113, 0.38);
+    border: 1px solid #196605;
+    background: #d0e7c9;
     border-radius: 3px
 }
 
@@ -44,17 +45,20 @@
     display : inline-block;
     vertical-align : middle;
     background : url("../images/onSuccess.gif") no-repeat -2px -3px;
-    width : 18px;
-    height : 20px;
+    width : 16px;
+    height :16px;
     padding : 0;
+    float: left
 }
 .txt-succ
 {
-    line-height : 166.6%;
     font-family : Verdana, arial, sans-serif;
     text-align : left;
     font-size : 12px;
     color : #0e931c;
+    float: left;
+    padding-left: 3px;
+    line-height: 16px
 }
 /*onError״̬��ʾ�����ʽ*/
 .ico-warning
@@ -66,18 +70,21 @@
     font-size : 14px;
     display : inline-block;
     vertical-align : middle;
-    background : url("../images/onError.gif") no-repeat -2px -3px;
-    width : 18px;
-    height : 20px;
+    background : url("../images/onError.gif") no-repeat 0 0;
+    width :16px;
+    height :16px;
     padding : 0;
+    float: left;
 }
 .txt-err
 {
-    line-height : 166.6%;
     font-family : Verdana, arial, sans-serif;
     text-align : left;
     font-size : 12px;
     color : #f00;
+    float: left;
+    padding-left: 3px;
+    line-height: 16px
 }
 /*onFocus״̬��ʾ�����ʽ*/
 
@@ -141,7 +148,7 @@
     line-height:normal;
     margin:0;
     vertical-align:middle;
-    border: 1px solid rgba(7, 121, 5, 0.50);
+    border: 1px solid #196605;
     color: #196605;
     font-size: 12px;
     height: 14px;
@@ -199,7 +206,9 @@
     position: absolute;
     z-index: 0;
     height: 20px;
-    background: #82be0e
+    background: #82be0e;
+    left:0;
+    top:0
 }
 .pswState em{
     float: left;
@@ -224,7 +233,6 @@
     font-size : 14px;
     display : inline-block;
     vertical-align : middle;
-    background : url(../images/global2.png); BACKGROUND-REPEAT: no-repeat;
     margin-right : 8px;
     margin : 0 8px;
     width : 147px;

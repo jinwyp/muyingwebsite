@@ -317,6 +317,11 @@
     background: url(../images/sign-icons.png) no-repeat -202px -33px
 }
 
+/* 准妈妈引导页 */
+.register-form li .inputCont select{
+    border: 1px solid #ccc;
+    margin: 3px 3px 3px 0
+}
 
 /* 下拉邮箱列表 */
 .sliderBox{
