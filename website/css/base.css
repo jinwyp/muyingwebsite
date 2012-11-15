@@ -200,6 +200,9 @@ input{border:0 none;vertical-align:middle}
 .footer{text-align:center;line-height:24px;margin-top:15px;}
 .footer .copyright{color:#666}
 .nav-footer li,.footer .copyright span{margin:0 5px;display:inline}
+.fixRight{left:50%; margin-left: 503px; top:500px;width: 26px;  height: 98px; overflow: hidden; position: fixed;}
+
+.fixRight a{background: url("../images/survey.gif") no-repeat scroll transparent; width: 26px; height: 98px; color: #FF6600; display: block; font-size: 12px; padding: 18px 6px 0; text-decoration: none;}
 
 /*gotop*/
 .gotop{display:none;width:36px;height:36px;position:fixed;_position:absolute;left:50%;margin-left:520px;bottom:100px;_bottom:"auto";cursor:pointer;background:url("../images/gotop.gif") no-repeat 0 0}
