@@ -11,7 +11,7 @@
     padding:2px 5px 2px 2px;
     display : inline-block;
     vertical-align : middle;
-    margin:2px 0 0 8px;
+    margin:3px 0 0 8px;
     overflow :hidden;
     height: 16px;
 }
@@ -57,7 +57,6 @@
     font-size : 12px;
     color : #0e931c;
     float: left;
-    padding-left: 3px;
     line-height: 16px
 }
 /*onError״̬��ʾ�����ʽ*/
@@ -103,14 +102,13 @@
     font-size: 12px;
     height: 14px;
     color:#999999;
-    padding:5px 4px;
+    padding:7px 4px;
     ime-mode:disabled;
 }
 
 /*������ý������ʽ*/
 .g-ipt-active
 {
-    padding: 4px;
     font-family: Verdana,arial,sans-serif;
     line-height:normal;
     margin:0;
@@ -120,7 +118,7 @@
     font-size: 12px;
     height: 14px;
     text-align: left;
-    padding:5px 4px;
+    padding:7px 4px;
 }
 
 /*�������ݺϷ�ʱ����ʽ*/
@@ -138,7 +136,7 @@
     height: 14px;
     border:1px solid #e60000;
     color:#e60000;
-    padding:5px 4px;
+    padding:7px 4px;
 }
 
 .onFocus{float:left}
@@ -154,7 +152,7 @@
     font-size: 12px;
     height: 14px;
     text-align: left;
-    padding:5px 4px;
+    padding:7px 4px;
 }
 
 /*����Ƶ�������*/
@@ -203,13 +201,24 @@
     margin-top:2px;
     position: relative;
 }
-.pswState .progress{
+.pswState #progress{
     position: absolute;
     z-index: 0;
     height: 20px;
-    background: #82be0e;
     left:0;
     top:0
+}
+.pswState .style_ps0{
+    background: #c65724
+}
+.pswState .style_ps1{
+    background: #c65724
+}
+.pswState .style_ps2{
+    background: #beb824
+}
+.pswState .style_ps3{
+    background:#82be0e
 }
 .pswState em{
     float: left;

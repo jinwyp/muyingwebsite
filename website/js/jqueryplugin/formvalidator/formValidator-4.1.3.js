@@ -148,21 +148,21 @@ $.formValidator =
 					}
 					showmsg = passwordStrengthText[level<=0?0:level];
 				}
-				html = html.replace(/\$class\$/g, showclass).replace(/\$data\$/g, showmsg);
-				if(showclass!=="" && showmsg!==""){
-					tip.html(html).removeClass().addClass(showclass).show();
+				html = html.replace(/\$class\$/g, showclass).replace(/\$data\$/g, (typeof showmsg =="string")?showmsg:"")
+				if(!!showclass && showmsg!==""){
+					tip.html(html).removeClass().addClass(showclass).show()
 				}else{
-					tip.html(html).hide();
+					tip.html(html).hide()
 				}
 			}
 			var stype = elem.type;
 			if(stype == "password" || stype == "text" || stype == "file")
 			{
 				jqobj = $(elem);
-				if(onShowClass!="" && showclass == "onShow"){jqobj.removeClass().addClass(onShowClass)};
-				if(onFocusClass!="" && showclass == "onFocus"){jqobj.removeClass().addClass(onFocusClass)};
-				if(onCorrectClass!="" && showclass == "onCorrect"){jqobj.removeClass().addClass(onCorrectClass)};
-				if(onErrorClass!="" && showclass == "onError"){jqobj.removeClass().addClass(onErrorClass);};
+				if(onShowClass!="" && showclass == "onShow"){jqobj.removeClass().addClass(onShowClass)}
+				if(onFocusClass!="" && showclass == "onFocus"){jqobj.removeClass().addClass(onFocusClass)}
+				if(onCorrectClass!="" && showclass == "onCorrect"){jqobj.removeClass().addClass(onCorrectClass)}
+				if(onErrorClass!="" && showclass == "onError"){jqobj.removeClass().addClass(onErrorClass);}
 			}
 		}
 	},

@@ -51,7 +51,7 @@ $(function(){
             onShowFixText:"请填入常用的邮箱，用来找回密码，接受订单通知等信息",
             onShow:"请填入邮箱",
             onFocus:"请填入常用的邮箱",
-            onCorrect:""
+            onCorrect:true
         })
         .inputValidator({
             min:6,max:100,onError:"你输入的邮箱不正确,请确认"
@@ -114,7 +114,7 @@ $(function(){
         .inputValidator({
             min:4,
             max:4,
-            onError:"请填写验证码"
+            onError:"验证码不正确"
         });
     $("#agreement")
         .formValidator({
@@ -316,8 +316,8 @@ $(function(){
             var _ = $(this);
             oo.click(function(event){
                 SwitchTo($(event.target));
-                _.val(obj.text());
-                oo.hide();
+                PrintVal(obj.text());
+                _.blur();
                 if(_.parents("li").next().find("input").length>0)
                     _.parents("li").next().find("input").focus();
                 return false
