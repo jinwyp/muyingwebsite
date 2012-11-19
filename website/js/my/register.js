@@ -12,19 +12,19 @@ $(function(){
         submitOnce:true,
         formID:"form",
         onError:function(msg){alert(msg);},
-        submitAfterAjaxPrompt : '有数据正在异步验证，请稍等...'
+        submitAfterAjaxPrompt : '数据正在验证，请稍等...'
     });
     $("#us")
         .formValidator({
-            onShowFixText:"6~12个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
-            onShowText:"请输入用户名",
-            onShow:"请输入用户名,只有输入\"maodong\"才是对的",
+            onShowFixText:"6~12个字符，包括英文、数字、下划线",
+            onShowText:"请填入用户名",
+            onShow:"请填入用户名",
             onCorrect:"该用户名可以注册"
         })
         .inputValidator({
             min:6,
             max:12,
-            onError:"你输入的用户长度不正确,请确认"
+            onError:"用户名长度不正确,请重新填写"
         })
         .regexValidator({
             regExp:"username",
@@ -37,21 +37,21 @@ $(function(){
      url : "http://www.fbair.net/ci/index.php/api/restful_user/user/id/23",
      success : function(data){
      if( data.username );
-     return "该用户名不可用，请更换用户名";
+     return "该用户名已被使用，请更换用户名";
      },
      buttons: $("#button"),
      error: function(jqXHR, textStatus, errorThrown){
      alert("服务器没有返回数据，可能服务器忙，请重试"+errorThrown);
      },
-     onError : "该用户名不可用，请更换用户名",
+     onError : "该用户名已被使用，请更换用户名",
      onWait : "正在进行校验，请稍候..."
      });*/
     $("#email")
         .formValidator({
-            onShowFixText:"6~18个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
-            onShow:"请输入邮箱",
-            onFocus:"邮箱6-100个字符,输入正确了才能离开焦点",
-            onCorrect:"恭喜你,你输对了"
+            onShowFixText:"请填入常用的邮箱，用来找回密码，接受订单通知等信息",
+            onShow:"请填入邮箱",
+            onFocus:"请填入常用的邮箱",
+            onCorrect:""
         })
         .inputValidator({
             min:6,max:100,onError:"你输入的邮箱不正确,请确认"

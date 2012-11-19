@@ -17,7 +17,7 @@
 }
 
 .noticeWrap-suc{
-    border: 1px solid #196605;
+    border: 1px solid #59A358;
     background: #d0e7c9;
     border-radius: 3px
 }
@@ -74,6 +74,7 @@
     width :16px;
     height :16px;
     padding : 0;
+    margin-left: 2px;
     float: left;
 }
 .txt-err
@@ -101,7 +102,7 @@
     border: 1px solid #C1C1C1;
     font-size: 12px;
     height: 14px;
-    color:#dedede;
+    color:#999999;
     padding:5px 4px;
     ime-mode:disabled;
 }
@@ -115,7 +116,7 @@
     margin:0;
     vertical-align:middle;
     border: 1px solid #ffda71;
-    color: #444444;
+    color: #999999;
     font-size: 12px;
     height: 14px;
     text-align: left;
@@ -148,7 +149,7 @@
     line-height:normal;
     margin:0;
     vertical-align:middle;
-    border: 1px solid #196605;
+    border: 1px solid #59A358;
     color: #196605;
     font-size: 12px;
     height: 14px;
