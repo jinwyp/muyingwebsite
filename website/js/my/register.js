@@ -242,7 +242,7 @@ $(function(){
             })
         }).blur(function(){
                 $this.css({
-                    color:$this.val()==""?"#dedede":"#898989",
+                    color:$this.val()==""?"#dedede":"#666666",
                     border:"1px solid #dedede"
                 });
                 if($this.siblings().length>0 && $this.val()!==""){
