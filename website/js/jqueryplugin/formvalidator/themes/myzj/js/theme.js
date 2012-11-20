@@ -26,7 +26,11 @@ var showLev = function (lev) {
 
     if(Lv==3){
         ems.addClass("style_ps2");
-        progress.removeClass().addClass("style_ps3")
+        progress.attr("class","style_ps3")
+    }
+    if(Lv<2){
+        ems.removeClass();
+        progress.attr("class","style_ps2")
     }
     progress.animate({width:Lv * 61}, 250,function(){
         if(Lv>=2){

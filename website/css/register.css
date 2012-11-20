@@ -72,7 +72,7 @@
     display: block;
     float: left;
     clear: both;
-    padding: 15px 0;
+    padding: 5px 0;
 }
 .sign-right-list li.link-01{
     padding: 15px 0
@@ -95,6 +95,12 @@
 }
 .sign-right-list li.othercount a.taobao{
     background-position: 0 -111px
+}
+.sign-right-list li.othercount a.alipay{
+    background-position: 0 -135px
+}
+.sign-right-list li.othercount a._139{
+    background-position: 0 -159px
 }
 .register-form{
     display: block;
@@ -173,7 +179,7 @@
 .register-form li .inputCont input.txt{
     height: 14px;
     font-size: 12px;
-    padding: 5px 4px;
+    padding: 7px 4px;
     border: 1px solid #dedede;
     color: #999999;
 }
@@ -224,7 +230,7 @@
     width: 30%
 }
 .register-form li .inputCont .argWrap{
-    height: 24px;
+    height: 26px;
     width: 275px;
     float: left;
 }
@@ -289,7 +295,7 @@
     float: left;
     clear:none;
     display: inline;
-    padding:0 20px 0 0;
+    padding:0 20px 10px 0;
 }
 
 /* 第三方账号绑定 */

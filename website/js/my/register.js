@@ -14,7 +14,7 @@ $(function(){
         onError:function(msg){alert(msg);},
         submitAfterAjaxPrompt : '数据正在验证，请稍等...'
     });
-    $("#us")
+    /*$("#us")
         .formValidator({
             onShowFixText:"6~12个字符，包括英文、数字、下划线",
             onShowText:"请填入用户名",
@@ -31,7 +31,7 @@ $(function(){
             dataType:"enum",
             onError:"用户名格式不正确"
         });
-    /*.ajaxValidator({
+    .ajaxValidator({
      dataType : "json",
      async : true,
      url : "http://www.fbair.net/ci/index.php/api/restful_user/user/id/23",
@@ -98,7 +98,7 @@ $(function(){
             onShow:"",
             onFocus:"",
             onCorrect:"",
-            defaultValue:[""]})
+            defaultValue:["0"]})
         .inputValidator({
             min:1,
             max:1,
