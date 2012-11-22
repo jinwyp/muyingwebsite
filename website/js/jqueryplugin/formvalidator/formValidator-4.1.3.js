@@ -1367,7 +1367,7 @@ var formValidator_setting =
 		height:20,
 		width:280
 	},
-	triggerEvent:"blur",
+	triggerEvent:"blur change",
 	forceValid : false,
 	tipID : null,
 	pwdTipID : null,

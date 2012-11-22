@@ -69,7 +69,6 @@ function isDate(str)
 	var d= new Date(r[1], r[3]-1, r[4]); 
 	return (d.getFullYear()==r[1]&&(d.getMonth()+1)==r[3]&&d.getDate()==r[4]);
 }
-
 //长时间，形如 (2003-12-05 13:04:06)
 function isDateTime(str)
 {

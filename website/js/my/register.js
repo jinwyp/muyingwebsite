@@ -223,6 +223,7 @@ $(function(){
             max:1,
             onError:"请选择"
         });
+
     $("#third-email").selectView();
 });
 
@@ -280,10 +281,80 @@ $(function(){
     });
 
 
-    //第三方支付绑定
+    //第三方支付
     $("#third-bind-link").click(function(){
         $("#third-bind-form").show()
+    });
+
+    //datepicker插件
+    $("#birthday" )
+    .datepicker({
+        inline: true,
+        changeMonth:true,
+        changeYear:true,
+        dateFormat:"yy-mm-dd",
+        yearRange:"c-5:c+2",
+        showMonthAfterYear:true
     })
+    .formValidator({
+        onShowFixText:"请填写宝宝的预产期。格式：年-月-日",
+        onCorrect:true
+        })
+    .inputValidator({
+        regExp:"\\d{4}-\\d{2}-\\d{2}",
+        min:10,max:10,onError:"请正确填写宝宝的预产期"
+    });
+
+    $("#mother-mobile")
+    .formValidator({
+        empty:true,
+        onEmpty: "建议您留下手机号码哟",
+        onShowFixText:"请填写您的手机号码",
+        onCorrect:true
+    })
+    .inputValidator({
+        min:11,max:14,onError:"请填写您的手机号码"
+    })
+    .regexValidator({
+        regExp:"mobile",
+        dataType:"enum",
+        onError:"你输入的手机号码格式不正确"
+    });
+
+    $("#birthday2" )
+        .datepicker({
+            inline: true,
+            changeMonth:true,
+            changeYear:true,
+            dateFormat:"yy-mm-dd",
+            yearRange:"c-5:c+2",
+            showMonthAfterYear:true
+        })
+        .formValidator({
+            onShowFixText:"请填写宝宝的生日。格式：年-月-日",
+            onCorrect:true
+        })
+        .inputValidator({
+            regExp:"\\d{4}-\\d{2}-\\d{2}",
+            min:10,max:10,onError:"请正确填写宝宝的生日"
+        });
+
+    $("#mother-mobile2")
+        .formValidator({
+            empty:true,
+            onEmpty: "建议您留下手机号码哟",
+            onShowFixText:"请填写您的手机号码",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:11,max:14,onError:"请填写您的手机号码"
+        })
+        .regexValidator({
+            regExp:"mobile",
+            dataType:"enum",
+            onError:"你输入的手机号码格式不正确"
+        });
+
 
 });
 
