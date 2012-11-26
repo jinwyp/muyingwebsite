@@ -230,11 +230,12 @@
     width: 30%
 }
 .register-form li .inputCont .argWrap{
-    height: 26px;
+    _height:26px;
+    min-height: 26px;
     width: 275px;
     float: left;
 }
-.register-form li .inputCont .argWrap input{
+.register-form li .inputCont .argWrap input.checkbox{
     width: auto;
     height: auto;
     vertical-align: middle;

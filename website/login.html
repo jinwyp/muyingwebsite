@@ -72,15 +72,18 @@
             <label class="label">&nbsp;</label>
             <div class="inputCont">
                 <div class="argWrap">
-                    <label><input type="checkbox" id="remember" name="" class=""  />记住我(一周内免登录)</label>
+                    <label><input type="checkbox" id="remember" name="" class="checkbox"  />记住我(一周内免登录)</label>
                 </div>
             </div>
         </li>
         <li>
             <label class="label">&nbsp;</label>
             <div class="inputCont">
-                <input type="button" id="login-btn" name="" class="submit-signin" value=""  />
-                <a href="" class="submit-txt-link">忘记密码了？</a>
+                <div class="argWrap">
+                    <input type="button" id="login-btn" name="" class="submit-signin" value=""  />
+                    <a href="" class="submit-txt-link">忘记密码了？</a>
+                </div>
+                <div class="onError" id="errTip"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
             </div>
         </li>
     </ul>
