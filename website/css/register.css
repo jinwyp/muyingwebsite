@@ -99,7 +99,7 @@
 .sign-right-list li.othercount a.alipay{
     background-position: 0 -135px
 }
-.sign-right-list li.othercount a._139{
+.sign-right-list li.othercount a.m_139{
     background-position: 0 -159px
 }
 .register-form{
@@ -288,7 +288,7 @@
     color: #619EB1
 }
 .otherwise .sign-right-list{
-    width: 100%;
+    width: 90%;
     padding: 12px 10px 0 0
 }
 .otherwise .sign-right-list li{

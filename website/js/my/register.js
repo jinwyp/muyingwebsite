@@ -287,7 +287,7 @@ $(function(){
     });
 
     //datepicker插件
-    $("#birthday" )
+    !!$("#birthday").length && $("#birthday" )
     .datepicker({
         inline: true,
         changeMonth:true,
@@ -321,7 +321,7 @@ $(function(){
         onError:"你输入的手机号码格式不正确"
     });
 
-    $("#birthday2" )
+    !!$("#birthday2").length && $("#birthday2" )
         .datepicker({
             inline: true,
             changeMonth:true,
