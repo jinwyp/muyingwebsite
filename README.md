@@ -1,11 +1,11 @@
 ﻿muyingzhijia.com website html css js
 =============
 
-# website 文件夹下为网站所有前端的html css js文件
+* website 文件夹下为网站所有前端的html css js文件
 
-# testwebsite 文件夹下为针对一些新技术做的尝试性代码文件
+* testwebsite 文件夹下为针对一些新技术做的尝试性代码文件
 
-# webmanagement 文件夹下为母婴之家后台管理界面前端代码
+* webmanagement 文件夹下为母婴之家后台管理界面前端代码
 
 * campaign 文件夹下为活动专题等临时制作的html文件
 
