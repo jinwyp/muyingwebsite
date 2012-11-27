@@ -39,7 +39,7 @@ body {
     background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);
     background-repeat: repeat-x;
     border: 1px solid #E5E5E5;
-    height: 120px;
+    height: 200px;
 	padding: 10px 10px 10px 10px;
 	margin-bottom: 10px;
 }
@@ -55,10 +55,14 @@ body {
 }
 
 .inputbox  label{
-	display:inline;
+    float: left;
+    line-height: 30px;
+
+    padding-right: 5px;
 }
 
 .searchbutton{
 	width:150px;
+
 }
 
