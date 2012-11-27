@@ -78,8 +78,11 @@
                     <li>
                         <label class="label">&nbsp;</label>
                         <div class="inputCont">
-                            <input type="button" id="" name="" class="submit-next"  />
-                            <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            <div class="argWrap">
+                                <input type="button" id="" name="" class="submit-next"  />
+                                <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            </div>
+                            <div class="onError" id="errTip"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
                         </div>
                     </li>
                 </ul>
@@ -113,7 +116,10 @@
                 <li>
                     <label class="label">&nbsp;</label>
                     <div class="inputCont">
-                        <input type="button" id="third-bind-btn" name="" class="submit-bindup" value=""  />
+                        <div class="argWrap">
+                            <input type="button" id="third-bind-btn" name="" class="submit-bindup" value=""  />
+                        </div>
+                        <div class="onError"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
                     </div>
                 </li>
             </ul>
