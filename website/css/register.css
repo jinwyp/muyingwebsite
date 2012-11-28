@@ -348,10 +348,10 @@
     cursor: pointer
 }
 .sliderBox li:hover{
-    background: #0044cc;
+    background: #FF9900;
     color:#f6f6f6;
 }
 .sliderBox li.seleceted{
-    background: #0044cc;
+    background: #EE7407;
     color:#f6f6f6;
 }
