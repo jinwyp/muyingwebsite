@@ -67,7 +67,7 @@
         <li>
             <label class="label">设置密码：</label>
             <div class="inputCont">
-                <input type="password" id="password1" name="password1" class="txt" placeholder="密码" />
+                <input type="password" id="password1" name="password1" class="txt" placeholder="请填入密码" />
                 <div id="password1Tip" class="stickTips"></div>
                 <div id="password1FixTip" class="floatTips">6~20个字符，包括字母、数字、下划线，以字母开头，其他字符结尾</div>
             </div>
@@ -75,7 +75,7 @@
         <li>
             <label class="label">确认密码：</label>
             <div class="inputCont">
-                <input type="password" id="password2" name="password2" class="txt" placeholder="再次输入密码" />
+                <input type="password" id="password2" name="password2" class="txt" placeholder="请再次填入密码" />
                 <div id="password2Tip" class="stickTips"></div>
                 <div id="password2FixTip" class="floatTips">6~20个字符，包括字母、数字、下划线，以字母开头，其他字符结尾</div>
             </div>
@@ -83,8 +83,8 @@
         <li>
             <label class="label">是否有宝宝：</label>
             <div class="inputCont radioWrap">
-                <label><input type="radio" name="baby" id="bb0" value="0" checked="checked" />已有宝宝</label>
-                <label><input type="radio" name="baby" id="bb1" value="1"/>已怀孕的准妈妈</label>
+                <label><input type="radio" name="baby" id="bb0" value="0" />已有宝宝</label>
+                <label><input type="radio" name="baby" id="bb1" value="1" />已怀孕的准妈妈</label>
                 <label><input type="radio" name="baby" id="bb2" value="2"/>其他</label>
                 <div id="babyTip" class="stickTips"></div>
                 <div class="floatTips"></div>
@@ -95,7 +95,7 @@
             <div class="inputCont">
                 <div class="codeWrap">
                     <input type="text" id="code" name="" class="codetxt"  />
-                    <img src="" /><p>看不清？<a href="">换一张</a></p>
+                    <a href=""><img src="" /></a><p>看不清？<a href="">换一张</a></p>
                 </div>
                 <div id="codeTip" class="stickTips"></div>
                 <div id="codeFixTip" class="floatTips">请输入图片中的验证码</div>
@@ -106,7 +106,7 @@
             <div class="inputCont">
                 <div class="argWrap">
                     <input type="checkbox" id="agreement" name="" class="checkbox"  />
-                    <p><a href="">阅读并同意"母婴之家"网站用户协议</a></p>
+                    <label for="agreement"><p>阅读并同意<a href="">"母婴之家网站用户协议"</a></p><label>
                 </div>
                 <div id="agreementTip" class="stickTips"></div>
             </div>

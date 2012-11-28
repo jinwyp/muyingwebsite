@@ -17,9 +17,7 @@
 }
 
 .noticeWrap-suc{
-    border: 1px solid #59A358;
-    background: #d0e7c9;
-    border-radius: 3px
+
 }
 
 .noticeWrap-err{
@@ -47,7 +45,7 @@
     background : url("../images/onSuccess.gif") no-repeat -2px -3px;
     width : 16px;
     height :16px;
-    padding : 0;
+    padding : 0 0 0 5px;
     float: left
 }
 .txt-succ
@@ -209,13 +207,13 @@
     top:0
 }
 .pswState .style_ps0{
-    background: #c65724
+    background: #ffc353
 }
 .pswState .style_ps1{
-    background: #c65724
+    background: #ffc353
 }
 .pswState .style_ps2{
-    background: #ffc353
+    background: #b6dc2f
 }
 .pswState .style_ps3{
     background:#82be0e

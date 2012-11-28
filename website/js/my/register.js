@@ -48,8 +48,8 @@ $(function(){
      });*/
     $("#email")
         .formValidator({
-            onShowFixText:"请填入常用的邮箱，用来找回密码，接受订单通知等信息",
-            onShow:"请填入邮箱",
+            onShowFixText:"请填入常用的邮箱，用来找回密码，接受通知等信息",
+            onShow:"请填入常用的邮箱",
             onFocus:"请填入常用的邮箱",
             onCorrect:true
         })
@@ -62,23 +62,23 @@ $(function(){
         });
     $("#password1")
         .formValidator({
-            onShowFixText:"6~16个字符，包括字母、数字、特殊符号，区分大小写",
-            onShow:"请输入密码",onFocus:"至少1个长度",onCorrect:"密码合法"
+            onShowFixText:"请填入6~20个字符，包括字母、数字、特殊符号，区分大小写",
+            onShow:"请填入密码",onFocus:"至少1个长度",onCorrect:"密码合法"
         })
         .inputValidator({
             min:6,max:20,
             empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},
-            onError:"密码长度为6-20位字符"
+            onError:"密码长度限制为6-20位字符"
         })
         .passwordValidator({
             compareID:"us"
         });
     $("#password2")
         .formValidator({
-            onShowFixText:"请再次输入密码",
-            onShow:"请再次输入密码",
-            onFocus:"至少1个长度",
-            onCorrect:"密码一致"
+            onShowFixText:"请再次填入密码",
+            onShow:"请再次填入密码",
+            onFocus:"至少1个字符长度",
+            onCorrect:true
         })
         .inputValidator({
             min:1,
@@ -88,7 +88,7 @@ $(function(){
         .compareValidator({
             desID:"password1",
             operateor:"=",
-            onError:"2次密码不一致,请确认"
+            onError:"2次密码不一致,请重新输入"
         });
     $("#reg-form input:radio[name='baby']")
         .formValidator({
@@ -98,23 +98,24 @@ $(function(){
             onShow:"",
             onFocus:"",
             onCorrect:"",
-            defaultValue:["0"]})
+            defaultValue:["0"]
+        })
         .inputValidator({
             min:1,
             max:1,
-            onError:"请选择"
+            onError:"请选择是否有宝宝"
         });
     $("#code")
         .formValidator({
-            onShowFixText:"请输入右侧图片中的验证码",
-            onShow:"请输入右侧图片中的验证码",
-            onFocus:"请输入右侧图片中的验证码",
-            onCorrect:"验证码正确"
+            onShowFixText:"请填入右侧图片中的验证码",
+            onShow:"请填入右侧图片中的验证码",
+            onFocus:"请填入右侧图片中的验证码",
+            onCorrect:true
         })
         .inputValidator({
             min:4,
             max:4,
-            onError:"验证码不正确"
+            onError:"填入的验证码不正确"
         });
     $("#agreement")
         .formValidator({
@@ -258,7 +259,7 @@ $(function(){
             var $this = $(this);
             if($this.val()==""){
                 if($this.siblings().length==0)
-                    $this.after('<div class="onError" style="background: none repeat scroll 0% 0% transparent; display: block;"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请输入'+$this.attr("placeholder")+'</span></p></div>');
+                    $this.after('<div class="onError" style="background: none repeat scroll 0% 0% transparent; display: block;"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">'+$this.attr("placeholder")+'</span></p></div>');
                 $this.focus()
             }else{
                 $this.siblings().remove();
@@ -362,7 +363,7 @@ $(function(){
 //jQuery 邮箱地址下拉部分插件
 (function($){
     $.fn.selectView = function(options){
-        var elist = ($("ul.sliderBox").length>0)?$("ul.sliderBox"):$('<ul class="sliderBox"><li class="seleceted">@sina.com</li><li>@163.com</li><li>@qq.com</li><li>@126.com</li><li>@vip.sina.com</li><li>@sina.cn</li><li>@hotmail.com</li><li>@gmail.com</li><li>@sohu.com</li><li>@yahoo.cn</li><li>@139.com</li><li>@wo.com.cn</li><li>@189.com</li><li>@21cn.com</li><li>@muyingzhijia.com</li></ul>').appendTo("body");
+        var elist = ($("ul.sliderBox").length>0)?$("ul.sliderBox"):$('<ul class="sliderBox"><li class="seleceted">@163.com</li><li>@sina.com</li><li>@qq.com</li><li>@gmail.com</li><li>@126.com</li><li>@vip.sina.com</li><li>@sina.cn</li><li>@hotmail.com</li><li>@sohu.com</li><li>@yahoo.cn</li><li>@139.com</li><li>@wo.com.cn</li><li>@189.cn</li><li>@21cn.com</li></ul>').appendTo("body");
         var defaults = {
             valuer:options?(options.valuer||$(this)):$(this),//指定input
             oo:options?(options.oo||elist):(elist)//邮箱地址列表
