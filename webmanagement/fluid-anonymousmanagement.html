@@ -76,6 +76,37 @@
 <div class="span2">
     <div class="well sidebar-nav">
         <ul class="nav nav-list">
+            <li class="nav-header leftmenuheader">会员管理</li>
+            <li >
+                <a href="#">会员管理</a>
+            </li>
+            <li class="active">
+                <a href="#">匿名用户宝宝信息管理</a>
+            </li>
+            <li>
+                <a href="#">美素验证管理</a>
+            </li>
+            <li>
+                <a href="#">新客认证(准妈妈豪礼)</a>
+            </li>
+            <li>
+                <a href="#">美素准妈妈活动</a>
+            </li>
+            <li>
+                <a href="#">准妈妈频道数据管理</a>
+            </li>
+            <li>
+                <a href="#">优惠码管理</a>
+            </li>
+            <li>
+                <a href="#">优惠码恢复</a>
+            </li>
+            <li>
+                <a href="#">邮寄订阅管理</a>
+            </li>
+            <li>
+                <a href="#">发送邮件</a>
+            </li>
             <li class="nav-header leftmenuheader">商品管理</li>
             <li>
                 <a href="#">商品管理-新</a>
@@ -181,34 +212,7 @@
                 <a href="#">推荐码管理</a>
             </li>
 
-            <li class="nav-header leftmenuheader">会员管理</li>
-            <li class="active">
-                <a href="#">会员管理</a>
-            </li>
-            <li>
-                <a href="#">美素验证管理</a>
-            </li>
-            <li>
-                <a href="#">新客认证(准妈妈豪礼)</a>
-            </li>
-            <li>
-                <a href="#">美素准妈妈活动</a>
-            </li>
-            <li>
-                <a href="#">准妈妈频道数据管理</a>
-            </li>
-            <li>
-                <a href="#">优惠码管理</a>
-            </li>
-            <li>
-                <a href="#">优惠码恢复</a>
-            </li>
-            <li>
-                <a href="#">邮寄订阅管理</a>
-            </li>
-            <li>
-                <a href="#">发送邮件</a>
-            </li>
+
             <li class="nav-header leftmenuheader">网站管理</li>
             <li>
                 <a href="#">公告管理</a>
@@ -248,73 +252,14 @@
         </H3>
     </div>
     <div class="rightsearchoptionbox hero-unit">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="btn-group">
-                    <button data-toggle="dropdown" class="btn dropdown-toggle">ALL 所有
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">有宝宝</a>
-                        </li>
-                        <li>
-                            <a href="#">准妈妈</a>
-                        </li>
-                        <li>
-                            <a href="#">其他</a>
-                        </li>
 
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">这里放链接</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span5 inputbox">
-                <label>会员号UserCode:</label>
-                <input type="text" placeholder="请填入会员号UserCode"/>
-            </div>
-            <div class="span5 inputbox">
-                <label>会员内码MemNo:</label>
-                <input type="text" placeholder="请填入会员内码MemNo"/>
-            </div>
-        </div>
         <div class="row-fluid">
-            <div class="span4 inputbox">
-                <label>E-mail:</label>
-                <input type="text" placeholder="请填入邮箱地址"/>
-            </div>
-            <div class="span4 inputbox">
-                <label>Mobile手机:</label>
-                <input type="text" placeholder="请填入手机号"/>
-            </div>
-            <div class="span4 inputbox">
-                <label>昵称/用户名:</label>
-                <input type="text" placeholder="请填入昵称"/>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span4 inputbox">
-                <label>姓名:</label>
-                <input type="text" placeholder="请填入姓名"/>
-            </div>
-            <div class="span4 inputbox">
-                <label>与宝宝关系:</label>
-                <input type="text" placeholder="请填入与宝宝关系"/>
-            </div>
-            <div class="span4 inputbox">
-                <label>推荐人:</label>
-                <input type="text" placeholder="请填入昵称"/>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span4 inputbox">
-                <label>注册开始日期:</label>
+            <div class="span6 inputbox">
+                <label>上次访问开始日期:</label>
                 <input type="text" placeholder="请填入注册开始日期"/>
             </div>
-            <div class="span5 inputbox">
-                <label>注册结束日期:</label>
+            <div class="span6 inputbox">
+                <label>上次访问结束日期:</label>
                 <input type="text" placeholder="请填入注册结束日期"/>
             </div>
         </div>
@@ -331,80 +276,47 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>会员号UserCode</th>
-                <th>会员内码MemNo</th>
-                <th>昵称用户名</th>
-                <th>邮箱</th>
-                <th>姓名</th>
-                <th>手机</th>
-                <th>电话</th>
-                <th>注册时间</th>
-                <th>推荐人</th>
-
-                <th>与宝宝关系</th>
+                <th>匿名用户UID</th>
+                <th>输入宝宝信息时间</th>
                 <th>准妈妈预产期</th>
-                <th>第一个宝宝生日</th>
-
-                <th>重置密码</th>
-                <th>管理</th>
-                <th>优惠券</th>
-
+                <th>宝宝生日</th>
+                <th>上次访问时间</th>
+                <th>上次访问IP</th>
+                <th>对应已注册会员号UserCode</th>
+                <th>对应已注册会员邮箱</th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
                 <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
                 <td>2012-06-04 13:25</td>
-                <td>XXX</td>
-
-                <td>妈妈</td>
                 <td>2012-06-04</td>
                 <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
+                <td>2012-06-04 13:25</td>
+                <td>192.168.1.1</td>
+                <td>10430533</td>
+                <td>jinwyp@163.com</td>
             </tr>
             <tr>
                 <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
                 <td>2012-06-04 13:25</td>
-                <td>XXX</td>
-
-                <td>妈妈</td>
                 <td>2012-06-04</td>
                 <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
+                <td>2012-06-04 13:25</td>
+                <td>192.168.1.1</td>
+                <td>未注册</td>
+                <td>未注册</td>
             </tr>
             <tr>
                 <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
                 <td>2012-06-04 13:25</td>
-                <td>XXX</td>
-
-                <td>妈妈</td>
                 <td>2012-06-04</td>
                 <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
+                <td>2012-06-04 13:25</td>
+                <td>192.168.1.1</td>
+                <td>未注册</td>
+                <td>未注册</td>
             </tr>
 
             </tbody>
