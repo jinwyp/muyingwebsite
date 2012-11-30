@@ -217,7 +217,7 @@
 .register-form li .radioWrap{
 }
 .register-form li .radioWrap label{
-    padding-top:4px;
+    padding:4px 0 2px;
 }
 
 .register-form li .inputCont .codeWrap{
