@@ -69,8 +69,10 @@
                     <li>
                         <label class="label">宝宝的性别：</label>
                         <div class="inputCont radioWrap">
-                            <label><input type="radio" name="baby-sex" id="bb0-sex" value="0" />小王子</label>
-                            <label><input type="radio" name="baby-sex" id="bb1-sex" value="1" />小公主</label>
+                            <div class="argWrap">
+                                <label><input type="radio" name="baby-sex" id="bb0-sex" value="0" />小王子</label>
+                                <label><input type="radio" name="baby-sex" id="bb1-sex" value="1" />小公主</label>
+                            </div>
                             <div id="baby-sexTip" class="stickTips"></div>
                             <div class="floatTips"></div>
                         </div>
@@ -86,9 +88,11 @@
                     <li>
                         <label class="label">您是宝宝的：</label>
                         <div class="inputCont radioWrap">
-                            <label><input type="radio" name="baby-rel" id="bb0-rel" value="0" />爸爸</label>
-                            <label><input type="radio" name="baby-rel" id="bb1-rel" value="1" />妈妈</label>
-                            <label><input type="radio" name="baby-rel" id="bb2-rel" value="2" />亲友</label>
+                            <div class="argWrap">
+                                <label><input type="radio" name="baby-rel" id="bb0-rel" value="0" />爸爸</label>
+                                <label><input type="radio" name="baby-rel" id="bb1-rel" value="1" />妈妈</label>
+                                <label><input type="radio" name="baby-rel" id="bb2-rel" value="2" />亲友</label>
+                            </div>
                             <div id="baby-relTip" class="stickTips"></div>
                             <div class="floatTips"></div>
                         </div>
@@ -97,15 +101,18 @@
                         <label class="label">&nbsp;</label>
                         <div class="inputCont">
                             <div class="argWrap">
-                                <input type="button" id="add-baby" name="add-baby" value="再添加一个宝宝"  />
+                                <div id="add-baby" class="btn_m btn_m_h"><a href="javascript:void(0)">再添加一个宝宝</a></div>
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li class="submit-area">
                         <label class="label">&nbsp;</label>
                         <div class="inputCont">
-                            <input type="button" id="" name="" class="submit-next"  />
-                            <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            <div class="argWrap">
+                                <input type="button" id="" name="" class="submit-next" />
+                                <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            </div>
+                            <div class="onError"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
                         </div>
                     </li>
                 </ul>

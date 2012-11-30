@@ -119,6 +119,9 @@
 .register-form li.followus{
     padding-top:20px
 }
+.register-form li.submit-area{
+    padding-top:30px
+}
 .login-form li{
     padding: 10px 0;
 }

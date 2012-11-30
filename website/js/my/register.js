@@ -398,12 +398,10 @@ $(function(){
 
     $("#add-baby").click(function(){
         var i = $(".onemorebaby").length;
-        if(i==2){
-            alert("您只能添加3个宝宝");
-            return ;
+        if(i==1){
+            $("#addbb").hide();
         }
-        $("#addbb").before('<li class="onemorebaby"><label class="label">第'+(i==0?"一":"二")+'个宝宝的生日：</label><div class="inputCont"><input type="text" id="birthday2_'+i+'" name="birthday2_'+i+'" class="txt" placeholder="年-月-日" /><div id="birthday2_'+i+'Tip" class="stickTips"></div><div id="birthday2_'+i+'FixTip" class="floatTips"></div></div></li><li><label class="label">宝宝的性别：</label><div class="inputCont radioWrap"><label><input type="radio" name="baby-sex_'+i+'" id="bb0-sex_'+i+'" value="0" />小王子</label><label><input type="radio" name="baby-sex_'+i+'" id="bb1-sex_'+i+'" value="1" />小公主</label><div id="baby-sex_'+i+'Tip" class="stickTips"></div><div class="floatTips"></div></div></li>');
-
+        $("#addbb").before('<li class="onemorebaby"><label class="label">第'+(i==0?"一":"二")+'个宝宝的生日：</label><div class="inputCont"><input type="text" id="birthday2_'+i+'" name="birthday2_'+i+'" class="txt" placeholder="年-月-日" /><div id="birthday2_'+i+'Tip" class="stickTips"></div><div id="birthday2_'+i+'FixTip" class="floatTips"></div></div></li><li><label class="label">宝宝的性别：</label><div class="inputCont radioWrap"><div class="argWrap"><label><input type="radio" name="baby-sex_'+i+'" id="bb0-sex_'+i+'" value="0" />小王子</label><label><input type="radio" name="baby-sex_'+i+'" id="bb1-sex_'+i+'" value="1" />小公主</label></div><div id="baby-sex_'+i+'Tip" class="stickTips"></div><div class="floatTips"></div></div></li>');
         $("#birthday2_"+i)
             .datepicker({
                 inline: true,
