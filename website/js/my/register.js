@@ -314,13 +314,26 @@ $(function(){
         onCorrect:true
     })
     .inputValidator({
-        min:11,max:14,onError:"请填写您的手机号码"
+        min:11,max:14,onError:"请正确填写您的手机号码"
     })
     .regexValidator({
         regExp:"mobile",
         dataType:"enum",
         onError:"你输入的手机号码格式不正确"
     });
+    $("input:radio[name='pre-baby-rel']")
+        .formValidator({
+            empty:true,
+            tipID:"pre-baby-relTip",
+            defaultValue:[""],
+            onCorrect:true,
+            onEmpty:""
+        })
+        .inputValidator({
+            min:1,
+            max:1,
+            onError:"请选择宝宝性别"
+        });
 
     !!$("#birthday2").length && $("#birthday2" )
         .datepicker({
@@ -330,7 +343,8 @@ $(function(){
             dateFormat:"yy-mm-dd",
             yearRange:"c-5:c+2",
             showMonthAfterYear:true
-        })
+        });
+    $("#birthday2")
         .formValidator({
             onShowFixText:"请填写宝宝的生日。格式：年-月-日",
             onCorrect:true
@@ -348,7 +362,7 @@ $(function(){
             onCorrect:true
         })
         .inputValidator({
-            min:11,max:14,onError:"请填写您的手机号码"
+            min:11,max:14,onError:"请正确填写您的手机号码"
         })
         .regexValidator({
             regExp:"mobile",
@@ -356,6 +370,71 @@ $(function(){
             onError:"你输入的手机号码格式不正确"
         });
 
+    $("input:radio[name='baby-sex']")
+        .formValidator({
+            tipID:"baby-sexTip",
+            defaultValue:[""],
+            onCorrect:true,
+            onEmpty:""
+        })
+        .inputValidator({
+            min:1,
+            max:1,
+            onError:"请选择宝宝性别"
+        });
+
+    $("input:radio[name='baby-rel']")
+        .formValidator({
+            empty:true,
+            tipID:"baby-relTip",
+            defaultValue:[""],
+            onCorrect:true
+        })
+        .inputValidator({
+            min:1,
+            max:1,
+            onError:"请选择宝宝性别"
+        });
+
+    $("#add-baby").click(function(){
+        var i = $(".onemorebaby").length;
+        if(i==2){
+            alert("您只能添加3个宝宝");
+            return ;
+        }
+        $("#addbb").before('<li class="onemorebaby"><label class="label">第'+(i==0?"一":"二")+'个宝宝的生日：</label><div class="inputCont"><input type="text" id="birthday2_'+i+'" name="birthday2_'+i+'" class="txt" placeholder="年-月-日" /><div id="birthday2_'+i+'Tip" class="stickTips"></div><div id="birthday2_'+i+'FixTip" class="floatTips"></div></div></li><li><label class="label">宝宝的性别：</label><div class="inputCont radioWrap"><label><input type="radio" name="baby-sex_'+i+'" id="bb0-sex_'+i+'" value="0" />小王子</label><label><input type="radio" name="baby-sex_'+i+'" id="bb1-sex_'+i+'" value="1" />小公主</label><div id="baby-sex_'+i+'Tip" class="stickTips"></div><div class="floatTips"></div></div></li>');
+
+        $("#birthday2_"+i)
+            .datepicker({
+                inline: true,
+                changeMonth:true,
+                changeYear:true,
+                dateFormat:"yy-mm-dd",
+                yearRange:"c-5:c+2",
+                showMonthAfterYear:true
+            })
+            .formValidator({
+                onShowFixText:"请填写宝宝的生日。格式：年-月-日",
+                onCorrect:true
+            })
+            .inputValidator({
+                regExp:"\\d{4}-\\d{2}-\\d{2}",
+                min:10,max:10,onError:"请正确填写宝宝的生日"
+            });
+
+        $("input:radio[name='baby-sex_"+i+"']")
+            .formValidator({
+                tipID:"baby-sex_"+i+"Tip",
+                defaultValue:[""],
+                onCorrect:true
+            })
+            .inputValidator({
+                min:1,
+                max:1,
+                onError:"请选择宝宝性别"
+            });
+
+    })
 
 });
 
