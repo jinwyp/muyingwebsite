@@ -92,10 +92,11 @@ input{border:0 none;vertical-align:middle}
 .header .nav ul li.first .current,.header .nav ul li.first :hover{background-position:-61px -35px}
 .header .nav ul li.last a{width:97px}
 .header .nav ul li.last .current,.header .nav ul li.last :hover{background-position:-441px -35px}
-.header .hotline{position:absolute;right:0;top:12px;width:176px;height:42px;background:url("../images/banner_hotline.gif") no-repeat 0 0}
+.header .hotline{position:absolute;right:0;top:2px;width:184px;height:42px;background:url("../images/banner_hotline.gif") no-repeat 0 0}
+.header .qq-online{position:absolute;right:0;top:38px;}
 .menu{width:100%;height:45px;background:url("../images/bg_menu.gif") repeat-x 0 0}
 .menu .wrapper{padding-top:8px}
-.menu .search{float:left;_display:inline;padding-left:18px;width:512px}
+.menu .search{float:left;_display:inline;padding-left:250px;width:512px}
 .menu .search .search-input{border:#ff7800 1px solid;width:206px}
 .menu .search .btn-search{padding-left:3px;height:26px;line-height:26px;background-position:-5px -2px;color:#fff;font-weight:700;letter-spacing:2px}
 .menu .search .search-bd{float:left;_display:inline}
@@ -121,7 +122,7 @@ input{border:0 none;vertical-align:middle}
 .menu .shopcart .cart-list .amount .btn-m a{color:#fff}
 
 /*category*/
-.category{float:left;_display:inline;position:relative;z-index:2}
+.category{float:left;display:inline;margin-top:-38px;position:relative;z-index:2}
 .category .category-hd{width:240px;height:36px;background:url("../images/category/category_hd.gif") no-repeat scroll 0 0 transparent;font-size:14px;line-height:36px;text-align:center}
 .category .category-hd h2{font-weight:700}
 .category .category-hd h2 a{display:block;width:240px;height:36px;color:#ff7800;text-decoration:none}
