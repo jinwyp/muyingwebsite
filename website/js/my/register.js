@@ -397,7 +397,7 @@ $(function(){
             onError:"请选择宝宝性别"
         });
 
-    $("#add-baby").click(function(){
+    $("#add-baby a").click(function(){
         var i = $(".onemorebaby").length;
         if(i==1){
             $("#addbb").hide();
