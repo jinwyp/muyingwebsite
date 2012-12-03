@@ -298,7 +298,7 @@ $(function(){
         showMonthAfterYear:true
     })
     .formValidator({
-        onShowFixText:"请填写宝宝的预产期。格式：年-月-日",
+        onShowFixText:"请填入宝宝的预产期，格式为年-月-日",
         onCorrect:true
         })
     .inputValidator({
