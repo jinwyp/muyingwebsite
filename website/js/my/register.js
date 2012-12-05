@@ -122,7 +122,7 @@ $(function(){
             onShowFixText:"",
             onShow:"你还没有同意用户协议",
             onFocus:"",
-            onCorrect:""
+            onCorrect:true
         })
         .inputValidator({
             min:1,
@@ -171,7 +171,7 @@ $(function(){
             onShowFixText:"6~18个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
             onShow:"请输入邮箱",
             onFocus:"邮箱6-100个字符,输入正确了才能离开焦点",
-            onCorrect:"恭喜你,你输对了"
+            onCorrect:true
         })
         .inputValidator({
             min:6,max:100,onError:"你输入的邮箱不正确,请确认"
@@ -198,7 +198,7 @@ $(function(){
             onShowFixText:"请再次输入密码",
             onShow:"请再次输入密码",
             onFocus:"至少1个长度",
-            onCorrect:"密码一致"
+            onCorrect:true
         })
         .inputValidator({
             min:1,

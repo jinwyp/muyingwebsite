@@ -45,7 +45,7 @@
 <div class="wrapper">
     <div class="sign-content">
         <div class="sign-left">
-            <div class="sign-title">欢乐来到母婴之家 请完善您的信息</div>
+            <div class="sign-title">欢迎来到母婴之家 请完善您的信息</div>
             <form action="" method="post" name="form" id="third-reg-form">
                 <ul class="register-form clear">
                     <!--<li>
@@ -83,9 +83,11 @@
                     <li>
                         <label class="label">是否有宝宝：</label>
                         <div class="inputCont radioWrap">
-                            <label for="third-bb0"><input type="radio" name="baby" id="third-bb0" value="0"/>还没有</label>
-                            <label for="third-bb1"><input type="radio" name="baby" id="third-bb1" value="1"/>已怀孕的准妈妈</label>
-                            <label for="third-bb2"><input type="radio" name="baby" id="third-bb2" value="2"/>已有宝宝</label>
+                            <div class="argWrap">
+                                <label for="third-bb0"><input type="radio" name="baby" id="third-bb0" value="0"/>还没有</label>
+                                <label for="third-bb1"><input type="radio" name="baby" id="third-bb1" value="1"/>已怀孕的准妈妈</label>
+                                <label for="third-bb2"><input type="radio" name="baby" id="third-bb2" value="2"/>已有宝宝</label>
+                            </div>
                             <div id="third-babyTip" class="stickTips"></div>
                             <div class="floatTips"></div>
                         </div>
@@ -93,15 +95,18 @@
                     <li>
                         <label class="label">&nbsp;</label>
                         <div class="inputCont">
-                            <input type="button" id="" name="" class="submit-next"  />
-                            <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            <div class="argWrap">
+                                <input type="button" id="" name="" class="submit-next"  />
+                                <a href="" class="submit-txt-link">跳过此步,立即去购物</a>
+                            </div>
+                            <div class="onError" id="errTip"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
                         </div>
                     </li>
                     <li class="followus">
                         <label class="label">&nbsp;</label>
                         <div class="inputCont">
                             <div class="argWrap">
-                                <input type="checkbox" id="third-agreement" name="third-agreement" class=""  />
+                                <input type="checkbox" id="third-agreement" name="third-agreement" class="checkbox"  />
                                 <label for="third-agreement">关注母婴之家官方微博</label>
                             </div>
                         </div>
@@ -137,7 +142,10 @@
                 <li>
                     <label class="label">&nbsp;</label>
                     <div class="inputCont">
-                        <input type="button" id="third-bind-btn" name="" class="submit-bindup" value=""  />
+                        <div class="argWrap">
+                            <input type="button" id="third-bind-btn" name="" class="submit-bindup" value=""  />
+                        </div>
+                        <div class="onError"><p class="noticeWrap noticeWrap-err"><b class="ico-warning"></b><span class="txt-err">请求超时</span></p></div>
                     </div>
                 </li>
             </ul>

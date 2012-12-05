@@ -38,7 +38,7 @@ var formValidator_setting =
     onShowFixText:"",                                   //鼠标移到文本框时Tip的提示文字（register中input下的提示信息）
     onShow :"请输入内容",                                //初始Tip提示文字（无条件触发）
     onFocus: "请输入内容",                               //鼠标焦点在文本框时的Tip提示文字（右）
-    onCorrect: "输入正确",                               //验证通过时Tip显示的文字
+    onCorrect: "输入正确",                               //验证通过时Tip显示的文字,如果值为true(非字符串类型)则只显示图标,为空则不显示
     onEmpty: "输入内容为空",                             //输入值为空时Tip的提示文字
     empty :false,                                       //值是否可以为空
     autoModify : false,                                 //自动修改
