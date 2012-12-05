@@ -365,3 +365,54 @@
     background: #EE7407;
     color:#f6f6f6;
 }
+
+/*注册成功*/
+.suc-content{
+    overflow: hidden;
+    zoom:1;
+    padding: 0 20px 30px
+}
+.suc-content p.txt{
+    font-size:14px;
+    line-height: 2.2;
+    clear: both;
+    padding: 10px
+}
+.suc-content .verify-btn{
+    margin:10px
+}
+.suc-content .verify-btn a{
+    font-size:14px;
+    color:#fff;
+    font-weight: bold;
+}
+.suc-content .indiv-btn a{
+    font-size:14px;
+    color:#f78000;
+    font-weight: bold;
+}
+.suc-title{
+    background: url(../images/icon_sucsess.gif) no-repeat 0 0;
+    padding-left:70px;
+    font-size:22px;
+    color:#82be0e;
+    height:70px;
+    line-height:70px
+}
+.suc-btnlist{
+    padding:10px 70px;
+    overflow: hidden;
+    zoom:1;
+}
+
+.suc-input-goshop{
+    padding:0;
+    margin:0 30px 0 0;
+    float: left;
+    display:inline;
+    background: url("../images/sign-icons.png") no-repeat scroll -218px -96px transparent;
+    border: 0 none;
+    cursor: pointer;
+    height: 33px;
+    width: 109px
+}
