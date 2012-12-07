@@ -372,7 +372,7 @@
     zoom:1;
     padding: 0 20px 30px
 }
-.suc-content p.txt{
+.suc-content .txt{
     font-size:14px;
     line-height: 2.2;
     clear: both;
@@ -393,11 +393,12 @@
 }
 .suc-title{
     background: url(../images/icon_sucsess.gif) no-repeat 0 0;
-    padding-left:70px;
+    padding-left:100px;
     font-size:22px;
     color:#82be0e;
     height:70px;
-    line-height:70px
+    line-height:70px;
+    font-weight:bold;
 }
 .suc-btnlist{
     padding:10px 70px;
