@@ -54,11 +54,11 @@ $(function(){
             onCorrect:true
         })
         .inputValidator({
-            min:6,max:100,onError:"你输入的邮箱不正确,请确认"
+            min:6,max:100,onError:"您输入的邮箱不正确"
         })
         .regexValidator({
             regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
-            ,onError:"你输入的邮箱格式不正确"
+            ,onError:"您输入的邮箱格式不正确"
         });
     $("#password1")
         .formValidator({
@@ -75,7 +75,7 @@ $(function(){
         });
     $("#password2")
         .formValidator({
-            onShowFixText:"请再次填入密码",
+            onShowFixText:"请再次输入密码保证与您设置的密码相同",
             onShow:"请再次填入密码",
             onFocus:"至少1个字符长度",
             onCorrect:true
@@ -83,12 +83,12 @@ $(function(){
         .inputValidator({
             min:1,
             empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},
-            onError:"重复密码不能为空,请确认"
+            onError:"重复密码不能为空"
         })
         .compareValidator({
             desID:"password1",
             operateor:"=",
-            onError:"2次密码不一致,请重新输入"
+            onError:"您两次填入密码不一致"
         });
     $("#reg-form input:radio[name='baby']")
         .formValidator({
@@ -97,7 +97,7 @@ $(function(){
             tipCss :{"left":"60px"},
             onShow:"",
             onFocus:"",
-            onCorrect:"",
+            onCorrect:true,
             defaultValue:["0"]
         })
         .inputValidator({
@@ -168,21 +168,21 @@ $(function(){
      });*/
     $("#third-email")
         .formValidator({
-            onShowFixText:"6~18个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾",
-            onShow:"请输入邮箱",
-            onFocus:"邮箱6-100个字符,输入正确了才能离开焦点",
+            onShowFixText:"请填入常用的邮箱，用来找回密码，接受通知等信息",
+            onShow:"请填入常用的邮箱",
+            onFocus:"请填入常用的邮箱",
             onCorrect:true
         })
         .inputValidator({
-            min:6,max:100,onError:"你输入的邮箱不正确,请确认"
+            min:6,max:100,onError:"您输入的邮箱不正确"
         })
         .regexValidator({
             regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
-            ,onError:"你输入的邮箱格式不正确"
+            ,onError:"您输入的邮箱格式不正确"
         });
     $("#third-password1")
         .formValidator({
-            onShowFixText:"6~16个字符，包括字母、数字、特殊符号，区分大小写",
+            onShowFixText:"请填入6~20个字符，包括字母、数字、特殊符号，区分大小写",
             onShow:"请输入密码",onFocus:"至少1个长度",onCorrect:"密码合法"
         })
         .inputValidator({
@@ -195,20 +195,20 @@ $(function(){
         });
     $("#third-password2")
         .formValidator({
-            onShowFixText:"请再次输入密码",
-            onShow:"请再次输入密码",
+            onShowFixText:"请再次输入密码保证与您设置的密码相同",
+            onShow:"请再次填入密码",
             onFocus:"至少1个长度",
             onCorrect:true
         })
         .inputValidator({
             min:1,
             empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},
-            onError:"重复密码不能为空,请确认"
+            onError:"重复密码不能为空"
         })
         .compareValidator({
             desID:"third-password1",
             operateor:"=",
-            onError:"2次密码不一致,请确认"
+            onError:"您两次填入密码不一致"
         });
     $("#third-reg-form input:radio[name='baby']")
         .formValidator({
@@ -217,12 +217,12 @@ $(function(){
             tipCss :{"left":"60px"},
             onShow:"",
             onFocus:"",
-            onCorrect:"",
+            onCorrect:true,
             defaultValue:[""]})
         .inputValidator({
             min:1,
             max:1,
-            onError:"请选择"
+            onError:"请选择是否有宝宝"
         });
 
     $("#third-email").selectView();
@@ -351,7 +351,7 @@ $(function(){
         })
         .inputValidator({
             regExp:"\\d{4}-\\d{2}-\\d{2}",
-            min:10,max:10,onError:"请正确填写宝宝的生日"
+            min:10,max:10,onError:"请按格式填写宝宝的生日"
         });
 
     $("#mother-mobile2")
@@ -418,7 +418,7 @@ $(function(){
             })
             .inputValidator({
                 regExp:"\\d{4}-\\d{2}-\\d{2}",
-                min:10,max:10,onError:"请正确填写宝宝的生日"
+                min:10,max:10,onError:"请按格式填写宝宝的生日"
             });
 
         $("input:radio[name='baby-sex_"+i+"']")
