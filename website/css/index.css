@@ -86,3 +86,96 @@
 .hot-comment dd h5 a{color:#1859A5;}
 .hot-comment dd h5 a:hover{color:#f00;}
 .editor-choice{float:right;width:210px;height:220px;overflow:hidden;border:1px #e7e7e7 solid;}
+
+/*dialog*/
+.index-dialog{
+    position: absolute;
+    left:50%;
+    top:50%;
+    z-index: 999
+}
+.index-dialog .topcol{
+    position: relative;
+    overflow: hidden;
+    zoom:1;
+    padding: 29px 38px 40px 34px
+}
+.index-dialog .topcol .ctl{
+    width:34px;
+    height:33px;
+    left:0;
+    top:0;
+    position: absolute;
+    background:url(../images/dialog/ctl.png) no-repeat 0 0
+}
+.index-dialog .topcol .ctm{
+    height: 33px;
+    left:34px;
+    top:0;
+    position: absolute;
+    background:url(../images/dialog/ctm.png) repeat-x 0 0
+}
+.index-dialog .topcol .ctr{
+    width:38px;
+    height:33px;
+    right:0;
+    top:0;
+    position: absolute;
+    background:url(../images/dialog/ctr.png) no-repeat 0 0
+}
+.index-dialog .topcol .cml{
+    width:34px;
+    left:0;
+    top:29px;
+    position: absolute;
+    background:url(../images/dialog/cml.png) repeat-y 0 0
+}
+.index-dialog .topcol .cmr{
+    width:38px;
+    right:0;
+    top:29px;
+    position: absolute;
+    background:url(../images/dialog/cmr.png) repeat-y 0 0
+}
+.index-dialog .topcol .cbl{
+    width:34px;
+    height:40px;
+    left:0;
+    bottom:0;
+    position: absolute;
+    background:url(../images/dialog/cbl.png) no-repeat 0 0
+}
+.index-dialog .topcol .cbm{
+    height:40px;
+    left:34px;
+    bottom:0;
+    position: absolute;
+    background:url(../images/dialog/cbm.png) repeat-x 0 0
+}
+.index-dialog .topcol .cbr{
+    width:38px;
+    height:40px;
+    right:0;
+    bottom:0;
+    position: absolute;
+    background:url(../images/dialog/cbr.png) no-repeat 0 0
+}
+.index-dialog .topcol .close{
+    width:31px;
+    height:31px;
+    right:0;
+    top:0;
+    position: absolute;
+}
+.index-dialog .topcol .close a{
+    display: block;
+    height:31px;
+    text-indent:-999em;
+    overflow: hidden;
+    background:url(../images/dialog/dialog_close.png) no-repeat 0 0
+}
+.index-dialog .content{
+    width:300px;
+    height:200px;
+    background:#fffbe1
+}

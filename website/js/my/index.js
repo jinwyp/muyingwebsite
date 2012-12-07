@@ -1,4 +1,4 @@
-var Banner = function () {
+ Banner = function () {
     var Up = function () {
         jQuery("#banner").slideUp(1500);
         jQuery("#close").css("background", "url(http://img.muyingzhijia.com/images/close-open.png) no-repeat");
@@ -141,6 +141,33 @@ var Every_Day_Timer = function () {
 };
 //#endregion
 
+ //png透明插件,支持png背景和png文件
+ (function($){
+     $.fn.pngfix = function(options) {
+         var defualts = {scale:"scale"/*scale拉伸；nocrop不拉伸*/,tranceImg:"../../images/trance.gif",ie6:($.browser.msie&&($.browser.version=="6.0")&&!$.support.style)},opts = $.extend({}, defualts, options);
+         if(!opts.ie6){return}
+         $.each($(this),function(){
+             var oo = $(this),ow=oo.width(),oh=oo.height(),png=(oo[0].nodeName==="IMG")?oo.attr("src"):oo.css("background-image").split('.png')[0];
+             alert(png);
+             if(oo[0].nodeName==="IMG"){oo.attr("src",opts.tranceImg).width(ow).height(oh).css({background:'none',filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="'+png+'",sizingMethod="'+opts.scale+'")'});}
+             else{oo.css({background:'none',position:'relative',cursor:function(){return (oo[0].nodeName==="A")?'pointer':'default'}});
+                 $("<span></span>").prependTo(oo).css({background:'none',filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="'+png+'",sizingMethod="nocrop")',width:ow,height:oh,position:'absolute',left:0,top:0})
+             }
+         })
+     }
+ })(jQuery);
+
+ //dialog
+ function dialog(){
+     var dw = $(".index-dialog").width(),dh = $(".index-dialog").height();
+     $(".index-dialog").css({
+         "margin-left":-dw/2,
+         "margin-top":-dh/2
+     });
+     $(".fixwidth").width($(".index-dialog .content").width());
+     $(".fixheight").height($(".index-dialog .content").height());
+     $(".pngfix").pngfix()
+ }
 
 $(document).ready(function (e) {
     Banner();
@@ -152,4 +179,6 @@ $(document).ready(function (e) {
     time_priod_a_Hover();
     News_scroll();
     Every_Day_Timer();
+    dialog()
 });
+
