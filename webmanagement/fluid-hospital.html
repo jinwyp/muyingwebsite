@@ -28,7 +28,7 @@
 
 <body>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container-fluid">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -39,7 +39,31 @@
             <a class="brand" href="#">
                 <img width="170" height="50" src="./pics/loginTitle1.png" alt=""/>
             </a>
-
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="#">母婴之家网站后台管理首页</a>
+                    </li>
+                    <li>
+                        <a href="#about">常用链接1</a>
+                    </li>
+                    <li>
+                        <a href="#contact">常用链接2</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用菜单 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">常用链接1</a></li>
+                            <li><a href="#">常用链接2</a></li>
+                            <li><a href="#">常用链接3</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Nav header</li>
+                            <li><a href="#">链接1</a></li>
+                            <li><a href="#">链接2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             <div class="btn-group pull-right">
                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="icon-user"></i>用户名
@@ -53,24 +77,13 @@
                         <a href="#">退出登录</a>
                     </li>
                 </ul>
-            </div>
-            <div class="nav-collapse">
-                <ul class="nav">
-                    <li class="active">
-                        <a href="#">母婴之家网站后台管理首页</a>
-                    </li>
-                    <li>
-                        <a href="#about">常用链接1</a>
-                    </li>
-                    <li>
-                        <a href="#contact">常用链接1</a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
+            </div>            <!--/.nav-collapse -->
+
+        </div>        <!--/.container-fluid -->
+    </div>    <!--/.navbar-inner -->
 </div>
+<!--/.navbar navbar-fixed-top -->
+
 <div class="container-fluid">
 <div class="row-fluid">
 <div class="span2">
@@ -182,8 +195,11 @@
             </li>
 
             <li class="nav-header leftmenuheader">会员管理</li>
-            <li class="active">
+            <li >
                 <a href="#">会员管理</a>
+            </li>
+            <li class="active">
+                <a href="#">会员注册医院信息管理</a>
             </li>
             <li>
                 <a href="#">美素验证管理</a>
@@ -251,6 +267,11 @@
     </div>
     <div class="rightsearchoptionbox hero-unit">
         <div class="row-fluid">
+            <div class="span5 inputbox">
+                <label>医院名称:</label>
+                <input type="text" placeholder="请填入会员号UserCode"/>
+            </div>
+
             <div class="span2">
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn dropdown-toggle">ALL 所有地区
@@ -273,10 +294,51 @@
                     </ul>
                 </div>
             </div>
-            <div class="span5 inputbox">
-                <label>医院名称:</label>
-                <input type="text" placeholder="请填入会员号UserCode"/>
+            <div class="span2">
+                <div class="btn-group">
+                    <button data-toggle="dropdown" class="btn dropdown-toggle">ALL 所有
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">三级特等</a>
+                        </li>
+                        <li>
+                            <a href="#">三级甲等</a>
+                        </li>
+                        <li>
+                            <a href="#">三级乙等</a>
+                        </li>
+                        <li>
+                            <a href="#">三级丙等</a>
+                        </li>
+                        <li>
+                            <a href="#">二级甲等</a>
+                        </li>
+                        <li>
+                            <a href="#">二级乙等</a>
+                        </li>
+                        <li>
+                            <a href="#">二级丙等</a>
+                        </li>
+                        <li>
+                            <a href="#">一级甲等</a>
+                        </li>
+                        <li>
+                            <a href="#">一级乙等</a>
+                        </li>
+                        <li>
+                            <a href="#">一级丙等</a>
+                        </li>
+
+
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">这里放链接</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
 
         </div>
 
@@ -293,80 +355,25 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>会员号UserCode</th>
-                <th>会员内码MemNo</th>
-                <th>昵称用户名</th>
-                <th>邮箱</th>
-                <th>姓名</th>
-                <th>手机</th>
-                <th>电话</th>
-                <th>注册时间</th>
-                <th>推荐人</th>
-
-                <th>与宝宝关系</th>
-                <th>准妈妈预产期</th>
-                <th>第一个宝宝生日</th>
-
-                <th>重置密码</th>
+                <th>医院名称</th>
+                <th>所在地</th>
+                <th>医院等级</th>
                 <th>管理</th>
-                <th>优惠券</th>
-
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
-                <td>2012-06-04 13:25</td>
-                <td>XXX</td>
-
-                <td>妈妈</td>
-                <td>2012-06-04</td>
-                <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
+                <td>长宁妇幼保健院</td>
+                <td>上海市 上海市 长宁区</td>
+                <td>三级甲等</td>
+                <td><a href="#">修改</a> <a href="#">删除</a></td>
             </tr>
-            <tr>
-                <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
-                <td>2012-06-04 13:25</td>
-                <td>XXX</td>
 
-                <td>妈妈</td>
-                <td>2012-06-04</td>
-                <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
-            </tr>
             <tr>
-                <td>10430533</td>
-                <td>784836</td>
-                <td>XXX</td>
-                <td>chenyachao001@126.com</td>
-                <td>王璐</td>
-                <td>15811149906</td>
-                <td>58684858</td>
-                <td>2012-06-04 13:25</td>
-                <td>XXX</td>
-
-                <td>妈妈</td>
-                <td>2012-06-04</td>
-                <td>2012-06-04</td>
-                <td><a href="">重置</a></td>
-                <td><a href="">修改</a></td>
-                <td><a href="">查询</a></td>
+                <td>长宁妇幼保健院</td>
+                <td>上海市 上海市 长宁区</td>
+                <td>三级甲等</td>
+                <td><a href="#">修改</a> <a href="#">删除</a></td>
             </tr>
 
             </tbody>
