@@ -3,95 +3,95 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
     <link href="css/usercenter.css" rel="stylesheet" />
 
 </head>
 <body>
-<div class="out_div">
-    <div class="navMenu_border floatL">
-        <div class="navMenu_Container">
-            <h3 class="floatL">
-                订单中心</h3>
-            <dl class="ptMTop floatL">
-                <dd>
-                    <a href="CustomerCenter_Order.aspx" id="CustomerCenter_Order">我的订单</a></dd>
-                <dd>
-                    <a href="CustomerCenter_favorites.aspx" id="CustomerCenter_favorites">我的收藏</a></dd>
-                <dd>
-                    <a href="CustomerCenter_StockRegister.aspx" id="CustomerCenter_StockRegister">我的到货通知</a></dd>
-            </dl>
-            <h3 class="floatL">
-                账户中心</h3>
-            <dl class="ptMTop floatL">
-                <dd>
-                    <a href="CustomerCenter_Info.aspx" id="CustomerCenter_Info">基本信息</a></dd>
-                <dd>
-                    <a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">修改密码</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Baby.aspx" id="CustomerCenter_Baby">宝宝信息</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Consignee.aspx" id="CustomerCenter_Consignee">收货地址</a></dd>
-                <dd>
-                    <a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon" class="selected">优惠券</a></dd>
-                <dd>
-                    <a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></dd>
-            </dl>
-            <h3 class="floatL">
-                社区中心</h3>
-            <dl class="ptMTop floatL">
-                <dd>
-                    <a href="CustomerCenter_Consult.aspx" id="CustomerCenter_Consult">商品咨询</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Discussion.aspx" id="CustomerCenter_Discussion">我的评价</a></dd>
-                <dd>
-                    <a href="CustomerCenter_Suggestion.aspx" id="CustomerCenter_Suggestion">投诉与建议</a></dd>
-            </dl>
-        </div>
-    </div>
-    <div class="center_right floatL">
-    <div id="ConMain" class="center_right_Div">
-        <h3>优惠券</h3>
-        <ul>
-            <li><a href="#" class="hover">可使用</a></li>
-            <li><a href="#" class="">已使用</a></li>
-            <li><a href="#" class="">已过期</a></li>
-        </ul>
-        <table class="wfc_table" cellpadding="0" cellspacing="0">
-            <tr>
-                <th class="c_width_1s">
-                    优惠券名称
-                </th>
-                <th class="c_width_2s">
-                    有效期
-                </th>
-                <th class="c_width_3s">
-                    备注
-                </th>
-                <th class="c_width_4s">
+<div class="wrapper">
+<div class="wrap-menu fl">
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>订单中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Order.aspx" id="CustomerCenter_Order">我的订单</a></li>
+                <li><a href="CustomerCenter_favorites.aspx" id="CustomerCenter_favorites">我的收藏</a></li>
+                <li><a href="CustomerCenter_StockRegister.aspx" id="CustomerCenter_StockRegister">我的到货通知</a></li>
+            </ul>
+        </dd>
+    </dl>
 
-                </th>
-                <th >
-                   状态
-                </th>
-            </tr>
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>账户中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Info.aspx" id="CustomerCenter_Info">基本信息</a></li>
+                <li><a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">账户安全</a></li>
+                <li><a href="CustomerCenter_Baby.aspx" id="CustomerCenter_Baby">宝宝信息</a></li>
+                <li><a href="CustomerCenter_Consignee.aspx" id="CustomerCenter_Consignee">收货地址</a></li>
+                <li><a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></li>
+                <li class="status-hover"><a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon">优惠券</a></li>
+                <li><a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></li>
+                <li><a href="CustomerCenter_binding.aspx" id="CustomerCenter_binding">社交绑定</a></li>
+            </ul>
+        </dd>
+    </dl>
+
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>社区中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Consult.aspx" id="CustomerCenter_Consult">商品咨询</a></li>
+                <li><a href="CustomerCenter_Discussion.aspx" id="CustomerCenter_Discussion">我的评价</a></li>
+                <li><a href="CustomerCenter_Suggestion.aspx" id="CustomerCenter_Suggestion">投诉与建议</a></li>
+            </ul>
+        </dd>
+    </dl>
+</div>
+
+<div class="wrap-mycenter fr">
+    <div id="ConMain" class="mod-info mod-coupon">
+    <div class="mod-hd"><h3>优惠券</h3></div>
+    <div class="mod-bd">
+        <div class="mod-tit">
+            <ul class="tab-menu">
+                <li class="status-on"><a href="#" >可使用</a></li>
+                <li><a href="#" class="">已使用</a></li>
+                <li><a href="#" class="">已过期</a></li>
+            </ul>
+        </div>
+    <div class="mod-content status-table-on">
+        <table class="wfc_table" cellpadding="0" cellspacing="0">
+            <thead>
             <tr>
-                <td class=" td_top_border">
+                <th width="16%">优惠券名称</th>
+                <th width="20%">有效期</th>
+                <th width="50%">备注</th>
+                <th width="12%">状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
                     仔力奇鲨鱼肝油软胶囊立减20
                 </td>
-                <td class=" td_top_border">
+                <td >
                     2012-08-12至2012-08-15
                 </td>
-                <td class=" td_top_border">
+                <td >
                     购指定消费品满100.00元可用,购指定消费品满100.00元可用
                 </td>
-                <td></td>
-                <td class=" wfc_status td_top_border">
+                <td>
                     <a href="#" class="font_color_use">可使用</a>
-                </td>
-            </tr>
-
+                
+            </td></tr>
 
             <tr>
                 <td class=" font_color_expired">
@@ -103,61 +103,52 @@
                 <td class=" font_color_expired">
                     购纸尿裤满200.00元可用
                 </td>
-                <td></td>
-                <td class=" wfc_status">
+                <td class="">
                     <a href="#" class="font_color_use">可使用</a>
                 </td>
             </tr>
             <tr>
-                <td class=" font_color_expired">
+                <td class="font_color_expired">
                     全场奶粉满399立减40
                 </td>
-                <td class=" font_color_expired">
+                <td class="font_color_expired">
                     2012-0712至2012-07-15
                 </td>
-                <td class=" font_color_expired">
+                <td class="font_color_expired">
                     购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用
                 </td>
-                <td></td>
-                <td class=" wfc_status">
+                <td class="">
                     <a href="#" class="font_color_use">可使用</a>
 
                 </td>
             </tr>
-        </table>
+            
+        </tbody></table>
 
 
         <table class="wfc_table" cellpadding="0" cellspacing="0">
+          <thead>
             <tr>
-                <th class="c_width_1s">
-                    优惠券名称
-                </th>
-                <th class="c_width_2s">
-                    有效期
-                </th>
-                <th class="c_width_3s">
-                    备注
-                </th>
-                <th class="c_width_4s">
-                    对应的订单号
-                </th>
-                <th >
-                   状态
-                </th>
+                <th width="16%">优惠券名称</th>
+                <th width="16%">有效期</th>
+                <th width="44%">备注</th>
+                <th width="12%">对应订单号</th>
+                <th width="12%">状态</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
-                <td class="td_top_border">
+                <td>
                     仔力奇鲨鱼肝油软胶囊立减20_1
                 </td>
-                <td class=" td_top_border">
+                <td >
                     2012-08-12至2012-08-15
                 </td>
-                <td class=" td_top_border">
+                <td>
                     购指定消费品满100.00元可用,购指定消费品满100.00元可用_1
                 </td>
                 <td><a href ="#">123546789123</a></td>
-
-                <td class=" wfc_status td_top_border">
+                <td class="">
                     <a href="#" class="font_color_expired">已使用</a>
                 </td>
             </tr>
@@ -191,26 +182,19 @@
                     <a href="#" class="font_color_expired">可过期</a>
                 </td>
             </tr>
+            </tbody>
         </table>
 
         <table class="wfc_table" cellpadding="0" cellspacing="0">
+        <thead>
             <tr>
-                <th class="c_width_1s">
-                    优惠券名称
-                </th>
-                <th class="c_width_2s">
-                    有效期
-                </th>
-                <th class="c_width_3s">
-                    备注
-                </th>
-                <th class="c_width_4s">
-
-                </th>
-                <th >
-                   状态
-                </th>
+               <th width="16%">优惠券名称</th>
+                <th width="20%">有效期</th>
+                <th width="50%">备注</th>
+                <th width="12%">状态</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td class=" td_top_border">
                     仔力奇鲨鱼肝油软胶囊立减20_2
@@ -220,8 +204,7 @@
                 </td>
                 <td class=" td_top_border">
                     购指定消费品满100.00元可用,购指定消费品满100.00元可用_2
-                </td>
-                <td></td>
+                </td>          
                 <td class=" wfc_status td_top_border">
                     <a href="#" class="font_color_expired">已过期</a>
                 </td>
@@ -235,8 +218,7 @@
                 </td>
                 <td class=" font_color_expired">
                     购纸尿裤满200.00元可用_2
-                </td>
-                <td></td>
+                </td>             
                 <td class=" wfc_status">
                     <a href="#" class="font_color_expired">已过期</a>
                 </td>
@@ -250,26 +232,28 @@
                 </td>
                 <td class=" font_color_expired">
                     购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用_2
-                </td>
-                <td></td>
-                <td class=" wfc_status">
+                </td>             
+                <td class="">
                     <a href="#" class="font_color_expired">已过期</a>
                 </td>
             </tr>
+            </tbody>
         </table>
+    </div><!--mod-content-->
     </div>
     </div>
     </div>
+</div><!--wrapper-->
 </body>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
     (function ($) {
         $("#ConMain .wfc_table:first,#ConMain .wfc_Paging:first").css("display", "block");
-        $("#ConMain ul li a").click(function () {
+        $("#ConMain ul li").click(function () {
             var wfc_table = $("#ConMain .wfc_table");
             var curt_index = $(this).index("#ConMain ul li a");
-            $("#ConMain ul li a").removeClass("hover");
-            $(this).addClass("hover");
+            $("#ConMain ul li").removeClass("status-on");
+            $(this).addClass("status-on");
             wfc_table.css("display", "none");
             wfc_table.eq(curt_index).css("display", "block");
         });
