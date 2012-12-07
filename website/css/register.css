@@ -155,7 +155,7 @@
     position: relative;
 }
 .register-form li input.focus{
-   border: 1px solid #ff9900;
+    border: 1px solid #ff9900;
 }
 .register-form li input.error{
     border: 1px solid #fa2a14;
