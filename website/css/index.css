@@ -91,83 +91,76 @@
 .index-dialog{
     position: absolute;
     left:50%;
-    top:50%;
-    z-index: 999
+    z-index: 999;
 }
-.index-dialog .topcol{
-    position: relative;
+.index-dialog .top-wrap{
+    clear:both;
     overflow: hidden;
     zoom:1;
-    padding: 29px 38px 40px 34px
+    position: relative;
 }
-.index-dialog .topcol .ctl{
+.index-dialog .con-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1
+}
+.index-dialog .btm-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1
+}
+.index-dialog .ctl{
     width:34px;
     height:33px;
-    left:0;
-    top:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/ctl.png) no-repeat 0 0
 }
-.index-dialog .topcol .ctm{
+.index-dialog .ctm{
     height: 33px;
-    left:34px;
-    top:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/ctm.png) repeat-x 0 0
 }
-.index-dialog .topcol .ctr{
+.index-dialog .ctr{
     width:38px;
     height:33px;
-    right:0;
-    top:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/ctr.png) no-repeat 0 0
 }
-.index-dialog .topcol .cml{
+.index-dialog .cml{
     width:34px;
-    left:0;
-    top:29px;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/cml.png) repeat-y 0 0
 }
-.index-dialog .topcol .cmr{
+.index-dialog .cmr{
     width:38px;
-    right:0;
-    top:29px;
-    position: absolute;
+    float: right;
     background:url(../images/dialog/cmr.png) repeat-y 0 0
 }
-.index-dialog .topcol .cbl{
+.index-dialog .cbl{
     width:34px;
     height:40px;
-    left:0;
-    bottom:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/cbl.png) no-repeat 0 0
 }
-.index-dialog .topcol .cbm{
+.index-dialog .cbm{
     height:40px;
-    left:34px;
-    bottom:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/cbm.png) repeat-x 0 0
 }
-.index-dialog .topcol .cbr{
+.index-dialog .cbr{
     width:38px;
     height:40px;
-    right:0;
-    bottom:0;
-    position: absolute;
+    float: left;
     background:url(../images/dialog/cbr.png) no-repeat 0 0
 }
-.index-dialog .topcol .close{
+.index-dialog .close{
     width:31px;
     height:31px;
-    right:0;
-    top:0;
     position: absolute;
+    right: 0;
+    top:0
 }
-.index-dialog .topcol .close a{
+.index-dialog .close a{
     display: block;
     height:31px;
     text-indent:-999em;
@@ -175,7 +168,70 @@
     background:url(../images/dialog/dialog_close.png) no-repeat 0 0
 }
 .index-dialog .content{
-    width:300px;
-    height:200px;
-    background:#fffbe1
+    min-height:100px;
+    min-width:300px;
+    _width:300px;
+    _height:100px;
+    background:#fffbe1;
+    float: left;
+    position: relative;
+}
+.index-dialog .content h2{
+    display: block;
+    height: 20px;
+    line-height:1.5;
+    top:-20px;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    color:#ff7800;
+    font-size:14px;
+    text-align: center
+}
+.index-dialog .content .checksubs{
+    overflow: hidden;
+    zoom: 1;
+    padding:10px 0 0 0
+}
+.index-dialog .content .checksubs label{
+    float: left;
+    display: inline;
+    padding:0 15px 0 20px;
+    vertical-align: middle;
+}
+.index-dialog .content .checksubs label input{
+    float: left;
+    vertical-align: middle;
+}
+.index-dialog .content .getdate{
+    clear: both;
+    padding:15px 0 0 35px
+}
+.index-dialog .content .getdate label{
+    color:#ff9900;
+}
+.index-dialog .content .getdate .bbtips{
+    color:#999
+}
+.index-dialog .content .getdate input{
+    border:1px solid #ff9900;
+    width: 100px;
+    padding:2px 5px;
+    border-radius: 3px;
+}
+.index-dialog .content .subbtn{
+    padding:20px 0 0;
+    text-align:center;
+}
+.index-dialog .content .subbtn input{
+    width:80px;
+    height:30px;
+    border:0;
+    padding:0;
+    background: url(../images/dialog/dialog_btn.png);
+    cursor: pointer;
+    color:#fff;
+    display: block;
+    text-align: center;
+    margin:0 auto
 }

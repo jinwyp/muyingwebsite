@@ -144,14 +144,13 @@ var Every_Day_Timer = function () {
  //png透明插件,支持png背景和png文件
  (function($){
      $.fn.pngfix = function(options) {
-         var defualts = {scale:"scale"/*scale拉伸；nocrop不拉伸*/,tranceImg:"../../images/trance.gif",ie6:($.browser.msie&&($.browser.version=="6.0")&&!$.support.style)},opts = $.extend({}, defualts, options);
+         var defualts = {scale:"scale"/*scale拉伸；nocrop不拉伸*/,tranceImg:"images/trance.gif",ie6:($.browser.msie&&($.browser.version=="6.0")&&!$.support.style)},opts = $.extend({}, defualts, options);
          if(!opts.ie6){return}
          $.each($(this),function(){
-             var oo = $(this),ow=oo.width(),oh=oo.height(),png=(oo[0].nodeName==="IMG")?oo.attr("src"):oo.css("background-image").split('.png')[0];
-             alert(png);
+             var oo = $(this),ow=oo.width(),oh=oo.height(),png=(oo[0].nodeName==="IMG")?oo.attr("src"):oo.css("background-image").split('("')[1].split('")')[0];
              if(oo[0].nodeName==="IMG"){oo.attr("src",opts.tranceImg).width(ow).height(oh).css({background:'none',filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="'+png+'",sizingMethod="'+opts.scale+'")'});}
              else{oo.css({background:'none',position:'relative',cursor:function(){return (oo[0].nodeName==="A")?'pointer':'default'}});
-                 $("<span></span>").prependTo(oo).css({background:'none',filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="'+png+'",sizingMethod="nocrop")',width:ow,height:oh,position:'absolute',left:0,top:0})
+                 var odiv = $("<span></span>").prependTo(oo).css({background:'none',filter:'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="'+png+'",sizingMethod="'+opts.scale+'")',width:ow,height:oh,position:'absolute',left:0,top:0})
              }
          })
      }
@@ -159,14 +158,58 @@ var Every_Day_Timer = function () {
 
  //dialog
  function dialog(){
-     var dw = $(".index-dialog").width(),dh = $(".index-dialog").height();
-     $(".index-dialog").css({
-         "margin-left":-dw/2,
-         "margin-top":-dh/2
+     var dialog = $(".dialog");
+     dialog.each(function(){
+         var $this = $(this);
+         var showclose = $this.attr("showclose");
+         var content = $(".content",this);
+         var topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div><div class="close"><a href="#" class="pngfix">关闭</a></div>            </div>')
+         var btncon = $('<div class="btm-wrap"><div class="pngfix cbl"></div><div class="pngfix fixwidth cbm"></div><div class="pngfix cbr"></div></div>');
+         content.wrap('div.con-wrap').before(topcon).after(btncon);
+         content.before('<div class="pngfix fixheight cml"></div>').after('<div class="pngfix fixheight cmr"></div>');
+         if(!showclose){
+             $(".close",this).hide()
+         }
+         var cw = content.width(),
+             ch = content.height(),
+             clw = $('.ctl',this).width(),
+             crw = $('.ctr',this).width(),
+             dw = $this.width(clw+cw+crw),
+             dh = $this.height();
+         $(".fixwidth",this).width(cw);
+         $(".fixheight",this).height(ch);
+         $(".pngfix",this).pngfix();
+         $this.css({
+             "margin-left":-dw.width()/2
+         }).animate({top:($(window).height()-dh)/2-50},300);
+         $(".close",this).click(function(){
+             $this.hide();
+             return false
+         });
+         $("#btn-save").click(function(){
+             $this.animate({top:0},250,function(){$this.hide()});
+         });
+
      });
-     $(".fixwidth").width($(".index-dialog .content").width());
-     $(".fixheight").height($(".index-dialog .content").height());
-     $(".pngfix").pngfix()
+
+     $("#baby-birthday").datepicker({
+         inline: true,
+         changeMonth:true,
+         changeYear:true,
+         dateFormat:"yy-mm-dd",
+         yearRange:"c-5:c+2",
+         showMonthAfterYear:true
+     });
+
+     $("input:radio['name=radval']").change(function(){
+         if($(this).val()==0){
+             $("#day-type").text("您当前的宝宝生日是：");
+         }
+         if($(this).val()==1){
+             $("#day-type").text("您当前的宝宝预产期是：");
+         }
+     })
+
  }
 
 $(document).ready(function (e) {
