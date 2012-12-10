@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -57,215 +57,138 @@
 </div>
 
 <div class="wrap-mycenter fr">
-    <div id="ConMain" class="mod-info">
+    <div class="mod-info">
         <div class="mod-hd"><h3>基本信息</h3></div>
         <div class="mod-bd">
-            <ul class="info-form">
-                <li class="item">
-                    <span class="label">用户名：</span>
-
-                    <div class="fl">
-                        <strong class="username">&#26377;&#19968;&#28857;&#29233;&nbsp;&nbsp;&nbsp;</strong>
-										<span class="rank r2">
-											<s></s><a
-                                                href="http://bankws.360buy.com/consume/usergrade.aspx"
-                                                target="_blank">
-                                            铁牌用户
-                                        </a> </span>
-
-                    </div>
-
-                </li>
-                <li class="item">
-                    <span class="label">会员类型：</span>
-
-                    <div class="fl" id="changeType">&#20010;&#20154;&#29992;&#25143;</div>
-
-                </li>
-
-
-                <li class="item" id="schoolDiv" style="display:none">
-                    <span class="label">收货学校：</span>
-
-                    <div class="fl" id="schoolName"></div>
-
-                </li>
-
-                <li class="item">
-                    <span class="label"><em>*</em>昵称：</span>
-
-                    <div class="fl">
-                        <div>
-                            <input name="userInfo.petName" id="petName" type="text" value="" class="text"/><s
-                                id="petName_orderly"></s>
-
-                            <div class="clr"></div>
-                            <div class="prompt-06"><span id="petName_msg"></span></div>
+            <form accept-charset="UTF-8" action="" class="form info-form" id="userInfo" method="post">
+                <fieldset>
+                    <legend>用户基本信息</legend>
+                    <div class="control-group">
+                        <label class="control-label">用户名</label>
+                        <div class="controls">
+                            <strong>jinwyp</strong><span class="user-num font-gray">用户编号：10179300</span>
                         </div>
                     </div>
-                </li>
 
-                <li class="item">
-                    <span class="label"><em>*</em>真实姓名：</span>
-
-                    <div class="fl">
-                        <div>
-                            <input name="userInfo.userName" id="uname" type="text" value="&#19969;&#26757;"
-                                   class="text"/><s id="userName_orderly"></s>
-
-                            <div class="clr"></div>
-                            <div class="prompt-06"><span id="userName_msg"></span></div>
+                    <div class="control-group">
+                        <label class="control-label">电子邮箱</label>
+                        <div class="controls">
+                            <strong>jinwyp@163.com</strong><span class="btn_m btn_m_h"><a href="">验证邮箱</a></span>
                         </div>
                     </div>
-                </li>
 
-                <li class="item">
-                    <span class="label"><em>*</em>性别：</span>
-
-                    <div class="fl">
-                        <input type="radio" name="userInfo.sex" value="2"
-                               id="RadioGroup1_0" class="radio"/><label>保密</label>
-                        <input type="radio" name="userInfo.sex" value="0"
-                               id="RadioGroup1_0" class="radio"/><label>男</label>
-                        <input
-                                type="radio" name="userInfo.sex" value="1" id="RadioGroup1_1"
-                                class="radio"/><label>女</label>
-                    </div>
-                </li>
-                <div style="display:none"><a href="" id="verify_link" target="_blank">text</a>
-                </div>
-                <li class="item">
-                    <span class="label"><em>*</em>邮箱：</span>
-
-                    <div class="fl">
-                        <div class="ssub">
-                            <strong>caifei.zhong@gmail.com</strong>
-                            <s id="email_orderly"></s>&nbsp;&nbsp;&nbsp;
-                            <a href="http://i.360buy.com/user/verifyMail" class="smod"><s></s>修改</a>
-                            <a href="http://i.360buy.com/user/verifyMail" class="btn btn-8"><s></s>立即验证</a>
-
+                    <div class="control-group">
+                        <label class="string control-label">会员等级</label>
+                        <div class="controls">
+                            <strong>普通会员</strong><span class="icon-help text-tips"><a href="">不同会员等级有什么不同?</a></span>
                         </div>
-                        <div class="clr"></div>
-                        <div class="prompt-06"><span id="email_msg"></span></div>
                     </div>
 
-                </li>
-                <li class="item">
-                    <span class="label"><em>*</em>手机号码：</span>
-
-                    <div class="fl">
-                        <div class="ssub">
-                            <input name="userInfo.usermob" value="" id="usermob" type="text" class="text "/><s
-                                id="usermob_orderly"></s>&nbsp;&nbsp;&nbsp;<a
-                                href="http://i.360buy.com/user/verifyMobile;" class="btn btn-8"><s></s>立即验证</a>
+                    <div class="control-group">
+                        <label class="control-label" for="real_name"><abbr title="required">*</abbr> 真实姓名</label>
+                        <div class="controls">
+                            <input class="text-input required" id="real_name" name="real_name" size="50" type="text" value="" />
                         </div>
-                        <div class="clr"></div>
-                        <div class="prompt-06"><span id="usermob_msg"></span></div>
                     </div>
 
-                </li>
-
-                <li class="item">
-                    <span class="label">身份证号码：</span>
-
-                    <div class="fl">
-
-                        <div id="cidShowDiv" style="display:none">
-                            <strong></strong><a class="smod" href="javascript:showCidDiv()">修改</a>
+                    <div class="control-group">
+                        <label class="control-label"><abbr title="required">*</abbr> 性别</label>
+                        <div class="controls">
+                            <input class="radio required" id="user_sex_woman" name="user_sex" type="radio" checked="checked" /><label for="user_sex_woman">女</label>
+                            <input class="radio required" id="user_sex_man" name="user_sex" type="radio" /><label for="user_sex_man">男</label>
                         </div>
-                        <div id="cidInputDIv" style="display:none">
-                            <input name="userInfo.ucid" id="ucid" value="" type="text" class="text text1"/>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="required control-label"><abbr title="required">*</abbr> 所在地</label>
+                        <div class="controls">
+                            <select id="userProvince" name="userProvince"  class="select required" >
+                                <option value="-1">请选择</option>
+                                <option value="1">北京</option>
+                                <option value="2">上海</option>
+                                <option value="3">天津</option>
+                                <option value="4">重庆</option>
+                                <option value="5">河北</option>
+                                <option value="6">山西</option>
+                                <option value="7">河南</option>
+                                <option value="8">辽宁</option>
+                                <option value="9">吉林</option>
+                                <option value="10">黑龙江</option>
+                                <option value="11">内蒙古</option>
+                                <option value="12">江苏</option>
+                                <option value="13">山东</option>
+                                <option value="14">安徽</option>
+                                <option value="15">浙江</option>
+                                <option value="16">福建</option>
+                                <option value="17">湖北</option>
+                                <option value="18">湖南</option>
+                                <option value="19">广东</option>
+                                <option value="20">广西</option>
+                                <option value="21">江西</option>
+                                <option value="22">四川</option>
+                                <option value="23">海南</option>
+                                <option value="24">贵州</option>
+                                <option value="25">云南</option>
+                                <option value="26">西藏</option>
+                                <option value="27">陕西</option>
+                                <option value="28">甘肃</option>
+                                <option value="29">青海</option>
+                                <option value="30">宁夏</option>
+                                <option value="31">新疆</option>
+                                <option value="32">台湾</option>
+                                <option value="42">香港</option>
+                                <option value="43">澳门</option>
+                                <option value="84">钓鱼岛</option>
+                            </select>
+                            <select id="userCity"  name="userCity"  class="select required">
+                                <option selected="selected" value="-1">请选择</option>
+                            </select>
+                            <select id="userArea" name="userArea"  class="select required">
+                                <option selected="selected" value="-1">请选择</option>
+                            </select>
                         </div>
-                        <div class="clr"></div>
-                        <div class="prompt-06"><span id="ucid_msg"></span></div>
                     </div>
-                </li>
 
-                <li class="item">
-                    <span class="label">所在地：</span>
-
-                    <div class="fl">
-                        <select name="userInfo.province" class="sele" id="province">
-                            <option value="1">北京</option>
-                            <option value="2">上海</option>
-                            <option value="3">天津</option>
-                            <option value="4">重庆</option>
-                            <option value="5">河北</option>
-                            <option value="6">山西</option>
-                            <option value="7">河南</option>
-                            <option value="8">辽宁</option>
-                            <option value="9">吉林</option>
-                            <option value="10">黑龙江</option>
-                            <option value="11">内蒙古</option>
-                            <option value="12">江苏</option>
-                            <option value="13">山东</option>
-                            <option value="14">安徽</option>
-                            <option value="15">浙江</option>
-                            <option value="16">福建</option>
-                            <option value="17">湖北</option>
-                            <option value="18">湖南</option>
-                            <option value="19">广东</option>
-                            <option value="20">广西</option>
-                            <option value="21">江西</option>
-                            <option value="22">四川</option>
-                            <option value="23">海南</option>
-                            <option value="24">贵州</option>
-                            <option value="25">云南</option>
-                            <option value="26">西藏</option>
-                            <option value="27">陕西</option>
-                            <option value="28">甘肃</option>
-                            <option value="29">青海</option>
-                            <option value="30">宁夏</option>
-                            <option value="31">新疆</option>
-                            <option value="32">台湾</option>
-                            <option value="42">香港</option>
-                            <option value="43">澳门</option>
-                            <option value="84">海外</option>
-                        </select>
-                        <select name="userInfo.city" class="sele" id="city">
-                        </select>
-
-                        <select name="userInfo.county" class="sele" id="county">
-                        </select>
-
-                        <div class="clr"></div>
-                        <div class="prompt-06"><span id="province_msg"></span></div>
-                    </div>
-                </li>
-                <li class="item">
-                    <span class="label">&nbsp;</span>
-
-                    <div class="fl">
-                        <div>
-                            <input name="userInfo.uaddr" id="uaddr"
-                                   value="&#19978;&#28023;&#22025;&#23450;&#21306;&#22806;&#29615;&#20197;&#22806;&#22025;&#23450;&#38215;&#21271;&#22823;&#34903;56&#24324;"
-                                   type="text" class="text text1"/><s id="uaddr_orderly"></s>
+                    <div class="control-group">
+                        <label class="control-label" for="userMobile">手机</label>
+                        <div class="controls">
+                            <input class="text-input" id="userMobile" name="userMobile" size="50" type="text" />
                         </div>
-                        <div class="clr"></div>
-                        <div class="prompt-06"><span id="uaddr_msg"></span></div>
                     </div>
-                </li>
 
-            </ul>
+                    <div id="controlTel" class="control-group control-tel">
+                        <label class="control-label">固定电话</label>
+                        <div class="controls">
+                            <input class="text-input" id="areaCode" name="areaCode" size="10" type="text" value="区号" /><span>-</span><input class="text-input" id="phoneNumber" name="phoneNumber" size="40" type="text" value="电话号码"  /><span>-</span><input class="text-input" id="extensionNumber" name="extensionNumber" size="10" type="text"  value="分机号" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="userOnline">QQ</label>
+                        <div class="controls"><input class="text-input" id="userOnline" name="user_online" size="50" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="control-group form-actions">
+                        <label class="control-label">&nbsp;</label>
+                        <span class="btn_b btn_b_o" ><a herf="">保存修改</a></span>
+                    </div>
+                </fieldset>
+            </form>
 
         </div>
     </div>
-</div>
 </div>
 </div>
 </body>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
     (function ($) {
-        $("#ConMain .wfc_table:first,#ConMain .wfc_Paging:first").css("display", "block");
-        $("#ConMain ul li a").click(function () {
-            var wfc_table = $("#ConMain .wfc_table");
-            var curt_index = $(this).index("#ConMain ul li a");
-            $("#ConMain ul li a").removeClass("hover");
-            $(this).addClass("hover");
-            wfc_table.css("display", "none");
-            wfc_table.eq(curt_index).css("display", "block");
+        $("#controlTel input").addClass("font-gray");
+        $("#controlTel input").focus(function () {
+            $(this).removeClass("font-gray");
         });
+
     })(jQuery);
 </script>
 </html>
