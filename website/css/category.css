@@ -106,3 +106,7 @@
 .brand-select li{float: left;width: 96px;height: 30px;margin-right:5px;line-height: 30px;background-color: #ff7800;text-align: center;cursor: pointer;color: #fff;border-top-left-radius: 3px;border-top-right-radius:3px;}
 .brand-select li.current{width:94px;background-color: #fff;color:#000;font-weight:700;border:1px solid #dedede;border-bottom:1px solid #fff;margin-bottom: -1px;zoom:1;}
 .brandWrap{float:left;position:relative;width:998px;padding-bottom:15px;border:1px solid #dedede;overflow: hidden;z-index: 9;}
+
+/*search*/
+.search-result .title{padding:5px 0;font-weight:700;font-size:14px;text-align: center;}
+.search-result .title em{color:#e90000;}
