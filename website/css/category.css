@@ -18,6 +18,14 @@
 .goods_sort del{color:#666;}
 .goods_sort .price_now{color:#e60000;font-weight:700;}
 
+.list_goods dl{padding:6px 10px 7px 10px;width:176px;border-bottom:1px dashed #ebebeb;overflow:hidden;}
+.list_goods dt{float:left;width:82px;}
+.list_goods dd{float:right;width:94px;}
+.list_goods dt img{float:left;border:1px solid #dedede;}
+.list_goods dd p{padding-bottom:5px;}
+.list_goods del,.list_goods span{display:block;}
+.list_goods del{color:#666;}
+.list_goods .price_now{color:#e60000;font-weight:700;}
 /**main**/
 .main .hd{padding-left:20px;height:30px;line-height:30px;background: #fff0c0;border:none;text-align:left;}
 .main .hd h3{color:#ff7800;font-weight:bold;}
