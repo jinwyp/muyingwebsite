@@ -82,7 +82,7 @@ input{border:0 none;vertical-align:middle}
 .header .logo a{display:block;width:268px;height:64px;background:url(http://img.muyingzhijia.com/images/byw_logo3.gif) no-repeat 0 0}
 .header .nav{float:left;_display:inline;padding-top:34px}
 .header .nav ul{height:32px;line-height:32px;width:538px;background:url("../images/bg_nav.gif") no-repeat 0 0}
-.header .nav ul a{background-position:no-repeat}
+.header .nav ul a{text-decoration: none;}
 .header .nav ul li{float:left;_display:inline;position:relative}
 .header .nav ul li a{display:block;width:95px;height:32px;text-align:center;color:#fff;font-size:13px;font-weight:700}
 .header .nav ul li .current,.header .nav ul li :hover{background-image:url("../images/bg_nav.gif");background-position:-157px -35px;color:#ff7800}
