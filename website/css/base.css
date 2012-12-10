@@ -100,7 +100,7 @@ input{border:0 none;vertical-align:middle}
 .menu .search .search-input{border:#ff7800 1px solid;width:206px}
 .menu .search .btn-search{padding-left:3px;height:26px;line-height:26px;background-position:-5px -2px;color:#fff;font-weight:700;letter-spacing:2px}
 .menu .search .search-bd{float:left;_display:inline}
-.menu .search .hot-keywords{float:left;_display:inline;padding-left:10px;height:26px;line-height:26px;color:#e60000}
+.menu .search .hot-keywords{float:left;_display:inline;padding-left:10px;height:26px;line-height:26px;color:#e60000;width:240px}
 .menu .search .hot-keywords a{margin-left:5px;color:#e60000}
 .menu .shopcart{float:right;position:relative;z-index:10;padding-left:40px;width:170px;height:30px;line-height:28px;background:url("../images/bg_shopcart.gif") no-repeat right 0}
 .menu .shopcart a{color:#e60000}

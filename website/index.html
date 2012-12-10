@@ -7,6 +7,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/base.css" rel="stylesheet" type="text/css" />
     <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="js/jqueryplugin/datepicker/skin/ui-lightness/jquery-ui-1.9.1.custom.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="toolbar">
@@ -1495,9 +1496,34 @@
     <a href="javascript:PDF_launch('http://www.sojump.com/jq/1992356,i,t.aspx?width=472&source=openWin',500,600);" title="母婴之家在线调查"></a>
 </div>
 
+<div class="index-dialog dialog" showclose="true">
+    <div class="content">
+        <h2>完善信息会有惊喜呦</h2>
+        <div class="checksubs">
+            <label for="radval0">
+                <input type="radio" value="0" id="radval0" name="radval" checked="checked">确认宝宝生日信息
+            </label>
+            <label for="radval1">
+                <input type="radio" value="1" id="radval1" name="radval">确认预产期信息
+            </label>
+        </div>
+        <div class="getdate">
+            <label id="day-type">
+                您当前的宝宝生日是：
+            </label>
+            <input type="text" value="" id="baby-birthday" />
+            <p class="bbtips">如果生日不正确请重新填写</p>
+        </div>
+        <div class="subbtn">
+            <input type="button" value="保存" id="btn-save">
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="js/jqueryplugin/jquery.bxcarousel.js" type="text/javascript"></script>
 <script src="js/my/hp1.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jqueryplugin/datepicker/jquery-ui-1.9.1.custom.js"></script>
 <script src="js/my/index.js" type="text/javascript"></script>
 </html>
