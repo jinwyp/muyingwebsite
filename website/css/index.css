@@ -59,23 +59,24 @@
 .f4 h3{background-image:url(../images/Mom_Zone_Four.gif);}
 .f5 h3{background-image:url(../images/Mom_Zone_Five.gif);}
 .f6 h3{background-image:url(../images/Mom_Zone_Six.gif);}
+.floor-maylike h3{background-image:url(../images/title_maylike.gif);}
 .floor-mod .hot-category{float:right;width:760px;height:41px;display:inline;border-bottom:3px #ffda71 solid;overflow:hidden;text-align:right;}
 .floor-mod .hot-category li{display:inline-block;padding-top:11px;line-height:30px;margin-right:15px}
 .floor-mod .hot-category a{color:#898989}
 .floor-mod .hot-category .more{color:#FF7800}
 .floor-bd{float:left;width:1000px;margin-top:10px;overflow:hidden}
 .floor-recommend-bigPic{float:left}
-.floor-bd .goods-list{float:left;margin-left:10px;width:530px;height:235px;overflow:hidden;}
+.floor-bd .goods-list{float:left;margin-left:10px;width:530px;height:235px;overflow:hidden;display:inline;}
 .floor-bd .goods-list dl{float:left;display:inline;border:1px #dfdfdf solid;margin-left:14px;width:160px;height:233px;text-align:center;line-height:1.4;}
 .floor-bd .goods-list p{margin-top:5px;}
 .floor-bd .goods-list p del{color:#666;margin-right:5px;}
 .floor-bd .goods-list p .price_now{font-size:14px;font-weight:700;color:#e60000;}
-
 .floor-recommend-smallPic{float:right;border:1px #dfdfdf solid;border-bottom:0 none;width:204px;margin-left:14px;text-align:center;overflow:hidden}
 .floor-recommend-smallPic a{display:block;border-bottom:1px #dfdfdf solid;width:204px;height:76px;padding-top:1px;margin:auto}
 .floor-brand{float:left;border:1px #DFDFDF solid;padding:10px 0;margin:10px 0;height:40px;width:998px;overflow:hidden}
 .floor-brand a{float:left;display:inline-block;width:90px;height:40px;margin-left:9px}
-
+.floor-maylike .goods-list{margin-left:2px;border-right:1px #dfdfdf solid;width:996px;}
+.floor-maylike .goods-list dl{border-left:1px #dfdfdf solid;padding:0 2px 0 3px;border-right:none medium;margin-left:0;width:160px;}
 /*hot-comment*/
 .hot-comment{float:left;border:1px #ebebeb solid;width:778px;height:220px;overflow:hidden;text-align:left;display:inline;background-color:#fff;}
 .hot-comment h4{padding:3px 0 3px 10px;border-bottom:1px #ebebeb solid;background-color:#f4f4f4;color:#000;font-weight:700;}
