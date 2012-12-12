@@ -1,12 +1,16 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="css/reset.css" rel="stylesheet"/>
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/usercenter.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidator-4.1.3.js"></script>
+    <script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidatorRegex.js"></script>
+    <script type="text/javascript" src="js/my/usercenter.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -64,46 +68,48 @@
                 <fieldset>
                     <legend>用户基本信息</legend>
                     <div class="control-group">
-                        <label class="control-label">用户名</label>
+                        <label class="control-label">用户名：</label>
                         <div class="controls">
                             <strong>jinwyp</strong><span class="user-num font-gray">用户编号：10179300</span>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">电子邮箱</label>
+                        <label class="control-label">电子邮箱：</label>
                         <div class="controls">
                             <strong>jinwyp@163.com</strong><span class="btn_m btn_m_h"><a href="">验证邮箱</a></span>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="string control-label">会员等级</label>
+                        <label class="string control-label">会员等级：</label>
                         <div class="controls">
                             <strong>普通会员</strong><span class="icon-help text-tips"><a href="">不同会员等级有什么不同?</a></span>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="real_name"><abbr title="required">*</abbr> 真实姓名</label>
+                        <label class="control-label" for="realName"><abbr title="required">*</abbr> 真实姓名：</label>
                         <div class="controls">
-                            <input class="text-input required" id="real_name" name="real_name" size="50" type="text" value="" />
+                            <input class="text-input required" id="realName" name="realName" size="30" type="text" value="" />
+                            <div id="nameTip" class="stickTips"></div>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label"><abbr title="required">*</abbr> 性别</label>
-                        <div class="controls">
-                            <input class="radio required" id="user_sex_woman" name="user_sex" type="radio" checked="checked" /><label for="user_sex_woman">女</label>
-                            <input class="radio required" id="user_sex_man" name="user_sex" type="radio" /><label for="user_sex_man">男</label>
+                        <label class="control-label"><abbr title="required">*</abbr> 性别：</label>
+                        <div class="controls fl">
+                            <input class="radio required" id="user_sex_woman" name="user_sex" type="radio" checked="checked" value="1" /><label for="user_sex_woman">女</label>
+                            <input class="radio required" id="user_sex_man" name="user_sex" type="radio" value="2" /><label for="user_sex_man">男</label>
                         </div>
+                        <div id="sexTip" class="stickTips"></div>
                     </div>
 
                     <div class="control-group">
-                        <label class="required control-label"><abbr title="required">*</abbr> 所在地</label>
-                        <div class="controls">
-                            <select id="userProvince" name="userProvince"  class="select required" >
-                                <option value="-1">请选择</option>
+                        <label class="required control-label"><abbr title="required">*</abbr> 所在地：</label>
+                        <div class="controls fl">
+                            <select id="userProvince" name="userArea"  class="select required">
+                                <option value="0">请选择</option>
                                 <option value="1">北京</option>
                                 <option value="2">上海</option>
                                 <option value="3">天津</option>
@@ -140,32 +146,37 @@
                                 <option value="43">澳门</option>
                                 <option value="84">钓鱼岛</option>
                             </select>
-                            <select id="userCity"  name="userCity"  class="select required">
-                                <option selected="selected" value="-1">请选择</option>
+                            <select id="userCity"  name="userArea"  class="select required">
+                                <option selected="selected" value="0">请选择</option>
+                                <option value="1">111</option>
+                                <option value="2">222</option>
                             </select>
                             <select id="userArea" name="userArea"  class="select required">
-                                <option selected="selected" value="-1">请选择</option>
+                                <option selected="selected" value="0">请选择</option>
+                                <option value="1">111</option>
+                                <option value="2">222</option>
                             </select>
                         </div>
+                        <div id="areaTip" class="stickTips"></div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="userMobile">手机</label>
+                        <label class="control-label" for="userMobile">手机：</label>
                         <div class="controls">
-                            <input class="text-input" id="userMobile" name="userMobile" size="50" type="text" />
+                            <input class="text-input" id="userMobile" name="userMobile" size="30" type="text" />
                         </div>
                     </div>
 
                     <div id="controlTel" class="control-group control-tel">
-                        <label class="control-label">固定电话</label>
+                        <label class="control-label">固定电话：</label>
                         <div class="controls">
-                            <input class="text-input" id="areaCode" name="areaCode" size="10" type="text" placeholder="区号" /><span>-</span><input class="text-input" id="phoneNumber" name="phoneNumber" size="40" type="text" placeholder="电话号码"  /><span>-</span><input class="text-input" id="extensionNumber" name="extensionNumber" size="10" type="text"  placeholder="分机号" />
+                            <input class="text-input" id="areaCode" name="areaCode" size="6" type="text" placeholder="区号" /><span>-</span><input class="text-input" id="phoneNumber" name="phoneNumber" size="20" type="text" placeholder="电话号码"  /><span>-</span><input class="text-input" id="extensionNumber" name="extensionNumber" size="6" type="text"  placeholder="分机号" />
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="userOnline">QQ</label>
-                        <div class="controls"><input class="text-input" id="userOnline" name="user_online" size="50" type="text" />
+                        <label class="control-label" for="userOnline">QQ：</label>
+                        <div class="controls"><input class="text-input" id="userOnline" name="user_online" size="30" type="text" />
                         </div>
                     </div>
 
@@ -181,7 +192,7 @@
 </div>
 </div>
 </body>
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
 <script type="text/javascript">
     (function ($) {
         $("#controlTel input").addClass("font-gray");
