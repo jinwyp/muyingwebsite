@@ -218,6 +218,7 @@
     width: 100px;
     padding:2px 5px;
     border-radius: 3px;
+    cursor: text;
 }
 .index-dialog .content .subbtn{
     padding:20px 0 0;
