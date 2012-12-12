@@ -27,7 +27,6 @@
 .slide-li a{display:block;width:77px;height:35px;font-size:12px;color:#1f1f1f}
 .slide-li .cur a,.slide-li a:hover{color:#fff;text-decoration:none;background:url(../images/guanbgho.jpg) repeat-x}
 
-
 /*quickbuy*/
 .quickbuy-mod{float:left;display:inline;width:545px}
 .quickbuy-bd{margin-top:9px}
@@ -36,19 +35,19 @@
 .quickbuy-new h3{background-image:url(../images/title_newproduct.gif);}
 .quickbuy-bd label{position:absolute;background:url(../images/tejia_02a.gif) no-repeat left top;width:173px;height:41px;display:inline-block;margin-left:185px;top:3px;padding-left:30px}
 .quickbuy-bd label span{display:inline-block;width:30px;height:26px;color:#E60000;font:bold 18px/26px Verdana;text-align:center;margin-left:14px;margin-top:5px;padding-left:1px}
-.quickbuy-bd .goods-list{border:1px #eee solid;border-top:0 none;height:248px;overflow: hidden;}
-.quickbuy-bd .goods-list dl{float:left;padding:5px;width:170px;display:inline;text-align:center;line-height: 1.4;}
-.quickbuy-bd .goods-list p del{color:#666;margin-right:5px;}
+.quickbuy-bd .goods-list{border:1px #eee solid;border-top:0 none;height:252px;overflow: hidden;}
+.quickbuy-bd .goods-list dl{float:left;padding:10px 5px;width:170px;display:inline;text-align:center;line-height: 1.4;}
+.quickbuy-bd .goods-list p{margin-top:5px;}
 .quickbuy-bd .goods-list p .price_now{color:#e60000;font-size:14px;font-weight:700;}
 .quickbuy-bd .goods-list dl.hover{background-color:#fff6d7; text-decoration:none;}
-.quickbuy-bd .goods-list .btn_m {height:24px;line-height:24px;margin-right:10px;_margin-right:5px;}
+.quickbuy-bd .goods-list .btn_m {margin-left:5px;}
 /*right-panel*/
 .right-panel{float:right;width:200px;display:inline;overflow:hidden}
-.notice-box{float:left;display:inline;background:url(../images/notice_01s.gif) no-repeat 34px 8px;border:1px solid #E2E2E2;width:191px;padding:3px 2px 2px 5px}
+.notice-box{float:left;display:inline;background:url(../images/notice_01s.gif) no-repeat 34px 8px;border:1px solid #E2E2E2;width:191px;padding:3px 2px 4px 5px;}
 .notice-box h3{float:left;color:#636363}
-.notice-box ul{float:left;margin-top:2px;;height:18px;overflow:hidden}
-.notice-box li{line-height:18px;color:#808080;margin-left:15px}
-.recommend-pic img{margin-top:4px;}
+.notice-box ul{float:left;margin-top:2px;height:18px;overflow:hidden;}
+.notice-box li{line-height:18px;color:#808080;margin-left:15px;}
+.recommend-pic img{margin-top:5px;}
 
 /*floor*/
 .banner-mod{float:left;margin:10px 0;}
