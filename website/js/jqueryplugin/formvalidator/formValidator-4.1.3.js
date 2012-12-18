@@ -122,6 +122,7 @@ $.formValidator =
 		}
 		else
 		{
+
 			var tip = $("#"+elem.settings[0].tipID);
 			var html = showclass == "onShow" ? onShowHtml : (showclass == "onFocus" ? onFocusHtml : (showclass == "onCorrect" ? onCorrectHtml : onErrorHtml));
 			if(html.length === 0)
