@@ -7,7 +7,8 @@
     <link href="css/reset.css" rel="stylesheet"/>
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/usercenter.css" rel="stylesheet"/>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/head.min.js"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -69,7 +70,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby1">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">
                     <form accept-charset="UTF-8" action="" class="form info-form" id="babyInfoEdit" method="post">
@@ -190,7 +191,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby2">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">2222</div>
                 <dl>
@@ -200,7 +201,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby3">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">3333</div>
             </div>
@@ -211,10 +212,17 @@
 </body>
 
 <script type="text/javascript">
-    $(function() {
-        $(".edit-baby").click(function () {
+    head.js("js/jquery-1.7.2.min.js",
+            "js/jqueryplugin/formvalidator/formValidator-4.1.3.js",
+            "js/jqueryplugin/formvalidator/formValidatorRegex.js"
+    );
+</script>
+<script type="text/javascript">
+    head.ready(function(i) {
+        $("#editBaby").click(function () {
             $(".edit-babyinfo").hide();
-            $(this).parent("dl").next(".edit-babyinfo").addClass("show");
+            $(this).parents("dl").next(".edit-babyinfo").show();
+            return false;
         });
     });
 </script>
