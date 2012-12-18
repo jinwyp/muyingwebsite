@@ -1457,4 +1457,4 @@ var passwordValidator_setting = {
 	onErrorCompareSame:"密码于用户名相同不被允许"
 };
 
-var fv_scriptSrc = document.getElementsByTagName('script')[document.getElementsByTagName('script').length - 1].src;
+var fv_scriptSrc = "js/jqueryplugin/formvalidator/";
