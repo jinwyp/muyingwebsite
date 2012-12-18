@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>账号安全</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/usercenter.css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="wrapper">
+<div class="wrap-menu fl">
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>订单中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Order.aspx" id="CustomerCenter_Order">我的订单</a></li>
+                <li><a href="CustomerCenter_favorites.aspx" id="CustomerCenter_favorites">我的收藏</a></li>
+                <li><a href="CustomerCenter_StockRegister.aspx" id="CustomerCenter_StockRegister">我的到货通知</a></li>
+            </ul>
+        </dd>
+    </dl>
+
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>账户中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Info.aspx" id="CustomerCenter_Info">基本信息</a></li>
+                <li class="status-hover"><a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">账户安全</a></li>
+                <li><a href="CustomerCenter_Baby.aspx" id="CustomerCenter_Baby">宝宝信息</a></li>
+                <li><a href="CustomerCenter_Consignee.aspx" id="CustomerCenter_Consignee">收货地址</a></li>
+                <li><a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></li>
+                <li><a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon">优惠券</a></li>
+                <li><a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></li>
+                <li><a href="CustomerCenter_binding.aspx" id="CustomerCenter_binding">社交绑定</a></li>
+            </ul>
+        </dd>
+    </dl>
+
+    <dl class="mod-menu">
+        <dt class="mod-hd">
+        <h3>社区中心</h3>
+        </dt>
+        <dd class="mod-bd">
+            <ul class="list-menu">
+                <li><a href="CustomerCenter_Consult.aspx" id="CustomerCenter_Consult">商品咨询</a></li>
+                <li><a href="CustomerCenter_Discussion.aspx" id="CustomerCenter_Discussion">我的评价</a></li>
+                <li><a href="CustomerCenter_Suggestion.aspx" id="CustomerCenter_Suggestion">投诉与建议</a></li>
+            </ul>
+        </dd>
+    </dl>
+</div>
+
+<div class="wrap-mycenter fr">
+    <div id="modSafety" class="mod-info mod-safety">
+    <div class="mod-hd"><h3>账号安全</h3></div>
+    <div class="mod-bd">
+        <div class="mod-tit">
+            <ul class="tab-menu">
+                <li class="status-on"><a href="#" >修改密码</a></li>
+                <li><a href="#" class="">邮箱验证</a></li>
+                <li><a href="#" class="">手机验证</a></li>
+            </ul>
+        </div>
+    <div class="mod-content show">
+        <form accept-charset="UTF-8" action="" class="form safety-form" id="form_editPwd" method="post">
+            <fieldset>
+                <legend>修改密码</legend>
+                <div class="control-group">
+                    <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
+                    <div class="controls">
+                        <input class="text-input required" id="nowPwd" name="nowPwd" size="30" type="text" value="" />
+                        <div id="nowPwdTip" class="stickTips"></div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><abbr title="required">*</abbr> 请输入新密码：</label>
+                    <div class="controls">
+                        <input class="text-input required" id="newPwd" name="newPwd" size="30" type="text" value="" />
+                        <div id="newPwdTip" class="stickTips"></div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label"><abbr title="required">*</abbr> 请再次输入新密码：</label>
+                    <div class="controls">
+                        <input class="text-input required" id="rePwd" name="rePwd" size="30" type="text" value="" />
+                        <div id="rePwdTip" class="stickTips"></div>
+                    </div>
+                </div>
+                <div class="control-group form-actions">
+                    <label class="control-label">&nbsp;</label>
+                    <span id="editPwd" class="btn_b btn_b_o" ><a herf="">&nbsp;&nbsp;&nbsp;保存修改&nbsp;&nbsp;&nbsp;</a></span>
+                </div>
+         </fieldset>
+            </form>
+    </div><!--mod-content-->
+   <div class="mod-content hide">
+  <form accept-charset="UTF-8" action="" class="form safety-form" id="form_emailChecking" method="post">
+       <fieldset>
+           <legend>邮箱验证</legend>
+           <div class="control-group">
+               <label class="control-label">当前状态：</label>
+               <div class="controls">
+                   <strong class="font-green">已验证</strong>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
+               <div class="controls">
+                   <input class="text-input required" id="email_nowPwd" name="email_nowPwd" size="30" type="text" value="" />
+                   <div id="email_nowPwd_Tip" class="stickTips"></div>
+               </div>
+           </div>
+           <div class="control-group">
+               <label class="control-label"><abbr title="required">*</abbr> 请输入注册时的邮箱：</label>
+               <div class="controls">
+                   <input class="text-input required" id="email_regEmail" name="regEmail" size="30" type="text" value="" />
+                   <div id="email_regEmail_Tip" class="stickTips"></div>
+               </div>
+           </div>
+           <div class="control-group form-actions">
+               <label class="control-label">&nbsp;</label>
+               <span id="submit_emailChecking" class="btn_b btn_b_o"><a herf="">&nbsp;&nbsp;&nbsp;立即验证&nbsp;&nbsp;&nbsp;</a></span>
+           </div>
+       </fieldset>
+   </form>
+   </div><!--mod-content-->
+
+  <div class="mod-content hide">
+      <form accept-charset="UTF-8" action="" class="form safety-form" id="form_phoneChecking" method="post">
+          <fieldset>
+              <legend>手机验证</legend>
+              <div class="control-group">
+                  <label class="control-label">当前状态：</label>
+                  <div class="controls">
+                      <strong class="font-red">未验证</strong>
+                  </div>
+              </div>
+              <div class="control-group" style="border-bottom:1px dashed #e0e0e0;padding-bottom: 15px;">
+                  <label class="control-label">会员等级：</label>
+                  <div class="controls" style="margin-bottom: 10px;">
+                      <strong>普通会员</strong><span class="text-tips"><a href="">修改手机号码</a></span>
+                  </div>
+                  <label class="control-label">&nbsp;</label>
+                  <div class="controls">
+                      <p id="get_SMScheckCode" class="btn_m btn_m_h"><a href="">获取短信校验码</a></p>
+                  </div>
+              </div>
+
+              <div class="control-group">
+                  <label class="control-label"><abbr title="required">*</abbr> 请填写手机校验码：</label>
+                  <div class="controls">
+                      <input class="text-input required" id="phoneChecking" name="phoneChecking" size="30" type="text" value="" />
+                      <div id="phoneCheckingTip" class="stickTips"></div>
+                  </div>
+              </div>
+              <div class="control-group">
+                  <label class="control-label"><abbr title="required">*</abbr> 验证码：</label>
+                  <div class="controls">
+                      <input class="text-input required" id="checkingCode" name="checkingCode" size="30" type="text" value="" />
+                      <div id="checkingCodeTip" class="stickTips"></div>
+                  </div>
+              </div>
+              <div class="control-group form-actions">
+                  <label class="control-label">&nbsp;</label>
+                  <span id="submit_phoneChecking" class="btn_b btn_b_o" ><a herf="">&nbsp;&nbsp;&nbsp;提交验证&nbsp;&nbsp;&nbsp;</a></span>
+              </div>
+          </fieldset>
+      </form>
+   </div><!--mod-content-->
+
+    </div>
+    </div>
+    </div>
+</div><!--wrapper-->
+</body>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    (function ($) {
+        $("#modSafety .tab-menu li").click(function () {
+            var wfc_table = $("#modSafety .mod-content");
+            var curt_index = $(this).index("#modSafety .tab-menu li");
+            $("#modSafety .tab-menu li").removeClass("status-on");
+            $(this).addClass("status-on");
+            wfc_table.removeClass("show").addClass("hide");
+            wfc_table.eq(curt_index).addClass("show");
+        });
+    })(jQuery);
+</script>
+</html>
