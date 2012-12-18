@@ -72,7 +72,7 @@
                     <dd class="baby-weight">体重:20千克</dd>
                     <dd class="edit-baby text-tips"><a href="" title=""  id="editBaby">[修改宝宝信息]</a></dd>
                 </dl>
-                <div class="edit-babyinfo">
+                <div id="edit_babyinfo" class="edit-babyinfo">
                     <form accept-charset="UTF-8" action="" class="form info-form" id="babyInfoEdit" method="post">
                         <fieldset>
                             <legend>用户基本信息</legend>
@@ -193,7 +193,6 @@
                     <dd class="baby-weight">体重:20千克</dd>
                     <dd class="edit-baby text-tips"><a href="" title="" id="editBaby2">[修改宝宝信息]</a></dd>
                 </dl>
-                <div class="edit-babyinfo">2222</div>
                 <dl>
                     <dt><span>您的第三个宝宝信息：</span></dt>
                     <dd class="baby-name">王悠然</dd>
@@ -203,7 +202,6 @@
                     <dd class="baby-weight">体重:20千克</dd>
                     <dd class="edit-baby text-tips"><a href="" title=""  id="editBaby3">[修改宝宝信息]</a></dd>
                 </dl>
-                <div class="edit-babyinfo">3333</div>
             </div>
         </div>
     </div>
@@ -218,14 +216,15 @@
     );
 </script>
 <script type="text/javascript">
-    head.ready(function(i) {
-        $("#editBaby,#editBaby2,#editBaby3").click(function() {
-            $(".edit-babyinfo").hide();
-            $(this).parents("dl").next(".edit-babyinfo").show();
-            return false;
-        });
-        $("#submit_babyEdit,#submit_cancel").click(function() {
-            $(this).parents(".edit-babyinfo").hide();
+    head.ready(function() {
+                    $(".edit-baby").delegate('a', 'click', function () {
+                        $("#edit_babyinfo").hide();
+                        $(this).parents("dl").after($("#edit_babyinfo").fadeIn());
+                        console.log($(this).parent().parent());
+                        return false;
+                    });
+$("#submit_babyEdit,#submit_cancel").click(function() {
+            $(this).parents("#edit_babyinfo").hide();
             return false;
         });
 
