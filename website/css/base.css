@@ -3,15 +3,15 @@ body{font:12px/1.5 tahoma,arial,sans-serif}
 h1{font-size:16px}
 h2,h3,h4{font-size:14px}
 h5,h6{font-size:12px}
-.fb{font-weight:700}
+.fb{font-weight:700;}
 a,.link{color:#333;text-decoration:none}
 a:hover,.hover{text-decoration:underline;color:#e60000}
 .bg-white{background-color:#fff}
 /*layout*/
 .clearfix:after{content:"";display:block;height:0;clear:both}
 .clearfix{zoom:1;clear:both}
-.fl{float:left;_display:inline}
-.fr{float:right;_display:inline}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
 .hide{display:none}
 .wrapper{width:1000px;margin:0 auto;text-align:left}
 .main{float:right;_display:inline;width:790px}
@@ -21,11 +21,15 @@ a:hover,.hover{text-decoration:underline;color:#e60000}
 .bd{border:#dedede 1px solid;margin-bottom:10px}
 .hd{padding-left:10px;height:28px;border-bottom:#dedede 1px solid;background:#666 url("../images/hd_sidebar.gif") repeat-x;line-height:28px;font-size:12px;font-weight:700}
 .hd h3{font-weight:700}
-
+.mr10{margin-right:10px;}
 /*form*/
 input{border:0 none;vertical-align:middle}
 .text-input{padding:2px;height:20px;line-height:20px;background-color:#fff}
 
+/*font*/
+.font-gray {color: #bababa;}
+.font-green {color: #7fbc41;}
+.font-red {color: #e60000;}
 /*button*/
 .btn_s,.btn_m,.btn_b{display:inline-block;padding-left:10px;background-repeat:no-repeat;cursor:pointer}
 .btn_s a,.btn_m a,.btn_b a{padding-right:8px;margin-right:-5px;_margin-right:0;display:inline-block;color:#fff;text-decoration:none;font-size:12px}
@@ -36,7 +40,7 @@ input{border:0 none;vertical-align:middle}
 .btn_s_o{background-position:0 -20px}
 .btn_s_o a{background-position:right -20px}
 .btn_s_h{background-position:0 -40px}
-.btn_s_h a{background-position:right -40px;color:#666}
+.btn_s_h a{background-position:right -40px;color:#f78000;}
 .btn_s_c{background-position:0 -60px}
 .btn_s_c a{background-position:right -60px}
 .btn_s_g{background-position:0 -80px}
@@ -48,23 +52,23 @@ input{border:0 none;vertical-align:middle}
 .btn_m_o{background-position:0 -30px}
 .btn_m_o a{background-position:right -30px}
 .btn_m_h{background-position:0 -60px}
-.btn_m_h a{background-position:right -60px;color:#666}
+.btn_m_h a{background-position:right -60px;color:#f78000;}
 .btn_m_c{background-position:0 -90px}
 .btn_m_c a{background-position:right -90px}
 .btn_m_g{background-position:0 -120px}
 .btn_m_g a{background-position:right -120px;color:#666}
-.btn_b{height:46px;line-height:46px;background-image:url("../images/btn_big.png")}
+.btn_b{height:38px;line-height:38px;background-image:url("../images/btn_big.png")}
 .btn_b a{font-size:14px;font-weight:700;background-image:url("../images/btn_big.png")}
 .btn_b_r{background-position:0 0}
 .btn_b_r a{background-position:right 0}
-.btn_b_o{background-position:0 -46px}
-.btn_b_o a{background-position:right -46px}
-.btn_b_h{background-position:0 -92px}
-.btn_b_h a{background-position:right -92px;color:#666}
-.btn_b_c{background-position:0 -138px}
-.btn_b_c a{background-position:right -138px}
-.btn_b_g{background-position:0 -184px}
-.btn_b_g a{background-position:right -184px;color:#666}
+.btn_b_o{background-position:0 -38px}
+.btn_b_o a{background-position:right -38px}
+.btn_b_h{background-position:0 -76px}
+.btn_b_h a{background-position:right -76px;color:#f78000;}
+.btn_b_c{background-position:0 -114px}
+.btn_b_c a{background-position:right -114px}
+.btn_b_g{background-position:0 -152px}
+.btn_b_g a{background-position:right -152px;color:#666;}
 
 /*header*/
 .toolbar{width:100%;height:30px;line-height:24px;background:url("../images/bg_toolbar.gif") repeat-x 0 0;color:#666}
