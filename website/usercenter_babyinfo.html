@@ -70,7 +70,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby1">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" class="J_editBaby" id="editBaby1">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">
                     <form accept-charset="UTF-8" action="" class="form info-form" id="babyInfoEdit" method="post">
@@ -191,7 +191,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby2">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" class="J_editBaby" id="editBaby2">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">2222</div>
                 <dl>
@@ -201,7 +201,7 @@
                     <dd class="baby-birthday">生日:2010-9-2</dd>
                     <dd class="baby-height">身高:100厘米</dd>
                     <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby3">[修改宝宝信息]</a></dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" class="J_editBaby" id="editBaby3">[修改宝宝信息]</a></dd>
                 </dl>
                 <div class="edit-babyinfo">3333</div>
             </div>
@@ -219,10 +219,15 @@
 </script>
 <script type="text/javascript">
     head.ready(function(i) {
-        $("#editBaby").click(function () {
+        $("#editBaby").click(function() {
             $(".edit-babyinfo").hide();
             $(this).parents("dl").next(".edit-babyinfo").show();
             return false;
+        });
+
+        $("a.J_editBaby").click(function() {
+            var _this = $(this);
+            alert(_this.attr("id"));
         });
     });
 </script>
