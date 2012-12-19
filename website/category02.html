@@ -9,7 +9,119 @@
     <link href="css/category.css" rel="stylesheet"  type="text/css"/>
 </head>
 <body>
+<div class="toolbar">
+    <div class="wrapper">
+        <ul class="toolbar-nav">
+            <li><span>您好，欢迎来到母婴之家！</span></li>
+            <li id="loginBtn"><a href="#" target="_self" class="login">[&nbsp;登录&nbsp;]</a>|</li>
+            <li id="regBtn"><a href="#" target="_self">免费注册</a>|</li>
+            <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Order.aspx" target="_self">我的订单</a>|</li>
+            <li><a href="${vh_website_url}/Help/Help_index.aspx" target="_self">帮助中心</a>|</li>
+            <li id="myTitle" class="my-title"><a href="">我的母婴之家</a>
+                <ul id="myContent" class="hide my-content">
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Order.aspx?ctlid=6"
+                           target="_self">我的订单</a></li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Consult.aspx?ctlid=7" target="_self">我的提问</a>
+                    </li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Discussion.aspx?ctlid=8"
+                           target="_self">我的评论</a></li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_favorites.aspx?ctlid=9" target="_self">我的收藏</a>
+                    </li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_MyScores.aspx?ctlid=10" target="_self">我的积分</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="my-weibo">
+            <iframe width="100%" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"
+                    scrolling="no" border="0"
+                    src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=100%&height=24&uid=1960499323&style=3&btn=light&dpc=1">
+            </iframe>
+        </div>
+    </div>
+</div>
+<!--toolbar end-->
 
+<div class="wrapper top-banner">
+    <a href="#" target="_blank" title=""><img src="http://img.muyingzhijia.com/product/web/banner/zmm_0322s.jpg" alt=""
+                                              width="1000px" height="65px"/></a>
+</div>
+<!--top-banner end-->
+
+<div class="wrapper header">
+    <div class="logo">
+        <h1>
+            <a title="母婴之家" href="http://www.muyingzhijia.com/" target="_blank"></a>
+        </h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="home"><a href="#" class="current">首页</a></li>
+            <li class="first"><a href="#" target="_blank">准妈妈豪礼</a><span class="icon-hot"></span></li>
+            <li><a href="#" target="_blank">孕妈新生儿</a><span class="icon-new"></span></li>
+            <li><a href="#" target="_blank">会员专享</a></li>
+            <li><a href="#" target="_blank">清仓甩卖</a></li>
+            <li class="last"><a href="#" target="_blank">推荐品牌</a></li>
+        </ul>
+    </div>
+    <div class="hotline">
+        <p class="hide"><span>400-800-1000</span><span>上午8点到晚上9点</span></p>
+    </div>
+    <div class="qq-online"><!-- WPA Button Begin -->
+        <script charset="utf-8" type="text/javascript"
+                src="http://static.b.qq.com/account/bizqq/js/wpa.js?wty=1&type=1&kfuin=4008201000&ws=www.muyingzhijia.com&title=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&btn1=%E4%BC%81%E4%B8%9AQQ%E4%BA%A4%E8%B0%88&fsty=0&fposX=0&fposY=1&csty=7&tx=1&aty=0&a=&key=%01hPa%036SnRd%03eSbR%3B%03c%040TmR%3CTg%01o%5C%3A%0Ao%5C3QfPfSo"></script>
+        <!-- WPA Button END --></div>
+</div>
+<!--header end-->
+
+<div class="menu" id="j-shopcar">
+    <div class="wrapper">
+        <div id="topSearch" class="search">
+            <div class="search-bd">
+                <form action="" name="search">
+                    <label for="txSearchCondition" class="hide">搜索</label><input type="text" name="txSearchCondition"
+                                                                                 id="txSearchCondition"
+                                                                                 class="text-input search-input"/><input
+                        type="button" id="btnSearch" class="btn_m btn_m_r btn-search" value="搜索"/>
+                </form>
+            </div>
+            <div class="hot-keywords">
+                热门搜索：<a href="#">帮宝适</a><a href="#">奶粉</a><a href="#">湿巾</a>
+            </div>
+        </div>
+
+        <div class="shopcart">
+            <span id="cartInfo" class="fl"><a href="">购物车<em id="saleQty" class="fb">600</em>件</a></span>
+
+            <div id="cartList" class="hide cart-list">
+                <dl>
+                    <dt class="pic"><img width="50" height="50"
+                                         src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></dt>
+                    <dd class="name"><a href="">喜多倍护润肤霜60G</a></dd>
+                    <dd class="action"><p><span class="rmb">¥</span><span class="price">14.50</span><span
+                            class="ride">x</span>1</p>
+
+                        <p><a onclick="javascript:DeleteShopCart(5067077)" href="javascript:void(0);">[删除]</a></p></dd>
+                </dl>
+                <dl>
+                    <dt class="pic"><img width="50" height="50"
+                                         src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></dt>
+                    <dd class="name"><a href="">喜多倍护润肤霜60G</a></dd>
+                    <dd class="action"><p><span class="rmb">¥</span><span class="price">14.50</span><span
+                            class="ride">x</span>1</p>
+
+                        <p><a onclick="javascript:DeleteShopCart(5067077)" href="javascript:void(0);">[删除]</a></p></dd>
+                </dl>
+                <div class="amount">
+                    共<span id="cartNum">2</span>件商品，总计：<span id="cartAmount">¥29.00</span><span class="btn_m btn_m_r"><a
+                        title="去购物车结算" href="">立即结算</a></span>
+                </div>
+            </div>
+            <a href="#" class="balance"><span class="hide">去结算</span></a>
+        </div>
+    </div>
+</div>
+<!--menu end-->
 
 <div class="wrapper">
 <div class="crumbs">商品列表 > <span><a href="">妈妈专区</a></span> > <span><a href="妈妈服饰">妈妈专区</a></span> > <span>防辐射服</span></div>
@@ -580,5 +692,90 @@
 </div></body>
 <script src="js/jquery-1.7.2.min.js" ></script>
 <script type="text/javascript" src="js/my/category.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        readyScroll();
+        $(".btn_m_o").each(function(){
+            $(this).click(function(){
+                if(T)clearTimeout(T);
+                $("#cartList").show();
+                var T = setTimeout(function(){$("#cartList").hide()},1000);
+                var pr = $(this).parents("dl").css("position","relative");
+                var clone = pr.find("img:eq(0)").clone();
+                clone.css("position","absolute").appendTo(pr);
+                img_width = clone.width();
+                if(!clone.is(":animated")){
+                    clone.animate({
+                        left: $(".shopcart").position().left+$(this).position().left,
+                        top: -$("#j-shopcar").position().top,
+                        width:1,
+                        height:1,
+                        opacity:"0.3"
+                    },function(){
+                        var p = parseInt($("#saleQty").text());
+                        p += 1;
+                        $("#saleQty").text(p);
+                        clone.remove();
+                    })
+                }
+                return false
+            })
+        })
+    });
 
+    function readyScroll(){
+        var floatMain = $("#j-shopcar"),
+                Top = floatMain.position().top,
+                fw = floatMain.width(),
+                floatStyle = false,
+                isIE6 = $.browser.msie&&($.browser.version == "6.0")&&!$.support.style;
+        if($(document).scrollTop()>Top){
+            if(!isIE6){
+                floatMain.css({
+                    position:"fixed",
+                    "margin-left":"-"+fw/2+"px",
+                    top:0,
+                    left:"50%",
+                    "z-index":"9999"
+                });
+            } else {
+                $("<style type='text/css' id='ie6style'>#floatPic{margin:0px;padding:0px;z-index:99}#floatPic img{margin: 0px;padding: 0px;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}.fixed-top{position:absolute;top:expression(eval(document.documentElement.scrollTop))}</style>").appendTo("head");
+                floatMain.addClass("fixed-top").css({
+                    "margin-left":"-"+fw/2+"px",
+                    left:"50%",
+                    "z-index":"9999"
+                });
+            }
+        }
+
+        $(window).scroll(function(){
+            if($(document).scrollTop()>Top){
+                if(floatStyle==true){return false}
+                if(!isIE6){
+                    floatMain.css({
+                        position:"fixed",
+                        "margin-left":"-"+fw/2+"px",
+                        top:0,
+                        left:"50%",
+                        "z-index":"9999"
+                    });
+                } else {
+                    floatMain.addClass("fixed-top").css({
+                        "margin-left":"-"+fw/2+"px",
+                        left:"50%",
+                        "z-index":"9999"
+                    });
+                }
+                floatStyle = true;
+            }else{
+                floatMain.removeAttr("style");
+                if(isIE6){floatMain.removeClass("fixed-top")}
+                floatStyle = false
+            }
+        });
+    }
+
+
+
+</script>
 </html>
