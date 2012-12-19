@@ -169,9 +169,7 @@
 }
 .index-dialog .content{
     min-height:100px;
-    min-width:300px;
-    _width:300px;
-    _height:100px;
+    width:300px;
     background:#fffbe1;
     float: left;
     position: relative;
