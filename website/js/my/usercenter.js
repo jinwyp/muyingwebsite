@@ -62,5 +62,22 @@ $(function(){
             onError:"请选择所在地"
         });
 
+    $("#baby_height")
+        .formValidator({
+            tipID:"baby_height_Tip",
+            onShowText:"请填写您的宝宝身高",
+            onFocus:"请填写您的宝宝身高",
+            forceValid : true,
+            onCorrect:true
+        });
+    $("#baby_weight")
+        .formValidator({
+            tipID:"baby_weight_Tip",
+            onShowText:"请填写您的宝宝体重",
+            onShow:"请填写您的宝宝体重",
+            onCorrect:true
+        })
+
+
 });
 

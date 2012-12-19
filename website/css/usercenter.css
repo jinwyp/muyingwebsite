@@ -50,8 +50,8 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .control-group:before, .control-group:after { content: ""; display: table;  line-height: 0;}
 .control-group:after { clear: both;}
 .control-group .control-label { float: left;  width:90px;  margin-right:10px; font-size:14px;color:#666;text-align: right; }
-.control-group .text-input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
-.controls span{height:30px;line-height:30px;margin-left:10px;vertical-align: middle;font-size:12px;}
+.control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
+.controls span{margin-left:10px;vertical-align: middle;font-size:12px;}
 .control-group strong{font-weight: 400;}
 .mod-info .text-tips a{color:#619eb1;}
 .control-tel .controls span{float:left;margin-right:10px;}
@@ -70,6 +70,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .baby-list dd.edit-baby{float:right;font-size:12px;cursor: pointer;}
 .edit-babyinfo{border:5px solid #f8f8f8;margin-top:-15px;margin-bottom:15px;padding:10px;display: none;}
 .edit-babyinfo .control-label{width:140px;}
+.baby-list .font-gray{height:30px;line-height: 30px;}
 
 /*binding*/
 .binding-area dl{padding-left:20px;padding-bottom:30px;}
