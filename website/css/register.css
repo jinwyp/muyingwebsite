@@ -144,9 +144,9 @@
 .register-form li .inputCont{
     width: 76%;
     float: left;
-    overflow: hidden;
     zoom:1;
 }
+
 .register-form li .inputCont .floatTips{
     display:block;
     clear: both;
@@ -156,7 +156,9 @@
 }
 .register-form li input.focus{
     border: 1px solid #ff9900;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);
 }
+
 .register-form li input.error{
     border: 1px solid #fa2a14;
     color: #fa2a14;

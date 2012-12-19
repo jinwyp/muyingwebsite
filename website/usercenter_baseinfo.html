@@ -7,10 +7,9 @@
     <link href="css/reset.css" rel="stylesheet"/>
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/usercenter.css" rel="stylesheet"/>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidator-4.1.3.js"></script>
-    <script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidatorRegex.js"></script>
-    <script type="text/javascript" src="js/my/usercenter.js"></script>
+
+    <script type="text/javascript" src="js/head.min.js"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -191,15 +190,21 @@
     </div>
 </div>
 </div>
-</body>
 
 <script type="text/javascript">
-    (function ($) {
-        $("#controlTel input").addClass("font-gray");
-        $("#controlTel input").focus(function () {
-            $(this).removeClass("font-gray");
-        });
-
-    })(jQuery);
+    head.js("js/jquery-1.7.2.min.js",
+            "js/jqueryplugin/formvalidator/formValidator-4.1.3.js",
+            "js/jqueryplugin/formvalidator/formValidatorRegex.js",
+            "js/my/usercenter.js"
+    );
 </script>
+
+
+<script type="text/javascript">
+    head.ready(function() {
+
+    });
+</script>
+
+</body>
 </html>
