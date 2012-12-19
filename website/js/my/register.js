@@ -54,7 +54,7 @@ $(function(){
             onCorrect:true
         })
         .inputValidator({
-            min:6,max:100,onError:"您输入的邮箱不正确"
+            min:3,max:100,onError:"您输入的邮箱长度不正确"
         })
         .regexValidator({
             regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
@@ -63,7 +63,9 @@ $(function(){
     $("#password1")
         .formValidator({
             onShowFixText:"请填入6~20个字符，包括字母、数字、特殊符号，区分大小写",
-            onShow:"请填入密码",onFocus:"至少1个长度",onCorrect:"密码合法"
+            onShow:"请填入密码",
+            onFocus:"请填入密码",
+            onCorrect:"密码合法"
         })
         .inputValidator({
             min:6,max:20,
@@ -230,12 +232,14 @@ $(function(){
 
 //登录部分
 $(function(){
+
+
     $("#login-email").selectView();
     $(".login-form input[class='txt']").each(function(){
         var $this = $(this);
         $this.focus(function(){
             $this.css({
-                border:"1px solid #999"
+                border:"1px solid #FF9900"
             });
             $this.keydown(function(){
                 $this.css({
