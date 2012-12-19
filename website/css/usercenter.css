@@ -9,7 +9,7 @@
 /***内容部分***/
 .wrap-mycenter{ width: 820px;}
 .wrap-mycenter .mod-hd{display:block; background:url(../images/usercenter/bg_main_title.gif) repeat-x; height:28px; line-height:28px;font-weight: 700; padding-left:15px;margin-top:6px;}
-.wrap-mycenter .mod-bd{padding:10px;border:1px #F4F4F4 solid;width:798px; }
+.wrap-mycenter .mod-bd{padding:20px 10px;border:1px #F4F4F4 solid;width:798px; }
 
 .tab-menu{border-bottom:1px #ffda71 solid;padding-left:20px;margin-bottom:15px; }
 .tab-menu:after {clear: both; content: ""; display: block; height: 0;line-height: 0; visibility: hidden;}
@@ -60,6 +60,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 /*账户安全*/
 .safety-form .control-label{width:160px;}
+.suc-title{padding-left:80px; height:70px;line-height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0; font-size:22px;font-weight:700;color:#82be0e;}
 /*babyinfo*/
 .baby-list dl{margin-bottom:15px;overflow: hidden;font-size:14px;background-color: #f8f8f8;}
 .baby-list dt{background-color: #e6f5d0;height:28px;line-height: 28px;padding:0 20px;}
@@ -69,3 +70,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .baby-list dd.edit-baby{float:right;font-size:12px;cursor: pointer;}
 .edit-babyinfo{border:5px solid #f8f8f8;margin-top:-15px;margin-bottom:15px;padding:10px;display: none;}
 .edit-babyinfo .control-label{width:140px;}
+
+/*binding*/
+.binding-area dl{padding-left:20px;padding-bottom:30px;}
+.binding-area dl dt{float:left;width:50px;height:50px;margin-right:12px;background-image: url(../images/usercenter/icon_binding.gif);background-repeat: no-repeat;}
+.binding-area .binding-weibo dt{background-position: 0 0;}
+.binding-area .binding-taobao dt{background-position: 0 -50px;}
+.binding-area .binding-qq dt{background-position: 0 -100px;}
+
+.binding-area dd p{height:24px;line-height: 24px;}
+.binding-area dd .binding-name{font-size:14px;}

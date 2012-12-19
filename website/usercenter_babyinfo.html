@@ -72,6 +72,26 @@
                     <dd class="baby-weight">体重:20千克</dd>
                     <dd class="edit-baby text-tips"><a href="" title=""  id="editBaby">[修改宝宝信息]</a></dd>
                 </dl>
+
+                <dl>
+                    <dt><span>您的第二个宝宝信息：</span></dt>
+                    <dd class="baby-name">王悠然</dd>
+                    <dd class="baby-sex">女宝宝</dd>
+                    <dd class="baby-birthday">生日:2010-9-2</dd>
+                    <dd class="baby-height">身高:100厘米</dd>
+                    <dd class="baby-weight">体重:20千克</dd>
+                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby2">[修改宝宝信息]</a></dd>
+                </dl>
+                <dl>
+                    <dt><span>您的第三个宝宝信息：</span></dt>
+                    <dd class="baby-name">王悠然</dd>
+                    <dd class="baby-sex">女宝宝</dd>
+                    <dd class="baby-birthday">生日:2010-9-2</dd>
+                    <dd class="baby-height">身高:100厘米</dd>
+                    <dd class="baby-weight">体重:20千克</dd>
+                    <dd class="edit-baby text-tips"><a href="" title=""  id="editBaby3">[修改宝宝信息]</a></dd>
+                </dl>
+
                 <div id="edit_babyinfo" class="edit-babyinfo">
                     <form accept-charset="UTF-8" action="" class="form info-form" id="babyInfoEdit" method="post">
                         <fieldset>
@@ -173,7 +193,7 @@
                                         <option value="43">澳门</option>
                                         <option value="84">钓鱼岛</option>
                                     </select>
-                                    <input id="birthHospital" name="birthHospital" class="text-input fl" size="50" type="text" placeholder="" />
+                                    <input id="birthHospital" name="birthHospital" class="text-input fl" size="50" type="text" placeholder="填写宝宝出生医院" />
                                 </div>
                             </div>
 
@@ -184,24 +204,6 @@
                         </fieldset>
                     </form>
                 </div>
-                <dl>
-                    <dt><span>您的第二个宝宝信息：</span></dt>
-                    <dd class="baby-name">王悠然</dd>
-                    <dd class="baby-sex">女宝宝</dd>
-                    <dd class="baby-birthday">生日:2010-9-2</dd>
-                    <dd class="baby-height">身高:100厘米</dd>
-                    <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title="" id="editBaby2">[修改宝宝信息]</a></dd>
-                </dl>
-                <dl>
-                    <dt><span>您的第三个宝宝信息：</span></dt>
-                    <dd class="baby-name">王悠然</dd>
-                    <dd class="baby-sex">女宝宝</dd>
-                    <dd class="baby-birthday">生日:2010-9-2</dd>
-                    <dd class="baby-height">身高:100厘米</dd>
-                    <dd class="baby-weight">体重:20千克</dd>
-                    <dd class="edit-baby text-tips"><a href="" title=""  id="editBaby3">[修改宝宝信息]</a></dd>
-                </dl>
             </div>
         </div>
     </div>
@@ -217,15 +219,14 @@
 </script>
 <script type="text/javascript">
     head.ready(function() {
-                    $(".edit-baby").delegate('a', 'click', function () {
+                    $(".edit-baby").delegate('a', 'click', function (e) {
+                        e.preventDefault();
                         $("#edit_babyinfo").hide();
                         $(this).parents("dl").after($("#edit_babyinfo").fadeIn());
-                        console.log($(this).parent().parent());
-                        return false;
+                        console.log($(this).parents());
                     });
 $("#submit_babyEdit,#submit_cancel").click(function() {
             $(this).parents("#edit_babyinfo").hide();
-            return false;
         });
 
     });

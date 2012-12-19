@@ -1,13 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <link href="css/reset.css" rel="stylesheet"/>
-    <link href="css/base.css" rel="stylesheet"/>
-    <link href="css/usercenter.css" rel="stylesheet"/>
-    <script src="js/head.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>账号安全</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/usercenter.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -33,13 +31,13 @@
         <dd class="mod-bd">
             <ul class="list-menu">
                 <li><a href="CustomerCenter_Info.aspx" id="CustomerCenter_Info">基本信息</a></li>
-                <li><a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">账户安全</a></li>
+                <li class="status-hover"><a href="CustomerCenter_ChangePsw.aspx" id="CustomerCenter_ChangePsw">账户安全</a></li>
                 <li><a href="CustomerCenter_Baby.aspx" id="CustomerCenter_Baby">宝宝信息</a></li>
                 <li><a href="CustomerCenter_Consignee.aspx" id="CustomerCenter_Consignee">收货地址</a></li>
                 <li><a href="CustomerCenter_MyScores.aspx" id="CustomerCenter_MyScores">幸运星积分</a></li>
                 <li><a href="CustomerCenter_Coupon.aspx" id="CustomerCenter_Coupon">优惠券</a></li>
                 <li><a href="CustomerCenter_MyFriend.aspx" id="CustomerCenter_MyFriend">邀请好友</a></li>
-                <li class="status-hover"><a href="CustomerCenter_binding.aspx" id="CustomerCenter_binding">社交绑定</a></li>
+                <li><a href="CustomerCenter_binding.aspx" id="CustomerCenter_binding">社交绑定</a></li>
             </ul>
         </dd>
     </dl>
@@ -59,23 +57,26 @@
 </div>
 
 <div class="wrap-mycenter fr">
-    <div class="mod-info">
-        <div class="mod-hd"><h3>社交绑定</h3></div>
-        <div class="mod-bd">
-            <div class="binding-area">
-                <dl class="binding-weibo"><dt></dt><dd><p class="binding-name">新浪微博</p><p class="text-tips"><a href="" class="mr10">绑定账号</a>和好友分享你的发现</p></dd></dl>
-                <dl class="binding-taobao"><dt></dt><dd><p class="binding-name">淘宝网</p><p class="text-tips"><a href="" class="mr10">绑定账号</a>和好友分享你的发现</p></dd></dl>
-                <dl class="binding-qq"><dt></dt><dd><p class="binding-name">QQ</p><p class="text-tips"><a href="" class="mr10">绑定账号</a>和好友分享你的发现</p></dd></dl>
-            </div>
-        </div>
+    <div id="modSafety" class="mod-info mod-safety">
+    <div class="mod-hd"><h3>账号安全</h3></div>
+    <div class="mod-bd">
+        <div class="suc-title">邮箱验证成功！</div>
     </div>
-</div>
-</div>
+    </div>
+    </div>
+</div><!--wrapper-->
 </body>
-
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
-    head.js("js/jquery-1.7.2.min.js"
-    );
+    (function ($) {
+        $("#modSafety .tab-menu li").click(function () {
+            var wfc_table = $("#modSafety .mod-content");
+            var curt_index = $(this).index("#modSafety .tab-menu li");
+            $("#modSafety .tab-menu li").removeClass("status-on");
+            $(this).addClass("status-on");
+            wfc_table.removeClass("show").addClass("hide");
+            wfc_table.eq(curt_index).addClass("show");
+        });
+    })(jQuery);
 </script>
-
 </html>
