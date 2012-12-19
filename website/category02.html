@@ -701,15 +701,15 @@
                 $("#cartList").show();
                 var T = setTimeout(function(){$("#cartList").hide()},1000);
                 var pr = $(this).parents("dl").css("position","relative");
-                var clone = pr.find("img:eq(0)").clone();
+                var clone = pr.find("a:eq(0)").clone();
                 clone.css("position","absolute").appendTo(pr);
-                img_width = clone.width();
+                img_width = clone.find("img").width();
                 if(!clone.is(":animated")){
                     clone.animate({
                         left: $(".shopcart").position().left+$(this).position().left,
                         top: -$("#j-shopcar").position().top,
-                        width:1,
-                        height:1,
+                        width:"1px",
+                        height:"1px",
                         opacity:"0.3"
                     },function(){
                         var p = parseInt($("#saleQty").text());
