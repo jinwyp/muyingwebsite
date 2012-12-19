@@ -66,17 +66,5 @@
     </div>
 </div><!--wrapper-->
 </body>
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript">
-    (function ($) {
-        $("#modSafety .tab-menu li").click(function () {
-            var wfc_table = $("#modSafety .mod-content");
-            var curt_index = $(this).index("#modSafety .tab-menu li");
-            $("#modSafety .tab-menu li").removeClass("status-on");
-            $(this).addClass("status-on");
-            wfc_table.removeClass("show").addClass("hide");
-            wfc_table.eq(curt_index).addClass("show");
-        });
-    })(jQuery);
-</script>
+
 </html>
