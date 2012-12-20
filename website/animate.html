@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/reset.css" rel="stylesheet"  type="text/css"/>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+    #demoShelf{
+        width: 448px;
+        height: 198px;
+        margin: 50px auto;
+        position: relative;
+    }
+    #demoShelf .simpleCart_shelfItem{
+        position:absolute;
+        top:-250px;
+        padding-top:15px;
+        z-index:100;
+    }
+
+    #demoShelf .item_name{
+        display: none;
+    }
+    #demoShelf .item_image{
+        cursor: pointer;
+    }
+
+
+    </style>
+</head>
+<body>
+<div id="demoShelf">
+    <div class="simpleCart_shelfItem" style="left: 310px; top: 0px;">
+        <img src="http://simplecartjs.org/assets/images/inceptiondvd.png" alt="Sample Product" class="item_image item_add">
+    </div>
+    <div class="simpleCart_shelfItem" style="left: 171px; top: 0px;">
+        <img src="http://simplecartjs.org/assets/images/nhl12.png" alt="Sample Product" class="item_image item_add">
+    </div>
+    <div class="simpleCart_shelfItem" style="left: 29px; top: 0px;">
+        <img src="http://simplecartjs.org/assets/images/goodtogreat.png" alt="Sample Product" class="item_image item_add">
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript" src="js/jqueryplugin/plugins.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#demoShelf .simpleCart_shelfItem:eq(0)").css('left', '310px');
+        $("#demoShelf .simpleCart_shelfItem:eq(1)").css('left', '171px');
+        $("#demoShelf .simpleCart_shelfItem:eq(2)").css('left', '29px');
+        $("#demoShelf .simpleCart_shelfItem").click(function(){
+            var clone = $(this).clone(),
+                    position = $(this).position(),
+                    bezier_params = {
+                        start: {
+                            x: position.left,
+                            y: 0,
+                            angle: -90
+                        },
+                        end: {
+                            x:0,
+                            y:0,
+                            angle: 180,
+                            length: 0.2
+                        }
+                    };
+
+            clone.appendTo('#demoShelf');
+            clone.animate({
+                path : new $.path.bezier(bezier_params),
+                width:0,
+                height:0
+            }, 600,function(){
+                clone.remove()
+            });
+
+        });
+
+
+        $(".btn_m_o").each(function(){
+            var $this = $(this);
+
+            $this.click(function(){
+                var pr = $this.parents("dl").css("position","relative");
+                var clone = pr.find("a:eq(0)").clone(),
+                    position = pr.position(),
+                    bezier_params = {
+                        start: {
+                            x: position.left,
+                            y: 0,
+                            angle: -90
+                        },
+                        end: {
+                            x:310,
+                            y:-210,
+                            angle: 180,
+                            length: .2
+                        }
+                    };
+
+                clone.css({position:"absolute",border:"5px solid #fff6d7"}).appendTo(pr);
+                //clone.addClass('addDemoAnimation');
+                clone.animate({path : new $.path.bezier(bezier_params)}, 600);
+                clone.remove();
+                return false
+            });
+
+
+        })
+    });
+
+
+
+
+
+</script>
+</html>
