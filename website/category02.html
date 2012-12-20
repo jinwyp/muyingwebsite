@@ -689,9 +689,11 @@
 
 </div><!--wrapper end -->
 
-</div></body>
+</div>
+</body>
 <script src="js/jquery-1.7.2.min.js" ></script>
 <script type="text/javascript" src="js/my/category.js"></script>
+<script type="text/javascript" src="js/jqueryplugin/plugins.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         readyScroll();
@@ -701,16 +703,29 @@
                 if(T)clearTimeout(T);
                 var pr = $this.parents("dl").css("position","relative");
                 var clone = pr.find("a:eq(0)").clone();
-                clone.css("position","absolute").appendTo(pr);
-                img_width = clone.find("img").width();
+                var position = $("#saleQty").offset();
+                var bezier_params = {
+                    start: {
+                        x: 0,
+                        y: 10,
+                        angle: -120
+                    },
+                    end: {
+                        x:position.left - pr.position().left,
+                        y:position.top - pr.position().top,
+                        angle: 180,
+                        length: 0.2
+                    }
+                };
+                console.log($("#saleQty").offset().left,$("#saleQty").offset().top)
+                clone.css({position:"absolute"}).appendTo(pr);
                 if(!clone.is(":animated")){
                     clone.animate({
-                        left:$(".shopcart").position().left-pr.position().left+90,
-                        top:$("#j-shopcar").position().top-pr.position().top,
-                        width:"1px",
-                        height:"1px",
-                        opacity:"0.5"
-                    },500,function(){
+                        path : new $.path.bezier(bezier_params),
+                        width:"0px",
+                        height:"0px",
+                        opacity:"0.6"
+                    },600,function(){
                         var p = parseInt($("#saleQty").text());
                         p += 1;
                         $("#saleQty").text(p);
@@ -780,7 +795,6 @@
             }
         });
     }
-
 
 
 </script>
