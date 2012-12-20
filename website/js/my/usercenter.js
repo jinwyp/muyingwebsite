@@ -31,7 +31,7 @@ $(function(){
             isValid: true,
             regExp:"^[\\u4E00-\\u9FA5\\uF900-\\uFA2D]+$",
             //dataType:"string",
-            onError:"格式不正确,只能输入汉字"
+            onError:"格式不正确，只能输入汉字"
         });
 
     $("#userInfo input:radio[name='user_sex']")
@@ -62,21 +62,67 @@ $(function(){
             onError:"请选择所在地"
         });
 
+});
+
+$(function(){
+    $.formValidator.initConfig({
+        theme:"myzj",
+        submitOnce:true,
+        formID:"babyInfoEdit",
+        onError:function(msg){alert(msg);},
+        submitAfterAjaxPrompt : '数据正在验证，请稍等...'
+    });
     $("#baby_height")
         .formValidator({
             tipID:"baby_height_Tip",
-            onShowText:"请填写您的宝宝身高",
             onFocus:"请填写您的宝宝身高",
             forceValid : true,
             onCorrect:true
-        });
+        })
+    .inputValidator({
+        min:2,
+        max:10,
+        onError:"请正确填写您的宝宝身高"
+    })
+    .regexValidator({
+        isValid: true,
+        regExp:"^[1-9]\\d*.\\d*|0.\\d*[1-9]\\d*|0?.0+|0$",
+        onError:"格式不正确，只能输入数字"
+    });
+
     $("#baby_weight")
         .formValidator({
             tipID:"baby_weight_Tip",
-            onShowText:"请填写您的宝宝体重",
             onShow:"请填写您的宝宝体重",
             onCorrect:true
         })
+        .inputValidator({
+            min:2,
+            max:10,
+            onError:"请正确填写您的宝宝体重"
+        })
+        .regexValidator({
+            isValid: true,
+            regExp:"^[1-9]\\d*.\\d*|0.\\d*[1-9]\\d*|0?.0+|0$",
+            onError:"格式不正确，只能输入数字"
+        });
+
+    $("#birth_certificate_number")
+        .formValidator({
+            tipID:"birth_certificate_number_Tip",
+            onShow:"请填写您的出生证号码",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:2,
+            max:10,
+            onError:"请正确填写您的出生证号码"
+        })
+        .regexValidator({
+            isValid: true,
+            regExp:"^\\w+$",
+            onError:"格式不正确，只能输入字母和数字"
+        });
 
 
 });
