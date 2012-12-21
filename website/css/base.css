@@ -193,9 +193,9 @@ input{border:0 none;vertical-align:middle}
 .help-mod dl{float:left;padding-left:32px;width:148px;background:url("../images/icon_help_mod.gif") no-repeat;}
 .help-mod dl dt{font-size:14px;padding-top:6px}
 .help-mod dl.h-guide{background-position: 0 0;}
-.help-mod dl.h-pay{background-position: 0 -120px;}
-.help-mod dl.h-distribution {background-position: 0 -234px;}
-.help-mod dl.h-afterSales{background-position: 0 -354px;}
+.help-mod dl.h-pay{background-position: -200px 0;}
+.help-mod dl.h-distribution {background-position: -400px 0;}
+.help-mod dl.h-afterSales{background-position: -600px 0;}
 .help-mod dl dd{padding:4px 0;}
 .help-mod a{color:#666;}
 .help-mod a:hover{color:#ff7800;}
