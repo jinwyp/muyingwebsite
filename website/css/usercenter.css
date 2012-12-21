@@ -2,9 +2,9 @@
 .wrap-menu{border:1px #f4f4f4 solid;padding:5px 5px 0; width:158px; overflow:hidden; text-align:left;}
 .mod-menu{margin-bottom:15px;}
 .mod-menu h3{ border:1px #fee0b1 solid;border-bottom:0 none; padding-left:10px;margin-bottom:5px; width:146px; height:27px; background:url(../images/usercenter/bg_side_title.gif) repeat-x;line-height:27px; font-size:14px;font-weight: 700;}
-.mod-menu dd li{border-bottom:1px #F7F7F7 solid; width:148px; height:30px; padding-left:10px; background:url(../images/usercenter/side_arrow.png) no-repeat 146px 0;  font-size:14px; line-height:30px;}
+.mod-menu dd li{border-bottom:1px #f7f7f7 solid; width:148px; height:30px; padding-left:10px; background:url(../images/usercenter/side_arrow.gif) no-repeat 146px 0;  font-size:14px; line-height:30px;}
 .mod-menu dd a:hover{color:#e60000;}
-.mod-menu .status-hover{ background:#f4f4f4 url(../images/usercenter/side_arrow.png) no-repeat 146px -32px;}
+.mod-menu .status-hover{ background:#f4f4f4 url(../images/usercenter/side_arrow.gif) no-repeat 146px -32px;}
 .mod-menu .status-hover a:hover{color:#333;text-decoration: none;}
 /***内容部分***/
 .wrap-mycenter{ width: 820px;}
@@ -21,16 +21,16 @@
 .show{display: block;}
 /*表格*/
 .mod-content .wfc_table{width:100%;margin-bottom:10px;display:none;overflow: hidden;}
-.mod-content .wfc_table th{padding:5px; border-bottom:1px #F0F0F0 solid; color:#666; font-weight:700;}
+.mod-content .wfc_table th{padding:5px; border-bottom:1px #f0f0f0 solid; color:#666; font-weight:700;}
 .mod-content .wfc_table td{padding:5px; border-bottom:1px dotted #e0e0e0; vertical-align: top; word-break: normal;  word-wrap: break-word;}
-.td_top_border{border-top:1px #FAFAFA solid;}
+.td_top_border{border-top:1px #fafafa solid;}
 .font_color_expired{color:#696969; text-decoration:none;}
 .font_color_use{color:#90B34D; text-decoration:none;}
 .wfc_table select{border:1px #626262 solid;background-color:#fff; color:#626262;}
 .wfc_table select option{ background-color:#fff; color:#000; border:none;}
 /*表单*/
 legend{display: none;}
-select,.select{width: 120px;padding:4px 6px; position: relative; line-height: 20px;  border-radius: 3px 3px 3px 3px; vertical-align: middle; background-color: #fff; border: 1px solid #bababa;font-size:14px; }
+select{width: 120px;padding:4px 6px; position: relative; line-height: 20px;  border-radius: 3px 3px 3px 3px; vertical-align: middle; background-color: #fff; border: 1px solid #bababa;font-size:14px; }
 label{vertical-align: middle;}
 input[type="radio"], input[type="checkbox"] { cursor: pointer; line-height: normal; vertical-align: middle;}
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
@@ -46,12 +46,13 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);
     outline: 0 none;
 }
-.control-group { margin-bottom: 20px;font-size: 14px;color: #1a1a1a; line-height: 30px;}
+.control-group { margin-bottom: 20px;font-size: 14px;color: #1a1a1a; line-height: 30px;clear:both; zoom:1;}
 .control-group abbr{color:#e60000;}
 .control-group:before, .control-group:after { content: ""; display: table;  line-height: 0;}
 .control-group:after { clear: both;}
 .control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px;color:#666;text-align: right; }
 .control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
+.text-input input{float:left;border: 1px solid #bababa;}
 .controls span{vertical-align: middle;font-size:12px;}
 .controls .font-gray{margin-left:10px;}
 .control-group strong{font-weight: 400;}
@@ -64,9 +65,9 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .safety-form .control-label{width:160px;}
 .suc-title{padding-left:80px; height:70px;line-height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0; font-size:22px;font-weight:700;color:#82be0e;}
 /*babyinfo*/
-.baby-list dl{margin-bottom:20px;overflow: hidden;font-size:14px;background-color: #f8f8f8;}
+.baby-list dl{margin-bottom:20px;font-size:14px;background-color: #f8f8f8;overflow:hidden;zoom:1;}
 .baby-list dt{background-color: #e6f5d0;height:28px;line-height: 28px;padding:0 20px;}
-.baby-list dd{display: inline; padding: 0 10px; width: 120px; height: 30px; line-height: 30px;}
+.baby-list dd{float:left; padding: 0 10px; width: 120px; height: 30px; line-height: 30px;}
 .baby-list .baby-name{padding-left:20px;width:80px;}
 .baby-list .baby-sex{width:80px;}
 .baby-list dd.edit-baby{font-size:12px;cursor: pointer;}
@@ -80,6 +81,5 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .binding-area .binding-weibo dt{background-position: 0 0;}
 .binding-area .binding-taobao dt{background-position: 0 -50px;}
 .binding-area .binding-qq dt{background-position: 0 -100px;}
-
 .binding-area dd p{height:24px;line-height: 24px;}
 .binding-area dd .binding-name{font-size:14px;}

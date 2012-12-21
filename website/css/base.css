@@ -8,11 +8,11 @@ a,.link{color:#333;text-decoration:none}
 a:hover,.hover{text-decoration:underline;color:#e60000}
 .bg-white{background-color:#fff}
 /*layout*/
-.clearfix:after{content:"";display:block;height:0;clear:both}
-.clearfix{zoom:1;clear:both}
-.fl{float:left;display:inline}
-.fr{float:right;display:inline}
-.hide{display:none}
+.clearfix:after{content:"";display:block;height:0;clear:both;}
+.clearfix{zoom:1;clear:both;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.hide{display:none;}
 .wrapper{width:1000px;margin:0 auto;text-align:left}
 .main{float:right;_display:inline;width:790px}
 .sidebar{float:left;_display:inline;width:200px}
