@@ -801,17 +801,17 @@
                 if(closing)clearTimeout(closing);
                 showing = setTimeout(function(){
                     if(!shown)
-                    $("#cartList").stop().slideDown(300,function(){
+                    $("#cartList").stop().slideDown(200,function(){
                         shown = true;
                     })
-                },200);
+                },150);
             },function(){
                 if(showing){
                     clearTimeout(showing);
                 }
                 if(shown){
                     closing = setTimeout(function(){
-                        $("#cartList").slideUp(300,function(){
+                        $("#cartList").slideUp(200,function(){
                             shown = false
                         })
                     },300)
