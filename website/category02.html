@@ -785,52 +785,33 @@
                 floatStyle = false
             }
         });
-        (function(){
-            var t1 = false,t2 = false;
-            $(".shopcart").hover(function(){
-                if(t2){
-                    t2 = false
-                }
-                if(t1){
-                    return false
-                }
-                t1 = true;
-                $("#cartList").stop().delay(500).slideDown(300,function(){
-                    t1 = false
-                })
 
+        //购物车下拉，添加延迟处理
+        (function(){
+            var showing,shown,closing;
+            $(".shopcart").hover(function(){
+                if(closing)clearTimeout(closing);
+                showing = setTimeout(function(){
+                    if(!shown)
+                    $("#cartList").stop().slideDown(300,function(){
+                        shown = true;
+                    })
+                },200);
             },function(){
-                if(t1){
-                    t1 = false
+                if(showing){
+                    clearTimeout(showing);
                 }
-                if(t2){
-                    return false
+                if(shown){
+                    closing = setTimeout(function(){
+                        $("#cartList").slideUp(300,function(){
+                            shown = false
+                        })
+                    },300)
                 }
-                t2 = true;
-                $("#cartList").stop().delay(500).slideUp(300,function(){
-                    t2 = false
-                })
             })
         })()
 
     }
-
-    (function ($) {
-
-        $.fn.delayFire = function(options){
-            var settings = {
-                fnA:function(){},
-                fnB:function(){},
-                delay: 200
-            };
-            if ( options )
-                $.extend( settings, options );
-
-
-        }
-
-
-    })(jQuery);
 
 </script>
 </html>
