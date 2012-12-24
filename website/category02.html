@@ -700,7 +700,6 @@
         $(".btn_m_o").each(function(){
             var $this = $(this);
             $this.click(function(){
-                if(T)clearTimeout(T);
                 var pr = $this.parents("dl").css("position","relative");
                 var clone = pr.find("a:eq(0)").clone();
                 var position = $("#saleQty").offset();
@@ -717,7 +716,6 @@
                         length: 0.2
                     }
                 };
-                console.log($("#saleQty").offset().left,$("#saleQty").offset().top)
                 clone.css({position:"absolute"}).appendTo(pr);
                 if(!clone.is(":animated")){
                     clone.animate({
@@ -730,15 +728,8 @@
                         p += 1;
                         $("#saleQty").text(p);
                         clone.remove();
-                        $("#cartList").show();
                     })
                 }
-                var T = setTimeout(function(){$("#cartList").slideUp()},1500);
-                $("#cartList").hover(function(){
-                    clearTimeout(T)
-                },function(){
-                    $("#cartList").hide()
-                });
                 return false
             })
         })
@@ -760,7 +751,7 @@
                     "z-index":"9999"
                 });
             } else {
-                $("<style type='text/css' id='ie6style'>#floatPic{margin:0px;padding:0px;z-index:99}#floatPic img{margin: 0px;padding: 0px;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}.fixed-top{position:absolute;top:expression(eval(document.documentElement.scrollTop))}</style>").appendTo("head");
+                $("<style type='text/css' id='ie6style'>#floatPic{margin:0;padding:0;z-index:99}#floatPic img{margin: 0;padding: 0;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}.fixed-top{position:absolute;top:expression(eval(document.documentElement.scrollTop))}</style>").appendTo("head");
                 floatMain.addClass("fixed-top").css({
                     "margin-left":"-"+fw/2+"px",
                     left:"50%",
@@ -794,8 +785,33 @@
                 floatStyle = false
             }
         });
-    }
 
+        //购物车下拉，添加延迟处理
+        (function(){
+            var showing,shown,closing;
+            $(".shopcart").hover(function(){
+                if(closing)clearTimeout(closing);
+                showing = setTimeout(function(){
+                    if(!shown)
+                    $("#cartList").stop().slideDown(300,function(){
+                        shown = true;
+                    })
+                },200);
+            },function(){
+                if(showing){
+                    clearTimeout(showing);
+                }
+                if(shown){
+                    closing = setTimeout(function(){
+                        $("#cartList").slideUp(300,function(){
+                            shown = false
+                        })
+                    },300)
+                }
+            })
+        })()
+
+    }
 
 </script>
 </html>
