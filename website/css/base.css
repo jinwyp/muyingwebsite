@@ -110,20 +110,21 @@ input{border:0 none;vertical-align:middle}
 .menu .shopcart a{color:#e60000;overflow: hidden;zoom:1;height:20px;float:left}
 .menu .shopcart em{padding:0 1px;float:left;font-style:normal;vertical-align: middle;font-family:"宋体"}
 .menu .shopcart .balance{float:right;_display:inline;display:block;width:80px;height:28px}
-.menu .shopcart .cart-list{position:absolute;right:3px;top:28px;border:2px #e60000 solid;padding:5px;width:300px;background-color:#fff;color:#666}
+.menu .shopcart .cart-list{position:absolute;right:3px;top:28px;border:2px #ff9900 solid;padding:0;background-color:#ffedb5;color:#666;}
 .menu .shopcart .cart-list a{color:#666}
 .menu .shopcart .cart-list a:hover{color:#e60000}
-.menu .shopcart .cart-list dl{width:300px;padding-bottom:5px;border-bottom:1px dotted #ccc;overflow:hidden}
+.menu .shopcart .cart-list dl{width:300px;padding:5px;border-bottom:1px dotted #ccc;overflow:hidden;zoom:1;background:#fff}
 .menu .shopcart .cart-list dl dt{float:left;_display:inline}
 .menu .shopcart .cart-list dl dd{float:left;_display:inline}
 .menu .shopcart .cart-list dl dd.name{width:180px}
 .menu .shopcart .cart-list dl dd.action{float:right;_display:inline;color:#e60000;line-height:1.6}
 .menu .shopcart .cart-list dl dd.action span{padding-right:2px}
 .menu .shopcart .cart-list dl dd.action .ride{color:#666}
-.menu .shopcart .cart-list .amount{text-align:right;padding-top:5px;padding-right:5px}
+.menu .shopcart .cart-list .amount{text-align:right;padding:5px;overflow: hidden;zoom:1;width:300px}
 .menu .shopcart .cart-list .amount span{color:#e60000;font-weight:700}
-.menu .shopcart .cart-list .amount .btn-m{margin-left:5px}
-.menu .shopcart .cart-list .amount .btn-m a{color:#fff}
+.menu .shopcart .cart-list .amount .btn_m{margin:0 5px;display:inline;float:right}
+.menu .shopcart .cart-list .amount a{color:#fff;height:auto;}
+.menu .shopcart .cart-list .amount a:hover{color:#ff9}
 
 /*category*/
 .category{float:left;display:inline;margin-top:-38px;position:relative;z-index:2}
