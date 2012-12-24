@@ -6,7 +6,6 @@
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/base.css" rel="stylesheet" />
     <link href="css/usercenter.css" rel="stylesheet" />
-
     <script type="text/javascript" src="js/head.min.js"></script>
 </head>
 <body>
@@ -75,21 +74,21 @@
                 <div class="control-group">
                     <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
                     <div class="controls">
-                        <input class="text-input required" id="nowPwd" name="nowPwd" size="30" type="text" value="" />
+                        <input class="text-input required" id="nowPwd" name="nowPwd" size="30" type="password" value="" />
                         <div id="nowPwdTip" class="stickTips"></div>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label"><abbr title="required">*</abbr> 请输入新密码：</label>
                     <div class="controls">
-                        <input class="text-input required" id="newPwd" name="newPwd" size="30" type="text" value="" />
+                        <input class="text-input required" id="newPwd" name="newPwd" size="30" type="password" value="" />
                         <div id="newPwdTip" class="stickTips"></div>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label"><abbr title="required">*</abbr> 请再次输入新密码：</label>
                     <div class="controls">
-                        <input class="text-input required" id="rePwd" name="rePwd" size="30" type="text" value="" />
+                        <input class="text-input required" id="rePwd" name="rePwd" size="30" type="password" value="" />
                         <div id="rePwdTip" class="stickTips"></div>
                     </div>
                 </div>
@@ -113,15 +112,15 @@
            <div class="control-group">
                <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
                <div class="controls">
-                   <input class="text-input required" id="email_nowPwd" name="email_nowPwd" size="30" type="text" value="" />
-                   <div id="email_nowPwd_Tip" class="stickTips"></div>
+                   <input class="text-input required" id="email_nowPwd" name="emailNowPwd" size="30" type="password" value="" />
+                   <div id="email_nowPwdTip" class="stickTips"></div>
                </div>
            </div>
            <div class="control-group">
                <label class="control-label"><abbr title="required">*</abbr> 请输入注册时的邮箱：</label>
                <div class="controls">
                    <input class="text-input required" id="email_regEmail" name="regEmail" size="30" type="text" value="" />
-                   <div id="email_regEmail_Tip" class="stickTips"></div>
+                   <div id="email_regEmailTip" class="stickTips"></div>
                </div>
            </div>
            <div class="control-group form-actions">
@@ -156,14 +155,14 @@
               <div class="control-group">
                   <label class="control-label"><abbr title="required">*</abbr> 请填写手机校验码：</label>
                   <div class="controls">
-                      <input class="text-input required" id="phoneChecking" name="phoneChecking" size="30" type="text" value="" />
+                      <input class="text-input required" id="phoneChecking" name="phoneChecking" size="10" type="text" value="" />
                       <div id="phoneCheckingTip" class="stickTips"></div>
                   </div>
               </div>
               <div class="control-group">
                   <label class="control-label"><abbr title="required">*</abbr> 验证码：</label>
                   <div class="controls">
-                      <input class="text-input required" id="checkingCode" name="checkingCode" size="30" type="text" value="" />
+                      <input class="text-input required" id="checkingCode" name="checkingCode" size="10" type="text" value="" />
                       <div id="checkingCodeTip" class="stickTips"></div>
                   </div>
               </div>
@@ -185,7 +184,9 @@
 <script type="text/javascript">
     head.js("js/jquery-1.7.2.min.js",
             "js/jqueryplugin/formvalidator/formValidator-4.1.3.js",
-            "js/jqueryplugin/formvalidator/formValidatorRegex.js");
+            "js/jqueryplugin/formvalidator/formValidatorRegex.js",
+            "js/my/usercenter.js"
+    );
 </script>
 
 <script type="text/javascript">
@@ -203,8 +204,5 @@
     });
 
 </script>
-
 </body>
-
-
 </html>

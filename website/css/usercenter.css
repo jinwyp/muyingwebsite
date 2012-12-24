@@ -50,7 +50,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .control-group abbr{color:#e60000;}
 .control-group:before, .control-group:after { content: ""; display: table;  line-height: 0;}
 .control-group:after { clear: both;}
-.control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px;color:#666;text-align: right; }
+.control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px; color:#4d4d4d; text-align: right; }
 .control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
 .text-input input{float:left;border: 1px solid #bababa;}
 .controls span{vertical-align: middle;font-size:12px;}

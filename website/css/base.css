@@ -32,7 +32,7 @@ input{border:0 none;vertical-align:middle}
 .font-red {color: #e60000;}
 /*button*/
 .btn_s,.btn_m,.btn_b{display:inline-block;padding-left:10px;background-repeat:no-repeat;cursor:pointer}
-.btn_s a,.btn_m a,.btn_b a{padding-right:8px;margin-right:-5px;_margin-right:0;display:inline-block;color:#fff;text-decoration:none;font-size:12px}
+.btn_s a,.btn_m a,.btn_b a{padding-right:8px;margin-right:-5px;_margin-right:0;display:inline-block;color:#fff;text-decoration:none;font-size:12px;}
 .btn_s{height:20px;line-height:20px;background-image:url("../images/btn_small.png")}
 .btn_s a{background-image:url("../images/btn_small.png")}
 .btn_s_r{background-position:0 0}
