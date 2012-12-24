@@ -91,7 +91,7 @@
         </div>
 
         <div class="shopcart">
-            <span id="cartInfo" class="fl"><a href="">购物车<em id="saleQty" class="fb">600</em>件</a></span>
+            <span id="cartInfo" class="fl"><a href=""><em>购物车</em><em id="saleQty" class="fb">600</em><em>件</em></a></span>
 
             <div id="cartList" class="hide cart-list">
                 <dl>
@@ -724,9 +724,17 @@
                         height:"0px",
                         opacity:"0.6"
                     },600,function(){
-                        var p = parseInt($("#saleQty").text());
+                        var sq = $("#saleQty");
+                        var p = parseInt(sq.text());
                         p += 1;
-                        $("#saleQty").text(p);
+                        sq.animate({"margin-top":"20px",opacity:"0"},200,function(){
+                            sq.animate({"margin-top":"-20px"},25,function(){
+                                sq.animate({"margin-top":0,opacity:1},250,function(){
+                                    sq.text(p)
+                                })
+                            });
+                        });
+
                         clone.remove();
                     })
                 }
