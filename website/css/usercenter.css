@@ -1,83 +1,83 @@
 ﻿/***菜单部分***/
-.wrap-menu{border:1px #f4f4f4 solid;padding:5px 5px 0; width:158px; overflow:hidden; text-align:left;}
+.wrap-menu{ overflow:hidden;padding:5px 5px 0; width:158px;border:1px #f4f4f4 solid; text-align:left;}
 .mod-menu{margin-bottom:15px;}
-.mod-menu h3{ border:1px #fee0b1 solid;border-bottom:0 none; padding-left:10px;margin-bottom:5px; width:146px; height:27px; background:url(../images/usercenter/bg_side_title.gif) repeat-x;line-height:27px; font-size:14px;font-weight: 700;}
-.mod-menu dd li{border-bottom:1px #f7f7f7 solid; width:148px; height:30px; padding-left:10px; background:url(../images/usercenter/side_arrow.gif) no-repeat 146px 0;  font-size:14px; line-height:30px;}
+.mod-menu h3{margin-bottom:5px; padding-left:10px; width:146px; height:27px; border:1px #fee0b1 solid;border-bottom:0 none; background:url(../images/usercenter/bg_side_title.gif) repeat-x;font-weight: 700; font-size:14px;line-height:27px;}
+.mod-menu dd li{ padding-left:10px; width:148px; height:30px;border-bottom:1px #f7f7f7 solid; background:url(../images/usercenter/side_arrow.gif) no-repeat 146px 0;  font-size:14px; line-height:30px;}
 .mod-menu dd a:hover{color:#e60000;}
 .mod-menu .status-hover{ background:#f4f4f4 url(../images/usercenter/side_arrow.gif) no-repeat 146px -32px;}
 .mod-menu .status-hover a:hover{color:#333;text-decoration: none;}
 /***内容部分***/
 .wrap-mycenter{ width: 820px;}
-.wrap-mycenter .mod-hd{display:block; background:url(../images/usercenter/bg_main_title.gif) repeat-x; height:28px; line-height:28px;font-weight: 700; padding-left:15px;margin-top:6px;}
-.wrap-mycenter .mod-bd{padding:20px 10px;border:1px #F4F4F4 solid;width:798px; }
+.wrap-mycenter .mod-hd{display:block;margin-top:6px; padding-left:15px; height:28px; background:url(../images/usercenter/bg_main_title.gif) repeat-x;font-weight: 700; line-height:28px;}
+.wrap-mycenter .mod-bd{padding:20px 10px;width:798px;border:1px #F4F4F4 solid; }
 
-.tab-menu{border-bottom:1px #ffda71 solid;padding-left:20px;margin-bottom:15px; }
-.tab-menu:after {clear: both; content: ""; display: block; height: 0;line-height: 0; visibility: hidden;}
-.tab-menu li{float:left; position:relative;bottom:-1px;margin-right:5px;border:1px solid #fff;border-bottom:none medium;}
-.tab-menu li a{display:block;padding:5px 15px;font-size:12px;text-decoration: none;}
+.tab-menu{margin-bottom:15px;padding-left:20px;border-bottom:1px #ffda71 solid; }
+.tab-menu:after { display: block; visibility: hidden;clear: both; height: 0; content: "";line-height: 0;}
+.tab-menu li{ position:relative;bottom:-1px;float:left;margin-right:5px;border:1px solid #fff;border-bottom:none medium;}
+.tab-menu li a{display:block;padding:5px 15px;text-decoration: none;font-size:12px;}
 .tab-menu .status-on{border:1px solid #ffda71 ;border-bottom:1px solid #fff;font-weight:700;}
-.tab-menu .status-on a{color:#ff9900}
+.tab-menu .status-on a{color:#ff9900;}
 .hide{display: none;}
 .show{display: block;}
 /*表格*/
-.mod-content .wfc_table{width:100%;margin-bottom:10px;display:none;overflow: hidden;}
+.mod-content .wfc_table{display:none;overflow: hidden;margin-bottom:10px;width:100%;}
 .mod-content .wfc_table th{padding:5px; border-bottom:1px #f0f0f0 solid; color:#666; font-weight:700;}
-.mod-content .wfc_table td{padding:5px; border-bottom:1px dotted #e0e0e0; vertical-align: top; word-break: normal;  word-wrap: break-word;}
+.mod-content .wfc_table td{padding:5px; border-bottom:1px dotted #e0e0e0; vertical-align: top;  word-wrap: break-word; word-break: normal;}
 .td_top_border{border-top:1px #fafafa solid;}
 .font_color_expired{color:#696969; text-decoration:none;}
 .font_color_use{color:#90B34D; text-decoration:none;}
 .wfc_table select{border:1px #626262 solid;background-color:#fff; color:#626262;}
-.wfc_table select option{ background-color:#fff; color:#000; border:none;}
+.wfc_table select option{ border:none; background-color:#fff; color:#000;}
 /*表单*/
 legend{display: none;}
-select{width: 120px;padding:4px 6px; position: relative; line-height: 20px;  border-radius: 3px 3px 3px 3px; vertical-align: middle; background-color: #fff; border: 1px solid #bababa;font-size:14px; }
+select{ position: relative;padding:4px 6px;width: 120px; border: 1px solid #bababa;  border-radius: 3px 3px 3px 3px; background-color: #fff; vertical-align: middle;font-size:14px; line-height: 20px; }
 label{vertical-align: middle;}
-input[type="radio"], input[type="checkbox"] { cursor: pointer; line-height: normal; vertical-align: middle;}
+input[type="radio"], input[type="checkbox"] { vertical-align: middle; line-height: normal; cursor: pointer;}
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
     float: left;
-    background-color: #fff;
     border: 1px solid #bababa;
+    background-color: #fff;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
     vertical-align: middle;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 }
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus{
+    outline: 0 none;
     border-color: #ff9900;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);
-    outline: 0 none;
 }
-.control-group { margin-bottom: 20px;font-size: 14px;color: #1a1a1a; line-height: 30px;clear:both; zoom:1;}
+.control-group {clear:both; margin-bottom: 20px;color: #1a1a1a;font-size: 14px; line-height: 30px; zoom:1;}
 .control-group abbr{color:#e60000;}
-.control-group:before, .control-group:after { content: ""; display: table;  line-height: 0;}
+.control-group:before, .control-group:after { display: table; content: "";  line-height: 0;}
 .control-group:after { clear: both;}
-.control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px;color:#666;text-align: right; }
-.control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
+.control-group .control-label { float: left;  margin-right:10px;  width:90px;color:#666;text-align: right;  font-size:14px; }
+.control-group input {display: inline-block;padding: 4px 6px;height: 20px;border-radius: 3px 3px 3px 3px;font-size: 14px;line-height: 20px;line-}
 .text-input input{float:left;border: 1px solid #bababa;}
-.controls span{vertical-align: middle;font-size:12px;}
+.controls span{margin-left:10px;vertical-align: middle;font-size:12px;}
 .controls .font-gray{margin-left:10px;}
 .control-group strong{font-weight: 400;}
 .mod-info .text-tips a{color:#619eb1;}
 .control-tel .controls span{float:left;margin-right:10px;}
 .form-actions span{margin-left:0;}
-.icon-help{height:16px;padding-left:20px;background:url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}
+.icon-help{margin-left:10px;padding-left:20px;height:16px;background:url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}
 
 /*账户安全*/
 .safety-form .control-label{width:160px;}
-.suc-title{padding-left:80px; height:70px;line-height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0; font-size:22px;font-weight:700;color:#82be0e;}
+.suc-title{padding-left:80px; height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0;color:#82be0e;font-weight:700; font-size:22px;line-height:70px;}
 /*babyinfo*/
-.baby-list dl{margin-bottom:20px;font-size:14px;background-color: #f8f8f8;overflow:hidden;zoom:1;}
-.baby-list dt{background-color: #e6f5d0;height:28px;line-height: 28px;padding:0 20px;}
+.baby-list dl{overflow:hidden;margin-bottom:20px;background-color: #f8f8f8;font-size:14px;zoom:1;}
+.baby-list dt{padding:0 20px;height:28px;background-color: #e6f5d0;line-height: 28px;}
 .baby-list dd{float:left; padding: 0 10px; width: 120px; height: 30px; line-height: 30px;}
 .baby-list .baby-name{padding-left:20px;width:80px;}
 .baby-list .baby-sex{width:80px;}
 .baby-list dd.edit-baby{font-size:12px;cursor: pointer;}
-.edit-babyinfo{border:5px solid #f8f8f8;margin-top:-20px;margin-bottom:20px;padding:10px;display: none;}
+.edit-babyinfo{display: none;margin-top:-20px;margin-bottom:20px;padding:10px;border:5px solid #f8f8f8;}
 .edit-babyinfo .control-label{width:140px;}
 .baby-list .font-gray{height:30px;line-height: 30px;}
 
 /*binding*/
-.binding-area dl{padding-left:20px;padding-bottom:30px;}
-.binding-area dl dt{float:left;width:50px;height:50px;margin-right:12px;background-image: url(../images/usercenter/icon_binding.gif);background-repeat: no-repeat;}
+.binding-area dl{padding-bottom:30px;padding-left:20px;}
+.binding-area dl dt{float:left;margin-right:12px;width:50px;height:50px;background-image: url(../images/usercenter/icon_binding.gif);background-repeat: no-repeat;}
 .binding-area .binding-weibo dt{background-position: 0 0;}
 .binding-area .binding-taobao dt{background-position: 0 -50px;}
 .binding-area .binding-qq dt{background-position: 0 -100px;}

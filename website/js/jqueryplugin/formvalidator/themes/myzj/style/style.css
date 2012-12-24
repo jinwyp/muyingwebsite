@@ -37,7 +37,7 @@
 {
     line-height : 166.6%;
     color : #000;
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     font-size : 14px;
     display : inline-block;
@@ -50,7 +50,7 @@
 }
 .txt-succ
 {
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     font-size : 12px;
     color : #0e931c;
@@ -62,7 +62,7 @@
 {
     line-height : 166.6%;
     color : #000;
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     font-size : 14px;
     display : inline-block;
@@ -76,7 +76,7 @@
 }
 .txt-err
 {
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     font-size : 12px;
     color : #f00;
@@ -92,7 +92,7 @@
 .g-ipt
 {
     text-align:left;
-    font-family:Verdana, arial, sans-serif;
+
     line-height:normal;
     margin:0;
     vertical-align:middle;
@@ -107,7 +107,7 @@
 /*������ý������ʽ*/
 .g-ipt-active
 {
-    font-family: Verdana,arial,sans-serif;
+
     line-height:normal;
     margin:0px;
 ;
@@ -130,7 +130,7 @@
 .g-ipt-err
 {
     text-align:left;
-    font-family:Verdana, arial, sans-serif;
+
     line-height:normal;
     margin:0;
     vertical-align:middle;
@@ -145,7 +145,7 @@
 
 .g-ipt-cor
 {
-    font-family: Verdana,arial,sans-serif;
+
     line-height:normal;
     margin:0;
     vertical-align:middle;
@@ -161,7 +161,7 @@
 .txt-info-mouseon
 {
     line-height:166.6%;
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     margin-top : -4px;
     font-size : 12px;
@@ -188,7 +188,7 @@
 {
     line-height : 166.6%;
     color : #fff;
-    font-family : Verdana, arial, sans-serif;
+
     text-align : center;
     font-size : 12px;
     padding : 0;
@@ -240,7 +240,7 @@
 {
     line-height : 166.6%;
     color : #000;
-    font-family : Verdana, arial, sans-serif;
+
     text-align : left;
     font-size : 14px;
     display : inline-block;
