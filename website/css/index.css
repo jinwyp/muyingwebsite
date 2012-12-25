@@ -194,7 +194,7 @@
 .index-dialog .content .checksubs label{
     float: left;
     display: inline;
-    padding:0 15px 0 20px;
+    padding:0 10px 0 15px;
     vertical-align: middle;
 }
 .index-dialog .content .checksubs label input{
@@ -207,6 +207,8 @@
 }
 .index-dialog .content .getdate label{
     color:#ff9900;
+    font-size: 12px;
+    font-weight: bold;
 }
 .index-dialog .content .getdate .bbtips{
     color:#999

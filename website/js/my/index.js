@@ -203,10 +203,10 @@ var Every_Day_Timer = function () {
 
      $("input:radio['name=radval']").change(function(){
          if($(this).val()==0){
-             $("#day-type").text("您当前的宝宝生日是：");
+             $("#day-type").text("您的宝宝生日是：");
          }
          if($(this).val()==1){
-             $("#day-type").text("您当前的宝宝预产期是：");
+             $("#day-type").text("您的预产期是：");
          }
      })
 
