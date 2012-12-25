@@ -60,6 +60,16 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .control-tel .controls span{float:left;margin-right:10px;}
 .form-actions span{margin-left:0;}
 .icon-help{margin-left:10px;padding-left:20px;height:16px;background:url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}
+.successtipflow{position: fixed; top: 0px; left: 50%; margin-left: -320px; z-index: 999; display: none; opacity: 0; width: 810px;}
+.successtip{ background-color: #F0FFE5;
+    border: 1px solid #B6DC2F;
+    color: #428E01;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;}
+.successtip img{ display: inline-block;   vertical-align: middle;}
 
 /*账户安全*/
 .safety-form .control-label{width:160px;}

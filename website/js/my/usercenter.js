@@ -14,7 +14,12 @@ $(function () {
         onError:function (msg) {
             alert(msg);
         },
-        submitAfterAjaxPrompt:'数据正在验证，请稍等...'
+        submitAfterAjaxPrompt:'数据正在验证，请稍等...',
+        onSuccess: function() {
+            jQuery("#messagesuccess").slideDown("slow").fadeTo("slow", 1).delay(2000).fadeTo("slow", 0).slideUp("fast");
+            return true
+        }
+
     });
     $("#realName")
         .formValidator({
@@ -279,4 +284,27 @@ $(function () {
     $("#submit_babyEdit,#submit_cancel").click(function() {
         $("#edit_babyinfo").hide();
     });
+});
+
+$(function () {
+
+    $("#submitbutton").click(function(e) {
+        e.preventDefault();
+
+//            var ua = navigator.userAgent.toLowerCase();
+//            var check = function(r) {
+//                return r.test(ua);
+//            };
+//            var isOpera = check(/opera/);
+//            var isIE = !isOpera && check(/msie/);
+//            var isIE6 = isIE && check(/msie 6/);
+//            $("#messageTwo").css({ "top": "0px" });
+//            if (isIE6) {
+//                $("#messageTwo").css({ "top": "" + $(window).scrollTop() + "px" });
+//            }
+
+    jQuery("#messagesuccess").slideDown("slow").fadeTo("slow", 1).delay(2000).fadeTo("slow", 0).slideUp("fast");
+
+    });
+
 });
