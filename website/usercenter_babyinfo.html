@@ -193,7 +193,7 @@
                                         <option value="43">澳门</option>
                                         <option value="84">钓鱼岛</option>
                                     </select>
-                                    <input id="birthHospital" name="birthHospital" class="fl" size="50" type="text" placeholder="填写宝宝出生医院" />
+                                    <input id="birthHospital" name="birthHospital" class="fl" size="50" type="text" placeholder="请填写宝宝的出生医院" />
                                 </div>
                             </div>
 
@@ -223,19 +223,7 @@
 
 
 
-<script type="text/javascript">
-    head.ready(function() {
-        $(".edit-baby").delegate('a', 'click', function (e) {
-            e.preventDefault();
-            $("#edit_babyinfo").hide();
-            $(this).parents("dl").after($("#edit_babyinfo").fadeIn());
-            console.log($(this).parents());
-        });
-        $("#submit_babyEdit,#submit_cancel").click(function() {
-            $("#edit_babyinfo").hide();
-        });
-    });
-</script>
+
 
 </body>
 </html>

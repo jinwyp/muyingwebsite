@@ -268,4 +268,15 @@ $(function () {
 
 });
 
-
+// 用户中心修改宝宝信息
+$(function () {
+    $(".edit-baby").delegate('a', 'click', function (e) {
+        e.preventDefault();
+        $("#edit_babyinfo").hide();
+        $(this).parents("dl").after($("#edit_babyinfo").fadeIn());
+        console.log($(this).parents());
+    });
+    $("#submit_babyEdit,#submit_cancel").click(function() {
+        $("#edit_babyinfo").hide();
+    });
+});
