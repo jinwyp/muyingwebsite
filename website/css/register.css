@@ -6,6 +6,9 @@
     zoom:1;
     padding: 20px 10px 10px
 }
+.sign-main{
+    overflow:hidden;
+}
 .sign-left{
     float: left;
     width: 704px
@@ -215,6 +218,15 @@
     width: 109px;
     height: 33px;
 }
+.register-form li .inputCont input.nextstep{
+    border:0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: url(../images/sign-icons.png) no-repeat -218px 0;
+    width: 109px;
+    height: 33px;
+}
 .register-form li .inputCont label input{
     width: auto;
     float: none;
@@ -418,4 +430,94 @@
     cursor: pointer;
     height: 33px;
     width: 109px
+}
+
+/*找回密码*/
+.step-strip{
+    background:url(../images/step-bg.gif) no-repeat;
+    height:20px;
+    width:504px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.step-strip span{
+    float: left;
+    width:33%;
+    height:20px;
+    text-align: center;
+    line-height:20px;
+    font-weight: bold;
+    color:#666
+}
+.step-strip span.cur{
+    color:#f60
+}
+.step-1{
+    background-position:0 0
+}
+.step-2{
+    background-position:0 -20px
+}
+.step-3{
+    background-position:0 -40px
+}
+
+.sign-main .register-form{
+    padding-left:144px
+}
+
+.find-email{
+    width:480px;
+    margin:0 auto;
+    padding:20px;
+    text-align: center
+}
+.find-email p{
+
+}
+.find-email .emadress{
+    color:#f60;
+    font-weight:bold;
+}
+.find-email .tel{
+    color:#c32f1b;
+}
+.find-email .setsuccess{
+    color:#82be0e;
+    font-size:14px;
+    font-weight:bold;
+    padding-left:36px;
+    height: 36px;
+    line-height: 36px;
+    background:url(../images/icon_sucsess_s.gif) no-repeat 0 0;
+    text-align:left
+}
+.find-email .btn_m{
+    margin:20px 0 20px 180px;
+    float:left;
+    display:inline;
+}
+.register-form li .inputCont .argWrap .btn_m{
+    float:left;
+    display:inline;
+}
+.find-email dl{
+    display: block;
+    padding:10px 50px;
+    text-align: left;
+    clear: both;
+}
+.find-email dl dt{
+    color:#999;
+    font-size:12px;
+    font-weight:normal;
+    line-height: 1.8
+}
+.find-email dl dd{
+    color:#999;
+    font-size:12px;
+    font-weight:normal;
+    line-height: 1.6;
+    background:url(../images/arr.gif) no-repeat 0 5px;
+    padding-left:10px
 }

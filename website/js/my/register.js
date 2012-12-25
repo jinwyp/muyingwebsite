@@ -439,6 +439,78 @@ $(function(){
 
     })
 
+
+    //找回密码
+    $.formValidator.initConfig({
+        theme:"myzj",
+        submitOnce:true,
+        formID:"password-form",
+        onError:function(msg){alert(msg);},
+        submitAfterAjaxPrompt : '数据正在验证，请稍等...'
+    });
+
+    $("#forget-email")
+        .formValidator({
+            onShowFixText:"请填入常用的邮箱，用来找回密码，接受通知等信息",
+            onShow:"请填入常用的邮箱",
+            onFocus:"请填入常用的邮箱",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:3,max:100,onError:"您输入的邮箱长度不正确"
+        })
+        .regexValidator({
+            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            ,onError:"您输入的邮箱格式不正确"
+        });
+
+    $("#forget-code")
+        .formValidator({
+            onShowFixText:"请填入右侧图片中的验证码",
+            onShow:"请填入右侧图片中的验证码",
+            onFocus:"请填入右侧图片中的验证码",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:4,
+            max:4,
+            onError:"填入的验证码不正确"
+        });
+
+    $("#forget-email").selectView();
+
+    $("#new-password")
+        .formValidator({
+            onShowFixText:"请填入6~20个字符，包括字母、数字、特殊符号，区分大小写",
+            onShow:"请填入密码",
+            onFocus:"请填入密码",
+            onCorrect:"密码合法"
+        })
+        .inputValidator({
+            min:6,max:20,
+            empty:{leftEmpty:false,rightEmpty:false,emptyError:"密码两边不能有空符号"},
+            onError:"密码长度限制为6-20位字符"
+        })
+        .passwordValidator({
+            compareID:"new-password-conf"
+        });
+    $("#new-password-conf")
+        .formValidator({
+            onShowFixText:"请再次输入密码保证与您设置的密码相同",
+            onShow:"请再次填入密码",
+            onFocus:"至少1个字符长度",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:1,
+            empty:{leftEmpty:false,rightEmpty:false,emptyError:"重复密码两边不能有空符号"},
+            onError:"重复密码不能为空"
+        })
+        .compareValidator({
+            desID:"new-password",
+            operateor:"=",
+            onError:"您两次填入密码不一致"
+        });
 });
 
 
