@@ -53,7 +53,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px; color:#4d4d4d; text-align: right; }
 .control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
 .text-input input{float:left;border: 1px solid #bababa;}
-.controls span{margin-left:10px;vertical-align: middle;font-size:12px;}
+.controls span{vertical-align: middle;font-size:12px;}
 .controls .font-gray{margin-left:10px;}
 .control-group strong{font-weight: 400;}
 .mod-info .text-tips a{color:#619eb1;}
