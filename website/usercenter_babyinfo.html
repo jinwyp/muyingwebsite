@@ -121,7 +121,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="baby_height"><abbr title="required">*</abbr> 宝宝身高：</label>
                                 <div class="controls text-input">
-                                    <input  id="baby_height" name="baby_height" size="20" type="text" placeholder="请填写您的宝宝身高" />
+                                    <input  id="baby_height" name="baby_height" size="20" type="text" placeholder="请填写您宝宝的身高" />
                                     <div id="baby_height_Tip" class="stickTips"></div>
                                     <span class="font-gray">厘米(cm)</span>
                                 </div>
@@ -130,7 +130,7 @@
                             <div class="control-group">
                                 <label for="baby_weight" class="control-label"><abbr title="required">*</abbr> 宝宝体重：</label>
                                 <div class="controls text-input">
-                                    <input  id="baby_weight" name="baby_weight" size="20" type="text" placeholder="请填写您的宝宝体重" />
+                                    <input  id="baby_weight" name="baby_weight" size="20" type="text" placeholder="请填写您宝宝的体重" />
                                     <div id="baby_weight_Tip" class="stickTips"></div>
                                     <span class="font-gray">千克(kg)</span>
                                 </div>
@@ -156,44 +156,19 @@
                                 <label class="control-label">出生医院：</label>
                                 <div class="controls text-input">
                                     <select id="birthProvince" name="birthProvince"  class="select fl mr10" >
-                                        <option value="0">请选择</option>
-                                        <option value="1">北京</option>
-                                        <option value="2">上海</option>
-                                        <option value="3">天津</option>
-                                        <option value="4">重庆</option>
-                                        <option value="5">河北</option>
-                                        <option value="6">山西</option>
-                                        <option value="7">河南</option>
-                                        <option value="8">辽宁</option>
-                                        <option value="9">吉林</option>
-                                        <option value="10">黑龙江</option>
-                                        <option value="11">内蒙古</option>
-                                        <option value="12">江苏</option>
-                                        <option value="13">山东</option>
-                                        <option value="14">安徽</option>
-                                        <option value="15">浙江</option>
-                                        <option value="16">福建</option>
-                                        <option value="17">湖北</option>
-                                        <option value="18">湖南</option>
-                                        <option value="19">广东</option>
-                                        <option value="20">广西</option>
-                                        <option value="21">江西</option>
-                                        <option value="22">四川</option>
-                                        <option value="23">海南</option>
-                                        <option value="24">贵州</option>
-                                        <option value="25">云南</option>
-                                        <option value="26">西藏</option>
-                                        <option value="27">陕西</option>
-                                        <option value="28">甘肃</option>
-                                        <option value="29">青海</option>
-                                        <option value="30">宁夏</option>
-                                        <option value="31">新疆</option>
-                                        <option value="32">台湾</option>
-                                        <option value="42">香港</option>
-                                        <option value="43">澳门</option>
-                                        <option value="84">钓鱼岛</option>
+                                        <option value="0">请选择地区</option>
+                                        <option value="1">上海市</option>
+                                        <option value="2">浙江省</option>
+                                        <option value="2">江苏省</option>
                                     </select>
-                                    <input id="birthHospital" name="birthHospital" class="fl" size="50" type="text" placeholder="请填写宝宝的出生医院" />
+                                    <select id="birthProvince" name="birthProvince"  class="select fl mr10" >
+                                        <option value="0">请选择医院</option>
+                                        <option value="1">医院1</option>
+                                        <option value="2">医院2</option>
+
+                                        <option value="84">其他医院</option>
+                                    </select>
+                                    <input id="birthHospital" name="birthHospital" class="fl" size="30" type="text" placeholder="请填写宝宝的出生医院" />
                                 </div>
                             </div>
 
