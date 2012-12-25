@@ -55,7 +55,7 @@
 .attrSelect .hd{height:28px;line-height:28px;background:url(../images/hd_sidebar.gif) repeat-x;border-bottom:1px solid #dedede;}
 .attrSelect ul{padding:0 10px 10px;overflow: hidden;}
 .attrSelect ul li{padding-top:10px;width:100%;border-bottom:1px dashed #ccc;overflow: hidden;position: relative;}
-.attrSelect ul li dd{float:left;display:inline-block; padding-right:10px; height:30px; width:120px;}
+.attrSelect ul li dd{float:left;display:inline-block; padding-right:2px; height:30px; width:168px;}
 .attrSelect ul li dl{float:right;width:680px;overflow: hidden;}
 .attrSelect ul li strong{float:left;width:80px;text-align: center;font-weight:700;}
 .attrSelect dd a:hover,.attrSelect dd a.selected{display:inline-block; height:22px;line-height:22px;padding:0 5px;background-color:#ff7800; color:#fff; font-weight:bold;text-decoration:none;border-radius: 4px;}
