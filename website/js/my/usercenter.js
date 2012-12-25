@@ -19,7 +19,7 @@ $(function () {
     $("#realName")
         .formValidator({
             tipID:"nameTip",
-            onShowFixText:"2~6个汉字，只限中文",
+            onShowFixText:"请填入2~6个汉字，只限中文",
             onShowText:"请填入您的真实姓名",
             onShow:"请填入您的真实姓名",
             onCorrect:true
@@ -27,13 +27,13 @@ $(function () {
         .inputValidator({
             min:4,
             max:12,
-            onError:"限2-6个汉字,请重新填写"
+            onError:"只限2~6个汉字，请重新填写"
         })
         .regexValidator({
             isValid:true,
             regExp:"^[\\u4E00-\\u9FA5\\uF900-\\uFA2D]+$",
             //dataType:"string",
-            onError:"格式不正确，只能输入汉字"
+            onError:"格式不正确，请输入2~6个汉字"
         });
 
     $("#userInfo input:radio[name='user_sex']")
