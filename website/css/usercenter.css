@@ -70,7 +70,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     text-align: center;
     vertical-align: middle;}
 .successtip img{ display: inline-block;   vertical-align: middle;}
-
+ .floatTips{ display:block; clear: both; margin-top:6px;height: 20px; overflow: hidden; position: relative;}
 /*账户安全*/
 .safety-form .control-label{width:160px;}
 .suc-title{padding-left:80px; height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0;color:#82be0e;font-weight:700; font-size:22px;line-height:70px;}

@@ -21,6 +21,7 @@ a:hover,.hover{text-decoration:underline;color:#e60000}
 .bd{border:#dedede 1px solid;margin-bottom:10px}
 .hd{padding-left:10px;height:28px;border-bottom:#dedede 1px solid;background:#666 url("../images/hd_sidebar.gif") repeat-x;line-height:28px;font-size:12px;font-weight:700}
 .hd h3{font-weight:700}
+.ml10{margin-left:10px;}
 .mr10{margin-right:10px;}
 /*form*/
 input{border:0 none;vertical-align:middle}

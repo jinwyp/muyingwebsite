@@ -286,6 +286,33 @@ $(function () {
     });
 });
 
+// 邀请好友 验证
+$(function () {
+    $.formValidator.initConfig({
+        theme:"myzj",
+        submitOnce:true,
+        formID:"invitationForm",
+        onError:function (msg) {
+            alert(msg);
+        },
+        submitAfterAjaxPrompt:'数据正在验证，请稍等...'
+    });
+    $("#friendEmail")
+        .formValidator({
+            onShowFixText:"请填入好友的邮箱",
+            onShow:"请填入好友的邮箱",
+            onFocus:"请填入好友的邮箱",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:3,max:100,onError:"邮箱长度限制为3-100位字符"
+        })
+        .regexValidator({
+            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            ,onError:"您输入的邮箱格式不正确"
+        });
+});
+
 $(function () {
 
     $("#submitbutton").click(function(e) {
