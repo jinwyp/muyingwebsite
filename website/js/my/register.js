@@ -451,9 +451,9 @@ $(function(){
 
     $("#forget-email")
         .formValidator({
-            onShowFixText:"请填入常用的邮箱，用来找回密码，接受通知等信息",
-            onShow:"请填入常用的邮箱",
-            onFocus:"请填入常用的邮箱",
+            onShowFixText:"请填入您注册时的邮箱",
+            onShow:"请填入您注册时的邮箱",
+            onFocus:"请填入您注册时的邮箱",
             onCorrect:true
         })
         .inputValidator({
@@ -496,8 +496,8 @@ $(function(){
         });
     $("#new-password-conf")
         .formValidator({
-            onShowFixText:"请再次输入密码保证与您设置的密码相同",
-            onShow:"请再次填入密码",
+            onShowFixText:"请再次输入密码保证与您设置的新密码相同",
+            onShow:"请再次填入密码确认",
             onFocus:"至少1个字符长度",
             onCorrect:true
         })
