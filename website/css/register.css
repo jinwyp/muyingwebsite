@@ -435,35 +435,38 @@
 /*找回密码*/
 .step-strip{
     background:url(../images/step-bg.gif) no-repeat;
-    height:20px;
-    width:504px;
-    margin: 10px auto;
+    height:30px;
+    width:600px;
+    margin: 20px auto 10px;
     overflow: hidden;
 }
 .step-strip span{
     float: left;
     width:33%;
-    height:20px;
+    height:30px;
     text-align: center;
-    line-height:20px;
+    line-height:30px;
     font-weight: bold;
     color:#666
 }
 .step-strip span.cur{
     color:#f60
 }
+.step-strip span.psd{
+    color:#fff
+}
 .step-1{
     background-position:0 0
 }
 .step-2{
-    background-position:0 -20px
+    background-position:0 -30px
 }
 .step-3{
-    background-position:0 -40px
+    background-position:0 -60px
 }
 
 .sign-main .register-form{
-    padding-left:144px
+    padding-left:90px
 }
 
 .find-email{
