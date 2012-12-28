@@ -8,18 +8,19 @@
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/usercenter.css" rel="stylesheet"/>
     <style>
-    #container{position: relative;float:left;}
-    #wrapper  { position: absolute; left: 0; top: 0;width:800px;}
-    #cropper  { position: absolute; right: 0; top: 0; border: 1px solid #ccc;width:300px;height:300px; }
-    #previewContainer { position: absolute; left: 0; top: 60px; }
+    .avatar-wrap{position: relative;float:left;}
+    .avatar-area { position: absolute; left: 0; top: 0;width:800px;}
+    #cropper{ position: absolute; right: 0; top: 40px; border: 1px solid #ccc;width:300px;height:300px;background: url(images/usercenter/avatar_default.gif) no-repeat;}
+    #previewContainer { position: absolute; left: 0; top: 40px; }
     .preview { border: 1px solid #ccc; }
-    #selectBtn { position: absolute; left: 0; top: 0; width: 119px; height: 27px;  background: url(images/select.png); }
-    #saveBtn { position: absolute; left: 150px; top: 0; width: 67px; height: 27px; background: url(images/save.png); }
-    #preview180{width:180px;height:180px;}
-    #preview100{width:100px;height:100px;}
-    #preview50{width:50px;height:50px;}
-    #rotateLeftBtn { position: absolute; right: 180px; top: 315px;width: 100px; height: 22px; padding-left: 25px; padding-top: 2px;background: url(images/left.png) no-repeat; }
-    #rotateRightBtn { position: absolute; right:0; top: 315px; width: 50px; height: 22px;padding-right: 25px; padding-top: 2px; background: url(images/right.png) no-repeat right;}
+    .btn-area{ position: absolute; left:500px; top: 0; width:300px;}
+    .btn-area #selectBtn {float:left;width: 101px; height: 30px; background: url(images/usercenter/btn_avatar.gif) no-repeat 0 0; }
+    .btn-area .btn_m_h{float:left;margin-left:20px;display: inline;}
+    #preview180{width:180px;height:180px;background: url(images/usercenter/avatar_180x180.gif) no-repeat;}
+    #preview100{width:100px;height:100px;background: url(images/usercenter/avatar_100x100.gif) no-repeat;}
+    #preview50{width:50px;height:50px;background: url(images/usercenter/avatar_50x50.gif) no-repeat;}
+    #rotateLeftBtn { position: absolute; right: 200px; top: 350px;width: 50px; height: 26px; padding-left: 34px; padding-top: 2px;background: url(images/usercenter/btn_avatar.gif) no-repeat 0 -30px; }
+    #rotateRightBtn { position: absolute; right:20px; top: 350px; width: 50px; height: 26px;padding-right: 30px; padding-top: 2px; background: url(images/usercenter/btn_avatar.gif) no-repeat right -30px;;}
     </style>
     <script src="js/head.min.js"></script>
 </head>
@@ -77,17 +78,18 @@
             <div class="mod-hd"><h3>修改头像</h3></div>
             <div class="mod-bd" style="height:400px;">
                 <div class="mod-content avatar-wrap">
-                    <div id="container">
-                        <a id="selectBtn" href="javascript:void(0);" onclick="document.getElementById('input').click();"></a>
-                        <a id="saveBtn" href="javascript:void(0);" onclick="saveImage();"></a>
+                        <div class="btn-area">
+                            <a id="selectBtn" href="javascript:void(0);" onclick="document.getElementById('input').click();"></a>
+                            <span class="btn_m btn_m_h"><a href="javascript:void(0);" onclick="saveImage();"  id="saveBtn">保存</a></span>
+                        </div>
+
                         <input type="file" id="input" size="10" style="visibility:hidden;" onchange="selectImage(this.files)" />
 
-                        <div id="wrapper">
-
+                        <div class="avatar-area">
                             <div id="cropper"></div>
                             <a id="rotateLeftBtn" href="javascript:void(0);" onclick="rotateImage(event);">向左旋转</a>
                             <a id="rotateRightBtn" href="javascript:void(0);" onclick="rotateImage(event);">向右旋转</a>
-                            <span id="status" style="position:absolute;left:350px;top:10px;width:100px;"></span>
+                            <span id="status" style="position:absolute;left:640px;top:180px;width:100px;"></span>
 
                             <div id="previewContainer">
                                 <div id="preview180"  class="preview"></div>
@@ -102,10 +104,8 @@
 
                             </div>
                         </div>
-                    </div>
-
-
                 </div>
+
             </div>
         </div>
     </div>
