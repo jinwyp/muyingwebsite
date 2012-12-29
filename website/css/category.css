@@ -110,5 +110,5 @@
 
 /*search*/
 .search-result .title{padding:5px 0;font-weight:700;font-size:14px;text-align: center;}
-.search-result .hd strong{color: #e60000;}
+.search-result .hd strong{margin-right:10px;color: #e60000;}
 
