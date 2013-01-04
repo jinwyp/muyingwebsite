@@ -11,14 +11,14 @@
     .avatar-wrap{position: relative;float:left;}
     .avatar-area { position: absolute; left: 0; top: 0;width:800px;}
     #cropper{ position: absolute; right: 0; top: 40px; border: 1px solid #ccc;width:300px;height:300px;background: url(images/usercenter/avatar_default.gif) no-repeat;}
-    #previewContainer { position: absolute; left: 0; top: 40px; }
+    #previewContainer { position: absolute; left: 0; top: 0px;width:460px;height:380px; border-right:1px solid #e0e0e0;}
     .preview { border: 1px solid #ccc; }
     .btn-area{ position: absolute; left:500px; top: 0; width:300px;}
     .btn-area #selectBtn {float:left;width: 101px; height: 30px; background: url(images/usercenter/btn_avatar.gif) no-repeat 0 0; }
     .btn-area .btn_m_h{float:left;margin-left:20px;display: inline;}
-    #preview120{width:120px;height:120px;background: url(images/usercenter/avatar_180x180.gif) no-repeat;}
-    #preview48{width:48px;height:48px;background: url(images/usercenter/avatar_100x100.gif) no-repeat;}
-    #preview32{width:32px;height:32px;background: url(images/usercenter/avatar_50x50.gif) no-repeat;}
+    #preview120{width:120px;height:120px;background: url(images/usercenter/avatar_120x120.gif) no-repeat;}
+    #preview48{width:48px;height:48px;background: url(images/usercenter/avatar_48x48.gif) no-repeat;}
+    #preview32{width:32px;height:32px;background: url(images/usercenter/avatar_32x32.gif) no-repeat;}
     #rotateLeftBtn { position: absolute; right: 200px; top: 350px;width: 50px; height: 26px; padding-left: 34px; padding-top: 2px;background: url(images/usercenter/btn_avatar.gif) no-repeat 0 -30px; }
     #rotateRightBtn { position: absolute; right:20px; top: 350px; width: 50px; height: 26px;padding-right: 30px; padding-top: 2px; background: url(images/usercenter/btn_avatar.gif) no-repeat right -30px;;}
     </style>
@@ -31,9 +31,9 @@
         {
             cropper = new ImageCropper(300, 300, 180, 180);
             cropper.setCanvas("cropper");
-            cropper.addPreview("preview180");
-            cropper.addPreview("preview100");
-            cropper.addPreview("preview50");
+            cropper.addPreview("preview120");
+            cropper.addPreview("preview48");
+            cropper.addPreview("preview32");
 
             if(!cropper.isAvaiable())
             {
@@ -161,16 +161,19 @@
 
                             <div id="previewContainer">
                                 <canvas id="preview120" class="preview"></canvas>
-                                <span style="display:block;width:100%;padding-top:5px;text-align:center;">120x120像素</span>
+                                <span style="position:absolute;left:0px;top:128px;width:120px;text-align:center;">120x120</span>
 
 
-                                <canvas id="preview48" style="position:absolute;left:210px;top:0px;" class="preview"></canvas>
-                                <span style="position:absolute;left:210px;top:110px;width:100px;text-align:center;">48x48像素</span>
+                                <canvas id="preview48" style="position:absolute;left:160px;top:0px;" class="preview"></canvas>
+                                <span style="position:absolute;left:162px;top:54px;width:48px;text-align:center;">48x48</span>
 
-                                <canvas id="preview32"  style="position:absolute;left:340px;top:0px;" class="preview"></canvas>
-                                <span style="position:absolute;left:330px;top:60px;width:70px;text-align:center;">32x32像素</span>
-
+                                <canvas id="preview32"  style="position:absolute;left:248px;top:0px;" class="preview"></canvas>
+                                <span style="position:absolute;left:250px;top:38px;width:32px;text-align:center;">32x32</span>
+                                <div style="position: absolute;top:200px;">
+                                    您上传的头像会自动生成三种尺寸,请注意中小尺寸的头像是否清晰
+                                </div>
                             </div>
+
                         </div>
                 </div>
 

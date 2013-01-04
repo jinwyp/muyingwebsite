@@ -6,7 +6,7 @@
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/base.css" rel="stylesheet" />
     <link href="css/usercenter.css" rel="stylesheet" />
-
+    <script type="text/javascript" src="js/head.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -67,175 +67,103 @@
                 <li><a href="#" class="">已过期</a></li>
             </ul>
         </div>
-    <div class="mod-content status-table-on">
-        <table class="wfc_table" cellpadding="0" cellspacing="0">
+    <div class="mod-content show">
+        <table class="table table-enable">
             <thead>
             <tr>
-                <th width="16%">优惠券名称</th>
+                <th width="20%">优惠券名称</th>
                 <th width="20%">有效期</th>
                 <th width="50%">备注</th>
-                <th width="12%">状态</th>
+                <th width="8%">状态</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>
-                    仔力奇鲨鱼肝油软胶囊立减20
-                </td>
-                <td >
-                    2012-08-12至2012-08-15
-                </td>
-                <td >
-                    购指定消费品满100.00元可用,购指定消费品满100.00元可用
-                </td>
-                <td>
-                    <a href="#" class="font_color_use">可使用</a>
-                
-            </td></tr>
-
-            <tr>
-                <td class=" font_color_expired">
-                    全场纸尿裤满200立减20
-                </td>
-                <td class=" font_color_expired">
-                    2012-08-12至2012-08-15
-                </td>
-                <td class=" font_color_expired">
-                    购纸尿裤满200.00元可用
-                </td>
-                <td class="">
-                    <a href="#" class="font_color_use">可使用</a>
-                </td>
+                <td>仔力奇鲨鱼肝油软胶囊立减20</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购指定消费品满100.00元可用,购指定消费品满100.00元可用</td>
+                <td class="status">可使用</td>
             </tr>
             <tr>
-                <td class="font_color_expired">
-                    全场奶粉满399立减40
-                </td>
-                <td class="font_color_expired">
-                    2012-0712至2012-07-15
-                </td>
-                <td class="font_color_expired">
-                    购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用
-                </td>
-                <td class="">
-                    <a href="#" class="font_color_use">可使用</a>
-
-                </td>
+                <td>全场纸尿裤满200立减20</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购纸尿裤满200.00元可用</td>
+                <td class="status">可使用</td>
             </tr>
-            
-        </tbody></table>
+            <tr>
+                <td>全场奶粉满399立减40</td>
+                <td>2012-0712至2012-07-15</td>
+                <td>购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用</td>
+                <td class="status">可使用</td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
 
-
-        <table class="wfc_table" cellpadding="0" cellspacing="0">
+        <div class="mod-content hide">
+        <table class="table table-beenUsed">
           <thead>
             <tr>
-                <th width="16%">优惠券名称</th>
+                <th width="20%">优惠券名称</th>
                 <th width="16%">有效期</th>
                 <th width="44%">备注</th>
                 <th width="12%">对应订单号</th>
-                <th width="12%">状态</th>
+                <th width="8%">状态</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>
-                    仔力奇鲨鱼肝油软胶囊立减20_1
-                </td>
-                <td >
-                    2012-08-12至2012-08-15
-                </td>
-                <td>
-                    购指定消费品满100.00元可用,购指定消费品满100.00元可用_1
-                </td>
+                <td>仔力奇鲨鱼肝油软胶囊立减20_1</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购指定消费品满100.00元可用,购指定消费品满100.00元可用_1</td>
                 <td><a href ="#">123546789123</a></td>
-                <td class="">
-                    <a href="#" class="font_color_expired">已使用</a>
-                </td>
+                <td class="status">已使用</td>
             </tr>
             <tr>
-                <td class=" font_color_expired">
-                    全场纸尿裤满200立减20_1
-                </td>
-                <td class=" font_color_expired">
-                    2012-08-12至2012-08-15
-                </td>
-                <td class=" font_color_expired">
-                    购纸尿裤满200.00元可用_1
-                </td>
+                <td>全场纸尿裤满200立减20_1</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购纸尿裤满200.00元可用_1</td>
                 <td><a href ="#">123546789123</a></td>
-                <td class=" wfc_status">
-                    <a href="#" class="font_color_expired">已使用</a>
-                </td>
+                <td class="status">已使用</td>
             </tr>
             <tr>
-                <td class=" font_color_expired">
-                    全场奶粉满399立减40_1
-                </td>
-                <td class=" font_color_expired">
-                    2012-0712至2012-07-15
-                </td>
-                <td class=" font_color_expired">
-                    购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用_1
-                </td>
+                <td>全场奶粉满399立减40_1</td>
+                <td>2012-0712至2012-07-15</td>
+                <td>购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用_1</td>
                 <td><a href ="#">123546789123</a></td>
-                <td class=" wfc_status">
-                    <a href="#" class="font_color_expired">可过期</a>
-                </td>
+                <td class="status">已使用</td>
             </tr>
             </tbody>
         </table>
-
-        <table class="wfc_table" cellpadding="0" cellspacing="0">
+</div>
+        <div class="mod-content hide">
+        <table class="table table-expired">
         <thead>
             <tr>
-               <th width="16%">优惠券名称</th>
+               <th width="20%">优惠券名称</th>
                 <th width="20%">有效期</th>
                 <th width="50%">备注</th>
-                <th width="12%">状态</th>
+                <th width="8%">状态</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td class=" td_top_border">
-                    仔力奇鲨鱼肝油软胶囊立减20_2
-                </td>
-                <td class=" td_top_border">
-                    2012-08-12至2012-08-15
-                </td>
-                <td class=" td_top_border">
-                    购指定消费品满100.00元可用,购指定消费品满100.00元可用_2
-                </td>          
-                <td class=" wfc_status td_top_border">
-                    <a href="#" class="font_color_expired">已过期</a>
-                </td>
+                <td>仔力奇鲨鱼肝油软胶囊立减20_2</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购指定消费品满100.00元可用,购指定消费品满100.00元可用_2</td>
+                <td class="status">已过期</td>
             </tr>
             <tr>
-                <td class=" font_color_expired">
-                    全场纸尿裤满200立减20_2
-                </td>
-                <td class=" font_color_expired">
-                    2012-08-12至2012-08-15
-                </td>
-                <td class=" font_color_expired">
-                    购纸尿裤满200.00元可用_2
-                </td>             
-                <td class=" wfc_status">
-                    <a href="#" class="font_color_expired">已过期</a>
-                </td>
+                <td>全场纸尿裤满200立减20_2</td>
+                <td>2012-08-12至2012-08-15</td>
+                <td>购纸尿裤满200.00元可用_2</td>
+                <td class="status">已过期</td>
             </tr>
             <tr>
-                <td class=" font_color_expired">
-                    全场奶粉满399立减40_2
-                </td>
-                <td class=" font_color_expired">
-                    2012-0712至2012-07-15
-                </td>
-                <td class=" font_color_expired">
-                    购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用_2
-                </td>             
-                <td class="">
-                    <a href="#" class="font_color_expired">已过期</a>
-                </td>
+                <td>全场奶粉满399立减40_2</td>
+                <td>2012-0712至2012-07-15</td>
+                <td>购奶粉满399.00元可用,购奶粉满399.00元可用,购奶粉满399.00元可用_2</td>
+                <td class="status">已过期</td>
             </tr>
             </tbody>
         </table>
@@ -245,18 +173,24 @@
     </div>
 </div><!--wrapper-->
 </body>
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript">
-    (function ($) {
-        $("#ConMain .wfc_table:first,#ConMain .wfc_Paging:first").css("display", "block");
-        $("#ConMain ul li").click(function () {
-            var wfc_table = $("#ConMain .wfc_table");
-            var curt_index = $(this).index("#ConMain ul li a");
-            $("#ConMain ul li").removeClass("status-on");
-            $(this).addClass("status-on");
-            wfc_table.css("display", "none");
-            wfc_table.eq(curt_index).css("display", "block");
-        });
-    })(jQuery);
+    head.js("js/jquery-1.7.2.min.js"
+    );
+</script>
+
+<script type="text/javascript">
+    head.ready(function () {
+        $("#ConMain .tab-menu li").delegate('a', 'click', function (e) {
+
+            $("#ConMain .tab-menu li").removeClass("status-on");
+            $(e.target).parent().addClass("status-on");
+
+            var wfc_table = $("#ConMain .mod-content");
+            var curt_index = $(e.target).parent().index("#ConMain .tab-menu li");
+            wfc_table.removeClass("show").addClass("hide");
+            wfc_table.eq(curt_index).addClass("show");
+        })
+    });
+
 </script>
 </html>

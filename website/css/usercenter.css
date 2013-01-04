@@ -19,19 +19,13 @@
 .tab-menu .status-on{border:1px solid #ffda71 ;border-bottom:1px solid #fff;font-weight:700;}
 .tab-menu .status-on a{color:#ff9900;}
 
-.info-list h4{padding:0 10px;margin-bottom:10px;height:30px;line-height:30px;background-color: #f8f8f8;}
-.info-list dl{overflow:hidden;margin-bottom:10px;border-bottom:1px solid #f8f8f8;font-size:14px;zoom:1;}
-.info-list dt{float:left;}
-.info-list dd{float:left; padding: 0 10px; width: 120px; height: 30px; line-height: 30px;}
 /*表格*/
-.mod-content .wfc_table{display:none;overflow: hidden;margin-bottom:10px;width:100%;}
-.mod-content .wfc_table th{padding:5px; border-bottom:1px #f0f0f0 solid; color:#666; font-weight:700;}
-.mod-content .wfc_table td{padding:5px; border-bottom:1px dotted #e0e0e0; vertical-align: top;  word-wrap: break-word; word-break: normal;}
-.td_top_border{border-top:1px #fafafa solid;}
-.font_color_expired{color:#696969; text-decoration:none;}
-.font_color_use{color:#90B34D; text-decoration:none;}
-.wfc_table select{border:1px #626262 solid;background-color:#fff; color:#626262;}
-.wfc_table select option{ border:none; background-color:#fff; color:#000;}
+.mod-content .table th{padding:5px; background-color: #f8f8f8;}
+.mod-content .table td{padding:5px; border-bottom:1px solid #f8f8f8; vertical-align: top;  word-wrap: break-word; word-break: normal;}
+.info-list h4{padding:5px;background-color: #f8f8f8;font-size:12px;}
+.info-list dl{overflow:hidden;border-bottom:1px solid #f8f8f8;zoom:1;}
+.info-list dt{float:left;}
+.info-list dd{float:left; padding: 5px; width: 120px;}
 /*表单*/
 legend{display: none;}
 select{ position: relative;padding:4px 6px;width: 120px; border: 1px solid #bababa;  border-radius: 3px 3px 3px 3px; background-color: #fff; vertical-align: middle;font-size:14px; line-height: 20px; }
@@ -75,13 +69,17 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
     vertical-align: middle;}
 .successtip img{ display: inline-block;   vertical-align: middle;}
  .floatTips{ display:block; clear: both; margin-top:6px;height: 20px; overflow: hidden; position: relative;}
+ /*优惠券*/
+.table-enable .status {color: #7fbc41;}
+.table-beenUsed .status,.table-expired .status {color: #e60000;}
+
 /*账户安全*/
 .safety-form .control-label{width:160px;}
 .suc-title{padding-left:80px; height:70px;background: url(../images/icon_sucsess.gif) no-repeat 0 0;color:#82be0e;font-weight:700; font-size:22px;line-height:70px;}
 /*babyinfo*/
-.baby-list dl{overflow:hidden;margin-bottom:20px;background-color: #f8f8f8;font-size:14px;zoom:1;}
+.baby-list dl{margin-bottom:20px;overflow:hidden;background-color: #f8f8f8;zoom:1;}
 .baby-list dt{padding:0 20px;height:28px;background-color: #e6f5d0;line-height: 28px;}
-.baby-list dd{float:left; padding: 0 10px; width: 120px; height: 30px; line-height: 30px;}
+.baby-list dd{float:left; padding: 5px; width: 120px; }
 .baby-list .baby-name{padding-left:20px;width:80px;}
 .baby-list .baby-sex{width:80px;}
 .baby-list dd.edit-baby{font-size:12px;cursor: pointer;}
