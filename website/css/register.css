@@ -464,7 +464,7 @@
 }
 
 .find-email{
-    width:480px;
+    width:560px;
     margin:0 auto;
     padding:20px;
     text-align: center
@@ -483,6 +483,7 @@
     color:#82be0e;
     font-size:14px;
     font-weight:bold;
+    margin-left: 70px;
     padding-left:38px;
     height: 36px;
     line-height: 36px;
@@ -490,7 +491,7 @@
     text-align:left
 }
 .find-email .btn_m{
-    margin:20px 0 20px 180px;
+    margin:20px 0 20px 220px;
     float:left;
     display:inline;
 }
@@ -500,6 +501,7 @@
 }
 .find-email dl{
     display: block;
+    margin-left: 90px;
     padding:10px 50px;
     text-align: left;
     clear: both;
