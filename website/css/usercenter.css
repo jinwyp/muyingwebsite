@@ -100,3 +100,30 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 /*invitation*/
 .invitation-list .status{float:right;}
+
+
+/* 下拉邮箱列表 */
+.sliderBox{
+    position: absolute;
+    border: 1px solid #999;
+    border-top: 0;
+    background: #fff;
+    padding:0;
+    display: none
+}
+.sliderBox li{
+    display: block;
+    line-height: 22px;
+    font-size: 12px;
+    font-family: verdana;
+    padding:0px 10px;
+    cursor: pointer
+}
+.sliderBox li:hover{
+    background: #FF9900;
+    color:#f6f6f6;
+}
+.sliderBox li.seleceted{
+    background: #EE7407;
+    color:#f6f6f6;
+}
