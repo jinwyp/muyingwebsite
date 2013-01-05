@@ -1015,7 +1015,7 @@ $.extend(Datepicker.prototype, {
 						width: inst.dpDiv.outerWidth(), height: inst.dpDiv.outerHeight()});
 				}
 			};
-			inst.dpDiv.zIndex($(input).zIndex()+1);
+			inst.dpDiv.zIndex(/*$(input).zIndex()+1*/9999);
 			$.datepicker._datepickerShowing = true;
 
 			// DEPRECATED: after BC for 1.8.x $.effects[ showAnim ] is not needed
