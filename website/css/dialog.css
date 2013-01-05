@@ -1,0 +1,335 @@
+/*dialog*/
+/* 默认样式 */
+#dialog{
+    position: absolute;
+    left:50%;
+    z-index: 999;
+}
+.top-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1;
+    position: relative;
+}
+.con-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1
+}
+.btm-wrap{
+    clear:both;
+    float: left;
+    margin-top:-8px;
+    width:100%;
+    overflow: hidden;
+    zoom:1;
+    position: relative;
+    z-index: 1;
+}
+.ctl{
+    width:34px;
+    height:33px;
+    float: left;
+    background:url(../images/dialog/ctl.png) no-repeat 0 0
+}
+.ctm{
+    height: 33px;
+    float: left;
+    background:url(../images/dialog/ctm.png) repeat-x 0 0
+}
+.ctr{
+    width:38px;
+    height:33px;
+    float: left;
+    background:url(../images/dialog/ctr.png) no-repeat 0 0
+}
+.cml{
+    width:34px;
+    float: left;
+    background:url(../images/dialog/cml.png) repeat-y 0 0;
+    position: relative;
+    z-index: 0;
+}
+.cmr{
+    width:38px;
+    float: right;
+    background:url(../images/dialog/cmr.png) repeat-y 0 0;
+    position: relative;
+    z-index: 0;
+}
+.cbl{
+    width:34px;
+    height:40px;
+    float: left;
+    background:url(../images/dialog/cbl.png) no-repeat 0 0
+}
+.cbm{
+    height:40px;
+    float: left;
+    background:url(../images/dialog/cbm.png) repeat-x 0 0
+}
+.cbr{
+    width:38px;
+    height:40px;
+    float: left;
+    background:url(../images/dialog/cbr.png) no-repeat 0 0
+}
+.top-wrap .close{
+    width:31px;
+    height:31px;
+    position: absolute;
+    right: 0;
+    top:0
+}
+.top-wrap .close a{
+    display: block;
+    height:31px;
+    text-indent:-999em;
+    overflow: hidden;
+    background:url(../images/dialog/dialog_close.png) no-repeat 0 0
+}
+.dialog-content{
+    min-height:100px;
+    width:300px;
+    background:#fffbe1;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.dialog-content h2{
+    display: block;
+    height: 20px;
+    line-height:1.5;
+    top:-20px;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    color:#ff7800;
+    font-size:14px;
+    text-align: center
+}
+.dialog-content .checksubs{
+    overflow: hidden;
+    zoom: 1;
+    padding:10px 0 0 0
+}
+.dialog-content .checksubs label{
+    float: left;
+    display: inline;
+    padding:0 10px 0 15px;
+    vertical-align: middle;
+}
+.dialog-content .checksubs label input{
+    float: left;
+    vertical-align: middle;
+}
+.dialog-content .getdate{
+    clear: both;
+    padding:15px 0 0 35px
+}
+.dialog-content .getdate label{
+    color:#ff9900;
+    font-size: 12px;
+    font-weight: bold;
+}
+.dialog-content .getdate .bbtips{
+    color:#999
+}
+.dialog-content .getdate input{
+    border:1px solid #ff9900;
+    width: 100px;
+    padding:2px 5px;
+    border-radius: 3px;
+    cursor: text;
+}
+.dialog-content .subbtn{
+    padding:20px 0 0;
+    text-align:center;
+}
+.dialog-content .subbtn input{
+    width:80px;
+    height:30px;
+    border:0;
+    padding:0;
+    background: url(../images/dialog/dialog_btn.png);
+    cursor: pointer;
+    color:#fff;
+    display: block;
+    text-align: center;
+    margin:0 auto
+}
+.gost-content{
+    padding: 10px;
+    overflow: hidden;
+    zoom:1
+}
+
+/* 自定义样式 */
+.login-dialog{
+    position: absolute;
+    left:50%;
+    z-index: 999;
+}
+.login-dialog .top-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1;
+    position: relative;
+}
+.login-dialog .con-wrap{
+    clear:both;
+    overflow: hidden;
+    zoom:1
+}
+.login-dialog .btm-wrap{
+    clear:both;
+    float: left;
+    margin-top:0;
+    width:100%;
+    overflow: hidden;
+    zoom:1;
+    position: relative;
+    z-index: 1;
+}
+.login-dialog .ctl{
+    width:8px;
+    height:8px;
+    float: left;
+    background:#333
+}
+.login-dialog .ctm{
+    height: 8px;
+    float: left;
+    background:#333
+}
+.login-dialog .ctr{
+    width:8px;
+    height:8px;
+    float: left;
+    background:#333
+}
+.login-dialog .cml{
+    width:8px;
+    float: left;
+    background:#333;
+    position: relative;
+    z-index: 0;
+}
+.login-dialog .cmr{
+    width:8px;
+    float: right;
+    background:#333;
+    position: relative;
+    z-index: 0;
+}
+.login-dialog .cbl{
+    width:8px;
+    height:8px;
+    float: left;
+    background:#333
+}
+.login-dialog .cbm{
+    height:8px;
+    float: left;
+    background:#333
+}
+.login-dialog .cbr{
+    width:8px;
+    height:8px;
+    float: left;
+    background:#333
+}
+
+.login-dialog .dialog-content{
+    min-height:100px;
+    width:300px;
+    background:#fffbe1;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.login-dialog .dialog-content h2{
+    display: block;
+    height: 20px;
+    line-height:1.5;
+    top:-20px;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    color:#ff7800;
+    font-size:14px;
+    text-align: center
+}
+.login-dialog .dialog-content .checksubs{
+    overflow: hidden;
+    zoom: 1;
+    padding:10px 0 0 0
+}
+.login-dialog .dialog-content .checksubs label{
+    float: left;
+    display: inline;
+    padding:0 10px 0 15px;
+    vertical-align: middle;
+}
+.login-dialog .dialog-content .checksubs label input{
+    float: left;
+    vertical-align: middle;
+}
+.login-dialog .dialog-content .getdate{
+    clear: both;
+    padding:15px 0 0 35px
+}
+.login-dialog .dialog-content .getdate label{
+    color:#ff9900;
+    font-size: 12px;
+    font-weight: bold;
+}
+.login-dialog .dialog-content .getdate .bbtips{
+    color:#999
+}
+.login-dialog .dialog-content .getdate input{
+    border:1px solid #ff9900;
+    width: 100px;
+    padding:2px 5px;
+    border-radius: 3px;
+    cursor: text;
+}
+.login-dialog .dialog-content .subbtn{
+    padding:20px 0 0;
+    text-align:center;
+}
+.login-dialog .dialog-content .subbtn input{
+    width:80px;
+    height:30px;
+    border:0;
+    padding:0;
+    background: url(../images/dialog/dialog_btn.png);
+    cursor: pointer;
+    color:#fff;
+    display: block;
+    text-align: center;
+    margin:0 auto
+}
+.login-dialog .title{
+    height:36px;
+    display: block;
+    overflow: hidden;
+    zoom:1;
+    position: relative;
+    padding: 0 10px;
+    line-height: 36px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    background: url(../images/logindl_bg.gif) repeat-x 0 -159px;
+}
+.login-dialog .title .close{
+    width:24px;
+    height:24px;
+    position: absolute;
+    right: 10px;
+    top:5px;
+    text-indent:-999em;
+    overflow: hidden;
+    background:url(../images/logindl_bg.gif) no-repeat 0 -30px
+}
