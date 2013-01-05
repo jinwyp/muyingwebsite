@@ -106,8 +106,13 @@
 }
 .index-dialog .btm-wrap{
     clear:both;
+    float: left;
+    margin-top:-8px;
+    width:100%;
     overflow: hidden;
-    zoom:1
+    zoom:1;
+    position: relative;
+    z-index: 1;
 }
 .index-dialog .ctl{
     width:34px;
@@ -129,12 +134,16 @@
 .index-dialog .cml{
     width:34px;
     float: left;
-    background:url(../images/dialog/cml.png) repeat-y 0 0
+    background:url(../images/dialog/cml.png) repeat-y 0 0;
+    position: relative;
+    z-index: 0;
 }
 .index-dialog .cmr{
     width:38px;
     float: right;
-    background:url(../images/dialog/cmr.png) repeat-y 0 0
+    background:url(../images/dialog/cmr.png) repeat-y 0 0;
+    position: relative;
+    z-index: 0;
 }
 .index-dialog .cbl{
     width:34px;
@@ -173,6 +182,7 @@
     background:#fffbe1;
     float: left;
     position: relative;
+    z-index: 2;
 }
 .index-dialog .content h2{
     display: block;
