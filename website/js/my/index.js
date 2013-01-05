@@ -162,27 +162,27 @@ var Every_Day_Timer = function () {
      dialog.each(function(){
          var $this = $(this);
          var showclose = $this.attr("showclose");
-         var content = $(".content",this);
-         var topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div><div class="close"><a href="#" class="pngfix">关闭</a></div>            </div>')
+         var content = $this.find(".content");
+         var topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div><div class="close"><a href="#" class="pngfix">关闭</a></div></div>');
          var btncon = $('<div class="btm-wrap"><div class="pngfix cbl"></div><div class="pngfix fixwidth cbm"></div><div class="pngfix cbr"></div></div>');
          content.wrap('div.con-wrap').before(topcon).after(btncon);
          content.before('<div class="pngfix fixheight cml"></div>').after('<div class="pngfix fixheight cmr"></div>');
          if(!showclose){
-             $(".close",this).hide()
+             $this.find(".close").hide()
          }
          var cw = content.width(),
              ch = content.height(),
-             clw = $('.ctl',this).width(),
-             crw = $('.ctr',this).width(),
+             clw = $this.find('.ctl').width(),
+             crw = $this.find('.ctr').width(),
              dw = $this.width(clw+cw+crw),
              dh = $this.height();
-         $(".fixwidth",this).width(cw);
-         $(".fixheight",this).height(ch);
-         $(".pngfix",this).pngfix();
+         $this.find(".fixwidth").width(cw);
+         $this.find(".fixheight").height(ch-8);
+         $this.find(".pngfix").pngfix();
          $this.css({
              "margin-left":-dw.width()/2
-         }).animate({top:($(window).height()-dh)/2-50},300);
-         $(".close",this).click(function(){
+         }).animate({top:0},25,function(){$this.animate({top:($(window).height()-dh)/2-50},600)});
+         $this.find(".close").click(function(){
              $this.hide();
              return false
          });
