@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>购物车</title>
+    <link rel="shortcut icon" href="http://www.muyingzhijia.com/Template/afd5/images/myzj.ico"/>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/shopcart.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/head.min.js"></script>
+</head>
+<body>
+<div class="toolbar">
+    <div class="wrapper">
+        <ul class="toolbar-nav">
+            <li><span>您好，欢迎来到母婴之家！</span></li>
+            <li id="loginBtn"><a href="#" target="_self" class="login">[&nbsp;登录&nbsp;]</a>|</li>
+            <li id="regBtn"><a href="#" target="_self">免费注册</a>|</li>
+            <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Order.aspx" target="_self">我的订单</a>|</li>
+            <li><a href="${vh_website_url}/Help/Help_index.aspx" target="_self">帮助中心</a>|</li>
+            <li id="myTitle" class="my-title"><a href="">我的母婴之家</a>
+                <ul id="myContent" class="hide my-content">
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Order.aspx?ctlid=6"
+                           target="_self">我的订单</a></li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Consult.aspx?ctlid=7" target="_self">我的提问</a>
+                    </li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_Discussion.aspx?ctlid=8"
+                           target="_self">我的评论</a></li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_favorites.aspx?ctlid=9" target="_self">我的收藏</a>
+                    </li>
+                    <li><a href="${vh_website_url}/CustomerCenter/CustomerCenter_MyScores.aspx?ctlid=10" target="_self">我的积分</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="my-weibo">
+            <iframe width="100%" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"
+                    scrolling="no" border="0"
+                    src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=100%&height=24&uid=1960499323&style=3&btn=light&dpc=1">
+            </iframe>
+        </div>
+    </div>
+</div>
+<!--toolbar end-->
+
+
+<div class="wrapper header">
+    <div class="logo">
+        <h1>
+            <a title="母婴之家" href="http://www.muyingzhijia.com/" target="_blank"></a>
+        </h1>
+    </div>
+
+    <div class="flow-step flow-step-no1">
+        <ol>
+            <li class="step-1">我的购物车</li>
+            <li class="step-2">填写核对订单</li>
+            <li class="step-3">成功提交订单</li>
+        </ol>
+    </div>
+</div>
+<!--header end-->
+
+<div class="wrapper wrap-cart">
+    <div class="title"><span class="cart-hd-left"></span><span class="cart-hd-right"></span>
+
+        <h2>我的购物车</h2></div>
+
+    <div class="mod-gift">
+        <div class="hd">赠品</div>
+        <div class="bd">赠品区域</div>
+    </div>
+
+    <div class="mod-cart">
+        <div class="bd">
+            <table class="table-cart">
+                <thead>
+                <tr>
+                    <th class="cart-name">商品名称</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>幸运星</th>
+                    <th class="cart-act">操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="new">
+                    <td>
+                        <div class="wrap-goods">
+                            <span class="img">
+                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="80px" height="80px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
+                            </span>
+                            <div class="goods-info">
+                                <p class="name">
+                                    <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
+                                </p>
+                                <p class="gifts">
+                                    <span class="hot">[赠品]</span>
+                                    <a onclick="" href="javascript:;">ASUS 华硕 UT220 收线蓝光光学鼠标 黑色1000 dpi 蓝光光学技术 人体工学 收线磁扣式设计</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <del>¥99.00</del>
+                        <strong>¥99.00</strong>
+                    </td>
+
+                    <td>
+                        <span class="wrap-input">
+                            <span class="reduce" onclick="">-</span>
+                            <span class="input">
+                                <input id="" type="text" value="1">
+                            </span>
+                            <span class="add" onclick="">+</span>
+                        </span>
+                    </td>
+
+                    <td class="wrap-subtotal">
+                        <strong class="font-red">¥99.00</strong>
+                    </td>
+
+                    <td>
+                        99
+                    </td>
+
+                    <td class="cart-act">
+                        <a  onclick="" href="javascript:;">删除</a>
+                    </td>
+                </tr>
+
+                <tr class="new">
+                    <td>
+                        <div class="wrap-goods">
+                            <span class="img">
+                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="80px" height="80px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
+                            </span>
+                            <div class="goods-info">
+                                <p class="name">
+                                    <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
+                                </p>
+                                <p class="gifts">
+                                    <span class="hot">[赠品]</span>
+                                    <a onclick="" href="javascript:;">ASUS 华硕 UT220 收线蓝光光学鼠标 黑色1000 dpi 蓝光光学技术 人体工学 收线磁扣式设计</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <del>¥99.00</del>
+                        <strong>¥99.00</strong>
+                    </td>
+
+                    <td>
+                        <span class="wrap-input">
+                            <span class="reduce" onclick="">-</span>
+                            <span class="input">
+                                <input id="" type="text" value="1">
+                            </span>
+                            <span class="add" onclick="">+</span>
+                        </span>
+                    </td>
+
+                    <td class="wrap-subtotal">
+                        <strong class="font-red">¥99.00</strong>
+                    </td>
+
+                    <td>
+                        99
+                    </td>
+
+                    <td class="cart-act">
+                        <a  onclick="" href="javascript:;">删除</a>
+                    </td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="6">
+                        <div class="price_check_box">
+                            <div class="price_check">
+                                <div class="price_list">
+                                    <div class="total">
+                                        <p class="t">商品总价：</p>
+
+                                        <p class="txt">+&yen;<span id="totalPrice" class="num"></span></p>
+                                    </div>
+                                    <p class="item">
+                                        <span class="t">促销优惠：</span>
+                                        - &yen;<span id="promo_amt" class="jian">0.00</span>
+                                    </p>
+
+                                    <p class="item">
+                                        <span class="t">立减金额：</span>
+                                        - &yen;<span id="totalDiscount" class="jian">0.00</span>
+                                    </p>
+
+                                    <div class="item all">
+                                        <span class="t"><strong>总计</strong>(不含运费)：</span>
+                                        &yen;<span id="totalPay" class="num">0.00</span>
+                                    </div>
+                                    <p class="item">
+                                        <span class="t">商品总重：</span>
+                                        <span id="totalWeight" class="weight">0</span>千克
+                                    </p>
+                                </div>
+                                <div class="wrap_btn  wrap_btn_tip" id="but_calcCart">
+                                    <a class="todo_link" href="http://www.51buy.com/" target="_blank"
+                                       onclick="G.app.cart.gobackUrl();return false" hotname="I.CART.CONTINUESHOPPING">继续购物&gt;&gt;</a>
+                                    <a href="javascript:;" class="btn_order" id="checkorder_btn"
+                                       onclick="G.app.cart.checkOrder();return false">去结算<b></b></a>
+                                </div>
+                            </div>
+
+                            <div class="clear">
+                                <b class="icon icon_clear"></b>
+                                <a href="javascript:;" onclick="G.app.cart.clearCart();return false"
+                                   hotname="I.CART.CLEARCART">清空购物车</a>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <div class="mod-redemption">
+        <div class="hd">换购区</div>
+        <div class="bd">换购区</div>
+    </div>
+
+    <div class="mod-guessLike">
+        <div class="hd">猜您喜欢</div>
+        <div class="bd">猜您喜欢</div>
+    </div>
+</div>
+<!--wrapper end-->
+
+
+<div class="txtlink-mod wrapper clearfix">
+    <div class="wrapper">
+        <div class="my-culture">
+            <dl>
+                <dt>品质</dt>
+                <dd>全球化采购、正品保障</dd>
+            </dl>
+            <dl>
+                <dt>便捷</dt>
+                <dd>一站式服务、送货上门</dd>
+            </dl>
+            <dl>
+                <dt>专业</dt>
+                <dd>顾问式客服、全年无休</dd>
+            </dl>
+            <dl>
+                <dt>贴心</dt>
+                <dd>个性化导购、售后无忧</dd>
+            </dl>
+        </div>
+        <div class="help-mod">
+            <dl class="ceo-email">
+                <dt>总经理信箱</dt>
+                <dd><a href="mailto:ceo.holyca@muyingzhijia.com">ceo.holyca@muyingzhijia.com</a></dd>
+            </dl>
+            <dl class="h-guide">
+                <dt>购物指南</dt>
+                <dd><a href="${vh_website_url}/Help/Help_index.aspx?key=gwlc" target="_parent">购物流程</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=hyzd" target="_parent">会员制度</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=cjwt" target="_parent">常见问题</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=lxkf" target="_parent">联系客服</a></dd>
+            </dl>
+            <dl class="h-pay">
+                <dt>支付方式</dt>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=hdfk" target="_parent">货到付款</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=zxzf" target="_parent">在线支付</a></dd>
+            </dl>
+            <dl class="h-distribution">
+                <dt>配送方式</dt>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=shdq" target="_parent">上海地区</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=jzdq" target="_parent">江浙地区</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=qtdq" target="_parent">其他地区</a></dd>
+            </dl>
+            <dl class="h-afterSales">
+                <dt>售后服务</dt>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=thhyz" target="_parent">退换货原则</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=thhlc" target="_parent">退换货流程</a></dd>
+                <dd><a href="${vh_website_url}/help/Help_index.aspx?key=thhzq" target="_parent">退换货周期</a></dd>
+            </dl>
+        </div>
+    </div>
+    <!--wrapper end-->
+</div>
+
+<div class="footer wrapper clearfix">
+    <ul class="nav-footer">
+        <li><a href="${vh_website_url}/Index.aspx">首页</a></li>
+        |
+        <li><a href="${vh_website_url}/Help/Help_index.aspx?key=gywm">公司简介</a></li>
+        |
+        <li><a href="${vh_website_url}/help/Help_index.aspx?key=rczp">人才招聘</a></li>
+        |
+        <li><a href="${vh_website_url}/Help/Help_index.aspx?key=hzlx">合作联系</a></li>
+        |
+        <li><a href="${vh_website_url}/Help/Help_index.aspx?key=qyln">企业理念</a></li>
+    </ul>
+    <div class="copyright">
+        <span>Copyright 2004 - 2012 muyingzhijia.com All Rights Reserved</span><span>沪ICP备09021709号</span></div>
+    <div class="icp"><span><a
+            href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20111019134737637'><img
+            src="http://www.muyingzhijia.com/Template/afd5/images/shanghai_industry.gif"/></a></span></div>
+</div>
+
+<!--wrapper end-->
+
+
+<script type="text/javascript">
+    head.js("js/jquery-1.7.2.min.js",
+            "js/my/hp1.js",
+            "js/my/shopcart.js");
+</script>
+
+</body>
+</html>
