@@ -1,4 +1,4 @@
-body{font:12px/1.5 tahoma,arial,sans-serif}
+body{font:12px/1.5 tahoma,arial,sans-serif;}
 /*font*/
 h1{font-size:16px}
 h2,h3,h4{font-size:14px}
@@ -207,7 +207,8 @@ input{border:0 none;vertical-align:middle}
 .footer .copyright{color:#666}
 .nav-footer li,.footer .copyright span{margin:0 5px;display:inline}
 .fixRight{left:50%; margin-left: 503px; top:500px;width: 36px;  height: 90px; overflow: hidden; position: fixed; _position:absolute;
-    _top: expression(documentElement.scrollTop +  500); /* for IE6 */   background-image: url(about:blank); }
+    _top: expression(documentElement.scrollTop +  500); /* for IE6 */  background-image:url(about:blank);    /*用浏览器空白页面作为背景*/
+    background-attachment:fixed; /* prevent screen flash in IE6 确保滚动条滚动时，元素不闪动*/   }
 .fixRight a{background: url("../images/survey.gif") no-repeat scroll transparent; width: 36px; height: 90px; display: block; }
 
 /*gotop*/
