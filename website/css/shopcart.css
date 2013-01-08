@@ -1,6 +1,6 @@
 .img{ display: block; border: 1px solid #e0e0e0;height: 62px;margin-right: 5px;padding-top: 2px; text-align: center; width: 64px;}
 body{color:#4d4d4d;}
-strong{font-weight: 400;}
+strong{font-weight: 700;}
 /*购物流程*/
 .flow-step {float:right; margin-top: 15px; height: 32px;line-height: 32px; }
 .flow-step li { float: left;  width:200px;padding: 0 15px 0 0;background: url("../images/order/bg_shopcart.gif") no-repeat scroll 100% 0 #e0e0e0;  font-size:14px; list-style: none outside none;text-align: center;}
@@ -21,7 +21,8 @@ strong{font-weight: 400;}
 .cart-list .col-name{width:500px;}
 .cart-list .col-number{width:118px;}
 .cart-list .col-operation{width:60px;}
-.cart-body li{border-bottom:1px dashed #f4f4f4;padding:10px; vertical-align: top;}
+.cart-body{margin-bottom: 10px;}
+.cart-body li{border-bottom:1px dashed #f4f4f4;padding:10px;overflow: hidden;}
 .cart-body .col-name .img{float:left;}
 .cart-body .col-name .goods-info{float:left;width:420px;}
 .cart-body del{display: block;color:#878787;}
@@ -29,13 +30,19 @@ strong{font-weight: 400;}
 .cart-body .wrap-input .input{float: left; margin-left: -1px;width: 34px;height: 18px; line-height:18px;overflow: hidden;  text-align: center; border: 1px solid #878787;}
 .cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px;width: 20px;height: 20px; line-height: 19px;font-size: 14px;text-align: center;background-color:#f4f4f4;background: -moz-linear-gradient(center top , #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent;cursor: pointer;}
 .cart-body .wrap-input .reduce{ margin-left: 0;}
-.cart-body .subtotal strong{font-weight:700;}
 
 .cart-gift li,.cart-redemption li{background-color: #fbfef8;border-bottom: 1px solid #fff;}
-.icon-gift,.icon-redemption{padding:1px 3px;color:#fff;margin-right:5px;background-color: #7fbc41;}
+.icon-gift,.icon-redemption,.icon-reduce{padding:1px 3px;color:#fff;margin-right:5px;background-color: #7fbc41;}
 
 .cart-redemption li{background-color: #f7fcfe;}
 .icon-redemption{background-color: #ff7800;}
+
+.hd-fullReduction{background-color: #f4f4f4;}
+.hd-fullReduction .title{width:700px;font-weight:700;}
+.hd-fullReduction .title span{margin-right:5px;}
+.hd-fullReduction .title .tips{margin-left:15px;font-weight:400;}
+.hd-fullReduction .money{float: right;width:260px;text-align: left;}
+.icon-reduce{padding: 3px;margin-left:5px;margin-right:0;background-color: #e60000;font-weight: 700;}
 
 .cart-total .total {padding:0 10px 10px 0;line-height: 30px;text-align: right;}
 .cart-total .cart-clear {padding:10px;}
