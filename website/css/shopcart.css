@@ -1,6 +1,11 @@
 .img{ display: block; border: 1px solid #e0e0e0;height: 62px;margin-right: 5px;padding-top: 2px; text-align: center; width: 64px;}
 body{color:#4d4d4d;}
 strong{font-weight: 700;}
+/*popwin*/
+.pop-win{position: absolute;;left:50%;display: none;border:8px solid #878787;overflow: hidden;background-color: #fff;z-index: 9999;}
+.pop-win .hd{ height: 30px;line-height: 30px;font-family: "微软雅黑";background: url("../images/logindl_bg.gif") repeat-x scroll 0 -159px transparent;}
+.close-win{width:24px;height:24px; position: absolute; right: 10px; top:3px;text-indent:-999em; overflow: hidden;background:url(../images/logindl_bg.gif) no-repeat 0 -30px}
+.w1000{width:1000px;margin-left:-508px;}
 /*购物流程*/
 .flow-step {float:right; margin-top: 15px; height: 32px;line-height: 32px; }
 .flow-step li { float: left;  width:200px;padding: 0 15px 0 0;background: url("../images/order/bg_shopcart.gif") no-repeat scroll 100% 0 #e0e0e0;  font-size:14px; list-style: none outside none;text-align: center;}
@@ -17,19 +22,20 @@ strong{font-weight: 700;}
 .wrap-cart .title h2{margin-left:20px;width:960px;background:url("../images/order/bg_shopcart.gif") repeat-x scroll 100% -126px #f90;color: #fff;font-weight:700;line-height: 30px;}
 
 .cart-head{padding:0 10px;height:30px;line-height:30px;background:url("../images/order/bg_shopcart.gif") repeat-x scroll 100% -186px #f4f4f4;}
-.cart-list .column{float:left;width:100px;}
+.cart-list .column{float:left;width:100px;position: relative;}
 .cart-list .col-name{width:500px;}
 .cart-list .col-number{width:118px;}
 .cart-list .col-operation{width:60px;}
 .cart-body{margin-bottom: 10px;}
-.cart-body li{border-bottom:1px dashed #f4f4f4;padding:10px;overflow: hidden;}
+.cart-body li{border-bottom:1px dashed #f4f4f4;padding:5px 10px;overflow: hidden;}
 .cart-body .col-name .img{float:left;}
-.cart-body .col-name .goods-info{float:left;width:420px;}
+.cart-body .col-name .goods-info{width:420px;}
 .cart-body del{display: block;color:#878787;}
 .cart-body .wrap-input {font-size: 12px; font-weight: normal; overflow: hidden;}
 .cart-body .wrap-input .input{float: left; margin-left: -1px;width: 34px;height: 18px; line-height:18px;overflow: hidden;  text-align: center; border: 1px solid #878787;}
 .cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px;width: 20px;height: 20px; line-height: 19px;font-size: 14px;text-align: center;background-color:#f4f4f4;background: -moz-linear-gradient(center top , #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent;cursor: pointer;}
 .cart-body .wrap-input .reduce{ margin-left: 0;}
+.cart-body .col-tips{position: absolute;top:26px;width:72px;padding:2px;border:1px solid #f90;color:#e60000;background-color: #ffedb5;text-align: center;}
 
 .cart-gift li,.cart-redemption li{background-color: #fbfef8;border-bottom: 1px solid #fff;}
 .icon-gift,.icon-redemption,.icon-reduce{padding:1px 3px;color:#fff;margin-right:5px;background-color: #7fbc41;}
@@ -37,7 +43,7 @@ strong{font-weight: 700;}
 .cart-redemption li{background-color: #f7fcfe;}
 .icon-redemption{background-color: #ff7800;}
 
-.hd-fullReduction{background-color: #f4f4f4;}
+.hd-fullReduction{height:18px;line-height:18px;background-color: #f4f4f4;}
 .hd-fullReduction .title{width:700px;font-weight:700;}
 .hd-fullReduction .title span{margin-right:5px;}
 .hd-fullReduction .title .tips{margin-left:15px;font-weight:400;}
@@ -59,12 +65,12 @@ strong{font-weight: 700;}
 .cart-button{padding:6px 15px 6px 10px;background-color:#f4f4f4;}
 
 /*优惠商品模块*/
-.mod-favorable .bd{padding:0 0 10px 2px;}
-.mod-favorable dl{float:left;padding:10px;border-right:1px dashed #f4f4f4;border-bottom:1px dashed #f4f4f4;width:228px;}
+.mod-favorable .bd{padding-bottom:10px;}
+.mod-favorable dl{float:left;padding:10px;border-bottom:1px dashed #f4f4f4;width:229px;}
 .mod-favorable dt{float:left;}
 .mod-favorable dd p{margin-top:5px;}
 
-.goods-list dl{float:left;padding:10px;width:229px;}
+.goods-list dl{float:left;padding:10px;width:229px;border-bottom: 0 none ;}
 .goods-list dt{float:left;}
 .goods-list dd p{margin-top:5px;}
 .goods-list del{color:#bababa;margin-right:5px;}
