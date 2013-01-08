@@ -242,7 +242,7 @@
 
 .login-dialog .dialog-content{
     min-height:100px;
-    width:300px;
+    width:420px;
     background:#fffbe1;
     float: left;
     position: relative;
@@ -332,4 +332,8 @@
     text-indent:-999em;
     overflow: hidden;
     background:url(../images/logindl_bg.gif) no-repeat 0 -30px
+}
+.pngfix{
+    opacity: 0.3;
+    filter:alpha(opacity=30);
 }

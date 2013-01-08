@@ -10,7 +10,6 @@
      this._class = !!options._class?options._class:"";//弹出框样式class 参见dialog.css
      this.png_fix = !!options.png_fix;//是否加png半透明边框
      this.title = !!options.title?options.title:"";//标题
-     this.border = options.border;//边框，为opacity透明度0-1
      this.useAjax = !!options.useAjax;//是否启用ajax
      this.HTML = !!options.HTML?options.HTML:"";//加载HTML或者加载html模板
      this.closeEvent = !!options.closeEvent?options.closeEvent:undefined;//关闭对话框里的事件，无阻断
@@ -30,54 +29,28 @@
          content = $this.find(".dialog-content"),
          topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div></div>'),
          btncon = $('<div class="btm-wrap"><div class="pngfix cbl"></div><div class="pngfix fixwidth cbm"></div><div class="pngfix cbr"></div></div>');
-     content.wrap('div.con-wrap').before(topcon).after(btncon);
-     content.before('<div class="pngfix fixheight cml"></div>').after('<div class="pngfix fixheight cmr"></div>');
 
-     if(this.showclose===false){
-         $this.find(".close").remove()
-     }
-
-     if(!this.title){
-         $this.find(".title").remove()
-     }
-
-     if(this.png_fix){
-         $this.find(".pngfix").pngfix()
-     }
-
-     var cw = content.width(), ch = content.height(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(clw+cw+crw), dh = $this.height();
-
-     $this.find(".fixwidth").width(cw);
-     $this.find(".fixheight").height(ch);
-     $this.css({
-         "margin-left":-dw.width()/2,
-         top:($(window).height()-dh)/2-50
-     });
-
-     if(!!this.border && typeof this.border==="number"){
-         $this.find(".pngfix").css("opacity",this.border)
-     }
+    content.wrap('div.con-wrap').before(topcon).after(btncon);
+    content.before('<div class="pngfix fixheight cml"></div>').after('<div class="pngfix fixheight cmr"></div>');
 
      if(this.HTML){
          if(this.useAjax){
              $.ajax({
-                 url:this.HTML,
+                 url:_this.HTML,
                  dataType:"html",
                  success:function(data){
                      $this.find(".gost-content").html(data)
                  },
                  complete:function(){
-                     if(_this.showEvent){
-                         _this.showEvent()
-                     }
-                     fixit()
+                     setTimeout(fixit,25)
                  },
                  fail:function(){
                      $this.find(".gost-content").text("对不起，出错了")
                  }
              })
          }else{
-             $this.find(".gost-content").html(this.HTML)
+             $this.find(".gost-content").html(this.HTML);
+             fixit();
          }
 
      }
@@ -88,18 +61,31 @@
          return false
      });
 
-     if(!!this.showEvent){
-         this.showEvent()
+     var cw = content.width(), ch = content.height(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(cw+clw+crw), dh = $this.height();
+     $this.find(".fixwidth").width(cw);
+     $this.find(".fixheight").height(ch);
+     $this.css({
+        "margin-left":-dw.width()/2
+     });
+     console.log($("#dialog").height());
+     if(this.png_fix){
+        $this.find(".pngfix").pngfix()
+     }
+     if(this.showclose===false){
+        $this.find(".close").remove()
+     }
+
+     if(!this.title){
+        $this.find(".title").remove()
      }
 
      function fixit(){
-         var cw = content.width(), ch = content.height(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(clw+cw+crw), dh = $this.height();
-         $this.find(".fixwidth").width(cw);
-         $this.find(".fixheight").height(ch);
-         $this.css({
-             "margin-left":-dw.width()/2,
-             top:($(window).height()-dh)/2
-         });
+         $this.find(".fixwidth").width(content.width());
+         $this.find(".fixheight").height(content.height());
+         $this.animate({top:($(window).height()-$this.height())/2},200);
+         if(!!_this.showEvent){
+             _this.showEvent()
+         }
      }
 
      function thisClose(){
@@ -108,8 +94,7 @@
      }
 
      return {
-         close : thisClose,
-         fixit:fixit()
+         close : thisClose
      }
  }
 
