@@ -21,16 +21,9 @@
      }
 
      if(!$("#cover-bg").length){
-         var cover = $("<div id='cover-bg'></div>").css({
-             width:$(window).width(),
-             height:$(document).height(),
-             opacity:0.6,
-             "z-index":"998",
-             position:"absolute",
-             background:"#333",
-             top:0,
-             left:0
-         }).appendTo("body")
+         var cover = $("<div id='cover-bg'></div>")
+             .css({width:$(window).width(), height:$(document).height(), opacity:0.6, "z-index":"998", position:"absolute", background:"#333", top:0, left:0})
+             .appendTo("body")
      }
 
      var $this = $("#dialog").addClass(this._class), _this = this,
