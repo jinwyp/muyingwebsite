@@ -10,20 +10,46 @@
     <link rel="stylesheet" href="css/dialog.css" type="text/css">
 </head>
 <body>
-
-
+<input type="button" id="btn" value="点我弹出" />
+<input type="button" id="btna" value="点我弹出" />
 </body>
 <script src="js/jquery-1.7.2.min.js" ></script>
 <script type="text/javascript" src="js/my/dialog.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        new Dialog({
-            title:"欢迎您来到母婴之家，请登录",
-            showclose:true,
-            _class:"login-dialog",
-            trancebord:true,
-            HTML:"<div>1231212313</div>"
+        var bb,cc;
+
+        $("#btn").click(function(){
+            bb = new Dialog({
+                title:"欢迎您来到母婴之家，请登录",
+                _class:"login-dialog",
+                HTML:'<div>1231212313<br>1231212313<br>1231212313<br>1231212313<br></div><input type="button" id="btn2" value="点我关闭" />',
+                showEvent:function(){
+                    $("#btn2").click(function(){
+
+                        bb.close();
+
+                    })
+                }
+            });
         });
+
+        $("#btna").click(function(){
+
+            cc = new Dialog({
+                title:"欢迎您来到母婴之家2222222",
+                _class:"login-dialog",
+                border:0.3,
+                useAjax:true,
+                HTML:"html.html",
+                showEvent:function(){
+                    $("#btn2").click(function(){
+                        cc.close();
+                    })
+                }
+            });
+        });
+
     });
 
 
