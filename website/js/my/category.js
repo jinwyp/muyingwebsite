@@ -75,56 +75,7 @@ jQuery(function() {
 
 
 
-
-//列表页面点击购物车效果
-$(document).ready(function () {
-    readyScroll();
-    $(".btn_m_o").each(function(){
-        var $this = $(this);
-        $this.click(function(){
-            var pr = $this.parents("dl").css("position","relative");
-            var clone = pr.find("a:eq(0)").clone();
-            var position = $("#saleQty").offset();
-            var bezier_params = {
-                start: {
-                    x: 0,
-                    y: 10,
-                    angle: -120
-                },
-                end: {
-                    x:position.left - pr.position().left,
-                    y:position.top - pr.position().top,
-                    angle: 180,
-                    length: 0.2
-                }
-            };
-            clone.css({position:"absolute"}).appendTo(pr);
-            if(!clone.is(":animated")){
-                clone.animate({
-                    path : new $.path.bezier(bezier_params),
-                    width:"0px",
-                    height:"0px",
-                    opacity:"0.6"
-                },600,function(){
-                    var sq = $("#saleQty");
-                    var p = parseInt(sq.text());
-                    p += 1;
-                    sq.animate({"margin-top":"20px",opacity:"0"},200,function(){
-                        sq.animate({"margin-top":"-20px"},25,function(){
-                            sq.animate({"margin-top":0,opacity:1},250,function(){
-                                sq.text(p)
-                            })
-                        });
-                    });
-
-                    clone.remove();
-                })
-            }
-            return false
-        })
-    })
-});
-
+//滚动上部购物车栏会固定到顶部,方便查看购物车
 function readyScroll(){
     var floatMain = $("#j-shopcar"),
         Top = floatMain.position().top,
@@ -177,6 +128,57 @@ function readyScroll(){
     });
 
 }
+
+
+//列表页面点击购物车效果
+$(document).ready(function () {
+    readyScroll();
+    $(".btn_m_o").each(function(){
+        var $this = $(this);
+        $this.click(function(){
+            var pr = $this.parents("dl").css("position","relative");
+            var clone = pr.find("a:eq(0)").clone();
+            var position = $("#saleQty").offset();
+            var bezier_params = {
+                start: {
+                    x: 0,
+                    y: 10,
+                    angle: -120
+                },
+                end: {
+                    x:position.left - pr.position().left,
+                    y:position.top - pr.position().top,
+                    angle: 180,
+                    length: 0.2
+                }
+            };
+            clone.css({position:"absolute"}).appendTo(pr);
+            if(!clone.is(":animated")){
+                clone.animate({
+                    path : new $.path.bezier(bezier_params),
+                    width:"0px",
+                    height:"0px",
+                    opacity:"0.6"
+                },600,function(){
+                    var sq = $("#saleQty");
+                    var p = parseInt(sq.text());
+                    p += 1;
+                    sq.animate({"margin-top":"20px",opacity:"0"},200,function(){
+                        sq.animate({"margin-top":"-20px"},25,function(){
+                            sq.animate({"margin-top":0,opacity:1},250,function(){
+                                sq.text(p)
+                            })
+                        });
+                    });
+
+                    clone.remove();
+                })
+            }
+            return false
+        })
+    })
+});
+
 
 //购物车下拉，添加延迟处理
 (function(){
