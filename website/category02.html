@@ -7,6 +7,8 @@
     <link href="css/reset.css" rel="stylesheet"  type="text/css"/>
     <link href="css/base.css" rel="stylesheet" type="text/css"/>
     <link href="css/category.css" rel="stylesheet"  type="text/css"/>
+
+    <script type="text/javascript" src="js/head.min.js"></script>
 </head>
 <body>
 <div class="toolbar">
@@ -690,136 +692,17 @@
 </div><!--wrapper end -->
 
 </div>
-</body>
-<script src="js/jquery-1.7.2.min.js" ></script>
-<script type="text/javascript" src="js/my/category.js"></script>
-<script type="text/javascript" src="js/jqueryplugin/plugins.js"></script>
+
+
 <script type="text/javascript">
-    $(document).ready(function () {
-        readyScroll();
-        $(".btn_m_o").each(function(){
-            var $this = $(this);
-            $this.click(function(){
-                var pr = $this.parents("dl").css("position","relative");
-                var clone = pr.find("a:eq(0)").clone();
-                var position = $("#saleQty").offset();
-                var bezier_params = {
-                    start: {
-                        x: 0,
-                        y: 10,
-                        angle: -120
-                    },
-                    end: {
-                        x:position.left - pr.position().left,
-                        y:position.top - pr.position().top,
-                        angle: 180,
-                        length: 0.2
-                    }
-                };
-                clone.css({position:"absolute"}).appendTo(pr);
-                if(!clone.is(":animated")){
-                    clone.animate({
-                        path : new $.path.bezier(bezier_params),
-                        width:"0px",
-                        height:"0px",
-                        opacity:"0.6"
-                    },600,function(){
-                        var sq = $("#saleQty");
-                        var p = parseInt(sq.text());
-                        p += 1;
-                        sq.animate({"margin-top":"20px",opacity:"0"},200,function(){
-                            sq.animate({"margin-top":"-20px"},25,function(){
-                                sq.animate({"margin-top":0,opacity:1},250,function(){
-                                    sq.text(p)
-                                })
-                            });
-                        });
-
-                        clone.remove();
-                    })
-                }
-                return false
-            })
-        })
-    });
-
-    function readyScroll(){
-        var floatMain = $("#j-shopcar"),
-                Top = floatMain.position().top,
-                fw = floatMain.width(),
-                floatStyle = false,
-                isIE6 = $.browser.msie&&($.browser.version == "6.0")&&!$.support.style;
-        if($(document).scrollTop()>Top){
-            if(!isIE6){
-                floatMain.css({
-                    position:"fixed",
-                    "margin-left":"-"+fw/2+"px",
-                    top:0,
-                    left:"50%",
-                    "z-index":"9999"
-                });
-            } else {
-                $("<style type='text/css' id='ie6style'>#floatPic{margin:0;padding:0;z-index:99}#floatPic img{margin: 0;padding: 0;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}.fixed-top{position:absolute;top:expression(eval(document.documentElement.scrollTop))}</style>").appendTo("head");
-                floatMain.addClass("fixed-top").css({
-                    "margin-left":"-"+fw/2+"px",
-                    left:"50%",
-                    "z-index":"9999"
-                });
-            }
-        }
-
-        $(window).scroll(function(){
-            if($(document).scrollTop()>Top){
-                if(floatStyle==true){return false}
-                if(!isIE6){
-                    floatMain.css({
-                        position:"fixed",
-                        "margin-left":"-"+fw/2+"px",
-                        top:0,
-                        left:"50%",
-                        "z-index":"9999"
-                    });
-                } else {
-                    floatMain.addClass("fixed-top").css({
-                        "margin-left":"-"+fw/2+"px",
-                        left:"50%",
-                        "z-index":"9999"
-                    });
-                }
-                floatStyle = true;
-            }else{
-                floatMain.removeAttr("style");
-                if(isIE6){floatMain.removeClass("fixed-top")}
-                floatStyle = false
-            }
-        });
-
-    }
-
-    //购物车下拉，添加延迟处理
-    (function(){
-        var showing,shown,closing;
-        $(".shopcart").hover(function(){
-            if(closing)clearTimeout(closing);
-            showing = setTimeout(function(){
-                if(!shown)
-                    $("#cartList").stop().slideDown(200,function(){
-                        shown = true;
-                    })
-            },150);
-        },function(){
-            if(showing){
-                clearTimeout(showing);
-            }
-            if(shown){
-                closing = setTimeout(function(){
-                    $("#cartList").slideUp(200,function(){
-                        shown = false
-                    })
-                },300)
-            }
-        })
-    })()
-
+    head.js("js/jquery-1.7.2.min.js",
+            "js/my/category.js",
+            "js/jqueryplugin/jquery.bezier.js",
+            "js/my/commonuse.js"
+    );
 </script>
+
+</body>
+
+
 </html>

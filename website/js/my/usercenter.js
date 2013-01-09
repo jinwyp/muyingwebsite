@@ -335,7 +335,6 @@ $(function () {
     jQuery("#messagesuccess").slideDown("slow").fadeTo("slow", 1).delay(2000).fadeTo("slow", 0).slideUp("fast");
 
     });
-
 });
 
 
@@ -436,7 +435,6 @@ $(function () {
                         break;
                     default:
                         SwitchTo(($(r[0]).length==0)?obj:$(r[0]))
-
                 }
             });
 
