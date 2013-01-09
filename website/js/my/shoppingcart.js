@@ -17,21 +17,21 @@ head.ready(function () {
 
     app.model.Product = Backbone.Model.extend({
         defaults : {
-            name : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
+            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
             normalprice : 138,
             promotionprice : 120,
-            stock : 120,
-            quantity : 1,
-            totalprice : 0,
-            luckynumber : 0,
+            productstock : 120,
+            productquantity : 1,
+            producttotalprice : 0,
+            productluckynumber : 0,
 
-            promotiongift : 0, //是否参与赠品活动
-            promotiongiftnumber : 0, //赠品满足条件金额
-            promotionexchange : 0, //是否参与换购活动
-            promotionexchangenumber : 0, //换购满足条件金额
-            promotionmanjian : 0, //是否参与满减
-            promotionmanjiannumber : 90, //满减满足条件金额
-            promotionmanjiandiscount : 10 //满减满足条件金额
+            productpromotiongift : 0, //是否参与赠品活动
+            productpromotiongiftnumber : 0, //赠品满足条件金额
+            productpromotionexchange : 0, //是否参与换购活动
+            productpromotionexchangenumber : 0, //换购满足条件金额
+            productpromotionmanjian : 0, //是否参与满减
+            productpromotionmanjiannumber : 90, //满减满足条件金额
+            productpromotionmanjiandiscount : 10 //满减满足条件金额
         }
     });
 
@@ -45,14 +45,14 @@ head.ready(function () {
         template: $('#ProductTemplate').html(),
 
         initialize: function(){
-
             this.render();
         },
 
         render: function(){
-
+            Backbone.ModelBinder.bind(this.model, this.el);
+            console.log(this.model);
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( app.m.product1.toJSON()) );
+            $(this.el).html(tmp( this.model.toJSON()) );
         }
     });
 
@@ -62,6 +62,7 @@ head.ready(function () {
 
         initialize: function(){
             this.render();
+            this.$el.html();
         },
 
         render: function(){
@@ -73,14 +74,14 @@ head.ready(function () {
         showProduct: function(prodcut){
             app.v.product1 = new app.view.cartProduct({ model: prodcut });
             this.$el.append(app.v.product1.el);
-            console.log(prodcut);
+
         }
 
     });
 
 
-    app.m.product1 = new app.model.Product({name: "贝亲婴儿柔湿巾", normalprice: 400});
-    app.m.product2 = new app.model.Product({name: "贝亲婴321", normalprice: 200});
+    app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", productnormalprice: 400});
+    app.m.product2 = new app.model.Product({productname: "贝亲婴3212312", productnormalprice: 200});
 
     app.collection.plist = new app.model.Productlist();
 
