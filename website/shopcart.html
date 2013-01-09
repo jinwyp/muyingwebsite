@@ -353,7 +353,7 @@
                 </ul>
 
                 <ul class="cart-body cart-fullReduction">
-                    <li class="hd-fullReduction"><span class="title"><span class="font-red">[满减]</span>全场奶粉满399立减40<span class="tips">再买<em id="j_repurchase" class="font-red">99元</em>即可立减<em id="j_reduceMoney" class="font-red">40元</em></span></span></li>
+                    <li class="hd-fullReduction"><span class="title"><span class="font-red">[满减]</span>全场奶粉满399立减40<span class="tips">再买<strong id="j_repurchase" class="font-red">99元</strong>即可立减<strong id="j_reduceMoney" class="font-red">40元</strong></span></span></li>
                     <li class="clearfix">
                         <div class="column col-name">
                             <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
@@ -427,14 +427,14 @@
                             </div>
                         </div>
                         <div class="column col-price">
-                            <del>¥10.00</del>
-                            <strong>¥5.00</strong>
+                            <del>&yen;10.00</del>
+                            <strong>&yen;5.00</strong>
                         </div>
                         <div class="column col-number">
                             1
                         </div>
                         <div class="column col-subtotal">
-                            <strong class="font-red">¥5.00</strong>
+                            <strong class="font-red">&yen;5.00</strong>
                         </div>
                         <div class="column col-luckyStar">
                             5
@@ -453,14 +453,14 @@
                             </div>
                         </div>
                         <div class="column col-price">
-                            <del>¥10.00</del>
-                            <strong>¥5.00</strong>
+                            <del>&yen;10.00</del>
+                            <strong>&yen;5.00</strong>
                         </div>
                         <div class="column col-number">
                             1
                         </div>
                         <div class="column col-subtotal">
-                            <strong class="font-red">¥5.00</strong>
+                            <strong class="font-red">&yen;5.00</strong>
                         </div>
                         <div class="column col-luckyStar">
                             5
@@ -621,7 +621,11 @@
                     <a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a>
                     <p><span class="btn_s btn_s_o"><a href="">查看换购</a></span></p>
                 </dd>
-                <div class="goods-list pop-win hide">
+                <div class="pop-win w1000 goods-list">
+                    <div class="hd">
+                        <h3>买满1件即可换购赠品,赠完为止</h3>
+                        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
+                    </div>
                     <dl>
                         <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
                         <dd>
@@ -763,19 +767,31 @@
 <script type="text/javascript">
     head.js("js/jquery-1.7.2.min.js",
             "js/my/dialog.js",
-            "js/my/hp1.js",
-            "js/my/shopcart.js");
+            "js/my/hp1.js"
+            );
 </script>
 <script type="text/javascript">
     head.ready(function () {
-
         $("#btn_giftSelect").click(function(e){
             e.preventDefault();
           $(".goods-list").show();
         });
 
-    });
+        var $backToTopTxt = "回顶部", $backToTopEle = $('<div class="gotop"></div>').appendTo($("body"))
+                .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
+                    $("html, body").animate({ scrollTop: 0 }, 1000);
+                }), $backToTopFun = function() {
+            var st = $(document).scrollTop(), winh = $(window).height();
+            (st > 0)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();
+//IE6下的定位
+            if (!window.XMLHttpRequest) {
+                $backToTopEle.css("top", st + winh - 166);
+            }
+        };
+        $(window).bind("scroll", $backToTopFun);
+        $(function() { $backToTopFun(); });
 
+});
 </script>
 </body>
 </html>

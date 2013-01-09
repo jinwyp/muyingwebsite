@@ -212,4 +212,4 @@ input{border:0 none;vertical-align:middle}
 .fixRight a{background: url("../images/survey.gif") no-repeat scroll transparent; width: 36px; height: 90px; display: block; }
 
 /*gotop*/
-.gotop{display:none;width:36px;height:36px;position:fixed;_position:absolute;left:50%;margin-left:520px;bottom:100px;_bottom:"auto";cursor:pointer;background:url("../images/gotop.gif") no-repeat 0 0}
+.gotop{display:none;width:36px;height:36px;position:fixed;_position:absolute;left:50%;margin-left:520px;bottom:100px;_bottom:"auto";cursor:pointer;background:url("../images/gotop.gif") no-repeat 0 0;text-indent: -99999px;}

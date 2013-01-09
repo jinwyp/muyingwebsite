@@ -35,7 +35,7 @@ strong{font-weight: 700;}
 .cart-body .wrap-input .input{float: left; margin-left: -1px;width: 34px;height: 18px; line-height:18px;overflow: hidden;  text-align: center; border: 1px solid #878787;}
 .cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px;width: 20px;height: 20px; line-height: 19px;font-size: 14px;text-align: center;background-color:#f4f4f4;background: -moz-linear-gradient(center top , #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent;cursor: pointer;}
 .cart-body .wrap-input .reduce{ margin-left: 0;}
-.cart-body .col-tips{position: absolute;top:26px;width:72px;padding:2px;border:1px solid #f90;color:#e60000;background-color: #ffedb5;text-align: center;}
+.cart-body .col-tips{position: absolute;top:26px;left:0;width:72px;padding:2px;border:1px solid #f90;color:#e60000;background-color: #ffedb5;text-align: center;}
 
 .cart-gift li,.cart-redemption li{background-color: #fbfef8;border-bottom: 1px solid #fff;}
 .icon-gift,.icon-redemption,.icon-reduce{padding:1px 3px;color:#fff;margin-right:5px;background-color: #7fbc41;}
@@ -44,10 +44,10 @@ strong{font-weight: 700;}
 .icon-redemption{background-color: #ff7800;}
 
 .hd-fullReduction{height:18px;line-height:18px;background-color: #f4f4f4;}
-.hd-fullReduction .title{width:700px;font-weight:700;}
+.hd-fullReduction .title{float:left;padding-right:10px;font-weight:700;}
 .hd-fullReduction .title span{margin-right:5px;}
 .hd-fullReduction .title .tips{margin-left:15px;font-weight:400;}
-.hd-fullReduction .money{float: right;width:260px;text-align: left;}
+.hd-fullReduction .money{float:right;width:260px;text-align: left;}
 .icon-reduce{padding: 3px;margin-left:5px;margin-right:0;background-color: #e60000;font-weight: 700;}
 
 .cart-total .total {padding:0 10px 10px 0;line-height: 30px;text-align: right;}
