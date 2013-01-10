@@ -520,3 +520,59 @@
     background:url(../images/arr.gif) no-repeat 0 5px;
     padding-left:10px
 }
+
+/*登录弹出*/
+.gost-content .error-tips{
+    padding:12px;
+    background:#ffedb5;
+    border:1px solid #ff9900;
+    display:none
+}
+.gost-content .error-tips p{
+    display: block;
+    background:url(../images/logindl_bg.gif) no-repeat -76px 0;
+    padding-left:20px;
+    color:#e60000
+}
+.gost-content .dialog-login li label{
+    color:#000
+}
+.gost-content .dialog-login li .inputCont input.txt:focus{
+    border:1px solid #e60000
+}
+.otherway{
+    display: block;
+    overflow: hidden;
+    zoom:1;
+    border-top: 1px solid #ccc;
+    padding:8px 0;
+    margin:0 10px
+}
+.sign-otherway li{
+    float: left;
+    display: inline;
+    padding-right: 10px;
+}
+.sign-otherway li.sign-otherway-title{
+    padding-left:10px
+}
+.sign-otherway li.othercount a{
+    display: inline;
+    float: left;
+    padding-left:22px;
+    overflow: hidden;
+    line-height:18px;
+    background: url(../images/logindl_bg.gif) no-repeat -77px -30px;
+}
+.sign-otherway li.othercount a.weibo{
+    background-position: -77px -29px
+}
+.sign-otherway li.othercount a.qq{
+    background-position: -77px -104px
+}
+.sign-otherway li.othercount a.taobao{
+    background-position: -77px -79px
+}
+.sign-otherway li.othercount a.alipay{
+    background-position: -77px -53px
+}
