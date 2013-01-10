@@ -18,11 +18,13 @@ head.ready(function () {
     app.model.Product = Backbone.Model.extend({
         defaults : {
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
+            productpromotiontext : '天天特价',
             normalprice : 138,
             promotionprice : 120,
-            productstock : 120,
+            productstock : 6,
             productquantity : 1,
             producttotalprice : 0,
+            producttotalpricetext : 0,
             productluckynumber : 0,
 
             productpromotiongift : 0, //是否参与赠品活动
@@ -42,29 +44,90 @@ head.ready(function () {
 
 
     app.view.cartProduct = Backbone.View.extend({
+        tagName: 'li',
+        className: 'clearfix',
         template: $('#ProductTemplate').html(),
 
         initialize: function(){
             this._modelBinder = new Backbone.ModelBinder();
+            this.sumtotal();
             this.render();
         },
 
         render: function(){
-            this._modelBinder.bind(this.model, this.el);
-            console.log(this.model);
+
             var tmp = Handlebars.compile( this.template );
             $(this.el).html(tmp( this.model.toJSON()) );
+            this._modelBinder.bind(this.model, this.el);
         },
 
         events: {
-            "click #goordafds": "loginsubmit",
-
+            "click #productaa": "loginsubmit",
+            "click #productquantityreduce": "quantityreduce",
+            "click #productquantityadd": "quantityadd",
+            "click #productdel": "delete"
         },
 
         loginsubmit: function(e){
+//            e.preventDefault();
+
+        },
+
+        quantityreduce: function(){
+            if(this.model.get("productquantity") < 2 ){
+                if(confirm("确认删除?")){
+                    this.model.destroy();
+                    console.log(this.model);
+                }
+
+
+//                $(this.el).find('#nostock_tips').html('数量太少').fadeIn();
+            }else{
+                this.model.set("productquantity", (this.model.get("productquantity") -1) );
+                this.sumtotal();
+                $(this.el).find('#nostock_tips').fadeOut();
+            }
+
+        },
+
+        quantityadd: function(){
+
+            if(this.model.get("productquantity") > (this.model.get("productstock") - 1) ){
+                //如果大于库存数量显示提示库存不足
+                $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
+            }else{
+                this.model.set("productquantity", (this.model.get("productquantity") +1) );
+                this.sumtotal();
+                $(this.el).find('#nostock_tips').fadeOut();
+            }
+
+        },
+
+        sumtotal: function(){
+            var productsumtotal;
+            if (this.model.get('promotionprice') == 0){
+                productsumtotal = this.model.get('productquantity') * this.model.get('normalprice');
+            }else{
+                productsumtotal = this.model.get('productquantity') * this.model.get('promotionprice');
+            }
+
+            this.model.set("producttotalprice", productsumtotal);
+            var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
+            this.model.set("producttotalpricetext", rmb + this.model.get("producttotalprice").toFixed(2) );
+        },
+
+        delete: function(e) {
             e.preventDefault();
-            console.log(this.model);
+
+            if(confirm("确认删除?")){
+                this.model.destroy();
+                console.log(this.model);
+            }
+
+
+
         }
+
     });
 
 
@@ -72,20 +135,23 @@ head.ready(function () {
 //        template: $('#ProductListTemplate').html(),
 
         initialize: function(){
+
             this.render();
-            this.$el.html();
+            this.collection.on('destroy', this.render, this);
         },
 
         render: function(){
-
-            this.collection.each(this.showProduct, this);
+//            var tmp = Handlebars.compile( this.template );
 //            $(this.el).html(tmp );
+            console.log(this.collection);
+            this.$el.empty();
+            this.collection.each(this.showProduct, this);
+
         },
 
         showProduct: function(prodcut){
             app.v.product1 = new app.view.cartProduct({ model: prodcut });
             this.$el.append(app.v.product1.el);
-
         }
 
     });
@@ -100,6 +166,5 @@ head.ready(function () {
     app.collection.plist.add(app.m.product2);
 
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
-
-
+    app.v.plist.render();
 });
