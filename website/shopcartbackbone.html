@@ -35,12 +35,7 @@
                 </ul>
             </li>
         </ul>
-        <div class="my-weibo">
-            <iframe width="100%" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"
-                    scrolling="no" border="0"
-                    src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=100%&height=24&uid=1960499323&style=3&btn=light&dpc=1">
-            </iframe>
-        </div>
+
     </div>
 </div>
 <!--toolbar end-->
@@ -151,7 +146,7 @@
 
     <div class="mod-cart">
         <div class="bd">
-            <div class="cart-list">
+            <div class="cart-list" >
                 <ul class="cart-head">
                     <li class="column col-name">商品名称</li>
                     <li class="column col-price">单价</li>
@@ -216,7 +211,49 @@
                     </li>
                 </ul>
 
-                <ul class="cart-body cart-default">
+
+
+                <ul class="cart-body cart-default" id="normalproductList">
+
+                            <script id="ProductTemplate" type="text/x-handlebars-template">
+
+                                    <div class="column col-name">
+                                        <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
+                                        <div class="goods-info">
+                                            <p class="name">
+                                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" id="productname" >{{productname}} </a>
+                                            </p>
+                                            <p class="gifts">
+                                                <span class="font-green">[促销]</span>
+                                                <a onclick="" href="javascript:;">{{productpromotiontext}}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="column col-price">
+                                        <del >&yen;{{normalprice}}</del>
+                                        <strong >&yen;{{promotionprice}}</strong>
+                                    </div>
+                                    <div class="column col-number">
+                                        <span class="wrap-input">
+                                            <span class="reduce" id="productquantityreduce" >-</span>
+                                            <input class="input" name="productquantity" type="text"  />
+                                            <span class="add" id="productquantityadd">+</span>
+                                        </span>
+                                        <p id="nostock_tips" class="col-tips hide">库存不足</p>
+                                    </div>
+                                    <div class="column col-subtotal">
+                                        <strong class="font-red" name="producttotalpricetext"></strong>
+                                    </div>
+                                    <div class="column col-luckyStar">
+                                        99
+                                    </div>
+                                    <div class="column col-operation">
+                                        <a id="productdel" href="#">删除</a>
+                                    </div>
+
+                            </script>
+
+
                     <li class="clearfix">
                         <div class="column col-name">
                             <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
@@ -237,7 +274,7 @@
                         <div class="column col-number">
                         <span class="wrap-input">
                             <span class="reduce" onclick="">-</span>
-                            <input class="input" id="" type="text" value="1" />
+                            <input class="input"  type="text" value="1" />
                             <span class="add" onclick="">+</span>
                         </span>
                         </div>
@@ -271,7 +308,7 @@
                         <div class="column col-number">
                     <span class="wrap-input">
                         <span class="reduce" onclick="">-</span>
-                        <input class="input" id="" type="text" value="1" />
+                        <input class="input"  type="text" value="1" />
                         <span class="add" onclick="">+</span>
                     </span>
                         </div>
@@ -305,10 +342,10 @@
                     <div class="column col-number">
                         <span class="wrap-input">
                             <span class="reduce" onclick="">-</span>
-                            <input class="input" id="" type="text" value="100" />
+                            <input class="input"  type="text" value="100" />
                             <span class="add" onclick="">+</span>
                         </span>
-                        <p id="j_tips" class="col-tips">库存不足</p>
+                        <p class="col-tips">库存不足</p>
                     </div>
                     <div class="column col-subtotal">
                         <strong class="font-red">¥99.00</strong>
@@ -336,7 +373,7 @@
                     <div class="column col-number">
                     <span class="wrap-input">
                         <span class="reduce" onclick="">-</span>
-                        <input class="input" id="" type="text" value="1" />
+                        <input class="input"  type="text" value="1" />
                         <span class="add" onclick="">+</span>
                     </span>
                     </div>
@@ -370,7 +407,7 @@
                         <div class="column col-number">
                         <span class="wrap-input">
                             <span class="reduce" onclick="">-</span>
-                            <input class="input" id="" type="text" value="1" />
+                            <input class="input"  type="text" value="1" />
                             <span class="add" onclick="">+</span>
                         </span>
                         </div>
@@ -400,7 +437,7 @@
                         <div class="column col-number">
                     <span class="wrap-input">
                         <span class="reduce" onclick="">-</span>
-                        <input class="input" id="" type="text" value="1" />
+                        <input class="input"  type="text" value="1" />
                         <span class="add" onclick="">+</span>
                     </span>
                         </div>
@@ -470,8 +507,6 @@
                         </div>
                     </li>
                 </ul>
-
-
             </div>
             <div class="cart-total">
                 <div class="cart-clear fl">
@@ -767,7 +802,13 @@
 <script type="text/javascript">
     head.js("js/jquery-1.7.2.min.js",
             "js/my/dialog.js",
-            "js/my/hp1.js"
+            "js/my/hp1.js",
+            "js/underscore-1.4.3.min.js ",
+            "js/backbone-0.9.9.min.js",
+            "js/backbone_modelbinder-0.1.6.min.js",
+            "js/backbone-validation-0.7.0.min.js",
+            "js/handlebars-rc1.min.js",
+            "js/my/shoppingcart.js"
             );
 </script>
 <script type="text/javascript">
@@ -775,10 +816,7 @@
         $("#btn_giftSelect").click(function(e){
             e.preventDefault();
           $(".goods-list").show();
-        });
-
-
-
+    });
 });
 </script>
 </body>

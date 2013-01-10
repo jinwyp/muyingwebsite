@@ -98,7 +98,6 @@
                         SwitchTo(($(r[0]).length==0)?obj:$(r[0]))
                 }
             });
-
         })
     };
 })(jQuery);
