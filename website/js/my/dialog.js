@@ -25,34 +25,70 @@
              .appendTo("body")
      }
 
-     var $this = $("#dialog").addClass(this._class), _this = this,
-         content = $this.find(".dialog-content"),
-         topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div></div>'),
-         btncon = $('<div class="btm-wrap"><div class="pngfix cbl"></div><div class="pngfix fixwidth cbm"></div><div class="pngfix cbr"></div></div>');
+     var $this = $("#dialog").addClass(this._class), _this = this;
 
-    content.wrap('div.con-wrap').before(topcon).after(btncon);
-    content.before('<div class="pngfix fixheight cml"></div>').after('<div class="pngfix fixheight cmr"></div>');
+     function init(){
+         var content = $this.find(".dialog-content"),
+             topcon = $('<div class="top-wrap"><div class="pngfix ctl"></div><div class="pngfix fixwidth ctm"></div><div class="pngfix ctr"></div></div>'),
+             btncon = $('<div class="btm-wrap"><div class="pngfix cbl"></div><div class="pngfix fixwidth cbm"></div><div class="pngfix cbr"></div></div>');
+         content.wrap('div.con-wrap').before(topcon).after(btncon);
+         content.append('<div class="pngfix fixheight cml"></div><div class="pngfix fixheight cmr"></div>');
+         var cw = content.width(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(cw+clw+crw);
+         content.css("margin-left",clw);
+         content.find(".cml").css({left:-clw,height:"100%"});
+         content.find(".cmr").css("right",-clw);
+         $this.find(".fixwidth").width(cw);
+         $this.css("margin-left",-dw.width()/2);
 
-     if(this.HTML){
-         if(this.useAjax){
-             $.ajax({
-                 url:_this.HTML,
-                 dataType:"html",
-                 success:function(data){
-                     $this.find(".gost-content").html(data)
-                 },
-                 complete:function(){
-                     setTimeout(fixit,25)
-                 },
-                 fail:function(){
-                     $this.find(".gost-content").text("对不起，出错了")
+         if(_this.HTML){
+             if(_this.useAjax){
+                 $.ajax({
+                     url:_this.HTML,
+                     dataType:"html",
+                     success:function(data){
+                         $this.find(".gost-content").html(data)
+                     },
+                     complete:function(){
+                         if(!!_this.showEvent){
+                             _this.showEvent()
+                         }
+                     },
+                     fail:function(){
+                         $this.find(".gost-content").text("对不起，出错了")
+                     }
+                 })
+             }else{
+                 $this.find(".gost-content").html(_this.HTML);
+                 if(!!_this.showEvent){
+                     _this.showEvent()
                  }
-             })
-         }else{
-             $this.find(".gost-content").html(this.HTML);
-             fixit();
+             }
+         }
+         //针对IE6
+         if($.browser.msie&&($.browser.version=="6.0")&&!$.support.style){
+             var reset = function(){
+                 var ch = content.height();
+                 $this.find(".fixheight").height(ch);
+             };
+             reset();
+             content.delegate([],"click",reset)
+         }
+         if(_this.png_fix){
+             $this.find(".pngfix").pngfix()
+         }
+         if(_this.showclose===false){
+             $this.find(".close").remove()
          }
 
+         if(!_this.title){
+             $this.find(".title").remove()
+         }
+         $this.animate({top:($(window).height()-$this.height())/2},200);
+     }
+
+     function thisClose(){
+         $this.slideUp(200,function(){$this.remove()});
+         cover.fadeOut(300,function(){cover.remove()});
      }
 
      $this.find(".close").click(function(){
@@ -61,37 +97,7 @@
          return false
      });
 
-     var cw = content.width(), ch = content.height(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(cw+clw+crw), dh = $this.height();
-     $this.find(".fixwidth").width(cw);
-     $this.find(".fixheight").height(ch);
-     $this.css({
-        "margin-left":-dw.width()/2
-     });
-     console.log($("#dialog").height());
-     if(this.png_fix){
-        $this.find(".pngfix").pngfix()
-     }
-     if(this.showclose===false){
-        $this.find(".close").remove()
-     }
-
-     if(!this.title){
-        $this.find(".title").remove()
-     }
-
-     function fixit(){
-         $this.find(".fixwidth").width(content.width());
-         $this.find(".fixheight").height(content.height());
-         $this.animate({top:($(window).height()-$this.height())/2},200);
-         if(!!_this.showEvent){
-             _this.showEvent()
-         }
-     }
-
-     function thisClose(){
-         $this.fadeOut(200,function(){$this.remove()});
-         cover.fadeOut(300,function(){cover.remove()});
-     }
+     init();
 
      return {
          close : thisClose

@@ -45,16 +45,18 @@
 }
 .cml{
     width:34px;
-    float: left;
+    height:100%;
     background:url(../images/dialog/cml.png) repeat-y 0 0;
-    position: relative;
+    position: absolute;
+    top:0;
     z-index: 0;
 }
 .cmr{
     width:38px;
-    float: right;
+    height:100%;
     background:url(../images/dialog/cmr.png) repeat-y 0 0;
-    position: relative;
+    position: absolute;
+    top:0;
     z-index: 0;
 }
 .cbl{
@@ -92,7 +94,6 @@
     min-height:100px;
     width:300px;
     background:#fffbe1;
-    float: left;
     position: relative;
     z-index: 2;
 }
@@ -110,7 +111,7 @@
 }
 .dialog-content .checksubs{
     overflow: hidden;
-    zoom: 1;
+    zoom:1;
     padding:10px 0 0 0
 }
 .dialog-content .checksubs label{
@@ -159,7 +160,7 @@
     margin:0 auto
 }
 .gost-content{
-    padding: 10px;
+    padding: 10px 0;
     overflow: hidden;
     zoom:1
 }
@@ -210,17 +211,11 @@
 }
 .login-dialog .cml{
     width:8px;
-    float: left;
     background:#333;
-    position: relative;
-    z-index: 0;
 }
 .login-dialog .cmr{
     width:8px;
-    float: right;
     background:#333;
-    position: relative;
-    z-index: 0;
 }
 .login-dialog .cbl{
     width:8px;
@@ -239,14 +234,16 @@
     float: left;
     background:#333
 }
-
+body{
+    height: 100%;
+}
 .login-dialog .dialog-content{
-    min-height:100px;
     width:420px;
-    background:#fffbe1;
-    float: left;
+    background:#fff;
     position: relative;
     z-index: 2;
+    overflow:visible;
+    height:100%
 }
 .login-dialog .dialog-content h2{
     display: block;

@@ -8,6 +8,7 @@
     <link href="css/base.css" rel="stylesheet" type="text/css"/>
     <link href="css/category.css" rel="stylesheet"  type="text/css"/>
     <link rel="stylesheet" href="css/dialog.css" type="text/css">
+    <link rel="stylesheet" href="css/register.css" type="text/css">
 </head>
 <body>
 
@@ -40,8 +41,14 @@
                 useAjax:true,
                 HTML:"html.html",
                 showEvent:function(){
-                    $("#btn2").click(function(){
-                        cc.close();
+                    $("#login-btn").click(function(){
+                        if($("#login-email").val()==""){
+                            $(".error-tips").show().find("p").text("请填写电子邮箱")
+                        }else if($("#password").val()==""){
+                            $(".error-tips").show().find("p").text("请填写登录密码")
+                        }else{
+                            cc.close();
+                        }
                     })
                 }
             });
