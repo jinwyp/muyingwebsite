@@ -45,14 +45,25 @@ head.ready(function () {
         template: $('#ProductTemplate').html(),
 
         initialize: function(){
+            this._modelBinder = new Backbone.ModelBinder();
             this.render();
         },
 
         render: function(){
-            Backbone.ModelBinder.bind(this.model, this.el);
+            this._modelBinder.bind(this.model, this.el);
             console.log(this.model);
             var tmp = Handlebars.compile( this.template );
             $(this.el).html(tmp( this.model.toJSON()) );
+        },
+
+        events: {
+            "click #goordafds": "loginsubmit",
+
+        },
+
+        loginsubmit: function(e){
+            e.preventDefault();
+            console.log(this.model);
         }
     });
 
