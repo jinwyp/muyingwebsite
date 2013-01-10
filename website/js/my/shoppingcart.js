@@ -27,13 +27,19 @@ head.ready(function () {
             producttotalpricetext : 0,
             productluckynumber : 0,
 
-            productpromotiongift : 0, //是否参与赠品活动
+            productgift : 0, //是否是赠品
+            productexchange : 0, //是否是换购商品
+            productexchangeprice : 88, //换购价格
+
+            productpromotiongift : 0, //是否参与赠品活动 不参与为0,参与为赠品活动ID
             productpromotiongiftnumber : 0, //赠品满足条件金额
-            productpromotionexchange : 0, //是否参与换购活动
+
+            productpromotionexchange : 0, //是否参与换购活动 不参与为0,参与为换购活动ID
             productpromotionexchangenumber : 0, //换购满足条件金额
-            productpromotionmanjian : 0, //是否参与满减
+
+            productpromotionmanjian : 0, //是否参与满减 不参与为0,参与为满减活动ID
             productpromotionmanjiannumber : 90, //满减满足条件金额
-            productpromotionmanjiandiscount : 10 //满减满足条件金额
+            productpromotionmanjiandiscount : 10 //满减优惠金额
         }
     });
 
@@ -80,7 +86,6 @@ head.ready(function () {
                     console.log(this.model);
                 }
 
-
 //                $(this.el).find('#nostock_tips').html('数量太少').fadeIn();
             }else{
                 this.model.set("productquantity", (this.model.get("productquantity") -1) );
@@ -123,13 +128,8 @@ head.ready(function () {
                 this.model.destroy();
                 console.log(this.model);
             }
-
-
-
         }
-
     });
-
 
     app.view.cartProductList = Backbone.View.extend({
 //        template: $('#ProductListTemplate').html(),
