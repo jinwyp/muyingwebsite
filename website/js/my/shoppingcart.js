@@ -15,7 +15,7 @@ head.ready(function () {
 
     window.app = app;
 
-
+    /* Model 开始  */
 
     app.model.Product = Backbone.Model.extend({
         defaults : {
@@ -72,6 +72,8 @@ head.ready(function () {
         model: app.model.PromotionManjian
     });
 
+    /* View 开始  */
+
     app.view.cartProduct = Backbone.View.extend({
         tagName: 'li',
         className: 'clearfix',
@@ -115,7 +117,6 @@ head.ready(function () {
                 this.sumtotal();
                 $(this.el).find('#nostock_tips').fadeOut();
             }
-
         },
 
         quantityadd: function(){
@@ -128,7 +129,6 @@ head.ready(function () {
                 this.sumtotal();
                 $(this.el).find('#nostock_tips').fadeOut();
             }
-
         },
 
         sumtotal: function(){
@@ -169,19 +169,63 @@ head.ready(function () {
             console.log(this.collection);
             this.$el.empty();
             this.collection.each(this.showProduct, this);
-
         },
 
         showProduct: function(prodcut){
             app.v.product1 = new app.view.cartProduct({ model: prodcut });
             this.$el.append(app.v.product1.el);
         }
+    });
 
+    /* View 开始满减  */
+
+    app.view.cartManjianList = Backbone.View.extend({
+
+        initialize: function(){
+            this.render();
+            this.collection.on('destroy', this.render, this);
+        },
+
+        render: function(){
+//            var tmp = Handlebars.compile( this.template );
+//            $(this.el).html(tmp );
+
+
+            this.collection.each(this.showProduct, this);
+        },
+
+        showProduct: function(prodcut){
+            app.v.manijan1 = new app.view.cartManjian({ model: prodcut });
+            this.$el.append(app.v.manijan1.el);
+        }
+    });
+
+    app.view.cartManjian = Backbone.View.extend({
+        tagName: 'ul',
+        className: 'cart-body cart-fullReduction',
+        template: $('#ManjianTemplate').html(),
+
+        initialize: function(){
+            this._modelBinder = new Backbone.ModelBinder();
+
+            this.render();
+        },
+
+        render: function(){
+
+            var tmp = Handlebars.compile( this.template );
+            $(this.el).html(tmp( this.model.toJSON()) );
+            this._modelBinder.bind(this.model, this.el);
+            console.log(this.model);
+        },
     });
 
 
+
+
+// 开始普通商品列表部分
     app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", productnormalprice: 400});
-    app.m.product2 = new app.model.Product({productname: "贝亲婴3212312", productnormalprice: 200});
+    app.m.product2 = new app.model.Product({productname: "贝亲321231232123123212312", productnormalprice: 200});
 
     app.collection.plist = new app.model.Productlist();
 
@@ -189,5 +233,18 @@ head.ready(function () {
     app.collection.plist.add(app.m.product2);
 
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
-    app.v.plist.render();
+
+// 开始满减商品部分
+    app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤00立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
+    app.m.promotionmanjian2 = new app.model.PromotionManjian({promotionid: 11532, promotionname: "2013健康领跑 优你钙 满99元减20元", promotionmanjiandiscount1:20, promotionmanjiancondition1: 99, promotionmanjiandiscount2:40, promotionmanjiancondition2: 300});
+
+    app.collection.manjianlist = new app.model.PromotionManjianList();
+
+    app.collection.manjianlist.add(app.m.promotionmanjian1);
+    app.collection.manjianlist.add(app.m.promotionmanjian2);
+
+    app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
+
+
+
 });
