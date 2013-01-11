@@ -152,6 +152,29 @@ $(document).ready(function () {
                     length: 0.2
                 }
             };
+            if($this.attr("data-tip")=="nomore"){
+                var tip = $("<a>你不能再购买该商品了</a>").css({
+                    position:"absolute",
+                    display:"block",
+                    background:"#FF7800",
+                    width:"100%",
+                    height:"40px",
+                    "line-height":"40px",
+                    "text-align":"center",
+                    border:"3px solid #ccc",
+                    top:-40,
+                    color:"#333",
+                    "font-weight":"bold",
+                    opacity:0.9,
+                    "z-index":0
+                }).appendTo(pr).animate({top:190},300,function(){
+                        $this.unbind("click");
+                        setTimeout(function(){
+                           tip.fadeOut()
+                        },1000)
+                    });
+                return false
+            }
             clone.css({position:"absolute"}).appendTo(pr);
             if(!clone.is(":animated")){
                 clone.animate({
