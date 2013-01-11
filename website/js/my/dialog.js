@@ -35,7 +35,7 @@
          content.append('<div class="pngfix fixheight cml"></div><div class="pngfix fixheight cmr"></div>');
          var cw = content.width(), clw = $this.find('.ctl').width(), crw = $this.find('.ctr').width(), dw = $this.width(cw+clw+crw);
          content.css("margin-left",clw);
-         content.find(".cml").css({left:-clw,height:"100%"});
+         content.find(".cml").css("left",-clw);
          content.find(".cmr").css("right",-clw);
          $this.find(".fixwidth").width(cw);
          $this.css("margin-left",-dw.width()/2);
@@ -52,6 +52,7 @@
                          if(!!_this.showEvent){
                              _this.showEvent()
                          }
+                         toMiddle()
                      },
                      fail:function(){
                          $this.find(".gost-content").text("对不起，出错了")
@@ -59,6 +60,7 @@
                  })
              }else{
                  $this.find(".gost-content").html(_this.HTML);
+                 toMiddle();
                  if(!!_this.showEvent){
                      _this.showEvent()
                  }
@@ -69,9 +71,10 @@
              var reset = function(){
                  var ch = content.height();
                  $this.find(".fixheight").height(ch);
+                 toMiddle()
              };
              reset();
-             content.delegate([],"click",reset)
+             content.delegate([],"click",reset);
          }
          if(_this.png_fix){
              $this.find(".pngfix").pngfix()
@@ -83,12 +86,15 @@
          if(!_this.title){
              $this.find(".title").remove()
          }
-         $this.animate({top:($(window).height()-$this.height())/2},200);
      }
 
      function thisClose(){
          $this.slideUp(200,function(){$this.remove()});
          cover.fadeOut(300,function(){cover.remove()});
+     }
+
+     function toMiddle(){
+         return $this.animate({top:($(window).height()-$this.height())/2},200);
      }
 
      $this.find(".close").click(function(){
