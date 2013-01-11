@@ -15,6 +15,8 @@ head.ready(function () {
 
     window.app = app;
 
+
+
     app.model.Product = Backbone.Model.extend({
         defaults : {
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
@@ -43,11 +45,32 @@ head.ready(function () {
         }
     });
 
+
     app.model.Productlist = Backbone.Collection.extend({
         model: app.model.Product
-
     });
 
+
+    app.model.PromotionManjian = Backbone.Model.extend({
+        defaults : {
+            promotionid : 0, //是否参与满减 不参与为0,参与为满减活动ID
+            promotionname : '全场纸尿裤200立减20, //满减满足条件金额',
+            promotiontotalprice : 0,  //参与满减商品当前总金额
+            promotionmanjiandiscount : 10, //满减优惠金额
+            promotionmanjiancondition : 90, //满减满足条件金额
+            promotionmanjiandiscount1 : 10, //满减优惠金额
+            promotionmanjiancondition1 : 90, //满减满足条件金额
+            promotionmanjiandiscount1 : 10, //满减优惠金额
+            promotionmanjiancondition2 : 90, //满减满足条件金额
+            promotionmanjiandiscount2 : 10, //满减优惠金额
+            promotionmanjiancondition3 : 90, //满减满足条件金额
+            promotionmanjiandiscount3 : 10 //满减优惠金额
+        }
+    });
+
+    app.model.PromotionManjianList = Backbone.Collection.extend({
+        model: app.model.PromotionManjian
+    });
 
     app.view.cartProduct = Backbone.View.extend({
         tagName: 'li',
