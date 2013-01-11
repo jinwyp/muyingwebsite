@@ -131,6 +131,7 @@ $(function(){
             max:1,
             onError:"你还没有同意用户协议"
         });
+    if($("#email").length)
     $("#email").selectView();
 
 
@@ -226,14 +227,14 @@ $(function(){
             max:1,
             onError:"请选择是否有宝宝"
         });
-
+    if($("#third-email").length)
     $("#third-email").selectView();
 });
 
 //登录部分
 $(function(){
 
-
+    if($("#login-email").length)
     $("#login-email").selectView();
     $(".login-form input[class='txt']").each(function(){
         var $this = $(this);
@@ -477,6 +478,7 @@ $(function(){
             onError:"填入的验证码不正确"
         });
 
+    if($("#forget-email").length)
     $("#forget-email").selectView();
 
     $("#new-password")
