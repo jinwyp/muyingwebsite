@@ -298,7 +298,7 @@
 
     <div class="mod-cart">
         <div class="bd">
-            <div class="cart-list" >
+            <div class="cart-list" id="allist" >
                 <ul class="cart-head">
                     <li class="column col-name">商品名称</li>
                     <li class="column col-price">单价</li>
@@ -436,7 +436,7 @@
                                     </div>
                                     <div class="column col-price">
                                         <del >&yen;{{normalprice}}</del>
-                                        <strong >&yen;{{promotionprice}}</strong>
+                                        <strong >&yen;{{productfinalprice}}</strong>
                                     </div>
                                     <div class="column col-number">
                                         <span class="wrap-input">
@@ -533,6 +533,21 @@
                         </div>
                     </li>
                 </ul>
+
+
+                    <script id="ManjianTemplate" type="text/x-handlebars-template">
+
+                        <li class="hd-fullReduction">
+                                <span class="title" >
+                                    <span class="font-red">[满减]</span><span name="promotionname">{{promotionname}}</span>
+                                    <span class="tips" id="manjiandiffinfo">再买<strong name="promotiontotaldifferenceprice" class="font-red"></strong>即可立减<strong class="font-red">{{promotionmanjiandiscount}}元</strong></span>
+                                </span>
+                                <span class="money" ><strong class="font-red" name="promotiontotalpricetext"></strong>
+                                    <span class="icon-reduce" id="manjiandiscountinfo">已减&yen;{{promotionmanjiandiscount}}</span>
+                                </span>
+                        </li>
+                    </script>
+
 
                 <ul class="cart-body cart-fullReduction">
                 <li class="hd-fullReduction"><span class="title"><span class="font-red">[满减]</span>全场纸尿裤200立减20</span><span class="money"><strong class="font-red">&yen;5.00</strong><span class="icon-reduce">已减&yen;20.00</span></span></li>
