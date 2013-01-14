@@ -156,10 +156,7 @@ head.ready(function () {
 
         quantityreduce: function(){
             if(this.model.get("productquantity") < 2 ){
-                if(confirm("确认删除?")){
-                    this.model.destroy();
-                    console.log(this.model);
-                }
+                this.showDeleteBox();
 
 //                $(this.el).find('#nostock_tips').html('数量太少').fadeIn();
             }else{
@@ -185,7 +182,6 @@ head.ready(function () {
             var productsumtotal;
             productsumtotal = this.model.get('productquantity') * this.model.get('productfinalprice');
 
-
             this.model.set("producttotalprice", productsumtotal);
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
             this.model.set("producttotalpricetext", rmb + this.model.get("producttotalprice").toFixed(2) );
@@ -193,22 +189,26 @@ head.ready(function () {
 
         delete: function(e) {
             e.preventDefault();
-                $(this.el).find("#productdel").after($("#j_delTips").animate({
-                        left: '-60px',opacity: 'show'
-                    },
-                    "500")
-                );
-
+            this.showDeleteBox();
         },
+
+        showDeleteBox: function() {
+            $(this.el).find("#productDel").hide();
+            $(this.el).find("#j_delTips").animate({
+                    left: '-60px',opacity: 'show'
+                },
+                "500");
+        },
+
         deleteCancel: function(e) {
             e.preventDefault();
-
+            $(this.el).find("#productDel").show();
             $(this.el).find("#j_delTips").animate({
                         left: '0',opacity: 'hide'
                     },
                     "500");
-
         },
+
         deleteSuccess: function(e) {
             var that = this;
             $(this.el).fadeOut(function(){
@@ -216,7 +216,6 @@ head.ready(function () {
                 }
             );
             console.log(this.model);
-
         }
     });
 
@@ -295,29 +294,30 @@ head.ready(function () {
             $(this.el).html(tmp( this.model.toJSON()) );
             this.showManjianInfo();
             this._modelBinder.bind(this.model, this.el);
-
+            $(this.el).find("#manjiandiscountinfo").hide();
             this.manjianproductlist.each(this.showProduct, this);
         },
 
         showProduct: function(prodcut){
             app.v.product2 = new app.view.cartProduct({ model: prodcut });
             this.$el.append(app.v.product2.el);
-
         },
 
         showManjianInfo: function(){
+            //显示满减信息提示
+
             this.model.set("promotiontotalprice", this.manjianproductlist.productTotalPrice() );
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
             this.model.set("promotiontotalpricetext", rmb + this.model.get("promotiontotalprice").toFixed(2) );
             console.log(this.model.get("promotionmanjiancondition"));
             var manjiandiff = this.model.get("promotionmanjiancondition") - this.model.get("promotiontotalprice");
             if( manjiandiff > 0 ){
-                $(this.el).find("#manjiandiscountinfo").hide();
-                $(this.el).find("#manjiandiffinfo").show();
+                $(this.el).find("#manjiandiscountinfo").fadeOut();
+                $(this.el).find("#manjiandiffinfo").fadeIn();
                 this.model.set("promotiontotaldifferenceprice", manjiandiff );
             }else{
-                $(this.el).find("#manjiandiscountinfo").show();
-                $(this.el).find("#manjiandiffinfo").hide();
+                $(this.el).find("#manjiandiscountinfo").fadeIn();
+                $(this.el).find("#manjiandiffinfo").fadeOut();
             }
         }
 
