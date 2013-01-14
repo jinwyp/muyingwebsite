@@ -154,7 +154,7 @@ head.ready(function () {
             "click #productaa": "loginsubmit",
             "click #productquantityreduce": "quantityreduce",
             "click #productquantityadd": "quantityadd",
-            "click #productDel": "delete",
+            "click #productDel": "_delete",
             "click #btnCancel": "deleteCancel",
             "click #btnAffirm": "deleteSuccess"
         },
@@ -197,7 +197,7 @@ head.ready(function () {
             this.model.set("producttotalpricetext", rmb + this.model.get("producttotalprice").toFixed(2) );
         },
 
-        delete: function(e) {
+        _delete: function(e) {
             e.preventDefault();
             this.showDeleteBox();
         },
@@ -229,7 +229,7 @@ head.ready(function () {
                     that.model.destroy();
                 }
             );
-            console.log(this.model);
+            //console.log(this.model);
         }
     });
 
@@ -249,7 +249,7 @@ head.ready(function () {
         render: function(){
 //            var tmp = Handlebars.compile( this.template );
 //            $(this.el).html(tmp );
-            console.log(app.collection.pnormallist);
+            //console.log(app.collection.pnormallist);
 
             this.$el.empty();
             app.collection.pnormallist.each(this.showProduct, this);
@@ -294,7 +294,7 @@ head.ready(function () {
             this.manjianproductlist = app.collection.plist.byManjianProduct(this.model.get('promotionid'));
 
             this._modelBinder = new Backbone.ModelBinder();
-            console.log(this.manjianproductlist);
+            //console.log(this.manjianproductlist);
 
             this.manjianproductlist.on('destroy', this.render, this);
             this.manjianproductlist.on('change', this.showManjianInfo, this);
@@ -323,7 +323,7 @@ head.ready(function () {
             this.model.set("promotiontotalprice", this.manjianproductlist.productTotalPrice() );
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
             this.model.set("promotiontotalpricetext", rmb + this.model.get("promotiontotalprice").toFixed(2) );
-            console.log(this.model.get("promotionmanjiancondition"));
+            //console.log(this.model.get("promotionmanjiancondition"));
             var manjiandiff = this.model.get("promotionmanjiancondition") - this.model.get("promotiontotalprice");
             if( manjiandiff > 0 ){
                 $(this.el).find("#manjiandiscountinfo").fadeOut();
