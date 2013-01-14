@@ -172,6 +172,7 @@ head.ready(function () {
                 //如果大于库存数量显示提示库存不足
                 $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
             }else{
+                this.hideDeleteBox();
                 this.model.set("productquantity", (this.model.get("productquantity") +1) );
                 this.sumtotal();
                 $(this.el).find('#nostock_tips').fadeOut();
@@ -200,13 +201,17 @@ head.ready(function () {
                 "500");
         },
 
-        deleteCancel: function(e) {
-            e.preventDefault();
+        hideDeleteBox: function() {
             $(this.el).find("#productDel").show();
             $(this.el).find("#j_delTips").animate({
-                        left: '0',opacity: 'hide'
-                    },
-                    "500");
+                    left: '0',opacity: 'hide'
+                },
+                "500");
+        },
+
+        deleteCancel: function(e) {
+            e.preventDefault();
+            this.hideDeleteBox();
         },
 
         deleteSuccess: function(e) {
