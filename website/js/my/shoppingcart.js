@@ -117,6 +117,30 @@ head.ready(function () {
     });
 
 
+    /* Model 赠品信息模型 */
+    app.model.Gift = Backbone.Model.extend({
+        defaults : {
+            promotionid : 0, //赠品活动ID, 不参与为0,参与为满减活动ID
+            promotionname : '周末买满200元即可免费领取以下任一赠品，抢完为止。',
+            promotiontotalprice : 0,  //参与满减商品当前总金额
+            promotiontotalpricetext : 0,  //参与满减商品当前总金额
+            promotiontotaldifferenceprice : 0,  //参与满减商品当前总金额还差多少够满减
+
+            promotionmanjiandiscount : 0, //满减优惠金额
+            promotionmanjiancondition : 0, //满减满足条件金额
+        },
+
+        initialize: function() {
+            if(this.get("promotionprice") > 0 ){
+                this.set("productfinalprice", this.get("promotionprice"));
+            }else{
+                this.set("productfinalprice", this.get("normalprice"));
+            };
+
+            this.set("producttotalprice", (this.get("productfinalprice") * this.get("productquantity") ) );
+        }
+    });
+
 
 
 
@@ -206,16 +230,14 @@ head.ready(function () {
             $(this.el).find("#productDel").hide();
             $(this.el).find("#j_delTips").animate({
                     left: '-60px',opacity: 'show'
-                },
-                "500");
+                }, "500");
         },
 
         hideDeleteBox: function() {
             $(this.el).find("#productDel").show();
             $(this.el).find("#j_delTips").animate({
                     left: '0',opacity: 'hide'
-                },
-                "500");
+                }, "500");
         },
 
         deleteCancel: function(e) {
