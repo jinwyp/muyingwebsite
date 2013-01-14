@@ -80,7 +80,6 @@ head.ready(function () {
                 return memo + product.get("producttotalprice")
             }, 0);
         }
-
     });
 
 
@@ -137,6 +136,17 @@ head.ready(function () {
 
             var tmp = Handlebars.compile( this.template );
             $(this.el).html(tmp( this.model.toJSON()) );
+
+            //商品赠品图标
+            if(this.model.get('productgift') > 0 ){
+                $(this.el).find("#icon-gift").show();
+            };
+
+            //商品换购图标
+            if(this.model.get('productexchange') > 0 ){
+                $(this.el).find("#icon-redemption").show();
+            };
+
             this._modelBinder.bind(this.model, this.el);
         },
 
@@ -151,7 +161,6 @@ head.ready(function () {
 
         loginsubmit: function(e){
 //            e.preventDefault();
-
         },
 
         quantityreduce: function(){
@@ -332,7 +341,7 @@ head.ready(function () {
 
 
 // 开始普通商品列表部分
-    app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:10, productpromotionmanjian : 0});
+    app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:10, productpromotionmanjian : 0, productexchange:1 });
     app.m.product2 = new app.model.Product({productname: "贝亲321231232123123212312", productnormalprice: 200, promotionprice:120, productpromotionmanjian : 0});
     app.m.product3 = new app.model.Product({productname: "满减1贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:20, productpromotionmanjian : 11534});
     app.m.product4 = new app.model.Product({productname: "满减1贝亲321231232123123212312", productnormalprice: 20, promotionprice:20, productpromotionmanjian : 11534});
