@@ -156,16 +156,14 @@ $(document).ready(function () {
                 var tip = $("<a>你不能再购买该商品了</a>").css({
                     position:"absolute",
                     display:"block",
-                    background:"#FF7800",
+                    background:"#ffedb5",
                     width:"100%",
-                    height:"40px",
-                    "line-height":"40px",
+                    padding:"2px",
                     "text-align":"center",
-                    border:"3px solid #ccc",
+                    border:"1px solid #ff9900",
                     top:-40,
-                    color:"#333",
-                    "font-weight":"bold",
-                    opacity:0.9,
+                    color:"#e60000",
+                    opacity:1,
                     "z-index":0
                 }).appendTo(pr).animate({top:190},300,function(){
                         $this.unbind("click");
