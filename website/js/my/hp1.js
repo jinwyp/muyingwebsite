@@ -17,7 +17,7 @@ $.fn.tab = function(options) {
         dft: 0,
         effact: null,
         auto: false,
-        TwoF: true, //¿ØÖÆµÚ¶þ¸öÒÆ¿ª2ÃëºóÓÖµ÷»ØµÚÒ»¸ö
+        TwoF: true, //ï¿½ï¿½ï¿½ÆµÚ¶ï¿½ï¿½ï¿½ï¿½Æ¿ï¿½2ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Øµï¿½Ò»ï¿½ï¿½
         autotime: 8000,
         aniSpeed: 500
     }
@@ -236,3 +236,7 @@ var slideTxt={
 $(function(){
 	slideTxt.init();
 });
+
+
+
+

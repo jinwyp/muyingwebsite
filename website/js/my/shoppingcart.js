@@ -71,7 +71,9 @@ head.ready(function () {
             "click #productaa": "loginsubmit",
             "click #productquantityreduce": "quantityreduce",
             "click #productquantityadd": "quantityadd",
-            "click #productdel": "delete"
+            "click #productDel": "delete",
+            "click #btnCancel": "deleteCancel",
+            "click #btnAffirm": "deleteSuccess"
         },
 
         loginsubmit: function(e){
@@ -123,11 +125,30 @@ head.ready(function () {
 
         delete: function(e) {
             e.preventDefault();
+                $(this.el).find("#productdel").after($("#j_delTips").animate({
+                        left: '-60px',opacity: 'show'
+                    },
+                    "500")
+                );
 
-            if(confirm("确认删除?")){
-                this.model.destroy();
-                console.log(this.model);
-            }
+        },
+        deleteCancel: function(e) {
+            e.preventDefault();
+
+            $(this.el).find("#j_delTips").animate({
+                        left: '0',opacity: 'hide'
+                    },
+                    "500");
+
+        },
+        deleteSuccess: function(e) {
+            var that = this;
+            $(this.el).fadeOut(function(){
+                    that.model.destroy();
+                }
+            );
+            console.log(this.model);
+
         }
     });
 
@@ -168,3 +189,4 @@ head.ready(function () {
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
     app.v.plist.render();
 });
+

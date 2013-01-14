@@ -39,8 +39,8 @@ strong{font-weight: 700;}
 
 /*提示*/
 .col-tips{position: absolute;top:26px;left:0;width:72px;padding:2px;border:1px solid #bababa;color:#4d4d4d;background-color: #fff;text-align: center;}
-.col-operation .col-tips{left:-60px;top:0;padding:5px;width:112px;text-align:left;}
-.col-operation .col-tips .btn_s_o{margin-right:10px;}
+.col-operation .col-tips{left:0;top:0;padding:5px;width:112px;text-align:left;}
+.col-operation .col-tips .btn_s_o{margin-right:5px;}
 
 /*赠品换购*/
 .sign-gift,.sign-redemption{float:left;margin-left:-10px;display:inline;width:30px;height:28px;background: url("../images/order/icon_shopcart.gif") no-repeat 0 0;}
