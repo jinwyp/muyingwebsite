@@ -466,8 +466,11 @@
                         99
                     </div>
                     <div class="column col-operation">
-                        <a onclick="" href="javascript:;">删除</a>
-                        <p id="j_delTips" class="col-tips"><span class="btn_s btn_s_o"><a href="">确认删除</a></span><span class="btn_s btn_s_h"><a href="">取消</a></span></p>
+                        <a id="productDel" href="javascript:;" class="btn_del">删除</a>
+                        <p id="j_delTips" class="col-tips hide">
+                            <span class="btn_s btn_s_o btn_affirm"><a  href="javascript:;">确认删除</a></span>
+                            <span class="btn_s btn_s_h btn_cancel"><a href="javascript:;">取消</a></span>
+                        </p>
                     </div>
                 </li>
                 <li class="new clearfix">
@@ -497,7 +500,7 @@
                         99
                     </div>
                     <div class="column col-operation">
-                        <a  onclick="" href="javascript:;">删除</a>
+                        <a id="productDel" href="javascript:;"  class="btn_del">删除</a>
                     </div>
                 </li>
                 </ul>
@@ -531,7 +534,7 @@
                             99
                         </div>
                         <div class="column col-operation">
-                            <a  onclick="" href="javascript:;">删除</a>
+                            <a  onclick="" href="javascript:;"  class="btn_del">删除</a>
                         </div>
                     </li>
                     <li class="clearfix">
@@ -561,7 +564,7 @@
                             99
                         </div>
                         <div class="column col-operation">
-                            <a  onclick="" href="javascript:;">删除</a>
+                            <a  onclick="" href="javascript:;"  class="btn_del">删除</a>
                         </div>
                     </li>
                 </ul>
@@ -770,10 +773,26 @@
             );
 </script>
 <script type="text/javascript">
+
     head.ready(function () {
         $("#btn_giftSelect").click(function(e){
             e.preventDefault();
           $(".goods-list").show();
+        });
+
+        $(".btn_del").click( function (e) {
+            e.preventDefault();
+            $(this).after($("#j_delTips").animate({
+                        left: '-60px',opacity: 'show'
+                    },
+                    "500")
+            );
+        });
+        $("#j_delTips .btn_cancel").click(function() {
+            $("#j_delTips").animate({
+                        left: '0',opacity: 'hide'
+                    },
+                    "500");
         });
 
         var $backToTopTxt = "回顶部", $backToTopEle = $('<div class="gotop"></div>').appendTo($("body"))
