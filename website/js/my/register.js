@@ -119,7 +119,7 @@ $(function(){
             max:4,
             onError:"填入的验证码不正确"
         });
-    $("#agreement")
+    $(":checkbox[name='agreement']")
         .formValidator({
             onShowFixText:"",
             onShow:"你还没有同意用户协议",
@@ -128,13 +128,10 @@ $(function(){
         })
         .inputValidator({
             min:1,
-            max:1,
             onError:"你还没有同意用户协议"
         });
     if($("#email").length)
     $("#email").selectView();
-
-
 
 //第三方登录注册页面
     /*$("#third-us")
