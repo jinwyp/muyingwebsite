@@ -145,7 +145,8 @@ head.ready(function () {
             "click #btnAffirm": "deleteSuccess",
             "keyup .input":"changeval",
             "click #reBuy": "productRebuy",
-            "click #favorites": "productFavorites"
+            "click #favorites": "productFavorites",
+            "keydown .input":"voidval"
         },
 
         loginsubmit: function(e){
@@ -182,12 +183,19 @@ head.ready(function () {
             }
         },
 
+        voidval:function(e){
+            return (e.which>95 && e.which<106) || (e.which>47 && e.which<58)|| e.which == 8 || e.which == 46
+        },
+
         changeval: function(){
+            var reg = new RegExp("^[0-9]*$");
             var val = $(this.el).find("input:eq(0)").val().trim();
+            val = val.replace(/\D/g,'');
+            //if(!reg.test(val)){return $(this.el).find("input:eq(0)").val(1)}
+            if(val==""){$(this.el).find("input:eq(0)").val(0);val=0}
             this.model.set("productquantity", parseInt(val));
             if(this.model.get("productquantity") < 1 ){
                 this.showDeleteBox();
-                this.model.set("productquantity",0);
             }else{
                 if(this.model.get("productquantity") > this.model.get("productstock") ){
                     //如果大于库存数量显示提示库存不足
@@ -238,6 +246,9 @@ head.ready(function () {
         deleteCancel: function(e) {
             e.preventDefault();
             this.hideDeleteBox();
+            if($(this.el).find(".input").val()<1){
+                this.model.set("productquantity",1);
+            }
         },
 
         deleteSuccess: function(e) {
