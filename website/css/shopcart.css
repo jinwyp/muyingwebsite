@@ -84,11 +84,12 @@ strong{font-weight: 700;}
 .mod-favorable .bd{padding-bottom:10px;}
 .mod-favorable dl{float:left;padding:10px;border-bottom:1px dashed #f4f4f4;width:229px;}
 .mod-favorable dt{float:left;}
-.mod-favorable dd p{margin-top:5px;}
+.mod-favorable .name{margin-bottom:5px;}
 
 .goods-list dl{float:left;padding:10px;width:229px;border-bottom: 0 none ;}
 .goods-list dt{float:left;}
-.goods-list dd p{margin-top:5px;}
+.goods-list .goods-name,.goods-list .price{margin-bottom:3px;}
+.goods-list .goods-name{height:18px;overflow: hidden;}
 .goods-list del{color:#bababa;margin-right:5px;}
 .goods-list .now{color:#e60000;font-weight:700;}
 

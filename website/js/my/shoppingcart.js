@@ -117,41 +117,6 @@ head.ready(function () {
         model: app.model.PromotionManjian
     });
 
-    /* Model 被删除商品信息模型*/
-    app.model.RemovedProduct = Backbone.Model.extend({
-        defaults:{
-            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
-            productpromotiontext : '天天特价',
-            normalprice : 138,
-            promotionprice : 0,
-            productfinalprice : 0,
-            productstock : 6,
-            productquantity : 1,
-            producttotalprice : 0,
-            producttotalpricetext : 0,
-            productluckynumber : 0,
-
-            productgift : 0, //是否是赠品
-            productexchange : 0, //是否是换购商品
-            productexchangeprice : 88, //换购价格
-
-            productpromotiongift : 0, //是否参与赠品活动 不参与为0,参与为赠品活动ID
-            productpromotiongiftnumber : 0, //赠品满足条件金额
-
-            productpromotionexchange : 0, //是否参与换购活动 不参与为0,参与为换购活动ID
-            productpromotionexchangenumber : 0, //换购满足条件金额
-
-            productpromotionmanjian : 0, //是否参与满减 不参与为0,参与为满减活动ID
-            productpromotionmanjiannumber : 90, //满减满足条件金额
-            productpromotionmanjiandiscount : 10 //满减优惠金额
-        }
-    });
-    /*Collection 被删除商品列表模型*/
-    app.model.RemovedProductList = Backbone.Collection.extend({
-        model: app.model.RemovedProduct
-    });
-
-
 
     /* View 开始普通商品列表中的单个商品  */
     app.view.cartProduct = Backbone.View.extend({
@@ -178,7 +143,9 @@ head.ready(function () {
             "click #productDel": "_delete",
             "click #btnCancel": "deleteCancel",
             "click #btnAffirm": "deleteSuccess",
-            "keyup .input":"changeval"
+            "keyup .input":"changeval",
+            "click #reBuy": "productRebuy",
+            "click #favorites": "productFavorites"
         },
 
         loginsubmit: function(e){
@@ -248,6 +215,8 @@ head.ready(function () {
         _delete: function(e) {
             e.preventDefault();
             this.showDeleteBox();
+            app.collection.productdeletelist.add(this.model);
+            console.log(app.collection.productdeletelist);
         },
 
         showDeleteBox: function() {
@@ -272,12 +241,20 @@ head.ready(function () {
         },
 
         deleteSuccess: function(e) {
+
             var that = this;
             $(this.el).fadeOut(function(){
+
                     that.model.destroy();
                 }
             );
             //console.log(this.model);
+        },
+        productRebuy: function() {
+            $(this.$el).append();
+        },
+        productFavorites: function() {
+
         }
     });
 
@@ -385,30 +362,29 @@ head.ready(function () {
 
     });
 
-    /* View 开始被删除商品列表中每个商品  */
-    app.view.removedProduct = Backbone.View.extend({
-        tagName: 'li',
-        className: 'clearfix',
-        template: $('#removedAreaTemplate').html(),
+
+    /* View 开始被删除商品列表  */
+    app.view.removedProductList = Backbone.View.extend({
+//        template: $('#ProductListTemplate').html(),
 
         initialize: function(){
-            this._modelBinder = new Backbone.ModelBinder();
             this.render();
+            app.collection.productdeletelist.on('change', this.render, this);
+
         },
 
         render: function(){
-            var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
-            this._modelBinder.bind(this.model, this.el);
+//            var tmp = Handlebars.compile( this.template );
+//            $(this.el).html(tmp );
+            //console.log(app.collection.pnormallist);
+
+            this.$el.empty();
+            app.collection.productdeletelist.each(this.showProduct, this);
         },
 
-        events: {
-            "click #reBuy": "productRebuy",
-            "click #favorites": "productFavorites",
-        },
-
-        productRebuy: function() {
-            $(this.$el).append();
+        showProduct: function(prodcut){
+            app.v.product4 = new app.view.cartProduct({ model: prodcut });
+            this.$el.append(app.v.product4.el);
         }
     });
 
@@ -423,7 +399,7 @@ head.ready(function () {
     app.m.product6 = new app.model.Product({productname: "满减2贝亲321231232123123212312", productnormalprice: 20, promotionprice:10, productpromotionmanjian : 11532});
 
     app.collection.plist = new app.model.Productlist();
-
+    app.collection.productdeletelist = new app.model.Productlist();
 
     app.collection.plist.add(app.m.product1);
     app.collection.plist.add(app.m.product2);
@@ -434,7 +410,7 @@ head.ready(function () {
 
 
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
-
+    app.v.productdellist = new app.view.removedProductList({el:$('#removedArea')});
 
 // 开始满减商品部分
     app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
