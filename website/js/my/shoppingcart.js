@@ -302,24 +302,20 @@ head.ready(function () {
             this.$el.append(app.v.product4.el);
         }
     });
+
+
+
     /* View 开始赠品促销列表  */
     app.view.cartTopGiftList = Backbone.View.extend({
-
 //        template: $('#ProductListTemplate').html(),
 
         initialize: function(){
             this.render();
-
-            app.collection.productdeletelist.on('change', this.render, this);
         },
 
         render: function(){
 //            var tmp = Handlebars.compile( this.template );
 //            $(this.el).html(tmp );
-
-            //console.log(app.collection.pnormallist);
-
-            this.$el.empty();
             this.collection.each(this.showGift, this);
         },
 
@@ -382,7 +378,6 @@ head.ready(function () {
     });
 
 
-
     /* View 点击出现赠品促销里面所有赠品商品列表的一个商品  */
     app.view.cartTopGiftProduct = Backbone.View.extend({
         tagName: 'dl',
@@ -414,6 +409,8 @@ head.ready(function () {
         }
     });
 
+
+
     /* View 购物车中已经添加的赠品商品  */
     app.view.cartGiftProductList = Backbone.View.extend({
         initialize: function(){
@@ -422,7 +419,7 @@ head.ready(function () {
 
         render: function(){
             this.$el.empty();
-            console.log(app.collection.giftaddedproductlist);
+//            console.log(app.collection.giftaddedproductlist);
             app.collection.giftaddedproductlist.each(this.showProduct, this);
         },
 
@@ -502,6 +499,8 @@ head.ready(function () {
 
     app.v.freegiftlist = new app.view.cartTopGiftList({ collection: app.collection.giftlist, el: $('#promotiongiftlist') });
     app.v.cartgiftlist = new app.view.cartGiftProductList({ collection: app.collection.giftaddedproductlist, el: $('#freegiftproductlist') });
+
+
 
 
 });
