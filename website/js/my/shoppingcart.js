@@ -44,9 +44,9 @@ head.ready(function () {
             "click #btnCancel": "deleteCancel",
             "click #btnAffirm": "deleteSuccess",
             "keyup .input":"changeval",
+            "keydown .input":"voidval",
             "click #reBuy": "productRebuy",
-            "click #favorites": "productFavorites",
-            "keydown .input":"voidval"
+            "click #favorites": "productFavorites"
         },
 
         quantityreduce: function(){
@@ -118,8 +118,6 @@ head.ready(function () {
         _delete: function(e) {
             e.preventDefault();
             this.showDeleteBox();
-            app.collection.productdeletelist.add(this.model);
-            console.log(app.collection.productdeletelist);
         },
 
         showDeleteBox: function() {
@@ -146,9 +144,11 @@ head.ready(function () {
 
         deleteSuccess: function(e) {
 
+            app.collection.productdeletelist.add( this.model.clone());
+            app.v.productdellist.render();
+
             var that = this;
             $(this.el).fadeOut(function(){
-
                     that.model.destroy();
                 }
             );
@@ -281,9 +281,9 @@ head.ready(function () {
 
     /* View 开始被删除商品列表  */
     app.view.removedProductList = Backbone.View.extend({
+
         initialize: function(){
             this.render();
-
             app.collection.productdeletelist.on('change', this.render, this);
         },
 
@@ -291,7 +291,7 @@ head.ready(function () {
 //            var tmp = Handlebars.compile( this.template );
 //            $(this.el).html(tmp );
 
-            //console.log(app.collection.pnormallist);
+            console.log(app.collection.productdeletelist);
 
             this.$el.empty();
             app.collection.productdeletelist.each(this.showProduct, this);
@@ -441,7 +441,7 @@ head.ready(function () {
     app.m.product6 = new app.model.Product({productname: "满减2贝亲321231232123123212312", productnormalprice: 20, promotionprice:10, productpromotionmanjian : 11532});
 
     app.collection.plist = new app.model.Productlist();
-    app.collection.productdeletelist = new app.model.Productlist();
+    app.collection.productdeletelist = new app.model.Productlist();  //被删除的列表
 
 
     app.collection.plist.add(app.m.product1);
@@ -453,7 +453,7 @@ head.ready(function () {
 
 
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
-    app.v.productdellist = new app.view.removedProductList({el:$('#removedArea')});
+    app.v.productdellist = new app.view.removedProductList({el:$('#removedArea')});  //被删除的列表渲染
 
 // 开始满减商品部分
     app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
