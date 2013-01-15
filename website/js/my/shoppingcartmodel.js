@@ -32,7 +32,7 @@ head.ready(function () {
             productluckynumber : 0,
 
             productgift : 0, //是否是赠品 0为不是赠品, 如果是赠品需要填写属于哪个赠品促销ID
-            productexchange : 0, //是否是换购商品
+            productexchange : 0, //是否是换购商品 
             productexchangeprice : 88, //换购价格
 
             productpromotiongift : 0, //该商品是否参与赠品活动 不参与为0,参与为赠品活动ID

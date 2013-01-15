@@ -83,43 +83,15 @@
                 </script>
 
                 <script id="PromotionGiftSingleProductTemplate" type="text/x-handlebars-template">
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
+                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="{{productname}}" width="60px" height="60px" /></a></dt>
                         <dd>
-                            <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
+                            <a href="" title="{{productname}}">{{productname}}</a>
+                            <p class="price"><span class="now">&yen;{{productfinalprice}}</span></p>
+                            <p><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
                         </dd>
                 </script>
 
-            <dl>
-                <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
-                <dd>
-                    <a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a>
-                    <p class="gift-select"><span class="btn_s btn_s_o"><a href="">选择赠品</a></span></p>
-                </dd>
-                <div class="pop-win w1000 goods-list">
-                    <div class="hd">
-                        <h3>买满1件即可领取赠品,赠完为止</h3>
-                        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
-                    </div>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                </div>
-            </dl>
+
 
         </div>
     </div>
@@ -163,6 +135,7 @@
                         </dl>
                     </div>
                 </script>
+
             <dl>
                 <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
                 <dd>
@@ -295,7 +268,7 @@
                     <li class="column col-operation">操作</li>
                 </ul>
 
-                <ul class="cart-body cart-gift">
+                <ul class="cart-body cart-gift" id="freegiftproductlist">
                     <li class="clearfix">
                         <div class="column col-name">
                             <a target="_blank" href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt=""></a>
@@ -427,7 +400,7 @@
                                         <del >&yen;{{normalprice}}</del>
                                         <strong >&yen;{{productfinalprice}}</strong>
                                     </div>
-                                    <div class="column col-number">
+                                    <div class="column col-number" id="productquantity">
                                         <span class="wrap-input">
                                             <span class="reduce" id="productquantityreduce" >-</span>
                                             <input class="input" name="productquantity" type="text"  />
@@ -451,6 +424,7 @@
                                     </div>
 
                             </script>
+
 
 
                     <li class="clearfix">
