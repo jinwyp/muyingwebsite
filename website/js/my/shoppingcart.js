@@ -177,7 +177,8 @@ head.ready(function () {
             "click #productquantityadd": "quantityadd",
             "click #productDel": "_delete",
             "click #btnCancel": "deleteCancel",
-            "click #btnAffirm": "deleteSuccess"
+            "click #btnAffirm": "deleteSuccess",
+            "keyup .input":"changeval"
         },
 
         loginsubmit: function(e){
@@ -188,7 +189,6 @@ head.ready(function () {
         quantityreduce: function(){
             if(this.model.get("productquantity") < 2 ){
                 this.showDeleteBox();
-
 //                $(this.el).find('#nostock_tips').html('数量太少').fadeIn();
             }else{
                 this.model.set("productquantity", (this.model.get("productquantity") -1) );
@@ -202,11 +202,37 @@ head.ready(function () {
             if(this.model.get("productquantity") > (this.model.get("productstock") - 1) ){
                 //如果大于库存数量显示提示库存不足
                 $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
+                this.model.set("productquantity",this.model.get("productstock"));
             }else{
                 this.hideDeleteBox();
-                this.model.set("productquantity", (this.model.get("productquantity") +1) );
+                this.model.set("productquantity", (Number(this.model.get("productquantity")) + Number(1)) );
                 this.sumtotal();
                 $(this.el).find('#nostock_tips').fadeOut();
+            }
+
+            if($(this.el).find("#productDel").is(":hidden")){
+                this.hideDeleteBox()
+            }
+        },
+
+        changeval: function(){
+            var val = $(this.el).find("input:eq(0)").val().trim();
+            this.model.set("productquantity", parseInt(val));
+            if(this.model.get("productquantity") < 1 ){
+                this.showDeleteBox();
+                this.model.set("productquantity",0);
+            }else{
+                if(this.model.get("productquantity") > this.model.get("productstock") ){
+                    //如果大于库存数量显示提示库存不足
+                    $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
+                    this.model.set("productquantity",this.model.get("productstock"));
+                }else{
+                    $(this.el).find('#nostock_tips').fadeOut();
+                }
+                if($(this.el).find("#productDel").is(":hidden")){
+                    this.hideDeleteBox()
+                }
+                this.sumtotal();
             }
         },
 
