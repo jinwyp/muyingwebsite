@@ -117,7 +117,39 @@ head.ready(function () {
         model: app.model.PromotionManjian
     });
 
+    /* Model 被删除商品信息模型*/
+    app.model.RemovedProduct = Backbone.Model.extend({
+        defaults:{
+            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
+            productpromotiontext : '天天特价',
+            normalprice : 138,
+            promotionprice : 0,
+            productfinalprice : 0,
+            productstock : 6,
+            productquantity : 1,
+            producttotalprice : 0,
+            producttotalpricetext : 0,
+            productluckynumber : 0,
 
+            productgift : 0, //是否是赠品
+            productexchange : 0, //是否是换购商品
+            productexchangeprice : 88, //换购价格
+
+            productpromotiongift : 0, //是否参与赠品活动 不参与为0,参与为赠品活动ID
+            productpromotiongiftnumber : 0, //赠品满足条件金额
+
+            productpromotionexchange : 0, //是否参与换购活动 不参与为0,参与为换购活动ID
+            productpromotionexchangenumber : 0, //换购满足条件金额
+
+            productpromotionmanjian : 0, //是否参与满减 不参与为0,参与为满减活动ID
+            productpromotionmanjiannumber : 90, //满减满足条件金额
+            productpromotionmanjiandiscount : 10 //满减优惠金额
+        }
+    });
+    /*Collection 被删除商品列表模型*/
+    app.model.RemovedProductList = Backbone.Collection.extend({
+        model: app.model.RemovedProduct
+    });
 
 
 
@@ -134,7 +166,6 @@ head.ready(function () {
         },
 
         render: function(){
-
             var tmp = Handlebars.compile( this.template );
             $(this.el).html(tmp( this.model.toJSON()) );
             this._modelBinder.bind(this.model, this.el);
@@ -328,6 +359,32 @@ head.ready(function () {
 
     });
 
+    /* View 开始被删除商品列表中每个商品  */
+    app.view.removedProduct = Backbone.View.extend({
+        tagName: 'li',
+        className: 'clearfix',
+        template: $('#removedAreaTemplate').html(),
+
+        initialize: function(){
+            this._modelBinder = new Backbone.ModelBinder();
+            this.render();
+        },
+
+        render: function(){
+            var tmp = Handlebars.compile( this.template );
+            $(this.el).html(tmp( this.model.toJSON()) );
+            this._modelBinder.bind(this.model, this.el);
+        },
+
+        events: {
+            "click #reBuy": "productRebuy",
+            "click #favorites": "productFavorites",
+        },
+
+        productRebuy: function() {
+            $(this.$el).append();
+        }
+    });
 
 
 
@@ -364,6 +421,7 @@ head.ready(function () {
 
     app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
 
+// 开始被删除商品部分
 
 
 });

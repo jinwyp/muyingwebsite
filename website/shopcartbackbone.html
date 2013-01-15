@@ -41,21 +41,22 @@
 <!--toolbar end-->
 
 
-<div class="wrapper header">
-    <div class="logo">
-        <h1>
-            <a title="母婴之家" href="http://www.muyingzhijia.com/" target="_blank"></a>
-        </h1>
+    <div class="wrapper headerLogo">
+        <a id="indexUrlForCheckout" href="http://www.muyingzhijia.com/index.aspx">
+            <img src="http://www.muyingzhijia.com/Template/afd5/images/byw_logo3.gif">
+        </a>
+        <ul id="ctl00_Head_Simple1_wfc_Order_information_id" class="wfc_Order_information clear">
+            <li>
+                <img align="absmiddle" src="http://www.muyingzhijia.com/Template/afd5/images/gouwu01_01.jpg">
+            </li>
+            <li>
+                <img align="absmiddle" src="http://www.muyingzhijia.com/Template/afd5/images/gouwu01_02.jpg">
+            </li>
+            <li>
+                <img align="absmiddle" src="http://www.muyingzhijia.com/Template/afd5/images/gouwu01_03.jpg">
+            </li>
+        </ul>
     </div>
-
-    <div class="flow-step flow-step-no1">
-        <ol>
-            <li class="step-1">我的购物车</li>
-            <li class="step-2">填写核对订单</li>
-            <li class="step-3">成功提交订单</li>
-        </ol>
-    </div>
-</div>
 <!--header end-->
 
 <div class="wrapper wrap-cart">
@@ -420,7 +421,7 @@
 
                 <ul class="cart-body cart-default" id="normalproductList">
 
-                            <script id="ProductTemplate" type="text/x-handlebars-template">
+                    <script id="ProductTemplate" type="text/x-handlebars-template">
 
                                     <div class="column col-name">
                                         <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
@@ -462,7 +463,6 @@
                                     </div>
 
                             </script>
-
 
                     <li class="clearfix">
                         <div class="column col-name">
@@ -534,22 +534,18 @@
                     </li>
                 </ul>
 
+                <script id="ManjianTemplate" type="text/x-handlebars-template">
 
-                    <script id="ManjianTemplate" type="text/x-handlebars-template">
-
-                        <li class="hd-fullReduction">
-                                <span class="title" >
-                                    <span class="font-red">[满减]</span><span name="promotionname">{{promotionname}}</span>
-                                    <span class="tips" id="manjiandiffinfo">再买<strong name="promotiontotaldifferenceprice" class="font-red"></strong>即可立减<strong class="font-red">{{promotionmanjiandiscount}}元</strong></span>
-                                </span>
-                                <span class="money" ><strong class="font-red" name="promotiontotalpricetext"></strong>
-                                    <span class="icon-reduce" id="manjiandiscountinfo">已减&yen;{{promotionmanjiandiscount}}</span>
-                                </span>
-                        </li>
-                    </script>
-
-
-
+                    <li class="hd-fullReduction">
+                            <span class="title" >
+                                <span class="font-red">[满减]</span><span name="promotionname">{{promotionname}}</span>
+                                <span class="tips" id="manjiandiffinfo">再买<strong name="promotiontotaldifferenceprice" class="font-red"></strong>即可立减<strong class="font-red">{{promotionmanjiandiscount}}元</strong></span>
+                            </span>
+                            <span class="money" ><strong class="font-red" name="promotiontotalpricetext"></strong>
+                                <span class="icon-reduce" id="manjiandiscountinfo">已减&yen;{{promotionmanjiandiscount}}</span>
+                            </span>
+                    </li>
+                </script>
 
             </div>
             <div class="cart-total">
@@ -566,7 +562,7 @@
                 </div>
                 <div class="cart-button clearfix">
                     <span class="cart-clear fl">
-                        <a href="">清空购物车</a>
+                        <a href="" class="link-blue">清空购物车</a>
                     </span>
                     <span class="hide"><a href="" target="_blank" >&lt;&lt;继续购物</a></span>
                     <span class="btn_b btn_b_r fr"><a href=""  id="settleAccounts" style="padding:0 15px 0 10px">确认结算</a></span>
@@ -575,6 +571,76 @@
         </div>
     </div>
 
+    <div class="mod-removed cart-list">
+        <div class="hd">已删除商品，您可以重新购买或收藏</div>
+        <div class="bd">
+        <ul id="removedArea" class="cart-body">
+            <li class="clearfix">
+                <div class="column col-name">
+                    <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
+                    <div class="goods-info">
+                        <p class="name">
+                            <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
+                        </p>
+                        <p class="gifts">
+                            <span class="font-green">[促销]</span>
+                            <a onclick="" href="javascript:;">再加一点即可参加： [满2件每件立减10元] [满4件每件立减15元] [满6件每件立减20元]</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column col-price">
+                    <strong>&yen;99.00</strong>
+                </div>
+                <div class="column col-number">
+                    1
+                </div>
+                <div class="column col-subtotal">
+                    <strong class="font-red">&yen;99.00</strong>
+                </div>
+                <div class="column col-luckyStar">
+                    99
+                </div>
+                <div class="column col-operation">
+                    <a href="javascript:;" id="reBuy" class="link-blue mr10">重新购买</a>
+                    <a href="javascript:;" id="favorites" class="link-blue">收藏</a>
+                </div>
+            </li>
+            <script id="removedAreaTemplate" type="text/x-handlebars-template">
+
+                <li class="clearfix">
+                    <div class="column col-name">
+                        <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
+                        <div class="goods-info">
+                            <p class="name">
+                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
+                            </p>
+                            <p class="gifts">
+                                <span class="font-green">[促销]</span>
+                                <a onclick="" href="javascript:;">再加一点即可参加： [满2件每件立减10元] [满4件每件立减15元] [满6件每件立减20元]</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column col-price">
+                        <strong>&yen;99.00</strong>
+                    </div>
+                    <div class="column col-number">
+                        1
+                    </div>
+                    <div class="column col-subtotal">
+                        <strong class="font-red">&yen;99.00</strong>
+                    </div>
+                    <div class="column col-luckyStar">
+                        99
+                    </div>
+                    <div class="column col-operation">
+                        <a href="javascript:;" id="reBuy" class="link-blue mr10">重新购买</a>
+                        <a href="javascript:;" id="favorites" class="link-blue">收藏</a>
+                    </div>
+                </li>
+            </script>
+        </ul>
+        </div>
+    </div>
 
     <div class="mod-guessLike">
         <div class="hd">猜您喜欢</div>

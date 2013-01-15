@@ -5,7 +5,9 @@ h2,h3,h4{font-size:14px}
 h5,h6{font-size:12px}
 .fb{font-weight:700;}
 a,.link{color:#333;text-decoration:none}
-a:hover,.hover{text-decoration:underline;color:#e60000}
+a:hover,.hover{text-decoration:underline;color:#e60000;}
+.link-blue{color:#619eb1; }
+.link-blue:hover{color:#ff7800; }
 .bg-white{background-color:#fff}
 .font-gray {color: #bababa;}
 .font-green {color: #7fbc41;}
