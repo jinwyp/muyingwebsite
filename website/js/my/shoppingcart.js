@@ -1,124 +1,5 @@
     //定义全局变量
 head.ready(function () {
-    var app = {
-        model:{},
-        m:{},
-        modelbinder:{},
-        view:{},
-        v:{},
-        tpl:{},
-        tplpre:{},
-        collection:{},
-        htmlbody:{},
-        temp: {}
-    };
-
-    window.app = app;
-
-    /* Model 开始  */
-    /* Model 商品信息模型 */
-    app.model.Product = Backbone.Model.extend({
-        defaults : {
-            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
-            productpromotiontext : '天天特价',
-            normalprice : 138,
-            promotionprice : 0,
-            productfinalprice : 0,
-            productstock : 6,
-            productquantity : 1,
-            producttotalprice : 0,
-            producttotalpricetext : 0,
-            productluckynumber : 0,
-
-            productgift : 0, //是否是赠品
-            productexchange : 0, //是否是换购商品
-            productexchangeprice : 88, //换购价格
-
-            productpromotiongift : 0, //是否参与赠品活动 不参与为0,参与为赠品活动ID
-            productpromotiongiftnumber : 0, //赠品满足条件金额
-
-            productpromotionexchange : 0, //是否参与换购活动 不参与为0,参与为换购活动ID
-            productpromotionexchangenumber : 0, //换购满足条件金额
-
-            productpromotionmanjian : 0, //是否参与满减 不参与为0,参与为满减活动ID
-            productpromotionmanjiannumber : 90, //满减满足条件金额
-            productpromotionmanjiandiscount : 10 //满减优惠金额
-        },
-
-        initialize: function() {
-            if(this.get("promotionprice") > 0 ){
-                this.set("productfinalprice", this.get("promotionprice"));
-            }else{
-                this.set("productfinalprice", this.get("normalprice"));
-            };
-
-            this.set("producttotalprice", (this.get("productfinalprice") * this.get("productquantity") ) );
-        }
-    });
-
-
-    /* Collection 商品列表信息模型  */
-    app.model.Productlist = Backbone.Collection.extend({
-        model: app.model.Product,
-
-        byNormalProduct: function(){
-            var filtered = this.filter(function(product) {
-                return product.get("productpromotionmanjian") === 0;
-           });
-            return new app.model.Productlist(filtered);
-        },
-
-        byManjianProduct: function(manjianID){
-            var filtered = this.filter(function(product) {
-                return product.get("productpromotionmanjian") === manjianID;
-            });
-            return new app.model.Productlist(filtered);
-        },
-
-        productTotalPrice: function() {
-            return this.reduce(function(memo, product) {
-                return memo + product.get("producttotalprice")
-            }, 0);
-        }
-
-    });
-
-
-    /* Model 满减信息模型  */
-    app.model.PromotionManjian = Backbone.Model.extend({
-        defaults : {
-            promotionid : 0, //是否参与满减 不参与为0,参与为满减活动ID
-            promotionname : '全场纸尿裤200立减20, //满减满足条件金额',
-            promotiontotalprice : 0,  //参与满减商品当前总金额
-            promotiontotalpricetext : 0,  //参与满减商品当前总金额
-            promotiontotaldifferenceprice : 0,  //参与满减商品当前总金额还差多少够满减
-
-            promotionmanjiandiscount : 0, //满减优惠金额
-            promotionmanjiancondition : 0, //满减满足条件金额
-            promotionmanjiandiscount1 : 10, //满减优惠金额
-            promotionmanjiancondition1 : 90, //满减满足条件金额
-            promotionmanjiandiscount1 : 10, //满减优惠金额
-            promotionmanjiancondition2 : 90, //满减满足条件金额
-            promotionmanjiandiscount2 : 10, //满减优惠金额
-            promotionmanjiancondition3 : 90, //满减满足条件金额
-            promotionmanjiandiscount3 : 10 //满减优惠金额
-        },
-
-        initialize: function() {
-            if( (this.get("promotiontotalprice") - this.get("promotionmanjiancondition1") ) < 0 ){
-                this.set("promotionmanjiancondition", this.get("promotionmanjiancondition1"));
-                this.set("promotionmanjiandiscount", this.get("promotionmanjiandiscount1"));
-            }
-        }
-    });
-
-    /* Collection 满减信息列表模型  */
-    app.model.PromotionManjianList = Backbone.Collection.extend({
-        model: app.model.PromotionManjian
-    });
-
-
-
 
 
     /* View 开始普通商品列表中的单个商品  */
@@ -246,8 +127,8 @@ head.ready(function () {
             app.collection.pnormallist.each(this.showProduct, this);
         },
 
-        showProduct: function(prodcut){
-            app.v.product1 = new app.view.cartProduct({ model: prodcut });
+        showProduct: function(product){
+            app.v.product1 = new app.view.cartProduct({ model: product });
             this.$el.append(app.v.product1.el);
         }
     });
@@ -303,8 +184,8 @@ head.ready(function () {
             this.manjianproductlist.each(this.showProduct, this);
         },
 
-        showProduct: function(prodcut){
-            app.v.product2 = new app.view.cartProduct({ model: prodcut });
+        showProduct: function(product){
+            app.v.product2 = new app.view.cartProduct({ model: product });
             this.$el.append(app.v.product2.el);
         },
 
@@ -314,12 +195,20 @@ head.ready(function () {
             this.model.set("promotiontotalprice", this.manjianproductlist.productTotalPrice() );
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
             this.model.set("promotiontotalpricetext", rmb + this.model.get("promotiontotalprice").toFixed(2) );
-            //console.log(this.model.get("promotionmanjiancondition"));
+
+            var unit = $("<b>元</b>").html(); //如果是满减件 要判断是否增加 件 还是 元 文字
+
+            if (this.model.get("promotionmanjiancondition") < 10 ){
+                unit = $("<b>件</b>").html(); //如果是满减件 要判断是否增加 件 还是 元 文字
+            }
+
             var manjiandiff = this.model.get("promotionmanjiancondition") - this.model.get("promotiontotalprice");
             if( manjiandiff > 0 ){
                 $(this.el).find("#manjiandiscountinfo").fadeOut();
                 $(this.el).find("#manjiandiffinfo").fadeIn();
                 this.model.set("promotiontotaldifferenceprice", manjiandiff );
+                this.model.set("promotiontotaldifferencepricetext", (manjiandiff + unit) ); //如果是满减件 要判断是否增加 件 文字
+//                console.log(this.model.get("promotiontotaldifferencepricetext"));
             }else{
                 $(this.el).find("#manjiandiscountinfo").fadeIn();
                 $(this.el).find("#manjiandiffinfo").fadeOut();
@@ -329,7 +218,95 @@ head.ready(function () {
     });
 
 
+    /* View 开始赠品促销列表  */
+    app.view.cartGiftList = Backbone.View.extend({
+//        template: $('#ProductListTemplate').html(),
 
+        initialize: function(){
+            this.render();
+        },
+
+        render: function(){
+//            var tmp = Handlebars.compile( this.template );
+//            $(this.el).html(tmp );
+            this.collection.each(this.showGift, this);
+        },
+
+        showGift: function(gift){
+            app.v.gift1 = new app.view.cartGift({ model: gift });
+            this.$el.find("#promotiongift").append(app.v.gift1.el);
+        }
+    });
+
+
+    /* View 开始赠品促销单个赠品  */
+    app.view.cartGift = Backbone.View.extend({
+        tagName: 'dl',
+        template: $('#PromotionSingleGiftTemplate').html(),
+
+        initialize: function(){
+            this.giftproductlist = new app.model.Productlist(); //满减商品列表
+            this.giftproductlist = app.collection.giftproductlist.byGiftProduct(this.model.get('promotionid'));
+            console.log(this.giftproductlist);
+            this.render();
+        },
+
+        render: function(){
+
+            var tmp = Handlebars.compile( this.template );
+            $(this.el).html(tmp( this.model.toJSON()) );
+
+            this.giftproductlist.each(this.showProduct, this);
+        },
+
+        events: {
+            "click #btn_giftSelect": "showBox",
+            "click #giftboxbutton": "hideBox"
+        },
+
+        showProduct: function(product){
+            app.v.product3 = new app.view.cartGiftProduct({ model: product });
+            this.$el.find("#giftbox").append(app.v.product3.el);
+        },
+
+        showBox: function(e){
+            e.preventDefault();
+            this.$el.find("#giftbox").show();
+        },
+        hideBox: function(e){
+            e.preventDefault();
+            this.$el.find("#giftbox").hide();
+        }
+
+    });
+
+
+    /* View 开始赠品促销里面所有赠品商品列表的一个商品  */
+    app.view.cartGiftProduct = Backbone.View.extend({
+        tagName: 'dl',
+        template: $('#PromotionGiftSingleProductTemplate').html(),
+
+        initialize: function(){
+            this.render();
+        },
+
+        render: function(){
+            var tmp = Handlebars.compile( this.template );
+            $(this.el).html(tmp( this.model.toJSON()) );
+        },
+
+        events: {
+            "click #btn_giftSelect": "addGift"
+        },
+
+        addGift: function(){
+
+        }
+
+    });
+
+
+    /*  页面开始渲染  */
 
 // 开始普通商品列表部分
     app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:10, productpromotionmanjian : 0});
@@ -365,6 +342,33 @@ head.ready(function () {
     app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
 
 
+
+// 开始赠品活动部分
+    app.m.promotiongift1 = new app.model.PromotionGift({promotionid:11582, promotionname: "宝得适&西班牙Jane 买就送 儿童炫酷电动车", promotiongiftcondition1:60, promotiongiftcondition2: 100});
+    app.m.promotiongift2 = new app.model.PromotionGift({promotionid: 11581, promotionname: "益力健 满58元 送 价值20元靠堑 或 价值20元儿童护耳帽", promotiongiftcondition1:100, promotiongiftcondition2: 150});
+
+    app.collection.giftlist = new app.model.PromotionGiftList();
+
+    app.collection.giftlist.add(app.m.promotiongift1);
+    app.collection.giftlist.add(app.m.promotiongift2);
+
+    app.m.productgift1 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:10, productgift : 11582});
+    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", productnormalprice: 200, promotionprice:120, productgift : 11582});
+    app.m.productgift3 = new app.model.Product({productname: "赠品1贝亲婴儿柔湿巾", productnormalprice: 10, promotionprice:20, productgift : 11582});
+    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", productnormalprice: 20, promotionprice:20, productgift : 11582});
+    app.m.productgift5 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", productnormalprice: 20, promotionprice:10, productgift : 11582});
+    app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲321231232123123212312", productnormalprice: 20, promotionprice:10, productgift : 11581});
+
+    app.collection.giftproductlist = new app.model.Productlist();
+
+    app.collection.giftproductlist.add(app.m.productgift1);
+    app.collection.giftproductlist.add(app.m.productgift2);
+    app.collection.giftproductlist.add(app.m.productgift3);
+    app.collection.giftproductlist.add(app.m.productgift4);
+    app.collection.giftproductlist.add(app.m.productgift5);
+    app.collection.giftproductlist.add(app.m.productgift6);
+
+    app.v.freegiftlist = new app.view.cartGiftList({ collection: app.collection.giftlist, el: $('#promotiongiftlist') });
 
 });
 
