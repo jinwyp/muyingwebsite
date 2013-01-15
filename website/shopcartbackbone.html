@@ -64,83 +64,36 @@
 
         <h2>我的购物车</h2></div>
 
-    <div class="mod-favorable mod-gift">
-        <div class="hd"><span class="sign-gift"></span>您可以免费领取以下赠品呦</div>
-        <div class="bd">
-            <dl>
-                <dt><a href=""><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px"  class="img" /></a></dt>
-                <dd>
-                    <p class="name"><a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a></p>
-                    <p class="gift-select"><span class="btn_s btn_s_o"><a href="" id="btn_giftSelect">选择赠品</a></span></p>
-                </dd>
-                <div class="pop-win w1000 goods-list">
-                    <div class="hd">
-                        <h3>买满1件即可领取赠品,赠完为止</h3>
-                        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
-                    </div>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
+
+    <div class="mod-favorable mod-gift" id="promotiongiftlist">
+        <div class="hd"><span class="sign-gift"></span> 您可以免费领取以下赠品呦</div>
+        <div class="bd" id="promotiongift">
+
+                <script id="PromotionSingleGiftTemplate" type="text/x-handlebars-template">
+                        <dt><a href=""><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="{{promotionname}}" width="60px" height="60px"  class="img" /></a></dt>
                         <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
+                            <a href="" title="{{promotionname}}">{{promotionname}}</a>
+                            <p class="gift-select"><span class="btn_s btn_s_o"><a href="" id="btn_giftSelect">选择赠品</a></span></p>
                         </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
+
+                        <div class="pop-win w1000 goods-list" id="giftbox">
+                            <div class="hd">
+                                <h3>{{promotionname}}</h3>
+                                <a class="close-win" id="giftboxbutton" href="javascript:void(0);">关闭</a>
+                            </div>
+                        </div>
+                </script>
+
+                <script id="PromotionGiftSingleProductTemplate" type="text/x-handlebars-template">
+                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="{{productname}}" width="60px" height="60px" /></a></dt>
                         <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
+                            <a href="" title="{{productname}}">{{productname}}</a>
+                            <p class="price"><span class="now">&yen;{{productfinalprice}}</span></p>
+                            <p><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
                         </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                </div>
-            </dl>
-            <dl>
-                <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
-                <dd>
-                    <p class="name"><a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a></p>
-                    <p class="gift-select"><span class="btn_s btn_s_o"><a href="">选择赠品</a></span></p>
-                </dd>
-                <div class="pop-win w1000 goods-list">
-                    <div class="hd">
-                        <h3>买满1件即可领取赠品,赠完为止</h3>
-                        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
-                    </div>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class ="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">免费领取</a></span></p>
-                        </dd>
-                    </dl>
-                </div>
-            </dl>
+                </script>
+
+
 
         </div>
     </div>
@@ -148,35 +101,44 @@
     <div class="mod-favorable mod-redemption">
         <div class="hd"><span class="sign-redemption"></span>您还可以换购以下商品呦</div>
         <div class="bd">
-            <dl>
-                <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
-                <dd>
-                    <p class="name"><a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a></p>
-                    <p><span class="btn_s btn_s_o"><a href="">查看换购</a></span></p>
-                </dd>
-                <div class="pop-win w1000 goods-list">
-                    <div class="hd">
-                        <h3>买满1件即可换购赠品,赠完为止</h3>
-                        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
+
+
+                <script id="PromotionSingleRedemptionTemplate" type="text/x-handlebars-template">
+
+                    <dl>
+                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
+                        <dd>
+                            <a href="" title="周末买满200元即可免费领取以下任一赠品，抢完为止。">周末买满200元即可免费领取以下任一赠品，抢完为止。</a>
+                            <p><span class="btn_s btn_s_o"><a href="">查看换购</a></span></p>
+                        </dd>
+                    </dl>
+                </script>
+
+                <script id="PromotionRedemptionProductsTemplate" type="text/x-handlebars-template">
+                    <div class="pop-win w1000 goods-list">
+                        <div class="hd">
+                            <h3>买满1件即可换购赠品,赠完为止</h3>
+                            <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
+                        </div>
+                        <dl>
+                            <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
+                            <dd>
+                                <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
+                                <p class="price"><del>&yen;35.00</del><span class="now">&yen;21.00</span></p>
+                                <p><span class="btn_s btn_s_o"><a href="">立即换购</a></span></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
+                            <dd>
+                                <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
+                                <p class="price"><del>&yen;35.00</del><span class="now">&yen;21.00</span></p>
+                                <p><span class="btn_s btn_s_o"><a href="">立即换购</a></span></p>
+                            </dd>
+                        </dl>
                     </div>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><del>&yen;35.00</del><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">立即换购</a></span></p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="贝亲孕产妇漱口液300ml" width="60px" height="60px" /></a></dt>
-                        <dd>
-                            <p class="goods-name"><a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a></p>
-                            <p class="price"><del>&yen;35.00</del><span class="now">&yen;21.00</span></p>
-                            <p><span class="btn_s btn_s_o"><a href="">立即换购</a></span></p>
-                        </dd>
-                    </dl>
-                </div>
-            </dl>
+                </script>
+
             <dl>
                 <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="周末买满200元即可免费领取以下任一赠品，抢完为止。" width="60px" height="60px" /></a></dt>
                 <dd>
@@ -309,7 +271,7 @@
                     <li class="column col-operation">操作</li>
                 </ul>
 
-                <ul class="cart-body cart-gift">
+                <ul class="cart-body cart-gift" id="freegiftproductlist">
                     <li class="clearfix">
                         <div class="column col-name">
                             <a target="_blank" href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt=""></a>
@@ -427,6 +389,8 @@
                                         <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
                                         <div class="goods-info">
                                             <p class="name">
+                                                <span id="icon-gift" class="icon-gift hide">赠品</span>
+                                                <span id="icon-redemption" class="icon-redemption hide">换购</span>
                                                 <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" id="productname" >{{productname}} </a>
                                             </p>
                                             <p class="gifts">
@@ -439,7 +403,7 @@
                                         <del >&yen;{{normalprice}}</del>
                                         <strong >&yen;{{productfinalprice}}</strong>
                                     </div>
-                                    <div class="column col-number">
+                                    <div class="column col-number" id="productquantity">
                                         <span class="wrap-input">
                                             <span class="reduce" id="productquantityreduce" >-</span>
                                             <input class="input" name="productquantity" type="text"  />
@@ -460,12 +424,13 @@
                                             <span class="btn_s btn_s_h" id="btnCancel"><a href="javascript:;">取消</a></span>
                                         </p>
                                         <p id="removedProduct" class="hide">
-                                            <a href="javascript:;" id="reBuy" class="link-blue mr10">重新购买</a>
-                                            <a href="javascript:;" id="favorites" class="link-blue">收藏</a>
+                                            <a href="#" id="reBuy" class="link-blue mr10">重新购买</a>
+                                            <a href="#" id="favorites" class="link-blue">收藏</a>
                                         </p>
                                     </div>
 
                             </script>
+
 
                     <li class="clearfix">
                         <div class="column col-name">
@@ -537,18 +502,21 @@
                     </li>
                 </ul>
 
-                <script id="ManjianTemplate" type="text/x-handlebars-template">
 
-                    <li class="hd-fullReduction">
-                            <span class="title" >
-                                <span class="font-red">[满减]</span><span name="promotionname">{{promotionname}}</span>
-                                <span class="tips" id="manjiandiffinfo">再买<strong name="promotiontotaldifferenceprice" class="font-red"></strong>即可立减<strong class="font-red">{{promotionmanjiandiscount}}元</strong></span>
-                            </span>
-                            <span class="money" ><strong class="font-red" name="promotiontotalpricetext"></strong>
-                                <span class="icon-reduce" id="manjiandiscountinfo">已减&yen;{{promotionmanjiandiscount}}</span>
-                            </span>
-                    </li>
-                </script>
+                    <script id="ManjianTemplate" type="text/x-handlebars-template">
+
+                        <li class="hd-fullReduction">
+                                <span class="title" >
+                                    <span class="font-red">[满减]</span><span name="promotionname">{{promotionname}}</span>
+                                    <span class="tips" id="manjiandiffinfo">再买<strong name="promotiontotaldifferencepricetext" class="font-red"></strong>即可立减<strong class="font-red">{{promotionmanjiandiscount}}元</strong></span>
+                                </span>
+                                <span class="money" ><strong class="font-red" name="promotiontotalpricetext"></strong>
+                                    <span class="icon-reduce" id="manjiandiscountinfo">已减&yen;{{promotionmanjiandiscount}}</span>
+                                </span>
+                        </li>
+                    </script>
+
+
 
             </div>
             <div class="cart-total">
@@ -604,43 +572,11 @@
                     99
                 </div>
                 <div class="column col-operation">
-                    <a href="javascript:;" id="reBuy" class="link-blue mr10">重新购买</a>
-                    <a href="javascript:;" id="favorites" class="link-blue">收藏</a>
+                    <a href="javascript:;" id="reBuy1" class="link-blue mr10">重新购买</a>
+                    <a href="javascript:;" id="favorites1" class="link-blue">收藏</a>
                 </div>
             </li>
-            <script id="removedAreaTemplate" type="text/x-handlebars-template">
 
-                <li class="clearfix">
-                    <div class="column col-name">
-                        <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
-                        <div class="goods-info">
-                            <p class="name">
-                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
-                            </p>
-                            <p class="gifts">
-                                <span class="font-green">[促销]</span>
-                                <a onclick="" href="javascript:;">再加一点即可参加： [满2件每件立减10元] [满4件每件立减15元] [满6件每件立减20元]</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column col-price">
-                        <strong>&yen;99.00</strong>
-                    </div>
-                    <div class="column col-number">
-                        1
-                    </div>
-                    <div class="column col-subtotal">
-                        <strong class="font-red">&yen;99.00</strong>
-                    </div>
-                    <div class="column col-luckyStar">
-                        99
-                    </div>
-                    <div class="column col-operation">
-                        <a href="javascript:;" id="reBuy" class="link-blue mr10">重新购买</a>
-                        <a href="javascript:;" id="favorites" class="link-blue">收藏</a>
-                    </div>
-                </li>
-            </script>
         </ul>
         </div>
     </div>
@@ -771,16 +707,15 @@
             "js/backbone_modelbinder-0.1.6.min.js",
             "js/backbone-validation-0.7.0.min.js",
             "js/handlebars-rc1.min.js",
+            "js/my/shoppingcartmodel.js",
             "js/my/shoppingcart.js"
             );
 </script>
 <script type="text/javascript">
     head.ready(function () {
-        $("#btn_giftSelect").click(function(e){
-            e.preventDefault();
-          $(".goods-list").show();
+
     });
-});
+
 </script>
 </body>
 </html>
