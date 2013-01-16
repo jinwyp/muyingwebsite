@@ -21,6 +21,7 @@ head.ready(function () {
         defaults : {
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
             productpromotiontext : '天天特价',
+            producturl : '/xxx/xxx/pic.jpg',
             productpic : '/xxx/xxx/pic.jpg',
             normalprice : 138,
             promotionprice : 0,
@@ -32,8 +33,9 @@ head.ready(function () {
             productluckynumber : 0,
 
             productgift : 0, //是否是赠品 0为不是赠品, 如果是赠品需要填写属于哪个赠品促销ID
-            productexchange : 0, //是否是换购商品 
+            productexchange : 0, //是否是换购商品 如果是换购商品需要填写属于哪个换购促销ID
             productexchangeprice : 88, //换购价格
+
 
             productpromotiongift : 0, //该商品是否参与赠品活动 不参与为0,参与为赠品活动ID
             productpromotiongiftnumber : 0, //赠品满足条件金额
@@ -79,6 +81,15 @@ head.ready(function () {
         byGiftProduct: function(giftID){
             var filtered = this.filter(function(product) {
                 return product.get("productgift") === giftID;
+            });
+            return new app.model.Productlist(filtered);
+        },
+
+        byExchangeProduct: function(exchangeID, exchangPrice){
+
+            var filtered = this.filter(function(product) {
+
+                return product.get("productexchange") === exchangeID;
             });
             return new app.model.Productlist(filtered);
         },
@@ -134,18 +145,18 @@ head.ready(function () {
     /* Model 赠品促销信息模型  */
     app.model.PromotionGift = Backbone.Model.extend({
         defaults : {
-            promotionid : 0, //是否参与赠品 不参与为0,参与为赠品活动ID
+            promotionid : 0,
             promotionname : '禧贝 满88元送 价值28元大头狗单入装毛巾 或 价值28元Little me婴儿植物滋养沐浴露',
             promotionimageurl : '/xxx/img.jpg',
 
             promotiontotalprice : 0,  //参与赠品商品当前总金额
             promotiontotalpricetext : 0,  //参与赠品商品当前总金额
-            promotiontotaldifferenceprice : 0,  //参与赠品商品当前总金额还差多少够满减
-            promotiontotaldifferencepricetext : 0,  //参与赠品商品当前总金额还差多少够满减
+            promotiontotaldifferenceprice : 0,  //参与赠品商品当前总金额还差多少够
+            promotiontotaldifferencepricetext : 0,  //参与赠品商品当前总金额还差多少够
 
             promotiongiftcondition : 0, //赠品满足条件金额
             promotiongiftcondition1 : 90, //赠品满足条件金额1
-            promotiongiftcondition2 : 90 //赠品满足条件金额2
+            promotiongiftcondition2 : 120 //赠品满足条件金额2
         },
 
         initialize: function() {
@@ -155,13 +166,46 @@ head.ready(function () {
         }
     });
 
-    /* Collection 满减信息列表模型  */
+    /* Collection 赠品信息列表模型  */
     app.model.PromotionGiftList = Backbone.Collection.extend({
         model: app.model.PromotionGift
     });
 
 
 
+    /* Model 换购促销信息模型  */
+    app.model.PromotionExchange = Backbone.Model.extend({
+        defaults : {
+            promotionid : 0,
+            promotionname : '周三全场买满358元加1元换购以下任一商品，换完为止。',
+            promotionimageurl : '/xxx/img.jpg',
+
+            promotiontotalprice : 0,  //参与换购商品当前总金额
+            promotiontotalpricetext : 0,  //参与换购商品当前总金额文字
+            promotiontotaldifferenceprice : 0,  //参与换购商品当前总金额还差多少够
+            promotiontotaldifferencepricetext : 0,  //参与换购商品当前总金额还差多少够
+
+            promotionexchangecondition : 0, //换购满足条件金额
+            promotionexchangeprice : 90, //满足条件换购价格
+
+            promotionexchangecondition1 : 90, //换购满足条件金额1
+            promotionexchangeprice1 : 90, //满足条件换购价格1
+            promotionexchangecondition2 : 120, //换购满足条件金额2
+            promotionexchangeprice2 : 90 //满足条件换购价格2
+        },
+
+        initialize: function() {
+            if( (this.get("promotiontotalprice") - this.get("promotionexchangecondition1") ) < 0 ){
+                this.set("promotionexchangecondition", this.get("promotionexchangecondition1"));
+                this.set("promotionexchangeprice", this.get("promotionexchangeprice1"));
+            }
+        }
+    });
+
+    /* Collection 换购信息列表模型  */
+    app.model.PromotionExchangeList = Backbone.Collection.extend({
+        model: app.model.PromotionExchange
+    });
 
 
 });
