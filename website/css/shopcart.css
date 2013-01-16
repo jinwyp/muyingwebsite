@@ -74,7 +74,7 @@ strong{font-weight: 700;}
 .cart-total .coupon .btn_s{vertical-align: middle;}
 .cart-total .coupon .col-tips{position:relative;top:0;left:10px;padding:2px 10px;width:auto;}
 .cart-total .item{display: inline;margin-left:10px;}
-.cart-total .all{width:780px;text-align:right;}
+.cart-total .all{display: inline;text-align:right;float: right}
 .cart-total .total-price{font-size:14px;}
 .cart-total .total-price strong{color:#e60000;font-size:22px;}
 .cart-total  .noFreight{color:#bababa;margin-right:10px;}
