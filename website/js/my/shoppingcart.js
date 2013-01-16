@@ -1,4 +1,4 @@
-    //定义全局变量
+//定义全局变量
 head.ready(function () {
 
 
@@ -83,10 +83,8 @@ head.ready(function () {
         },
 
         changeval: function(){
-            var reg = new RegExp("^[0-9]*$");
             var val = $(this.el).find("input:eq(0)").val().trim();
             val = val.replace(/\D/g,'');
-            //if(!reg.test(val)){return $(this.el).find("input:eq(0)").val(1)}
             if(val==""){$(this.el).find("input:eq(0)").val(0);val=0}
             this.model.set("productquantity", parseInt(val));
             if(this.model.get("productquantity") < 1 ){
@@ -123,15 +121,15 @@ head.ready(function () {
         showDeleteBox: function() {
             $(this.el).find("#productDel").hide();
             $(this.el).find("#j_delTips").animate({
-                    left: '-20px',opacity: 'show'
-                }, "500");
+                left: '-20px',opacity: 'show'
+            }, "500");
         },
 
         hideDeleteBox: function() {
             $(this.el).find("#productDel").show();
             $(this.el).find("#j_delTips").animate({
-                    left: '0',opacity: 'hide'
-                }, "500");
+                left: '0',opacity: 'hide'
+            }, "500");
         },
 
         deleteCancel: function(e) {
@@ -291,7 +289,7 @@ head.ready(function () {
 //            var tmp = Handlebars.compile( this.template );
 //            $(this.el).html(tmp );
 
-            console.log(app.collection.productdeletelist);
+            //console.log(app.collection.productdeletelist);
 
             this.$el.empty();
             app.collection.productdeletelist.each(this.showProduct, this);
@@ -502,6 +500,52 @@ head.ready(function () {
 
 
 
+    stickFooter()
 
 });
+// 购物车商品超出一屏，则结算按钮固定窗口底部显示
+function stickFooter(){
+    var floatMain = $(".cart-total .cart-button"),
+        Top = floatMain.position().top,
+        fw = floatMain.width(),
+        floatStyle = false,
+        isIE6 = $.browser.msie&&($.browser.version == "6.0")&&!$.support.style;
 
+    if(isIE6){
+        $("<style type='text/css'>#floatPic{margin:0px;padding:0px;z-index:99}#floatPic img{margin: 0px;padding: 0px;display: block;}*html,body{background-image:url(about:blank);background-attachment:fixed}html .fixed-bottom{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}</style>").appendTo("head");
+    }
+
+    stickrull();
+
+    $(window).scroll(stickrull);
+
+    function stickrull(){
+        if($(document).scrollTop() + $(window).height() < Top){
+            if(floatStyle==true){return false}
+            if(!isIE6){
+                floatMain.css({
+                    position:"fixed",
+                    "margin-left":-fw/2,
+                    padding:0,
+                    bottom:0,
+                    width:fw,
+                    left:"50%",
+                    "z-index":"9999"
+                });
+            } else {
+                floatMain.addClass("fixed-bottom").css({
+                    "margin-left":fw/2,
+                    width:fw,
+                    padding:0,
+                    left:"50%",
+                    "z-index":"9999"
+                });
+            }
+            floatStyle = true;
+        }else{
+            floatMain.removeAttr("style");
+            if(isIE6){floatMain.removeClass("fixed-bottom")}
+            floatStyle = false
+        }
+    }
+}
