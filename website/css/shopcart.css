@@ -43,7 +43,7 @@ strong{font-weight: 700;}
 .cart-body .wrap-input .reduce{ margin-left: 0;}
 
 /**提示**/
-.col-tips{position: absolute;top:26px;left:0;width:72px;padding:2px;text-align: center;border:1px solid #f90;color:#e60;background-color: #ffedb5;}
+.col-tips{position: absolute;top:26px;left:20px;width:72px;padding:2px;text-align: center;border:1px solid #f90;color:#e60;background-color: #ffedb5;}
 .col-operation .col-tips{left:0;top:0;padding:5px;width:112px;text-align:left;border:1px solid #bababa;color:#4d4d4d;background-color: #fff;}
 .col-operation .col-tips .btn_s_o{margin-right:5px;}
 

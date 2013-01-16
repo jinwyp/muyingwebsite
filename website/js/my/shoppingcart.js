@@ -123,7 +123,7 @@ head.ready(function () {
         showDeleteBox: function() {
             $(this.el).find("#productDel").hide();
             $(this.el).find("#j_delTips").animate({
-                    left: '-60px',opacity: 'show'
+                    left: '-20px',opacity: 'show'
                 }, "500");
         },
 
