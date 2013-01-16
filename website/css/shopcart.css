@@ -3,7 +3,9 @@ strong{font-weight: 700;}
 /***购物车***/
 .img{ display: block; border: 1px solid #e0e0e0;height: 62px;margin-right: 5px;padding-top: 2px; text-align: center; width: 64px;}
 /**popwin**/
-.pop-win{position: absolute;;left:50%;display: none;border:8px solid #878787;overflow: hidden;background-color: #fff;z-index: 9999;}
+*html,*html body{_background-attachment:fixed; _background-image:url(about:blank);}
+*html .pop-win{position:absolute;top:expression(eval(document.documentElement.scrollTop)); }
+.pop-win{position:fixed; top:0;left:50%;display: none;border:8px solid #878787;overflow: hidden;background-color: #fff;z-index: 9999;}
 .pop-win .hd{ height: 30px;line-height: 30px;font-family: "macrosoft yahei";background: url("../images/logindl_bg.gif") repeat-x scroll 0 -159px transparent;}
 .close-win{width:24px;height:24px; position: absolute; right: 10px; top:3px;text-indent:-999em; overflow: hidden;background:url(../images/logindl_bg.gif) no-repeat 0 -30px}
 .w1000{width:1000px;margin-left:-508px;}
@@ -21,11 +23,10 @@ strong{font-weight: 700;}
 .wfc_myCart, .wfc_Order_information, .wfc_Order_submitted_successfully {  left: 300px;  margin: 0; padding: 0; position: absolute; top: 15px; width: 430px; z-index: 3;}
 .wfc_myCart li, .wfc_Order_information li, .wfc_Order_submitted_successfully li { display: inline-block; float: left;}
 /**购物车列表**/
-.cart-hd-left,.cart-hd-right{float:left;width: 20px;height:30px;background:url("../images/order/bg_shopcart.gif") no-repeat scroll 100% -96px;}
-.cart-hd-right{float:right;}
-.cart-hd-right{background-position:100% -156px; }
 .wrap-cart .title{margin-bottom:10px;}
-.wrap-cart .title h2{margin-left:20px;width:960px;background:url("../images/order/bg_shopcart.gif") repeat-x scroll 100% -126px #f90;color: #fff;font-weight:700;line-height: 30px;}
+.cart-hd-left,.cart-hd-right{float:left;width: 20px;height:30px;background:url("../images/order/bg_shopcart.gif") no-repeat scroll 100% -96px;}
+.cart-hd-right{float:right;background-position:100% -156px; }
+.wrap-cart .title h2{float:left;width:960px;background:url("../images/order/bg_shopcart.gif") repeat-x scroll 100% -126px #f90;color: #fff;font-weight:700;line-height: 30px;}
 
 .cart-head{padding:0 10px;height:30px;line-height:30px;background:url("../images/order/bg_shopcart.gif") repeat-x scroll 100% -186px #f4f4f4;}
 .cart-list .column{float:left;position: relative;width:70px;padding-right:10px;word-break: break-all;word-wrap: break-word;text-align: center;}
@@ -39,6 +40,7 @@ strong{font-weight: 700;}
 .cart-body del{display: block;color:#878787;}
 .cart-body .wrap-input {float:left;margin-left:20px;display:inline;font-size: 12px; font-weight: normal; overflow: hidden;}
 .cart-body .wrap-input .input{float: left; margin-left: -1px;width: 34px;height: 18px; line-height:18px;overflow: hidden;  text-align: center; border: 1px solid #878787;}
+.cart-body .wrap-input .input-focus{border: 1px solid #ff7800;}
 .cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px;width: 20px;height: 20px; line-height: 19px;font-size: 14px;text-align: center;background-color:#f4f4f4;background: -moz-linear-gradient(center top , #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent;cursor: pointer;}
 .cart-body .wrap-input .reduce{ margin-left: 0;}
 
@@ -70,8 +72,9 @@ strong{font-weight: 700;}
 .cart-total .coupon {padding:10px 15px ;}
 .cart-total .coupon .text-input{border: 1px solid #bababa;margin-right:3px;height:18px; vertical-align: middle;}
 .cart-total .coupon .btn_s{vertical-align: middle;}
+.cart-total .coupon .col-tips{position:relative;top:0;left:10px;padding:2px 10px;width:auto;}
 .cart-total .item{display: inline;margin-left:10px;}
-.cart-total .all{display: block;text-align:right}
+.cart-total .all{width:780px;text-align:right;}
 .cart-total .total-price{font-size:14px;}
 .cart-total .total-price strong{color:#e60000;font-size:22px;}
 .cart-total  .noFreight{color:#bababa;margin-right:10px;}
@@ -84,7 +87,7 @@ strong{font-weight: 700;}
 .mod-favorable .bd{padding-bottom:10px;}
 .mod-favorable dl{float:left;padding:10px;border-bottom:1px dashed #f4f4f4;width:229px;}
 .mod-favorable dt{float:left;}
-.mod-favorable .name{margin-bottom:5px;}
+.mod-favorable .name{height:36px;margin-bottom:5px;overflow: hidden;}
 
 .goods-list dl{float:left;padding:10px;width:229px;border-bottom: 0 none ;}
 .goods-list dt{float:left;}
