@@ -92,8 +92,8 @@
                     <dd>
                         <p class ="goods-name"><a href="{{producturl}}" title="{{productname}}">{{productname}}</a></p>
                         <p class="price"><span class="now">&yen;{{productfinalprice}}</span></p>
-                        <p><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
-                        <p><span class="btn_s btn_s_g" id="btn_giftFinish"><a href="#">已领完</a></span></p>
+                        <p id="giftAdd"><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
+                        <p id="giftFinish" class="hide"><span class="btn_s btn_s_g" id="btn_giftFinish"><a href="#">已领完</a></span></p>
                     </dd>
                 </script>
         </div>
@@ -101,7 +101,6 @@
 
     <div class="mod-favorable mod-redemption" id="promotionredemptionlist">
         <div class="hd"><span class="sign-redemption"></span>您还可以换购以下商品呦</div>
-
         <div class="bd" id="promotionredemption">
 
 

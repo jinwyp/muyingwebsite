@@ -243,7 +243,6 @@ head.ready(function () {
         showManjian: function(manjian){
             app.v.manijan1 = new app.view.cartManjian({ model: manjian });
             this.$el.append(app.v.manijan1.el);
-            console.log(app.v.manijan1);
         }
     });
 
@@ -371,15 +370,17 @@ head.ready(function () {
 
     /* View 开始赠品促销列表  */
     app.view.cartTopGiftList = Backbone.View.extend({
-//        template: $('#ProductListTemplate').html(),
 
         initialize: function(){
             this.render();
         },
 
         render: function(){
-//            var tmp = Handlebars.compile( this.template );
-//            this.$el.html(tmp );
+            this.$el.find("#promotiongift").empty();
+            if(this.collection.length === 0){
+                //如果没有一个活动就隐藏标题
+                this.$el.empty();
+            }
             this.collection.each(this.showGift, this);
         },
 
@@ -410,7 +411,10 @@ head.ready(function () {
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
 
-
+            if(this.giftproductlist.length === 0){
+                //如果没有一个赠品就隐藏标题
+                this.$el.empty();
+            };
             this.giftproductlist.each(this.showProduct, this);
         },
 
@@ -454,6 +458,11 @@ head.ready(function () {
         render: function(){
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
+
+            if(this.model.get('productstock') == 0 ){
+                this.$el.find("#giftFinish").show();
+                this.$el.find("#giftAdd").remove();
+            };
         },
 
         events: {
@@ -507,7 +516,11 @@ head.ready(function () {
         },
 
         render: function(){
-
+            this.$el.find("#promotionredemption").empty();
+            if(this.collection.length === 0){
+                //如果没有一个活动就隐藏标题
+                this.$el.empty();
+            }
             this.collection.each(this.showExchange, this);
         },
 
@@ -653,12 +666,12 @@ head.ready(function () {
     app.collection.giftlist.add(app.m.promotiongift1);
     app.collection.giftlist.add(app.m.promotiongift2);
 
-    app.m.productgift1 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productgift : 11582});
-    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", normalprice: 200, promotionprice:120, productgift : 11582});
-    app.m.productgift3 = new app.model.Product({productname: "赠品1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productgift : 11582});
-    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productgift : 11582});
-    app.m.productgift5 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10, productgift : 11582});
-    app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲321231232123123212312", normalprice: 20, promotionprice:10, productgift : 11581});
+    app.m.productgift1 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productstock:20, productgift : 11582});
+    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", normalprice: 200, promotionprice:120, productstock:0, productgift : 11582});
+    app.m.productgift3 = new app.model.Product({productname: "赠品1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productstock:20, productgift : 11582});
+    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productstock:0, productgift : 11582});
+    app.m.productgift5 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10, productstock:20, productgift : 11582});
+    app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲321231232123123212312", normalprice: 20, promotionprice:10, productstock:20, productgift : 11581});
 
     app.collection.giftproductlist = new app.model.Productlist();  //所有赠品促销里面的所有免费赠品商品
 
