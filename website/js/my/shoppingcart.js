@@ -298,29 +298,32 @@ head.ready(function () {
 
     /* View 开始被删除商品列表  */
     app.view.removedProductList = Backbone.View.extend({
-
+        template: $('#ProductDeletedTemplate').html(),
         initialize: function(){
             this.render();
             app.collection.productdeletelist.on('change', this.render, this);
         },
 
         render: function(){
-//            var tmp = Handlebars.compile( this.template );
-//            $(this.el).html(tmp );
+            var tmp = Handlebars.compile( this.template );
+            console.log(app.collection.productdeletelist);
+            if(app.collection.productdeletelist.length > 0){
+                //如果大于0才显示
+
+                $(this.el).html(tmp );
 
 
-//            console.log(app.collection.productdeletelist);
-
-
-            this.$el.empty();
-            app.collection.productdeletelist.each(this.showProduct, this);
+                this.$el.find('#removedArea')[0].innerHTML="";
+                app.collection.productdeletelist.each(this.showProduct, this);
+            }
         },
 
         showProduct: function(prodcut){
             app.v.product4 = new app.view.cartProduct({ model: prodcut });
-            this.$el.append(app.v.product4.el);
+            this.$el.find('#removedArea').append(app.v.product4.el);
         }
     });
+
 
 
     /* View 购物车中已经添加的赠品商品  */
@@ -556,7 +559,6 @@ head.ready(function () {
         render: function(){
             var tmp = Handlebars.compile( this.template );
             $(this.el).html(tmp( this.model.toJSON()) );
-            console.log(this.model);
         },
 
         events: {
@@ -594,7 +596,6 @@ head.ready(function () {
     app.collection.plist = new app.model.Productlist();
     app.collection.productdeletelist = new app.model.Productlist();  //被删除的列表
 
-
     app.collection.plist.add(app.m.product1);
     app.collection.plist.add(app.m.product2);
     app.collection.plist.add(app.m.product3);
@@ -602,9 +603,10 @@ head.ready(function () {
     app.collection.plist.add(app.m.product5);
     app.collection.plist.add(app.m.product6);
 
-
     app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
-    app.v.productdellist = new app.view.removedProductList({el:$('#removedArea')});  //被删除的列表渲染
+
+// 开始被删除商品部分
+    app.v.productdellist = new app.view.removedProductList({el:$('#deletedProductlist')});  //被删除的列表渲染
 
 // 开始满减商品部分
     app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
@@ -617,7 +619,7 @@ head.ready(function () {
 
     app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
 
-// 开始被删除商品部分
+
 
 
 // 开始赠品活动部分
@@ -654,7 +656,7 @@ head.ready(function () {
 
 
 
-    stickFooter()
+
 
 // 开始换购活动部分
     app.m.promotionexchange1 = new app.model.PromotionExchange({promotionid:11592, promotionname: "周三全场买满358元加1元换购以下任一商品，换完为止。", promotiongiftcondition1:358, promotionexchangeprice1:1, promotiongiftcondition2: 458});
@@ -706,7 +708,7 @@ head.ready(function () {
     app.v.carttopexchangelist = new app.view.cartTopExchangeList({ collection: app.collection.exchangelist, el: $('#promotionredemptionlist') });
     app.v.cartexchangelist = new app.view.cartExchangeProductList({ collection: app.collection.exchangeaddedproductlist, el: $('#redemptionproductlist') });
 
-
+    stickFooter(); // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 });
 // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 function stickFooter(){

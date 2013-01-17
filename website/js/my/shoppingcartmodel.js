@@ -28,6 +28,8 @@ head.ready(function () {
             productfinalprice : 0,
             productstock : 6,
             productquantity : 1,
+
+
             producttotalprice : 0,
             producttotalpricetext : 0,
             productluckynumber : 0,
