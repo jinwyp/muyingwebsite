@@ -538,11 +538,22 @@ head.ready(function () {
 
         showBox: function(e){
             e.preventDefault();
-            this.$el.find("#exchangebox").show();
+            if(!$("#cover-bg").length){
+                $("<div id='cover-bg'></div>")
+                    .css({width:$(window).width(), height:$(document).height(), opacity:0.6, "z-index":"998", position:"absolute", background:"#333", top:0, left:0,display:"none"})
+                    .appendTo("body")
+            }
+            $("#cover-bg").fadeIn(200);
+            var exchangebox = this.$el.find("#exchangebox");
+            exchangebox.css({
+                "margin-left":-exchangebox.width()/2,
+                top:($(window).height()-exchangebox.height())/2
+            }).show(200);
         },
         hideBox: function(e){
             e.preventDefault();
-            this.$el.find("#exchangebox").hide();
+            this.$el.find("#exchangebox").hide(300);
+            $("#cover-bg").fadeOut()
         },
 
         hideBox2: function(){
