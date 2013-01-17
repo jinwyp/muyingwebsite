@@ -426,11 +426,22 @@ head.ready(function () {
 
         showBox: function(e){
             e.preventDefault();
-            this.$el.find("#giftbox").show();
+            if(!$("#cover-bg").length){
+                $("<div id='cover-bg'></div>")
+                    .css({width:$(window).width(), height:$(document).height(), opacity:0.6, "z-index":"998", position:"absolute", background:"#333", top:0, left:0,display:"none"})
+                    .appendTo("body")
+            }
+            $("#cover-bg").fadeIn(200);
+            var giftbox = this.$el.find("#giftbox");
+            giftbox.css({
+                "margin-left":-giftbox.width()/2,
+                top:($(window).height()-giftbox.height())/2
+            }).show(200);
         },
         hideBox: function(e){
             e.preventDefault();
-            this.$el.find("#giftbox").hide();
+            this.$el.find("#giftbox").hide(300);
+            $("#cover-bg").fadeOut()
         },
 
         hideBox2: function(){
@@ -775,7 +786,6 @@ function stickFooter(){
                 floatMain.css({
                     position:"fixed",
                     "margin-left":-fw/2,
-                    padding:0,
                     bottom:0,
                     width:fw,
                     left:"50%",
@@ -785,7 +795,6 @@ function stickFooter(){
                 floatMain.addClass("fixed-bottom").css({
                     "margin-left":fw/2,
                     width:fw,
-                    padding:0,
                     left:"50%",
                     "z-index":"9999"
                 });
