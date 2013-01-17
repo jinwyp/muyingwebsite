@@ -1,129 +1,93 @@
-﻿.hide{display: none;}
-.show{display: block;}
-/***菜单部分***/
-.wrap-menu{ overflow:hidden;padding:5px 5px 0; width:158px;border:1px #f4f4f4 solid; text-align:left;}
-.mod-menu{margin-bottom:15px;}
-.mod-menu h3{margin-bottom:5px; padding-left:10px; width:146px; height:27px; border:1px #fee0b1 solid;border-bottom:0 none; background:url(../images/usercenter/bg_side_title.gif) repeat-x;font-weight: 700; font-size:14px;line-height:27px;}
-.mod-menu dd li{ padding-left:10px; width:148px; height:30px;border-bottom:1px #f7f7f7 solid; background:url(../images/usercenter/side_arrow.gif) no-repeat 146px 0;  font-size:14px; line-height:30px;}
-.mod-menu dd a:hover{color:#e60000;}
-.mod-menu .status-hover{ background:#f4f4f4 url(../images/usercenter/side_arrow.gif) no-repeat 146px -32px;}
-.mod-menu .status-hover a:hover{color:#333;text-decoration: none;}
-/***内容部分***/
-.wrap-mycenter{ width: 820px;}
-.wrap-mycenter .mod-hd{display:block;margin-top:6px; padding-left:15px; height:28px; background:url(../images/usercenter/bg_main_title.gif) repeat-x;font-weight: 700; line-height:28px;}
-.wrap-mycenter .mod-bd{padding:20px 10px;width:798px;border:1px #F4F4F4 solid; }
-.tab-menu{margin-bottom:15px;padding-left:20px;border-bottom:1px #ffda71 solid; }
-.tab-menu:after { display: block; visibility: hidden;clear: both; height: 0; content: "";line-height: 0;}
-.tab-menu li{ position:relative;bottom:-1px;float:left;margin-right:5px;border:1px solid #fff;border-bottom:none medium;}
-.tab-menu li a{display:block;padding:5px 15px;text-decoration: none;font-size:12px;}
-.tab-menu .status-on{border:1px solid #ffda71 ;border-bottom:1px solid #fff;font-weight:700;}
-.tab-menu .status-on a{color:#ff9900;}
+﻿/**菜单部分**/
+.wrap-menu {overflow: hidden; padding: 5px 5px 0; width: 158px; border: 1px #f4f4f4 solid; text-align: left;}
+.mod-menu {margin-bottom: 15px;}
+.mod-menu h3 {margin-bottom: 5px; padding-left: 10px; width: 146px; height: 27px; border: 1px #fee0b1 solid; border-bottom: 0 none; background: url(../images/usercenter/bg_side_title.gif) repeat-x; font-weight: 700; font-size: 14px; line-height: 27px;}
+.mod-menu dd li {padding-left: 10px; width: 148px; height: 30px; border-bottom: 1px #f7f7f7 solid; background: url(../images/usercenter/side_arrow.gif) no-repeat 146px 0; font-size: 14px; line-height: 30px;}
+.mod-menu dd a:hover {color: #e60000;}
+.mod-menu .status-hover {background: #f4f4f4 url(../images/usercenter/side_arrow.gif) no-repeat 146px -32px;}
+.mod-menu .status-hover a:hover {color: #333; text-decoration: none;}
+
+/**内容部分**/
+.wrap-mycenter {width: 820px;}
+.wrap-mycenter .mod-hd {display: block; margin-top: 6px; padding-left: 15px; height: 28px; background: url(../images/usercenter/bg_main_title.gif) repeat-x; font-weight: 700; line-height: 28px;}
+.wrap-mycenter .mod-bd {padding: 20px 10px; width: 798px; border: 1px #F4F4F4 solid;}
+.tab-menu {margin-bottom: 15px; padding-left: 20px; border-bottom: 1px #ffda71 solid;}
+.tab-menu:after {display: block; visibility: hidden; clear: both; height: 0; content: ""; line-height: 0;}
+.tab-menu li {position: relative; bottom: -1px; float: left; margin-right: 5px; border: 1px solid #fff; border-bottom: none medium;}
+.tab-menu li a {display: block; padding: 5px 15px; text-decoration: none; font-size: 12px;}
+.tab-menu .status-on {border: 1px solid #ffda71; border-bottom: 1px solid #fff; font-weight: 700;}
+.tab-menu .status-on a {color: #ff9900;}
 
 /*表格*/
-.mod-content .table th{padding:5px; background-color: #f8f8f8;}
-.mod-content .table td{padding:5px; border-bottom:1px solid #f8f8f8; vertical-align: top;  word-wrap: break-word; word-break: normal;}
-.info-list h4{padding:5px;background-color: #f8f8f8;font-size:12px;}
-.info-list dl{overflow:hidden;border-bottom:1px solid #f8f8f8;zoom:1;}
-.info-list dt{float:left;}
-.info-list dd{float:left; padding: 5px; width: 120px;}
+.mod-content .table th {padding: 5px; background-color: #f8f8f8;}
+.mod-content .table td {padding: 5px; border-bottom: 1px solid #f8f8f8; vertical-align: top; word-wrap: break-word; word-break: normal;}
+.info-list h4 {padding: 5px; background-color: #f8f8f8; font-size: 12px;}
+.info-list dl {overflow: hidden; border-bottom: 1px solid #f8f8f8; zoom: 1;}
+.info-list dt {float: left;}
+.info-list dd {float: left; padding: 5px; width: 120px;}
+
 /*表单*/
-legend{display: none;}
-select{ position: relative;padding:4px 6px;width: 120px; border: 1px solid #bababa;  border-radius: 3px 3px 3px 3px; background-color: #fff; vertical-align: middle;font-size:14px; line-height: 20px; }
-label{vertical-align: middle;}
-input[type="radio"], input[type="checkbox"] { vertical-align: middle; line-height: normal; cursor: pointer;}
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
-    float: left;
-    border: 1px solid #bababa;
-    background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    vertical-align: middle;
-    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-}
-textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus{
-    outline: 0 none;
-    border-color: #ff9900;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);
-}
-.control-group {clear:both; margin-bottom: 20px;color: #1a1a1a;font-size: 14px; line-height: 30px; zoom:1;}
-.control-group abbr{color:#e60000;}
-.control-group:before, .control-group:after { display: table; content: "";  line-height: 0;}
-.control-group:after { clear: both;}
-.control-group .control-label { float: left;  width:90px;  margin-right:10px;  font-size:14px; color:#4d4d4d; text-align: right; }
-.control-group input {padding: 4px 6px;border-radius: 3px 3px 3px 3px;display: inline-block;font-size: 14px;height: 20px;line-height: 20px;}
-.text-input input{float:left;border: 1px solid #bababa;}
-.controls span{vertical-align: middle;font-size:12px;}
-.controls .font-gray{margin-left:10px;}
-.control-group strong{font-weight: 400;}
-.mod-info .text-tips a{color:#619eb1;}
-.control-tel .controls span{float:left;margin-right:10px;}
-.form-actions span{margin-left:0;}
-.icon-help{margin-left:10px;padding-left:20px;height:16px;background:url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}
-.successtipflow{position: fixed; top: 0; left: 50%; margin-left: -320px; z-index: 999; display: none; opacity: 0; width: 810px;}
-.successtip{ background-color: #F0FFE5;
-    border: 1px solid #B6DC2F;
-    color: #428E01;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 40px;
-    text-align: center;
-    vertical-align: middle;}
-.successtip img{ display: inline-block;   vertical-align: middle;}
- .floatTips{ display:block; clear: both; margin-top:6px;height: 20px; overflow: hidden; position: relative;}
- /*优惠券*/
+legend {display: none;}
+select {position: relative; padding: 4px 6px; width: 120px; border: 1px solid #bababa; border-radius: 3px 3px 3px 3px; background-color: #fff; vertical-align: middle; font-size: 14px; line-height: 20px;}
+label {vertical-align: middle;}
+input[type="radio"], input[type="checkbox"] {vertical-align: middle; line-height: normal; cursor: pointer;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {float: left; border: 1px solid #bababa; background-color: #fff; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; vertical-align: middle; transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {outline: 0 none; border-color: #ff9900; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);}
+.control-group {clear: both; margin-bottom: 20px; color: #1a1a1a; font-size: 14px; line-height: 30px; zoom: 1;}
+.control-group abbr {color: #e60000;}
+.control-group:before, .control-group:after {display: table; content: ""; line-height: 0;}
+.control-group:after {clear: both;}
+.control-group .control-label {float: left; width: 90px; margin-right: 10px; font-size: 14px; color: #4d4d4d; text-align: right;}
+.control-group input {padding: 4px 6px; border-radius: 3px 3px 3px 3px; display: inline-block; font-size: 14px; height: 20px; line-height: 20px;}
+.text-input input {float: left; border: 1px solid #bababa;}
+.controls span {vertical-align: middle; font-size: 12px;}
+.controls .font-gray {margin-left: 10px;}
+.control-group strong {font-weight: 400;}
+.mod-info .text-tips a {color: #619eb1;}
+.control-tel .controls span {float: left; margin-right: 10px;}
+.form-actions span {margin-left: 0;}
+.icon-help {margin-left: 10px; padding-left: 20px; height: 16px; background: url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}
+.successtipflow {position: fixed; top: 0; left: 50%; margin-left: -320px; z-index: 999; display: none; opacity: 0; width: 810px;}
+.successtip {background-color: #F0FFE5; border: 1px solid #B6DC2F; color: #428E01; font-size: 14px; font-weight: bold; line-height: 40px; text-align: center; vertical-align: middle;}
+.successtip img {display: inline-block; vertical-align: middle;}
+.floatTips {display: block; clear: both; margin-top: 6px; height: 20px; overflow: hidden; position: relative;}
+
+/*优惠券*/
 .table-enable .status {color: #7fbc41;}
-.table-beenUsed .status,.table-expired .status {color: #e60000;}
+.table-beenUsed .status, .table-expired .status {color: #e60000;}
 
 /*账户安全*/
-.safety-form .control-label{width:160px;}
-.suc-title,.err-title{padding-left:80px; height:64px;background: url("../images/usercenter/icon_64x64.gif") no-repeat 0 -64px;color:#82be0e;font:700 22px/64px "macrosoft yahei","simhei";}
-.err-title{background-position:0 -128px;color:#e60000;}
-.safety-text{padding-left:80px;line-height:24px;}
-/*babyinfo*/
-.baby-list dl{margin-bottom:20px;overflow:hidden;background-color: #f8f8f8;zoom:1;}
-.baby-list dt{padding:0 20px;height:28px;background-color: #e6f5d0;line-height: 28px;}
-.baby-list dd{float:left; padding: 5px; width: 120px; }
-.baby-list .baby-name{padding-left:20px;width:80px;}
-.baby-list .baby-sex{width:80px;}
-.baby-list dd.edit-baby{font-size:12px;cursor: pointer;}
-.edit-babyinfo{display: none;margin-top:-20px;margin-bottom:20px;padding:10px;border:5px solid #f8f8f8;}
-.edit-babyinfo .control-label{width:140px;}
-.baby-list .font-gray{height:30px;line-height: 30px;}
+.safety-form .control-label {width: 160px;}
+.suc-title, .err-title {padding-left: 80px; height: 64px; background: url("../images/usercenter/icon_64x64.gif") no-repeat 0 -64px; color: #82be0e; font: 700 22px/64px "macrosoft yahei", "simhei";}
+.err-title {background-position: 0 -128px; color: #e60000;}
+.safety-text {padding-left: 80px; line-height: 24px;}
 
-/*binding*/
-.binding-area dl{padding-bottom:30px;padding-left:20px;}
-.binding-area dl dt{float:left;margin-right:12px;width:50px;height:50px;background-image: url(../images/usercenter/icon_binding.gif);background-repeat: no-repeat;}
-.binding-area .binding-weibo dt{background-position: 0 0;}
-.binding-area .binding-taobao dt{background-position: 0 -50px;}
-.binding-area .binding-qq dt{background-position: 0 -100px;}
-.binding-area dd p{height:24px;line-height: 24px;}
-.binding-area dd .binding-name{font-size:14px;}
+/*宝宝信息*/
+.baby-list dl {margin-bottom: 20px; overflow: hidden; background-color: #f8f8f8; zoom: 1;}
+.baby-list dt {padding: 0 20px; height: 28px; background-color: #e6f5d0; line-height: 28px;}
+.baby-list dd {float: left; padding: 5px; width: 120px;}
+.baby-list .baby-name {padding-left: 20px; width: 80px;}
+.baby-list .baby-sex {width: 80px;}
+.baby-list dd.edit-baby {font-size: 12px; cursor: pointer;}
+.edit-babyinfo {display: none; margin-top: -20px; margin-bottom: 20px; padding: 10px; border: 5px solid #f8f8f8;}
+.edit-babyinfo .control-label {width: 140px;}
+.baby-list .font-gray {height: 30px; line-height: 30px;}
 
-/*invitation*/
-.invitation-list .status{float:right;}
+/*账号绑定*/
+.binding-area dl {padding-bottom: 30px; padding-left: 20px;}
+.binding-area dl dt {float: left; margin-right: 12px; width: 50px; height: 50px; background-image: url(../images/usercenter/icon_binding.gif); background-repeat: no-repeat;}
+.binding-area .binding-weibo dt {background-position: 0 0;}
+.binding-area .binding-taobao dt {background-position: 0 -50px;}
+.binding-area .binding-qq dt {background-position: 0 -100px;}
+.binding-area dd p {height: 24px; line-height: 24px;}
+.binding-area dd .binding-name {font-size: 14px;}
 
+/*邀请好友*/
+.invitation-list .status {float: right;}
 
-/* 下拉邮箱列表 */
-.sliderBox{
-    position: absolute;
-    border: 1px solid #999;
-    border-top: 0;
-    background: #fff;
-    padding:0;
-    display: none
-}
-.sliderBox li{
-    display: block;
-    line-height: 22px;
-    font-size: 12px;
-    font-family: verdana;
-    padding:0px 10px;
-    cursor: pointer
-}
-.sliderBox li:hover{
-    background: #FF9900;
-    color:#f6f6f6;
-}
-.sliderBox li.seleceted{
-    background: #EE7407;
-    color:#f6f6f6;
-}
+/*下拉邮箱列表*/
+.sliderBox {position: absolute; border: 1px solid #999; border-top: 0; background: #fff; padding: 0; display: none;}
+.sliderBox li {font: 12px verdana /22px; display: block; padding: 0 10px; cursor: pointer;}
+.sliderBox li:hover {background: #f90;}
+.sliderBox li:hover, .sliderBox li.seleceted {color: #f6f6f6;}
+.sliderBox li.seleceted {background: #ee7407;}
