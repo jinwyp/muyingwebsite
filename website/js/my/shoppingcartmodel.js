@@ -29,6 +29,8 @@ head.ready(function () {
             productstock : 6,
             productquantity : 1,
 
+            productdeleted : 0, //是否已被删除,等待恢复. 1表示已经被删除
+
 
             producttotalprice : 0,
             producttotalpricetext : 0,

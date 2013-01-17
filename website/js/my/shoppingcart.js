@@ -16,30 +16,33 @@ head.ready(function () {
 
         render: function(){
 
-
-
-
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON()) );
 
             this._modelBinder.bind(this.model, this.el);
 
+            //判断是否是已删除商品
+            if(this.model.get('productdeleted') === 1 ){
+                this.$el.find("#productDel").hide();
+                this.$el.find("#removedProduct").show();
+                this.$el.find("#productquantity").html(this.model.get('productquantity'));
+            };
+
             //商品赠品图标
             if(this.model.get('productgift') > 0 ){
-                $(this.el).find("#icon-gift").show();
-                $(this.el).find("#productquantity").html('1');
+                this.$el.find("#icon-gift").show();
+                this.$el.find("#productquantity").html('1');
                 this.model.set("productfinalprice",0); //赠品数量为1,价格为0
                 this.sumtotal();
             };
 
             //商品换购图标
             if(this.model.get('productexchange') > 0 ){
-                $(this.el).find("#icon-redemption").show();
-                $(this.el).find("#productquantity").html('1');
+                this.$el.find("#icon-redemption").show();
+                this.$el.find("#productquantity").html('1');
                 this.model.set("productfinalprice", this.model.get("productexchangeprice")); //换购数量为1,价格为换购价格
                 this.sumtotal();
             };
-
         },
 
         events: {
@@ -57,11 +60,11 @@ head.ready(function () {
         quantityreduce: function(){
             if(this.model.get("productquantity") < 2 ){
                 this.showDeleteBox();
-//                $(this.el).find('#nostock_tips').html('数量太少').fadeIn();
+//                this.$el.find('#nostock_tips').html('数量太少').fadeIn();
             }else{
                 this.model.set("productquantity", (this.model.get("productquantity") -1) );
                 this.sumtotal();
-                $(this.el).find('#nostock_tips').fadeOut();
+                this.$el.find('#nostock_tips').fadeOut();
             }
         },
 
@@ -69,16 +72,16 @@ head.ready(function () {
 
             if(this.model.get("productquantity") > (this.model.get("productstock") - 1) ){
                 //如果大于库存数量显示提示库存不足
-                $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
+                this.$el.find('#nostock_tips').html('库存不足').fadeIn();
                 this.model.set("productquantity",this.model.get("productstock"));
             }else{
                 this.hideDeleteBox();
                 this.model.set("productquantity", (Number(this.model.get("productquantity")) + Number(1)) );
                 this.sumtotal();
-                $(this.el).find('#nostock_tips').fadeOut();
+                this.$el.find('#nostock_tips').fadeOut();
             }
 
-            if($(this.el).find("#productDel").is(":hidden")){
+            if(this.$el.find("#productDel").is(":hidden")){
                 this.hideDeleteBox()
             }
         },
@@ -88,21 +91,21 @@ head.ready(function () {
         },
 
         changeval: function(){
-            var val = $(this.el).find("input:eq(0)").val().trim();
+            var val = this.$el.find("input:eq(0)").val().trim();
             val = val.replace(/\D/g,'');
-            if(val==""){$(this.el).find("input:eq(0)").val(0);val=0}
+            if(val==""){this.$el.find("input:eq(0)").val(0);val=0}
             this.model.set("productquantity", parseInt(val));
             if(this.model.get("productquantity") < 1 ){
                 this.showDeleteBox();
             }else{
                 if(this.model.get("productquantity") > this.model.get("productstock") ){
                     //如果大于库存数量显示提示库存不足
-                    $(this.el).find('#nostock_tips').html('库存不足').fadeIn();
+                    this.$el.find('#nostock_tips').html('库存不足').fadeIn();
                     this.model.set("productquantity",this.model.get("productstock"));
                 }else{
-                    $(this.el).find('#nostock_tips').fadeOut();
+                    this.$el.find('#nostock_tips').fadeOut();
                 }
-                if($(this.el).find("#productDel").is(":hidden")){
+                if(this.$el.find("#productDel").is(":hidden")){
                     this.hideDeleteBox()
                 }
                 this.sumtotal();
@@ -124,15 +127,15 @@ head.ready(function () {
         },
 
         showDeleteBox: function() {
-            $(this.el).find("#productDel").hide();
-            $(this.el).find("#j_delTips").animate({
+            this.$el.find("#productDel").hide();
+            this.$el.find("#j_delTips").animate({
                 left: '-20px',opacity: 'show'
             }, "500");
         },
 
         hideDeleteBox: function() {
-            $(this.el).find("#productDel").show();
-            $(this.el).find("#j_delTips").animate({
+            this.$el.find("#productDel").show();
+            this.$el.find("#j_delTips").animate({
                 left: '0',opacity: 'hide'
             }, "500");
         },
@@ -140,13 +143,12 @@ head.ready(function () {
         deleteCancel: function(e) {
             e.preventDefault();
             this.hideDeleteBox();
-            if($(this.el).find(".input").val()<1){
+            if(this.$el.find(".input").val()<1){
                 this.model.set("productquantity",1);
             }
         },
 
         deleteSuccess: function(e) {
-
 
             if(this.model.get('productgift') > 0 ){
                 //赠品商品
@@ -157,22 +159,36 @@ head.ready(function () {
                 app.collection.exchangeproductlist.add( this.model.clone());
                 app.v.carttopexchangelist.render();
 
-            }else{
-                //删除商品添加到恢复列表
+            }else if(this.model.get('productdeleted') === 0 ){
+                //删除商品添加到恢复列表, 注意已经被删除的商品不会在添加到被删除列表里面
+                this.model.set('productdeleted', 1);
                 app.collection.productdeletelist.add( this.model.clone());
-//                app.v.productdellist.render();
             };
 
             var that = this;
-            $(this.el).fadeOut(function(){
+            this.$el.fadeOut(function(){
                     app.v.productdellist.render();
                     that.model.destroy();
                 }
             );
-            //console.log(this.model);
+
         },
-        productRebuy: function() {
-            $(this.$el).append();
+        productRebuy: function(e) {
+            e.preventDefault();
+            if(this.model.get('productdeleted') === 1 ){
+                //恢复商品添加到普通列表
+                this.model.set('productdeleted', 0);
+                app.collection.plist.add( this.model.clone()); // 加回到商品列表中
+
+                var that = this;
+                this.$el.fadeOut(function(){
+                        app.v.plist = new app.view.cartProductList({ collection: app.collection.plist, el: $('#normalproductList') });
+                        app.v.manjianlist.render();
+//                        app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
+                        that.model.destroy();
+                    }
+                );
+            };
         },
         productFavorites: function() {
 
@@ -188,14 +204,15 @@ head.ready(function () {
         initialize: function(){
             app.collection.pnormallist = new app.model.Productlist();  //非满减的普通商品
             app.collection.pnormallist = this.collection.byNormalProduct();
+
             this.render();
             app.collection.pnormallist.on('destroy', this.render, this);
         },
 
         render: function(){
+
 //            var tmp = Handlebars.compile( this.template );
-//            $(this.el).html(tmp );
-            //console.log(app.collection.pnormallist);
+//            this.$el.html(tmp );
 
             this.$el.empty();
             app.collection.pnormallist.each(this.showProduct, this);
@@ -218,13 +235,15 @@ head.ready(function () {
 
         render: function(){
 //            var tmp = Handlebars.compile( this.template );
-//            $(this.el).html(tmp );
+//            this.$el.html(tmp );
+            this.$el.find("#manjianbox").remove(); //默认删除所有满减
             this.collection.each(this.showManjian, this);
         },
 
         showManjian: function(manjian){
             app.v.manijan1 = new app.view.cartManjian({ model: manjian });
             this.$el.append(app.v.manijan1.el);
+            console.log(app.v.manijan1);
         }
     });
 
@@ -232,6 +251,7 @@ head.ready(function () {
     /* View 开始满减列表中每个满减里面的商品列表  */
     app.view.cartManjian = Backbone.View.extend({
         tagName: 'ul',
+        id:'manjianbox',
         className: 'cart-body cart-fullReduction',
         template: $('#ManjianTemplate').html(),
 
@@ -251,13 +271,16 @@ head.ready(function () {
         render: function(){
 
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
-
-            this.showManjianInfo();
+            this.$el.html(tmp( this.model.toJSON()) );
 
             this._modelBinder.bind(this.model, this.el);
+//            console.log(this.manjianproductlist);
+            if(this.manjianproductlist.length === 0){
+                this.$el.empty(); //如果没有商品需要隐藏满减信息
+            }
 
-            $(this.el).find("#manjiandiscountinfo").hide(); //默认隐藏立减信息
+            this.showManjianInfo();
+            this.$el.find("#manjiandiscountinfo").hide(); //默认隐藏立减信息
             this.manjianproductlist.each(this.showProduct, this);
         },
 
@@ -281,14 +304,14 @@ head.ready(function () {
 
             var manjiandiff = this.model.get("promotionmanjiancondition") - this.model.get("promotiontotalprice");
             if( manjiandiff > 0 ){
-                $(this.el).find("#manjiandiscountinfo").fadeOut();
-                $(this.el).find("#manjiandiffinfo").fadeIn();
+                this.$el.find("#manjiandiscountinfo").fadeOut();
+                this.$el.find("#manjiandiffinfo").fadeIn();
                 this.model.set("promotiontotaldifferenceprice", manjiandiff );
                 this.model.set("promotiontotaldifferencepricetext", (manjiandiff + unit) ); //如果是满减件 要判断是否增加 件 文字
 //                console.log(this.model.get("promotiontotaldifferencepricetext"));
             }else{
-                $(this.el).find("#manjiandiscountinfo").fadeIn();
-                $(this.el).find("#manjiandiffinfo").fadeOut();
+                this.$el.find("#manjiandiscountinfo").fadeIn();
+                this.$el.find("#manjiandiffinfo").fadeOut();
             }
         }
 
@@ -301,27 +324,27 @@ head.ready(function () {
         template: $('#ProductDeletedTemplate').html(),
         initialize: function(){
             this.render();
-            app.collection.productdeletelist.on('change', this.render, this);
+            app.collection.productdeletelist.on('destroy', this.render, this);
         },
 
         render: function(){
             var tmp = Handlebars.compile( this.template );
-            console.log(app.collection.productdeletelist);
-            if(app.collection.productdeletelist.length > 0){
-                //如果大于0才显示
+            this.$el.html(tmp );
+            this.$el.find('#removedArea')[0].innerHTML="";
+            app.collection.productdeletelist.each(this.showProduct, this);
 
-                $(this.el).html(tmp );
-
-
-                this.$el.find('#removedArea')[0].innerHTML="";
-                app.collection.productdeletelist.each(this.showProduct, this);
-            }
+            if(app.collection.productdeletelist.length === 0){
+                //如果为0不显示 已删除商品标题
+                this.$el.empty();
+//                console.log(app.collection.productdeletelist);
+            };
         },
 
         showProduct: function(prodcut){
             app.v.product4 = new app.view.cartProduct({ model: prodcut });
             this.$el.find('#removedArea').append(app.v.product4.el);
         }
+
     });
 
 
@@ -356,7 +379,7 @@ head.ready(function () {
 
         render: function(){
 //            var tmp = Handlebars.compile( this.template );
-//            $(this.el).html(tmp );
+//            this.$el.html(tmp );
             this.collection.each(this.showGift, this);
         },
 
@@ -385,7 +408,7 @@ head.ready(function () {
         render: function(){
 
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON()) );
 
 
             this.giftproductlist.each(this.showProduct, this);
@@ -430,7 +453,7 @@ head.ready(function () {
 
         render: function(){
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON()) );
         },
 
         events: {
@@ -445,14 +468,13 @@ head.ready(function () {
             app.collection.giftaddedproductlist.add(app.m.tempproduct);
 
             var that = this;
-            $(this.el).fadeOut(function(){
+            this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartgiftlist.render();
                 }
             );
         }
     });
-
 
 
 
@@ -513,7 +535,7 @@ head.ready(function () {
         render: function(){
 
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON()) );
 
             this.exchangeproductlist.each(this.showProduct, this);
         },
@@ -558,7 +580,7 @@ head.ready(function () {
 
         render: function(){
             var tmp = Handlebars.compile( this.template );
-            $(this.el).html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON()) );
         },
 
         events: {
@@ -573,7 +595,7 @@ head.ready(function () {
             app.collection.exchangeaddedproductlist.add(app.m.tempproduct);
             console.log(this.model);
             var that = this;
-            $(this.el).fadeOut(function(){
+            this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartexchangelist.render();
                 }
