@@ -160,11 +160,12 @@ head.ready(function () {
             }else{
                 //删除商品添加到恢复列表
                 app.collection.productdeletelist.add( this.model.clone());
-                app.v.productdellist.render();
+//                app.v.productdellist.render();
             };
 
             var that = this;
             $(this.el).fadeOut(function(){
+                    app.v.productdellist.render();
                     that.model.destroy();
                 }
             );
