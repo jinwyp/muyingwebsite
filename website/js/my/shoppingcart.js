@@ -731,7 +731,7 @@ head.ready(function () {
 });
 // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 function stickFooter(){
-    var floatMain = $(".cart-total .cart-button"),
+    var floatMain = $(".cart-button"),
         Top = floatMain.position().top,
         fw = floatMain.width(),
         floatStyle = false,
