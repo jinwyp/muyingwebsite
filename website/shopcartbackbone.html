@@ -75,7 +75,8 @@
                     <dd>
                         <p class="name"><a href="" title="{{promotionname}}">{{promotionname}}</a></p>
 
-                        <p class="gift-select"><span class="btn_s btn_s_o"><a href="#" id="btn_giftSelect">选择赠品</a></span></p>
+                        <p class="gift-select" id="giftSelect"><span class="btn_s btn_s_o"><a href="#" id="btn_giftSelect">选择赠品</a></span></p>
+                        <p id="giftSoldout" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
 
                     </dd>
 
@@ -92,8 +93,8 @@
                     <dd>
                         <p class ="goods-name"><a href="{{producturl}}" title="{{productname}}">{{productname}}</a></p>
                         <p class="price"><span class="now">&yen;{{productfinalprice}}</span></p>
-                        <p><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
-                        <p><span class="btn_s btn_s_g" id="btn_giftFinish"><a href="#">已领完</a></span></p>
+                        <p id="giftAdd"><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
+                        <p id="giftFinish" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
                 </script>
         </div>
@@ -101,7 +102,6 @@
 
     <div class="mod-favorable mod-redemption" id="promotionredemptionlist">
         <div class="hd"><span class="sign-redemption"></span>您还可以换购以下商品呦</div>
-
         <div class="bd" id="promotionredemption">
 
 
@@ -109,7 +109,8 @@
                     <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="{{promotionname}}" width="60px" height="60px" /></a></dt>
                     <dd>
                         <p class="name"><a href="" title="{{promotionname}}">{{promotionname}}</a></p>
-                        <p><span class="btn_s btn_s_o"><a href="#" id="btn_redemptionSelect">查看换购</a></span></p>
+                        <p id="redemptionSelect"><span class="btn_s btn_s_o"><a href="#" id="btn_redemptionSelect">查看换购</a></span></p>
+                        <p id="redemptionSoldout" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
 
                     <div class="pop-win w1000 goods-list" id="exchangebox">
@@ -125,7 +126,8 @@
                     <dd>
                         <p class="goods-name"><a href="{{producturl}}" title="{{productname}}">{{productname}}</a></p>
                         <p class="price"><del>&yen;{{productfinalprice}}</del><span class="now">&yen;{{productexchangeprice}}</span></p>
-                        <p><span class="btn_s btn_s_o" id="btn_redemptionAdd"><a href="#">立即换购</a></span></p>
+                        <p id="redemptionAdd"><span class="btn_s btn_s_o" id="btn_redemptionAdd"><a href="#">立即换购</a></span></p>
+                        <p id="redemptionFinish" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
                 </script>
 
@@ -281,7 +283,7 @@
                                     <div class="column col-number" id="productquantity">
                                         <span class="wrap-input">
                                             <span class="reduce" id="productquantityreduce" >-</span>
-                                            <input class="input" id="productquantity" name="productquantity" type="text"  />
+                                            <input class="input" id="productquantityinput" name="productquantity" type="text"  />
                                             <span class="add" id="productquantityadd">+</span>
                                         </span>
                                         <p id="nostock_tips" class="col-tips hide">库存不足</p>
@@ -345,43 +347,15 @@
         </div>
     </div>
 
-    <div class="mod-removed cart-list">
-        <div class="hd">已删除商品，您可以重新购买或收藏</div>
-        <div class="bd">
-        <ul id="removedArea" class="cart-body">
-            <li class="clearfix">
-                <div class="column col-name">
-                    <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
-                    <div class="goods-info">
-                        <p class="name">
-                            <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">雅氏12小南瓜防渗漏尿垫80*60cm（黄色）</a>
-                        </p>
-                        <p class="gifts">
-                            <span class="font-green">[促销]</span>
-                            <a onclick="" href="javascript:;">再加一点即可参加： [满2件每件立减10元] [满4件每件立减15元] [满6件每件立减20元]</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="column col-price">
-                    <strong>&yen;99.00</strong>
-                </div>
-                <div class="column col-number">
-                    1
-                </div>
-                <div class="column col-subtotal">
-                    <strong class="font-red">&yen;99.00</strong>
-                </div>
-                <div class="column col-luckyStar">
-                    99
-                </div>
-                <div class="column col-operation">
-                    <a href="javascript:;" id="reBuy1" class="link-blue mr10">重新购买</a>
-                    <a href="javascript:;" id="favorites1" class="link-blue">收藏</a>
-                </div>
-            </li>
+    <div class="mod-removed cart-list" id="deletedProductlist">
+        <script id="ProductDeletedTemplate" type="text/x-handlebars-template">
+            <div class="hd">已删除商品，您可以重新购买或收藏</div>
+            <div class="bd">
+                <ul id="removedArea" class="cart-body">
 
-        </ul>
-        </div>
+                </ul>
+            </div>
+        </script>
     </div>
 
     <div class="mod-guessLike">
