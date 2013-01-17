@@ -75,7 +75,8 @@
                     <dd>
                         <p class="name"><a href="" title="{{promotionname}}">{{promotionname}}</a></p>
 
-                        <p class="gift-select"><span class="btn_s btn_s_o"><a href="#" id="btn_giftSelect">选择赠品</a></span></p>
+                        <p class="gift-select" id="giftSelect"><span class="btn_s btn_s_o"><a href="#" id="btn_giftSelect">选择赠品</a></span></p>
+                        <p id="giftSoldout" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
 
                     </dd>
 
@@ -93,7 +94,7 @@
                         <p class ="goods-name"><a href="{{producturl}}" title="{{productname}}">{{productname}}</a></p>
                         <p class="price"><span class="now">&yen;{{productfinalprice}}</span></p>
                         <p id="giftAdd"><span class="btn_s btn_s_o" id="btn_giftAdd"><a href="#">免费领取</a></span></p>
-                        <p id="giftFinish" class="hide"><span class="btn_s btn_s_g" id="btn_giftFinish"><a href="#">已领完</a></span></p>
+                        <p id="giftFinish" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
                 </script>
         </div>
@@ -108,7 +109,8 @@
                     <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg" alt="{{promotionname}}" width="60px" height="60px" /></a></dt>
                     <dd>
                         <p class="name"><a href="" title="{{promotionname}}">{{promotionname}}</a></p>
-                        <p><span class="btn_s btn_s_o"><a href="#" id="btn_redemptionSelect">查看换购</a></span></p>
+                        <p id="redemptionSelect"><span class="btn_s btn_s_o"><a href="#" id="btn_redemptionSelect">查看换购</a></span></p>
+                        <p id="redemptionSoldout" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
 
                     <div class="pop-win w1000 goods-list" id="exchangebox">
@@ -124,7 +126,8 @@
                     <dd>
                         <p class="goods-name"><a href="{{producturl}}" title="{{productname}}">{{productname}}</a></p>
                         <p class="price"><del>&yen;{{productfinalprice}}</del><span class="now">&yen;{{productexchangeprice}}</span></p>
-                        <p><span class="btn_s btn_s_o" id="btn_redemptionAdd"><a href="#">立即换购</a></span></p>
+                        <p id="redemptionAdd"><span class="btn_s btn_s_o" id="btn_redemptionAdd"><a href="#">立即换购</a></span></p>
+                        <p id="redemptionFinish" class="hide"><span class="btn_s btn_s_g" ><a href="#">已领完</a></span></p>
                     </dd>
                 </script>
 

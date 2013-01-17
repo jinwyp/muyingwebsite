@@ -313,7 +313,6 @@ head.ready(function () {
                 this.$el.find("#manjiandiffinfo").fadeOut();
             }
         }
-
     });
 
 
@@ -411,10 +410,7 @@ head.ready(function () {
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
 
-            if(this.giftproductlist.length === 0){
-                //如果没有一个赠品就隐藏标题
-                this.$el.empty();
-            };
+            this.hideBox2();
             this.giftproductlist.each(this.showProduct, this);
         },
 
@@ -439,7 +435,10 @@ head.ready(function () {
 
         hideBox2: function(){
             if(this.giftproductlist.length == 0){
-                this.$el.find("#giftbox").hide();
+                this.$el.find("#giftbox").remove();
+                this.$el.find("#giftSoldout").show();
+                this.$el.find("#giftSelect").remove();
+//                this.$el.find("#giftbox").hide();
             };
         }
 
@@ -479,11 +478,12 @@ head.ready(function () {
             var that = this;
             this.$el.fadeOut(function(){
                     that.model.destroy();
-                    app.v.cartgiftlist.render();
+                    app.v.cartgiftlist.render(); //渲染购物车的赠品商品
                 }
             );
         }
     });
+
 
 
 
@@ -549,7 +549,7 @@ head.ready(function () {
 
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
-
+            this.hideBox2();
             this.exchangeproductlist.each(this.showProduct, this);
         },
 
@@ -575,7 +575,10 @@ head.ready(function () {
 
         hideBox2: function(){
             if(this.exchangeproductlist.length == 0){
-                this.$el.find("#exchangebox").hide();
+                this.$el.find("#exchangebox").remove();
+                this.$el.find("#redemptionSoldout").show();
+                this.$el.find("#redemptionSelect").remove();
+//                this.$el.find("#exchangebox").hide();
             };
         }
 
@@ -594,6 +597,11 @@ head.ready(function () {
         render: function(){
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
+
+            if(this.model.get('productstock') == 0 ){
+                this.$el.find("#redemptionFinish").show();
+                this.$el.find("#redemptionAdd").remove();
+            };
         },
 
         events: {
@@ -604,13 +612,12 @@ head.ready(function () {
             e.preventDefault();
             app.m.tempproduct =  this.model.clone(); //添加的换购消失,并出现在购物车里面
             app.m.tempproduct.set("productfinalprice", this.model.get("productexchangeprice")); //换购数量为1,价格为换购价格
-
             app.collection.exchangeaddedproductlist.add(app.m.tempproduct);
-            console.log(this.model);
+
             var that = this;
             this.$el.fadeOut(function(){
                     that.model.destroy();
-                    app.v.cartexchangelist.render();
+                    app.v.cartexchangelist.render(); //渲染购物车的换购商品
                 }
             );
         }
@@ -667,9 +674,9 @@ head.ready(function () {
     app.collection.giftlist.add(app.m.promotiongift2);
 
     app.m.productgift1 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productstock:20, productgift : 11582});
-    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", normalprice: 200, promotionprice:120, productstock:0, productgift : 11582});
+    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", normalprice: 200, promotionprice:120, productstock:10, productgift : 11582});
     app.m.productgift3 = new app.model.Product({productname: "赠品1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productstock:20, productgift : 11582});
-    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productstock:0, productgift : 11582});
+    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productstock:10, productgift : 11582});
     app.m.productgift5 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10, productstock:20, productgift : 11582});
     app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲321231232123123212312", normalprice: 20, promotionprice:10, productstock:20, productgift : 11581});
 
@@ -710,7 +717,7 @@ head.ready(function () {
     app.collection.exchangelist.add(app.m.promotionexchange5);
     app.collection.exchangelist.add(app.m.promotionexchange6);
 
-    app.m.productexchange1 = new app.model.Product({productname: "换购贝亲婴儿柔湿巾good", normalprice: 10, promotionprice:10, productexchange : 11592});
+    app.m.productexchange1 = new app.model.Product({productname: "换购贝亲婴儿柔湿巾good", normalprice: 10, promotionprice:10, productstock:0, productexchange : 11592});
     app.m.productexchange2 = new app.model.Product({productname: "换购贝亲321231232123123212312", normalprice: 200, promotionprice:120, productexchange : 11592});
     app.m.productexchange3 = new app.model.Product({productname: "换购1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productexchange : 11592});
     app.m.productexchange4 = new app.model.Product({productname: "换购1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productexchange : 11592});
