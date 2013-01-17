@@ -730,7 +730,6 @@ function stickFooter(){
                 floatMain.css({
                     position:"fixed",
                     "margin-left":-fw/2,
-                    padding:0,
                     bottom:0,
                     width:fw,
                     left:"50%",
@@ -740,7 +739,6 @@ function stickFooter(){
                 floatMain.addClass("fixed-bottom").css({
                     "margin-left":fw/2,
                     width:fw,
-                    padding:0,
                     left:"50%",
                     "z-index":"9999"
                 });
