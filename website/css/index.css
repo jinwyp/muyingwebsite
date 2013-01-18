@@ -18,7 +18,7 @@
 .time-guide #a5_c:hover {background-position: -638px 0; width: 115px; margin-left: 1px; margin-right: 0;}
 
 /*slides*/
-.slides {position: relative; z-index: 1; overflow: hidden; width: 545px; height: 310px; border: 1px solid #E4E4E4;}
+.slides {position: relative; z-index: 1; overflow: hidden; width: 545px; height: 310px; border: 1px solid #e4e4e4;}
 .slides .Loading {width: 545px; height: 310px;}
 .slide-pic {overflow: hidden; width: 545px;}
 .slide-pic img {width: 545px; height: 273px;}
@@ -36,7 +36,7 @@
 .quickbuy-bd h3 {height: 32px; width: 100%; background: #f90 url(../images/tejia_01a_c.gif) no-repeat left top; overflow: hidden; text-indent: -9999px;}
 .quickbuy-new h3 {background-image: url(../images/title_newproduct.gif);}
 .quickbuy-bd label {position: absolute; background: url(../images/tejia_02a.gif) no-repeat left top; width: 173px; height: 41px; display: inline-block; margin-left: 185px; top: 3px; padding-left: 30px;}
-.quickbuy-bd label span {display: inline-block; width: 30px; height: 26px; color: #E60000; font: bold 18px/26px Verdana; text-align: center; margin-left: 14px; margin-top: 5px; padding-left: 1px;}
+.quickbuy-bd label span {display: inline-block; width: 30px; height: 26px; color: #E60000; font: 700 18px/26px Verdana; text-align: center; margin-left: 14px; margin-top: 5px; padding-left: 1px;}
 .quickbuy-bd .goods-list {border: 1px #eee solid; border-top: 0 none; height: 252px; overflow: hidden;}
 .quickbuy-bd .goods-list dl {float: left; padding: 10px 5px; width: 170px; display: inline; text-align: center; line-height: 1.4;}
 .quickbuy-bd .goods-list p {margin-top: 5px;}
@@ -93,27 +93,27 @@
 .index-dialog {position: absolute; left: 50%; z-index: 999;}
 
 /*dialog*/
-.index-dialog .top-wrap{clear:both; overflow:hidden; zoom:1; position:relative}
-.index-dialog .con-wrap{clear:both; overflow:hidden; zoom:1}
-.index-dialog .btm-wrap{clear:both; float:left; margin-top:-8px; width:100%; overflow:hidden; zoom:1; position:relative; z-index:1}
-.index-dialog .ctl{width:34px; height:33px; float:left; background:url(../images/dialog/ctl.png) no-repeat 0 0}
-.index-dialog .ctm{height:33px; float:left; background:url(../images/dialog/ctm.png) repeat-x 0 0}
-.index-dialog .ctr{width:38px; height:33px; float:left; background:url(../images/dialog/ctr.png) no-repeat 0 0}
-.index-dialog .cml{width:34px; float:left; background:url(../images/dialog/cml.png) repeat-y 0 0; position:relative; z-index:0}
-.index-dialog .cmr{width:38px; float:right; background:url(../images/dialog/cmr.png) repeat-y 0 0; position:relative; z-index:0}
-.index-dialog .cbl{width:34px; height:40px; float:left; background:url(../images/dialog/cbl.png) no-repeat 0 0}
-.index-dialog .cbm{height:40px; float:left; background:url(../images/dialog/cbm.png) repeat-x 0 0}
-.index-dialog .cbr{width:38px; height:40px; float:left; background:url(../images/dialog/cbr.png) no-repeat 0 0}
-.index-dialog .close{width:31px; height:31px; position:absolute; right:0; top:0}
-.index-dialog .close a{display:block; height:31px; text-indent:-999em; overflow:hidden; background:url(../images/dialog/dialog_close.png) no-repeat 0 0}
+.index-dialog .top-wrap{clear:both; overflow:hidden; zoom:1; position:relative;}
+.index-dialog .con-wrap{clear:both; overflow:hidden; zoom:1;}
+.index-dialog .btm-wrap{clear:both; float:left; margin-top:-8px; width:100%; overflow:hidden; zoom:1; position:relative; z-index:1;}
+.index-dialog .ctl{width:34px; height:33px; float:left; background:url(../images/dialog/ctl.png) no-repeat 0 0;}
+.index-dialog .ctm{height:33px; float:left; background:url(../images/dialog/ctm.png) repeat-x 0 0;}
+.index-dialog .ctr{width:38px; height:33px; float:left; background:url(../images/dialog/ctr.png) no-repeat 0 0;}
+.index-dialog .cml{width:34px; float:left; background:url(../images/dialog/cml.png) repeat-y 0 0; position:relative; z-index:0;}
+.index-dialog .cmr{width:38px; float:right; background:url(../images/dialog/cmr.png) repeat-y 0 0; position:relative; z-index:0;}
+.index-dialog .cbl{width:34px; height:40px; float:left; background:url(../images/dialog/cbl.png) no-repeat 0 0;}
+.index-dialog .cbm{height:40px; float:left; background:url(../images/dialog/cbm.png) repeat-x 0 0;}
+.index-dialog .cbr{width:38px; height:40px; float:left; background:url(../images/dialog/cbr.png) no-repeat 0 0;}
+.index-dialog .close{width:31px; height:31px; position:absolute; right:0; top:0;}
+.index-dialog .close a{display:block; height:31px; text-indent:-999em; overflow:hidden; background:url(../images/dialog/dialog_close.png) no-repeat 0 0;}
 .index-dialog .content{min-height:100px; width:300px; background:#fffbe1; float:left; position:relative; z-index:2}
-.index-dialog .content h2{display:block; height:20px; line-height:1.5; top:-20px; font-weight:bold; width:100%; position:absolute; color:#ff7800; font-size:14px; text-align:center}
-.index-dialog .content .checksubs{overflow:hidden; zoom:1; padding:10px 0 0 0}
-.index-dialog .content .checksubs label{float:left; display:inline; padding:0 10px 0 15px; vertical-align:middle}
-.index-dialog .content .checksubs label input{float:left; vertical-align:middle}
+.index-dialog .content h2{display:block; height:20px; line-height:1.5; top:-20px; font-weight:700; width:100%; position:absolute; color:#ff7800; font-size:14px; text-align:center;}
+.index-dialog .content .checksubs{overflow:hidden; zoom:1; padding:10px 0 0 0;}
+.index-dialog .content .checksubs label{float:left; display:inline; padding:0 10px 0 15px; vertical-align:middle;}
+.index-dialog .content .checksubs label input{float:left; vertical-align:middle;}
 .index-dialog .content .getdate{clear:both; padding:15px 0 0 35px}
-.index-dialog .content .getdate label{color:#f90; font-size:12px; font-weight:bold}
-.index-dialog .content .getdate .bbtips{color:#999}
-.index-dialog .content .getdate input{border:1px solid #f90; width:100px; padding:2px 5px; border-radius:3px; cursor:text}
-.index-dialog .content .subbtn{padding:20px 0 0; text-align:center}
+.index-dialog .content .getdate label{color:#f90; font-size:12px; font-weight:700;}
+.index-dialog .content .getdate .bbtips{color:#999;}
+.index-dialog .content .getdate input{border:1px solid #f90; width:100px; padding:2px 5px; border-radius:3px; cursor:text;}
+.index-dialog .content .subbtn{padding:20px 0 0; text-align:center;}
 .index-dialog .content .subbtn input{width:80px; height:30px; border:0; padding:0; background:url(../images/dialog/dialog_btn.png); cursor:pointer; color:#fff; display:block; text-align:center; margin:0 auto}
