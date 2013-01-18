@@ -64,6 +64,7 @@ head.ready(function () {
             }else{
                 this.model.set("productquantity", (this.model.get("productquantity") -1) );
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 this.$el.find('#nostock_tips').fadeOut();
             }
         },
@@ -78,6 +79,7 @@ head.ready(function () {
                 this.hideDeleteBox();
                 this.model.set("productquantity", (Number(this.model.get("productquantity")) + Number(1)) );
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 this.$el.find('#nostock_tips').fadeOut();
             }
 
@@ -109,21 +111,12 @@ head.ready(function () {
                     this.hideDeleteBox();
                 }
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
             }
         },
 
         sumtotal: function(){
-            var productsumtotal;
-            productsumtotal = this.model.get('productquantity') * this.model.get('productfinalprice');
-
-            this.model.set("producttotalprice", productsumtotal);
-
-            var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
-            this.model.set("producttotalpricetext", rmb + this.model.get("producttotalprice").toFixed(2) );
-
-            var productluckysumtotal;
-            productluckysumtotal = this.model.get('productquantity') * this.model.get('productluckynumber');
-            this.model.set("productluckynumbertotal", productluckysumtotal);
+            this.model.sumPrice();
         },
 
         _delete: function(e) {
@@ -143,6 +136,7 @@ head.ready(function () {
             this.$el.find("#j_delTips").animate({
                 left: '0',opacity: 'hide'
             }, "500");
+
         },
 
         deleteCancel: function(e) {
@@ -177,6 +171,7 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     app.v.productdellist.render();
                     that.model.destroy();
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
 
@@ -194,6 +189,7 @@ head.ready(function () {
                         app.v.manjianlist.render();
 //                        app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
                         that.model.destroy();
+                        app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                     }
                 );
             };
@@ -315,11 +311,13 @@ head.ready(function () {
                 this.$el.find("#manjiandiscountinfo").fadeOut();
                 this.$el.find("#manjiandiffinfo").fadeIn();
                 this.model.set("promotiontotaldifferenceprice", manjiandiff );
+                this.model.set("promotionmanjianalreadydiscount", 0 );  //符合满减条件 设置已经满减优惠金额 否则为0
                 this.model.set("promotiontotaldifferencepricetext", (manjiandiff + unit) ); //如果是满减件 要判断是否增加 件 文字
 //                console.log(this.model.get("promotiontotaldifferencepricetext"));
             }else{
                 this.$el.find("#manjiandiscountinfo").fadeIn();
                 this.$el.find("#manjiandiffinfo").fadeOut();
+                this.model.set("promotionmanjianalreadydiscount", this.model.get('promotionmanjiandiscount') );  //符合满减条件 设置已经满减优惠金额
             }
         }
     });
@@ -502,6 +500,7 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartgiftlist.render(); //渲染购物车的赠品商品
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
         }
@@ -653,8 +652,27 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartexchangelist.render(); //渲染购物车的换购商品
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
+        }
+    });
+
+    /* View 商品总金额  */
+    app.view.cartTotal = Backbone.View.extend({
+
+//        template: $('#PromotionRedemptionProductsTemplate').html(),
+
+        initialize: function(){
+            this._modelBinder = new Backbone.ModelBinder();
+            this.render();
+        },
+
+        render: function(){
+//            var tmp = Handlebars.compile( this.template );
+//            this.$el.html(tmp( this.model.toJSON()) );
+            this._modelBinder.bind(this.model, this.el);
+            this.model.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
         }
     });
 
@@ -785,11 +803,16 @@ head.ready(function () {
     app.v.carttopexchangelist = new app.view.cartTopExchangeList({ collection: app.collection.exchangelist, el: $('#promotionredemptionlist') });
     app.v.cartexchangelist = new app.view.cartExchangeProductList({ collection: app.collection.exchangeaddedproductlist, el: $('#redemptionproductlist') });
 
+
+    // 开始商品总金额部分
+    app.m.carttotal = new app.model.CartTotal();
+    app.v.carttotal = new app.view.cartTotal({ model: app.m.carttotal, el: $('#cart-total') });
+
     stickFooter(); // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 });
 // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 function stickFooter(){
-    var floatMain = $(".cart-button"),
+    var floatMain = $("#cart-final"),
         Top = floatMain.position().top,
         fw = floatMain.width(),
         floatStyle = false,
