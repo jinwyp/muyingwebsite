@@ -380,6 +380,7 @@ head.ready(function () {
             if(this.collection.length === 0){
                 //如果没有一个活动就隐藏标题
                 this.$el.empty();
+
             }
             this.collection.each(this.showGift, this);
         },
@@ -442,7 +443,7 @@ head.ready(function () {
         hideBox: function(e){
             e.preventDefault();
             this.$el.find("#giftbox").hide(300);
-            $("#cover-bg").fadeOut()
+            $("#cover-bg").fadeOut();
         },
 
         hideBox2: function(){
@@ -593,7 +594,7 @@ head.ready(function () {
         hideBox: function(e){
             e.preventDefault();
             this.$el.find("#exchangebox").hide(300);
-            $("#cover-bg").fadeOut()
+            $("#cover-bg").fadeOut();
         },
 
         hideBox2: function(){
