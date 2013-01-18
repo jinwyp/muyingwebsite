@@ -34,7 +34,8 @@ head.ready(function () {
 
             producttotalprice : 0,
             producttotalpricetext : 0,
-            productluckynumber : 0,
+            productluckynumber : 0, //幸运星
+            productluckynumbertotal : 0,
 
             productgift : 0, //是否是赠品 0为不是赠品, 如果是赠品需要填写属于哪个赠品促销ID
             productexchange : 0, //是否是换购商品 如果是换购商品需要填写属于哪个换购促销ID
