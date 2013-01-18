@@ -24,10 +24,6 @@ strong {font-weight: 700;}
 .headerLogo img { display: inline-block; float: left;}
 .wfc_myCart, .wfc_Order_information, .wfc_Order_submitted_successfully {  left: 300px;  margin: 0; padding: 0; position: absolute; top: 15px; width: 430px; z-index: 3;}
 .wfc_myCart li, .wfc_Order_information li, .wfc_Order_submitted_successfully li { display: inline-block; float: left;}
-.headerLogo {background: url("http: //css.muyingzhijia.com/themes/default/images/telephone.gif") no-repeat scroll right center transparent; height: 70px; position: relative;}
-.headerLogo img {display: inline-block; float: left;}
-.wfc_myCart, .wfc_Order_information, .wfc_Order_submitted_successfully {left: 300px; margin: 0; padding: 0; position: absolute; top: 15px; width: 430px; z-index: 3;}
-.wfc_myCart li, .wfc_Order_information li, .wfc_Order_submitted_successfully li {display: inline-block; float: left;}
 
 /**购物车列表**/
 .wrap-cart .title {margin-bottom: 10px;}
@@ -64,7 +60,7 @@ strong {font-weight: 700;}
 .goods-list dl {float: left; padding: 10px; width: 229px; border-bottom: 0 none;}
 .goods-list dt {float: left;}
 .goods-list .goods-name, .goods-list .price {margin-bottom: 3px;}
-.goods-list .goods-name {height: 18px; overflow: hidden;}
+.goods-list .goods-name {height: 18px; word-break: break-all; word-wrap: break-word; overflow: hidden;}
 .goods-list del {color: #bababa; margin-right: 5px;}
 .goods-list .now {color: #e60000; font-weight: 700;}
 
@@ -83,35 +79,18 @@ strong {font-weight: 700;}
 .hd-fullReduction .money strong {float: left; width: 70px; padding-right: 10px; text-align: center;}
 
 /**结算**/
-<<<<<<< HEAD
-.cart-total .total {padding:0 10px 10px 0;line-height: 30px;text-align: right;}
-.cart-total .coupon {padding:10px 15px ;}
-.cart-total .coupon .text-input{border: 1px solid #bababa;margin-right:3px;height:18px; vertical-align: middle;}
-.cart-total .coupon .btn_s{vertical-align: middle;}
-.cart-total .coupon .col-tips{position:relative;top:0;left:10px;padding:2px 10px;width:auto;}
-.cart-total .item{display: inline;margin-left:10px;}
-.cart-clear {padding:10px;}
-.all{display: inline;text-align:right;float: right}
-.total-price{font-size:14px;}
-.total-price strong{color:#e60000;font-size:22px;}
-.cart-total  .noFreight{color:#bababa;margin-right:10px;}
-.cart-button{padding:6px 0px 6px 0px;background-color:#f4f4f4;overflow:hidden;zoom:1}
-.gtlt{font-family:simsun; letter-spacing:-.5em; *zoom:1;}
-=======
 .cart-total .total {padding: 0 10px 10px 0; line-height: 30px; text-align: right;}
-.cart-total .cart-clear {padding: 10px;}
 .cart-total .coupon {padding: 10px 15px;}
 .cart-total .coupon .text-input {border: 1px solid #bababa; margin-right: 3px; height: 18px; vertical-align: middle;}
 .cart-total .coupon .btn_s {vertical-align: middle;}
 .cart-total .coupon .col-tips {position: relative; top: 0; left: 10px; padding: 2px 10px; width: auto;}
 .cart-total .item {display: inline; margin-left: 10px;}
-.cart-total .all {display: inline; text-align: right; float: right;}
-.cart-total .total-price {font-size: 14px;}
-.cart-total .total-price strong {color: #e60000; font-size: 22px;}
-.cart-total .noFreight {color: #bababa; margin-right: 10px;}
-.cart-button {padding: 6px 15px 6px 10px; background-color: #f4f4f4;}
-
->>>>>>> 0117-1
+.cart-clear {padding: 10px;}
+.all {display: inline; text-align: right; float: right;}
+.total-price {font-size: 14px;}
+.total-price strong {color: #e60000; font-size: 22px;}
+.noFreight {color: #bababa; margin-right: 10px;}
+.cart-button {padding: 6px 0; background-color: #f4f4f4; overflow: hidden; zoom: 1;}
 
 
 

@@ -1,578 +1,124 @@
 /* register */
-.sign-content{
-    display: block;
-    border: 1px solid #dedede;
-    overflow: hidden;
-    zoom:1;
-    padding: 20px 10px 10px
-}
-.sign-main{
-    overflow:hidden;
-}
-.sign-left{
-    float: left;
-    width: 704px
-}
-.sign-right{
-    float: left;
-    width:220px;
-    display: inline;
-    margin: 10px 0 20px 10px;
-    padding: 0 0 0 20px;
-    border-left: 1px solid #DEDEDE;
-    min-height: 450px;
-    _height:450px;
-}
-.sign-title{
-    height: 40px;
-    font-size: 24px;
-    line-height: 1.5;
-    font-family: "微软雅黑";
-    border-bottom: 1px solid #dedede;
-    padding: 0 20px;
-    margin:0px 10px 10px
-}
-.sign-title-right{
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: "微软雅黑";
-    padding: 4px 0 0;
-}
-.sign-right-txt-link{
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: "微软雅黑";
-    text-align: left;
-    color: #619EB1;
-    padding: 0;
-    margin:10px 0
-}
-.sign-right-txt-link a{
-    color: #619EB1;
-}
-.sign-right-list{
-    display: block;
-    overflow: hidden;
-    zoom:1;
-}
-.sign-right-list a.signin{
-    width:101px;
-    height:30px;
-    display: block;
-    text-indent: -999em;
-    overflow: hidden;
-    background: url(../images/sign-icons.png) no-repeat 0 -33px
-}
-.sign-right-list a.signup{
-    width:101px;
-    height:30px;
-    display: block;
-    text-indent: -999em;
-    overflow: hidden;
-    background: url(../images/sign-icons.png) no-repeat -101px -33px
-}
-.sign-right-list li{
-    display: block;
-    float: left;
-    clear: both;
-    padding: 5px 0;
-}
-.sign-right-list li.link-01{
-    padding: 15px 0
-}
-.sign-right-list li.othercount a{
-    display: block;
-    width: 120px;
-    height: 24px;
-    text-indent: -999em;
-    overflow: hidden;
-    font-size: 1px;
-    line-height: 0;
-    background: url(../images/sign-icons.png) no-repeat 0 0;
-}
-.sign-right-list li.othercount a.weibo{
-    background-position: 0 -63px
-}
-.sign-right-list li.othercount a.qq{
-    background-position: 0 -87px
-}
-.sign-right-list li.othercount a.taobao{
-    background-position: 0 -111px
-}
-.sign-right-list li.othercount a.alipay{
-    background-position: 0 -135px
-}
-.sign-right-list li.othercount a.m_139{
-    background-position: 0 -159px
-}
-.register-form{
-    display: block;
-    padding:10px;
-    overflow: hidden;
-    zoom:1
-}
-.register-form li{
-    display: block;
-    width: 100%;
-    clear: both;
-    padding: 5px 0;
-    float: left;
-    line-height: 20px
-}
-.register-form li.followus{
-    padding-top:20px
-}
-.register-form li.submit-area{
-    padding-top:30px
-}
-.login-form li{
-    padding: 10px 0;
-}
-.register-form li i{
-    color:red;
-    padding-right:5px
-}
-.register-form li label{
-    display: block;
-    float: left;
-    padding-right:5px;
-    font-size: 14px;
-    color: #898989
-}
-.register-form li label.label{
-    text-align: right;
-    width:20%;
-    padding-top: 2px
-}
-.register-form li .inputCont{
-    width: 76%;
-    float: left;
-    zoom:1;
-}
-
-.register-form li .inputCont .floatTips{
-    display:block;
-    clear: both;
-    height: 20px;
-    overflow: hidden;
-    position: relative;
-}
-.register-form li input.focus{
-    border: 1px solid #ff9900;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);
-}
-
-.register-form li input.error{
-    border: 1px solid #fa2a14;
-    color: #fa2a14;
-}
-.register-form li input.passed{
-    border: 1px solid #468847;
-    color: #468847;
-}
-
-.register-form li input.agreement{
-    border: 0;
-    width: auto;
-    height: auto;
-    vertical-align: middle;
-}
-
-.register-form li .inputCont input{
-    width: 265px;
-    float: left;
-    vertical-align: baseline;
-    border-radius: 4px
-}
-.register-form li .inputCont input.txt{
-    height: 14px;
-    font-size: 12px;
-    padding: 7px 4px;
-    border: 1px solid #dedede;
-    color: #999999;
-}
-.register-form li .inputCont input.submit-signup{
-    border:0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    background: url(../images/sign-icons.png) no-repeat 0 0;
-    width: 109px;
-    height: 33px;
-}
-.register-form li .inputCont input.submit-signin{
-    border:0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    background: url(../images/sign-icons.png) no-repeat -109px 0;
-    width: 109px;
-    height: 33px;
-}
-.register-form li .inputCont input.submit-next{
-    border:0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    background: url(../images/sign-icons.png) no-repeat -218px -63px;
-    width: 109px;
-    height: 33px;
-}
-.register-form li .inputCont input.nextstep{
-    border:0;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    background: url(../images/sign-icons.png) no-repeat -218px 0;
-    width: 109px;
-    height: 33px;
-}
-.register-form li .inputCont label input{
-    width: auto;
-    float: none;
-}
-.register-form li .radioWrap{
-}
-.register-form li .radioWrap label{
-    padding:4px 0 2px;
-}
-
-.register-form li .inputCont .codeWrap{
-    width:269px;
-    float: left;
-    display: inline;
-    margin-right: 5px
-}
-.register-form li .inputCont .codeWrap input{
-    width: 30%
-}
-.register-form li .inputCont .argWrap{
-    _height:26px;
-    min-height: 26px;
-    width: 275px;
-    float: left;
-}
-.register-form li .inputCont .argWrap input.checkbox{
-    width: auto;
-    height: auto;
-    vertical-align: middle;
-}
-.register-form li .inputCont .codeWrap img{
-    float: left;
-    width: 60px;
-    height:25px;
-    margin: 2px 5px 0;
-    background: #ccc
-}
-.register-form li .inputCont .codeWrap p{
-    display: block;
-    float: left;
-    font-size: 12px;
-    padding-top:5px
-}
-.register-form li .inputCont .argWrap p{
-    display: block;
-    float: left;
-    font-size: 12px;
-}
-.register-form li .inputCont .codeWrap p a{
-    color: rgba(42, 51, 199, 0.68);
-}
-.register-form li .inputCont .argWrap p a{
-    color: #000;
-}
+.sign-content {display: block; border: 1px solid #dedede; overflow: hidden; zoom: 1; padding: 20px 10px 10px;}
+.sign-main {overflow: hidden;}
+.sign-left {float: left; width: 704px;}
+.sign-right {float: left; width: 220px; display: inline; margin: 10px 0 20px 10px; padding: 0 0 0 20px; border-left: 1px solid #DEDEDE; min-height: 450px; _height: 450px;}
+.sign-title {height: 40px; font-size: 24px; line-height: 1.5; font-family: "微软雅黑"; border-bottom: 1px solid #dedede; padding: 0 20px; margin: 0px 10px 10px;}
+.sign-title-right {font-size: 14px; line-height: 1.5; font-family: "微软雅黑"; padding: 4px 0 0;}
+.sign-right-txt-link {font-size: 14px; line-height: 1.5; font-family: "微软雅黑"; text-align: left; color: #619EB1; padding: 0; margin: 10px 0;}
+.sign-right-txt-link a {color: #619EB1;}
+.sign-right-list {display: block; overflow: hidden; zoom: 1;}
+.sign-right-list a.signin {width: 101px; height: 30px; display: block; text-indent: -999em; overflow: hidden; background: url(../images/sign-icons.png) no-repeat 0 -33px;}
+.sign-right-list a.signup {width: 101px; height: 30px; display: block; text-indent: -999em; overflow: hidden; background: url(../images/sign-icons.png) no-repeat -101px -33px;}
+.sign-right-list li {display: block; float: left; clear: both; padding: 5px 0;}
+.sign-right-list li.link-01 {padding: 15px 0;}
+.sign-right-list li.othercount a {display: block; width: 120px; height: 24px; text-indent: -999em; overflow: hidden; font-size: 1px; line-height: 0; background: url(../images/sign-icons.png) no-repeat 0 0;}
+.sign-right-list li.othercount a.weibo {background-position: 0 -63px;}
+.sign-right-list li.othercount a.qq {background-position: 0 -87px;}
+.sign-right-list li.othercount a.taobao {background-position: 0 -111px;}
+.sign-right-list li.othercount a.alipay {background-position: 0 -135px;}
+.sign-right-list li.othercount a.m_139 {background-position: 0 -159px;}
+.register-form {display: block; padding: 10px; overflow: hidden; zoom: 1;}
+.register-form li {display: block; width: 100%; clear: both; padding: 5px 0; float: left; line-height: 20px;}
+.register-form li.followus {padding-top: 20px;}
+.register-form li.submit-area {padding-top: 30px;}
+.login-form li {padding: 10px 0;}
+.register-form li i {color: red; padding-right: 5px;}
+.register-form li label {display: block; float: left; padding-right: 5px; font-size: 14px; color: #878787;}
+.register-form li label.label {text-align: right; width: 20%; padding-top: 2px;}
+.register-form li .inputCont {width: 76%; float: left; zoom: 1;}
+.register-form li .inputCont .floatTips {display: block; clear: both; height: 20px; overflow: hidden; position: relative;}
+.register-form li input.focus {border: 1px solid #f90; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 120, 0, 0.6);}
+.register-form li input.error {border: 1px solid #fa2a14; color: #fa2a14;}
+.register-form li input.passed {border: 1px solid #468847; color: #468847;}
+.register-form li input.agreement {border: 0; width: auto; height: auto; vertical-align: middle;}
+.register-form li .inputCont input {width: 265px; float: left; vertical-align: baseline; border-radius: 4px;}
+.register-form li .inputCont input.txt {height: 14px; font-size: 12px; padding: 7px 4px; border: 1px solid #dedede; color: #878787;}
+.register-form li .inputCont input.submit-signup {border: 0; padding: 0; margin: 0; cursor: pointer; background: url(../images/sign-icons.png) no-repeat 0 0; width: 109px; height: 33px;}
+.register-form li .inputCont input.submit-signin {border: 0; padding: 0; margin: 0; cursor: pointer; background: url(../images/sign-icons.png) no-repeat -109px 0; width: 109px; height: 33px;}
+.register-form li .inputCont input.submit-next {border: 0; padding: 0; margin: 0; cursor: pointer; background: url(../images/sign-icons.png) no-repeat -218px -63px; width: 109px; height: 33px;}
+.register-form li .inputCont input.nextstep {border: 0; padding: 0; margin: 0; cursor: pointer; background: url(../images/sign-icons.png) no-repeat -218px 0; width: 109px; height: 33px;}
+.register-form li .inputCont label input {width: auto; float: none;}
+.register-form li .radioWrap {;}
+.register-form li .radioWrap label {padding: 4px 0 2px;}
+.register-form li .inputCont .codeWrap {width: 269px; float: left; display: inline; margin-right: 5px;}
+.register-form li .inputCont .codeWrap input {width: 30%;}
+.register-form li .inputCont .argWrap {_height: 26px; min-height: 26px; width: 275px; float: left;}
+.register-form li .inputCont .argWrap input.checkbox {width: auto; height: auto; vertical-align: middle;}
+.register-form li .inputCont .codeWrap img {float: left; width: 60px; height: 25px; margin: 2px 5px 0; background: #ccc;}
+.register-form li .inputCont .codeWrap p {display: block; float: left; font-size: 12px; padding-top: 5px;}
+.register-form li .inputCont .argWrap p {display: block; float: left; font-size: 12px;}
+.register-form li .inputCont .codeWrap p a {color: rgba(42, 51, 199, 0.68);}
+.register-form li .inputCont .argWrap p a {color: #000;}
 
 /* 首页登录部分 */
 
-.submit-txt-link{
-    color: #619eb1;
-    float: left;
-    margin: 6px 0 0 40px
-}
-.otherwise{
-    clear: both;
-    display: block;
-    padding-left:20%;
-    border: 0;
-    width:auto;
-    min-height: 125px!important;
-    _height:125px!important;
-}
-.otherwise p{
-    display: block;
-    margin: 20px 0 0;
-}
-.otherwise p a{
-    color: #619EB1
-}
-.otherwise .sign-right-list{
-    width: 90%;
-    padding: 12px 10px 0 0
-}
-.otherwise .sign-right-list li{
-    float: left;
-    clear:none;
-    display: inline;
-    padding:0 20px 10px 0;
-}
+.submit-txt-link {color: #619eb1; float: left; margin: 6px 0 0 40px;}
+.otherwise {clear: both; display: block; padding-left: 20%; border: 0; width: auto; min-height: 125px!important; _height: 125px!important;}
+.otherwise p {display: block; margin: 20px 0 0;}
+.otherwise p a {color: #619EB1;}
+.otherwise .sign-right-list {width: 90%; padding: 12px 10px 0 0;}
+.otherwise .sign-right-list li {float: left; clear: none; display: inline; padding: 0 20px 10px 0;}
 
 /* 第三方账号绑定 */
-.thrid-bind-form{
-    padding: 0
-}
-.thrid-bind-form li{
-    padding: 15px 0
-}
-.thrid-bind-form li label.label{
-    width:20%;
-}
-.thrid-bind-form li .inputCont input{
-    width: 88%
-}
-.thrid-bind-form li .inputCont input.txt{
-    color: #999
-}
-.thrid-bind-form li input.submit-bindup{
-    width:101px;
-    height:30px;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    background: url(../images/sign-icons.png) no-repeat -202px -33px
-}
+.thrid-bind-form {padding: 0;}
+.thrid-bind-form li {padding: 15px 0;}
+.thrid-bind-form li label.label {width: 20%;}
+.thrid-bind-form li .inputCont input {width: 88%;}
+.thrid-bind-form li .inputCont input.txt {color:#878787;}
+.thrid-bind-form li input.submit-bindup {width: 101px; height: 30px; cursor: pointer; padding: 0; margin: 0; background: url(../images/sign-icons.png) no-repeat -202px -33px;}
 
 /* 准妈妈引导页 */
-.register-form li .inputCont select{
-    border: 1px solid #ccc;
-    margin: 3px 3px 3px 0
-}
-
-.addbaby{
-    background: url(../images/sign-icons.png) no-repeat -312px -185px;
-    padding-left:18px;
-    line-height: 18px;
-    color:#619eb1;
-}
+.register-form li .inputCont select {border: 1px solid #ccc; margin: 3px 3px 3px 0;}
+.addbaby {background: url(../images/sign-icons.png) no-repeat -312px -185px; padding-left: 18px; line-height: 18px; color: #619eb1;}
 
 /* 下拉邮箱列表 */
-.sliderBox{
-    position: absolute;
-    border: 1px solid #999;
-    border-top: 0;
-    background: #fff;
-    padding:0;
-    display: none
-}
-.sliderBox li{
-    display: block;
-    line-height: 22px;
-    font-size: 12px;
-    font-family: verdana;
-    padding:0px 10px;
-    cursor: pointer
-}
-.sliderBox li:hover{
-    background: #FF9900;
-    color:#f6f6f6;
-}
-.sliderBox li.seleceted{
-    background: #EE7407;
-    color:#f6f6f6;
-}
+.sliderBox {position: absolute; border: 1px solid#878787; border-top: 0; background: #fff; padding: 0; display: none;}
+.sliderBox li {display: block; line-height: 22px; font-size: 12px; font-family: verdana; padding: 0 10px; cursor: pointer;}
+.sliderBox li:hover {background: #f90; color: #f4f4f4;}
+.sliderBox li.seleceted {background: #ee7407; color: #f4f4f4;}
 
 /*注册成功*/
-.suc-content{
-    overflow: hidden;
-    zoom:1;
-    padding: 0 20px 30px
-}
-.suc-content .txt{
-    font-size:14px;
-    line-height: 2.2;
-    clear: both;
-    padding: 10px
-}
-.suc-content .verify-btn{
-    margin:10px
-}
-.suc-content .verify-btn a{
-    font-size:14px;
-    color:#fff;
-    font-weight: bold;
-}
-.suc-content .indiv-btn a{
-    font-size:14px;
-    color:#f78000;
-    font-weight: bold;
-}
-.suc-title{
-    background: url(../images/icon_sucsess.gif) no-repeat 0 0;
-    padding-left:70px;
-    font-size:22px;
-    color:#82be0e;
-    height:70px;
-    line-height:70px;
-    font-weight:bold;
-}
-.suc-btnlist{
-    padding:10px 70px;
-    overflow: hidden;
-    zoom:1;
-}
+.suc-content {overflow: hidden; zoom: 1; padding: 0 20px 30px;}
+.suc-content .txt {font-size: 14px; line-height: 2.2; clear: both; padding: 10px;}
+.suc-content .verify-btn {margin: 10px;}
+.suc-content .verify-btn a {font-size: 14px; color: #fff; font-weight: 700;}
+.suc-content .indiv-btn a {font-size: 14px; color: #f78000; font-weight: 700;}
+.suc-title {background: url(../images/usercenter/icon_64x64.gif) no-repeat 0 -64px; padding-left: 70px; font-size: 22px; height: 70px; line-height: 70px; font-weight:700; color: #82be0e;}
+.suc-btnlist {padding: 10px 70px; overflow: hidden; zoom: 1;}
+.suc-input-goshop {background: url("../images/sign-icons.png") no-repeat scroll -203px -96px transparent; height: 32px; width: 124px;}
 
-.suc-input-goshop{
-    background: url("../images/sign-icons.png") no-repeat scroll -203px -96px transparent;
-    height: 32px;
-    width: 124px;
-}
 
 /*找回密码*/
-.step-strip{
-    background:url(../images/step-bg.gif) no-repeat;
-    height:30px;
-    width:600px;
-    margin: 20px auto 10px;
-    overflow: hidden;
-}
-.step-strip span{
-    float: left;
-    width:33%;
-    height:30px;
-    text-align: center;
-    line-height:30px;
-    font-weight: bold;
-    color:#666
-}
-.step-strip span.cur{
-    color:#f60
-}
-.step-strip span.psd{
-    color:#fff
-}
-.step-1{
-    background-position:0 0
-}
-.step-2{
-    background-position:0 -30px
-}
-.step-3{
-    background-position:0 -60px
-}
-
-.sign-main .register-form{
-    padding-left:90px
-}
-
-.find-email{
-    width:560px;
-    margin:0 auto;
-    padding:20px;
-    text-align: center
-}
-.find-email p{
-    font-size: 14px;
-}
-.find-email .emadress{
-    color:#f60;
-    font-weight:bold;
-}
-.find-email .tel{
-    color:#c32f1b;
-}
-.find-email .setsuccess{
-    color:#82be0e;
-    font-size:14px;
-    font-weight:bold;
-    margin-left: 70px;
-    padding-left:38px;
-    height: 36px;
-    line-height: 36px;
-    background:url(../images/icon_sucsess_s.gif) no-repeat 0 0;
-    text-align:left
-}
-.find-email .btn_m{
-    margin:20px 0 20px 220px;
-    float:left;
-    display:inline;
-}
-.register-form li .inputCont .argWrap .btn_m{
-    float:left;
-    display:inline;
-}
-.find-email dl{
-    display: block;
-    margin-left: 90px;
-    padding:10px 50px;
-    text-align: left;
-    clear: both;
-}
-.find-email dl dt{
-    color:#999;
-    font-size:12px;
-    font-weight:normal;
-    line-height: 1.8
-}
-.find-email dl dd{
-    color:#999;
-    font-size:12px;
-    font-weight:normal;
-    line-height: 1.6;
-    background:url(../images/arr.gif) no-repeat 0 5px;
-    padding-left:10px
-}
+.step-strip {background: url(../images/step-bg.gif) no-repeat; height: 30px; width: 600px; margin: 20px auto 10px; overflow: hidden;}
+.step-strip span {float: left; width: 33%; height: 30px; text-align: center; line-height: 30px; font-weight: 700; color: #666;}
+.step-strip span.cur {color: #f60;}
+.step-strip span.psd {color: #fff;}
+.step-1 {background-position: 0 0;}
+.step-2 {background-position: 0 -30px;}
+.step-3 {background-position: 0 -60px;}
+.sign-main .register-form {padding-left: 90px;}
+.find-email {width: 560px; margin: 0 auto; padding: 20px; text-align: center;}
+.find-email p {font-size: 14px;}
+.find-email .emadress {color: #f60; font-weight: 700;}
+.find-email .tel {color: #c32f1b;}
+.find-email .setsuccess {color: #82be0e; font-size: 14px; font-weight: 700; margin-left: 70px; padding-left: 38px; height: 36px; line-height: 36px; background: url(../images/icon_sucsess_s.gif) no-repeat 0 0; text-align: left;}
+.find-email .btn_m {margin: 20px 0 20px 220px; float: left; display: inline;}
+.register-form li .inputCont .argWrap .btn_m {float: left; display: inline;}
+.find-email dl {display: block; margin-left: 90px; padding: 10px 50px; text-align: left; clear: both;}
+.find-email dl dt {color:#878787; font-size: 12px; font-weight: normal; line-height: 1.8;}
+.find-email dl dd {color:#878787; font-size: 12px; font-weight: normal; line-height: 1.6; background: url(../images/arr.gif) no-repeat 0 5px; padding-left: 10px;}
 
 /*登录弹出*/
-.gost-content .error-tips{
-    padding:12px;
-    background:#ffedb5;
-    border:1px solid #ff9900;
-    display:none
-}
-.gost-content .error-tips p{
-    display: block;
-    background:url(../images/logindl_bg.gif) no-repeat -76px 0;
-    padding-left:20px;
-    color:#e60000
-}
-.gost-content .dialog-login li label{
-    color:#000
-}
-.gost-content .dialog-login li .inputCont input.txt:focus{
-    border:1px solid #e60000
-}
-.otherway{
-    display: block;
-    overflow: hidden;
-    zoom:1;
-    border-top: 1px solid #ccc;
-    padding:8px 0;
-    margin:0 10px
-}
-.sign-otherway li{
-    float: left;
-    display: inline;
-    padding-right: 10px;
-}
-.sign-otherway li.sign-otherway-title{
-    padding-left:10px
-}
-.sign-otherway li.othercount a{
-    display: inline;
-    float: left;
-    padding-left:22px;
-    overflow: hidden;
-    line-height:18px;
-    background: url(../images/logindl_bg.gif) no-repeat -77px -30px;
-}
-.sign-otherway li.othercount a.weibo{
-    background-position: -77px -29px
-}
-.sign-otherway li.othercount a.qq{
-    background-position: -77px -104px
-}
-.sign-otherway li.othercount a.taobao{
-    background-position: -77px -79px
-}
-.sign-otherway li.othercount a.alipay{
-    background-position: -77px -53px
-}
+.gost-content .error-tips {padding: 12px; background: #ffedb5; border: 1px solid #f90; display: none;}
+.gost-content .error-tips p {display: block; background: url(../images/logindl_bg.gif) no-repeat -76px 0; padding-left: 20px; color: #e60000;}
+.gost-content .dialog-login li label {color: #000;}
+.gost-content .dialog-login li .inputCont input.txt:focus {border: 1px solid #e60000;}
+.otherway {display: block; overflow: hidden; zoom: 1; border-top: 1px solid #ccc; padding: 8px 0; margin: 0 10px;}
+.sign-otherway li {float: left; display: inline; padding-right: 10px;}
+.sign-otherway li.sign-otherway-title {padding-left: 10px;}
+.sign-otherway li.othercount a {display: inline; float: left; padding-left: 22px; overflow: hidden; line-height: 18px; background: url(../images/logindl_bg.gif) no-repeat -77px -30px;}
+.sign-otherway li.othercount a.weibo {background-position: -77px -29px;}
+.sign-otherway li.othercount a.qq {background-position: -77px -104px;}
+.sign-otherway li.othercount a.taobao {background-position: -77px -79px;}
+.sign-otherway li.othercount a.alipay {background-position: -77px -53px;}

@@ -7,16 +7,16 @@
 
 /*goods_sort*/
 .goods_sort dl {width: 166px; border-bottom: 1px dashed #ebebeb; overflow: hidden; position: relative; padding: 6px 10px 7px 20px;}
-.goods_sort .num {position: absolute; top: 5px; left: 5px; text-align: center; color: #fff; margin-right: 5px; background: #b1b1b1; margin-top: 4px; width: 12px; height: 12px; font: 800 9px/12px Verdana, Geneva, sans-serif; border-radius: 4px;}
+.goods_sort .num {position: absolute; top: 5px; left: 5px; text-align: center; color: #fff; margin-right: 5px; background: #bababa; margin-top: 4px; width: 12px; height: 12px; font: 800 9px/12px Verdana, Geneva, sans-serif; border-radius: 4px;}
 .goods_sort .n01 {background: #e60000;}
 .goods_sort .n02, .goods_sort span.n03 {background: #ff7800;}
 .goods_sort dd {display: none;}
-.goods_sort dd img {float: left; border: 1px solid #dedede; margin-right: 10px;}
+.goods_sort dd img {float: left; border: 1px solid #bababa; margin-right: 10px;}
 .goods_sort dd p {padding-left: 80px; padding-bottom: 5px;}
-.list_goods dl {width: 176px; border-bottom: 1px dashed #ebebeb; overflow: hidden; padding: 6px 10px 7px;}
+.list_goods dl {width: 176px; border-bottom: 1px dashed #e0e0e0; overflow: hidden; padding: 6px 10px 7px;}
 .list_goods dt {float: left; width: 82px;}
 .list_goods dd {float: right; width: 94px;}
-.list_goods dt img {float: left; border: 1px solid #dedede;}
+.list_goods dt img {float: left; border: 1px solid #bababa;}
 .list_goods dd p {padding-bottom: 5px;}
 
 /**main**/
@@ -29,7 +29,7 @@
 .goods_list .goods_name {height: 54px; overflow: hidden;}
 .goods_list .goods_name span {margin-left: 3px;}
 .goods_list p {padding-top: 5px;}
-.goods_list p del {color: #666; margin-right: 5px;}
+.goods_list p del {color: #878787; margin-right: 5px;}
 .goods_list p .price_now {color: #e60000; font-size: 14px; font-weight: 700;}
 .goods_list dl.hover {background-color: #fff6d7; text-decoration: none;}
 .goods_list .btn_m {margin-right: 10px; _margin-right: 5px;}
@@ -43,8 +43,8 @@
 .slideCat .slide_btns {position: absolute; right: 0; bottom: 3px; z-index: 103;}
 .slideCat .slide_btns span {float: left; width: 20px; height: 20px; margin-right: 5px; background-color: #fff; color: #f90; cursor: pointer; font-size: 12px; line-height: 20px; text-align: center; font-weight: 700;}
 .slideCat .slide_btns span.current {background-color: #f90; color: #fff; font-size: 13px;}
-.slideCat .slide_lay {position: absolute; background: #000; height: 26px; width: 100%; z-index: 101;}
-.attrSelect .hd {height: 28px; line-height: 28px; background: url(../images/hd_sidebar.gif) repeat-x; border-bottom: 1px solid #dedede;}
+.slideCat .slide_lay {position: absolute; background: #1a1a1a; height: 26px; width: 100%; z-index: 101;}
+.attrSelect .hd {height: 28px; line-height: 28px; background: url(../images/hd_sidebar.gif) repeat-x; border-bottom: 1px solid #bababa;}
 
 /*sift*/
 .attrSelect ul {overflow: hidden; padding: 0 10px 10px;}
@@ -66,7 +66,7 @@
 .showStyle a.swap {background-position: 0 bottom;}
 .pagin {float: right;}
 .pagin a, .pagin .disabled {border: 1px solid #ff7800; color: #ff7800; margin-left: 10px; padding: 3px 5px;}
-.pagin .disabled {border: 1px solid #b1b1b1; color: #b1b1b1;}
+.pagin .disabled {border: 1px solid #bababa; color: #bababa;}
 
 /**category all**/
 .box {margin-top: 10px;}
@@ -89,14 +89,14 @@
 
 /*brand*/
 .brand-list {width: auto; height: auto;}
-.brand-recommend {width: 998px; margin-bottom: 30px; padding-bottom: 15px; border: 1px solid #dedede; background-color: #f4f4f4; overflow: hidden;}
+.brand-recommend {width: 998px; margin-bottom: 30px; padding-bottom: 15px; border: 1px solid #bababa; background-color: #f4f4f4; overflow: hidden;}
 .brand-recommend h2 {font-weight: 700; padding: 10px 0 0 12px;}
-.brand-list dl {float: left; display: inline; width: 100px; height: 70px; background-color: #fff; border: 1px solid #dedede; text-align: center; margin: 10px 0 0 10px; padding: 0 5px;}
+.brand-list dl {float: left; display: inline; width: 100px; height: 70px; background-color: #fff; border: 1px solid #bababa; text-align: center; margin: 10px 0 0 10px; padding: 0 5px;}
 .brand-list dl dt {padding-top: 5px; border-bottom: 1px solid #f4f4f4; margin-bottom: 5px;}
 .brand-select {position: relative; z-index: 10;}
 .brand-select li {float: left; width: 96px; height: 30px; margin-right: 5px; line-height: 30px; background-color: #ff7800; text-align: center; cursor: pointer; color: #fff; border-top-left-radius: 3px; border-top-right-radius: 3px;}
-.brand-select li.current {width: 94px; background-color: #fff; color: #000; font-weight: 700; border: 1px solid #dedede; border-bottom: 1px solid #fff; margin-bottom: -1px; zoom: 1;}
-.brandWrap {float: left; position: relative; width: 998px; padding-bottom: 15px; border: 1px solid #dedede; overflow: hidden; z-index: 9;}
+.brand-select li.current {width: 94px; background-color: #fff; color: #1a1a1a; font-weight: 700; border: 1px solid #bababa; border-bottom: 1px solid #fff; margin-bottom: -1px; zoom: 1;}
+.brandWrap {float: left; position: relative; width: 998px; padding-bottom: 15px; border: 1px solid #bababa; overflow: hidden; z-index: 9;}
 .search-result .title {font-weight: 700; font-size: 14px; text-align: center; padding: 5px 0;}
 
 /*search*/
@@ -105,6 +105,6 @@
 .category_sort .hd a, .category-all dt a {color: #ff7800;}
 .category_sort .current, .pagin .text {font-weight: 700;}
 .goods_sort del, .goods_sort span, .list_goods del, .list_goods span {display: block;}
-.goods_sort del, .list_goods del {color: #666;}
+.goods_sort del, .list_goods del {color: #878787;}
 .goods_sort .price_now, .list_goods .price_now, .pagin .text strong {color: #e60000; font-weight: 700;}
 .order, .category-all dd {float: left; width: 350px;}

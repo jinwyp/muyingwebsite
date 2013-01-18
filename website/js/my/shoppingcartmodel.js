@@ -28,13 +28,16 @@ head.ready(function () {
             productfinalprice : 0,
             productstock : 6,
             productquantity : 1,
+            productweight : 0,
 
             productdeleted : 0, //是否已被删除,等待恢复. 1表示已经被删除
 
-
             producttotalprice : 0,
             producttotalpricetext : 0,
-            productluckynumber : 0,
+            productluckynumber : 0, //幸运星
+            producttotalluckynumber : 0,
+            productweight : 10,
+            producttotalweight : 0,
 
             productgift : 0, //是否是赠品 0为不是赠品, 如果是赠品需要填写属于哪个赠品促销ID
             productexchange : 0, //是否是换购商品 如果是换购商品需要填写属于哪个换购促销ID
@@ -60,6 +63,19 @@ head.ready(function () {
             };
 
             this.set("producttotalprice", (this.get("productfinalprice") * this.get("productquantity") ) );
+        },
+
+        sumPrice: function(){
+            var productsumtotal = this.get('productquantity') * this.get('productfinalprice');
+            this.set("producttotalprice", productsumtotal);
+
+            var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
+            this.set("producttotalpricetext", rmb + this.get("producttotalprice").toFixed(2) );
+
+            var productluckysumtotal = this.get('productquantity') * this.get('productluckynumber');
+            this.set("producttotalluckynumber", productluckysumtotal);
+
+            this.set("producttotalweight", (this.get('productquantity') * this.get('productweight')));
         }
     });
 
@@ -102,6 +118,24 @@ head.ready(function () {
             return this.reduce(function(memo, product) {
                 return memo + product.get("producttotalprice")
             }, 0);
+        },
+
+        productTotalQuantity: function() {
+            return this.reduce(function(memo, product) {
+                return memo + product.get("productquantity")
+            }, 0);
+        },
+
+        productTotalLucky: function() {
+            return this.reduce(function(memo, product) {
+                return memo + product.get("producttotalluckynumber")
+            }, 0);
+        },
+
+        productTotalWeight: function() {
+            return this.reduce(function(memo, product) {
+                return memo + product.get("producttotalweight")
+            }, 0);
         }
 
     });
@@ -118,6 +152,8 @@ head.ready(function () {
             promotiontotalpricetext : 0,  //参与满减商品当前总金额
             promotiontotaldifferenceprice : 0,  //参与满减商品当前总金额还差多少够满减
             promotiontotaldifferencepricetext : 0,  //参与满减商品当前总金额还差多少够满减
+
+            promotionmanjianalreadydiscount : 0, //当前满减已优惠金额
 
             promotionmanjiancondition : 0, //满减满足条件金额
             promotionmanjiandiscount : 0, //满减优惠金额
@@ -140,7 +176,13 @@ head.ready(function () {
 
     /* Collection 满减信息列表模型  */
     app.model.PromotionManjianList = Backbone.Collection.extend({
-        model: app.model.PromotionManjian
+        model: app.model.PromotionManjian,
+
+        manjianTotalDiscount: function() {
+            return this.reduce(function(memo, manjian) {
+                return memo + manjian.get("promotionmanjianalreadydiscount")
+            }, 0);
+        }
     });
 
 
@@ -209,6 +251,46 @@ head.ready(function () {
     /* Collection 换购信息列表模型  */
     app.model.PromotionExchangeList = Backbone.Collection.extend({
         model: app.model.PromotionExchange
+    });
+
+
+    /* Model 购物车信息总和信息模型  */
+    app.model.CartTotal = Backbone.Model.extend({
+        defaults : {
+            carttotalquantity : 0,  //商品总数量
+            carttotalweight : 0,  //商品总重量
+            carttotalprice : 0,  //原始总金额
+            carttotaldiscount : 0,  //优惠总金额
+            carttotalfinalprice : 0,  //最终金额
+            carttotallucky : 0  //总幸运星
+        },
+
+        initialize: function() {
+
+                this.set("carttotalfinalprice", (this.get("carttotalprice") - this.get("carttotaldiscount"))  );
+        },
+
+        countTotal: function(plist, giftlist, exchangelist, manjianpromotionlist){
+            console.log(plist.productTotalLucky());
+
+            var totalquantity = plist.productTotalQuantity() + giftlist.productTotalQuantity() + exchangelist.productTotalQuantity();
+            this.set("carttotalquantity", totalquantity  );
+
+            var totalprice = plist.productTotalPrice() + giftlist.productTotalPrice() + exchangelist.productTotalPrice();
+            this.set("carttotalprice", totalprice  );
+
+            var totalweight = plist.productTotalWeight() + giftlist.productTotalWeight() + exchangelist.productTotalWeight();
+            this.set("carttotalweight", totalweight  );
+
+            var totallucky = plist.productTotalLucky() + giftlist.productTotalLucky() + exchangelist.productTotalLucky();
+            this.set("carttotallucky", totallucky  );
+
+            var totaldiscount = manjianpromotionlist.manjianTotalDiscount() ;
+            this.set("carttotaldiscount", totaldiscount  );
+
+            this.set("carttotalfinalprice", (this.get("carttotalprice") - this.get("carttotaldiscount")));
+
+        }
     });
 
 

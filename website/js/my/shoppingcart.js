@@ -21,14 +21,14 @@ head.ready(function () {
 
             this._modelBinder.bind(this.model, this.el);
 
-            //判断是否是已删除商品
+            //判断是否是已删除商品 增加重新购买按钮
             if(this.model.get('productdeleted') === 1 ){
                 this.$el.find("#productDel").hide();
                 this.$el.find("#removedProduct").show();
                 this.$el.find("#productquantity").html(this.model.get('productquantity'));
             };
 
-            //商品赠品图标
+            //是否商品赠品图标 同时数量无法修改
             if(this.model.get('productgift') > 0 ){
                 this.$el.find("#icon-gift").show();
                 this.$el.find("#productquantity").html('1');
@@ -36,7 +36,7 @@ head.ready(function () {
                 this.sumtotal();
             };
 
-            //商品换购图标
+            //商品换购图标 同时数量无法修改
             if(this.model.get('productexchange') > 0 ){
                 this.$el.find("#icon-redemption").show();
                 this.$el.find("#productquantity").html('1');
@@ -64,6 +64,7 @@ head.ready(function () {
             }else{
                 this.model.set("productquantity", (this.model.get("productquantity") -1) );
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 this.$el.find('#nostock_tips').fadeOut();
             }
         },
@@ -78,11 +79,12 @@ head.ready(function () {
                 this.hideDeleteBox();
                 this.model.set("productquantity", (Number(this.model.get("productquantity")) + Number(1)) );
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 this.$el.find('#nostock_tips').fadeOut();
             }
 
             if(this.$el.find("#productDel").is(":hidden")){
-                this.hideDeleteBox()
+                this.hideDeleteBox();
             }
         },
 
@@ -106,19 +108,15 @@ head.ready(function () {
                     this.$el.find('#nostock_tips').fadeOut();
                 }
                 if(this.$el.find("#productDel").is(":hidden")){
-                    this.hideDeleteBox()
+                    this.hideDeleteBox();
                 }
                 this.sumtotal();
+                app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
             }
         },
 
         sumtotal: function(){
-            var productsumtotal;
-            productsumtotal = this.model.get('productquantity') * this.model.get('productfinalprice');
-
-            this.model.set("producttotalprice", productsumtotal);
-            var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
-            this.model.set("producttotalpricetext", rmb + this.model.get("producttotalprice").toFixed(2) );
+            this.model.sumPrice();
         },
 
         _delete: function(e) {
@@ -138,12 +136,13 @@ head.ready(function () {
             this.$el.find("#j_delTips").animate({
                 left: '0',opacity: 'hide'
             }, "500");
+
         },
 
         deleteCancel: function(e) {
             e.preventDefault();
             this.hideDeleteBox();
-            if(this.$el.find(".input").val()<1){
+            if( this.model.get('productquantity')<1){
                 this.model.set("productquantity",1);
             }
         },
@@ -152,16 +151,19 @@ head.ready(function () {
 
             if(this.model.get('productgift') > 0 ){
                 //赠品商品
+                console.log(this.model);
                 app.collection.giftproductlist.add( this.model.clone());
                 app.v.carttopfreegiftlist.render();
             }else if(this.model.get('productexchange') > 0 ){
                 //换购商品
+                console.log(this.model);
                 app.collection.exchangeproductlist.add( this.model.clone());
                 app.v.carttopexchangelist.render();
 
             }else if(this.model.get('productdeleted') === 0 ){
                 //删除商品添加到恢复列表, 注意已经被删除的商品不会在添加到被删除列表里面
                 this.model.set('productdeleted', 1);
+                console.log(this.model);
                 app.collection.productdeletelist.add( this.model.clone());
             };
 
@@ -169,6 +171,7 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     app.v.productdellist.render();
                     that.model.destroy();
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
 
@@ -186,6 +189,7 @@ head.ready(function () {
                         app.v.manjianlist.render();
 //                        app.v.manjianlist = new app.view.cartManjianList({ collection: app.collection.manjianlist, el: $('#allist') });
                         that.model.destroy();
+                        app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                     }
                 );
             };
@@ -277,10 +281,10 @@ head.ready(function () {
             if(this.manjianproductlist.length === 0){
                 this.$el.empty(); //如果没有商品需要隐藏满减信息
             }
-
-            this.showManjianInfo();
+            this.$el.find("#manjiandiffinfo").hide(); //默认隐藏立减信息
             this.$el.find("#manjiandiscountinfo").hide(); //默认隐藏立减信息
             this.manjianproductlist.each(this.showProduct, this);
+            this.showManjianInfo();
         },
 
         showProduct: function(product){
@@ -290,6 +294,7 @@ head.ready(function () {
 
         showManjianInfo: function(){
             //显示满减信息提示
+
 
             this.model.set("promotiontotalprice", this.manjianproductlist.productTotalPrice() );
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
@@ -306,11 +311,13 @@ head.ready(function () {
                 this.$el.find("#manjiandiscountinfo").fadeOut();
                 this.$el.find("#manjiandiffinfo").fadeIn();
                 this.model.set("promotiontotaldifferenceprice", manjiandiff );
+                this.model.set("promotionmanjianalreadydiscount", 0 );  //符合满减条件 设置已经满减优惠金额 否则为0
                 this.model.set("promotiontotaldifferencepricetext", (manjiandiff + unit) ); //如果是满减件 要判断是否增加 件 文字
 //                console.log(this.model.get("promotiontotaldifferencepricetext"));
             }else{
                 this.$el.find("#manjiandiscountinfo").fadeIn();
                 this.$el.find("#manjiandiffinfo").fadeOut();
+                this.model.set("promotionmanjianalreadydiscount", this.model.get('promotionmanjiandiscount') );  //符合满减条件 设置已经满减优惠金额
             }
         }
     });
@@ -379,6 +386,7 @@ head.ready(function () {
             if(this.collection.length === 0){
                 //如果没有一个活动就隐藏标题
                 this.$el.empty();
+
             }
             this.collection.each(this.showGift, this);
         },
@@ -441,15 +449,17 @@ head.ready(function () {
         hideBox: function(e){
             e.preventDefault();
             this.$el.find("#giftbox").hide(300);
-            $("#cover-bg").fadeOut()
+            $("#cover-bg").fadeOut();
         },
 
         hideBox2: function(){
             if(this.giftproductlist.length == 0){
                 this.$el.find("#giftbox").remove();
+
                 this.$el.find("#giftSoldout").show();
                 this.$el.find("#giftSelect").remove();
 //                this.$el.find("#giftbox").hide();
+                $("#cover-bg").fadeOut();
             };
         }
 
@@ -490,6 +500,7 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartgiftlist.render(); //渲染购物车的赠品商品
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
         }
@@ -592,7 +603,7 @@ head.ready(function () {
         hideBox: function(e){
             e.preventDefault();
             this.$el.find("#exchangebox").hide(300);
-            $("#cover-bg").fadeOut()
+            $("#cover-bg").fadeOut();
         },
 
         hideBox2: function(){
@@ -601,6 +612,7 @@ head.ready(function () {
                 this.$el.find("#redemptionSoldout").show();
                 this.$el.find("#redemptionSelect").remove();
 //                this.$el.find("#exchangebox").hide();
+                $("#cover-bg").fadeOut();
             };
         }
 
@@ -640,8 +652,27 @@ head.ready(function () {
             this.$el.fadeOut(function(){
                     that.model.destroy();
                     app.v.cartexchangelist.render(); //渲染购物车的换购商品
+                    app.m.carttotal.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
                 }
             );
+        }
+    });
+
+    /* View 商品总金额  */
+    app.view.cartTotal = Backbone.View.extend({
+
+//        template: $('#PromotionRedemptionProductsTemplate').html(),
+
+        initialize: function(){
+            this._modelBinder = new Backbone.ModelBinder();
+            this.render();
+        },
+
+        render: function(){
+//            var tmp = Handlebars.compile( this.template );
+//            this.$el.html(tmp( this.model.toJSON()) );
+            this._modelBinder.bind(this.model, this.el);
+            this.model.countTotal(app.collection.plist, app.collection.giftaddedproductlist, app.collection.exchangeaddedproductlist, app.collection.manjianlist); // 计算全部总价
         }
     });
 
@@ -650,12 +681,12 @@ head.ready(function () {
     /*  页面开始渲染  */
 
 // 开始普通商品列表部分
-    app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productpromotionmanjian : 0, productexchange:0 });
-    app.m.product2 = new app.model.Product({productname: "贝亲321231232123123212312", normalprice: 200, promotionprice:120, productpromotionmanjian : 0});
-    app.m.product3 = new app.model.Product({productname: "满减1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productpromotionmanjian : 11534});
-    app.m.product4 = new app.model.Product({productname: "满减1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productpromotionmanjian : 11534});
-    app.m.product5 = new app.model.Product({productname: "满减2贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10, productpromotionmanjian : 11532});
-    app.m.product6 = new app.model.Product({productname: "满减2贝亲321231232123123212312", normalprice: 20, promotionprice:10, productpromotionmanjian : 11532});
+    app.m.product1 = new app.model.Product({productname: "贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productluckynumber:10, productpromotionmanjian : 0, productexchange:0 });
+    app.m.product2 = new app.model.Product({productname: "贝亲321231232123123212312", normalprice: 200, promotionprice:120,  productluckynumber:20, productpromotionmanjian : 0});
+    app.m.product3 = new app.model.Product({productname: "满减1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20,  productluckynumber:10, productpromotionmanjian : 11534});
+    app.m.product4 = new app.model.Product({productname: "满减1贝亲321231232123123212312", normalprice: 20, promotionprice:20,  productluckynumber:10, productpromotionmanjian : 11534});
+    app.m.product5 = new app.model.Product({productname: "满减2贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10,  productluckynumber:10, productpromotionmanjian : 11532});
+    app.m.product6 = new app.model.Product({productname: "满减2贝亲321231232123123212312", normalprice: 20, promotionprice:10,  productluckynumber:10, productpromotionmanjian : 11532});
 
     app.collection.plist = new app.model.Productlist();
     app.collection.productdeletelist = new app.model.Productlist();  //被删除的列表
@@ -696,11 +727,11 @@ head.ready(function () {
     app.collection.giftlist.add(app.m.promotiongift2);
 
     app.m.productgift1 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 10, promotionprice:10, productstock:20, productgift : 11582});
-    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲321231232123123212312", normalprice: 200, promotionprice:120, productstock:10, productgift : 11582});
+    app.m.productgift2 = new app.model.Product({productname: "赠品贝亲456", normalprice: 200, promotionprice:120, productstock:10, productgift : 11582});
     app.m.productgift3 = new app.model.Product({productname: "赠品1贝亲婴儿柔湿巾", normalprice: 10, promotionprice:20, productstock:20, productgift : 11582});
-    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲321231232123123212312", normalprice: 20, promotionprice:20, productstock:10, productgift : 11582});
+    app.m.productgift4 = new app.model.Product({productname: "赠品1贝亲789", normalprice: 20, promotionprice:20, productstock:10, productgift : 11582});
     app.m.productgift5 = new app.model.Product({productname: "赠品贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10, productstock:20, productgift : 11582});
-    app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲321231232123123212312", normalprice: 20, promotionprice:10, productstock:20, productgift : 11581});
+    app.m.productgift6 = new app.model.Product({productname: "赠品2贝亲32133334324242424", normalprice: 20, promotionprice:10, productstock:20, productgift : 11581});
 
     app.collection.giftproductlist = new app.model.Productlist();  //所有赠品促销里面的所有免费赠品商品
 
@@ -772,11 +803,16 @@ head.ready(function () {
     app.v.carttopexchangelist = new app.view.cartTopExchangeList({ collection: app.collection.exchangelist, el: $('#promotionredemptionlist') });
     app.v.cartexchangelist = new app.view.cartExchangeProductList({ collection: app.collection.exchangeaddedproductlist, el: $('#redemptionproductlist') });
 
+
+    // 开始商品总金额部分
+    app.m.carttotal = new app.model.CartTotal();
+    app.v.carttotal = new app.view.cartTotal({ model: app.m.carttotal, el: $('#cart-total') });
+
     stickFooter(); // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 });
 // 购物车商品超出一屏，则结算按钮固定窗口底部显示
 function stickFooter(){
-    var floatMain = $(".cart-button"),
+    var floatMain = $("#cart-final"),
         Top = floatMain.position().top,
         fw = floatMain.width(),
         floatStyle = false,
