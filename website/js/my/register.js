@@ -306,6 +306,13 @@ $(function(){
     .inputValidator({
         regExp:"\\d{4}-\\d{2}-\\d{2}",
         min:10,max:10,onError:"请正确填写宝宝的预产期"
+    }).functionValidator({
+            fun:function(val,elem){
+                var vdata = new Date(val),ndata = new Date();
+                if(vdata<ndata){
+                    return "预产期请大于当前时间"
+                }
+            }
     });
 
     $("#mother-mobile")
@@ -354,6 +361,13 @@ $(function(){
         .inputValidator({
             regExp:"\\d{4}-\\d{2}-\\d{2}",
             min:10,max:10,onError:"请按格式填写宝宝的生日"
+        }).functionValidator({
+            fun:function(val,elem){
+                var vdata = new Date(val),ndata = new Date();
+                if(vdata>ndata){
+                    return "您的宝宝是未来出生的吗？"
+                }
+            }
         });
 
     $("#mother-mobile2")
@@ -421,6 +435,13 @@ $(function(){
             .inputValidator({
                 regExp:"\\d{4}-\\d{2}-\\d{2}",
                 min:10,max:10,onError:"请按格式填写宝宝的生日"
+            }).functionValidator({
+                fun:function(val,elem){
+                    var vdata = new Date(val),ndata = new Date();
+                    if(vdata>ndata){
+                        return "您的宝宝是未来出生的吗？"
+                    }
+                }
             });
 
         $("input:radio[name='baby-sex_"+i+"']")
