@@ -271,7 +271,6 @@ head.ready(function () {
         },
 
         countTotal: function(plist, giftlist, exchangelist, manjianpromotionlist){
-            console.log(plist.productTotalLucky());
 
             var totalquantity = plist.productTotalQuantity() + giftlist.productTotalQuantity() + exchangelist.productTotalQuantity();
             this.set("carttotalquantity", totalquantity  );
