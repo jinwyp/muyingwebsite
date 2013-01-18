@@ -216,7 +216,6 @@
                         <strong class="font-red" name="producttotalpricetext"></strong>
                     </div>
                     <div class="column col-luckyStar" name="producttotalluckynumber">
-
                     </div>
                     <div class="column col-operation">
                         <a id="productDel" href="#">删除</a>
@@ -253,13 +252,15 @@
 
             <ul class="cart-body cart-combination" id="combinationProductList">
                 <li class="hd-fullReduction">
-                    <span class="title">
+                    <div class="column col-name title">
                         <span class="font-red">[组合购]</span>
                         <span>组合购，更划算</span>
-                    </span>
-                    <span class="fr" style="width:100px;text-align: center">
-                        <a id="productDel" href="#">删除</a>
-                    </span>
+                    </div>
+                    <div class="column col-price">198</div>
+                    <div class="column col-number">2</div>
+                    <div class="column col-subtotal"><strong>&yen;198.00</strong></div>
+                    <div class="column col-luckyStar">198</div>
+                    <div class="column col-operation"><a id="productDel" href="#">删除</a></div>
                 </li>
                 <li class="clearfix">
                     <div class="column col-name">
@@ -275,11 +276,7 @@
                         <strong>&yen;99.00</strong>
                     </div>
                     <div class="column col-number">
-                        <span class="wrap-input">
-                            <span class="reduce" onclick="">-</span>
-                            <input class="input" id="" type="text" value="1" />
-                            <span class="add" onclick="">+</span>
-                        </span>
+                            1
                     </div>
                     <div class="column col-subtotal">
                         <strong class="font-red">&yen;99.00</strong>
