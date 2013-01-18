@@ -80,18 +80,17 @@ strong {font-weight: 700;}
 
 /**结算**/
 .cart-total .total {padding: 0 10px 10px 0; line-height: 30px; text-align: right;}
-.cart-total .cart-clear {padding: 10px;}
 .cart-total .coupon {padding: 10px 15px;}
 .cart-total .coupon .text-input {border: 1px solid #bababa; margin-right: 3px; height: 18px; vertical-align: middle;}
 .cart-total .coupon .btn_s {vertical-align: middle;}
 .cart-total .coupon .col-tips {position: relative; top: 0; left: 10px; padding: 2px 10px; width: auto;}
 .cart-total .item {display: inline; margin-left: 10px;}
-.cart-total .all {display: inline; text-align: right; float: right;}
-.cart-total .total-price {font-size: 14px;}
-.cart-total .total-price strong {color: #e60000; font-size: 22px;}
-.cart-total .noFreight {color: #bababa; margin-right: 10px;}
-.cart-button {padding: 6px 15px 6px 10px; background-color: #f4f4f4;}
-
+.cart-clear {padding: 10px;}
+.all {display: inline; text-align: right; float: right;}
+.total-price {font-size: 14px;}
+.total-price strong {color: #e60000; font-size: 22px;}
+.noFreight {color: #bababa; margin-right: 10px;}
+.cart-button {padding: 6px 0; background-color: #f4f4f4; overflow: hidden; zoom: 1;}
 
 
 
