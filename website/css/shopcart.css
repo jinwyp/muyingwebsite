@@ -24,10 +24,6 @@ strong {font-weight: 700;}
 .headerLogo img { display: inline-block; float: left;}
 .wfc_myCart, .wfc_Order_information, .wfc_Order_submitted_successfully {  left: 300px;  margin: 0; padding: 0; position: absolute; top: 15px; width: 430px; z-index: 3;}
 .wfc_myCart li, .wfc_Order_information li, .wfc_Order_submitted_successfully li { display: inline-block; float: left;}
-.headerLogo {background: url("http: //css.muyingzhijia.com/themes/default/images/telephone.gif") no-repeat scroll right center transparent; height: 70px; position: relative;}
-.headerLogo img {display: inline-block; float: left;}
-.wfc_myCart, .wfc_Order_information, .wfc_Order_submitted_successfully {left: 300px; margin: 0; padding: 0; position: absolute; top: 15px; width: 430px; z-index: 3;}
-.wfc_myCart li, .wfc_Order_information li, .wfc_Order_submitted_successfully li {display: inline-block; float: left;}
 
 /**购物车列表**/
 .wrap-cart .title {margin-bottom: 10px;}
