@@ -21,14 +21,14 @@ head.ready(function () {
 
             this._modelBinder.bind(this.model, this.el);
 
-            //判断是否是已删除商品
+            //判断是否是已删除商品 增加重新购买按钮
             if(this.model.get('productdeleted') === 1 ){
                 this.$el.find("#productDel").hide();
                 this.$el.find("#removedProduct").show();
                 this.$el.find("#productquantity").html(this.model.get('productquantity'));
             };
 
-            //商品赠品图标
+            //是否商品赠品图标 同时数量无法修改
             if(this.model.get('productgift') > 0 ){
                 this.$el.find("#icon-gift").show();
                 this.$el.find("#productquantity").html('1');
@@ -36,7 +36,7 @@ head.ready(function () {
                 this.sumtotal();
             };
 
-            //商品换购图标
+            //商品换购图标 同时数量无法修改
             if(this.model.get('productexchange') > 0 ){
                 this.$el.find("#icon-redemption").show();
                 this.$el.find("#productquantity").html('1');
@@ -82,7 +82,7 @@ head.ready(function () {
             }
 
             if(this.$el.find("#productDel").is(":hidden")){
-                this.hideDeleteBox()
+                this.hideDeleteBox();
             }
         },
 
@@ -106,7 +106,7 @@ head.ready(function () {
                     this.$el.find('#nostock_tips').fadeOut();
                 }
                 if(this.$el.find("#productDel").is(":hidden")){
-                    this.hideDeleteBox()
+                    this.hideDeleteBox();
                 }
                 this.sumtotal();
             }
@@ -143,7 +143,7 @@ head.ready(function () {
         deleteCancel: function(e) {
             e.preventDefault();
             this.hideDeleteBox();
-            if(this.$el.find(".input").val()<1){
+            if( this.model.get('productquantity')<1){
                 this.model.set("productquantity",1);
             }
         },
@@ -277,10 +277,10 @@ head.ready(function () {
             if(this.manjianproductlist.length === 0){
                 this.$el.empty(); //如果没有商品需要隐藏满减信息
             }
-
-            this.showManjianInfo();
+            this.$el.find("#manjiandiffinfo").hide(); //默认隐藏立减信息
             this.$el.find("#manjiandiscountinfo").hide(); //默认隐藏立减信息
             this.manjianproductlist.each(this.showProduct, this);
+            this.showManjianInfo();
         },
 
         showProduct: function(product){
@@ -290,6 +290,7 @@ head.ready(function () {
 
         showManjianInfo: function(){
             //显示满减信息提示
+
 
             this.model.set("promotiontotalprice", this.manjianproductlist.productTotalPrice() );
             var rmb = $("<b>&yen;</b>").html(); //增加人民币符号
