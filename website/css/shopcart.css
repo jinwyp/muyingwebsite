@@ -60,7 +60,7 @@ strong {font-weight: 700;}
 .goods-list dl {float: left; padding: 10px; width: 229px; border-bottom: 0 none;}
 .goods-list dt {float: left;}
 .goods-list .goods-name, .goods-list .price {margin-bottom: 3px;}
-.goods-list .goods-name {height: 18px; overflow: hidden;}
+.goods-list .goods-name {height: 18px; word-break: break-all; word-wrap: break-word; overflow: hidden;}
 .goods-list del {color: #bababa; margin-right: 5px;}
 .goods-list .now {color: #e60000; font-weight: 700;}
 
