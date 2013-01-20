@@ -33,7 +33,6 @@ head.ready(function () {
                 this.$el.find("#productDel").hide();
                 this.$el.find("#productquantity").html('1');
                 this.model.sumPrice();
-                console.log(this.model.get('productfinalprice'), this.model.get('productquantity'), this.model.get('producttotalprice'));
             };
 
             //是否商品赠品图标 同时数量无法修改
