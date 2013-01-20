@@ -250,65 +250,21 @@
                 </li>
             </script>
 
-            <ul class="cart-body cart-combination" id="combinationProductList">
+            <script id="ComboTemplate" type="text/x-handlebars-template">
                 <li class="hd-fullReduction">
                     <div class="column col-name title">
                         <span class="font-red">[组合购]</span>
-                        <span>组合购，更划算</span>
+                        <span>{{comboproductname}}</span>
                     </div>
-                    <div class="column col-price">198</div>
-                    <div class="column col-number">2</div>
-                    <div class="column col-subtotal"><strong>&yen;198.00</strong></div>
-                    <div class="column col-luckyStar">198</div>
-                    <div class="column col-operation"><a id="productDel" href="#">删除</a></div>
+                    <div class="column col-price">xx</div>
+                    <div class="column col-number">xx</div>
+                    <div class="column col-subtotal"><strong>&yen;{{combototalprice}}</strong></div>
+                    <div class="column col-luckyStar">xx</div>
+                    <div class="column col-operation"><a id="comboDel" href="#">删除</a></div>
                 </li>
-                <li class="clearfix">
-                    <div class="column col-name">
-                        <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
-                        <div class="goods-info">
-                            <p class="name">
-                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">组合购主商品</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column col-price">
-                        <del>&yen;99.00</del>
-                        <strong>&yen;99.00</strong>
-                    </div>
-                    <div class="column col-number">
-                            1
-                    </div>
-                    <div class="column col-subtotal">
-                        <strong class="font-red">&yen;99.00</strong>
-                    </div>
-                    <div class="column col-luckyStar">
-                        99
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <div class="column col-name">
-                        <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470" class="img"> <img src="http://img.muyingzhijia.com/product/normal/79012_01_01.jpg"  width="60px" height="60px" alt="雅氏12小南瓜防渗漏尿垫80*60cm（黄色）"></a>
-                        <div class="goods-info">
-                            <p class="name">
-                                <a target="_blank" href="http://www.muyingzhijia.com/shopping/productdetail.aspx?pdtID=79012&proId=11470">组合购商品一</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column col-price">
-                        <del>&yen;99.00</del>
-                        <strong>&yen;99.00</strong>
-                    </div>
-                    <div class="column col-number">
-                      1
-                    </div>
-                    <div class="column col-subtotal">
-                        <strong class="font-red">&yen;99.00</strong>
-                    </div>
-                    <div class="column col-luckyStar">
-                        99
-                    </div>
-                </li>
-            </ul>
+
+            </script>
+
         </div>
 
 
@@ -330,7 +286,7 @@
 
                 <div class="cart-button clearfix" id="cart-final">
                         <span class="cart-clear fl">
-                            <a href="" class="link-blue">清空购物车</a>
+                            <a href="#" id="removeAll" class="link-blue">清空购物车</a>
                         </span>
                     <span class="btn_b btn_b_r mr10 fr"><a href="" id="settleAccounts" style="padding:0 15px 0 10px">确认结算</a></span>
                     <span class="btn_b btn_b_r fr mr10 hide" style="display:none;"><a href="" style="padding:0 15px 0 10px">&laquo; 继续购物</a></span>

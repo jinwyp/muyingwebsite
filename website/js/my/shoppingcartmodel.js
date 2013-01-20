@@ -9,6 +9,7 @@ head.ready(function () {
         tpl:{},
         tplpre:{},
         collection:{},
+        co:{},
         htmlbody:{},
         temp: {}
     };
@@ -19,6 +20,8 @@ head.ready(function () {
     /* Model 商品信息模型 */
     app.model.Product = Backbone.Model.extend({
         defaults : {
+            idAttribute: 'productid',
+            productid: 0,
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
             productpromotiontext : '天天特价',
             producturl : '/xxx/xxx/pic.jpg',
@@ -43,6 +46,9 @@ head.ready(function () {
             productexchange : 0, //是否是换购商品 如果是换购商品需要填写属于哪个换购促销ID
             productexchangeprice : 88, //换购价格
 
+            productcombo : 0, //作为主商品是否有组合购, 0为没有组合购, 否则填写组合购促销ID
+            productcomboproduct : 0, //是否为组合购副商品, 0为没有组合购, 否则填写组合购促销ID
+            productcomboprice : 0, //作为副商品组合购的显示价格, 价格从组合购设置里面取出
 
             productpromotiongift : 0, //该商品是否参与赠品活动 不参与为0,参与为赠品活动ID
             productpromotiongiftnumber : 0, //赠品满足条件金额
@@ -62,7 +68,7 @@ head.ready(function () {
                 this.set("productfinalprice", this.get("normalprice"));
             };
 
-            this.set("producttotalprice", (this.get("productfinalprice") * this.get("productquantity") ) );
+            this.sumPrice();
         },
 
         sumPrice: function(){
@@ -81,28 +87,43 @@ head.ready(function () {
 
 
     /* Collection 商品列表信息模型  */
-    app.model.Productlist = Backbone.Collection.extend({
+    app.collection.Productlist = Backbone.Collection.extend({
         model: app.model.Product,
+
+        byID: function(productID){
+            var found = this.find(function(item){
+                return (item.get('productid')) === productID;
+            });
+            return found;
+        },
 
         byNormalProduct: function(){
             var filtered = this.filter(function(product) {
-                return product.get("productpromotionmanjian") === 0;
+                return (product.get("productpromotionmanjian") === 0) && (product.get("productcombo") === 0) && (product.get("productcomboproduct") === 0);
            });
-            return new app.model.Productlist(filtered);
+            return new app.collection.Productlist(filtered);
         },
 
         byManjianProduct: function(manjianID){
             var filtered = this.filter(function(product) {
                 return product.get("productpromotionmanjian") === manjianID;
             });
-            return new app.model.Productlist(filtered);
+            return new app.collection.Productlist(filtered);
         },
+
+        byComboProduct: function(comboID){
+            var filtered = this.filter(function(product) {
+                return product.get("productcombo") === comboID;
+            });
+            return new app.collection.Productlist(filtered);
+        },
+
 
         byGiftProduct: function(giftID){
             var filtered = this.filter(function(product) {
                 return product.get("productgift") === giftID;
             });
-            return new app.model.Productlist(filtered);
+            return new app.collection.Productlist(filtered);
         },
 
         byExchangeProduct: function(exchangeID, exchangPrice){
@@ -111,7 +132,7 @@ head.ready(function () {
 
                 return product.get("productexchange") === exchangeID;
             });
-            return new app.model.Productlist(filtered);
+            return new app.collection.Productlist(filtered);
         },
 
         productTotalPrice: function() {
@@ -175,7 +196,7 @@ head.ready(function () {
     });
 
     /* Collection 满减信息列表模型  */
-    app.model.PromotionManjianList = Backbone.Collection.extend({
+    app.collection.PromotionManjianList = Backbone.Collection.extend({
         model: app.model.PromotionManjian,
 
         manjianTotalDiscount: function() {
@@ -213,7 +234,7 @@ head.ready(function () {
     });
 
     /* Collection 赠品信息列表模型  */
-    app.model.PromotionGiftList = Backbone.Collection.extend({
+    app.collection.PromotionGiftList = Backbone.Collection.extend({
         model: app.model.PromotionGift
     });
 
@@ -249,9 +270,46 @@ head.ready(function () {
     });
 
     /* Collection 换购信息列表模型  */
-    app.model.PromotionExchangeList = Backbone.Collection.extend({
+    app.collection.PromotionExchangeList = Backbone.Collection.extend({
         model: app.model.PromotionExchange
     });
+
+
+
+    /* Model 组合购信息模型  */
+    app.model.PromotionCombo = Backbone.Model.extend({
+        defaults : {
+            comboid : 0,  //组合购促销ID
+            comboproductid : 0, //主商品ID
+            comboproductname : 0, //主商品名称
+            comboproductprice : 0, //主商品价格
+
+            comboproductid1 : 0, //第一个副商品ID
+            comboproductprice1 : 0, //第一个副商品价格
+ 
+            comboproductid2 : 0, //第二个副商品ID
+            comboproductprice2 : 0, //第二个副商品价格
+
+            comboproductid3 : 0, //第三个副商品ID
+            comboproductprice3 : 0, //第三个副商品价格
+
+            comboproductid4 : 0, //第四个副商品ID
+            comboproductprice4 : 0, //第四个副商品价格
+
+            combototalprice : 0,  //参与换购商品当前总金额
+            combootalpricetext : 0,  //参与换购商品当前总金额文字
+
+        }
+    });
+
+
+
+    /* Collection 组合购信息列表模型  */
+    app.collection.PromotionComboList = Backbone.Collection.extend({
+        model: app.model.PromotionCombo
+    });
+
+
 
 
     /* Model 购物车信息总和信息模型  */
@@ -270,18 +328,18 @@ head.ready(function () {
                 this.set("carttotalfinalprice", (this.get("carttotalprice") - this.get("carttotaldiscount"))  );
         },
 
-        countTotal: function(plist, giftlist, exchangelist, manjianpromotionlist){
+        countTotal: function(plist, giftlist, exchangelist, manjianpromotionlist, combolist){
 
-            var totalquantity = plist.productTotalQuantity() + giftlist.productTotalQuantity() + exchangelist.productTotalQuantity();
+            var totalquantity = plist.productTotalQuantity() + giftlist.productTotalQuantity() + exchangelist.productTotalQuantity() + combolist.productTotalQuantity();
             this.set("carttotalquantity", totalquantity  );
 
-            var totalprice = plist.productTotalPrice() + giftlist.productTotalPrice() + exchangelist.productTotalPrice();
+            var totalprice = plist.productTotalPrice() + giftlist.productTotalPrice() + exchangelist.productTotalPrice() + combolist.productTotalPrice();
             this.set("carttotalprice", totalprice  );
 
-            var totalweight = plist.productTotalWeight() + giftlist.productTotalWeight() + exchangelist.productTotalWeight();
+            var totalweight = plist.productTotalWeight() + giftlist.productTotalWeight() + exchangelist.productTotalWeight() + combolist.productTotalWeight();
             this.set("carttotalweight", totalweight  );
 
-            var totallucky = plist.productTotalLucky() + giftlist.productTotalLucky() + exchangelist.productTotalLucky();
+            var totallucky = plist.productTotalLucky() + giftlist.productTotalLucky() + exchangelist.productTotalLucky() + combolist.productTotalLucky();
             this.set("carttotallucky", totallucky  );
 
             var totaldiscount = manjianpromotionlist.manjianTotalDiscount() ;
