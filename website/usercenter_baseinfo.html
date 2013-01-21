@@ -71,9 +71,13 @@
                 <fieldset>
                     <legend>用户基本信息</legend>
                     <div class="control-group">
-                        <label class="control-label">用户名：</label>
+                        <label class="control-label"><abbr title="required">*</abbr> 昵称：</label>
                         <div class="controls">
-                            <strong>jinwyp</strong><span class="user-num font-gray">用户编号：10179300</span>
+                            <input class="text-input required" id="userName" name="userName" size="30" type="text" value="jinwyp" />
+                            <div id="nickTip" class="stickTips"></div>
+                        </div>
+                        <div class="controls">
+                            <span class="user-num font-gray">用户编号：10179300</span>
                         </div>
                     </div>
 
