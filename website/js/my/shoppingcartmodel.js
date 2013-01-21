@@ -334,7 +334,7 @@ head.ready(function () {
             this.set("carttotalquantity", totalquantity  );
 
             var totalprice = plist.productTotalPrice() + giftlist.productTotalPrice() + exchangelist.productTotalPrice() + combolist.productTotalPrice();
-            this.set("carttotalprice", totalprice  );
+            this.set("carttotalprice", totalprice.toFixed(2)  );
 
             var totalweight = plist.productTotalWeight() + giftlist.productTotalWeight() + exchangelist.productTotalWeight() + combolist.productTotalWeight();
             this.set("carttotalweight", totalweight  );
@@ -343,9 +343,10 @@ head.ready(function () {
             this.set("carttotallucky", totallucky  );
 
             var totaldiscount = manjianpromotionlist.manjianTotalDiscount() ;
-            this.set("carttotaldiscount", totaldiscount  );
+            this.set("carttotaldiscount", totaldiscount.toFixed(2)  );
 
-            this.set("carttotalfinalprice", (this.get("carttotalprice") - this.get("carttotaldiscount")));
+            var finaltotalprice = this.get("carttotalprice") - this.get("carttotaldiscount");
+            this.set("carttotalfinalprice", finaltotalprice.toFixed(2) );
 
         }
     });

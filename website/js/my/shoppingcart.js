@@ -400,7 +400,7 @@ head.ready(function () {
                 this.addCombo(app.co.comboproductlist.byID(this.model.get('comboproductid3')), this.model.get('comboproductprice3') );
                 this.addCombo(app.co.comboproductlist.byID(this.model.get('comboproductid4')), this.model.get('comboproductprice4') );
                             
-                this.model.set('combototalprice', this.comboproductlist.productTotalPrice() );
+                this.model.set('combototalprice', this.comboproductlist.productTotalPrice().toFixed(2) );
 
                 // this._modelBinder = new Backbone.ModelBinder();
                 
@@ -610,6 +610,7 @@ head.ready(function () {
             var that = this;
             this.$el.fadeOut(function(){
                     that.model.destroy();
+                    $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
                     // app.v.cartgiftlist.render(); //渲染购物车的赠品商品
                     app.co.giftaddedproductlist.add(app.m.tempproduct);
                     app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
@@ -761,12 +762,14 @@ head.ready(function () {
 
         addRedemption: function(e){
             e.preventDefault();
+
             app.m.tempproduct =  this.model.clone(); //添加的换购消失,并出现在购物车里面
             app.m.tempproduct.set("productfinalprice", this.model.get("productexchangeprice")); //换购数量为1,价格为换购价格
             
             var that = this;
             this.$el.fadeOut(function(){
                     that.model.destroy();
+                    $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
                     // app.v.cartexchangelist.render(); //渲染购物车的换购商品
                     app.co.exchangeaddedproductlist.add(app.m.tempproduct);
                     app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
@@ -804,6 +807,7 @@ head.ready(function () {
 
         removeAll: function(e){
             e.preventDefault();
+
             app.co.plist = new app.collection.Productlist();
             app.v.plist = new app.view.cartProductList({ collection: app.co.plist, el: $('#normalproductList') });
 
@@ -822,6 +826,7 @@ head.ready(function () {
             app.co.combototallist = new app.collection.Productlist(); //组合购总计
             
             this.model.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
+            $("#cartEmpty").show();
             stickFooter(); // 购物车商品超出一屏，则结算按钮固定窗口底部显示
         }
 
@@ -854,16 +859,7 @@ head.ready(function () {
 // 开始被删除商品部分
     app.v.productdellist = new app.view.removedProductList({collection: app.co.productdeletelist, el:$('#deletedProductlist')});  //被删除的列表渲染
 
-// 开始满减商品部分
-    app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
-    app.m.promotionmanjian2 = new app.model.PromotionManjian({promotionid: 11532, promotionname: "2013健康领跑 优你钙 满99元减20元", promotionmanjiandiscount1:20, promotionmanjiancondition1: 99, promotionmanjiandiscount2:40, promotionmanjiancondition2: 300});
 
-    app.co.manjianlist = new app.collection.PromotionManjianList();
-
-    app.co.manjianlist.add(app.m.promotionmanjian1);
-    app.co.manjianlist.add(app.m.promotionmanjian2);
-
-    app.v.manjianlist = new app.view.cartManjianList({ collection: app.co.manjianlist, el: $('#allist') });
 
 
 // 开始组合购商品部分
@@ -886,7 +882,19 @@ head.ready(function () {
     app.co.combolist.add(app.m.combo2);
 
     app.v.combolist = new app.view.cartComboList({ collection: app.co.combolist, el: $('#allist') });
-  
+
+
+
+// 开始满减商品部分
+    app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
+    app.m.promotionmanjian2 = new app.model.PromotionManjian({promotionid: 11532, promotionname: "2013健康领跑 优你钙 满99元减20元", promotionmanjiandiscount1:20, promotionmanjiancondition1: 99, promotionmanjiandiscount2:40, promotionmanjiancondition2: 300});
+
+    app.co.manjianlist = new app.collection.PromotionManjianList();
+
+    app.co.manjianlist.add(app.m.promotionmanjian1);
+    app.co.manjianlist.add(app.m.promotionmanjian2);
+
+    app.v.manjianlist = new app.view.cartManjianList({ collection: app.co.manjianlist, el: $('#allist') });
 
 
 
