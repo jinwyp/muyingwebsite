@@ -21,12 +21,32 @@ $(function () {
         }
 
     });
+    $("#userName")
+        .formValidator({
+            tipID:"nickTip",
+            onShowFixText:"中、英文皆可，最长15个汉字或30个字符",
+            onShowText:"请填写您的昵称",
+            onShow:"请填写您的昵称",
+            onCorrect:true
+        })
+        .inputValidator({
+            min:2,
+            max:30,
+            onError:"中、英文皆可，最长15个汉字或30个字符"
+        })
+        .regexValidator({
+            isValid:true,
+            regExp:"^[\u4E00-\u9FA5A-Za-z0-9_]+$",
+            //dataType:"string",
+            onError:"格式不正确"
+        });
+
     $("#realName")
         .formValidator({
             tipID:"nameTip",
-            onShowFixText:"请填入2~6个汉字，只限中文",
-            onShowText:"请填入您的真实姓名",
-            onShow:"请填入您的真实姓名",
+            onShowFixText:"请填写2~6个汉字，只限中文",
+            onShowText:"请填写您的真实姓名",
+            onShow:"请填写您的真实姓名",
             onCorrect:true
         })
         .inputValidator({
