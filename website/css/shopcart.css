@@ -45,7 +45,7 @@ strong {font-weight: 700;}
 .cart-body .wrap-input .input-focus {border: 1px solid #ff7800;}
 .cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px; width: 20px; height: 20px; line-height: 19px; font-size: 14px; text-align: center; background-color: #f4f4f4; background: -moz-linear-gradient(center top, #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent; cursor: pointer;}
 .cart-body .wrap-input .reduce {margin-left: 0;}
-
+.cart-empty {border-bottom: 1px solid #f4f4f4; padding:10px 0; text-align: center; font-size: 14px; background-color: #fff; line-height: 30px;}
 /**提示**/
 .col-tips {position: absolute; top: 26px; left: 20px; width: 72px; padding: 2px; text-align: center; border: 1px solid #f90; color: #e60; background-color: #ffedb5;}
 .col-operation .col-tips {left: 0; top: 0; padding: 5px; width: 112px; text-align: left; border: 1px solid #bababa; color: #4d4d4d; background-color: #fff;}
@@ -68,7 +68,7 @@ strong {font-weight: 700;}
 .sign-redemption {background-position: 0 -30px;}
 .cart-gift li, .cart-redemption li {background-color: #fbfef8; border-bottom: 1px solid #fff;}
 .icon-gift, .icon-redemption, .icon-reduce {padding: 1px 3px; color: #fff; margin-right: 5px; background-color: #7fbc41;}
-.icon-reduce {padding: 3px; margin-left: 5px; margin-right: 0; background-color: #e60000; font-weight: 700;}
+.icon-reduce {padding: 3px 5px; margin-left: 5px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius:4px;margin-right: 0; background-color: #e60000; font-weight: 700;}
 .cart-redemption li {background-color: #f7fcfe;}
 .icon-redemption {background-color: #ff7800;}
 .hd-fullReduction {height: 18px; line-height: 18px; background-color: #f4f4f4;}
@@ -76,8 +76,9 @@ strong {font-weight: 700;}
 .hd-fullReduction .title span {margin-right: 5px;}
 .hd-fullReduction .title .tips {margin-left: 15px; font-weight: 400;}
 .hd-fullReduction .money {float: right; width: 260px; text-align: left;}
-.hd-fullReduction .money strong {float: left; width: 70px; padding-right: 10px; text-align: center;}
-
+.hd-fullReduction .money strong {float: left; width: 70px; text-align: center;}
+.hd-combine .col-subtotal {margin-left:208px;text-align: center;}
+.hd-combine .col-operation {margin-left:80px;}
 /**结算**/
 .cart-total .total {padding: 0 10px 10px 0; line-height: 30px; text-align: right;}
 .cart-total .coupon {padding: 10px 15px;}

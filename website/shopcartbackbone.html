@@ -62,7 +62,6 @@
 <div class="wrapper wrap-cart">
 
 <div class="title clearfix"><span class="cart-hd-left"></span>
-
     <h2>我的购物车</h2>
     <span class="cart-hd-right"></span>
 </div>
@@ -165,6 +164,9 @@
                 <li class="column col-luckyStar">幸运星</li>
                 <li class="column col-operation">操作</li>
             </ul>
+            <ul class="cart-empty hide">
+               <li>您的购物车暂时无任何商品，去<a href="http://www.muyingzhijia.com/" class="link-blue">首页</a>挑选喜欢的商品吧！</li>
+            </ul>
 
             <ul class="cart-body cart-gift" id="freegiftproductlist">
 
@@ -251,15 +253,12 @@
             </script>
 
             <script id="ComboTemplate" type="text/x-handlebars-template">
-                <li class="hd-fullReduction">
+                <li class="hd-fullReduction hd-combine">
                     <div class="column col-name title">
                         <span class="font-red">[组合购]</span>
                         <span>{{comboproductname}}</span>
                     </div>
-                    <div class="column col-price">xx</div>
-                    <div class="column col-number">xx</div>
-                    <div class="column col-subtotal"><strong>&yen;{{combototalprice}}</strong></div>
-                    <div class="column col-luckyStar">xx</div>
+                    <div class="column col-subtotal"><strong class="font-red">&yen;{{combototalprice}}</strong></div>
                     <div class="column col-operation"><a id="comboDel" href="#">删除</a></div>
                 </li>
 
