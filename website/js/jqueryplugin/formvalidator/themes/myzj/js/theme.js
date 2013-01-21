@@ -42,7 +42,7 @@ var showLev = function (lev) {
 
     //console.log(progress)
 };
-var passwordStrengthText = ['密码强度：弱', '密码强度：中', '密码强度：中', '密码强度：强'];
+var passwordStrengthText = ['密码强度：弱', '密码强度：弱', '密码强度：中', '密码强度：强'];
 //密码强度校验规则(flag=1(数字)+2(小写)+4(大写)+8(特殊字符)的组合，value里的0表示跟密码一样长,1表示起码1个长度)
 var passwordStrengthRule = [
     {level:1, rule:[

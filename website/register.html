@@ -65,7 +65,7 @@
         <li>
             <label class="label" for="email">电子邮箱：</label>
             <div class="inputCont">
-                <input type="text" id="email" name="email" class="txt" placeholder="请填入电子邮箱" autocomplete="off"  />
+                <input type="text" id="email" name="email" class="txt" placeholder="请填入电子邮箱" autocomplete="off" maxlength="30"  />
                 <div id="emailTip" class="stickTips"></div>
                 <div id="emailFixTip" class="floatTips">请填入常用的邮箱，用来找回密码，接受订单通知等信息 </div>
             </div>
@@ -73,7 +73,7 @@
         <li>
             <label class="label" for="password1">设置密码：</label>
             <div class="inputCont">
-                <input type="password" id="password1" name="password1" class="txt" placeholder="请填入密码" />
+                <input type="password" id="password1" name="password1" class="g-ipt-err" placeholder="请填入密码" maxlength="20" onpaste="return false" style="">
                 <div id="password1Tip" class="stickTips"></div>
                 <div id="password1FixTip" class="floatTips">6~20个字符，包括字母、数字、下划线，以字母开头，其他字符结尾</div>
             </div>
@@ -81,7 +81,7 @@
         <li>
             <label class="label" for="password2">确认密码：</label>
             <div class="inputCont">
-                <input type="password" id="password2" name="password2" class="txt" placeholder="请再次填入密码" />
+                <input type="password" id="password2" name="password2" class="txt" placeholder="请再次填入密码" maxlength="20" onpaste="return false" />
                 <div id="password2Tip" class="stickTips"></div>
                 <div id="password2FixTip" class="floatTips">6~20个字符，包括字母、数字、下划线，以字母开头，其他字符结尾</div>
             </div>

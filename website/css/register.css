@@ -78,6 +78,31 @@
 .sliderBox li:hover {background: #f90; color: #f4f4f4;}
 .sliderBox li.seleceted {background: #ee7407; color: #f4f4f4;}
 
+.sliderBox{
+    position: absolute;
+    border: 1px solid #999;
+    border-top: 0;
+    background: #fff;
+    padding:0;
+    display: none
+}
+.sliderBox li{
+    display: block;
+    line-height: 22px;
+    font-size: 12px;
+    font-family: verdana;
+    padding:0px 10px;
+    cursor: pointer;
+    width:100%
+}
+.sliderBox li:hover{
+    background: #FF9900;
+    color:#f6f6f6;
+}
+.sliderBox li.seleceted{
+    background: #EE7407;
+    color:#f6f6f6;
+}
 /*注册成功*/
 .suc-content {overflow: hidden; zoom: 1; padding: 0 20px 30px;}
 .suc-content .txt {font-size: 14px; line-height: 2.2; clear: both; padding: 10px;}

@@ -57,7 +57,7 @@ $(function(){
             min:3,max:100,onError:"您输入的邮箱长度不正确"
         })
         .regexValidator({
-            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            regExp:"^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]+$"
             ,onError:"您输入的邮箱格式不正确"
         });
     $("#password1")
@@ -75,6 +75,13 @@ $(function(){
         .passwordValidator({
             compareID:"us"
         });
+    $("#password1").blur(function() {
+        if ($("#password2").val() == "" || $("#password2").val() == $("#password2").attr("placeholder")) {
+            return false;
+        } else {
+            $("#password2").blur();
+        }
+    });
     $("#password2")
         .formValidator({
             onShowFixText:"请再次输入密码保证与您设置的密码相同",
@@ -177,7 +184,7 @@ $(function(){
             min:6,max:100,onError:"您输入的邮箱不正确"
         })
         .regexValidator({
-            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            regExp:"^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]+$"
             ,onError:"您输入的邮箱格式不正确"
         });
     $("#third-password1")
@@ -308,8 +315,9 @@ $(function(){
         min:10,max:10,onError:"请正确填写宝宝的预产期"
     }).functionValidator({
             fun:function(val,elem){
-                var vdata = new Date(val),ndata = new Date();
-                if(vdata<ndata){
+                var t = val.split("-");
+                var vdata = new Date(t[1]+"/"+t[2]+"/"+t[0]),ndata = new Date();
+                if(vdata.getTime()<ndata.getTime()){
                     return "预产期请大于当前时间"
                 }
             }
@@ -363,8 +371,9 @@ $(function(){
             min:10,max:10,onError:"请按格式填写宝宝的生日"
         }).functionValidator({
             fun:function(val,elem){
-                var vdata = new Date(val),ndata = new Date();
-                if(vdata>ndata){
+                var t = val.split("-");
+                var vdata = new Date(t[1]+"/"+t[2]+"/"+t[0]),ndata = new Date();
+                if(vdata.getTime()>ndata.getTime()){
                     return "您的宝宝是未来出生的吗？"
                 }
             }
@@ -416,7 +425,7 @@ $(function(){
     $("#add-baby a").click(function(){
         var i = $(".onemorebaby").length;
         if(i==1){
-            $("#addbb").hide();
+            $("#addbb").empty();
         }
         $("#addbb").before('<li class="onemorebaby"><label class="label">第'+(i==0?"二":"三")+'个宝宝的生日：</label><div class="inputCont"><input type="text" id="birthday2_'+i+'" name="birthday2_'+i+'" class="txt" placeholder="请填入宝宝生日" /><div id="birthday2_'+i+'Tip" class="stickTips"></div><div id="birthday2_'+i+'FixTip" class="floatTips"></div></div></li><li><label class="label">宝宝的性别：</label><div class="inputCont radioWrap"><div class="argWrap"><label><input type="radio" name="baby-sex_'+i+'" id="bb0-sex_'+i+'" value="0" />小王子</label><label><input type="radio" name="baby-sex_'+i+'" id="bb1-sex_'+i+'" value="1" />小公主</label></div><div id="baby-sex_'+i+'Tip" class="stickTips"></div><div class="floatTips"></div></div></li>');
         $("#birthday2_"+i)
@@ -437,8 +446,9 @@ $(function(){
                 min:10,max:10,onError:"请按格式填写宝宝的生日"
             }).functionValidator({
                 fun:function(val,elem){
-                    var vdata = new Date(val),ndata = new Date();
-                    if(vdata>ndata){
+                    var t = val.split("-");
+                    var vdata = new Date(t[1]+"/"+t[2]+"/"+t[0]),ndata = new Date();
+                    if(vdata.getTime()>ndata.getTime()){
                         return "您的宝宝是未来出生的吗？"
                     }
                 }
@@ -479,7 +489,7 @@ $(function(){
             min:3,max:100,onError:"您输入的邮箱长度不正确"
         })
         .regexValidator({
-            regExp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$"
+            regExp:"^\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]+$"
             ,onError:"您输入的邮箱格式不正确"
         });
 

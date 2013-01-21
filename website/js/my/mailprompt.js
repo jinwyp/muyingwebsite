@@ -25,8 +25,12 @@
         return opts.valuer.each(function(){
             //鼠标选择
             var _ = $(this);
-            oo.click(function(event){
-                SwitchTo($(event.target));
+            oo.mousedown(function(event){
+                var trg = $(event.target);
+                if(trg[0].tagName =="SPAN"){
+                    trg = trg.parent("li")
+                }
+                SwitchTo(trg);
                 PrintVal(obj.text());
                 _.blur();
                 if(_.parents("li").next().find("input").length>0)
