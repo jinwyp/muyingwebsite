@@ -1042,183 +1042,149 @@
 
 <div id="container" class="wrapper">
     <div class="crumbs"><a href="/">首页</a> > <a href="">宝宝食品</a> > <a href="">牛奶粉</a> > <span>雅培金装喜康力配方奶粉900g（智护）</span></div>
-
     <div class="id_detail">
-    <div class="picture">
-        <!--图片展示区域-->
-        <div class="gallery" id="imageViewerFrame">
-            <div id="picpointer">
-                <div style="height: 300px; width: 300px;" id="picshower">
-                    <img id="smallImage" src="http://img2.icson.com/product/mm/29/419/29-419-10696-03.jpg" >
-                    <div class="zoom_mouse" style="width: 140px; height: 140px; left: 0px; top: 0px; display: none;"></div>
-                    <span class="previewicon" style="display: none;"></span>
+        <div class="picture">
+            <!--图片展示区域-->
+            <div id="imageViewerFrame" class="gallery">
+                <div id="picpointer">
+                    <div id="picshower" style="height: 300px; width: 300px;">
+                        <img src="http://st.icson.com/static_v1/img/blank.gif" id="smallImage"/>
 
-                </div>
-                <div class="zoom_pic" id="zoomPic" style="width: 373.333px; height: 373.333px; right: -395.333px; display: none;">
-                    <div id="zoomPicWrap" class="zoom_pic_wrap" style="left: 0; top: 2.66667px;">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td><img onload="G.util.ping.reportItemPicLoad(1358839871744, true);$('#zoomPic').css({width:(this.width*140/300)+'px',height:(this.width*(140*140)/(300*140))+'px',right:(-this.width*140/300-22)+'px'})" src="http://img2.icson.com/product/mpic/29/419/29-419-10696.jpg"></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="zoom_mouse"></div>
+                        <span class="previewicon"></span>
                     </div>
-                </div>
-                <div class="pic_small" id="pic_small_wrapper">
-                    <a hidefocus="true" class="bt_before status_off" onclick="return false" href="#" ><b class="bt">◆</b></a>
-                    <div class="list_smallpic" id="list_smallpic">
-                        <ul style="width: 272px;">
-                            <li class=""><a onclick="return false" href="#" title=""><img src="http://img2.icson.com/product/ss/29/419/29-419-10696.jpg"></a></li>
-                            <li><a onclick="return false" href="#" title=""><img src="http://img2.icson.com/product/ss/29/419/29-419-10696-01.jpg"></a></li>
-                            <li><a onclick="return false" href="#" title=""><img src="http://img2.icson.com/product/ss/29/419/29-419-10696-02.jpg"></a></li>
-                            <li class="status_on"><a onclick="return false" href="#" title=""><img src="http://img2.icson.com/product/ss/29/419/29-419-10696-03.jpg"></a></li>
-                        </ul>
-                    </div>
-                    <a class="bt_next status_off" onclick="return false" href="#" ><b class="bt">◆</b></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--商品基本信息 -->
-    <div class="property id_promotion">
-        <h1>Abbott 雅培 金装喜康力900g（智护2阶段）<span>产品编号：29-419-10696</span></h1>
-        <p class="goods_info"><span class="strong"></span></p>
-        <p style="" id="product_pingfen" class="goods_pingfen">评级：<span class="icon_star"><b style="width: 95%;"></b></span>(<a href="#introduction">共12条评论</a>)</p>
-        <ul id="goods_detail_mate" class="goods_detail mate">
-            <li style="display:none;" class="li item_market"><span class="t">市场价：</span><del>¥236.00</del></li>
-            <li class="li item_icson"><span class="t">会员价：</span><span class="i_yuan">¥</span><strong class="price_font">236.00</strong>&nbsp;</li><div class="youdaoGWZS_plug-history">        <a class="youdaoGWZS_plug-history-btn youdaoGWZS_plug-history-pr-rise" hoveraction="HISTORY2_HOVER" href="#">价格上涨</a>        <a clkaction="PRICEHUB_DIRECT_SUB_CLICK" class="deprice-btn subscribe                         " data-type="deprice-outside" btntype="DIRECT" href="javascript:void(0)">降价提醒</a>        </div>
-
-
-            <li class="li promotion">
-                <span class="t">促销：</span>
-                <a target="_blank" href="" class="tags_promo tags_promo_manjian">
-                    满119立减18
-                    <div class="layout_popup">
-                        <div class="layout_inner"><p>百货全场满119降18</p></div>
-                        <div class="layout_arrow_top"><span>◆</span><i>◆</i></div>
-                    </div>
-                </a>
-            </li>
-
-            <li style="display: none;" id="good_detai_coupon" class="li free item_coupon"></li>
-            <li style="display: none;" id="good_detai_gift" class="li free">
-                <span class="t">赠品：</span>
-                <ul id="good_detai_gift_list" class="list_goods list_pic_left"></ul>
-            </li>
-            <li style="display: none;" id="good_detai_com" class="li">
-                <span class="t">组件：</span>
-                <ul id="good_detai_com_list" class="list_goods list_pic_left"></ul>
-            </li>
-
-            <li class="li select_area">
-                <p class="t">送至：</p>
-                <div id="select_area_act" class="mod_act">
-                    <div id="area_show_result" class="hd_act">
-                        <div class="area_item">
-                            <p><span id="area_name" class="area">上海 上海市 徐汇区</span><span class="arrow"></span></p>
-                        </div>
-                    </div>
-                    <div id="area_box" class="bd_act" style="display: none;">
-                        <div id="area_result_box" class="area_item_list">
-                            <div id="p_wrap" class="area_item">
-                                <p><span class="area">上海</span><span class="arrow"></span></p>
-                            </div>
-                            <div id="c_wrap" class="area_item">
-                                <p><span class="area">上海市<span class="special">*</span></span><span class="arrow"></span></p>
-                            </div>
-                            <div id="d_wrap" class="area_item area_item_current">
-                                <p><span class="area">请选择区县</span><span class="arrow"></span></p>
-                            </div>
-                        </div>
-                        <div class="area_list storage_list" id="p_box" style="display: none;">
-                            <div class="storage_item">
-                                <p>上海仓服务：</p>
-                                <ul>
-                                    <li><a href="javascript:void(0);" title="上海" v="2621">上海</a></li>
-                                    <li><a href="javascript:void(0);" title="浙江" v="3225">浙江</a></li>
-                                    <li><a href="javascript:void(0);" title="江苏" v="1591">江苏</a></li>
-                                    <li><a href="javascript:void(0);" title="安徽" v="1">安徽</a></li>
-                                    <li><a href="javascript:void(0);" title="宁夏" v="2130">宁夏</a></li>
-                                    <li><a href="javascript:void(0);" title="青海" v="2160">青海</a></li>
-                                </ul>
-                            </div>
-                </div>
-                <span class="">有货，可当日出库，支持货到付款</span>
-            </li>
-        </ul>
-        <ul id="goods_detail_buyinfo" class="goods_detail buyinfo">
-            <!-- S 套餐 -->
-            <li style="display: none;" id="good_detail_package" class="li pack_tit"></li>
-            <!-- E 套餐 -->
-            <li class="li">
-                <span class="t">购买数量：</span>
-			<span class="input_mini">
-				<input type="text" value="1" minnumlimit="1" maxnumlimit="12" maxlength="2" id="order_num">
-			</span>件
-                <span class="tips_buy">限购12件</span>
-            </li>
-            <li class="li">
-                <div class="wrap_btn">
-                    <a onclick="return false;" href="#" class="btn_cart" >加入购物车</a>
-                    |
-                    <a target="_blank" href="" >价格举报</a>
-                    <div style="display:none" id="mod_installment" class="mod_share id_stage">
-                        <p class="hd">本商品支持以下分期付款:</p>
-                        <div class="bd">
-                            <table class="table_nor">
-                                <colgroup>
-                                    <col width="20%">
-                                    <col width="26%">
-                                    <col width="26%">
-                                    <col width="26%">
-                                </colgroup>
-                                <thead>
-                                <tr>
-                                    <th>银行</th>
-                                    <th>3期</th>
-                                    <th>6期</th>
-                                    <th>12期</th>
-                                </tr>
-                                </thead>
+                    <div style="display:none;" id="zoomPic" class="zoom_pic">
+                        <div class="zoom_pic_wrap" id="zoomPicWrap">
+                            <table>
                                 <tbody>
+                                <tr>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
-                            <div class="wrap_btn"><a target="_blank" href="" class="check_notice">查看分期付款说明</a><a onclick="return false" class="btn_strong" href="#"><strong>申请分期付款</strong></a></div>
                         </div>
-                        <b class="icon_jian"></b>
+                    </div>
+                    <div id="pic_small_wrapper" class="pic_small">
+                        <a href="#" onclick="return false" class="bt_before status_off"><b class="bt">◆</b></a>
+
+                        <div id="list_smallpic" class="list_smallpic">
+                            <ul></ul>
+                        </div>
+                        <a href="#" onclick="return false" class="bt_next status_off"><b class="bt">◆</b></a>
                     </div>
                 </div>
-            </li>
-
-        </ul>
-
-        <div class="mod_faver wrap_btn">
-            <a onclick="return false" href="#" class="favorite">收藏</a>
-            <!-- <p class="para_inb para_right favorites"> <span class="icon icon_msg0 icon_msg0_right"></span><span id="altertext" class="msg-title">收藏成功！</span> </p> -->
-            <a onclick="return false" href="#" class="share" id="mod_share_btn">分享</a>
-            <div style="display:none" id="mod_share" class="mod_share">
-                <p class="hd"></p>
-                <div class="bd">
-                    <ul class="list_share">
-                          <li><a href="#"><b class="logo_renren"></b>人人网</a></li>
-                          <li><a href="#"><b class="logo_qzone"></b>QQ空间</a></li>
-                          <li><a href="#"><b class="logo_kaixin"></b>开心网</a></li>
-                        <li><a id="share_tx_weibo" onclick="return false" href="http://v.t.qq.com/share/share.php?title=%E6%88%91%E5%9C%A8%E6%98%93%E8%BF%85%E7%BD%91%E7%9C%8B%E5%88%B0Abbott%20%E9%9B%85%E5%9F%B9%20%E9%87%91%E8%A3%85%E5%96%9C%E5%BA%B7%E5%8A%9B900g%EF%BC%88%E6%99%BA%E6%8A%A42%E9%98%B6%E6%AE%B5%EF%BC%89%2C%E5%B8%82%E5%9C%BA%E4%BB%B7236.00%E5%85%83%EF%BC%8C%E6%98%93%E8%BF%85%E5%8F%AA%E8%A6%81236.00%E5%85%83%EF%BC%8C%E8%BF%98%E7%AD%89%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A4%A7%E5%AE%B6%E5%BF%AB%E6%9D%A5%E6%8A%A2%E5%90%A7%EF%BC%81%20%40%E6%98%93%E8%BF%85%E7%BD%91%20&amp;url=http%3A%2F%2Fitem.51buy.com%2Fitem-423661.html%3FLS%3Dtqq&amp;appkey=0cb44fae2de1437a81b846a9d45180f4&amp;site=http://www.51buy.com&amp;pic=http://img2.icson.com/product/mm/29/419/29-419-10696.jpg" ytag="60041" target="_blank"><b class="logo_tx_weibo"></b>腾讯微博</a></li>
-                        <li><a id="share_sina_weibo" onclick="return false" href="http://v.t.sina.com.cn/share/share.php?content=%E6%88%91%E5%9C%A8%E6%98%93%E8%BF%85%E7%BD%91%E7%9C%8B%E5%88%B0Abbott%20%E9%9B%85%E5%9F%B9%20%E9%87%91%E8%A3%85%E5%96%9C%E5%BA%B7%E5%8A%9B900g%EF%BC%88%E6%99%BA%E6%8A%A42%E9%98%B6%E6%AE%B5%EF%BC%89%2C%E5%B8%82%E5%9C%BA%E4%BB%B7236.00%E5%85%83%EF%BC%8C%E6%98%93%E8%BF%85%E5%8F%AA%E8%A6%81236.00%E5%85%83%EF%BC%8C%E8%BF%98%E7%AD%89%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A4%A7%E5%AE%B6%E5%BF%AB%E6%9D%A5%E6%8A%A2%E5%90%A7%EF%BC%81%20%40%E6%98%93%E8%BF%85%E7%BD%91%E5%AE%98%E7%BD%91%20&amp;title=%E6%88%91%E5%9C%A8%E6%98%93%E8%BF%85%E7%BD%91%E7%9C%8B%E5%88%B0Abbott%20%E9%9B%85%E5%9F%B9%20%E9%87%91%E8%A3%85%E5%96%9C%E5%BA%B7%E5%8A%9B900g%EF%BC%88%E6%99%BA%E6%8A%A42%E9%98%B6%E6%AE%B5%EF%BC%89%2C%E5%B8%82%E5%9C%BA%E4%BB%B7236.00%E5%85%83%EF%BC%8C%E6%98%93%E8%BF%85%E5%8F%AA%E8%A6%81236.00%E5%85%83%EF%BC%8C%E8%BF%98%E7%AD%89%E4%BB%80%E4%B9%88%EF%BC%8C%E5%A4%A7%E5%AE%B6%E5%BF%AB%E6%9D%A5%E6%8A%A2%E5%90%A7%EF%BC%81%20%40%E6%98%93%E8%BF%85%E7%BD%91%E5%AE%98%E7%BD%91%20&amp;url=http%3A%2F%2Fitem.51buy.com%2Fitem-423661.html%3FLS%3Dtqq&amp;appkey=2992571369&amp;site=http://www.51buy.com&amp;pic=http://img2.icson.com/product/mm/29/419/29-419-10696.jpg" ytag="60042" target="_blank"><b class="logo_sina_weibo"></b>新浪微博</a></li>
-                    </ul>
-                </div>
-                <b class="icon_jian"></b>
             </div>
         </div>
-        <p class="tips"><span class="t">注意：</span>本商品为特惠商品，仅限普通客户购买，只提供普通发票，不提供增值税发票。</p>
-        <p class="tips"><span class="t">提示：</span>特价商品，不能使用易迅优惠券。</p>
-    </div>
-    <!-- E 商品基本信息 -->
-    </div>
 
-    <div style="display: none;" id="easy_match" class="mod_aider id_suiixinpei">
+        <div class="property id_promotion">
+            <h1>Abbott 雅培 金装喜康力900g（智护2阶段）<span>产品编号：29-419-10696</span></h1>
+            <p class="goods_info"><span class="strong"></span></p>
+            <p class="goods_pingfen" id="product_pingfen" style="display:none"></p>
+            <ul class="goods_detail mate" id="goods_detail_mate">
+                <li class="li item_market" style="display:none;"><span class="t">市场价：</span>
+                    <del>&yen;236.00</del>
+                </li>
+                <li class="li item_icson"><span class="t">会员价：</span><span class="i_yuan">&yen;</span><strong
+                        class="price_font">236.00</strong>&nbsp;</li>
+                <li class="li promotion">
+                    <span class="t">换购：</span>
+                    <a class="tags_promo tags_promo_manjian" href="http://event.51buy.com/event/44070307.html"
+                       target="_blank">
+                        满119立减18
+                        <div class="layout_popup">
+                            <div class="layout_inner"><p>百货全场满119降18</p></div>
+                            <div class="layout_arrow_top"><span>◆</span><i>◆</i></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="li free item_coupon" id="good_detai_coupon"></li>
+                <li class="li free" id="good_detai_gift">
+                    <span class="t">赠品：</span>
+                    <ul class="list_goods list_pic_left" id="good_detai_gift_list"></ul>
+                </li>
+            </ul>
+            <ul class="goods_detail buyinfo" id="goods_detail_buyinfo">
+                <!-- S 套餐 -->
+                <li class="li pack_tit" id="good_detail_package"></li>
+                <!-- E 套餐 -->
+                <li class="li">
+                    <span class="t">购买数量：</span>
+                <span class="input_mini">
+                    <input type="text" id="order_num" maxlength="2" maxnumlimit="12" minnumlimit="1" value="1"/>
+                </span>件
+                    <span class="tips_buy">限购12件</span>
+                </li>
+                <li class="li">
+                    <div class="wrap_btn">
+                        <a ytag="20040" class="btn_cart" href="#" hotname="I.ITEM.ADDTOSHOPPINGCART"
+                           onclick="G.app.itemDetail.addToCart(0);return false;">加入购物车</a>
+                        |
+                        <a ytag="60043" hotname="I.ITEM.MYINFORMAPPLY"
+                           href="http://base.51buy.com/myinformapply.html?pid=423661" target="_blank">价格举报</a>
+
+                        <div class="mod_share id_stage" id="mod_installment" style="display:none">
+                            <p class="hd">本商品支持以下分期付款:</p>
+
+                            <div class="bd">
+                                <table class="table_nor">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="26%">
+                                        <col width="26%">
+                                        <col width="26%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>银行</th>
+                                        <th>3期</th>
+                                        <th>6期</th>
+                                        <th>12期</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                                <div class="wrap_btn">
+                                    <a class="check_notice" href="http://st.51buy.com/help/2-3-creditcard.htm"
+                                       target="_blank">查看分期付款说明</a>
+                                    <a href="#" class="btn_strong" onclick="G.app.itemDetail.addToCart(1);return false"><strong>申请分期付款</strong></a>
+                                </div>
+                            </div>
+                            <b class="icon_jian"></b>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mod_faver wrap_btn">
+                <a class="favorite" href="#">收藏</a>
+
+                <p class="para_inb para_right favorites"><span class="icon icon_msg0 icon_msg0_right"></span><span
+                        id="altertext" class="msg-title">收藏成功！</span></p>
+                <a id="mod_share_btn" class="share" href="#" onclick="return false">分享</a>
+
+                <div class="mod_share" id="mod_share">
+                    <p class="hd"></p>
+
+                    <div class="bd">
+                        <ul class="list_share">
+                            <li><a href="#"><b class="logo_renren"></b>人人网</a></li>
+                            <li><a href="#"><b class="logo_qzone"></b>QQ空间</a></li>
+                            <li><a href="#"><b class="logo_kaixin"></b>开心网</a></li>
+                            <li><a href="#" onclick="return false" id="share_tx_weibo"><b class="logo_tx_weibo"></b>腾讯微博</a>
+                            </li>
+                            <li><a href="#" onclick="return false" id="share_sina_weibo"><b class="logo_sina_weibo"></b>新浪微博</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <b class="icon_jian"></b>
+                </div>
+            </div>
+            <p class='tips'><span class='t'>注意：</span>本商品为特惠商品，仅限普通客户购买，只提供普通发票，不提供增值税发票。</p>
+
+            <p class="tips"><span class="t">提示：</span>特价商品，不能使用易迅优惠券。</p>
+        </div>
+    </div>
+    <div class="mod_aider id_suiixinpei" id="easy_match">
         <div class="inner">
             <div class="hd">
                 <h3>随心配</h3>
@@ -1226,424 +1192,504 @@
             <div class="bd">
                 <ul class="list_goods list_pic_left"></ul>
                 <div class="info">
-                    <p>已搭配：<span id="pkg_num">0</span>件 [<a onclick="return false" href="#">清除选择</a>]</p>
-                    <p>套餐价：<strong id="pkg_price" class="strong">¥0.00</strong></p>
-                    <p>节省了：<strong id="save_pkg_price" class="strong">¥0.00</strong></p>
-                    <p class="tips">点击加入购物车一起搭配购买</p>
-                    <div class="wrap_btn"><a onclick="return false" href="#" class="btn_strong">加入购物车</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="wrap_info">
-    <div class="content">
-    <!-- S 产品介绍-->
-    <div id="introduction" class="mod_goods_info">
-        <ul id="info_tit" class="hd">
-            <li id="t_introduce" class="status_on">
-                <h3><a onclick="return false" href="#">产品介绍</a></h3>
-            </li>
-            <li id="t_comment" n="comment">
-                <h3><a onclick="return false" href="#">商品评价(12)</a>
-                </h3>
-            </li>
-            <li id="t_parameters" n="parameters">
-                <h3><a onclick="return false" href="#">规格参数</a></h3>
-            </li>
-            <li id="t_warranty" n="warranty">
-                <h3><a onclick="return false" href="#">售后服务</a>
-                </h3>
-            </li>
-        </ul>
-        <div id="intro-main_tab" class="bd">
-            <div id="c_introduce" class="intro-main" style="display: block;">
-                <div style="margin-bottom:8px;display:none;" id="c_ad">
-                </div>
-                <!-- 商品简介 -->
-                <div class="mod_detail_info id_intro">
-                    <div class="mod_hd"><h3><span class="tit">商品简介</span>一句话，就是精品</h3><i class="line"></i></div>
-                    <div class="mod_bd">
-                        <p style="text-align: center"><img width="740" height="330"  src="http://img2.icson.com/details/29/419/29-419-10691-20121030-8.jpg" class="err-product" alt=""></p>
-                        <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            雅培金装喜康宝婴儿配方奶粉智护100配方，均衡配比，含美国专利，源自科学验证，不含棕榈油，易于消化吸收，特别适合宝宝幼嫩的消化系统，特别添加有益于智力、视力发育及机体抵抗力的High
-                            Q+Shield营养组合，满足宝宝智力、视力、免疫系统及身体发育等多方面的营养需求。</p>
-                    </div>
-                </div>
-                <!-- 商品特性 -->
-                <div class="mod_detail_info id_features">
-                    <div class="mod_hd"><h3><span class="tit">商品特性</span>产品描述仅供参考，具体请查看规格参数</h3><i class="line"></i>
-                    </div>
-                    <div class="mod_bd">
-                        <table align="center">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-0.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-1.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-2.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-3.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-4.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-5.jpg"></td>
-                            </tr>
-                            <tr>
-                                <td align="center">
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-0.gif"></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-6.jpg"></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- 精美图片 -->
-                <div class="mod_detail_info id_pic">
-                    <div class="mod_hd"><h3><span class="tit">精美图片</span></h3><i class="line"></i></div>
-                    <div class="mod_bd"><p style="text-align: center">
-                        <img style="width: 560px" src="http://img2.icson.com/product/mpic/29/419/29-419-10696.jpg"
-                             alt=""></p>
-
-                        <p style="text-align: center">
-                            <img style="width: 560px"
-                                 src="http://img2.icson.com/product/mpic/29/419/29-419-10696-01.jpg" alt=""></p>
-
-                        <p style="text-align: center">
-                            <img style="width: 560px"
-                                 src="http://img2.icson.com/product/mpic/29/419/29-419-10696-02.jpg" alt=""></p>
-                    </div>
-                </div>
-                <!-- 相关说明 -->
-                <div class="mod_detail_info id_link" id="id_link">
-                    <div class="mod_hd"><h3><span class="tit">相关说明</span></h3><i class="line"></i></div>
-                    <div class="mod_bd">
-                        <table width="750" cellspacing="10" cellpadding="1" border="0" align="center"
-                               style="border-spacing: 10px" class="cssback_table">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-7.jpg" alt="">
-                                </td>
-                                <td>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    雅培成立于1888年，拥有120多年严谨科学营养史。在全球拥有7000名科学家，坚持科学创新，不断研发科学配比的先进营养系统，赢得了139个国家和地区妈妈的信赖！2010年，雅培公司被《财富》杂志评为制药行业最受尊崇第一名；雅培是美国儿科医生重点推荐品牌，最多医护人员为自己的孩子选用的品牌；雅培的新加坡营养品工厂，获得绿色标准“黄金级”认证！
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div style="display: none;" id="c_parameters" class="intro-main intro-main-b"></div>
-            <div style="display: none;" id="c_warranty" class="intro-main intro-main-c id_warranty"></div>
-            <div style="display: none;" id="c_packinglist" class="intro-main"></div>
-
-        </div>
-    </div>
-    <!-- E 产品介绍-->
-
-    <!-- E 特别声明 -->
-    <div id="statement" class="mod_aider id_state">
-        <div class="hd"><h3>特别声明</h3></div>
-        <div class="bd"><p class="strong state_cont">
-            因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，易迅不能确保客户收到的货物与易迅图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。另外商品的规格参数均以官方网站为准，若官网有误或易迅没有及时更新，请大家谅解！</p>
-        </div>
-    </div>
-    <div class="mod_aider" id="J_reviews">
-        <div class="hd"><h3>商品评论</h3></div>
-        <div class="bd">
-            <div style="" id="c_comment" class="id_comments"><!-- S 商品满意度评分-->
-                <div id="review_brief" class="id_satisfaction clearfix">
-                    <div class="perf_left">
-                        <div class="satisfaction_point">
-                            <h3>商品满意度评分</h3>
-                            <p class="point"><strong>4.8</strong>分</p>
-                            <p class="wrap_star"><span class="icon_star"><b style="width: 95%;"></b></span></p>
-                            <p>共12位迅友参与评分</p>
-                        </div>
-                    </div>
-                    <div style="display:none" id="performance_box" class="perf_center">
-                        <div class="wrap_hd">
-                            <h3>性能调查</h3>
-				<span class="intr">
-					<b></b>
-					满意
-				</span>
-                        </div>
-                        <div class="wrap_bd">
-                            <ul id="performance_list">
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="perf_right">
-                        <div class="satisfaction_tips">
-                            <p class="tit nor">我在易迅网购买过此商品</p>
-
-                            <div class="wrap_btn">
-                                <a class="btn_strong" onclick="return false" href="">发表体验评论</a>
-                            </div>
-                            <p>
-                                <strong>积分规则：</strong>
-                            </p>
-
-                            <p>
-                                发表评论赠送积分（1积分=0.1元）；精华评论更有
-                                <span class="strong">额外奖励</span>
-                                积分；
-                            </p>
-
-                            <p>
-                                前5名评价用户将获得双倍积分。
-                                <a target="_blank" href="" class="todo_link">详情&gt;&gt;</a>
-                            </p>
-
-                            <p class="nor">前5位评论用户：gl***md, 路远, 11***li, Lo***27</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="review_brief_tpl"><!--
-	<div class="perf_left">
-		<div class="satisfaction_point">
-			<h3>商品满意度评分</h3>
-			<p class="point"><strong>{pingfen}</strong>分</p>
-			<p class="wrap_star"><span class="icon_star"><b style="width: {pingfen_rate}%;"></b></span></p>
-			<p>共{experience_number}位迅友参与评分</p>
-		</div>
-	</div>
-	<div class="perf_center" id="performance_box" style="display:none">
-
-			<div class="wrap_hd">
-				<h3>性能调查</h3>
-				<span class="intr">
-					<b></b>
-					满意
-				</span>
-			</div>
-			<div class="wrap_bd">
-				<ul id="performance_list">
-				</ul>
-			</div>
-
-	</div>
-	<div class="perf_right">
-		<div class="satisfaction_tips">
-			<p class="tit nor">我在易迅网购买过此商品</p>
-			<div class="wrap_btn">
-				<a ytag="17771" href="http://item.51buy.com/review-toaddexperience-{pid}.html" onclick="G.app.itemDetail.review.checkCanAddExperience();return false" class="btn_strong">发表体验评论</a>
-			</div>
-			<p>
-				<strong>积分规则：</strong>
-			</p>
-			<p>
-				发表评论赠送积分（1积分=0.1元）；精华评论更有
-				<span class="strong">额外奖励</span>
-				积分；
-			</p>
-			<p>
-				前5名评价用户将获得双倍积分。
-				<a class="todo_link" href="http://st.51buy.com/help/1-7-terms.htm" target="_blank">详情>></a>
-			</p>
-			<p class="nor">前5位评论用户：<@top_users@>{name}<@_top_users@></p>
-		</div>
-	</div>
---></div>
-                <!-- E 商品满意度评分-->
-
-                <!-- S 迅友评论-->
-                <div id="review_box" class="mod_comments">
-                    <div class="comments_hd">
-                        <ul id="review_header" class="tab_comments">
-                            <li t="0"><h3><a onclick="return false" href="#" >全部评论(12)</a></h3></li>
-                            <li t="1"><h3><a onclick="return false" href="#">满意(12)</a></h3></li>
-                            <li t="2"><h3><a onclick="return false" href="#">一般(0)</a></h3></li>
-                            <li t="3"><h3><a onclick="return false" href="#">不满意(0)</a></h3></li>
-                            <li t="4"><h3><a onclick="return false" href="#">讨论(0)</a></h3></li>
-                        </ul>
-                        <div class="more"><a id="post_review" href="javascript:void(0)"><span>发表商品讨论</span></a>
-                        </div>
-                    </div>
-                    <div id="review_content" class="comments_bd">
-                        <div class="comment_all">
-                            <div class="content">
-                                <ul class="list_comment">
-                                </ul>
-
-                                <div style="display:none" id="review_reply_list_tpl">
-                                </div>
-                                <div class="page_wrap">
-                                    <div id="review_page" class="paginator"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--评论-->
-            </div>
-        </div>
-    </div>
-    <div class="clear">
-    </div>
-    <!-- S 特别声明 -->
-    <!-- 商品介绍 -->
-    <!-- S 浏览过此商品的用户还看了 / 购买过此商品的用户还买了-->
-    <div class="mod_hui">
-        <div class="hd"><h3>浏览过此商品的用户还看了</h3></div>
-        <div class="bd">
-            <ul class="goods_list">
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img1.icson.com/product/pic160/29/395/29-395-10031.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">美素佳儿 3段 金装 900g</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥210.00</span><span class="i_price">¥215</span></p>
-                </li>
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img1.icson.com/product/pic160/29/419/29-419-10699.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">Abbott 雅培 金装幼儿喜康力900g（智护3阶段）</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥208.00</span><span class="i_price">¥208</span></p>
-                </li>
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img2.icson.com/product/pic160/29/419/29-419-10698.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">Abbott 雅培 金装幼儿喜康力400g（智护3阶段）</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥95.00</span><span class="i_price">¥98</span>
+                    <p>已搭配：<span id="pkg_num">0</span>件 [<a ytag="10000" href="#"
+                                                            onclick="G.app.itemDetail.clearPkgCheck();return false">清除选择</a>]
                     </p>
-                </li>
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img2.icson.com/product/pic160/29/394/29-394-10996.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">多美滋金装 优阶贝护 2段 延续较大婴儿配方奶粉 900g易乐罐</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥223.00</span><span class="i_price">¥223</span></p>
-                </li>
-                <li class="item"><a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img1.icson.com/product/pic160/30/295/30-295-069.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">日本花王纸尿裤 L54片</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥169.00</span><span class="i_price">¥178</span></p>
-                </li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="mod_hui id_also">
-        <div class="hd"><h3>购买过此商品的用户还买了</h3></div>
-        <div class="bd">
-            <ul class="goods_list">
+                    <p>套餐价：<strong class="strong" ordprice="236.00" id="pkg_price">&yen;0.00</strong></p>
 
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img2.icson.com/product/pic160/29/250/29-250-100.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">Pampers帮宝适 超薄干爽系列电子商务渠道彩箱装 大号164片</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥298.00</span><span class="i_price">¥358</span></p>
-                </li>
-                <li class="item">
-                    <a onclick="" target="_blank" href="" class="img_wrap"><img src="http://img2.icson.com/product/pic160/29/250/29-250-052.jpg"></a>
-                    <p class="name"><a onclick="" target="_blank" href="">Pampers帮宝适 超薄干爽超大包装大号84片送8片(新兴渠道专供装)</a></p>
-                    <p class="price_wrap"><span class="i_price price_now">¥168.90</span><span class="i_price">¥203</span></p>
-                </li>
+                    <p>节省了：<strong class="strong" id="save_pkg_price">&yen;0.00</strong></p>
 
-            </ul>
-        </div>
-    </div>
+                    <p class="tips">点击加入购物车一起搭配购买</p>
 
-    <div style="display:none" id="asking_box" class="mod_goods_info asking_box">
-        <ul id="asking_header" class="hd">
-            <li><h3><a onclick="return false" href="#">全部咨询</a></h3></li>
-            <li><h3><a onclick="return false" href="#">商品咨询</a></h3></li>
-            <li><h3><a onclick="return false" href="#">配送/支付</a></h3></li>
-            <li><h3><a onclick="return false" href="#">发票/保修</a></h3></li>
-        </ul>
-        <div id="asking_content" class="bd">
-            <div class="more"><a id="post_asking" href="javascript:void(0)"><span>发表咨询</span></a></div>
-            <div class="comment_tips">
-                <p><span class="tit">提示:</span>因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！若由此给您带来不便请多多谅解，谢谢！
-                </p>
-            </div>
-            <div class="comment_all">
-                <div class="content">
-                    <ul class="list_comment list_refer">
-                    </ul>
-                    <div class="page_wrap">
-                        <div id="asking_page" class="paginator"></div>
+                    <div class="wrap_btn"><a ytag="10001" class="btn_strong" href="#" onclick="return false">加入购物车</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- E 购买咨询-->
-    <div style="display:none" id="asking_list_tpl"><!--
-	<@list@><li>
-		<div class="user">
-			<img width="35" height="35" src="http://st.icson.com/static_v1/img/guest/guest{pic_order}_35.gif">
-			<span class="name">{user_name}</span> <span class="level">{user_level_name}</span>
-		</div>
-		<div class="cont">
-			<div class="title">{type_chn}{stars}<span class="date">{create_time_chn}</span></div>
-			<div class="text">{content}</div>
-			<div class="reply" id="replylist_{type}_{id}" total="{replies_number}" open="0"{attr_addition}>
-				<p class="reply_more"{ifkillReplyMore}><a href="#" replylist="{id}" rtype="{type}" onclick="return false">查看全部{replies_number}条回复&gt;&gt;</a></p>
-				<div class="arrow_top"><i>◆</i></div>
-				<ul class="list_reply">
-					<@replies_all@><li>
-						<div class="reply">
-							<div class="reply_cont"><p class="reply_text"><strong class="reply_name">{user_name}回复：</strong>{content}</p>
-							<p class="reply_date">{reply_date_chn}</p>
-						</div>
-					</li><@_replies_all@>
-				</ul>
-			</div>
-		</div>
-	</li><@_list@>
---></div>
-    <!-- E 购买咨询 -->
+    </div><!--随心配 -->
+    <div class="wrap_info">
+        <div class="content">
+            <div class="mod_goods_info" id="introduction">
+                <ul class="hd" id="info_tit">
+                    <li id="t_introduce">
+                        <h3><a href="#" onclick="return false">产品介绍</a></h3>
+                    </li>
+                    <li id="t_comment">
+                        <h3><a href="#" onclick="return false">商品评价</a></h3>
+                    </li>
+                    <li id="t_parameters">
+                        <h3><a href="#" onclick="return false">规格参数</a></h3>
+                    </li>
+                    <li id="t_warranty">
+                        <h3><a href="#" onclick="return false">售后服务</a></h3>
+                    </li>
+                </ul>
+                <div class="bd" id="intro-main_tab">
+                    <div class="intro-main" id="c_introduce">
+                        <div id="c_ad" style="margin-bottom:8px;display:none;">
+                        </div>
+                        <!-- 商品简介 -->
+                        <div class="mod_detail_info id_intro">
+                            <div class="mod_hd"><h3><span class="tit">商品简介</span>一句话，就是精品</h3><i class="line"></i></div>
+                            <div class="mod_bd"><p style="text-align: center">
+                                <img alt="" class="err-product" height="330"
+                                     src="http://img2.icson.com/details/29/419/29-419-10691-20121030-8.jpg" width="740"/>
+                            </p>
 
-    <!-- S 你可能还喜欢 -->
-    <div style="display: none;" id="guess_you_like" class="mod_aider id_youlike">
-        <div class="inner">
-            <div class="hd">
-                <h3>你可能还喜欢</h3>
+                                <p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    雅培金装喜康宝婴儿配方奶粉智护100配方，均衡配比，含美国专利，源自科学验证，不含棕榈油，易于消化吸收，特别适合宝宝幼嫩的消化系统，特别添加有益于智力、视力发育及机体抵抗力的High
+                                    Q+Shield营养组合，满足宝宝智力、视力、免疫系统及身体发育等多方面的营养需求。</p></div>
+                        </div>
+
+                        <!-- 商品特性 -->
+                        <div class="mod_detail_info id_features">
+                            <div class="mod_hd"><h3><span class="tit">商品特性</span>产品描述仅供参考，具体请查看规格参数</h3><i class="line"></i>
+                            </div>
+                            <div class="mod_bd">
+                                <table align="center">
+                                    <tbody>
+                                    <tr>
+                                        <td align="center">
+                                            <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-0.gif"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="http://img2.icson.com/details/29/419/29-419-10696-20121030-6.jpg"/>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- 精美图片 -->
+                        <div class="mod_detail_info id_pic">
+                            <div class="mod_hd"><h3><span class="tit">精美图片</span></h3><i class="line"></i></div>
+                            <div class="mod_bd">
+                                <p style="text-align: center">
+                                    <img alt="" src="http://img2.icson.com/product/mpic/29/419/29-419-10696.jpg"
+                                         style="width: 560px"/>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 相关说明 -->
+                        <div id="id_link" class="mod_detail_info id_link">
+                            <div class="mod_hd"><h3><span class="tit">相关说明</span></h3><i class="line"></i></div>
+                            <div class="mod_bd">
+                                <table align="center" border="0" cellpadding="1" cellspacing="10" class="cssback_table"
+                                       style="border-spacing: 10px" width="750">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <img alt=""
+                                                 src="http://img2.icson.com/details/29/419/29-419-10696-20121030-7.jpg"/>
+                                        </td>
+                                        <td>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            雅培成立于1888年，拥有120多年严谨科学营养史。在全球拥有7000名科学家，坚持科学创新，不断研发科学配比的先进营养系统，赢得了139个国家和地区妈妈的信赖！2010年，雅培公司被《财富》杂志评为制药行业最受尊崇第一名；雅培是美国儿科医生重点推荐品牌，最多医护人员为自己的孩子选用的品牌；雅培的新加坡营养品工厂，获得绿色标准&ldquo;黄金级&rdquo;认证！
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-main intro-main-b" id="c_parameters" style="display: none;"></div>
+                    <div class="intro-main intro-main-c id_warranty" id="c_warranty" style="display: none;"></div>
+                    <div class="intro-main" id="c_packinglist" style="display: none;"></div>
+                    <div class="id_comments" id="c_comment" style="display: none;"><!-- S 商品满意度评分-->
+                        <div class="id_satisfaction clearfix" id="review_brief">
+                        </div>
+                        <div id="review_brief_tpl">
+                            <div class="perf_left">
+                                <div class="satisfaction_point">
+                                    <h3>商品满意度评分</h3>
+
+                                    <p class="point"><strong>{pingfen}</strong>分</p>
+
+                                    <p class="wrap_star"><span class="icon_star"><b
+                                            style="width: {pingfen_rate}%;"></b></span></p>
+
+                                    <p>共{experience_number}位迅友参与评分</p>
+                                </div>
+                            </div>
+                            <div class="perf_center" id="performance_box" style="display:none">
+
+                                <div class="wrap_hd">
+                                    <h3>性能调查</h3>
+                        <span class="intr">
+                            <b></b>
+                            满意
+                        </span>
+                                </div>
+                                <div class="wrap_bd">
+                                    <ul id="performance_list">
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="perf_right">
+                                <div class="satisfaction_tips">
+                                    <p class="tit nor">我在易迅网购买过此商品</p>
+
+                                    <div class="wrap_btn">
+                                        <a ytag="17771" href="http://item.51buy.com/review-toaddexperience-{pid}.html"
+                                           onclick="G.app.itemDetail.review.checkCanAddExperience();return false"
+                                           class="btn_strong">发表体验评论</a>
+                                    </div>
+                                    <p>
+                                        <strong>积分规则：</strong>
+                                    </p>
+
+                                    <p>
+                                        发表评论赠送积分（1积分=0.1元）；精华评论更有
+                                        <span class="strong">额外奖励</span>
+                                        积分；
+                                    </p>
+
+                                    <p>
+                                        前5名评价用户将获得双倍积分。
+                                        <a class="todo_link" href="http://st.51buy.com/help/1-7-terms.htm" target="_blank">详情>></a>
+                                    </p>
+
+                                    <p class="nor">前5位评论用户：<@top_users@>{name}<@_top_users@></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E 商品满意度评分-->
+
+                        <!-- S 迅友评论-->
+                        <div class="mod_comments" id="review_box">
+                            <div class="comments_hd">
+                                <ul class="tab_comments" id="review_header">
+                                    <li t="0"><h3><a ytag="16701" href="#" onclick="return false" hidefocus="hidefocus"
+                                                     hotname="I.ITEM.TAB.REVIEW.1">全部评论</a></h3></li>
+                                    <li t="1"><h3><a ytag="16702" href="#" onclick="return false" hidefocus="hidefocus"
+                                                     hotname="I.ITEM.TAB.REVIEW.2">满意</a></h3></li>
+                                    <li t="2"><h3><a ytag="16703" href="#" onclick="return false" hidefocus="hidefocus"
+                                                     hotname="I.ITEM.TAB.REVIEW.3">一般</a></h3></li>
+                                    <li t="3"><h3><a ytag="16704" href="#" onclick="return false" hidefocus="hidefocus"
+                                                     hotname="I.ITEM.TAB.REVIEW.4">不满意</a></h3></li>
+                                    <li t="4"><h3><a ytag="16705" href="#" onclick="return false" hidefocus="hidefocus"
+                                                     hotname="I.ITEM.TAB.REVIEW.5">讨论</a></h3></li>
+                                </ul>
+                                <div class="more"><a ytag="16700" href="javascript:void(0)"
+                                                     id="post_review"><span>发表商品讨论</span></a></div>
+                            </div>
+                            <div class="comments_bd" id="review_content">
+                                <div class="comment_all">
+                                    <div class="content">
+                                        <ul class="list_comment">
+                                        </ul>
+                                        <div id="review_list_tpl">
+                                            <li>
+                                                <div class="user">
+                                                    <img width="60" height="60"
+                                                         src="http://st.icson.com/static_v1/img/guest/guest{pic_order}_60.gif">
+                                                    <span class="name">{user_name}</span> <span class="level">{user_level_name}</span>
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="title">{type_chn}{stars}<span
+                                                            class="date">{create_time_chn}</span></div>
+                                                    <div class="text">{content}</div>
+                                                    <div class="wrap_btn">
+                                                        <a href="#" class="btn_common" reply="{id}" rtype="{type}"
+                                                           uid="{user_id}" onclick="return false">回复</a>
+                                                        <a href="#" rdown="{id}" onclick="return false">踩({objector})</a>
+                                                        <a href="#" rup="{id}" onclick="return false">顶({supporter})</a>
+                                                    </div>
+                                                    <div class="reply" id="replylist_{type}_{id}" total="{replies_number}"
+                                                         open="0"
+                                                    {attr_addition}>
+                                                    <div class="arrow_top"><i>◆</i></div>
+                                                    <p class="reply_more"{ifkillReplyMore}><a href="#" replylist="{id}"
+                                                                                              rtype="{type}"
+                                                                                              onclick="return false">查看全部{replies_number}条回复&gt;&gt;</a></p>
+                                                    <ul class="list_reply">
+                                                        <li>
+                                                            <div class="reply">
+                                                                <div class="reply_user"><img width="40" height="40"
+                                                                                             src="http://st.icson.com/static_v1/img/guest/guest{pic_order}_40.gif"/>
+                                                                </div>
+                                                                <div class="reply_cont"><p class="reply_text"><strong
+                                                                        class="reply_name">{user_name}回复：</strong>{content}
+                                                                </p>
+
+                                                                    <p class="reply_date">{reply_date_chn}</p>
+                                                                </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                        </li>
+                                    </div>
+                                    <div id="review_reply_list_tpl">
+                                        <li>
+                                            <div class="reply">
+                                                <div class="reply_user"><img width="40" height="40"
+                                                                             src="http://st.icson.com/static_v1/img/guest/guest{pic_order}_40.gif"/>
+                                                </div>
+                                                <div class="reply_cont"><p class="reply_text"><strong class="reply_name">{user_name}回复：</strong>{content}
+                                                </p>
+
+                                                    <p class="reply_date">{reply_date_chn}</p>
+                                                </div>
+                                        </li>
+                                    </div>
+                                    <div class="page_wrap">
+                                        <div class="paginator" id="review_page"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E 迅友评论-->
+                </div>
             </div>
-            <div id="guess_you_like_list" class="bd">
+        </div><!--产品介绍-->
+
+        <div class="mod_aider id_state" id="statement">
+            <div class="hd"><h3>特别声明</h3></div>
+            <div class="bd"><p class="strong state_cont">
+                因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，易迅不能确保客户收到的货物与易迅图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。另外商品的规格参数均以官方网站为准，若官网有误或易迅没有及时更新，请大家谅解！</p>
             </div>
-            <div style="display: none;" id="guess_you_like_list_tpl"><!--
-	<ul class="list_goods list_pic_top"><@list@>
-		<li>
-			<a href="#" target="_blank"> <span class="img"><img src="http://img3.paipaiimg.com/37e6322c/item-0BE63D13-EB43F63200000000006B391905C431A4.0.120x120.jpg" alt="{name}" class=""></span> <span class="link_info"> <strong class="name">{name}</strong><span class="price">易迅价：<span class="strong">&yen;{price_chn}</span></span> </span> </a> </li>
-	<@_list@></ul>
---></div>
+        </div><!--特别声明-->
+
+        <div class="mod_hui">
+            <div class="hd"><h3>浏览过此商品的用户还看了</h3></div>
+            <div class="bd">
+                <ul class="goods_list">
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-421382.html?ls=irr&DAP=6877663239304953216:563798694793576449:421382"
+                                        target="_blank" onclick="logStat.chkItem(1, 421382, 30000, true);"><img
+                            src="http://img1.icson.com/product/pic160/29/395/29-395-10031.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-421382.html?ls=irr&DAP=6877663239304953216:563798694793576449:421382"
+                                target="_blank" onclick="logStat.chkItem(1, 421382, 30000, true);">美素佳儿 3段 金装 900g</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;210.00</span><span class="i_price">&yen;215</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-423663.html?ls=irr&DAP=6877663239304953216:563798694793576449:423663"
+                                        target="_blank" onclick="logStat.chkItem(1, 423663, 30000, true);"><img
+                            src="http://img1.icson.com/product/pic160/29/419/29-419-10699.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-423663.html?ls=irr&DAP=6877663239304953216:563798694793576449:423663"
+                                target="_blank" onclick="logStat.chkItem(1, 423663, 30000, true);">Abbott 雅培
+                            金装幼儿喜康力900g（智护3阶段）</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;184.00</span><span class="i_price">&yen;208</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-423694.html?ls=irr&DAP=6877663239304953216:563798694793576449:423694"
+                                        target="_blank" onclick="logStat.chkItem(1, 423694, 30000, true);"><img
+                            src="http://img2.icson.com/product/pic160/29/419/29-419-10698.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-423694.html?ls=irr&DAP=6877663239304953216:563798694793576449:423694"
+                                target="_blank" onclick="logStat.chkItem(1, 423694, 30000, true);">Abbott 雅培
+                            金装幼儿喜康力400g（智护3阶段）</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;95.00</span><span
+                                class="i_price">&yen;98</span></p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-299542.html?ls=irr&DAP=6877663239304953216:563798694793576449:299542"
+                                        target="_blank" onclick="logStat.chkItem(1, 299542, 30000, true);"><img
+                            src="http://img1.icson.com/product/pic160/30/295/30-295-069.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-299542.html?ls=irr&DAP=6877663239304953216:563798694793576449:299542"
+                                target="_blank" onclick="logStat.chkItem(1, 299542, 30000, true);">日本花王 纸尿裤 L54片</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;169.00</span><span class="i_price">&yen;178</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-421348.html?ls=irr&DAP=6877663239304953216:563798694793576449:421348"
+                                        target="_blank" onclick="logStat.chkItem(1, 421348, 30000, true);"><img
+                            src="http://img2.icson.com/product/pic160/29/394/29-394-10996.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-421348.html?ls=irr&DAP=6877663239304953216:563798694793576449:421348"
+                                target="_blank" onclick="logStat.chkItem(1, 421348, 30000, true);">多美滋 金装 优阶贝护 2段 延续较大婴儿配方奶粉
+                            900g易乐罐</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;223.00</span><span class="i_price">&yen;223</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!-- E 你可能还喜欢-->
-    </div>
 
+        <div class="mod_hui id_also">
+            <div class="hd"><h3>购买过此商品的用户还买了</h3></div>
+            <div class="bd">
+                <ul class="goods_list">
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-412826.html?ls=irr&DAP=6877663239304953216:563798694793576449:412826"
+                                        target="_blank" onclick="logStat.chkItem(1, 412826, 30000, true);"><img
+                            src="http://img1.icson.com/product/pic160/21/136/21-136-11001.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-412826.html?ls=irr&DAP=6877663239304953216:563798694793576449:412826"
+                                target="_blank" onclick="logStat.chkItem(1, 412826, 30000, true);">Apple 苹果 iPhone
+                            5（16G）3G（GSM/WCDMA）手机 黑色 MD297CH/A</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;4988.00</span><span class="i_price">&yen;5288</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-412804.html?ls=irr&DAP=6877663239304953216:563798694793576449:412804"
+                                        target="_blank" onclick="logStat.chkItem(1, 412804, 30000, true);"><img
+                            src="http://img2.icson.com/product/pic160/21/136/21-136-11000.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-412804.html?ls=irr&DAP=6877663239304953216:563798694793576449:412804"
+                                target="_blank" onclick="logStat.chkItem(1, 412804, 30000, true);">Apple 苹果 iPhone
+                            5（16G）3G（GSM/WCDMA）手机 白色 MD298CH/A</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;4999.00</span><span class="i_price">&yen;5288</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-388125.html?ls=irr&DAP=6877663239304953216:563798694793576449:388125"
+                                        target="_blank" onclick="logStat.chkItem(1, 388125, 30000, true);"><img
+                            src="http://img2.icson.com/product/pic160/29/250/29-250-100.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-388125.html?ls=irr&DAP=6877663239304953216:563798694793576449:388125"
+                                target="_blank" onclick="logStat.chkItem(1, 388125, 30000, true);">Pampers 帮宝适
+                            超薄干爽系列电子商务渠道彩箱装 大号164片</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;298.00</span><span class="i_price">&yen;358</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-351335.html?ls=irr&DAP=6877663239304953216:563798694793576449:351335"
+                                        target="_blank" onclick="logStat.chkItem(1, 351335, 30000, true);"><img
+                            src="http://img2.icson.com/product/pic160/29/250/29-250-052.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-351335.html?ls=irr&DAP=6877663239304953216:563798694793576449:351335"
+                                target="_blank" onclick="logStat.chkItem(1, 351335, 30000, true);">Pampers 帮宝适
+                            超薄干爽超大包装大号84片送8片(新兴渠道专供装)</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;168.90</span><span class="i_price">&yen;203</span>
+                        </p>
+                    </li>
+                    <li class="item"><a class="img_wrap"
+                                        href="http://item.51buy.com/item-451625.html?ls=irr&DAP=6877663239304953216:563798694793576449:451625"
+                                        target="_blank" onclick="logStat.chkItem(1, 451625, 30000, true);"><img
+                            src="http://img1.icson.com/product/pic160/21/255/21-255-11123.jpg"></a>
+
+                        <p class="name"><a
+                                href="http://item.51buy.com/item-451625.html?ls=irr&DAP=6877663239304953216:563798694793576449:451625"
+                                target="_blank" onclick="logStat.chkItem(1, 451625, 30000, true);">小米 M1S 3G（GSM/WCDMA）手机
+                            青春版</a></p>
+
+                        <p class="price_wrap"><span class="i_price price_now">&yen;1398.00</span><span class="i_price">&yen;1598</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mod_goods_info asking_box" id="asking_box">
+            <ul class="hd" id="asking_header">
+                <li><h3><a href="#" onclick="return false">全部咨询</a></h3></li>
+                <li><h3><a href="#" onclick="return false">商品咨询</a></h3></li>
+                <li><h3><a href="#" onclick="return false">配送/支付</a></h3></li>
+                <li><h3><a href="#" onclick="return false">发票/保修</a></h3></li>
+            </ul>
+            <div class="bd" id="asking_content">
+                <div class="more"><a href="javascript:void(0)" id="post_asking"><span>发表咨询</span></a></div>
+                <div class="comment_tips">
+                    <p><span class="tit">提示:</span>因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！若由此给您带来不便请多多谅解，谢谢！
+                    </p>
+                </div>
+                <div class="comment_all">
+                    <div class="content">
+                        <ul class="list_comment list_refer">
+                        </ul>
+                        <div class="page_wrap">
+                            <div class="paginator" id="asking_page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--购买咨询-->
+
+        <div id="asking_list_tpl">
+            <li>
+                <div class="user">
+                    <img width="35" height="35" src="http://st.icson.com/static_v1/img/guest/guest{pic_order}_35.gif">
+                    <span class="name">{user_name}</span> <span class="level">{user_level_name}</span>
+                </div>
+                <div class="cont">
+                    <div class="title">{type_chn}{stars}<span class="date">{create_time_chn}</span></div>
+                    <div class="text">{content}</div>
+                    <div class="reply" id="replylist_{type}_{id}">
+                        <p class="reply_more"><a href="#" onclick="return false">查看全部{replies_number}条回复&gt;&gt;</a></p>
+
+                        <div class="arrow_top"><i>◆</i></div>
+                        <ul class="list_reply">
+                            <li>
+                                <div class="reply">
+                                    <div class="reply_cont"><p class="reply_text"><strong
+                                            class="reply_name">{user_name}回复：</strong>{content}</p>
+
+                                        <p class="reply_date">{reply_date_chn}</p>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </div>
+
+        <div class="mod_aider id_youlike" id="guess_you_like">
+            <div class="inner">
+                <div class="hd">
+                    <h3>你可能还喜欢</h3>
+                </div>
+                <div class="bd" id="guess_you_like_list">
+                </div>
+                <div id="guess_you_like_list_tpl">
+                    <ul class="list_goods list_pic_top">
+                        <li>
+                            <a href="#" target="_blank"> <span class="img"><img
+                                    src="http://img3.paipaiimg.com/37e6322c/item-0BE63D13-EB43F63200000000006B391905C431A4.0.120x120.jpg"
+                                    alt="{name}" class=""></span> <span class="link_info"> <strong
+                                    class="name">{name}</strong><span class="price">易迅价：<span
+                                    class="strong">&yen;{price_chn}</span></span> </span> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--你可能还喜欢-->
+    </div>
     <div class="sidebar">
-        <div style="" id="c3id_same" class="mod_aider id_same_goods">
+        <div class="mod_aider id_same_goods" id="c3id_same">
             <div class="inner">
                 <div class="hd">
                     <h3>相关分类</h3>
                 </div>
                 <div class="bd">
-                    <ul class="list_sort_txt">
-                        <li><a target="_blank" href="">婴幼儿营养品</a></li>
-                        <li><a target="_blank" href="">奶粉</a></li>
-                        <li><a target="_blank" href="">辅食</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
 
-        <div style="display: none;" id="cmd_manu" class="mod_aider id_same_pingpai">
+        <div class="mod_aider id_same_pingpai" id="cmd_manu">
             <div class="inner">
                 <div class="hd">
                     <h3>同类品牌</h3>
@@ -1658,12 +1704,28 @@
                 <div class="hd">
                     <h3>最近浏览过的</h3>
                 </div>
-                <div id="visitList" class="bd"></div>
+                <div class="bd" id="visitList"></div>
             </div>
         </div>
-    </div>
-</div>
 
+        <div id="visitList_tpl">
+            <ul class="list_goods list_pic_left">
+                <li>
+                    <a href="" target="_blank" class="img">
+                        <img src="{picurl}" alt="" class="">
+                    </a>
+                <span class="link_info">
+                    <a href="" target="_blank">
+                        <strong class="name">{name}</strong>
+                    </a>
+                    <span class="price strong"> &yen;{price} </span>
+                </span>
+                </li>
+            </ul>
+            <div class="clear_jilu"><a href="#" onclick="return false" t="clearHistory">清除浏览历史</a></p></div>
+        </div>
+
+    </div>
 </div><!--wrapper end-->
 
 <div class="wrapper clearfix txtlink-mod">
