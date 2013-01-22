@@ -112,7 +112,6 @@
     <div class="hd"><span class="sign-redemption"></span>您还可以换购以下商品呦</div>
     <div class="bd" id="promotionredemption">
 
-
         <script id="PromotionSingleRedemptionTemplate" type="text/x-handlebars-template">
             <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg"
                                             alt="{{promotionname}}" width="60px" height="60px"/></a></dt>
@@ -127,7 +126,8 @@
 
             <div class="pop-win w1000 goods-list" id="exchangebox">
                 <div class="hd">
-                    <h3>{{promotionname}}</h3>
+                    <h3 class="fl">{{promotionname}}</h3>
+                    <span id="redemption_tips" class="col-tips">购物车里的金额不满足换购条件</span>
                     <a class="close-win" id="btn_redemptionClose" href="javascript:void(0);">关闭</a>
                 </div>
             </div>

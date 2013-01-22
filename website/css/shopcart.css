@@ -10,7 +10,6 @@ strong {font-weight: 700;}
 .pop-win .hd {height: 30px; line-height: 30px; font-family: "macrosoft yahei"; background: url("../images/logindl_bg.gif") repeat-x scroll 0 -159px transparent;}
 .close-win {width: 24px; height: 24px; position: absolute; right: 10px; top: 3px; text-indent: -999em; overflow: hidden; background: url(../images/logindl_bg.gif) no-repeat 0 -30px;}
 .w1000 {width: 1000px; margin-left: -508px;}
-
 /**购物流程**/
 /*新的*/
 .flow-step {float: right; margin-top: 15px; height: 32px; line-height: 32px;}
@@ -47,9 +46,11 @@ strong {font-weight: 700;}
 .cart-body .wrap-input .reduce {margin-left: 0;}
 .cart-empty {border-bottom: 1px solid #f4f4f4; padding:10px 0; text-align: center; font-size: 14px; background-color: #fff; line-height: 30px;}
 /**提示**/
-.col-tips {position: absolute; top: 26px; left: 20px; width: 72px; padding: 2px; text-align: center; border: 1px solid #f90; color: #e60; background-color: #ffedb5;}
+.col-tips {position: absolute; top: 26px; left: 20px; padding: 2px 5px; text-align: center; border: 1px solid #f90; color: #e60; background-color: #ffedb5;}
+.col-number .col-tips {width:66px;}
 .col-operation .col-tips {left: 0; top: 0; padding: 5px; width: 112px; text-align: left; border: 1px solid #bababa; color: #4d4d4d; background-color: #fff;}
 .col-operation .col-tips .btn_s_o {margin-right: 5px;}
+.pop-win .col-tips {position:relative; float:left; top:0; height:24px; line-height: 24px; font-weight: 400;}
 
 /**优惠商品模块**/
 /*赠品换购*/
