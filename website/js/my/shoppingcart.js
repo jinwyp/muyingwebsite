@@ -823,6 +823,7 @@ head.ready(function () {
                 app.co.plist.add(app.m.product7);
                 app.co.manjianlist.add(app.m.promotionmanjian3);
                 app.v.manjianlist = new app.view.cartManjianList({ collection: app.co.manjianlist, el: $('#allist') });
+                app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
 
             }else if( this.model.get("couponname") == 2 ){
                 //赠品
@@ -841,7 +842,7 @@ head.ready(function () {
                 $("#couponTips").fadeIn();
             }
 
-            app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
+
 
         },
 
@@ -849,6 +850,7 @@ head.ready(function () {
             e.preventDefault();
             this.$el.find("#couponBox").hide(300);
             $("#cover-bg").fadeOut();
+
         },
         showBox: function(){
             if(!$("#cover-bg").length){
