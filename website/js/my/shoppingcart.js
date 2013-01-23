@@ -787,8 +787,6 @@ head.ready(function () {
                     }
                 );
             }
-
-
         }
     });
 
@@ -842,15 +840,12 @@ head.ready(function () {
                 $("#couponTips").fadeIn();
             }
 
-
-
         },
 
         hideBox: function(e){
             e.preventDefault();
             this.$el.find("#couponBox").hide(300);
             $("#cover-bg").fadeOut();
-
         },
         showBox: function(){
             if(!$("#cover-bg").length){
