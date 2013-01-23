@@ -1008,7 +1008,7 @@ function stickFooter(){
     $(window).scroll(stickrull);
 
     function stickrull(){
-        if($(document).scrollTop() + $(window).height() < Top){
+        if($(document).scrollTop() + $(window).height() - floatMain.height() < Top){
             if(floatStyle==true){return false}
             if(!isIE6){
                 floatMain.css({
