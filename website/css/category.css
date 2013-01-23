@@ -309,23 +309,23 @@
 .select_area .storage_list .tip {color: #999;}
 .group .item_tuan .t {font-weight: bold; *word-spacing: -0.3em;}
 .group .time .strong {padding: 0 3px; font-size: 16px; font-weight: bold; zoom: 1;}
-.group .buyinfo .wrap_btn .btn_cart {background: url(../../img/icson/group_bg.png) no-repeat 0 -109px;}
-.group .buyinfo .wrap_btn .btn_cart:hover {background-position: 0 -150px;}
-.group .buyinfo .wrap_btn .not_cart {background-position: 0 -191px;}
-.group .buyinfo .wrap_btn .not_cart:hover {background-position: 0 -232px;}
+
+
 .property .buyinfo {margin-top: 6px; background: #f3f3f3; zoom: 1;}
-.property .buyinfo .wrap_btn {color: #cdcdcd; position: relative;}
-.property .buyinfo .wrap_btn .check_notice {vertical-align: top; display: inline-block; font: bold 12px/24px Arial; height: 24px;}
+
 .property .buyinfo .t {color: #616161;}
 .property .buyinfo li.color .t {margin-top: 14px;}
 .property .buyinfo li.norm .t {margin-top: 3px;}
 .property .buyinfo li.amount .t {margin-top: 1px; *margin-top: 3px;}
-.property .buyinfo .btn_cart, .property .buyinfo .btn_notice {display: inline-block; margin-right: 7px; width: 122px; height: 36px; font: bold 16px/36px Microsoft YaHei, arial; text-align: center; font-weight: bold; color: #fff !important;}
-.property .buyinfo .btn_cart {line-height: 100px; overflow: hidden; background: url(../../img/btn_buy.png) no-repeat 0 0; vertical-align: middle;}
-.property .buyinfo .btn_cart:hover {background-position: 0 -41px;}
+
+.icon-cart,.icon-favi {float:left; background: url(../images/category/icon_detail.png) no-repeat;}
+.icon-cart {width:38px; height:38px; background-position: 0 0; }
+.icon-favi {width:20px; height:28px; background-position: 0 -38px;}
+.wrap-btn .btn_b_r {margin-right:20px;}
+
 .property .buyinfo .btn_notice {line-height: 100px; overflow: hidden; background: url(../../img/btn_buy.png) no-repeat -127px 0; vertical-align: middle;}
 .property .buyinfo .btn_notice:hover {background-position: -127px -41px;}
-.property .buyinfo .btn_cart b, .property .buyinfo .btn_notice b {display: none;}
+
 .property .buyinfo .not_sale, .property .buyinfo .not_sale:hover {background-position: -347px top;}
 .property .buyinfo .not_cart, .property .buyinfo .not_cart:hover {background-position: -347px -41px;}
 .property .buyinfo .not_only {background-position: -471px top;}
@@ -388,20 +388,17 @@
 .property .buyway li .way0, .property .buyway li .way1 {width: 16px; height: 16px; background-position: -46px -44px;}
 .property .buyway li .way1 {background-position: -69px -44px;}
 .property .buyway li a:hover, .property .buyway li.status_on a {border-color: #317ee7; text-decoration: none;}
-.mod_share {background: #fff; border: 1px solid #A1C4EE; position: absolute; top: 38px; right: 0; width: 290px; z-index: 2; box-shadow: 0px 0px 5px #AAA;}
+/*收藏分享*/
+.mod_share {background: #fff; border: 1px solid #bababa; position: absolute; top: 38px; left: 0; width: 290px; z-index: 2; box-shadow: 0 0 5px #878787;}
 .mod_share .icon_jian {background: url(../../img/detail_dot.png) no-repeat -74px 0; width: 11px; height: 6px; position: absolute; top: -6px; right: 26px; display: block; *font-size: 0;}
-.mod_share .hd {padding: 8px; padding-bottom: 0;}
+.mod_share .hd {display: none;}
 .mod_share .bd {padding: 8px; color: #333333;}
 .mod_share .list_share {overflow: hidden; zoom: 1;}
 .mod_share .list_share li {float: left; width: 82px; margin: 0 5px 5px 0; line-height: 18px; height: 18px;}
 .mod_share .list_share li a {color: #333333;}
 .mod_share .list_share b {background: url(/static_v1/img/logo_all.png) no-repeat; width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 3px;}
-.mod_share .list_share .logo_renren {background-position: 0 -60px;}
-.mod_share .list_share .logo_qzone {background-position: 0 -90px;}
-.mod_share .list_share .logo_kaixin {background-position: 0 -120px;}
-.mod_share .list_share .logo_tx_weibo {background-position: 0 -150px;}
-.mod_share .list_share .logo_sina_weibo {background-position: 0 -180px;}
-.mod_faver {position: absolute; top: 0; right: 0px; padding-right: 22px; z-index: 5;}
+
+.mod_faver {position: relative;  padding-right: 22px; z-index: 5;}
 .mod_faver .share {padding-left: 15px;}
 .mod_faver .mod_share {top: 25px;}
 .id_stage {left: 60px; width: 500px; color: #999;}
