@@ -86,7 +86,8 @@
 
             <div class="pop-win w1000 goods-list" id="giftbox">
                 <div class="hd">
-                    <h3>{{promotionname}}</h3>
+                    <h3 class="fl">{{promotionname}}</h3>
+                    <span id="freegift_tips" class="col-tips">您还没有满足该活动的领取条件</span>
                     <a class="close-win" id="btn_giftClose" href="javascript:void(0);">关闭</a>
                 </div>
             </div>
@@ -118,8 +119,7 @@
             <dd>
                 <p class="name"><a href="" title="{{promotionname}}">{{promotionname}}</a></p>
 
-                <p id="redemptionSelect"><span class="btn_s btn_s_o"><a href="#"
-                                                                        id="btn_redemptionSelect">查看换购</a></span></p>
+                <p id="redemptionSelect"><span class="btn_s btn_s_o"><a href="#" id="btn_redemptionSelect">查看换购</a></span></p>
 
                 <p id="redemptionSoldout" class="hide"><span class="btn_s btn_s_g"><a href="#">已领完</a></span></p>
             </dd>
@@ -127,7 +127,7 @@
             <div class="pop-win w1000 goods-list" id="exchangebox">
                 <div class="hd">
                     <h3 class="fl">{{promotionname}}</h3>
-                    <span id="redemption_tips" class="col-tips">购物车里的金额不满足换购条件</span>
+                    <span id="redemption_tips" class="col-tips">您还没有满足该活动的换购条件</span>
                     <a class="close-win" id="btn_redemptionClose" href="javascript:void(0);">关闭</a>
                 </div>
             </div>
@@ -269,10 +269,18 @@
         </ul>
             <div id="cart-total">
                 <div class="cart-total"  >
-                    <div class="coupon">
-                        <p class="fl"><span>输入优惠码享受优惠：</span><input id="j_coupon" type="text" value="" class="text-input" size="24" /><span class="btn_s btn_s_o"><a href="javascript:;" id="btn_coupon">确认使用</a></span></p>
-                        <p id="couponTips" class="col-tips hide fl">此优惠码已被使用过</p>
+                    <div class="coupon" id="couponCodeBox">
+                        <p class="fl"><span>输入优惠码享受优惠：</span>
+                            <input id="j_coupon" type="text" name="couponname" class="text-input" size="24" />
+                            <span class="btn_s btn_s_o"><a href="javascript:;" id="btn_coupon">确认使用</a></span></p>
+                        <p id="couponTips" class="col-tips hide fl">此优惠码已被使用过 / 此优惠码已过期 / 未满足 XXXX活动条件</p>
+
+                        <div id="couponBox" class="pop-win w1000 goods-list">
+
+                        </div>
                     </div>
+
+
                     <div class="total clearfix">
                         <p class="item"><span>可获幸运星：</span><span class="lucky-star" name="carttotallucky">2310</span></p>
                         <p class="item"><span>商品总数：</span><span class="total-number" name="carttotalquantity"></span><span>件</span></p>
@@ -289,7 +297,7 @@
                         </span>
                     <span class="btn_b btn_b_r mr10 fr"><a href="" id="settleAccounts" style="padding:0 15px 0 10px">确认结算</a></span>
                     <span class="btn_b btn_b_r fr mr10 hide" style="display:none;"><a href="" style="padding:0 15px 0 10px">&laquo; 继续购物</a></span>
-                    <p class="all fr mr10"><span class="noFreight">不包含运费</span><span class="total-price">商品总金额：<strong id="totalPrice" class="num" name="carttotalfinalprice">&yen;</strong></span></p>
+                    <p class="all fr mr10"><span class="noFreight">不包含运费</span><span class="total-price">商品总金额：<strong id="totalPrice" class="num" name="carttotalfinalpricetext">&yen;</strong></span></p>
                 </div>
             </div>
 
@@ -363,38 +371,7 @@
 </div>
 </div>
 
-<div id="couponBox" class="pop-win w1000 goods-list">
-    <div class="hd">
-        <h3>您的优惠码可参加以下活动</h3>
-        <a class="close-win" onclick="" href="javascript:void(0);">关闭</a>
-    </div>
-    <div class="bd">
-        <dl>
-            <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg"
-                                            alt="贝亲孕产妇漱口液300ml" width="60px" height="60px"/></a></dt>
-            <dd>
-                <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
 
-                <p class="price">
-                    <del>&yen;35.00</del>
-                    <span class="now">&yen;21.00</span></p>
-                <p><span class="btn_s btn_s_o"><a href="">参加活动</a></span></p>
-            </dd>
-        </dl>
-        <dl>
-            <dt><a href="" class="img"><img src="http://img.muyingzhijia.com/product/normal/12792_01_01.jpg"
-                                            alt="贝亲孕产妇漱口液300ml" width="60px" height="60px"/></a></dt>
-            <dd>
-                <a href="" title="贝亲孕产妇漱口液300ml">贝亲孕产妇漱口液300ml</a>
-
-                <p class="price">
-                    <del>&yen;35.00</del>
-                    <span class="now">&yen;21.00</span></p>
-                <p><span class="btn_s btn_s_o"><a href="">参加活动</a></span></p>
-            </dd>
-        </dl>
-    </div>
-</div>
 <!--wrapper end-->
 
 
@@ -480,7 +457,7 @@
             "js/underscore-1.4.3.min.js ",
             "js/backbone-0.9.9.min.js",
             "js/backbone_modelbinder-0.1.6.min.js",
-            "js/backbone-validation-0.7.0.min.js",
+            //"js/backbone-validation-0.7.0.min.js",
             "js/handlebars-rc1.min.js",
             "js/my/shoppingcartmodel.js",
             "js/my/shoppingcart.js"
@@ -488,13 +465,7 @@
 </script>
 <script type="text/javascript">
     head.ready(function () {
-        $("#btn_coupon").click(function () {
-            $("#couponTips").fadeIn()
-        });
-        $("#btn_coupon").click(function () {
-            $("#couponBox").show();
 
-        })
     });
 
 </script>
