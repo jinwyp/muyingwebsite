@@ -84,7 +84,7 @@ input {border: 0 none; vertical-align: middle;}
 .toolbar .toolbar-nav .login {color: #ff7800;}
 .toolbar .toolbar-nav .my-title {padding-right: 10px;height: 30px; background: url("../images/icon_mytool.gif") no-repeat right 0;}
 .toolbar .toolbar-nav .my-content {position: absolute; right: 0; top: 20px; padding: 5px; border: #ddd 1px solid; width: 80px; background-color: #fff; text-align: center; z-index: 11;}
-.toolbar .toolbar-nav .my-content li {margin-left: 0; display: block;}
+.toolbar .toolbar-nav .my-content li {float:none; margin-left: 0; display: block;}
 .toolbar .toolbar-nav .my-content li a {padding-right: 0;}
 
 /*header*/
