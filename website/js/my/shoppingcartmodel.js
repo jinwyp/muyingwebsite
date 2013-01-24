@@ -29,7 +29,7 @@ head.ready(function () {
             normalprice : 138,
             promotionprice : 0,
             productfinalprice : 0,
-            productstock : 6,
+            productstock : 8,
             productquantity : 1,
             productweight : 0,
 
@@ -311,6 +311,23 @@ head.ready(function () {
 
 
 
+    /* Model 购物车信息总和信息模型  */
+    app.model.PromotionCoupon = Backbone.Model.extend({
+        defaults : {
+            couponid : 0,  //商品总数量
+            couponname : 0,  //商品总重量
+            coupontype : 0,  //是满减 赠品 还是换购
+            couponpromotionid : 0  //对应满减1 / 赠品2 / 换购3 活动ID
+        },
+
+        initialize: function() {
+
+            this.set("carttotalfinalprice", (this.get("carttotalprice") - this.get("carttotaldiscount"))  );
+        }
+
+
+    });
+
 
     /* Model 购物车信息总和信息模型  */
     app.model.CartTotal = Backbone.Model.extend({
@@ -320,6 +337,7 @@ head.ready(function () {
             carttotalprice : 0,  //原始总金额
             carttotaldiscount : 0,  //优惠总金额
             carttotalfinalprice : 0,  //最终金额
+            carttotalfinalpricetext : 0,  //最终金额
             carttotallucky : 0  //总幸运星
         },
 
@@ -346,7 +364,8 @@ head.ready(function () {
             this.set("carttotaldiscount", totaldiscount.toFixed(2)  );
 
             var finaltotalprice = this.get("carttotalprice") - this.get("carttotaldiscount");
-            this.set("carttotalfinalprice", finaltotalprice.toFixed(2) );
+            this.set("carttotalfinalprice", finaltotalprice );
+            this.set("carttotalfinalpricetext", finaltotalprice.toFixed(2) );
 
         }
     });

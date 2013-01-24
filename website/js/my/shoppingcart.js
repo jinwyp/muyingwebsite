@@ -375,7 +375,7 @@ head.ready(function () {
             app.v.combo1 = new app.view.cartCombo({ model: combo });
             this.$el.append(app.v.combo1.el);
             
-        },
+        }
 
     });
 
@@ -526,11 +526,10 @@ head.ready(function () {
         },
 
         render: function(){
-
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
-
-            this.hideBox2();
+            this.hideBox2(); //如果没有任何赠品就要隐藏标题
+            this.$el.find("#freegift_tips").hide(); //默认隐藏满足条件的提示
             this.giftproductlist.each(this.showProduct, this);
         },
 
@@ -540,6 +539,8 @@ head.ready(function () {
         },
 
         showProduct: function(product){
+            product.set("productpromotiongiftnumber", this.model.get('promotiongiftcondition'));
+
             app.v.product = new app.view.cartTopGiftProduct({ model: product });
             this.$el.find("#giftbox").append(app.v.product.el);
         },
@@ -604,18 +605,23 @@ head.ready(function () {
         addGift: function(e){
             e.preventDefault();
 
-            app.m.tempproduct =  this.model.clone(); //添加的赠品消失,并出现在购物车里面
-            app.m.tempproduct.set("productfinalprice",0); //赠品数量为1,价格为0
-            
-            var that = this;
-            this.$el.fadeOut(function(){
-                    that.model.destroy();
-                    $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
-                    // app.v.cartgiftlist.render(); //渲染购物车的赠品商品
-                    app.co.giftaddedproductlist.add(app.m.tempproduct);
-                    app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
-                }
-            );
+            if(this.model.get("productpromotiongiftnumber") > app.m.carttotal.get("carttotalfinalprice") ){
+                this.$el.parent().find("#freegift_tips").fadeIn().delay(1500).fadeOut();
+            }else{
+                app.m.tempproduct =  this.model.clone(); //添加的赠品消失,并出现在购物车里面
+                app.m.tempproduct.set("productfinalprice",0); //赠品数量为1,价格为0
+
+                var that = this;
+                this.$el.fadeOut(function(){
+                        that.model.destroy();
+                        $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
+                        // app.v.cartgiftlist.render(); //渲染购物车的赠品商品
+                        app.co.giftaddedproductlist.add(app.m.tempproduct);
+                        app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
+                    }
+                );
+            }
+
         }
     });
 
@@ -687,10 +693,10 @@ head.ready(function () {
         },
 
         render: function(){
-
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp( this.model.toJSON()) );
             this.hideBox2();
+            this.$el.find("#redemption_tips").hide(); //默认隐藏满足条件的提示
             this.exchangeproductlist.each(this.showProduct, this);
         },
 
@@ -701,6 +707,8 @@ head.ready(function () {
 
         showProduct: function(product){
             product.set("productexchangeprice", this.model.get('promotionexchangeprice'));
+            product.set("productpromotionexchangenumber", this.model.get('promotionexchangecondition'));
+
             app.v.product = new app.view.cartTopExchangeProduct({ model: product });
             this.$el.find("#exchangebox").append(app.v.product.el);
         },
@@ -763,22 +771,96 @@ head.ready(function () {
         addRedemption: function(e){
             e.preventDefault();
 
-            app.m.tempproduct =  this.model.clone(); //添加的换购消失,并出现在购物车里面
-            app.m.tempproduct.set("productfinalprice", this.model.get("productexchangeprice")); //换购数量为1,价格为换购价格
-            
-            var that = this;
-            this.$el.fadeOut(function(){
-                    that.model.destroy();
-                    $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
-                    // app.v.cartexchangelist.render(); //渲染购物车的换购商品
-                    app.co.exchangeaddedproductlist.add(app.m.tempproduct);
-                    app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
-                }
-            );
+            if(this.model.get("productpromotionexchangenumber") > app.m.carttotal.get("carttotalfinalprice") ){
+                this.$el.parent().find("#redemption_tips").fadeIn().delay(1500).fadeOut();
+            }else{
+                app.m.tempproduct =  this.model.clone(); //添加的换购消失,并出现在购物车里面
+                app.m.tempproduct.set("productfinalprice", this.model.get("productexchangeprice")); //换购数量为1,价格为换购价格
+
+                var that = this;
+                this.$el.fadeOut(function(){
+                        that.model.destroy();
+                        $("#cartEmpty").hide(); // 隐藏购物车没有商品的提示
+                        // app.v.cartexchangelist.render(); //渲染购物车的换购商品
+                        app.co.exchangeaddedproductlist.add(app.m.tempproduct);
+                        app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
+                    }
+                );
+            }
         }
     });
 
 
+
+
+    /* View 优惠码功能  */
+    app.view.cartCouponCode = Backbone.View.extend({
+
+        initialize: function(){
+            // 判断优惠码是满减 / 赠品 / 换购
+            this._modelBinder = new Backbone.ModelBinder();
+            this.render();
+        },
+
+        render: function(){
+            this._modelBinder.bind(this.model, this.el);
+        },
+
+        events: {
+            "click #btn_coupon": "submitCoupon",
+            "click .close-win": "hideBox"
+        },
+
+        submitCoupon: function(e){
+            e.preventDefault();
+            $("#couponTips").hide();
+            // 判断优惠码是满减 / 赠品 / 换购
+            console.log(this.model.get("couponname"));
+            if( this.model.get("couponname") == 1  ){
+                //满减
+                app.co.plist.add(app.m.product7);
+                app.co.manjianlist.add(app.m.promotionmanjian3);
+                app.v.manjianlist = new app.view.cartManjianList({ collection: app.co.manjianlist, el: $('#allist') });
+                app.m.carttotal.countTotal(app.co.plist, app.co.giftaddedproductlist, app.co.exchangeaddedproductlist, app.co.manjianlist, app.co.combototallist); // 计算全部总价
+
+            }else if( this.model.get("couponname") == 2 ){
+                //赠品
+                //要通过优惠码找出对应的赠品活动 此处省略 使用 app.m.promotiongift1 代替
+                app.v.gift1 = new app.view.cartTopGift({ model: app.m.promotiongift1 });
+                this.$el.find("#couponBox").html($(app.v.gift1.el).find('#giftbox').children());
+                this.showBox();
+
+            }else if( this.model.get("couponname") == 3 ){
+                //换购
+                //要通过优惠码找出对应的换购活动 此处省略 使用 app.m.promotionexchange1 代替
+                app.v.exchange1 = new app.view.cartTopExchange({ model: app.m.promotionexchange1 });
+                this.$el.find("#couponBox").html($(app.v.exchange1.el).find('#exchangebox').children());
+                this.showBox();
+            }else{
+                $("#couponTips").fadeIn();
+            }
+
+        },
+
+        hideBox: function(e){
+            e.preventDefault();
+            this.$el.find("#couponBox").hide(300);
+            $("#cover-bg").fadeOut();
+        },
+        showBox: function(){
+            if(!$("#cover-bg").length){
+                $("<div id='cover-bg'></div>")
+                    .css({width:$(window).width(), height:$(document).height(), opacity:0.6, "z-index":"998", position:"absolute", background:"#333", top:0, left:0,display:"none"})
+                    .appendTo("body")
+            }
+            $("#cover-bg").fadeIn(200);
+            var giftbox = this.$el.find("#couponBox");
+            giftbox.css({
+                "margin-left":-giftbox.width()/2,
+                top:($(window).height()-giftbox.height())/2
+            }).show(200);
+        }
+    });
 
 
 
@@ -843,6 +925,7 @@ head.ready(function () {
     app.m.product4 = new app.model.Product({productid:10, productname: "满减1贝亲321231232123123212312", normalprice: 20, promotionprice:20,  productluckynumber:10, productpromotionmanjian : 11534});
     app.m.product5 = new app.model.Product({productid:10, productname: "满减2贝亲婴儿柔湿巾", normalprice: 20, promotionprice:10,  productluckynumber:10, productpromotionmanjian : 11532});
     app.m.product6 = new app.model.Product({productid:10, productname: "满减2贝亲321231232123123212312", normalprice: 20, promotionprice:10,  productluckynumber:10, productpromotionmanjian : 11532});
+    app.m.product7 = new app.model.Product({productid:10, productname: "满减3贝亲321231", normalprice: 20, promotionprice:10,  productluckynumber:10, productpromotionmanjian : 11536});
 
     app.co.plist = new app.collection.Productlist();
     app.co.productdeletelist = new app.collection.Productlist();  //被删除的列表
@@ -853,6 +936,7 @@ head.ready(function () {
     app.co.plist.add(app.m.product4);
     app.co.plist.add(app.m.product5);
     app.co.plist.add(app.m.product6);
+
 
     app.v.plist = new app.view.cartProductList({ collection: app.co.plist, el: $('#normalproductList') });
 
@@ -875,7 +959,7 @@ head.ready(function () {
     app.co.comboproductlist.add(app.m.product12);
 
     app.m.combo1 = new app.model.PromotionCombo({comboid: 14400, comboproductid: 100, comboproductid1:101, comboproductprice1: 86 , comboproductid2:102, comboproductprice2: 87 });
-    app.m.combo2 = new app.model.PromotionCombo({comboid: 14500, comboproductid: 101, comboproductid1:100, comboproductprice1: 50 ,  });
+    app.m.combo2 = new app.model.PromotionCombo({comboid: 14500, comboproductid: 101, comboproductid1:100, comboproductprice1: 50   });
 
     app.co.combolist = new app.collection.PromotionComboList();
     app.co.combolist.add(app.m.combo1);
@@ -888,6 +972,7 @@ head.ready(function () {
 // 开始满减商品部分
     app.m.promotionmanjian1 = new app.model.PromotionManjian({promotionid:11534, promotionname: "全场纸尿裤100立减20", promotionmanjiandiscount1:20, promotionmanjiancondition1: 100, promotionmanjiandiscount2:40, promotionmanjiancondition2: 150});
     app.m.promotionmanjian2 = new app.model.PromotionManjian({promotionid: 11532, promotionname: "2013健康领跑 优你钙 满99元减20元", promotionmanjiandiscount1:20, promotionmanjiancondition1: 99, promotionmanjiandiscount2:40, promotionmanjiancondition2: 300});
+    app.m.promotionmanjian3 = new app.model.PromotionManjian({promotionid: 11536, promotionname: "2013健康领跑 满69元减20元", promotionmanjiandiscount1:20, promotionmanjiancondition1: 69, promotionmanjiandiscount2:40, promotionmanjiancondition2: 300});
 
     app.co.manjianlist = new app.collection.PromotionManjianList();
 
@@ -899,8 +984,8 @@ head.ready(function () {
 
 
 // 开始赠品活动部分
-    app.m.promotiongift1 = new app.model.PromotionGift({promotionid:11582, promotionname: "宝得适&西班牙Jane 买就送 儿童炫酷电动车", promotiongiftcondition1:60, promotiongiftcondition2: 100});
-    app.m.promotiongift2 = new app.model.PromotionGift({promotionid: 11581, promotionname: "益力健 满58元 送 价值20元靠堑 或 价值20元儿童护耳帽", promotiongiftcondition1:100, promotiongiftcondition2: 150});
+    app.m.promotiongift1 = new app.model.PromotionGift({promotionid:11582, promotionname: "宝得适&西班牙Jane 买就送 儿童炫酷电动车", promotiongiftcondition1:0, promotiongiftcondition2: 100});
+    app.m.promotiongift2 = new app.model.PromotionGift({promotionid: 11581, promotionname: "益力健 满58元 送 价值20元靠堑 或 价值20元儿童护耳帽", promotiongiftcondition1:58, promotiongiftcondition2: 150});
 
     app.co.giftlist = new app.collection.PromotionGiftList();  //赠品促销列表
 
@@ -935,12 +1020,11 @@ head.ready(function () {
 
 
 // 开始换购活动部分
-    app.m.promotionexchange1 = new app.model.PromotionExchange({promotionid:11592, promotionname: "周三全场买满358元加1元换购以下任一商品，换完为止。", promotiongiftcondition1:358, promotionexchangeprice1:1, promotiongiftcondition2: 458});
-    app.m.promotionexchange2 = new app.model.PromotionExchange({promotionid:11583, promotionname: "宝得适&西班牙Jane 买任意商品+50元超值换购", promotiongiftcondition1:100, promotionexchangeprice1:50, promotiongiftcondition2: 150});
-    app.m.promotionexchange3 = new app.model.PromotionExchange({promotionid:11498, promotionname: "周三全场买满358元加1元换购以下任一商品，换完为止。", promotiongiftcondition1:358, promotionexchangeprice1:1, promotiongiftcondition2: 458});
-    app.m.promotionexchange4 = new app.model.PromotionExchange({promotionid:11458, promotionname: "好奇指定纸尿裤 购买即可18元换购 好奇清爽洁净婴儿柔湿巾80抽补充装", promotiongiftcondition1:0, promotionexchangeprice1:18, promotiongiftcondition2: 150});
-    app.m.promotionexchange5 = new app.model.PromotionExchange({promotionid:11457, promotionname: "帮宝适指定纸尿裤 购买即可18元换购 帮宝适柔润护肤系列护儿湿巾56片装一包", promotiongiftcondition1:0, promotionexchangeprice1:18, promotiongiftcondition2: 458});
-    app.m.promotionexchange6 = new app.model.PromotionExchange({promotionid:11387, promotionname: "宝宝服饰 全场满99元+39元 换购价值99元 迪士尼鞋一双", promotiongiftcondition1:99, promotionexchangeprice1:39, promotiongiftcondition2: 150});
+    app.m.promotionexchange1 = new app.model.PromotionExchange({promotionid:11592, promotionname: "周三全场买满358元加1元换购以下任一商品，换完为止。", promotionexchangecondition1:358, promotionexchangeprice1:1, promotiongiftcondition2: 458});
+    app.m.promotionexchange2 = new app.model.PromotionExchange({promotionid:11583, promotionname: "宝得适&西班牙Jane 买任意商品+50元超值换购", promotionexchangecondition1:100, promotionexchangeprice1:50, promotiongiftcondition2: 150});
+    app.m.promotionexchange3 = new app.model.PromotionExchange({promotionid:11498, promotionname: "周三全场买满358元加1元换购以下任一商品，换完为止。", promotionexchangecondition1:358, promotionexchangeprice1:1, promotiongiftcondition2: 458});
+    app.m.promotionexchange4 = new app.model.PromotionExchange({promotionid:11458, promotionname: "好奇指定纸尿裤 购买即可18元换购 好奇清爽洁净婴儿柔湿巾80抽补充装", promotionexchangecondition1:0, promotionexchangeprice1:18, promotiongiftcondition2: 150});
+    app.m.promotionexchange5 = new app.model.PromotionExchange({promotionid:11457, promotionname: "帮宝适指定纸尿裤 购买即可18元换购 帮宝适柔润护肤系列护儿湿巾56片装一包", promotionexchangecondition1:0, promotionexchangeprice1:18, promotiongiftcondition2: 458});
 
     app.co.exchangelist = new app.collection.PromotionExchangeList();  //换购促销列表
 
@@ -986,6 +1070,9 @@ head.ready(function () {
 
 
     // 开始商品总金额部分
+    app.m.cartcouponcode = new app.model.PromotionCoupon({ couponid: 20, coupontype:2, couponpromotionid:11582 });
+    app.v.cartcouponcode = new app.view.cartCouponCode({ model: app.m.cartcouponcode, el: $('#couponCodeBox') });
+
     app.m.carttotal = new app.model.CartTotal();
     app.v.carttotal = new app.view.cartTotal({ model: app.m.carttotal, el: $('#cart-total') });
 
@@ -1008,7 +1095,7 @@ function stickFooter(){
     $(window).scroll(stickrull);
 
     function stickrull(){
-        if($(document).scrollTop() + $(window).height() < Top){
+        if($(document).scrollTop() + $(window).height() - floatMain.height() < Top){
             if(floatStyle==true){return false}
             if(!isIE6){
                 floatMain.css({

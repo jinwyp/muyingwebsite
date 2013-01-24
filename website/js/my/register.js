@@ -523,6 +523,38 @@ $(function(){
         })
         .passwordValidator({
             compareID:"new-password-conf"
+        }).functionValidator({
+            fun:function(val){
+                if(isContinuousChar(val)||isSameChar(val)){
+                    $("#new-password-conf").attr("disabled","disabled");
+                    return "密码不能为连续字符或相同字符"
+                }else{
+                    $("#new-password-conf").removeAttr("disabled");
+                }
+                function isContinuousChar(str){
+                    var str = str.toLowerCase();
+                    var flag = 0;
+                    for(var i=0;i<str.length;i++){
+                        if(str.charCodeAt(i) != flag+1 && flag!=0)
+                            return false;
+                        else
+                            flag = str.charCodeAt(i);
+                    }
+                    return true;
+                }
+                //是否字符都相同
+                function isSameChar(str){
+                    var str = str.toLowerCase();
+                    var flag = 0;
+                    for(var i=0;i<str.length;i++){
+                        if(str.charCodeAt(i) != flag && flag!=0)
+                            return false;
+                        else
+                            flag = str.charCodeAt(i);
+                    }
+                    return true;
+                }
+            }
         });
     $("#new-password-conf")
         .formValidator({

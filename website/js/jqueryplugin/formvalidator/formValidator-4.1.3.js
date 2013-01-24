@@ -702,7 +702,7 @@ $.formValidator =
 			case "hidden":
 			case "password":
 			case "textarea":
-			case "file":
+            case "file":
 				if (setting.type == "size") {
 					empty = setting.empty;
 					if(!empty.leftEmpty){
