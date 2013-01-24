@@ -78,11 +78,11 @@ input {border: 0 none; vertical-align: middle;}
 .btn_b_g a, .btn_b_g a:hover {background-position: right -152px; color: #878787;}
 .toolbar {width: 100%; height: 30px; line-height: 24px; background: url("../images/bg_toolbar.gif") repeat-x 0 0; color: #878787;}
 .toolbar .my-weibo {float: left; _display: inline;}
-.toolbar .toolbar-nav {float: right; _display: inline; text-align: right;}
-.toolbar .toolbar-nav li {position: relative; z-index: 10; margin-left: 5px; display: inline;}
+.toolbar .toolbar-nav {float: right; text-align: right;}
+.toolbar .toolbar-nav li {float:left; position: relative; z-index: 10; margin-left: 5px;}
 .toolbar .toolbar-nav li a {padding-right: 5px;}
 .toolbar .toolbar-nav .login {color: #ff7800;}
-.toolbar .toolbar-nav .my-title {padding-right: 10px; height: 30px; background: url("../images/icon_mytool.gif") no-repeat right -5px;}
+.toolbar .toolbar-nav .my-title {padding-right: 10px;height: 30px; background: url("../images/icon_mytool.gif") no-repeat right 0;}
 .toolbar .toolbar-nav .my-content {position: absolute; right: 0; top: 20px; padding: 5px; border: #ddd 1px solid; width: 80px; background-color: #fff; text-align: center; z-index: 11;}
 .toolbar .toolbar-nav .my-content li {margin-left: 0; display: block;}
 .toolbar .toolbar-nav .my-content li a {padding-right: 0;}
