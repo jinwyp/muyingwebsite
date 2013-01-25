@@ -224,4 +224,16 @@ $(document).ready(function () {
             },300)
         }
     })
-})()
+})();
+//商品详情页图片展示
+$(window).load(function(){
+    $(".photoslider-bullets").sliderkit({
+        auto:false,
+        circular:true,
+        mousewheel:true,
+        shownavitems:5,
+        panelfx:"sliding",
+        panelfxspeed:1000,
+        panelfxeasing:"easeOutExpo" // "easeOutExpo", "easeInOutExpo", etc.
+    });
+});

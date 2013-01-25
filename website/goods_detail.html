@@ -8,7 +8,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="css/base.css" rel="stylesheet" type="text/css"/>
     <link href="css/category.css" rel="stylesheet" type="text/css"/>
-    <link href="js/jqueryplugin/datepicker/skin/ui-lightness/jquery-ui-1.9.1.custom.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/sliderkit-core.css" media="screen, projection" />
     <script src="js/head.min.js"></script>
 </head>
 <body>
@@ -1042,85 +1042,136 @@
 
 <div id="container" class="wrapper">
     <div class="crumbs"><a href="/">首页</a> > <a href="">宝宝食品</a> > <a href="">牛奶粉</a> > <span>雅培金装喜康力配方奶粉900g（智护）</span></div>
-    <div class="id_detail">
-        <div class="picture">
+    <div class="wrap-goodsInfo">
             <!--图片展示区域-->
-            <div id="imageViewerFrame" class="gallery">
-                <div id="picpointer">
-                    <div id="picshower" style="height: 300px; width: 300px;">
-                        <img src="http://st.icson.com/static_v1/img/blank.gif" id="smallImage"/>
-
-                        <div class="zoom_mouse"></div>
-                        <span class="previewicon"></span>
+        <div id="imageViewerFrame" class="picture">
+                <!-- Start photoslider-bullets -->
+                <div class="sliderkit photoslider-bullets">
+                    <div class="zoom">
+                        <span>
+                            <a target="_blank" href="">查看大图</a>
+                        </span>
                     </div>
-                    <div style="display:none;" id="zoomPic" class="zoom_pic">
-                        <div class="zoom_pic_wrap" id="zoomPicWrap">
-                            <table>
-                                <tbody>
-                                <tr>
-                                    <td></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                    <div class="sliderkit-nav">
+                        <div class="sliderkit-nav-clip">
+                            <ul>
+                                <li><a href="#" title="Photo sample 01"></a></li>
+                                <li><a href="#" title="Photo sample 02"></a></li>
+                                <li><a href="#" title="Photo sample 03"></a></li>
+                                <li><a href="#" title="Photo sample 04"></a></li>
+                                <li><a href="#" title="Photo sample 05"></a></li>
+                            </ul>
                         </div>
                     </div>
-
+                    <div class="sliderkit-panels">
+                        <div class="sliderkit-panel">
+                            <img src="images/demo/sample-01.jpg" alt="[Alternative text]" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="images/demo/sample-02.jpg" alt="[Alternative text]" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="images/demo/sample-03.jpg" alt="[Alternative text]" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="images/demo/sample-04.jpg" alt="[Alternative text]" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="images/demo/sample-05.jpg" alt="[Alternative text]" />
+                        </div>
+                    </div>
                 </div>
+                <!-- // end of photoslider-bullets -->
             </div>
-        </div>
 
-        <div class="property id_promotion">
+        <div class="goods-info">
             <h1>Abbott 雅培 金装喜康力900g（智护2阶段）</h1>
-            <p class="goods-info"><span class="promotion-title">【雅培奶粉400g/900g装 满300减50 （一段除外）】</a></span><span class="goods-num">商品编号：111191</span></p>
-            <p class="goods_pingfen" id="product_pingfen" style="display:none"></p>
-            <ul class="goods_detail mate" id="goods_detail_mate">
-                <li class="li item_market" style="display:none;"><span class="t">市场价：</span>
-                    <del>&yen;236.00</del>
+            <p class="goods-promotion"><span class="promotion-title">【雅培奶粉400g/900g装 满300减50 （一段除外）】</a></span><span class="font-gray fr goods-num">商品编号：111191</span></p>
+            <ul class="mod-price">
+                <li class="item-price price-vip">
+                    <div class="dt">会员价：</div>
+                    <div class="dd"><strong class="font-price">&yen;236.00</strong></div>
                 </li>
-                <li class="li item_icson"><span class="t">会员价：</span><span class="i_yuan">&yen;</span><strong
-                        class="price_font">236.00</strong>&nbsp;</li>
-                <li class="li promotion">
-                    <span class="t">换购：</span>
-                    <a class="tags_promo tags_promo_manjian" href="http://event.51buy.com/event/44070307.html"
-                       target="_blank">
-                        满119立减18
-                        <div class="layout_popup">
-                            <div class="layout_inner"><p>百货全场满119降18</p></div>
-                            <div class="layout_arrow_top"><span>◆</span><i>◆</i></div>
-                        </div>
-                    </a>
-                </li>
-                <li class="li free item_coupon" id="good_detai_coupon"></li>
-                <li class="li free" id="good_detai_gift">
-                    <span class="t">赠品：</span>
-                    <ul class="list_goods list_pic_left" id="good_detai_gift_list"></ul>
+                <li class="item-buyTime">
+                    <span class="mr10 buy-type">限时限购</span>离抢购结束还剩：<span id="lblLimitedTime">0天13小时46分25秒</span>
                 </li>
             </ul>
-            <ul class="goods_detail buyinfo" id="goods_detail_buyinfo">
-                <!-- S 套餐 -->
-                <li class="li pack_tit" id="good_detail_package"></li>
-                <!-- E 套餐 -->
-                <li class="li">
-                    <span class="t">购买数量：</span>
-                <span class="input_mini">
-                    <input type="text" id="order_num" maxlength="2" maxnumlimit="12" minnumlimit="1" value="1"/>
-                </span>件
-                    <span class="tips_buy">限购12件</span>
+
+            <ul class="mod-property" id="divsizecolor">
+                <li id="divProductColor" class="clearfix">
+                    <div class="dt">颜色：</div>
+                    <div class="dd">
+                    <a title="米奇" class="selected">米奇</a>
+                    <a title="米妮">米妮</a>
+                    <a title="维尼">维尼</a>
+                    </div>
+                </li>
+                <li id="divProductSize" class="clearfix">
+                    <div class="dt">规格：</div>
+                    <div class="dd">
+                    <a title="25*32*18cm" class="selected">25*32*18cm</a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="mod-buyInfo" id="goods_detail_buyinfo">
+                <li>
+                    <div class="dt">购买数量：</div>
+                    <div class="dd">
+                        <span class="input_mini">
+                            <input type="text" id="order_num" maxlength="2" maxnumlimit="12" minnumlimit="1" value="1"/>
+                        </span>件
+                        <span class="tips_buy">限购12件</span>
+                    </div>
                 </li>
                 <li class="wrap-btn">
                     <span class="btn_b btn_b_r"><span class="icon-cart"></span><a class="btn-cart" href="#" onclick="return false;">加入购物车</a></span>
                     <span class="btn_m btn_m_h"><span class="icon-favi"></span><a class="btn-favi" href="#" onclick="return false;">加入收藏夹</a></span>
                 </li>
             </ul>
-            <ul class="mod_faver wrap_btn">
-                <li><span>分享:</span><a href="#" onclick="return false" id="share_sina_weibo"><b class="logo_sina_weibo"></b>新浪微博</a></li>
+            <ul class="mod-promotion" id="goods_detail_mate">
+                <li class="item-promotion">
+                    <div class="dt">促销：</div>
+                    <div class="dd">
+                    <a class="tags_promo tags_promo_manjian" href="" target="_blank">满119立减18</a>
+                    </div>
+                </li>
+                <li class="item-free" id="good_detai_gift">
+                    <div class="dt">赠品：</div>
+                    <div class="dd">
+                    a fa
+                    </div>
+                </li>
             </ul>
-            <p class='tips'><span class='t'>注意：</span>本商品为特惠商品，仅限普通客户购买，只提供普通发票，不提供增值税发票。</p>
-
-            <p class="tips"><span class="t">提示：</span>特价商品，不能使用易迅优惠券。</p>
+            <ul class="mod-share">
+                <li>
+                    <div class="dt">分享到：</div>
+                    <div class="dd">
+                        <!-- Baidu Button BEGIN -->
+                        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                            <a class="bds_tsina">新浪微博</a>
+                            <a class="bds_qzone">QQ空间</a>
+                            <a class="bds_tqq">腾讯微博</a>
+                            <a class="bds_sqq">QQ好友</a>
+                            <a class="bds_t163">网易微博</a>
+                            <a class="bds_ty">天涯社区</a>
+                            <a class="bds_fx">飞信</a>
+                            <a class="bds_taobao">我的淘宝</a>
+                            <a class="shareCount"></a>
+                        </div>
+                        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+                        <script type="text/javascript" id="bdshell_js"></script>
+                        <script type="text/javascript">
+                            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+                        </script>
+                        <!-- Baidu Button END -->
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="mod_aider id_suiixinpei" id="easy_match">
+
+    <div class="wrap-combor clearfix">
         <div class="inner">
             <div class="hd">
                 <h3>随心配</h3>
@@ -1144,6 +1195,7 @@
             </div>
         </div>
     </div><!--随心配 -->
+
     <div class="wrap_info">
         <div class="content">
             <div class="mod_goods_info" id="introduction">
@@ -1614,6 +1666,7 @@
         </div>
         <!--你可能还喜欢-->
     </div>
+
     <div class="sidebar">
         <div class="mod_aider id_same_goods" id="c3id_same">
             <div class="inner">
@@ -1736,11 +1789,14 @@
 
 <script type="text/javascript">
     head.js("js/jquery-1.7.2.min.js",
-            "js/jqueryplugin/jquery.bxcarousel.js",
+            "js/jqueryplugin/jquery.easing.1.3.min.js",
+            "js/jqueryplugin/jquery.mousewheel.min.js",
+            "js/jqueryplugin/jquery.sliderkit.1.9.2.pack.js",
             "js/my/hp1.js",
-            "js/jqueryplugin/datepicker/jquery-ui-1.9.1.custom.js",
-            "js/my/index.js");
+            "js/my/category.js"
+           );
 </script>
+
 <script type="text/javascript">
     head.ready(function () {
         $(".btn_b_r0").hover(function (e) {
