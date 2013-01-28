@@ -24,7 +24,7 @@
 .photoslider-bullets .zoom {width:60px; bottom:6px; left:0; z-index: 11;}
 .photoslider-bullets .sliderkit-nav {position:absolute; width:320px; height:30px; bottom:0; left:0; background-color: #f4f4f4;}
 .photoslider-bullets .sliderkit-nav-clip{margin-top:10px;}
-.photoslider-bullets .sliderkit-nav-clip ul li{float:left;margin:0 5px 0 0;}
-.photoslider-bullets .sliderkit-nav-clip ul li a{width:13px;height:13px;background:transparent url("../images/category/bullet-off.png") no-repeat 0 0;}
-.photoslider-bullets .sliderkit-nav-clip ul li.sliderkit-selected a{background:transparent url("../images/category/bullet-on.png") no-repeat 0 0;}
+.photoslider-bullets .sliderkit-nav-clip ul li{float:left;margin:0 10px 0 0;}
+.photoslider-bullets .sliderkit-nav-clip ul li a{width:12px;height:12px;background:transparent url("../images/category/icon_bullet.png") no-repeat 0 0;}
+.photoslider-bullets .sliderkit-nav-clip ul li.sliderkit-selected a{background-position: 0 -12px;}
 
