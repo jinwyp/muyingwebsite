@@ -2,7 +2,9 @@
 html,body,div,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,img,form,embed,label{margin:0;padding:0;border:0;font-weight:normal;}
 ul,ul li{list-style:none;}
 .cls{clear:both;line-height:0px!important;height:0px!important;font-size:0px!important;} 
-
+body {font: 12px/1.5 tahoma, arial, sans-serif;}
+a {color:#02969a; text-decoration: none; }
+a:hover {color:#81e5e3; }
 .tit span,.sale-week span,.sale-box span,.sale-gift span,.i2Category ul li span,.i2Favorite span,.i2HeadFavorite span{display:block;text-indent:-9999px;direction:ltr;}
 
 .i2body{background:#abd8d9 url(images/bg.jpg) top center no-repeat;position:relative;}
@@ -98,3 +100,11 @@ ul,ul li{list-style:none;}
 .prolist li .p1{color:#C80009;font-family:"Lucida";font-size:17px;font-weight: bold;letter-spacing: -1.2px;margin-top: 5px;}
 .prolist li .p2{font-family:"Lucida";text-decoration:line-through;}
 .prolist li .pname{height:40px;line-height:15px;margin-top:5px;overflow:hidden;width:164px;}
+
+/*排行榜*/
+.goods_sort dl {width: 176px; border-bottom: 1px dashed #ebebeb; overflow: hidden; position: relative; padding: 6px 10px 7px 10px;}
+.goods_sort .num {position: absolute; top: 5px; left: 5px; text-align: center; color: #fff; margin-right: 5px; background: #bababa; margin-top: 4px; width: 12px; height: 12px; font: 800 9px/12px Verdana, Geneva, sans-serif; border-radius: 4px;}
+.goods_sort .n01, .goods_sort .n02, .goods_sort span.n03 {background: #ff7800;}
+.goods_sort dt {float: left; margin-left:10px; display:inline; width:60px; height:60px; border: 1px solid #bababa; overflow: hidden;}
+.goods_sort dd p {padding-left: 80px; padding-bottom: 5px;}
+.goods_sort .price_now {color:#C80009; font-weight: 700;}
