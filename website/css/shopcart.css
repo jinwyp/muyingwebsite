@@ -39,18 +39,18 @@ strong {font-weight: 700;}
 .cart-body .col-name .img {float: left;}
 .cart-body .col-name .goods-info {width: 420px;}
 .cart-body del {display: block; color: #878787;}
-.cart-body .wrap-input {float: left; margin-left: 20px; display: inline; font-size: 12px; font-weight: 400; overflow: hidden;}
-.cart-body .wrap-input .input {float: left; margin-left: -1px; width: 34px; height: 18px; line-height: 18px; overflow: hidden; text-align: center; border: 1px solid #878787;}
-.cart-body .wrap-input .input-focus {border: 1px solid #ff7800;}
-.cart-body .wrap-input .add, .cart-body .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px; width: 20px; height: 20px; line-height: 19px; font-size: 14px; text-align: center; background-color: #f4f4f4; background: -moz-linear-gradient(center top, #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent; cursor: pointer;}
-.cart-body .wrap-input .reduce {margin-left: 0;}
+.wrap-input {float: left; margin-left: 20px; display: inline; font-size: 12px; font-weight: 400; overflow: hidden;}
+.wrap-input .input {float: left; margin-left: -1px; width: 34px; height: 18px; line-height: 18px; overflow: hidden; text-align: center; border: 1px solid #878787;}
+.wrap-input .input-focus {border: 1px solid #ff7800;}
+.wrap-input .add, .wrap-input .reduce {float: left; border: 1px solid #878787; margin-left: -1px; width: 20px; height: 20px; line-height: 19px; font-size: 14px; text-align: center; background-color: #f4f4f4; background: -moz-linear-gradient(center top, #fff 0%, #f4f4f4 47%, #e0e0e0 100%) repeat scroll 0 0 transparent; cursor: pointer;}
+.wrap-input .reduce {margin-left: 0;}
 .cart-empty {border-bottom: 1px solid #f4f4f4; padding:10px 0; text-align: center; font-size: 14px; background-color: #fff; line-height: 30px;}
 /**提示**/
 .col-tips {position: absolute; top: 26px; left: 20px; padding: 2px 5px; text-align: center; border: 1px solid #f90; color: #e60; background-color: #ffedb5;}
 .col-number .col-tips {width:66px;}
 .col-operation .col-tips {left: 0; top: 0; padding: 5px; width: 112px; text-align: left; border: 1px solid #bababa; color: #4d4d4d; background-color: #fff;}
 .col-operation .col-tips .btn_s_o {margin-right: 5px;}
-.pop-win .col-tips {position:relative; float:left; top:0; height:20px; line-height: 20px; font-weight: 400; margin-top: 4px; padding: 0px 10px; border-radius: 4px 4px 4px 4px;}
+.pop-win .col-tips,.mod-buyInfo .col-tips {position:relative; float:left; top:0; height:20px; line-height: 20px; font-weight: 400; margin-top: 4px; padding: 0px 10px; border-radius: 4px 4px 4px 4px;}
 
 /**优惠商品模块**/
 /*赠品换购*/
@@ -93,6 +93,54 @@ strong {font-weight: 700;}
 .total-price strong {color: #e60000; font-size: 22px;}
 .noFreight {color: #bababa; margin-right: 10px;}
 .cart-button {padding: 6px 0; background-color: #f4f4f4; overflow: hidden; zoom: 1;}
+
+/**详情页**/
+.picture {float: left; width: 320px; z-index: 2; position: relative;}
+.goods-info {float:right; width:660px; z-index:1; position: relative;}
+.goods-info h1 {font:700 16px/24px Arial,verdana; word-break: break-all; white-space: normal; color: #1a1a1a;}
+.goods-info .promotion-title {color: #e60000;font-size:14px;}
+.goods-info ul {padding-left:10px; padding-top:10px; overflow: hidden;}
+.goods-info li {padding-bottom: 10px; position: relative; z-index: 2;}
+.goods-info li .dt {float:left; width: 60px; line-height:22px; text-align: right; color: #878787;}
+.goods-info li .dd {padding-left:70px;}
+.goods-info .mod-buyInfo, .goods-info .mod-property{border: 1px solid #878787; }
+.goods-info .item-price {line-height: 24px;}
+.goods-info .font-price {font-size: 20px; color: #e60000; margin-right: 10px; font-weight: normal;}
+.goods-info .item-buyTime em {color: #e60000; font-style:normal;}
+.goods-info .buy-type {display: inline-block; background-color: #e60000; padding: 0 2px; color: white; font-weight: normal; height: 20px; line-height: 20px;}
+.goods-info .item-promotion p {padding-bottom:5px;}
+ul.free-goods {padding-left:0;}
+ul.free-goods li {float:left; margin-right:10px; width:180px; overflow: hidden;}
+ul.free-goods li img {float:left;border:1px solid #f4f4f4; }
+ul.free-goods li p {padding-left:60px; padding-bottom: 5px;}
+ul.free-goods li .now{color: #e60000;}
+.goods-info .mod-property {border-bottom: 0 none;}
+.goods-info .mod-property .dd a { background-color: #fff; margin-right:5px; border: 1px solid #bababa; cursor: pointer; display: inline-block; line-height: 24px; padding:0 6px; text-decoration: none; word-break: keep-all;}
+.goods-info .mod-property .dd a:hover, .mod-property .dd a.selected {border: 1px solid #f60; background: url("http://css.muyingzhijia.com/themes/default/Template/afd5/images/bg-selected.png") no-repeat scroll right bottom transparent; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.6); cursor: pointer; text-decoration: none;}
+.goods-info .mod-buyInfo {border-top: 0 none;}
+.goods-info .mod-buyInfo .wrap-input {margin-left:0;}
+.goods-info .mod-buyInfo .col-tips {margin-top:0;}
+.goods-info .wrap-btn {padding-top: 5px;}
+.goods-info .wrap-btn .btn_b_r {margin-right:20px;}
+
+
+.wrap-combor { margin: 10px 0; border: 1px solid #d7d7d7; zoom: 1;position: relative; overflow: hidden;}
+.wrap-combor .hd {background: #EBEBEB; background: -moz-linear-gradient(top, #EBEBEB 0%, #F8F8F8 41%, #ffffff 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EBEBEB), color-stop(41%, #F8F8F8), color-stop(100%, #FFF)); filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#EBEBEB', endColorstr='#ffffff', GradientType=0 ); padding: 8px 0 7px 10px; border: 1px solid #fff;}
+.wrap-combor .hd h3 {font-size: 14px;}
+.wrap-combor .hd span {display: block; width: 145px; height: 18px; color: #000000;}
+.wrap-combor .bd {zoom: 1;}
+
+.icon-cart,.icon-favi {float:left; background: url(../images/category/icon_detail.png) no-repeat;}
+.icon-cart {width:38px; height:38px; background-position: 0 0; }
+.icon-favi {width:20px; height:28px; background-position: 0 -38px;}
+
+
+
+/*收藏分享*/
+.mod_share {background: #fff; border: 1px solid #bababa; position: absolute; top: 38px; left: 0; width: 290px; z-index: 2; box-shadow: 0 0 5px #878787;}
+.mod_share .hd {display: none;}
+
+
 
 
 
