@@ -101,7 +101,7 @@ strong {font-weight: 700;}
 .goods-info .promotion-title {color: #e60000;font-size:14px;}
 .goods-info ul {padding-left:10px; padding-top:10px; overflow: hidden;}
 .goods-info li {padding-bottom: 10px; position: relative; z-index: 2;}
-.goods-info li .dt {float:left; width: 60px; line-height:22px; text-align: right; color: #878787;}
+.goods-info li .dt {float:left; width: 60px; text-align: right; color: #878787;}
 .goods-info li .dd {padding-left:70px;}
 .goods-info .mod-buyInfo, .goods-info .mod-property{border: 1px solid #878787; }
 .goods-info .item-price {line-height: 24px;}
@@ -109,11 +109,11 @@ strong {font-weight: 700;}
 .goods-info .item-buyTime em {color: #e60000; font-style:normal;}
 .goods-info .buy-type {display: inline-block; background-color: #e60000; padding: 0 2px; color: white; font-weight: normal; height: 20px; line-height: 20px;}
 .goods-info .item-promotion p {padding-bottom:5px;}
-ul.free-goods {padding-left:0;}
+ul.free-goods {padding-left:0;padding-top:0;}
 ul.free-goods li {float:left; margin-right:10px; width:180px; overflow: hidden;}
 ul.free-goods li img {float:left;border:1px solid #f4f4f4; }
 ul.free-goods li p {padding-left:60px; padding-bottom: 5px;}
-ul.free-goods li .now{color: #e60000;}
+ul.free-goods li .now {color: #e60000;}
 .goods-info .mod-property {border-bottom: 0 none;}
 .goods-info .mod-property .dd a { background-color: #fff; margin-right:5px; border: 1px solid #bababa; cursor: pointer; display: inline-block; line-height: 24px; padding:0 6px; text-decoration: none; word-break: keep-all;}
 .goods-info .mod-property .dd a:hover, .mod-property .dd a.selected {border: 1px solid #f60; background: url("http://css.muyingzhijia.com/themes/default/Template/afd5/images/bg-selected.png") no-repeat scroll right bottom transparent; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.6); cursor: pointer; text-decoration: none;}
@@ -123,22 +123,33 @@ ul.free-goods li .now{color: #e60000;}
 .goods-info .wrap-btn {padding-top: 5px;}
 .goods-info .wrap-btn .btn_b_r {margin-right:20px;}
 
-
-.wrap-combor { margin: 10px 0; border: 1px solid #d7d7d7; zoom: 1;position: relative; overflow: hidden;}
-.wrap-combor .hd {background: #EBEBEB; background: -moz-linear-gradient(top, #EBEBEB 0%, #F8F8F8 41%, #ffffff 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EBEBEB), color-stop(41%, #F8F8F8), color-stop(100%, #FFF)); filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#EBEBEB', endColorstr='#ffffff', GradientType=0 ); padding: 8px 0 7px 10px; border: 1px solid #fff;}
+.wrap-combor { margin: 10px 0; zoom: 1;position: relative; overflow: hidden;}
+.wrap-combor .hd {}
 .wrap-combor .hd h3 {font-size: 14px;}
 .wrap-combor .hd span {display: block; width: 145px; height: 18px; color: #000000;}
-.wrap-combor .bd {zoom: 1;}
+.wrap-combor .bd {padding:10px;}
+.wrap-combo .aid{float:left;}
 
-.icon-cart,.icon-favi {float:left; background: url(../images/category/icon_detail.png) no-repeat;}
-.icon-cart {width:38px; height:38px; background-position: 0 0; }
-.icon-favi {width:20px; height:28px; background-position: 0 -38px;}
+.icon-cart {float:left; width:38px; height:38px; background: url(../images/order/icon_cart.png) no-repeat scroll 0 0 transparent;}
+.icon-favi {float:left; width:20px; height:28px; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
 
+/*分享*/
+.mod-share {padding:5px; height: 22px; line-height:22px;}
 
+/*组合购*/
+.combor-list {float:left; width:760px; overflow: hidden;}
+.combor-list li {float: left; overflow: hidden; padding: 5px 5px 5px 25px; position: relative;  width: 150px;}
+.combor-list li.status_hover {background: none repeat scroll 0 0 #f4f4f4;}
+.combor-list li .img {width:94px; height:92px;}
+.combor-list li .name {margin-top:5px;height:40px;overflow: hidden;}
+.combor-list li .price {color: #e60000;}
+.combor-list .aid {position: absolute; left: 0; top: 5px;}
+.wrap-combor .info {float:right; width:180px; background-color:#f4f4f4; padding:10px; line-height: 24px;}
+.wrap-combor .info .btn_m {margin-top:5px;}
 
-/*收藏分享*/
-.mod_share {background: #fff; border: 1px solid #bababa; position: absolute; top: 38px; left: 0; width: 290px; z-index: 2; box-shadow: 0 0 5px #878787;}
-.mod_share .hd {display: none;}
+/*相关购*/
+.mod-relatedBuy .goods_list dl {width:130px; margin-right: 10px;}
+
 
 
 

@@ -1,10 +1,10 @@
 //热销商品排行
 jQuery(function(){
-    $("#top5 dl:first dt").hide();
-    $("#top5 dl:first dd").show();
-    $("#top5 dl dt").mouseover(function(){
-        $("#top5 dl dt").show();
-        $("#top5 dl dd").hide();
+    $("#ranking dl:first dt").hide();
+    $("#ranking dl:first dd").show();
+    $("#ranking dl dt").mouseover(function(){
+        $("#ranking dl dt").show();
+        $("#ranking dl dd").hide();
         $(this).hide().siblings("dd").show();
 
     });
@@ -23,19 +23,19 @@ $(".goods_list dl").hover(function(){
 
 //列表价格排序切换
 jQuery(function(){
-    $(".sift .order a:not(#liprice)").click(function(){		
+    $(".sift .order a:not(#liprice)").click(function(){
         $(".sift .order a").removeClass("selected order_desc order_asc");
-        $(this).addClass("selected");		
-		
+        $(this).addClass("selected");
+
     })
-	
+
 	   $(".sift .order a#liprice").click(function(){
 		$(".sift .order a").removeClass("selected");
-        if ($(this).hasClass("order_desc")){			 	
+        if ($(this).hasClass("order_desc")){
 			$(this).removeClass("order_desc").addClass("order_asc");
 		}else{
 			$(this).addClass("order_desc").removeClass("order_asc");
-			
+
 		}
 	   });
 });
@@ -225,15 +225,3 @@ $(document).ready(function () {
         }
     })
 })();
-//商品详情页图片展示
-$(window).load(function(){
-    $(".photoslider-bullets").sliderkit({
-        auto:false,
-        circular:true,
-        mousewheel:true,
-        shownavitems:5,
-        panelfx:"sliding",
-        panelfxspeed:1000,
-        panelfxeasing:"easeOutExpo" // "easeOutExpo", "easeInOutExpo", etc.
-    });
-});
