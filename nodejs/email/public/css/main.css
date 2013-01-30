@@ -1,0 +1,80 @@
+/*!
+ * Bootstrap main
+ *
+ * 
+ * 
+ */
+
+body {
+	padding-top: 90px;
+	padding-bottom: 40px;
+}
+
+.sidebar-nav {
+	padding: 10px 0;
+}
+
+.nav .leftmenuheader{
+	font-size: 18px;	  
+}
+
+
+.rightmenubar {
+    background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #E5E5E5;
+    height: 40px;
+	padding: 2px 10px 2px 20px;
+	margin-bottom: 10px;
+}
+
+.rightmenubar h3{
+
+    margin: 2px 0;
+}
+
+.rightsearchoptionbox {
+    background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #E5E5E5;
+    height: 250px;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 10px;
+}
+
+.rightinputbox {
+    background-color: #EEEEEE;
+    background-image: -moz-linear-gradient(center top , #F5F5F5 0%, #EEEEEE 100%);
+    background-repeat: repeat-x;
+    border: 1px solid #E5E5E5;
+    height: 650px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+
+.rightinputbox label{
+    width: 200px;
+}
+
+.inputbox  label{
+    float: left;
+    line-height: 30px;
+    padding-right: 5px;
+    width: 150px;
+}
+.inputbox  input{
+    width: 380px;
+}
+
+.searchbutton{
+	width:180px;
+}
+
+.addbutton{
+    float:right;
+    width:80px;
+}
+
+
