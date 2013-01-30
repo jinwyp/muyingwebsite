@@ -13,13 +13,33 @@ jQuery(function(){
 
 //商品列表鼠标mouseover效果背景变化
 jQuery(function(){
-$(".goods_list dl:nth-child(4n)").css({margin:"10px 0 0 10px"});
-$(".goods_list dl").hover(function(){
-    $(".goods_list dl").removeClass("hover");
-    $(this).addClass("hover");
+$("#container .goods_list dl:nth-child(4n)").css({margin:"10px 0 0 10px"});
+$("#container .goods_list dl").hover(function(){
+    if ($(this).hasClass("hover")){
+        $(this).removeClass("hover");
+    }
+   else{
+        $(this).addClass("hover");
+    }
 });
 });
 
+jQuery(function(){
+
+    $("input[name=combor_check]").each(function(){
+        if ($(this).attr("checked")){
+            $(this).parents("dl").addClass("hover");
+        }
+    $(this).click(function(){
+    if ($(this).attr("checked")){
+        $(this).parents("dl").addClass("hover");
+    }
+            else{
+                $(this).parents("dl").removeClass("hover");
+            }
+            })
+    })
+});
 
 //列表价格排序切换
 jQuery(function(){
@@ -27,7 +47,7 @@ jQuery(function(){
         $(".sift .order a").removeClass("selected order_desc order_asc");
         $(this).addClass("selected");
 
-    })
+    });
 
 	   $(".sift .order a#liprice").click(function(){
 		$(".sift .order a").removeClass("selected");
