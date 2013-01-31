@@ -12,6 +12,7 @@
     <link href="./css/bootstrap-responsive.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
 
+<script type="text/javascript" src="js/head.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -38,7 +39,7 @@
                 <span class="icon-bar"></span>
             </a>
             <a class="brand" href="#">
-                <img width="170" height="50" src="./pics/loginTitle1.png" alt=""/>
+                <img width="170" height="50"  alt=""/>
             </a>
 
             <div class="btn-group pull-right">
@@ -274,9 +275,19 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./js/jquery.js"></script>
-<script src="./js/bootstrap.js"></script>
 
+
+<script type="text/javascript">
+    head.js("js/jquery-1.7.2.min.js",
+            "js/bootstrap.js",
+            "js/underscore-1.4.4.min.js ",
+            "js/backbone-0.9.10.min.js",
+            "js/backbone_modelbinder-0.1.6.min.js",
+            "js/handlebars-rc1.min.js",
+            "js/my/emailmodel.js",
+            "js/my/emailadmin.js"
+    );
+</script>
 
 </body>
 </html>

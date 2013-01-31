@@ -7,7 +7,7 @@ var Server = mongo.Server,
 var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('testdb', server);
 
-mongoose.connect('localhost', 'test');
+
 
 db.open(function(err, db) {
     if(!err) {
