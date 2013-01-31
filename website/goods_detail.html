@@ -1282,9 +1282,7 @@
     </div><!--套餐 -->
 
     <div class="wrap wrap-info">
-
     <div class="main">
-
         <div id="buy_buy" class="mod-relatedBuy">
             <div class="inner">
                 <div class="hd"><h3>买过本商品的顾客还买过</h3></div>
@@ -1333,15 +1331,15 @@
             </div>
         </div>
 
-        <div class="mod-goodsInfo" id="introduction">
+        <div class="mod-goodsInfo" id="structure">
             <ul class="hd" id="info_tit">
                 <li id="t_introduce">
                     <h3><a href="#" onclick="return false">商品信息</a></h3>
                 </li>
-                <li id="t_comment" class="status-on">
+                <li id="t_comment">
                     <h3><a href="#" onclick="return false">用户评论</a></h3>
                 </li>
-                <li id="t_parameters">
+                <li id="t_parameters" class="status-on">
                     <h3><a href="#" onclick="return false">相关问答</a></h3>
                 </li>
                 <li id="t_warranty">
@@ -1349,7 +1347,7 @@
                 </li>
             </ul>
             <div class="bd clearfix" id="intro-mainTab">
-                <div class="hide intro-main" id="c_introduce">
+                <div class="hide intro-main mod-intro" id="introduce_box">
                     <div id="c_ad" style="margin-bottom: 8px;">
                     </div>
                     <!-- 商品特性 -->
@@ -1381,81 +1379,135 @@
                         <div class="mod_bd">
                          </div>
                     </div>
-                </div>
-
-                <div class="intro-main intro-main-b" id="j_parameters">
-                <!-- 商品满意度评分-->
-                <div class="satisfaction clearfix" id="review_brief">
-                    <div class="fl satisfaction-point">
-                        <span>商品满意度：</span>
-                        <span class="point"><strong>4</strong>分</span>
-                        <span class="wrap-star"><span class="icon-star"><em style="width: 80%;"></em></span></span>
+                </div><!-- 商品介绍 -->
+                <div class="hide mod-comments" id="review_box">
+                    <!-- 商品满意度-->
+                    <div class="satisfaction clearfix" id="review_brief">
+                        <div class="fl satisfaction-point">
+                            <span>商品满意度：</span>
+                            <span class="point"><strong>4</strong>分</span>
+                            <span class="wrap-star"><span class="icon-star"><em style="width: 80%;"></em></span></span>
+                        </div>
+                        <div class="fr btn_m btn_m_o"><a href="" id="post_review"><span>我要发表讨论</span></a></div>
                     </div>
-                    <div class="fr btn_m btn_m_o"><a href="" id="post_review"><span>我要发表讨论</span></a></div>
-                </div>
 
-                <!-- 评论-->
-                <div class="mod_comments" id="review_box">
                     <div class="comments-hd">
-                        <ul class="tab_comments" id="review_header">
-                            <li class="status-on"><h3><a href="#" onclick="return false" >所有评论(5)</a></h3></li>
-                            <li><h3><a href="#" onclick="return false">已购买用户的评论(2)</a></h3></li>
-                            <li><h3><a href="#" onclick="return false" >未购买用户的讨论(3)</a></h3></li>
-                        </ul>
+                    <ul class="tab-comments" id="review_header">
+                        <li class="status-on"><h3><a href="#" onclick="return false" >所有评论(5)</a></h3></li>
+                        <li><h3><a href="#" onclick="return false">已购买用户的评论(2)</a></h3></li>
+                        <li><h3><a href="#" onclick="return false" >未购买用户的讨论(3)</a></h3></li>
+                    </ul>
                     </div>
-                    <div class="comments_bd" id="review_content">
-                        <div class="comment_all">
+                    <div class="comments-bd" id="review_content">
+                        <div class="comment-all">
                             <div class="content">
-                                <ul class="list_comment">
+                                <ul class="list-comment">
                                     <li>
                                     <div class="user">
-                                        <img src="http://st.icson.com/static_v1/img/guest/guest3_60.gif" height="60" width="60">
+                                        <img src="http://d01.res.meilishuo.net/ap/b/8f/1d/62f5381c13b77d3d508fe1a006f4_500_500.jpg" height="60" width="60" alt="" />
                                         <span class="name">wchzd***</span>
-                                        <span class="level">已购买</span>
+                                        <span class="level">已购买用户</span>
                                     </div>
                                     <div class="cont">
                                         <div class="title">
                                             <span class="comment-txt">
-                                                <span class="icon_star">
-                                                <b style="width: 100%;"></b>
+                                                <span class="point"><strong>5</strong>分</span>
+                                                <span class="icon-star">
+                                                <em style="width: 100%;"></em>
                                                 </span>
                                             </span>
-                                            <span class="date">2013-01-30 12:44:27</span></div>
-                                        <div class="text">A5？官方都不知道有一款A5。。是不是Q1？&nbsp;</div>
-                                        <div class="wrap_btn">
-                                            <a href="#" onclick="return false" class="link-blue">有用(0)</a>
-                                            <a href="#" onclick="return false" class="link-blue">没用(0)</a>
-                                            <a href="#" class="link-blue btn_common" onclick="return false">回复</a>
+                                            <span class="date">2013-01-30 12:44:27</span>
                                         </div>
-                                        <div class="reply" id="">
-                                            <div class="arrow_top">
+                                        <div class="text">A5？官方都不知道有一款A5。。是不是Q1？&nbsp;</div>
+                                        <div class="wrap-btn comment-operate">
+                                            <a href="#" onclick="return false" class="btn-useful">有用<em id="upNum_19648157">0</em></a>
+                                            <a href="#" onclick="return false" class="btn-nouse">没用<em id="downNum_19648157">0</em></a>
+                                            <a href="#" onclick="return false" class="btn-reply">回复</a>
+                                        </div>
+                                        <div class="reply">
+                                            <div class="arrow-top">
                                                 <i>◆</i>
                                             </div>
-                                            <ul class="list_reply">
+                                            <ul class="list-reply">
                                                 <li>
                                                     <div class="reply">
-                                                        <div class="reply_user"><img width="40" height="40" src="http://st.icson.com/static_v1/img/guest/guest4_40.gif"></div>
-                                                        <div class="reply_cont"><p class="reply_text"><strong class="reply_name">th***an回复：</strong>没看出来有什么区别&nbsp;</p>
-                                                            <p class="reply_date">2013-01-30 11:59:41</p>
+                                                        <div class="reply-user"><img width="40" height="40" src="http://imgtest.meiliworks.com/ap/b/6e/66/7a676579a86ff7d4c37c0b632741_289_289.jpg"></div>
+                                                        <div class="reply-cont">
+                                                            <p class="reply-name"><strong class="reply-name">th***an回复：</strong><span class="reply-date">2013-01-30 11:59:41</span></p>
+                                                            <p class="reply-text">没看出来有什么区别&nbsp;</p>
+
                                                         </div>
                                                     </div></li>
-                                                <li class="reply_fabiao">
-                                                    <textarea class="textarea_long" style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; height: 24px; width: 839px; line-height: 21px; text-decoration: none; letter-spacing: normal;" tabindex="-1"></textarea>
-                                                    <textarea name="content" class="textarea_long nor" style="resize: none; overflow-y: hidden;"></textarea>
-                                                    <div class="wrap_btn"><label class="todo_link wrap_verify">
-                                                        <span class="verify_w">验证码：</span>
-                                                        <input type="text" maxlength="4" class="verify_input">
-                                                        <img class="verify_img" src="http://item.51buy.com/json.php?jsontype=str&amp;mod=review&amp;act=vcode&amp;_=0.5308714248796482">
-                                                        <span class="nor">看不清？</span><a onclick="G.app.itemDetail.review.toChangeReviewReplyVCode(event); return false;" href="javascript:;">换一张</a>
-                                                        <a class="btn_common" t="submit" onclick="return false" href="#">发表</a>
-                                                        <a t="cancel" onclick="return false" href="#">取消</a>
-                                                        <span class="info"><b>0</b>/500</span>
+                                                <li class="reply-post">
+                                                    <textarea name="content" class="" id="replyText"></textarea>
+                                                    <div class="wrap-btn reply-btn">
+                                                        <span id="btn_reply" class="btn_m btn_m_o"><a  onclick="return false" href="#">回复</a></span>
+                                                        <span class="ml10"><a onclick="return false" href="#">取消</a>
+                                                            <span class="info"><i id="replyNum">0</i>/500</span>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </li>
+                                    <li>
+                                        <div class="user">
+                                            <img src="http://base02.iyaya.info/1/0/23/7036230.jpg" height="60" width="60" alt="" />
+                                            <span class="name">wchzd***</span>
+                                            <span class="level">已购买用户</span>
+                                        </div>
+                                        <div class="cont">
+                                            <div class="title">
+                                            <span class="comment-txt">
+                                                <span class="point"><strong>5</strong>分</span>
+                                                <span class="icon-star">
+                                                <em style="width: 100%;"></em>
+                                                </span>
+                                            </span>
+                                                <span class="date">2013-01-30 12:44:27</span>
+                                            </div>
+                                            <div class="text">A5？官方都不知道有一款A5。。是不是Q1？&nbsp;</div>
+                                            <div class="wrap-btn comment-operate">
+                                                <a href="#" onclick="return false" class="btn-useful">有用<em id="upNum_19648157">0</em></a>
+                                                <a href="#" onclick="return false" class="btn-nouse">没用<em id="downNum_19648157">0</em></a>
+                                                <a href="#" onclick="return false" class="btn-reply">回复</a>
+                                            </div>
+                                            <div class="reply">
+                                                <div class="arrow-top">
+                                                    <i>◆</i>
+                                                </div>
+                                                <ul class="list-reply">
+                                                    <li>
+                                                        <div class="reply">
+                                                            <div class="reply-user"><img width="40" height="40" src="http://base02.iyaya.info/1/4/93/4625934.jpg"></div>
+                                                            <div class="reply-cont">
+                                                                <p class="reply-name"><strong class="reply-name">th***an回复：</strong><span class="reply-date">2013-01-30 11:59:41</span></p>
+                                                                <p class="reply-text">没看出来有什么区别&nbsp;</p>
+
+                                                            </div>
+                                                        </div></li>
+                                                    <li>
+                                                        <div class="reply">
+                                                            <div class="reply-user"><img width="40" height="40" src="http://base00.iyaya.info/1/2/3/4520032.jpg"></div>
+                                                            <div class="reply-cont">
+                                                                <p class="reply-name"><strong class="reply-name">th***an回复：</strong><span class="reply-date">2013-01-30 11:59:41</span></p>
+                                                                <p class="reply-text">没看出来有什么区别&nbsp;</p>
+
+                                                            </div>
+                                                        </div></li>
+                                                    <li class="reply-post">
+                                                        <textarea name="content" class="" id="replyText"></textarea>
+                                                        <div class="wrap-btn reply-btn">
+                                                            <span id="btn_reply" class="btn_m btn_m_o"><a  onclick="return false" href="#">回复</a></span>
+                                                        <span class="ml10"><a onclick="return false" href="#">取消</a>
+                                                            <span class="info"><i id="replyNum">0</i>/500</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
                                 </ul>
 
                                 <div style="display: none;" class="page_wrap">
@@ -1464,17 +1516,68 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- E 迅友评论-->
+                </div> <!-- 评论-->
+                <div class="mod-asking" id="asking_box">
+                    <div class="comment-tips">
+                        <p>
+                            <span class="tit">温馨提示：</span>
+                            您可在购买前对产品包装、颜色、运输、库存等方面进行咨询，我们有专人进行回复！因厂家随时会更改一些产品的包装、颜色、产地等参数，所以该回复仅在当时对提问者3天内有效，其他网友仅供参考！ 谢谢
+                        </p>
+                        <p class="btn_m btn_m_o"><a href="" title="" id="askWill">我要咨询</a></p>
+                    </div>
+                    <div class="comment-all">
+                        <div class="content">
+                            <ul class="list-comment">
+                                <li>
+                                    <div class="user">
+                                        <img src="http://d01.res.meilishuo.net/ap/b/8f/1d/62f5381c13b77d3d508fe1a006f4_500_500.jpg" height="60" width="60" alt="" />
+                                    </div>
+                                    <div class="cont">
+                                        <div class="title">
+                                            <strong class="name">wchzd***</strong>
+                                            <span class="level">已购买用户</span>
+                                            <span class="date">2013-01-30 12:44:27</span>
+                                        </div>
+                                        <div class="text">您好，我想问一下，此刻机器什么时候还搞活动啊 </div>
+                                        <div class="reply">
+                                            <div class="arrow-top">
+                                                <i>◆</i>
+                                            </div>
+                                            <ul class="list-reply">
+                                                <li>
+                                                    <div class="reply asking">
+                                                        <div class="reply-cont">
+                                                            <p class="reply-name"><strong class="reply-name">母婴之家回复：</strong><span class="reply-date">2013-01-30 11:59:41</span></p>
+                                                            <p class="reply-text"> 您好！很抱歉活动不确定的，请关注网站信息，以网站为准，感谢您对母婴之家的关注和支持！</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
 
-                </div>
-                <div class="hide intro-main intro-main-c id_warranty" id="j_warranty"></div>
-                <div class="hide intro-main" id="j_packinglist" ></div>
 
+                            </ul>
+
+                            <div style="display: none;" class="page_wrap">
+                                <div class="paginator" id="review_page"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- 咨询-->
+                <div class="hide mod-warranty" id="warranty_box" >
+                    <div class="comment-tips">
+                        <p>
+                            <span class="tit">温馨提示：</span>
+                            详情请查看产品包装文字、说明书与保修卡，或致电母婴之家客服热线垂询。
+                        </p>
+                    </div>
+                </div> <!-- 售后-->
             </div>
 
         </div>
-    </div><!--产品介绍-->
+    </div><!--main end-->
 
     <div class="sidebar">
 
@@ -1713,6 +1816,18 @@
                 panelfxspeed:1000,
                 panelfxeasing:"easeOutExpo" // "easeOutExpo", "easeInOutExpo", etc.
             });
+        });
+
+        $('#replyText').bind('focus keyup input paste',function(){
+            $('#replyNum').text($(this).attr("value").length);
+            if ($(this).attr("value").length > 500){
+                $('#replyNum').addClass("font-red");
+                $('#btn_reply').removeClass("btn_m_o").addClass("btn_m_g").children("a").css("cursor","default");
+            }else{
+                $('#replyNum').removeClass("font-red");
+                $('#btn_reply').removeClass("btn_m_g").addClass("btn_m_o").children("a").css("cursor","pointer");
+            }
+
         });
     });
 
