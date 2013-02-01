@@ -1,64 +1,110 @@
-var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/testdb');
 
-var Server = mongo.Server,
-    Db = mongo.Db,
-    BSON = mongo.BSONPure;
-
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('testdb', server);
-
-mongoose.connect('localhost', 'test');
-
-db.open(function(err, db) {
-    if(!err) {
-        console.log("Connected to 'testdb' database");
-        db.collection('emails', {safe:true}, function(err, collection) {
-            if (err) {
-                console.log("The 'emaildb' collection doesn't exist. Creating it with sample data...");
-//                populateDB();
-            }else{
-
-            }
-        });
-    }
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+    // yay!
 });
+
+var Schema   = mongoose.Schema;
+
+var EmailSchema = new Schema({
+    emailid    : Number,
+    emailname  : String,
+    couponcode : String,
+    updatedate : Date
+});
+
+var CountersSchema = new Schema({
+    _id : String,
+    countnext    : {type: Number, default: 1}
+});
+
+CountersSchema.statics.findAndModify = function (query, sort, doc, options, callback) {
+    return this.collection.findAndModify(query, sort, doc, options, callback);
+};
+
+CountersSchema.statics.increment = function (schemaName, callback) {
+    return this.collection.findAndModify({ _id: schemaName }, [], { $inc: { countnext: 1 } }, callback);
+};
+
+var EmailModel = mongoose.model( 'Email', EmailSchema );
+var CountersModel = mongoose.model( 'Counters', CountersSchema );
+var Counter1 = new CountersModel({
+    _id :'email'
+});
+Counter1.save();
+
+
+//db.open(function(err, db) {
+//    if(!err) {
+//        console.log("Connected to 'testdb' database");
+//        db.collection('emails', {safe:true}, function(err, collection) {
+//            if (err) {
+//                console.log("The 'emaildb' collection doesn't exist. Creating it with sample data...");
+////                populateDB();
+//            }else{
+//
+//            }
+//        });
+//    }
+//});
 
 exports.findById = function(req, res) {
     var id = req.params.id;
-    console.log('Retrieving email: ' + id);
-    db.collection('emails', function(err, collection) {
-        collection.findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
-            res.send(item);
-        });
+    var email1 = new EmailModel({
+        emailid :  req.params.id
+    });
+
+    EmailModel.find({ emailid: id }, function (err, emails) {
+        if (err) {
+
+        }else{
+            console.log(emails);
+            res.send(emails);
+        }
     });
 };
 
 exports.findAll = function(req, res) {
-    db.collection('emails', function(err, collection) {
-        collection.find().toArray(function(err, items) {
-            res.send(items);
-        });
+    EmailModel.find().sort('-updatedate').execFind(function (err,data) {
+        res.send(data);
     });
 };
 
 
 exports.addEmail = function(req, res) {
-    var email = req.body;
-    console.log('Adding email: ' + JSON.stringify(email));
-    db.collection('emails', function(err, collection) {
-        collection.insert(email, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('Success: ' + JSON.stringify(result[0]));
-                res.send(result[0]);
-            }
-        });
+
+    CountersModel.increment('email', function (err, result) {
+        if (err) {
+            console.error('Counter on emailid save error: ' + err);
+            return;
+        }else{
+            var email1 = new EmailModel({
+                emailid : result.countnext,
+                emailname : req.body.emailname,
+                couponcode : req.body.couponcode,
+                updatedate : new Date()
+            });
+            email1.save( function( err, email1, count ){
+                if (err){
+                    console.log('Error adding email: ' + err);
+                }else{
+                    console.log('Adding email: ' + JSON.stringify(email1));
+//            console.log('Success: ' + JSON.stringify(result[0]));
+                    res.send(email1);
+                }
+            });
+            return;
+        }
     });
-}
+};
+
 
 exports.updateEmail = function(req, res) {
-    var id = req.params.id;
+//    var id = req.params.id;
+    var id = req.body.emailid;
     var email = req.body;
     console.log('Updating email: ' + id);
     console.log(JSON.stringify(email));

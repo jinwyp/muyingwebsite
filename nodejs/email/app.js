@@ -8,8 +8,8 @@
 var express = require('express'),
     Validator = require('validator').Validator,
     exphbs  = require('express3-handlebars'),
-    emails = require('./models/emails'),
-    mongoose = require('mongoose');
+    emails = require('./models/emails');
+
 var app = express();
 
 
