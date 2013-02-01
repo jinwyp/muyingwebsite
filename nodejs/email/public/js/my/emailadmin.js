@@ -49,13 +49,14 @@ head.ready(function () {
 
         events: {
             "click #save_email": "saveEmail",
-            "click #add_product": "addProduct"
+            "click #add_product": "addProduct",
+            "change input": "changeInput"
         },
 
         saveEmail: function(e){
             e.preventDefault();
             this.model.save();
-            console.log(22);
+            console.log(this.model);
         },
 
         addProduct: function(e){
@@ -72,6 +73,10 @@ head.ready(function () {
             product.set("emailid", this.model.get("emailid"));
             app.v.product = new app.view.emailProduct({ model: product });
             this.$el.find("#productbox").append(app.v.product.el);
+        },
+
+        changeInput: function(){
+            console.log(this.model);
         }
     });
 
