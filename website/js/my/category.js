@@ -48,16 +48,15 @@ jQuery(function(){
         $(this).addClass("selected");
 
     });
+   $(".sift .order a#liprice").click(function(){
+    $(".sift .order a").removeClass("selected");
+    if ($(this).hasClass("order_desc")){
+        $(this).removeClass("order_desc").addClass("order_asc");
+    }else{
+        $(this).addClass("order_desc").removeClass("order_asc");
 
-	   $(".sift .order a#liprice").click(function(){
-		$(".sift .order a").removeClass("selected");
-        if ($(this).hasClass("order_desc")){
-			$(this).removeClass("order_desc").addClass("order_asc");
-		}else{
-			$(this).addClass("order_desc").removeClass("order_asc");
-
-		}
-	   });
+    }
+   });
 });
 
 
