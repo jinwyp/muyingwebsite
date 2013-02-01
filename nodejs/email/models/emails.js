@@ -1,13 +1,23 @@
-var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/testdb');
 
-var Server = mongo.Server,
-    Db = mongo.Db,
-    BSON = mongo.BSONPure;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+    // yay!
+});
 
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('testdb', server);
+var Schema   = mongoose.Schema;
 
-mongoose.connect('localhost', 'test');
+var Email = new Schema({
+    email_id    : String,
+    email_name  : String,
+    couponcode : String
+});
+
+
+mongoose.model( 'Email', Email );
+
 
 db.open(function(err, db) {
     if(!err) {
@@ -55,7 +65,7 @@ exports.addEmail = function(req, res) {
             }
         });
     });
-}
+};
 
 exports.updateEmail = function(req, res) {
     var id = req.params.id;
