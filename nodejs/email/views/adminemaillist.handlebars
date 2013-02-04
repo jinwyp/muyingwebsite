@@ -1,0 +1,80 @@
+            <div class="rightmenubar hero-unit">
+                <H3>
+                    <a href="#global">Email 模板定制</a>
+                </H3>
+                <div class="span1">
+                        <a href="#email/add" class="btn btn-primary ">新增</a>
+                </div>
+            </div>
+            <div class="row-fluid" id="emaillistbox">
+                <div class="rightsearchoptionbox hero-unit">
+                    <div class="row-fluid">
+                        <div class="span2">
+                            <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn dropdown-toggle">ALL 所有
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">网站注册</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">手机注册</a>
+                                    </li>
+
+
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">这里放链接</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="span8 inputbox">
+                            <label>E-mail活动名称:</label>
+                            <input type="text" placeholder="请填入活动名称" />
+                        </div>
+
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton">查询</button>
+                        </div>
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton">导出Excel</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--/rightsearchoptionbox-->
+
+                <div class="row-fluid" >
+                    <table class="table table-bordered"   >
+                        <thead>
+                            <tr>
+                                <th>活动ID</th>
+                                <th>活动名称</th>
+                                <th>优惠码</th>
+                                <th>更新时间</th>
+                                <th>管理</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="emailsinglebox" >
+                            <script id="emailSingleTemplate" type="text/javascript">
+
+                                <td><a href="#email/{{ emailid }}" >{{ emailid }} </a></td>
+                                <td><a href="#email/{{ emailid }}" >{{ emailname }}</a></td>
+                                <td>{{ couponcode }}</td>
+                                <td>{{ datecreated }}</td>
+                                <td>
+                                    是 <a href="" id="" onclick="return confirm('确定吗?');">取消资格</a>
+                                </td>
+
+                            </script>
+                        </tbody>
+                    </table>
+
+                </div><!--/row-->
+
+            </div>

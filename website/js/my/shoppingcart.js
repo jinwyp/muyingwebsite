@@ -17,7 +17,7 @@ head.ready(function () {
         render: function(){
 
             var tmp = Handlebars.compile( this.template );
-            this.$el.html(tmp( this.model.toJSON()) );
+            this.$el.html(tmp( this.model.toJSON() ) );
 
             this._modelBinder.bind(this.model, this.el);
 

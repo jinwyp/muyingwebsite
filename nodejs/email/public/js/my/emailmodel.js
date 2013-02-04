@@ -23,11 +23,38 @@ head.ready(function () {
         defaults : {
             emailid:null,
             emailname : '',
-            couponcode : ''
+            emaillink : '',
+            headpic1 : '',
+            headpic2 : '',
+            headpic3 : '',
+            headpic4 : '',
+            headpic5 : '',
+            headpic6 : '',
+            borderpic : '',
+            bottempic1 : '',
+            bottempic2 : '',
+            bottempic3 : '',
+            bottempic4 : '',
+            couponcode : '',
+            coupondate : '',
+            products:{}
         },
-        url: '/rest/emails',
-        idAttribute: "emailid"
+
+        idAttribute: "emailid",
+        urlRoot: '/rest/emails',
+
+        setproducts: function(products){
+            this.set('products', products);
+
+        }
     });
+
+    /* Collection 邮件活动列表信息模型  */
+    app.collection.Emaillist = Backbone.Collection.extend({
+        model: app.model.Email,
+        url: '/rest/emails'
+    });
+
 
     /* Model 一个商品信息模型 */
     app.model.Product = Backbone.Model.extend({

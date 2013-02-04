@@ -33,10 +33,13 @@ app.get('/', function(req, res){
     res.render('email');
 });
 
-app.get('/adminemail', function(req, res){
-    res.render('adminemail');
-});
-
+//app.get('/adminemail', function(req, res){
+//    res.render('adminemail');
+//});
+//
+//app.get('/adminemaillist', function(req, res){
+//    res.render('adminemail');
+//});
 
 app.get('/rest/emails', emails.findAll);
 app.get('/rest/emails/:id', emails.findById);

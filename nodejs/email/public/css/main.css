@@ -30,8 +30,12 @@ body {
 }
 
 .rightmenubar h3{
-
     margin: 2px 0;
+    float: left;
+}
+
+.rightmenubar .span1{
+    float: right;
 }
 
 .rightsearchoptionbox {

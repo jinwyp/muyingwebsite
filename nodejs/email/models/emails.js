@@ -3,16 +3,29 @@ mongoose.connect('mongodb://localhost/testdb');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
+db.once('open', function () {
     // yay!
 });
 
 var Schema   = mongoose.Schema;
 
+var ProductSchema = new Schema({
+    emailid    : Number,
+    productfinalprice  : Number,
+    productmarketprice  : Number,
+    productid    : Number,
+    productintro    : String,
+    productname : String,
+    productpic : String,
+    producturl : String
+});
+
+
 var EmailSchema = new Schema({
     emailid    : Number,
     emailname  : String,
     couponcode : String,
+    products : [ProductSchema],
     updatedate : Date
 });
 
@@ -53,16 +66,12 @@ Counter1.save();
 
 exports.findById = function(req, res) {
     var id = req.params.id;
-    var email1 = new EmailModel({
-        emailid :  req.params.id
-    });
 
-    EmailModel.find({ emailid: id }, function (err, emails) {
+    EmailModel.findOne({ emailid: id }, function (err, data) {
         if (err) {
-
+            console.log(err);
         }else{
-            console.log(emails);
-            res.send(emails);
+            res.send(data);
         }
     });
 };
@@ -79,62 +88,66 @@ exports.addEmail = function(req, res) {
     CountersModel.increment('email', function (err, result) {
         if (err) {
             console.error('Counter on emailid save error: ' + err);
-            return;
         }else{
             var email1 = new EmailModel({
                 emailid : result.countnext,
                 emailname : req.body.emailname,
                 couponcode : req.body.couponcode,
+                products : req.body.products,
                 updatedate : new Date()
             });
-            email1.save( function( err, email1, count ){
+            email1.save( function( err, email, count ){
                 if (err){
                     console.log('Error adding email: ' + err);
                 }else{
-                    console.log('Adding email: ' + JSON.stringify(email1));
+                    console.log('Adding email: ' + JSON.stringify(email));
 //            console.log('Success: ' + JSON.stringify(result[0]));
-                    res.send(email1);
+                    res.send(email);
                 }
             });
-            return;
         }
     });
 };
 
 
 exports.updateEmail = function(req, res) {
-//    var id = req.params.id;
-    var id = req.body.emailid;
-    var email = req.body;
-    console.log('Updating email: ' + id);
-    console.log(JSON.stringify(email));
-    db.collection('emails', function(err, collection) {
-        collection.update({'_id':new BSON.ObjectID(id)}, wine, {safe:true}, function(err, result) {
-            if (err) {
-                console.log('Error updating email: ' + err);
-                res.send({'error':'An error has occurred'});
-            } else {
-                console.log('' + result + ' document(s) updated');
-                res.send(email);
-            }
-        });
+    var query = { emailid: req.params.id };
+
+    var email1 = new EmailModel({
+        _id      : req.body._id,
+        emailname : req.body.emailname,
+        couponcode : req.body.couponcode,
+        products : req.body.products,
+        updatedate : new Date()
     });
-}
+    console.log('Updating email: ' +  req.params.id);
+    console.log(JSON.stringify(email1));
+
+    EmailModel.findOneAndUpdate(query,  {emailname: req.body.emailname,  couponcode : req.body.couponcode, products : req.body.products, updatedate : new Date()} ,  function( err, email ){
+        if (err) {
+            console.log('Error updating email: ' + err);
+            res.send({'error':'An error has occurred'});
+        } else {
+            console.log(' document(s) updated');
+            res.send(email);
+        }
+    });
+};
+
 
 exports.deleteEmail = function(req, res) {
+    var query = { emailid: req.params.id };
     var id = req.params.id;
     console.log('Deleting email: ' + id);
-    db.collection('emails', function(err, collection) {
-        collection.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
-            if (err) {
-                res.send({'error':'An error has occurred - ' + err});
-            } else {
-                console.log('' + result + ' document(s) deleted');
-                res.send(req.body);
-            }
-        });
+    EmailModel.findOneAndRemove(query, function (err, email) {
+        if (!err) {
+            console.log("document(s) deleted");
+            return res.send(email);
+        } else {
+            console.log('An error has occurred - ' + err);
+        }
     });
-}
+};
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/

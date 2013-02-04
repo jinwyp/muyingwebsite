@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>baby_joy_confluence_edm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="js/head.min.js"></script>
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<script id="edmTemplate" type="text/x-handlebars-template">
+<br>
+
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+        <td><a href="{{emaillink}}" target="_blank"><img src="{{headpic1}}" width="600" height="150" alt="{{emailname}}" style="display:block;border:0" /></a></td>
+    </tr>
+    <tr>
+        <td><img src="{{headpic2}}" width="600" height="15" alt="购买以下任意商品" style="display:block;border:0" /></td>
+    </tr>
+    <tr>
+        <td>
+            <table align="center" cellpadding="0" cellspacing="0" width="600" border="0" >
+                <tr>
+                    <td><img src="{{headpic3}}" width="322" height="26" alt="购物车页输即可" style="display:block;border:0" /></td>
+                    <td width="73" border="0" align="center" cellpadding="0" cellspacing="0" style="background-color:#ffff00; "><span style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ff0000; line-height:10px; font-weight:bold">{{couponcode}}</span></td>
+                    <td><img src="{{headpic4}}" width="205" height="26" alt="" style="display:block;border:0" /></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td><a href="{{emaillink}}" target="_blank"><img src="{{headpic5}}" width="600" height="95" alt="{{coupondate}}" style="display:block;border:0" /></a></td>
+    </tr>
+    <tr>
+        <td><table width="600" height="1" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="10" bgcolor="#cd2443" style="background:#cd2443"><img src="{{borderpic}}" width="10" height="1419" alt="" style="display:block;border:0" /></td>
+                <td width="580">
+                    <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0"><tr>
+                        <td align="" style=""><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+                            <tr>
+                                <td id="productlinebox"><span style="background:#FFFFFF"></span>
+                                </td>
+                            </tr>
+
+                        </table></td></tr></table></td>
+                <td width="10" bgcolor="#cd2443" style="background:#cd2443"><img src="{{borderpic}}" width="10" height="1419" alt="" style="display:block;border:0" /></td>
+        </table>
+        </td></tr>
+    <tr>
+        <td><a href="{{emaillink}}" target="_blank"><img src="{{bottempic1}}" width="600" height="90" alt="新年快乐！欢迎在母婴之家购物，祝您购物愉快！客户服务热线：400-820-1000 （早上8:00-晚上9:00）商品价格或促销内容如有变动，以母婴之家网站价格为准" style="display:block;border:0" /></a></td>
+    </tr>
+    <tr>
+        <td><a href="mailto:#mail:UNSUBEMAIL#" target="_blank"><img src="{{bottempic2}}" width="600" height="17" alt="如果您不愿意继续接受来自母婴之家的邮件，请点击此处退订" style="display:block;border:0" /></a></td>
+    </tr>
+    <tr>
+        <td><a href="{{emaillink}}" target="_blank"><img src="{{bottempic3}}" width="600" height="19" alt="Copyright @ 2004-2012 muyingzhijia.com All Rights Reserved" style="display:block;border:0" /></a></td>
+    </tr>
+    <tr>
+        <td><img src="{{bottempic4}}" width="600" height="129" alt="" style="display:block;border:0" />
+        </td>
+    </tr>
+</table>
+</script>
+
+
+<script id="singleProductTemplate" type="text/x-handlebars-template">
+    <table width="270" border="0" cellpadding="0" cellspacing="0" >
+        <tr>
+            <td width="270" align="left" style="padding-right:7px; padding-left:12px;" colspan="2" >
+                <a href="{{producturl}}" target="_blank"><img src="{{productpic}}" width="271" height="265" alt="{{productname}}" style="display:block;border:0" /></a>
+            </td>
+        </tr>
+        <tr>
+            <td width="270" height="37" style="font-family:'微软雅黑'; padding-left:10px" colspan="2">
+                <span style="color:#666666;font-size:15px;padding-left:3px;font-weight:bold;">{{productname}}</span>
+                <span style="font-size:12px;padding-left:3px;color:#666; font-weight:bold;"><br>{{productintro}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td width="130" style="font-family:'微软雅黑'; padding-left:10px"><span style="color:#ff4e02;font-size:18px;padding-left:3px;font-weight:bold;">¥{{productfinalprice}}</span>
+                <span style="font-size:12px;padding-left:3px;text-decoration:line-through;color:#666; font-weight:bold;">¥{{productmarketprice}}</span>
+            </td>
+            <td width="140"><a href="{{producturl}}" target="_blank"><img src="http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_19.gif" width="128" height="45" alt="" style="display:block;border:0" /></a></td>
+        </tr>
+    </table>
+</script>
+
+<script id="twoProductTemplate" type="text/x-handlebars-template">
+
+    <tr id="productbox">
+
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img width="580" height="14" style="display:block;border:0" alt="" src="http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_20.jpg">
+        </td>
+    </tr>
+
+</script>
+
+<script type="text/javascript">
+    head.js("js/jquery-1.7.2.min.js",
+            "js/bootstrap.js",
+            "js/underscore-1.4.4.min.js ",
+            "js/backbone-0.9.10.min.js",
+            "js/backbone_modelbinder-0.1.6.min.js",
+            "js/handlebars-rc1.min.js",
+            "js/my/emailmodel.js",
+            "js/my/emailfront.js"
+    );
+</script>
+
+</body>
+</html>
