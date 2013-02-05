@@ -127,7 +127,7 @@ head.ready(function () {
         headpic4 : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_05.jpg',
         headpic5 : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_06.jpg',
         headpic6 : '',
-        borderpic : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_07.jpg',
+        borderpic : '',
         bottempic1 : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_68.jpg',
         bottempic2 : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_69.jpg',
         bottempic3 : 'http://img.muyingzhijia.com/edm/2013/0122toys/images/baby_joy_confluence_edm0121_70.jpg',
