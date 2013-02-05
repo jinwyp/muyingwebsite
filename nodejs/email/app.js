@@ -30,7 +30,7 @@ app.configure(function() {
 
 
 app.get('/', function(req, res){
-    res.render('email');
+    res.render('adminemaillist');
 });
 
 //app.get('/adminemail', function(req, res){

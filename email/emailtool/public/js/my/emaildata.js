@@ -111,10 +111,10 @@ head.ready(function () {
     app.co.plist1.add(app.m.product4);
     app.co.plist1.add(app.m.product5);
     app.co.plist1.add(app.m.product6);
-    app.co.plist1.add(app.m.product7);
-    app.co.plist1.add(app.m.product8);
-    app.co.plist1.add(app.m.product9);
-    app.co.plist1.add(app.m.product10);
+//    app.co.plist1.add(app.m.product7);
+//    app.co.plist1.add(app.m.product8);
+//    app.co.plist1.add(app.m.product9);
+//    app.co.plist1.add(app.m.product10);
 
 
     app.m.email1 = new app.model.Email({
