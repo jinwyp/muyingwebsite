@@ -17,6 +17,9 @@ var app = express();
 
 
 //app.engine('html', ejs.renderFile);
+
+app.engine('handlebars', exphbs({defaultLayout: 'maintemplate'}));
+
 app.configure(function() {
 
     app.set('views', __dirname + '/backend/views');
@@ -78,8 +81,6 @@ app.use(function(err, req, res, next){
 
 
 
-
-
 // Have the server start listening on port 3000.
 app.listen(3000);
-console.log('Listening on port 3000');
+console.log('Listening on port 3000, good');
