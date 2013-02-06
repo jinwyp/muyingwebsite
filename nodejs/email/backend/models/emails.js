@@ -1,11 +1,12 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/testdb');
-
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     // yay!
 });
+
+
 
 var Schema   = mongoose.Schema;
 
@@ -42,8 +43,8 @@ CountersSchema.statics.increment = function (schemaName, callback) {
     return this.collection.findAndModify({ _id: schemaName }, [], { $inc: { countnext: 1 } }, callback);
 };
 
-var EmailModel = mongoose.model( 'Email', EmailSchema );
-var CountersModel = mongoose.model( 'Counters', CountersSchema );
+var EmailModel = mongoose.model( 'emails', EmailSchema );
+var CountersModel = mongoose.model( 'counters', CountersSchema );
 var Counter1 = new CountersModel({
     _id :'email'
 });
@@ -150,6 +151,20 @@ exports.deleteEmail = function(req, res) {
 };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 // Populate database with sample data -- Only used once: the first time the application is started.
 // You'd typically not find this code in a real-life app, since the database would already exist.
@@ -181,3 +196,5 @@ var populateDB = function() {
     });
 
 };
+
+db.close();

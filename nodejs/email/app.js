@@ -7,27 +7,42 @@
  */
 var express = require('express'),
     Validator = require('validator').Validator,
-    exphbs  = require('express3-handlebars'),
-    emails = require('./models/emails');
+    exphbs = require('express3-handlebars'),
+//    ejs = require('ejs'),
+//    emails = require('./backend/models/emails'),
+    products = require('./backend/models/products');
+
 
 var app = express();
 
 
-
-app.engine('handlebars', exphbs({defaultLayout: 'maintemplate'}));
+//app.engine('html', ejs.renderFile);
 app.configure(function() {
 
-    app.set('views', __dirname + '/views');
+    app.set('views', __dirname + '/backend/views');
+    app.engine('handlebars', exphbs({defaultLayout: 'maintemplate', layoutsDir:"backend/views/layouts/"}));
     app.set('view engine', 'handlebars');
+
+    app.use(express.favicon());
+//    app.use(express.compress());    //启用压缩
+    app.use(express.logger('dev'));
     app.use(express.cookieParser());
     app.use(express.session({ secret: 'secret goes here' }));
-    app.use(express.bodyParser());
+    app.use(express.bodyParser()); // parse json request bodies (as well as others), and place the result in req.body
+
     app.use(app.router);
     app.use(express.csrf());
-    app.use(express.static(__dirname + '/public'));
+    app.use(express.static(__dirname + '/frontend'));
+//    app.use(express.static(path.join(__dirname, '/frontend'), {maxAge:31557600000}));
 });
 
+app.configure('development', function(){
+    app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+});
 
+app.configure('production', function(){
+    app.use(express.errorHandler());
+});
 
 app.get('/', function(req, res){
     res.render('adminemaillist');
@@ -41,11 +56,18 @@ app.get('/', function(req, res){
 //    res.render('adminemail');
 //});
 
-app.get('/rest/emails', emails.findAll);
-app.get('/rest/emails/:id', emails.findById);
-app.post('/rest/emails', emails.addEmail);
-app.put('/rest/emails/:id', emails.updateEmail);
-app.delete('/rest/emails/:id', emails.deleteEmail);
+//app.get('/rest/emails', emails.findAll);
+//app.get('/rest/emails/:id', emails.findById);
+//app.post('/rest/emails', emails.addEmail);
+//app.put('/rest/emails/:id', emails.updateEmail);
+//app.delete('/rest/emails/:id', emails.deleteEmail);
+
+
+app.get('/rest/products', products.findAll);
+app.get('/rest/products/:id', products.findById);
+app.post('/rest/products', products.addProduct);
+app.put('/rest/products/:id', products.updateProduct);
+app.delete('/rest/products/:id', products.deleteProduct);
 
 
 app.use(function(err, req, res, next){

@@ -148,5 +148,33 @@ head.ready(function () {
     });
 
 
+    /* Model 一个商品信息模型 */
+    app.model.ProductDetail = Backbone.Model.extend({
+        defaults : {
+            productid:null,
+            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
+            productintro : '今日特惠',
+            producturl : '',
+            productpic : '',
+            productmarketprice : 9999,
+            productnormailprice : 9999,
+            producttimelimitedprice : 9999,
+            starttime : '',
+            endtime : '',
+            limitedstock : 10,
+            userlimitedstock : 3,
+            totalstock : 20,
+            productquantity : 1,
+            productfinalprice : 999
+        },
+        idAttribute: "productid",
+        urlRoot: '/rest/products'
+    });
+
+    /* Collection 商品列表信息模型  */
+    app.collection.ProductDetaillist = Backbone.Collection.extend({
+        model: app.model.ProductDetail,
+        url: '/rest/products'
+    });
 });
 

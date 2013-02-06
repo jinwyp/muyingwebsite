@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>母婴之家网站后台管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/head.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+</head>
+
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">
+                <img width="170" height="50"  alt=""/>
+            </a>
+
+            <div class="btn-group pull-right">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="icon-user"></i>用户名
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">个人信息</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="#">母婴之家网站后台管理首页</a>
+                    </li>
+                    <li>
+                        <a href="#about">常用链接1</a>
+                    </li>
+                    <li>
+                        <a href="#contact">常用链接1</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">菜单 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </div>
+    <!--/.navbar-inner -->
+</div>
+<!--/.navbar navbar-fixed-top -->
+
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header leftmenuheader">商品管理</li>
+                    <li>
+                        <a href="#">商品管理-新</a>
+                    </li>
+                    <li>
+                        <a href="#">评价管理</a>
+                    </li>
+                    <li>
+                        <a href="#">咨询管理</a>
+                    </li>
+                    <li>
+                        <a href="#">满减管理</a>
+                    </li>
+                    <li>
+                        <a href="#">赠品管理</a>
+                    </li>
+                    <li>
+                        <a href="#">换购管理</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!--/.well -->
+        </div>
+        <!--/span2-->
+
+
+        <div class="span10" id="rightbox">
+
+            <div class="rightmenubar hero-unit">
+                <H3>
+                    <a href="#">商品管理</a>
+                </H3>
+                <div class="span1">
+                    <a href="#email/add" class="btn btn-primary ">新增</a>
+                </div>
+            </div>
+
+            <div class="row-fluid" id="listbox">
+                <script id="ProductListTemplate" type="text/x-handlebars-template">
+                <div class="rightsearchoptionbox hero-unit">
+                    <div class="row-fluid">
+                        <div class="span2">
+                            <div class="btn-group">
+                                <button data-toggle="dropdown" class="btn dropdown-toggle">ALL 所有
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">普通商品</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">限时促销商品</a>
+                                    </li>
+
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">这里放链接</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="span8 inputbox">
+                            <label>商品名称:</label>
+                            <input type="text" placeholder="请填入商品名称" />
+                        </div>
+                    </div><!--/row-fluid-->
+
+                    <div class="row-fluid">
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton">查询</button>
+                        </div>
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton">导出Excel</button>
+                        </div>
+                    </div><!--/row-fluid-->
+                </div> <!--/rightsearchoptionbox-->
+
+                <div class="row-fluid" >
+                    <table class="table table-bordered"   >
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>商品名称</th>
+                            <th>会员价</th>
+                            <th>限时价</th>
+                            <th>促销开始时间</th>
+                            <th>促销结束时间</th>
+                        </tr>
+                        </thead>
+                        <tbody id="productsinglebox" >
+
+                        </tbody>
+                    </table>
+                </div><!--/row-fluid-->
+                </script>
+
+                <script id="ProductListSingleTemplate" type="text/x-handlebars-template">
+                    <td> <a href="#email/{{ emailid }}" >{{ emailid }} </a></td>
+                    <td> <a href="#email/{{ emailid }}" >{{ emailname }}</a></td>
+                    <td> {{ couponcode }}</td>
+                    <td> {{ updatedate }}</td>
+                    <td> {{ updatedate }}</td>
+                    <td>  <a href="" id="" onclick="return confirm('确定吗?');">暂时无法使用</a> </td>
+                </script>
+
+
+                <script id="ProductDetailTemplate" type="text/x-handlebars-template">
+                <div class="rightinputbox hero-unit" >
+
+                    <div class="row-fluid">
+                        <div class="spa10 inputbox">
+                            <label>邮件活动名称:</label>
+                            <input type="text" placeholder="请填入邮箱" name="emailname"/>
+                        </div>
+                        <div class="spa10 inputbox">
+                            <label>填入优惠码:</label>
+                            <input type="text" placeholder="请填入优惠码" name="couponcode"/>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton" id="save_email">保存</button>
+                        </div>
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton" id="add_product">再添加两个商品</button>
+                        </div>
+                        <div class="span4 inputbox">
+                            <button href="#" class="btn btn-large btn-primary searchbutton" id="del_email">删除</button>
+                        </div>
+                    </div>
+
+                </div><!--/rightinputbox-->
+                </script>
+
+            </div><!--/emaillistbox-->
+
+
+
+
+
+        </div>
+        <!--/span10-->
+    </div>
+    <!--/row-->
+    <footer>
+        <p>Copyright @ 2012 母婴之家 上海好丽家电子商务有限公司 版权所有</p>
+    </footer>
+</div>
+<!--/.fluid-container-->
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+    head.js("js/jquery-1.7.2.min.js",
+            "js/bootstrap.js",
+            "js/underscore-1.4.4.min.js ",
+            "js/backbone-0.9.10.min.js",
+            "js/backbone_modelbinder-0.1.6.min.js",
+            "js/handlebars-rc1.min.js",
+            "js/model/emailmodel.js",
+            "js/view/productadmin.js"
+    );
+</script>
+</body>
+</html>

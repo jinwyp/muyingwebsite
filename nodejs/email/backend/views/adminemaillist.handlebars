@@ -61,8 +61,8 @@
                         </thead>
 
                         <tbody id="emailsinglebox" >
-                            <script id="emailSingleTemplate" type="text/javascript">
-
+                            <script id="emailSingleTemplate" type="text/x-handlebars">
+                                {% raw %}
                                 <td><a href="#email/{{ emailid }}" >{{ emailid }} </a></td>
                                 <td><a href="#email/{{ emailid }}" >{{ emailname }}</a></td>
                                 <td>{{ couponcode }}</td>
@@ -70,7 +70,7 @@
                                 <td>
                                     是 <a href="" id="" onclick="return confirm('确定吗?');">取消资格</a>
                                 </td>
-
+                                {% endraw %}
                             </script>
                         </tbody>
                     </table>
