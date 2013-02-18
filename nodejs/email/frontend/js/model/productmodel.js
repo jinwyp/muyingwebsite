@@ -24,6 +24,9 @@ head.ready(function () {
             productid:null,
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
             productintro : '今日特惠',
+            productredtitle : '',
+            productredtitleurl : '',
+            productpricetext: '',
             producturl : '',
             productpic : '',
             productmarketprice : 9999,
@@ -35,7 +38,16 @@ head.ready(function () {
             userlimitedstock : 3,
             totalstock : 20,
             productquantity : 1,
-            productfinalprice : 999
+            productfinalprice : 999,
+            promotiontab:"",
+            combostarttime : '',
+            comboendtime : '',
+            comboquantity1 : '',
+            comboprice1 : '',
+            comboquantity2 : '',
+            comboprice2 : '',
+            comboquantity3 : '',
+            comboprice3 : ''
         },
         idAttribute: "productid",
         urlRoot: '/rest/products'

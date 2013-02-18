@@ -71,6 +71,23 @@ body {
 .inputbox  input{
     width: 380px;
 }
+.smallinput input{
+    width: 120px;
+}
+
+.selectinput input{
+    float: left;
+    width: 20px;
+    line-height: 25px;
+    height: 25px;
+}
+
+.selectinput label{
+    float: left;
+    width: 80px;
+    line-height: 30px;
+    height: 30px;
+}
 
 .searchbutton{
 	width:180px;
