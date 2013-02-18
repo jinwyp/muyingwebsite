@@ -54,6 +54,19 @@ head.ready(function () {
             this._modelBinder.bind(this.model, this.el);
             this.$el.find("#timelimitedbox").hide();
             this.$el.find("#combobox").hide();
+            this.$el.find('#starttime').datepicker({
+                format: 'yyyy-mm-dd'
+            });
+            this.$el.find('#endtime').datepicker({
+                format: 'yyyy-mm-dd'
+            });
+
+            this.$el.find('#combostarttime').datepicker({
+                format: 'yyyy-mm-dd'
+            });
+            this.$el.find('#comboendtime').datepicker({
+                format: 'yyyy-mm-dd'
+            });
         },
 
         events: {
