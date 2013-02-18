@@ -52,22 +52,39 @@ head.ready(function () {
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp );
             this._modelBinder.bind(this.model, this.el);
-
+            this.$el.find("#timelimitedbox").hide();
+            this.$el.find("#combobox").hide();
         },
 
         events: {
             "click #save_email": "saveProduct",
-            "click #del_email": "delProduct"
+            "click #del_email": "delProduct",
+            "change": "showTab"
         },
 
         saveProduct: function(e){
             e.preventDefault();
-            
+
             this.model.save();
         },
         delProduct: function(e){
             e.preventDefault();
             this.model.destroy();
+        },
+        showTab: function(e){
+            console.dir(this.model.toJSON());
+            if(this.model.get("promotiontab") == "timelimited"){
+                this.$el.find("#timelimitedbox").show();
+            }else{
+                this.$el.find("#timelimitedbox").hide();
+            }
+
+            if(this.model.get("promotiontab") == "combo"){
+                this.$el.find("#combobox").show();
+            }else{
+                this.$el.find("#combobox").hide();
+            }
+
         }
     });
 

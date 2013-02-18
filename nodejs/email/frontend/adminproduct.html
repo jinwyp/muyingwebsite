@@ -210,53 +210,119 @@
                 <div class="rightinputbox hero-unit" >
 
                     <div class="row-fluid">
-                        <div class="spa10 inputbox">
+                        <div class="span10 ">
+                        </div>
+                        <div class="span10 inputbox">
+                            <label>商品ID:</label>
+                            <input type="text" placeholder="请填入商品ID" name="productid"/>
+                        </div>
+                        <div class="span10 inputbox">
                             <label>商品名称:</label>
                             <input type="text" placeholder="请填入商品名称" name="productname"/>
                         </div>
-                        <div class="spa10 inputbox">
+                        <div class="span10 inputbox">
                             <label>商品介绍:</label>
                             <input type="text" placeholder="请填入商品介绍" name="productintro"/>
                         </div>
-                        <div class="spa10 inputbox">
+                        <div class="span10 inputbox">
+                            <label>商品红字附加标题:</label>
+                            <input type="text" placeholder="请填入红字附加标题" name="productredtitle"/>
+                        </div>
+                        <div class="span10 inputbox">
+                            <label>商品红字附加标题链接:</label>
+                            <input type="text" placeholder="请填入红字附加标题链接" name="productredtitleurl"/>
+                        </div>
+                        <div class="span10 inputbox">
+                            <label>商品价格处显示文字:</label>
+                            <input type="text" placeholder="例如 促销价 会员价,  默认是会员价" name="productpricetext"/>
+                        </div>
+                        <div class="span10 inputbox">
                             <label>市场价:</label>
                             <input type="text" placeholder="请填入市场价" name="productmarketprice"/>
                         </div>
-                        <div class="spa10 inputbox">
+                        <div class="span10 inputbox">
                             <label>会员价:</label>
                             <input type="text" placeholder="请填入会员价" name="productnormailprice"/>
-                        </div> 
-                        <div class="spa10 inputbox">
-                            <label>限时促销价:</label>
-                            <input type="text" placeholder="请填入限时促销价" name="producttimelimitedprice"/>
                         </div>
-                        <div class="spa10 inputbox">
-                            <label>促销开始时间:</label>
-                            <input type="text" placeholder="请填入促销开始时间" name="starttime"/>
-                        </div>                         
-                        <div class="spa10 inputbox">
-                            <label>促销结束时间:</label>
-                            <input type="text" placeholder="请填入促销结束时间" name="endtime"/>
-                        </div>
-                        <div class="spa10 inputbox">
-                            <label>促销限量库存:</label>
-                            <input type="text" placeholder="请填入促销限量库存" name="limitedstock"/>
-                        </div> 
-                        <div class="spa10 inputbox">
-                            <label>促销时用户限购数量:</label>
-                            <input type="text" placeholder="请填入用户限购数量" name="userlimitedstock"/>
-                        </div>
-                        <div class="spa10 inputbox">
+                        <div class="span10 inputbox">
                             <label>总库存:</label>
                             <input type="text" placeholder="请填入总库存" name="totalstock"/>
-                        </div>   
-                        <div class="spa10 inputbox">
+                        </div>
+                        <div class="span10 inputbox">
                             <label>商品url:</label>
                             <input type="text" placeholder="请填入商品url" name="producturl"/>
                         </div>
-                                                                                          
+                        <div class="span10 inputbox">
+                            <label>促销类型:</label>
+                            <div class="span2 selectinput"><input type="radio"  name="promotiontab" value = "none" id="none"><label for="none">无促销</label></div>
+                            <div class="span2 selectinput"><input type="radio"  name="promotiontab" value = "timelimited" id="timelimited"><label for="timelimited">限时促销</label></div>
+                            <div class="span2 selectinput"><input type="radio"  name="promotiontab" value = "combo" id="combo"><label for="combo">多买打折</label></div>
+                            <div class="span2 selectinput"><input type="radio"  name="promotiontab" value = "groupon" id="groupon"><label for="groupon">团购</label></div>
+                        </div>
                     </div>
 
+                    <div class="row-fluid" id="timelimitedbox">
+                        <div class="span10 ">
+                        </div>
+                        <div class="span10 inputbox">
+                            <label for="producttimelimitedprice">限时促销价:</label>
+                            <input type="text" placeholder="请填入限时促销价" name="producttimelimitedprice" id="producttimelimitedprice" />
+                        </div>
+                        <div class="span10 inputbox">
+                            <label for="starttime">促销开始时间:</label>
+                            <input type="text" placeholder="请填入促销开始时间" name="starttime" id="starttime"/>
+                        </div>
+
+                        <div class="span10 inputbox">
+                            <label for="endtime">促销结束时间:</label>
+                            <input type="text" placeholder="请填入促销结束时间" name="endtime" id="endtime"/>
+                        </div>
+                        <div class="span10 inputbox">
+                            <label for="limitedstock">促销时库存限购数量:</label>
+                            <input type="text" placeholder="请填入促销期间库存限购数量" name="limitedstock" id="limitedstock" />
+                        </div>
+
+                        <div class="span10 inputbox">
+                            <label for="userlimproducturl">每个用户限购数量:</label>
+                            <input type="text" placeholder="请填入促销期间每个用户限购数量" name="userlimproducturl" id="userlimproducturl" />
+                        </div>
+                    </div>
+
+                    <div class="row-fluid" id="combobox">
+                        <div class="span10 ">
+                        </div>
+                        <div class="span10 inputbox">
+                            <label for="combostarttime">促销开始时间:</label>
+                            <input type="text" placeholder="请填入促销开始时间" name="combostarttime" id="combostarttime" />
+                        </div>
+                        <div class="span10 inputbox">
+                            <label for="comboendtime">促销结束时间:</label>
+                            <input type="text" placeholder="请填入促销结束时间" name="comboendtime" id="comboendtime"/>
+                        </div>
+
+                        <div class="row-fluid" >
+                            <div class="span4 inputbox smallinput">
+                                <label for="comboquantity1">当一次购买数量超过:</label>
+                                <input type="text"  placeholder="商品数量" name="comboquantity1" id="comboquantity1"/>
+                            </div>
+                            <div class="span4 inputbox smallinput">
+                                <label for="comboprice1">价格为:</label>
+                                <input type="text" placeholder="促销价格" name="comboprice1" id="comboprice1" />
+                            </div>
+                        </div>
+                        <div class="row-fluid" >
+                            <div class="span4 inputbox smallinput">
+                                <label for="comboquantity2">当一次购买数量超过:</label>
+                                <input type="text"  placeholder="商品数量" name="comboquantity1" id="comboquantity2"/>
+                            </div>
+                            <div class="span4 inputbox smallinput">
+                                <label for="comboprice2">价格为:</label>
+                                <input type="text" placeholder="促销价格" name="comboprice1" id="comboprice2" />
+                            </div>
+                        </div>
+
+
+                    </div>
                     <div class="row-fluid">
                         <div class="span4 inputbox">
                             <button href="#" class="btn btn-large btn-primary searchbutton" id="save_email">保存</button>
