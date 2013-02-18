@@ -1,8 +1,46 @@
 //定义全局变量
 head.ready(function () {
 
-    /* View 开始一个  */
+    /* View 商品列表  */
+    app.view.ProductList = Backbone.View.extend({
+        template: $('#ProductListTemplate').html(),
+        initialize: function(){
+            this.render();
+        },
+
+        render: function(){
+            var tmp = Handlebars.compile( this.template );
+            this.$el.html(tmp ) ;
+
+            this.$el.find('#productsinglebox').empty();
+
+            this.collection.each(this.showProduct, this);
+        },
+        showProduct: function(product){
+            app.v.product2 = new app.view.ProductSingleList({ model: product })
+            this.$el.find('#productsinglebox').append(app.v.product2.el);
+        }
+    });
+
+    /* View 商品列表单条商品  */
+    app.view.ProductSingleList = Backbone.View.extend({
+        tagName: 'tr',
+        template: $('#ProductListSingleTemplate').html(),
+
+        initialize: function(){
+            this.render();
+        },
+
+        render: function(){
+            var tmp = Handlebars.compile( this.template );
+            this.$el.html(tmp( this.model.toJSON() ) ) ;
+        }
+    });
+
+
+/* View 单个详细商品  */
     app.view.Product = Backbone.View.extend({
+        
         template: $('#ProductDetailTemplate').html(),
 
         initialize: function(){
@@ -24,9 +62,7 @@ head.ready(function () {
 
         saveProduct: function(e){
             e.preventDefault();
-            app.m.product2 = new app.model.Product({emailid : this.model.get('emailid')});
-            this.model.setproducts(this.collection.toJSON());
-            console.log(this.model);
+            
             this.model.save();
         },
         delProduct: function(e){
@@ -34,45 +70,6 @@ head.ready(function () {
             this.model.destroy();
         }
     });
-
-
-    /* View 商品列表  */
-    app.view.productList = Backbone.View.extend({
-        template: $('#ProductListTemplate').html(),
-        initialize: function(){
-            this.render();
-        },
-
-        render: function(){
-            var tmp = Handlebars.compile( this.template );
-            this.$el.html(tmp ) ;
-
-            this.$el.find('#productsinglebox').empty();
-
-            this.model.each(this.showProduct, this);
-        },
-        showProduct: function(product){
-            app.v.product = new app.view.productSingleList({ model: product })
-            this.$el.find('#productsinglebox').append(app.v.product.el);
-        }
-    });
-
-    /* View 商品列表单条商品  */
-    app.view.productSingleList = Backbone.View.extend({
-        tagName: 'tr',
-        template: $('#ProductListSingleTemplate').html(),
-
-        initialize: function(){
-            this.render();
-        },
-
-        render: function(){
-            var tmp = Handlebars.compile( this.template );
-            this.$el.html(tmp( this.model.toJSON() ) ) ;
-        }
-    });
-
-
 
 
 
@@ -86,35 +83,35 @@ head.ready(function () {
         },
 
         initialize: function () {
-            this.adminProductAdd();
+            
         },
 
         adminProductList: function() {
 
-            app.co.plist = new app.collection.ProductDetaillist();
+            app.co.plist = new app.collection.ProductList();
             app.co.plist.fetch({success: function(){
-            app.v.plist = new app.view.productList({ model: app.co.plist , el: $("#listbox") });
-
+                app.v.plist = new app.view.ProductList({ collection: app.co.plist , el: $("#listbox") });
             } });
         },
 
         adminProductDetail: function(id) {
-            app.m.email2 = new app.model.Email({emailid: id});
-            app.m.email2.fetch({success: function(){
 
-                app.co.plist2 = new app.collection.Productlist(app.m.email2.get('products'));
-
-                app.v.email2 = new app.view.Email({ model: app.m.email2, collection: app.co.plist2 });
+            app.m.product2 = new app.model.Product({productid: id});
+            app.m.product2.fetch({success: function(){
+                
+                app.v.product2 = new app.view.Product({ model: app.m.product2});
+                $("#listbox").html(app.v.product2.el);
                 /* 	        	$("#rightbox").append(new UserView({model: app.model.user1, el: $("#userlist") }).el);	   */
-                $("#emailbox").html(app.v.email2.el);
-                $("#emailbox").show();
+ 
             }});
 
         },
 
         adminProductAdd: function() {
-            app.m.product1 = new app.model.ProductDetail();
+            app.m.product1 = new app.model.Product();
+            
             app.v.product1 = new app.view.Product({ model: app.m.product1 });
+            $("#listbox").html(app.v.product1.el);
         }
 
     });
