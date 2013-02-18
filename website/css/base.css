@@ -2,11 +2,12 @@ body {font: 12px/1.5 tahoma, arial, sans-serif;}
 
 /*font*/
 h1 {font-size: 16px;}
-h2, h3, h4 {font-size: 14px;}
-h5, h6 {font-size: 12px;}
+h2, h3, h4 {font-size: 14px;font-weight: 400;}
+h5, h6 {font-size: 12px;font-weight: 400;}
 .fb {font-weight: 700;}
-a, .link {color: #333; text-decoration: none;}
+a, .link {color: #333; text-decoration: none; }
 a:hover, .hover {text-decoration: underline; color: #e60000;}
+a:focus {outline:none;}
 .link-blue {color: #619eb1;}
 .link-blue:hover {color: #ff7800;}
 .bg-white {background-color: #fff;}
