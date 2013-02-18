@@ -145,13 +145,13 @@ ul.free-goods li .now {color: #e60000;}
 
 /*商品介绍*/
 .wrap-info .main .hd {background-color: #fff;border-top:1px solid #878787;border-bottom: 1px solid #fff;}
-.wrap-info .main .mod-goodsInfo .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; position: relative;}
-.mod-goodsInfo .bd {padding:10px; border-top:0 none;}
+.wrap-info .main .mod-goodsInfo .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; _overflow:hidden;}
+.mod-goodsInfo .bd {padding:10px; border-top:0 none; position: relative;}
 .mod-goodsInfo .hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
 .mod-goodsInfo .hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 27px; width: 108px; padding: 0 10px; text-align: center;}
 .mod-goodsInfo .hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
-.mod-goodsInfo .hd li.status-on {border-color: #f4f4f4; position: relative; }
-.mod-goodsInfo .hd li.status-on h3 {background-color: #fff; height: 38px;}
+.mod-goodsInfo .hd li.status-on {border-color: #f4f4f4; position: relative;}
+.mod-goodsInfo .hd li.status-on h3 {background-color: #fff;height: 28px;}
 .mod-goodsInfo .hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
 
 /*评论回复*/
@@ -187,7 +187,7 @@ ul.free-goods li .now {color: #e60000;}
 .list-comment .title .point strong {color:#f90; font-size:14px;}
 .list-comment .text {color: #1a1a1a; padding:5px 0; }
 
-.list-comment .reply { position: relative;margin-top: 10px; width:660px; background: #f4f4f4; word-break: normal; word-wrap: break-word;}
+.list-comment .reply { position: relative;margin-top: 10px; background: #f4f4f4; word-break: normal; word-wrap: break-word;}
 .list-comment .reply .reply-more {padding: 10px 18px 0;}
 .list-comment .reply .list-reply li {border-bottom: 1px solid #fff; overflow: hidden; padding: 10px; vertical-align: top;}
 .list-comment .reply .list-reply .reply {margin: 0; overflow: hidden;}
