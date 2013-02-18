@@ -1,0 +1,29 @@
+.box{margin-top:10px;}
+/*tab-select*/
+.tab-select {width: 100%; border-bottom: 3px solid #ff7800; overflow: hidden;}
+.tab-select li {float: left; margin-right: 10px; height: 32px; padding: 0 20px; font: 400 18px/32px "Microsoft Yahei", SimHei; cursor: pointer; border-top-left-radius: 6px; border-top-right-radius: 6px;}
+.tab-select .current {background-color: #ff7800; color: #fff;}
+
+/*category*/
+.category-select {margin-bottom: 20px; overflow: hidden; zoom: 1;}
+.category-select li {float: left; display: inline; width: 84px; height: 30px; margin-left: 15px; display: inline; line-height: 30px; background-color: #fff6d7; text-align: center; cursor: pointer; color: #ff7800; font-weight: 700;}
+.category-all .m {width: 485px; margin-bottom: 10px;}
+.category-all .mt {height: 30px; line-height: 30px; background: url("../images/bg_allcategory.gif") repeat scroll 0 0 transparent;}
+.category-all .mt h2 {width: 86px; text-align: right; font-weight: 800;}
+.category-all dl {padding: 5px 0; width: 485px; border-bottom: 1px dashed #f4f4f4; line-height: 24px; overflow: hidden;}
+.category-all dt {float: left; margin-right: 10px; width: 100px; color: #ff7800; font-weight: 800; text-align: right;}
+.category-all dt a {color: #ff7800;}
+.category-all dd {float: left; width: 350px;}
+.category-all dd em {float: left;}
+.category-all dd a {margin-right: 16px; white-space: nowrap;}
+
+/*brand*/
+.brand-list {width: auto; height: auto;}
+.brand-recommend {width: 998px; margin-bottom: 30px; padding-bottom: 15px; border: 1px solid #e0e0e0; background-color: #f4f4f4; overflow: hidden;}
+.brand-recommend h2 {padding: 10px 0 0 12px; font-weight: 700;}
+.brand-list dl {float: left; margin: 10px 0 0 10px; display: inline; padding: 0 5px; width: 100px; height: 70px; background-color: #fff; border: 1px solid #e0e0e0; text-align: center;}
+.brand-list dl dt {padding-top: 5px; border-bottom: 1px solid #f4f4f4; margin-bottom: 5px;}
+.brand-select {position: relative; z-index: 10;}
+.brand-select li {float: left; width: 96px; height: 30px; margin-right: 5px; line-height: 30px; background-color: #ff7800; text-align: center; cursor: pointer; color: #fff; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.brand-select li.current {width: 94px; background-color: #1a1a1a; color: #1a1a1a; font-weight: 700; border: 1px solid #e0e0e0; border-bottom: 1px solid #fff; margin-bottom: -1px; zoom: 1;}
+.brandWrap {float: left; position: relative; width: 998px; padding-bottom: 15px; border: 1px solid #e0e0e0; overflow: hidden; z-index: 9;}

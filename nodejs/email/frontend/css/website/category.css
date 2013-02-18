@@ -1,0 +1,113 @@
+.crumbs {clear: both; margin: 10px 0;}
+/**sidebar**/
+.sidebar .bd {width: 198px;}
+
+/*category_sort*/
+.category_sort {font-size: 12px;}
+.category_sort li {padding: 5px 0 5px 20px;}
+
+/*goods_sort*/
+.goods_sort dl {width: 166px; border-bottom: 1px dashed #ebebeb; overflow: hidden; position: relative; padding: 6px 10px 7px 20px;}
+.goods_sort .num {position: absolute; top: 5px; left: 5px; text-align: center; color: #fff; margin-right: 5px; background: #bababa; margin-top: 4px; width: 12px; height: 12px; font: 800 9px/12px Verdana, Geneva, sans-serif; border-radius: 4px;}
+.goods_sort .n01 {background: #e60000;}
+.goods_sort .n02, .goods_sort span.n03 {background: #ff7800;}
+.goods_sort dd {display: none;}
+.goods_sort dd img {float: left; border: 1px solid #bababa; margin-right: 10px;}
+.goods_sort dd p {padding-left: 80px; padding-bottom: 5px;}
+.list_goods dl {width: 176px; border-bottom: 1px dashed #e0e0e0; overflow: hidden; padding: 6px 10px 7px;}
+.list_goods dt {float: left; width: 82px;}
+.list_goods dd {float: right; width: 94px;}
+.list_goods dt img {float: left; border: 1px solid #bababa;}
+.list_goods dd p {padding-bottom: 5px;}
+
+/**main**/
+.main .hd {padding-left: 20px; height: 30px; line-height: 30px; background: #fff0c0; border: none; text-align: left;}
+
+/*goods_list*/
+.goods_list {width: 790px; margin-bottom: 20px; padding-bottom: 10px; text-align: center; font-size: 12px; line-height: 18px; zoom: 1;}
+.goods_list:after {content: "."; clear: both; display: block; height: 0; visibility: hidden;}
+.goods_list dl {float: left; width: 160px; display: inline; background: #fff; margin: 10px 20px 0 10px; padding: 5px;}
+.goods_list .goods_name {height: 54px; overflow: hidden;}
+.goods_list .goods_name span {margin-left: 3px;}
+.goods_list p {padding-top: 5px;}
+.goods_list p del {color: #878787; margin-right: 5px;}
+.goods_list p .price_now {color: #e60000; font-size: 14px; font-weight: 700;}
+.goods_list dl.hover {background-color: #fff6d7; text-decoration: none;}
+.goods_list .btn_m {margin-right: 10px; _margin-right: 5px;}
+
+/*slide*/
+.slideCat {position: relative; overflow: hidden; margin-bottom: 10px;}
+.slideCat ul {position: absolute; width: 790px; height: 280px;}
+.slideCat h3 {position: absolute; width: 98%; font-weight: 700; font-size: 12px; text-indent: 2%; line-height: 26px; z-index: 102; color: #ccc;}
+.slideCat h3 a {color: #fff;}
+.slideCat h3 a:hover {color: #f60;}
+.slideCat .slide_btns {position: absolute; right: 0; bottom: 3px; z-index: 103;}
+.slideCat .slide_btns span {float: left; width: 20px; height: 20px; margin-right: 5px; background-color: #fff; color: #f90; cursor: pointer; font-size: 12px; line-height: 20px; text-align: center; font-weight: 700;}
+.slideCat .slide_btns span.current {background-color: #f90; color: #fff; font-size: 13px;}
+.slideCat .slide_lay {position: absolute; background: #1a1a1a; height: 26px; width: 100%; z-index: 101;}
+.attrSelect .hd {height: 28px; line-height: 28px; background: url(../images/hd_sidebar.gif) repeat-x; border-bottom: 1px solid #bababa;}
+
+/*sift*/
+.attrSelect ul {overflow: hidden; padding: 0 10px 10px;}
+.attrSelect ul li {padding-top: 10px; width: 100%; border-bottom: 1px dashed #ccc; overflow: hidden; position: relative;}
+.attrSelect ul li dd {float: left; display: inline-block; padding-right: 2px; height: 30px; width: 168px;}
+.attrSelect ul li dl {float: right; width: 680px; overflow: hidden;}
+.attrSelect ul li strong {float: left; width: 80px; text-align: center; font-weight: 700;}
+.attrSelect dd a:hover, .attrSelect dd a.selected {display: inline-block; height: 22px; line-height: 22px; background-color: #ff7800; color: #fff; font-weight: 700; text-decoration: none; border-radius: 4px; padding: 0 5px;}
+.attrSelect ul li .more {position: absolute; right: 0; top: 10px; color: #e60000; cursor: pointer;}
+.sift {height: 30px; line-height: 30px; margin-top: 10px; border-bottom: 2px solid #ff7800;}
+.order li {float: left; margin-right: 2px;}
+.order a {width: 66px; height: 30px; display: block; background: #f4f4f4; font-weight: 700; text-align: center; cursor: pointer; border-top-left-radius: 6px; border-top-right-radius: 6px;}
+.order .selected, .order a:hover {background-color: #ff7800; color: #fff; text-decoration: none;}
+.order .order_desc, .order .order_asc {background: #ff7800 url(../images/icon_order.gif) no-repeat 2px 0; color: #fff;}
+.order .order_asc {background-position: 2px -30px;}
+.showStyle {float: left; margin-left: 60px; _margin-top: 8px; display: inline;}
+.showStyle a.switch_thumb {width: 38px; height: 16px; display: inline-block; vertical-align: middle; background: url(../images/icon_showstyle.gif) no-repeat 0 0; cursor: pointer;}
+.showStyle a.switch_thumb:hover {opacity: 0.75;}
+.showStyle a.swap {background-position: 0 bottom;}
+.pagin {float: right;}
+.pagin a, .pagin .disabled {border: 1px solid #ff7800; color: #ff7800; margin-left: 10px; padding: 3px 5px;}
+.pagin .disabled {border: 1px solid #bababa; color: #bababa;}
+
+/**category all**/
+.box {margin-top: 10px;}
+
+/*tab-select*/
+.tab-select {width: 100%; border-bottom: 3px solid #ff7800; overflow: hidden;}
+.tab-select li {float: left; margin-right: 10px; height: 32px; font: 400 18px/32px "Microsoft Yahei", SimHei; cursor: pointer; border-top-left-radius: 6px; border-top-right-radius: 6px; padding: 0 20px;}
+.tab-select .current {background-color: #ff7800; color: #fff;}
+
+/*category*/
+.category-select {margin-bottom: 20px; overflow: hidden; zoom: 1;}
+.category-select li {float: left; width: 84px; height: 30px; margin-left: 15px; display: inline; line-height: 30px; background-color: #fff6d7; text-align: center; cursor: pointer; color: #ff7800; font-weight: 700;}
+.category-all .m {width: 485px; margin-bottom: 10px;}
+.category-all .mt {height: 30px; line-height: 30px; background: url(../images/bg_allcategory.gif) repeat scroll 0 0 transparent;}
+.category-all .mt h2 {width: 86px; text-align: right; font-weight: 700;}
+.category-all dl {width: 485px; border-bottom: 1px dashed #f4f4f4; line-height: 24px; overflow: hidden; padding: 5px 0;}
+.category-all dt {float: left; margin-right: 10px; width: 100px; color: #ff7800; font-weight: 800; text-align: right;}
+.category-all dd em {float: left;}
+.category-all dd a {margin-right: 16px; white-space: nowrap;}
+
+/*brand*/
+.brand-list {width: auto; height: auto;}
+.brand-recommend {width: 998px; margin-bottom: 30px; padding-bottom: 15px; border: 1px solid #bababa; background-color: #f4f4f4; overflow: hidden;}
+.brand-recommend h2 {font-weight: 700; padding: 10px 0 0 12px;}
+.brand-list dl {float: left; display: inline; width: 100px; height: 70px; background-color: #fff; border: 1px solid #bababa; text-align: center; margin: 10px 0 0 10px; padding: 0 5px;}
+.brand-list dl dt {padding-top: 5px; border-bottom: 1px solid #f4f4f4; margin-bottom: 5px;}
+.brand-select {position: relative; z-index: 10;}
+.brand-select li {float: left; width: 96px; height: 30px; margin-right: 5px; line-height: 30px; background-color: #ff7800; text-align: center; cursor: pointer; color: #fff; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.brand-select li.current {width: 94px; background-color: #fff; color: #1a1a1a; font-weight: 700; border: 1px solid #bababa; border-bottom: 1px solid #fff; margin-bottom: -1px; zoom: 1;}
+.brandWrap {float: left; position: relative; width: 998px; padding-bottom: 15px; border: 1px solid #bababa; overflow: hidden; z-index: 9;}
+.search-result .title {font-weight: 700; font-size: 14px; text-align: center; padding: 5px 0;}
+
+/*search*/
+.search-result .hd strong {margin-right: 10px; color: #e60000;}
+.category_sort .hd, .main .hd h3 {color: #ff7800; font-weight: 700;}
+.category_sort .hd a, .category-all dt a {color: #ff7800;}
+.category_sort .current, .pagin .text {font-weight: 700;}
+.goods_sort del, .goods_sort span, .list_goods del, .list_goods span {display: block;}
+.goods_sort del, .list_goods del {color: #878787;}
+.goods_sort .price_now, .list_goods .price_now, .pagin .text strong {color: #e60000; font-weight: 700;}
+.order, .category-all dd {float: left; width: 350px;}
+
+
