@@ -153,7 +153,11 @@ ul.free-goods li .now {color: #e60000;}
 .mod-goodsInfo .hd li.status-on {border-color: #f4f4f4; position: relative;}
 .mod-goodsInfo .hd li.status-on h3 {background-color: #fff;height: 28px;}
 .mod-goodsInfo .hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
-
+.mod-detail-info {margin-bottom: 10px; overflow: hidden;}
+.mod-detail-info .mod-hd h3 {padding-bottom:5px; margin-bottom:5px; border-bottom: 1px solid #878787; zoom:1;}
+.id-features dl {float:left; width:360px; padding-bottom: 10px; line-height: 24px;}
+.id-features dl dt {float:left; padding:0 5px; width: 60px; margin-right: 10px; background-color: #f4f4f4;}
+.id-features dl dd {float:left;}
 /*评论回复*/
 .arrow-top {position: absolute; left: 28px; top: -11px; width: 12px; height: 12px; display: inline-block; overflow: hidden; color: #f4f4f4;}
 .arrow-top i {position: absolute; bottom: -11px; font: 12px/21px Simsun; }
