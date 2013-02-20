@@ -127,7 +127,7 @@ ul.free-goods li .now {color: #e60000;}
 .icon-favi {float:left; margin-top:8px; margin-right:2px; width:16px; height:16px; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
 
 /*分享*/
-.mod-share {margin-top:10px; padding:5px; height: 22px; line-height:22px;}
+.mod-share {padding:5px; height: 22px; line-height:22px;}
 
 /*组合购*/
 .wrap-combor { margin: 10px 0; overflow: hidden;}
@@ -144,16 +144,15 @@ ul.free-goods li .now {color: #e60000;}
 .mod-relatedBuy .goods_list dl{width:130px; margin-right: 7px;}
 
 /*商品介绍*/
-.wrap-info .main .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; _overflow:hidden;background-color: #fff; }
-.wrap-info .main .bd {border-top:0 none; position: relative;}
-.mod-goodsInfo .bd {padding:10px;}
-.tab-hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
-.tab-hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 26px;  padding: 0 10px; text-align: center;}
-.mod-goodsInfo .tab-hd li h3 {width:100px;}
-.tab-hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
-.tab-hd li.status-on {border-color: #f4f4f4; position: relative;}
-.tab-hd li.status-on h3 {background-color: #fff;height: 28px;}
-.tab-hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
+.wrap-info .main .hd {background-color: #fff;border-top:1px solid #878787;border-bottom: 1px solid #fff;}
+.wrap-info .main .mod-goodsInfo .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; _overflow:hidden;}
+.mod-goodsInfo .bd {padding:10px; border-top:0 none; position: relative;}
+.mod-goodsInfo .hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
+.mod-goodsInfo .hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 27px; width: 108px; padding: 0 10px; text-align: center;}
+.mod-goodsInfo .hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
+.mod-goodsInfo .hd li.status-on {border-color: #f4f4f4; position: relative;}
+.mod-goodsInfo .hd li.status-on h3 {background-color: #fff;height: 28px;}
+.mod-goodsInfo .hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
 .mod-detail-info {margin-bottom: 10px; overflow: hidden;}
 .mod-detail-info .mod-hd h3 {padding-bottom:5px; margin-bottom:5px; border-bottom: 1px solid #878787; zoom:1;}
 .id-features dl {float:left; width:360px; padding-bottom: 10px; line-height: 24px;}
