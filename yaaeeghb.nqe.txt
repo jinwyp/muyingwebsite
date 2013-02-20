@@ -1,0 +1,27 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch 0220-4
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    website/js/jqueryplugin/jquery.easing.1.3.min.js
+#	deleted:    website/js/jqueryplugin/jquery.mousewheel.min.js
+#	deleted:    website/js/jqueryplugin/jquery.sliderkit.1.9.2.pack.js
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   website/css/shopcart.css
+#	modified:   website/css/sliderkit-core.css
+#	modified:   website/goods_detail.html
+#	modified:   website/shopcartbackbone.html
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	website/goods_zoom.html
+#	website/images/order/btn_arrow.png
+#	website/js/jqueryplugin/slides.min.jquery.js
+
