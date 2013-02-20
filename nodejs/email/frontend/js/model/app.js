@@ -1,49 +1,80 @@
     //定义全局变量
 head.ready(function () {
+    var app = {
+        model:{},
+        m:{},
+        modelbinder:{},
+        view:{},
+        v:{},
+        tpl:{},
+        tplpre:{},
+        collection:{},
+        co:{},
+        htmlbody:{},
+        temp: {}
+    };
+
+    window.app = app;
 
     /* Model 开始  */
+
+    /* Model 一个邮件活动信息模型 */
+    app.model.Email = Backbone.Model.extend({
+        defaults : {
+            emailid:null,
+            emailname : '',
+            emaillink : '',
+            headpic1 : '',
+            headpic2 : '',
+            headpic3 : '',
+            headpic4 : '',
+            headpic5 : '',
+            headpic6 : '',
+            borderpic : '',
+            bottempic1 : '',
+            bottempic2 : '',
+            bottempic3 : '',
+            bottempic4 : '',
+            couponcode : '',
+            coupondate : '',
+            products:{}
+        },
+
+        idAttribute: "emailid",
+        urlRoot: '/rest/emails',
+
+        setproducts: function(products){
+            this.set('products', products);
+
+        }
+    });
+
+    /* Collection 邮件活动列表信息模型  */
+    app.collection.Emaillist = Backbone.Collection.extend({
+        model: app.model.Email,
+        url: '/rest/emails'
+    });
+
 
     /* Model 一个商品信息模型 */
     app.model.Product = Backbone.Model.extend({
         defaults : {
+            emailid:0,
             productid:null,
             productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
             productintro : '今日特惠',
-            productredtitle : '',
-            productredtitleurl : '',
-            productpriceshowtext: '',
             producturl : '',
             productpic : '',
             productmarketprice : 9999,
-            productnormailprice : 9999,
-            producttimelimitedprice : 9999,
-            starttime : '',
-            endtime : '',
-            limitedstock : 10,
-            userlimitedstock : 3,
-            totalstock : 20,
-            productquantity : 1,
-            productfinalprice : 9999,
-            promotiontab:"",
-            combostarttime : '',
-            comboendtime : '',
-            comboquantity1 : '',
-            comboprice1 : '',
-            comboquantity2 : '',
-            comboprice2 : '',
-            comboquantity3 : '',
-            comboprice3 : ''
+            productfinalprice : 999
         },
-        idAttribute: "productid",
-        urlRoot: '/rest/products'
+        idAttribute: "productid"
     });
 
 
-
     /* Collection 商品列表信息模型  */
-    app.collection.ProductList = Backbone.Collection.extend({
+    app.collection.Productlist = Backbone.Collection.extend({
         model: app.model.Product,
-        url: '/rest/products',
 
         byID: function(productID){
             var found = this.find(function(item){
@@ -116,5 +147,34 @@ head.ready(function () {
 
     });
 
+
+    /* Model 一个商品信息模型 */
+    app.model.ProductDetail = Backbone.Model.extend({
+        defaults : {
+            productid:null,
+            productname : '贝亲婴儿柔湿巾10片装 贝亲婴儿柔湿巾10片装',
+            productintro : '今日特惠',
+            producturl : '',
+            productpic : '',
+            productmarketprice : 9999,
+            productnormailprice : 9999,
+            producttimelimitedprice : 9999,
+            starttime : '',
+            endtime : '',
+            limitedstock : 10,
+            userlimitedstock : 3,
+            totalstock : 20,
+            productquantity : 1,
+            productfinalprice : 999
+        },
+        idAttribute: "productid",
+        urlRoot: '/rest/products'
+    });
+
+    /* Collection 商品列表信息模型  */
+    app.collection.ProductDetaillist = Backbone.Collection.extend({
+        model: app.model.ProductDetail,
+        url: '/rest/products'
+    });
 });
 
