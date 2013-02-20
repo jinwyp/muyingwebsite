@@ -65,21 +65,17 @@ body {
 .inputbox  label{
     float: left;
     line-height: 30px;
-    padding-right: 5px;
+
     width: 150px;
 }
 .inputbox  input{
     width: 380px;
 }
-.smallinput input{
+.smallinput{
     width: 120px;
 }
-
-.selectinput input{
-    float: left;
-    width: 20px;
-    line-height: 25px;
-    height: 25px;
+.plfirst{
+    padding-left: 25px;
 }
 
 .selectinput label{
@@ -87,6 +83,25 @@ body {
     width: 80px;
     line-height: 30px;
     height: 30px;
+}
+.selectinput input{
+    float: left;
+    width: 20px;
+    line-height: 25px;
+    height: 25px;
+}
+
+.dateinput label{
+    float: left;
+    width: 150px;
+    line-height: 30px;
+    height: 30px;
+}
+.dateinput input{
+    float: left;
+    width: 150px;
+    line-height: 25px;
+    height: 25px;
 }
 
 .searchbutton{

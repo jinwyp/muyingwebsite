@@ -127,7 +127,7 @@ ul.free-goods li .now {color: #e60000;}
 .icon-favi {float:left; margin-top:8px; margin-right:2px; width:16px; height:16px; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
 
 /*分享*/
-.mod-share {padding:5px; height: 22px; line-height:22px;}
+.mod-share {margin-top:10px; padding:5px; height: 22px; line-height:22px;}
 
 /*组合购*/
 .wrap-combor { margin: 10px 0; overflow: hidden;}
@@ -144,22 +144,27 @@ ul.free-goods li .now {color: #e60000;}
 .mod-relatedBuy .goods_list dl{width:130px; margin-right: 7px;}
 
 /*商品介绍*/
-.wrap-info .main .hd {background-color: #fff;border-top:1px solid #878787;border-bottom: 1px solid #fff}
-.wrap-info .main .mod-goodsInfo .hd {padding-left:0; border-top:0 none;border-bottom:1px solid #f4f4f4;}
-.wrap-info .main .mod-goodsInfo .bd {padding:10px; border-top:0 none;}
-.mod-goodsInfo .hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  pointer; margin-right: -1px;}
-.mod-goodsInfo .hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 27px; min-width: 108px; padding: 0 10px; text-align: center;}
-.mod-goodsInfo .hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
-.mod-goodsInfo .hd .status-on {border-bottom: 0 none; border-color: #f4f4f4 #f4f4f4 -moz-use-text-color; position: relative;}
-.mod-goodsInfo .hd .status-on h3 {background-color: #fff; height: 28px;}
-.mod-goodsInfo .hd .status-on h3 a {color: #ff7800; font-weight: 700;}
-
-/*评论l回复*/
+.wrap-info .main .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; _overflow:hidden;background-color: #fff; }
+.wrap-info .main .bd {border-top:0 none; position: relative;}
+.mod-goodsInfo .bd {padding:10px;}
+.tab-hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
+.tab-hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 26px;  padding: 0 10px; text-align: center;}
+.mod-goodsInfo .tab-hd li h3 {width:100px;}
+.tab-hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
+.tab-hd li.status-on {border-color: #f4f4f4; position: relative;}
+.tab-hd li.status-on h3 {background-color: #fff;height: 28px;}
+.tab-hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
+.mod-detail-info {margin-bottom: 10px; overflow: hidden;}
+.mod-detail-info .mod-hd h3 {padding-bottom:5px; margin-bottom:5px; border-bottom: 1px solid #878787; zoom:1;}
+.id-features dl {float:left; width:360px; padding-bottom: 10px; line-height: 24px;}
+.id-features dl dt {float:left; padding:0 5px; width: 60px; margin-right: 10px; background-color: #f4f4f4;}
+.id-features dl dd {float:left;}
+/*评论回复*/
 .arrow-top {position: absolute; left: 28px; top: -11px; width: 12px; height: 12px; display: inline-block; overflow: hidden; color: #f4f4f4;}
 .arrow-top i {position: absolute; bottom: -11px; font: 12px/21px Simsun; }
 .icon-star{display: inline-block; height: 16px; line-height: 0;margin: -3px 3px 0; overflow: hidden; text-align: left; vertical-align: middle;width: 80px;background: url(../images/order/icon_star.png) no-repeat scroll 0 -16px transparent;}
 .icon-star em{display: block; height:16px; line-height:0; overflow:hidden; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
-.info-tips {padding:10px; background-color: #f4f4f4; overflow: hidden;}
+.info-tips {padding:10px; background-color: #f4f4f4; overflow: hidden; _zoom:1;}
 .satisfaction {padding: 5px; margin-bottom:10px; font-size:14px;border-bottom:1px solid #f4f4f4;}
 .satisfaction-point strong {color: #f90; font-size: 26px; font-weight: 700;}
 
@@ -168,9 +173,9 @@ ul.free-goods li .now {color: #e60000;}
 .mod-comments .comments-hd h3 {padding:0 30px; font-size:12px;}
 .mod-comments .comments-hd a {text-decoration: none;}
 .mod-comments .comments-hd .status-on { background-color: #fff; padding: 0 5px;}
-.mod-comments .comments-hd .status-on a { color: #ff7800; font-weight: 700; }
+.mod-comments .comments-hd .status-on h3 a { color: #ff7800; font-weight: 700; }
 
-.list-comment li {border-bottom: 1px solid #878787; padding:10px 0; overflow: hidden;}
+.list-comment li {border-bottom: 1px solid #878787; padding:10px 0; overflow: hidden; _zoom:1;}
 .list-comment .user {float: left; padding: 0 10px; text-align: center; width: 60px;color: #878787;}
 .list-comment .user span{ display: block;}
 .list-comment .cont {float: right; width: 660px;}
@@ -187,7 +192,7 @@ ul.free-goods li .now {color: #e60000;}
 .list-comment .title .point strong {color:#f90; font-size:14px;}
 .list-comment .text {color: #1a1a1a; padding:5px 0; }
 
-.list-comment .reply { position: relative;margin-top: 10px; width:660px; background: #f4f4f4; word-break: normal; word-wrap: break-word;}
+.list-comment .reply { position: relative;margin-top: 10px; background: #f4f4f4; word-break: normal; word-wrap: break-word;}
 .list-comment .reply .reply-more {padding: 10px 18px 0;}
 .list-comment .reply .list-reply li {border-bottom: 1px solid #fff; overflow: hidden; padding: 10px; vertical-align: top;}
 .list-comment .reply .list-reply .reply {margin: 0; overflow: hidden;}

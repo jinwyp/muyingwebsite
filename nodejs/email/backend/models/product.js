@@ -10,11 +10,15 @@ var mongoose = require('mongoose')
 
 
 var ProductSchema = new Schema({
+    pid : Number,
     productid    : Number,
     productname  : String,
     productintro : String,
     producturl : String,
     productpic : String,
+    productredtitle : String,
+    productredtitleurl : String,
+    productpriceshowtext: String,
     productmarketprice : Number,
     productnormailprice : Number,
     producttimelimitedprice : Number,
@@ -25,6 +29,14 @@ var ProductSchema = new Schema({
     totalstock : Number,
     productquantity : Number,
     productfinalprice : Number,
+    combostarttime : Date,
+    comboendtime : Date,
+    comboquantity1 : Number,
+    comboprice1 : Number,
+    comboquantity2 : Number,
+    comboprice2 : Number,
+    comboquantity3 : Number,
+    comboprice3 : Number,
     updatedate : Date
 });
 

@@ -5,12 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="shortcut icon" href="http://www.muyingzhijia.com/Template/afd5/images/myzj.ico"/>
-    <link href="css/website/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="css/website/base.css" rel="stylesheet" type="text/css"/>
-    <link href="css/website/category.css" rel="stylesheet" type="text/css"/>
-    <link href="css/website/shopcart.css" rel="stylesheet" type="text/css"/>
-    <link href="css/website/sliderkit-core.css" rel="stylesheet" type="text/css" media="screen, projection" />
-    <script src="js/lib/head.min.js"></script>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/category.css" rel="stylesheet" type="text/css"/>
+    <link href="css/shopcart.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/sliderkit-core.css" media="screen, projection" />
+    <script src="js/head.min.js"></script>
 </head>
 <body>
 <div class="toolbar">
@@ -1097,7 +1097,7 @@
 
         <div class="goods-info">
             <h1>Abbott 雅培 金装喜康力900g（智护2阶段）</h1>
-            <p class="clearfix goods-promotion"><span class="fl promotion-title">雅培奶粉400g/900g装 满300减50 （一段除外）</a></span><span class="font-gray fr goods-num">商品编号：111191</span></p>
+            <p class="clearfix goods-promotion"><span class="fl promotion-title">雅培奶粉400g/900g装 满300减50 （一段除外）</span><span class="font-gray fr goods-num">商品编号：111191</span></p>
             <ul class="mod-price">
                 <li class="clearfix item-price price-vip">
                     <div class="dt">抢购价：</div>
@@ -1285,7 +1285,11 @@
     <div class="main">
         <div id="buy_buy" class="mod-relatedBuy">
             <div class="inner">
-                <div class="hd"><h3>买过本商品的顾客还买过</h3></div>
+                <ul class="hd tab-hd">
+                    <li class="status-on">
+                        <h3><a href="#" onclick="return false" hideFocus="true">买过本商品的顾客还买过</a></h3>
+                    </li>
+                </ul>
                 <div class="bd goods_list">
                     <dl>
                         <dt><a href=""><img src="http://img.muyingzhijia.com/product/normal/1911_01_01.jpg" alt="康贝11XBC0311 幼儿机能凉鞋橘色14.5(品牌康贝Combi)" width="120px" height="120px" /></a></dt>
@@ -1332,51 +1336,65 @@
         </div>
 
         <div class="mod-goodsInfo" id="structure">
-            <ul class="hd" id="info_tit">
+            <ul id="info_tit" class="hd tab-hd">
                 <li id="t_introduce" class="status-on">
-                    <h3><a href="#" onclick="return false">商品信息</a></h3>
+                    <h3><a href="#" onclick="return false" hideFocus="true">商品信息</a></h3>
                 </li>
                 <li id="t_comment">
-                    <h3><a href="#" onclick="return false">用户评论</a></h3>
+                    <h3><a href="#" onclick="return false" hideFocus="true">用户评论</a></h3>
                 </li>
                 <li id="t_parameters">
-                    <h3><a href="#" onclick="return false">相关问答</a></h3>
+                    <h3><a href="#" onclick="return false" hideFocus="true">相关问答</a></h3>
                 </li>
                 <li id="t_warranty">
-                    <h3><a href="#" onclick="return false">售后保修</a></h3>
+                    <h3><a href="#" onclick="return false" hideFocus="true">售后保修</a></h3>
                 </li>
             </ul>
             <div class="bd clearfix" id="intro_mainTab">
                 <div class="intro-main mod-intro" id="introduce_box">
-                    <div id="c_ad" style="margin-bottom: 8px;">
-                    </div>
                     <!-- 商品特性 -->
-                    <div class="mod_detail_info id_features">
-                        <div class="mod_hd">
-                            <h3><span class="tit">商品特性</span>产品描述仅供参考，具体请查看规格参数</h3>
+                    <div class="mod-detail-info id-features">
+                        <div class="mod-hd">
+                            <h3><span class="tit">规格参数</span></h3>
                         </div>
-                        <div class="mod_bd">
-                            <p style="text-align: center">
-                            </p>
+                        <div class="mod-bd">
+                                <dl><dt>品&#12288;&#12288;牌：</dt><dd>迪士尼 CUTIES</dd></dl>
+                                <dl><dt>商品名称： </dt><dd><span title="迪士尼CUTIES 12D亲密小伙伴夹棉外套浅兰80适合1岁">迪士尼CUTIES 12...</span></dd></dl>
+                                <dl><dt>颜&#12288;&#12288;色：</dt><dd>浅兰</dd></dl>
+                                <dl><dt>产&#12288;&#12288;地：</dt><dd>上海</dd></dl>
+                                <dl><dt>规&#12288;&#12288;格：</dt><dd>80</dd></dl>
+                                <dl><dt>材&#12288;&#12288;质：</dt><dd></dd></dl>
                         </div>
                     </div>
                     <!-- 精美图片 -->
-                    <div class="mod_detail_info id_pic">
-                        <div class="mod_hd">
+                    <div class="mod-detail-info id-pic clearfix">
+                        <div class="mod-hd">
                             <h3><span class="tit">精美图片</span></h3>
                         </div>
-                        <div class="mod_bd">
-                            <p style="text-align: center">
-                            </p>
+                        <div class="mod-bd">
+                            <div style="position:relative; font-size:12px;">
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/1(1088).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/2(922).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/3(832).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/4(672).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/5(567).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/6(423).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/7(287).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/8(234).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/9(206).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/10(145).jpg" alt=""></p>
+                                <p><img width="730" height="730" src="http://img.muyingzhijia.com/product/Description/11(132).jpg" alt=""></p>
+                                <p>&nbsp;</p>
+                            </div>
                         </div>
                     </div>
                     <!-- 相关说明 -->
-                    <div id="id_link" class="mod_detail_info id_link">
-                        <div class="mod_hd">
+                    <div id="id_link" class="mod-detail-info id-link">
+                        <div class="mod-hd">
                             <h3><span class="tit">相关说明</span></h3>
-                            <i class="line"></i>
                         </div>
-                        <div class="mod_bd">
+                        <div class="mod-bd">
+
                          </div>
                     </div>
                 </div><!-- 商品介绍 -->
@@ -1786,10 +1804,12 @@
 </div><!--wrapper end-->
 
 <script type="text/javascript">
-    head.js("js/lib/jquery-1.9.1.min.js",
+    head.js("js/jquery-1.7.2.min.js",
             "js/jqueryplugin/jquery.easing.1.3.min.js",
             "js/jqueryplugin/jquery.mousewheel.min.js",
-            "js/jqueryplugin/jquery.sliderkit.1.9.2.pack.js"
+            "js/jqueryplugin/jquery.sliderkit.1.9.2.pack.js",
+            "js/my/hp1.js",
+            "js/my/category.js"
            );
 </script>
 
