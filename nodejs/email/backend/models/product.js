@@ -37,6 +37,7 @@ var ProductSchema = new Schema({
     comboprice2 : Number,
     comboquantity3 : Number,
     comboprice3 : Number,
+    promotiontab : String,
     updatedate : Date
 });
 
