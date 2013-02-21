@@ -1046,7 +1046,7 @@
             <!-- Start photoslider-bullets -->
             <div id="slides">
                 <ul class="slides_container">
-                    <li><a href="goods_zoom.html" target="_blank"></a><img src="http://img.muyingzhijia.com/product/org/70108_01_01.jpg" width="300" height="300" alt="Slide 1"></a></li>
+                    <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/70108_01_01.jpg" width="300" height="300" alt="Slide 1"></a></li>
                     <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/79661_01_01.jpg" width="300" height="300" alt="Slide 2"></a></li>
                     <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/70093_01_01.jpg" width="300" height="300" alt="Slide 3"></a></li>
                 </ul>
@@ -1794,13 +1794,10 @@
 
 <script type="text/javascript">
     head.ready(function () {
-
         $('#slides').slides({
             preload: true,
             preloadImage: 'images/loading.gif',
             effect: 'fade',
-            play: 5000,
-            pause: 2500,
             hoverPause: true
         });
 
@@ -1828,22 +1825,7 @@
             $(this).addClass("status-on");
         });
 
-        //gotop
-        var $backToTopTxt = "回顶部", $backToTopEle = $('<div class="gotop"></div>').appendTo($("body"))
-                .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
-                    $("html, body").animate({ scrollTop: 0 }, 1000);
-                }), $backToTopFun = function() {
-            var st = $(document).scrollTop(), winh = $(window).height();
-            (st > 0)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();
-//IE6下的定位
-            if (!window.XMLHttpRequest) {
-                $backToTopEle.css("top", st + winh - 166);
-            }
-        };
-        $(window).bind("scroll", $backToTopFun);
-        $(function() { $backToTopFun(); });
     });
-
 </script>
 </body>
 </html>
