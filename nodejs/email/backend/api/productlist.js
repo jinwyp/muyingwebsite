@@ -62,6 +62,7 @@ exports.addProduct = function(req, res) {
                 comboprice2 : req.body.comboprice2,
                 comboquantity3: req.body.comboquantity3,
                 comboprice3 : req.body.comboprice3,
+                promotiontab : req.body.promotiontab,
                 updatedate : new Date()
             });
             product1.save( function( err, product, count ){
@@ -107,6 +108,7 @@ exports.updateProduct = function(req, res) {
             comboprice2 : req.body.comboprice2,
             comboquantity3: req.body.comboquantity3,
             comboprice3 : req.body.comboprice3,
+            promotiontab : req.body.promotiontab,
             updatedate : new Date()  } ,  function( err, product ){
                 if (err) {
                     console.log('Error updating product: ' + err);

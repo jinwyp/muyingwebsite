@@ -82,7 +82,7 @@ head.ready(function () {
             this._modelBinder.bind(this.model, this.el, this.bingdings);
             this.$el.find("#timelimitedbox").hide();
             this.$el.find("#combobox").hide();
-
+            this.showTab();
             var that = this;
             this.$el.find('#starttime').datepicker().on('changeDate', function(ev){
                 that.model.set("starttime", ev.date);
@@ -100,6 +100,7 @@ head.ready(function () {
             this.$el.find('#comboendtime').datepicker().on('changeDate', function(ev){
                 that.model.set("comboendtime", ev.date);
             });
+
         },
 
         events: {
@@ -117,8 +118,8 @@ head.ready(function () {
             e.preventDefault();
             this.model.destroy();
         },
-        showTab: function(e){
-            console.dir(this.model.toJSON());
+        showTab: function(){
+            console.log(this.model.toJSON());
             if(this.model.get("promotiontab") == "timelimited"){
                 this.$el.find("#timelimitedbox").show();
             }else{
