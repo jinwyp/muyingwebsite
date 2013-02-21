@@ -80,9 +80,9 @@ exports.addProduct = function(req, res) {
 exports.updateProduct = function(req, res) {
     var query = { productid: req.params.id };
 
-    console.log('Prepare Updating productid: ' +  req.params.id);
+    console.log('Prepare Updating productid: ' +  req.params.id );
 
-    if(req.params.id === req.body.productid){
+    if(req.params.id == req.body.productid){
         ProductModel.findOneAndUpdate(query,  {
             productname : req.body.productname,
             productintro : req.body.productintro,
@@ -93,14 +93,14 @@ exports.updateProduct = function(req, res) {
             productmarketprice : req.body.productmarketprice,
             productnormailprice : req.body.productnormailprice,
             producttimelimitedprice : req.body.producttimelimitedprice,
-            starttime : req.body.starttime,
-            endtime : req.body.endtime,
+            starttime : new Date(req.body.starttime),
+            endtime : new Date(req.body.endtime),
             limitedstock : req.body.limitedstock,
             userlimitedstock : req.body.userlimitedstock,
             totalstock : req.body.totalstock,
             productquantity : req.body.productquantity,
-            combostarttime : req.body.combostarttime,
-            comboendtime : req.body.comboendtime,
+            combostarttime : new Date(req.body.combostarttime),
+            comboendtime : new Date(req.body.comboendtime),
             comboquantity1 : req.body.comboquantity1,
             comboprice1 : req.body.comboprice1,
             comboquantity2 : req.body.comboquantity2,
@@ -117,9 +117,9 @@ exports.updateProduct = function(req, res) {
                     res.send(product);
                 }
         });
-
     }else{
         res.send('productid not found');
+        console.log('productid not found');
     };
 
 

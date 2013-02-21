@@ -45,34 +45,67 @@ head.ready(function () {
 
         initialize: function(){
             this._modelBinder = new Backbone.ModelBinder();
+            this.bingdings = {
+                productid : {selector: '[name=productid]', converter: this.model.numberConverter},
+                productname : '[name=productname]',
+                productintro : '[name=productintro]',
+                productredtitle : '[name=productredtitle]',
+                productredtitleurl : '[name=productredtitleurl]',
+                productpriceshowtext : '[name=productpriceshowtext]',
+                producturl : '[name=producturl]',
+//                productpic : '[name=productpic]',
+                productmarketprice :{selector: '[name=productmarketprice]', converter: this.model.numberConverter},
+                productnormailprice : {selector: '[name=productnormailprice]', converter: this.model.numberConverter},
+                producttimelimitedprice : {selector: '[name=producttimelimitedprice]', converter: this.model.numberConverter},
+                starttime : {selector: '[name=starttime]', converter: this.model.dateConverter},
+                endtime : {selector: '[name=endtime]', converter: this.model.dateConverter},
+                limitedstock : {selector: '[name=limitedstock]', converter: this.model.numberConverter},
+                userlimitedstock : {selector: '[name=userlimitedstock]', converter: this.model.numberConverter},
+                totalstock : {selector: '[name=totalstock]', converter: this.model.numberConverter},
+//                productquantity : {selector: '[name=productquantity]', converter: this.model.numberConverter},
+//                productfinalprice : {selector: '[name=productfinalprice]', converter: this.model.numberConverter},
+                promotiontab :'[name=promotiontab]',
+                combostarttime : {selector: '[name=combostarttime]', converter: this.model.dateConverter},
+                comboendtime : {selector: '[name=comboendtime]', converter: this.model.dateConverter},
+                comboquantity1 : {selector: '[name=comboquantity1]', converter: this.model.numberConverter},
+                comboprice1 : {selector: '[name=comboprice1]', converter: this.model.numberConverter},
+                comboquantity2 : {selector: '[name=comboquantity2]', converter: this.model.numberConverter},
+                comboprice2 : {selector: '[name=comboprice2]', converter: this.model.numberConverter},
+                comboquantity3 : {selector: '[name=comboquantity3]', converter: this.model.numberConverter},
+                comboprice3 : {selector: '[name=comboprice3]', converter: this.model.numberConverter}  };
             this.render();
         },
 
         render: function(){
             var tmp = Handlebars.compile( this.template );
             this.$el.html(tmp );
-            this._modelBinder.bind(this.model, this.el);
+            this._modelBinder.bind(this.model, this.el, this.bingdings);
             this.$el.find("#timelimitedbox").hide();
             this.$el.find("#combobox").hide();
-            this.$el.find('#starttime').datepicker({
-                format: 'yyyy-mm-dd'
-            });
-            this.$el.find('#endtime').datepicker({
-                format: 'yyyy-mm-dd'
+
+            var that = this;
+            this.$el.find('#starttime').datepicker().on('changeDate', function(ev){
+                that.model.set("starttime", ev.date);
+                console.log(ev.date, that.model.get("starttime"));
             });
 
-            this.$el.find('#combostarttime').datepicker({
-                format: 'yyyy-mm-dd'
+            this.$el.find('#endtime').datepicker().on('changeDate', function(ev){
+                that.model.set("endtime", ev.date);
             });
-            this.$el.find('#comboendtime').datepicker({
-                format: 'yyyy-mm-dd'
+
+            this.$el.find('#combostarttime').datepicker().on('changeDate', function(ev){
+                that.model.set("combostarttime", ev.date);
+            });
+
+            this.$el.find('#comboendtime').datepicker().on('changeDate', function(ev){
+                that.model.set("comboendtime", ev.date);
             });
         },
 
         events: {
             "click #save_email": "saveProduct",
             "click #del_email": "delProduct",
-            "change": "showTab"
+            "change ": "showTab"
         },
 
         saveProduct: function(e){
@@ -97,7 +130,6 @@ head.ready(function () {
             }else{
                 this.$el.find("#combobox").hide();
             }
-
         }
     });
 

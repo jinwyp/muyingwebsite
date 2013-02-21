@@ -11,14 +11,14 @@ head.ready(function () {
             productintro : '今日特惠',
             productredtitle : '',
             productredtitleurl : '',
-            productpriceshowtext: '',
+            productpriceshowtext: '会员价',
             producturl : '',
             productpic : '',
             productmarketprice : 9999,
             productnormailprice : 9999,
             producttimelimitedprice : 9999,
-            starttime : '',
-            endtime : '',
+            starttime : 0,
+            endtime : 0,
             limitedstock : 10,
             userlimitedstock : 3,
             totalstock : 20,
@@ -34,8 +34,49 @@ head.ready(function () {
             comboquantity3 : '',
             comboprice3 : ''
         },
+        initialize : function(){
+            this.set('starttime', this.date2Converter(this.get('starttime')) );
+            this.set('endtime', this.date2Converter(this.get('endtime')) );
+            this.set('combostarttime', this.date2Converter(this.get('combostarttime')) );
+            this.set('comboendtime', this.date2Converter(this.get('comboendtime')) );
+        },
         idAttribute: "productid",
-        urlRoot: '/rest/products'
+        urlRoot: '/rest/products',
+        numberConverter: function(direction, value){
+            if (direction === Backbone.ModelBinder.Constants.ViewToModel) {
+                return parseFloat(value) ;
+            }else{
+                return value ;
+            }
+            // direction is either ModelToView or ViewToModel
+
+            // Return either a formatted value for the view or an un-formatted value for the model
+        },
+        dateConverter: function(direction, value){
+            if (direction === Backbone.ModelBinder.Constants.ViewToModel) {
+                return value ;
+            }else{
+                var dateshow = new Date(value);
+//                console.log(dateshow);
+                return dateshow.getFullYear() + '-' + (dateshow.getMonth()+1) + '-' + dateshow.getDate()   ;
+            }
+        },
+        date2Converter: function(value){
+            var dateshow = new Date(value);
+//            console.log(dateshow);
+            return dateshow.getFullYear() + '-' + (dateshow.getMonth()+1) + '-' + dateshow.getDate()   ;
+
+        },
+        addUnitConverter: function(direction, value){
+            if (direction === Backbone.ModelBinder.Constants.ViewToModel) {
+                return parseFloat(value) ;
+            }else{
+                return value + "元";
+            }
+            // direction is either ModelToView or ViewToModel
+
+            // Return either a formatted value for the view or an un-formatted value for the model
+        }
     });
 
 
