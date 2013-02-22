@@ -83,8 +83,91 @@ app.use(function(err, req, res, next){
 });
 
 
+var server = app.listen(3000);
+var io = require('socket.io').listen(server);
+
+console.log('Listening on port 3000, good');
+
+
+
+
+io.sockets.on('connection', function (socket) {
+
+    /**
+     * todo:create
+     *
+     * called when we .save() our new todo
+     *
+     * we listen on model namespace, but emit
+     * on the collection namespace
+     */
+
+//    socket.on('todo:create', function (data, callback) {
+//        var id = guid.gen()
+//            , todo = db.set('/todo/' + id, data)
+//            , json = todo._attributes;
+//
+//        socket.emit('todos:create', json);
+//        socket.broadcast.emit('todos:create', json);
+//        callback(null, json);
+//    });
+
+    /**
+     * todos:read
+     *
+     * called when we .fetch() our collection
+     * in the client-side router
+     */
+
+    socket.on('product:read', function (data, callback) {
+        var json = products.socketfindById(data);
+        console.log(products.socketfindById(data));
+        socket.emit('product:read', json);
+        callback(null, json);
+    });
+
+    /**
+     * todos:update
+     *
+     * called when we .save() our model
+     * after toggling its completed status
+     */
+
+//    socket.on('todos:update', function (data, callback) {
+//        var todo = db.get('/todo/' + data.id);
+//        todo.set(data);
+//
+//        var json = todo._attributes;
+//
+//        socket.emit('todos/' + data.id + ':update', json);
+//        socket.broadcast.emit('todos/' + data.id + ':update', json);
+//        callback(null, json);
+//    });
+
+    /**
+     * todos:delete
+     *
+     * called when we .destroy() our model
+     */
+
+//    socket.on('todos:delete', function (data, callback) {
+//        var json = db.get('/todo/' + data.id)._attributes;
+//
+//        db.del('/todo/' + data.id);
+//
+//        socket.emit('todos/' + data.id + ':delete', json);
+//        socket.broadcast.emit('todos/' + data.id + ':delete', json);
+//        callback(null, json);
+//    });
+
+});
+
+
+
+
+
+
 
 
 // Have the server start listening on port 3000.
-app.listen(3000);
-console.log('Listening on port 3000, good');
+
