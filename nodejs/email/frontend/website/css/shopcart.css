@@ -95,20 +95,7 @@ strong {font-weight: 700;}
 .cart-button {padding: 6px 0; background-color: #f4f4f4; overflow: hidden; zoom: 1;}
 
 /**详情页**/
-
-/*商品图片*/
-.picture {float: left;  z-index: 2; position: relative;}
-#slides {position: absolute; top: 0; left: 0;  border:1px solid #f4f4f4; overflow:hidden; padding:5px 5px 0; width: 300px;  z-index: 100;}
-#slides .next, #slides .prev {position: absolute; top: 138px; left: 5px; width: 24px; height: 48px; display: block; z-index: 101; background: url(../images/order/btn_arrow.png) no-repeat 0 0;}
-#slides .next {left: 280px;background-position: 0 -48px;}
-#slides .zoom {float:left; width:60px; height:29px; line-height: 29px; border-right:1px solid #f4f4f4; text-align: center;}
-.slides_container {width: 300px; height: 300px;overflow: hidden; position: relative; z-index: 100;}
-.pagination {margin-top: 10px; width: 100%; height:29px; border-top:1px solid #f4f4f4; text-align: center; position: relative;}
-.pagination li {display: inline-block; margin: 0 5px; }
-.pagination li a {float: left; display: block; width: 12px; height: 12px; line-height:0; margin-top:10px; background-image: url("../images/order/icon_bullet.png"); background-position: 0 0;overflow: hidden; text-indent: -9999px;}
-.pagination li.current a {background-position: 0 -12px;}
-
-/*商品简介*/
+.picture {float: left; width: 320px; z-index: 2; position: relative;}
 .goods-info {float:right; width:660px; z-index:1; position: relative;}
 .goods-info h1 {font:700 16px/24px Arial,verdana; word-break: break-all; white-space: normal; color: #1a1a1a;}
 .goods-info .promotion-title {color: #e60000;font-size:14px;}
@@ -140,7 +127,7 @@ ul.free-goods li .now {color: #e60000;}
 .icon-favi {float:left; margin-top:8px; margin-right:2px; width:16px; height:16px; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
 
 /*分享*/
-.mod-share {position:relative;top:360px; padding:5px; height: 22px; line-height:22px;}
+.mod-share {margin-top:10px; padding:5px; height: 22px; line-height:22px;}
 
 /*组合购*/
 .wrap-combor { margin: 10px 0; overflow: hidden;}

@@ -1,19 +1,5 @@
     //定义全局变量
 head.ready(function () {
-    window.log = function(){
-        log.history = log.history || []; // store logs to an array for reference
-        log.history.push(arguments);
-        if(this.console) {
-            arguments.callee = arguments.callee.caller;
-            var newarr = [].slice.call(arguments);
-            (typeof console.log === 'object' ? log.apply.call(console.log, console, newarr) : console.log.apply(console, newarr));
-        }
-    };
-
-    window.socket = io.connect('http://localhost');
-    log(window.socket);
-
-
     var app = {
         model:{},
         m:{},

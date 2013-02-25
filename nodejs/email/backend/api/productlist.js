@@ -11,19 +11,6 @@ Counter1.save();
 
 
 
-exports.socketfindById = function(data) {
-    var id = data.productid;
-
-    ProductModel.findOne({ productid: id }, function (err, product) {
-        if (err) {
-            console.log(err);
-        }else{
-            return(product);
-        }
-    });
-};
-
-
 exports.findById = function(req, res) {
     var id = req.params.id;
 

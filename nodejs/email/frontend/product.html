@@ -5,11 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="shortcut icon" href="http://www.muyingzhijia.com/Template/afd5/images/myzj.ico"/>
-    <link href="website/css/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="website/css/base.css" rel="stylesheet" type="text/css"/>
-    <link href="website/css/category.css" rel="stylesheet" type="text/css"/>
-    <link href="website/css/shopcart.css" rel="stylesheet" type="text/css"/>
-    <script src="js/lib/head.min.js"></script>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/category.css" rel="stylesheet" type="text/css"/>
+    <link href="css/shopcart.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/sliderkit-core.css" media="screen, projection" />
+    <script src="js/head.min.js"></script>
 </head>
 <body>
 <div class="toolbar">
@@ -1042,20 +1043,38 @@
 <div id="detail" class="wrapper">
     <div class="crumbs"><a href="/">首页</a> > <a href="">宝宝食品</a> > <a href="">牛奶粉</a> > <span>雅培金装喜康力配方奶粉900g（智护）</span></div>
     <div class="wrap-goodsInfo">
+            <!--图片展示区域-->
         <div id="imageViewerFrame" class="picture">
-            <!-- Start photoslider-bullets -->
-            <div id="slides">
-                <ul class="slides_container">
-                    <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/70108_01_01.jpg" width="300" height="300" alt="Slide 1"></a></li>
-                    <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/79661_01_01.jpg" width="300" height="300" alt="Slide 2"></a></li>
-                    <li><a href="goods_zoom.html" target="_blank"><img src="http://img.muyingzhijia.com/product/org/70093_01_01.jpg" width="300" height="300" alt="Slide 3"></a></li>
-                </ul>
-                <a href="goods_zoom.html" target="_blank" class="zoom">查看大图</a>
-                <a href="#" class="prev" title="prev"></a>
-                <a href="#" class="next" title="next"></a>
-            </div>
-
-            <div class="mod-share clearfix">
+                <!-- Start photoslider-bullets -->
+                <div class="sliderkit photoslider-bullets">
+                    <div class="zoom">
+                        <span>
+                            <a target="_blank" href="">查看大图</a>
+                        </span>
+                    </div>
+                    <div class="sliderkit-nav">
+                        <div class="sliderkit-nav-clip">
+                            <ul>
+                                <li><a href="#" title="Photo sample 01"></a></li>
+                                <li><a href="#" title="Photo sample 02"></a></li>
+                                <li><a href="#" title="Photo sample 03"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sliderkit-panels">
+                        <div class="sliderkit-panel">
+                            <img src="http://img.muyingzhijia.com/product/org/70108_01_01.jpg" alt="" width="300" height="300" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="http://img.muyingzhijia.com/product/org/79661_01_01.jpg" alt="" width="300" height="300" />
+                        </div>
+                        <div class="sliderkit-panel">
+                            <img src="http://img.muyingzhijia.com/product/org/70093_01_01.jpg" alt="" width="300" height="300" />
+                        </div>
+                    </div>
+                </div>
+                <!-- // end of photoslider-bullets -->
+            <div class="mod-share">
                         <!-- Baidu Button BEGIN -->
                         <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
                             <span class="fl">分享到：</span>
@@ -1076,12 +1095,9 @@
             </div>
         </div>
 
-        <div class="goods-info" id="productmain">
-            <script id="ProductTemplate" type="text/x-handlebars-template">
-
-            <h1 name="productname"></h1>
-            <p class="clearfix goods-promotion"><span class="fl promotion-title" name="productredtitle"></span><span class="font-gray fr goods-num">商品编号：{{productid}}</span></p>
-
+        <div class="goods-info">
+            <h1>Abbott 雅培 金装喜康力900g（智护2阶段）</h1>
+            <p class="clearfix goods-promotion"><span class="fl promotion-title">雅培奶粉400g/900g装 满300减50 （一段除外）</span><span class="font-gray fr goods-num">商品编号：111191</span></p>
             <ul class="mod-price">
                 <li class="clearfix item-price price-vip">
                     <div class="dt">抢购价：</div>
@@ -1096,7 +1112,6 @@
                     </span>
                 </li>
             </ul>
-
 
             <ul class="mod-promotion" id="goods_detail_promotion">
                 <li class="clearfix item-promotion">
@@ -1182,9 +1197,7 @@
                 </li>
             </ul>
 
-            </script>
         </div>
-
     </div>
 
     <div class="wrap-combor clearfix">
@@ -1791,34 +1804,39 @@
 </div><!--wrapper end-->
 
 <script type="text/javascript">
-    head.js("js/lib/jquery-1.9.1.min.js",
-            "js/lib/jqueryplugin/slides.min.jquery.js",
-            "js/lib/socket.io.min.js",
-            "js/lib/bootstrap.min.js",
-            "js/lib/bootstrap-datepicker.js",
-            "js/lib/underscore-min.js ",
-            "js/lib/backbone.js",
-            "js/lib/backbone_modelbinder-0.1.6.min.js",
-//            "js/lib/backbone.localstorage-min.js",
-            "js/lib/backbone.iosync.js",
-            "js/lib/backbone.iobind.js",
-            "js/lib/handlebars.js",
-            "js/model/app.js",
-            "js/model/productsocketm.js",
-            "js/view/productwebsite.js"
+    head.js("js/jquery-1.7.2.min.js",
+            "js/jqueryplugin/jquery.easing.1.3.min.js",
+            "js/jqueryplugin/jquery.mousewheel.min.js",
+            "js/jqueryplugin/jquery.sliderkit.1.9.2.pack.js",
+            "js/my/hp1.js",
+            "js/my/category.js"
            );
 </script>
 
 <script type="text/javascript">
     head.ready(function () {
-        $('#slides').slides({
-            preload: true,
-            preloadImage: 'website/images/loading.gif',
-            effect: 'fade',
-            hoverPause: true
+        $(".btn_b_r0").hover(function (e) {
+            if($(this).hasClass("btn_b_h")){
+            $(this).removeClass("btn_b_h").addClass("btn_b_r")
+            }
+            else{
+                $(this).removeClass("btn_b_r").addClass("btn_b_h")
+            }
+
         });
 
-        $(".zoom").appendTo(".pagination");
+        $(window).load(function(){
+            $(".photoslider-bullets").sliderkit({
+                auto:false,
+                circular:true,
+                mousewheel:true,
+                shownavitems:5,
+                panelfx:"sliding",
+                panelfxspeed:1000,
+                panelfxeasing:"easeOutExpo" // "easeOutExpo", "easeInOutExpo", etc.
+            });
+        });
+
         $('#replyText').bind('focus keyup input paste',function(){
             $('#replyNum').text($(this).attr("value").length);
             if ($(this).attr("value").length > 500){
@@ -1841,8 +1859,8 @@
             $("#review_header li").removeClass("status-on");
             $(this).addClass("status-on");
         });
-
     });
+
 </script>
 </body>
 </html>
