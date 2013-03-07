@@ -12,7 +12,7 @@ var onCorrectClass = "g-ipt-cor";
 
 //固定提示层的HTML
 var onMouseOnFixTextHtml = '<DIV class="txt-info-mouseon">$data$</DIV>';
-var onMouseOutFixTextHtml = '<DIV class="txt-info-mouseout">$data$</DIV>';
+var onMouseOutFixTextHtml = '<DIV class="txt-info-mouseout" style="display:none">$data$</DIV>';
 
 //初始状态，加其它几种状态
 var passwordStrengthStatusHtml = '<div id="passStrong" class="pswState"><div id="progress" class="style_ps2"></div><em class="style_ps0">弱</em><em>中</em><em>强</em></div>';
