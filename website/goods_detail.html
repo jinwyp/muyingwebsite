@@ -1096,33 +1096,39 @@
 
             <ul class="mod-promotion" id="goods_detail_promotion">
                 <li class="clearfix item-promotion">
-                    <div class="dt">促销信息：</div>
+                    <div class="dt">优惠信息：</div>
                     <div class="dd">
-                        <p class="tags-promo"><span>"满2件每件立减20!  满3件每件立减60!  满6件每件立减80! "</span></p>
-                        <p class="tags-promo"><span>指定商品买满¥500，立减¥100，每单仅能参加1次（每人仅能参加1次） </span></p>
-                        <p class="tags-promo"><span>全场买任意商品 超值换购以下商品 </span></p>
-                    </div>
-                </li>
-                <li class="clearfix item-free" id="good_detai_gift">
-                    <div class="dt">赠品：</div>
-                    <div class="dd">
-                        <ul class="free-goods">
-                            <li>
-                                <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
-                                <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
-                                <p class="price">价值：<span class="now">&yen;60.00</span></p>
-                            </li>
-                            <li>
-                                <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
-                                <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
-                                <p class="price">价值：<span class="now">&yen;60.00</span></p>
-                            </li>
-                            <li>
-                                <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
-                                <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
-                                <p class="price">价值：<span class="now">&yen;60.00</span></p>
-                            </li>
+                        <ul class="tab-hd promotion-title">
+                            <li class="status-on"><h3>满减</h3><span class="promo-tips">在购物车自动满减</span></li>
+                            <li><h3>换购</h3><span class="promo-tips">在购物车进行换购</span></li>
+                            <li><h3>赠品</h3><span class="promo-tips">在购物车领取赠品</span></li>
                         </ul>
+                        <div class="promotion-info ">
+                            <ul class="promotion-item promotion-fullReduction status-on">
+                                <li class="tags-promo"><span>"满2件每件立减20!  满3件每件立减60!  满6件每件立减80! "</span></li>
+                                <li class="tags-promo"><span>指定商品买满¥500，立减¥100，每单仅能参加1次（每人仅能参加1次）</span></li>
+                            </ul>
+                            <ul class="promotion-item promotion-redemption">
+                                <li class="tags-promo"><span>全场买任意商品可超值换购商品</span></li>
+                            </ul>
+                            <ul class="promotion-item promotion-gifts">
+                                <li>
+                                    <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
+                                    <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
+                                    <p class="price">价值：<span class="now">&yen;60.00</span></p>
+                                </li>
+                                <li>
+                                    <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
+                                    <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
+                                    <p class="price">价值：<span class="now">&yen;60.00</span></p>
+                                </li>
+                                <li>
+                                    <a href=""><img width="50" height="50" src="http://img.muyingzhijia.com/product/normal/15500_01_01.jpg" alt=""/></a>
+                                    <p class="goods-name"><a href="" title="">新安怡母乳存储杯组</a></p>
+                                    <p class="price">价值：<span class="now">&yen;60.00</span></p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -1811,6 +1817,13 @@
                 $('#replyNum').removeClass("font-red");
                 $('#btn_reply').removeClass("btn_m_g").addClass("btn_m_o").children("a").css("cursor","pointer");
             }
+        });
+
+        $("#goods_detail_promotion .promotion-title li").bind("click",function(){
+            $("#goods_detail_promotion .promotion-title li").removeClass("status-on");
+            $(this).addClass("status-on");
+            $(".promotion-item").hide();
+            $(".promotion-item").eq($(this).index()).show();
         });
 
         $("#info_tit li").bind("click",function(){

@@ -95,7 +95,13 @@ strong {font-weight: 700;}
 .cart-button {padding: 6px 0; background-color: #f4f4f4; overflow: hidden; zoom: 1;}
 
 /**详情页**/
-
+/*tab*/
+.tab-hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
+.tab-hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 26px;  padding: 0 10px; text-align: center;}
+.tab-hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
+.tab-hd li.status-on {border-color: #f4f4f4; position: relative;}
+.tab-hd li.status-on h3 {background-color: #fff;height: 28px;}
+.tab-hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
 /*商品图片*/
 .picture {float: left;  z-index: 2; position: relative;}
 #slides {position: absolute; top: 0; left: 0;  border:1px solid #f4f4f4; overflow:hidden; padding:5px 5px 0; width: 300px;  z-index: 100;}
@@ -112,7 +118,7 @@ strong {font-weight: 700;}
 .goods-info {float:right; width:660px; z-index:1; position: relative;}
 .goods-info h1 {font:700 16px/24px Arial,verdana; word-break: break-all; white-space: normal; color: #1a1a1a;}
 .goods-info .promotion-title {color: #e60000;font-size:14px;}
-.goods-info ul {padding-left:10px; padding-top:10px; overflow: hidden;}
+.goods-info ul {padding-left:10px; padding-top:10px;}
 .goods-info li {padding-bottom: 10px; position: relative; z-index: 2;}
 .goods-info li .dt {float:left; width: 60px; text-align: right; color: #878787;}
 .goods-info li .dd {padding-left:70px;}
@@ -122,11 +128,6 @@ strong {font-weight: 700;}
 .goods-info .item-buyTime em {color: #e60000; font-style:normal;}
 .goods-info .buy-type {display: inline-block; background-color: #e60000; padding: 0 2px; color: white; font-weight: normal; height: 20px; line-height: 20px;}
 .goods-info .item-promotion p {padding-bottom:5px;}
-ul.free-goods {padding-left:0;padding-top:0;}
-ul.free-goods li {float:left; margin-right:10px; width:180px; overflow: hidden;}
-ul.free-goods li img {float:left;border:1px solid #f4f4f4; }
-ul.free-goods li p {padding-left:60px; padding-bottom: 5px;}
-ul.free-goods li .now {color: #e60000;}
 .goods-info .mod-property {border-bottom: 0 none;}
 .goods-info .mod-property .dd a { background-color: #fff; margin-right:5px; border: 1px solid #bababa; cursor: pointer; display: inline-block; line-height: 24px; padding:0 6px; text-decoration: none; word-break: keep-all;}
 .goods-info .mod-property .dd a:hover, .mod-property .dd a.selected {border: 1px solid #f60; background: url("http://css.muyingzhijia.com/themes/default/Template/afd5/images/bg-selected.png") no-repeat scroll right bottom transparent; box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.6); cursor: pointer; text-decoration: none;}
@@ -135,6 +136,22 @@ ul.free-goods li .now {color: #e60000;}
 .goods-info .mod-buyInfo .col-tips {margin-top:0;}
 .goods-info .wrap-btn {padding-top: 5px;}
 .goods-info .wrap-btn .btn_b_r {margin-right:20px;}
+
+/*优惠信息*/
+ul.promotion-title {padding:0 0 0 10px;height:28px; border-bottom: 1px solid #878787;}
+.promotion-title li {padding:0;border-color:#f4f4f4;font-size:12px; color: #878787;}
+.promotion-title li h3{padding:0 10px;height:25px; line-height:24px;font-size:12px;background-color: #fff;}
+.promotion-title li.status-on{border-color:#878787;position:relative;z-index: 999;color: #1a1a1a;}
+.promotion-title li.status-on h3{height:26px;}
+
+.promotion-title .promo-tips {display:none;position: absolute; left:160px; top:0; width: 120px;height:24px;line-height:24px;color: #878787; }
+
+.promotion-item {display: none;}
+.status-on,.promotion-item li,.promotion-title .status-on .promo-tips {display: block;}
+.promotion-gifts li {float:left; margin-right:10px; width:180px; overflow: hidden;}
+.promotion-gifts li img {float:left;border:1px solid #f4f4f4; }
+.promotion-gifts li p {padding-left:60px; padding-bottom: 5px;}
+.promotion-gifts li .now {color: #e60000;}
 
 .icon-cart {float:left; width:38px; height:38px; background: url(../images/order/icon_cart.png) no-repeat scroll 0 0 transparent;}
 .icon-favi {float:left; margin-top:8px; margin-right:2px; width:16px; height:16px; background: url(../images/order/icon_star.png) no-repeat scroll 0 0 transparent;}
@@ -160,13 +177,7 @@ ul.free-goods li .now {color: #e60000;}
 .wrap-info .main .hd {padding-left:0; height:30px; border-top:0 none;border-bottom:1px solid #f4f4f4; _overflow:hidden;background-color: #fff; }
 .wrap-info .main .bd {border-top:0 none; position: relative;}
 .mod-goodsInfo .bd {padding:10px;}
-.tab-hd li {float: left; border: 1px solid #ffda71; border-bottom: 0 none;  cursor:pointer; margin-right: -1px;}
-.tab-hd li h3 {background-color: #fff6d7;border:1px solid #fff; display: block; font-size: 14px; height: 27px; line-height: 26px;  padding: 0 10px; text-align: center;}
 .mod-goodsInfo .tab-hd li h3 {width:100px;}
-.tab-hd li h3 a {color: #f90; font-weight: normal; outline: medium none; text-decoration: none;}
-.tab-hd li.status-on {border-color: #f4f4f4; position: relative;}
-.tab-hd li.status-on h3 {background-color: #fff;height: 28px;}
-.tab-hd li.status-on h3 a {color: #ff7800; font-weight: 700;}
 .mod-detail-info {margin-bottom: 10px; overflow: hidden;}
 .mod-detail-info .mod-hd h3 {padding-bottom:5px; margin-bottom:5px; border-bottom: 1px solid #878787; zoom:1;}
 .id-features dl {float:left; width:360px; padding-bottom: 10px; line-height: 24px;}
