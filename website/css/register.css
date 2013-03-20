@@ -2,10 +2,10 @@
 .sign-content {display: block; border: 1px solid #dedede; overflow: hidden; zoom: 1; padding: 20px 10px 10px;}
 .sign-main {overflow: hidden;}
 .sign-left {float: left; width: 704px;}
-.sign-right {float: left; width: 220px; display: inline; margin: 10px 0 20px 10px; padding: 0 0 0 20px; border-left: 1px solid #DEDEDE; min-height: 450px; _height: 450px;}
-.sign-title {height: 40px; font-size: 24px; line-height: 1.5; font-family: "微软雅黑"; border-bottom: 1px solid #dedede; padding: 0 20px; margin: 0px 10px 10px;}
-.sign-title-right {font-size: 14px; line-height: 1.5; font-family: "微软雅黑"; padding: 4px 0 0;}
-.sign-right-txt-link {font-size: 14px; line-height: 1.5; font-family: "微软雅黑"; text-align: left; color: #619EB1; padding: 0; margin: 10px 0;}
+.sign-right {float: left; width: 220px; display: inline; margin: 10px 0 20px 10px; padding: 0 0 0 20px; border-left: 1px solid #dedede; min-height: 450px; _height: 450px;}
+.sign-title {height: 40px; font-size: 24px; line-height: 1.5; font-family: "macrosoft yahei"; border-bottom: 1px solid #dedede; padding: 0 20px; margin: 0px 10px 10px;}
+.sign-title-right {font-size: 14px; line-height: 1.5; font-family: "macrosoft yahei"; padding: 4px 0 0;}
+.sign-right-txt-link {font-size: 14px; line-height: 1.5; font-family: "macrosoft yahei"; text-align: left; color: #619eb1; padding: 0; margin: 10px 0;}
 .sign-right-txt-link a {color: #619EB1;}
 .sign-right-list {display: block; overflow: hidden; zoom: 1;}
 .sign-right-list a.signin {width: 101px; height: 30px; display: block; text-indent: -999em; overflow: hidden; background: url(../images/sign-icons.png) no-repeat 0 -33px;}
@@ -74,35 +74,9 @@
 
 /* 下拉邮箱列表 */
 .sliderBox {position: absolute; border: 1px solid#878787; border-top: 0; background: #fff; padding: 0; display: none;}
-.sliderBox li {display: block; line-height: 22px; font-size: 12px; font-family: verdana; padding: 0 10px; cursor: pointer;}
+.sliderBox li {display: block; line-height: 22px; font-size: 12px;padding: 0 10px; cursor: pointer;}
 .sliderBox li:hover {background: #f90; color: #f4f4f4;}
 .sliderBox li.seleceted {background: #ee7407; color: #f4f4f4;}
-
-.sliderBox{
-    position: absolute;
-    border: 1px solid #999;
-    border-top: 0;
-    background: #fff;
-    padding:0;
-    display: none
-}
-.sliderBox li{
-    display: block;
-    line-height: 22px;
-    font-size: 12px;
-    font-family: verdana;
-    padding:0px 10px;
-    cursor: pointer;
-    width:100%
-}
-.sliderBox li:hover{
-    background: #FF9900;
-    color:#f6f6f6;
-}
-.sliderBox li.seleceted{
-    background: #EE7407;
-    color:#f6f6f6;
-}
 /*注册成功*/
 .suc-content {overflow: hidden; zoom: 1; padding: 0 20px 30px;}
 .suc-content .txt {font-size: 14px; line-height: 2.2; clear: both; padding: 10px;}
