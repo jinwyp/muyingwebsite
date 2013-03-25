@@ -32,7 +32,8 @@ a:focus {outline:none;}
 .hd h3 {font-weight: 700;}
 .ml10 {margin-left: 10px;}
 .mr10 {margin-right: 10px;}
-
+.mt10 {margin-top: 10px;}
+.mb10 {margin-bottom: 10px;}
 /*form*/
 input {border: 0 none; vertical-align: middle;}
 .text-input {padding: 2px; height: 20px; line-height: 20px; background-color: #fff;}

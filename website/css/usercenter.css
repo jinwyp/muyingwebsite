@@ -58,10 +58,14 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 /*账户安全*/
 .safety-form .control-label {width: 160px;}
-.suc-title, .err-title {padding-left: 80px; height: 64px; background: url("../images/usercenter/icon_64x64.gif") no-repeat 0 -64px; color: #82be0e; font: 700 22px/64px "macrosoft yahei", "simhei";}
-.err-title {background-position: 0 -128px; color: #e60000;}
 .safety-text {padding-left: 80px; line-height: 24px;}
 
+/*提示信息*/
+.suc-title, .err-title {padding-left: 80px; height: 64px; background: url("../images/usercenter/icon_64x64.gif") no-repeat 0 -64px; color: #82be0e; font: 700 22px/64px "macrosoft yahei", "simhei";}
+.err-title {background-position: 0 -128px; color: #e60000;}
+.mod-tips {padding:10px 20px;border:1px solid #fff6d7;font-size:12px;}
+.mod-tips .title {margin-bottom:10px; color: #82be0e; font-size:14px;}
+.mod-tips p {line-height: 2;}
 /*宝宝信息*/
 .baby-list dl {margin-bottom: 20px; overflow: hidden; background-color: #f4f4f4; zoom: 1;}
 .baby-list dt {padding: 0 20px; height: 28px; background-color: #e6f5d0; line-height: 28px;}

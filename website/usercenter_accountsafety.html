@@ -99,36 +99,42 @@
          </fieldset>
             </form>
     </div><!--mod-content-->
+
    <div class="mod-content hide">
-  <form accept-charset="UTF-8" action="" class="form safety-form" id="form_emailChecking" method="post">
-       <fieldset>
-           <legend>邮箱验证</legend>
-           <div class="control-group">
-               <label class="control-label">当前状态：</label>
-               <div class="controls">
-                   <strong class="font-green">已验证</strong>
+       <form accept-charset="UTF-8" action="" class="form safety-form" id="form_emailChecking" method="post">
+           <fieldset>
+               <legend>邮箱验证</legend>
+               <div class="control-group">
+                   <label class="control-label">当前状态：</label>
+                   <div class="controls">
+                       <strong class="font-red">未验证</strong><strong class="font-green hide">已验证</strong>
+                   </div>
                </div>
-           </div>
-           <div class="control-group">
-               <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
-               <div class="controls">
-                   <input class="text-input required" id="email_nowPwd" name="emailNowPwd" size="30" type="password" value="" />
-                   <div id="email_nowPwdTip" class="stickTips"></div>
+               <div class="control-group">
+                   <label class="control-label"><abbr title="required">*</abbr> 请输入当前密码：</label>
+                   <div class="controls">
+                       <input class="text-input required" id="email_nowPwd" name="emailNowPwd" size="30" type="password" value="" />
+                       <div id="email_nowPwdTip" class="stickTips"></div>
+                   </div>
                </div>
-           </div>
-           <div class="control-group">
-               <label class="control-label"><abbr title="required">*</abbr> 请输入注册时的邮箱：</label>
-               <div class="controls">
-                   <input class="text-input required" id="email_regEmail" name="regEmail" size="30" type="text" value="" />
-                   <div id="email_regEmailTip" class="stickTips"></div>
+               <div class="control-group">
+                   <label class="control-label"><abbr title="required">*</abbr> 请输入注册时的邮箱：</label>
+                   <div class="controls">
+                       <input class="text-input required" id="email_regEmail" name="regEmail" size="30" type="text" value="" />
+                       <div id="email_regEmailTip" class="stickTips"></div>
+                   </div>
                </div>
+               <div class="control-group form-actions">
+                   <label class="control-label">&nbsp;</label>
+                   <span id="submit_emailChecking" class="btn_b btn_b_o"><a href="">&nbsp;&nbsp;&nbsp;立即验证&nbsp;&nbsp;&nbsp;</a></span>
+               </div>
+           </fieldset>
+           <div class="mod-tips">
+               <div class="title"><span class="mr10">验证邮件已发送至：j*******3@163.com</span><span id="loginEmail" class="btn_b btn_b_o"><a href="">立即登录邮箱完成验证</a></span></div>
+               <p>请在24小时内完成验证，登录您的邮箱点击验证链接完成验证。</p>
+               <p class="font-gray">没收到邮件？请检查您的垃圾箱或者广告箱，有可能被误认为垃圾或者广告邮件 ！</p>
            </div>
-           <div class="control-group form-actions">
-               <label class="control-label">&nbsp;</label>
-               <span id="submit_emailChecking" class="btn_b btn_b_o"><a herf="">&nbsp;&nbsp;&nbsp;立即验证&nbsp;&nbsp;&nbsp;</a></span>
-           </div>
-       </fieldset>
-   </form>
+       </form>
    </div><!--mod-content-->
 
   <div class="mod-content hide">
@@ -150,6 +156,9 @@
                   <div class="controls">
                       <p id="get_SMScheckCode" class="btn_m btn_m_h"><a href="">获取短信校验码</a></p>
                   </div>
+                  <div class="mod-tips mt10">
+                      <p>校验码已发出，请注意查收短信，如果没有收到，你可以在<span id="verify_countDown" class="font-red">57</span>秒要求系统重新发送</p>
+                  </div>
               </div>
 
               <div class="control-group">
@@ -168,7 +177,7 @@
               </div>
               <div class="control-group form-actions">
                   <label class="control-label">&nbsp;</label>
-                  <span id="submit_phoneChecking" class="btn_b btn_b_o" ><a herf="">&nbsp;&nbsp;&nbsp;提交验证&nbsp;&nbsp;&nbsp;</a></span>
+                  <span id="submit_phoneChecking" class="btn_b btn_b_o" ><a href="">&nbsp;&nbsp;&nbsp;提交验证&nbsp;&nbsp;&nbsp;</a></span>
               </div>
           </fieldset>
       </form>
@@ -179,8 +188,6 @@
     </div>
 </div><!--wrapper-->
 
-
-
 <script type="text/javascript">
     head.js("js/jquery-1.7.2.min.js",
             "js/jqueryplugin/formvalidator/formValidator-4.1.3.js",
@@ -188,18 +195,15 @@
             "js/my/usercenter.js"
     );
 </script>
-
 <script type="text/javascript">
     head.ready(function () {
         $("#modSafety .tab-menu li").delegate('a', 'click', function (e) {
-
             $("#modSafety .tab-menu li").removeClass("status-on");
             $(e.target).parent().addClass("status-on");
-
             var wfc_table = $("#modSafety .mod-content");
             var curt_index = $(e.target).parent().index("#modSafety .tab-menu li");
             wfc_table.removeClass("show").addClass("hide");
-            wfc_table.eq(curt_index).addClass("show");
+            wfc_table.eq(curt_index).removeClass("hide").addClass("show");
         })
     });
 
