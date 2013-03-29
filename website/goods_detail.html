@@ -129,9 +129,9 @@
 <div class="wrapper">
     <div id="category-container" class="category">
         <div class="category-hd">
-            <h2><a href="category_all_less.html" target="_blank">全部商品和分类</a></h2>
+            <h2><a href="categorylist.html" target="_blank" id="btn_categoryAll">全部商品和分类</a></h2>
         </div>
-        <div id="category-panel" class="category-bd hide">
+        <div id="category_panel" class="category-bd hide">
         <div class="search-quick">
             <div id="searchTitle" class="search-title"><strong>快捷搜索</strong><a href="">奶粉</a><a href="">纸尿裤</a></div>
             <div id="searchArea" class="hide search-area">
@@ -1860,6 +1860,20 @@
         $("#review_header li").bind("click",function(){
             $("#review_header li").removeClass("status-on");
             $(this).addClass("status-on");
+        });
+
+        //左侧分类
+        $("#btn_categoryAll").bind("hover",function(){
+            $("#category_panel").removeClass("hide");
+        });
+        $("#category_panel").bind("mouseleave",function(){
+            $(this).addClass("hide");
+        });
+        $("#category_panel ul.subNavs ").bind("hover",function(){
+            $("#category_panel .subitem").hide();
+            $("#category_panel .item").removeClass("curr");
+            $(this).parent(".item").addClass("curr");
+            $(this).siblings(".subitem").show();
         });
 
     });

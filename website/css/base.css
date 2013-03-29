@@ -136,11 +136,11 @@ input {border: 0 none; vertical-align: middle;}
 .menu .shopcart .cart-list .amount a:hover {color: #ff9;}
 
 /*category*/
-.category {float: left; display: inline; margin-top: -38px; position: relative; z-index: 2;}
+.category {float: left; display: inline; margin-top: -38px; position: relative; z-index: 900;}
 .category .category-hd {width: 240px; height: 36px; background: url("../images/category/category_hd.gif") no-repeat scroll 0 0 transparent; font-size: 14px; line-height: 36px; text-align: center;}
 .category .category-hd h2 {font-weight: 700;}
 .category .category-hd h2 a {display: block; width: 240px; height: 36px; color: #ff7800; text-decoration: none;}
-.category .category-bd {padding-top: 5px; border: #ffdd9b 1px solid; border-top: 0 none; width: 238px; height: 943px; background: #fffbe1;}
+.category .category-bd {position:absolute;top:36px;left:0;z-index:910; padding-top: 5px; border: #ffdd9b 1px solid; border-top: 0 none; width: 238px; height: 943px; background: #fffbe1;}
 .category .search-quick {position: relative; z-index: 3; height: 30px; cursor: pointer; background: #ffab24 url("../images/category/arrow.gif") no-repeat -6px 2px;}
 .category .search-quick .search-title {color: #fff; font: 800 14px/30px "Microsoft YaHei", "SimHei";}
 .category .search-quick .search-title a {margin-left: 15px; font-size: 12px; color: #fff;}
@@ -152,12 +152,12 @@ input {border: 0 none; vertical-align: middle;}
 .category .search-quick .search-area .search-list label {float: left; _display: inline; width: 40px;}
 .category .search-quick .search-area .search-list select {float: right; _display: inline; width: 128px;}
 .category .search-quick .search-area .btn-quick {float: right; _display: inline; margin-top: 5px; width: 90px; height: 22px; background: url("../images/category/btn_quick.jpg") no-repeat 0 0; cursor: pointer;}
-.category .item {float: left; _display: inline; position: relative; z-index: 90; margin: 0 2px; width: 234px; display: inline; border-bottom: #fec9a1 1px solid;}
+.category .item {float: left; _display: inline; position: relative; z-index: 920; margin: 0 2px; width: 234px; display: inline; border-bottom: #fec9a1 1px solid;}
 .category .item a {color: #000;}
 .category .item a:hover {color: #ff7800;}
 .category .item h3 {padding-left: 30px; height: 24px; line-height: 24px; background-image: url("../images/category/category_icon.gif"); background-repeat: no-repeat; font-size: 14px; font-weight: 700; color: #ff7800;}
 .category .item h3 a {color: #ff7800;}
-.category .item .subNavs {border: 2px #fffbe1 solid; position: relative; z-index: 91; padding: 2px 15px 4px 8px; width: 207px; line-height: 1.6; background: url("../images/category/arrow.gif") no-repeat -10px -30px; cursor: pointer; overflow: hidden;}
+.category .item .subNavs {border: 2px #fffbe1 solid; position: relative; z-index: 921; padding: 2px 15px 4px 8px; width: 207px; line-height: 1.6; background: url("../images/category/arrow.gif") no-repeat -10px -30px; cursor: pointer; overflow: hidden;}
 .category .item .subNavs li {float: left; width: 60px; padding: 0 9px 0 0; display: inline;}
 .category .item.c1 h3 {background-position: 0 0;}
 .category .item.c2 h3 {background-position: 0 -24px;}
@@ -169,10 +169,10 @@ input {border: 0 none; vertical-align: middle;}
 .category .item.c8 h3 {background-position: 0 -168px;}
 .category .item.c9 h3 {background-position: 0 -192px;}
 .category .item.c10 h3 {background-position: 0 -216px;}
-.category .item.curr {z-index: 92;}
-.category .item.curr .subNavs {position: relative; z-index: 94; border: 2px solid #f90; border-right: 0 none; background-color: #fff;}
+.category .curr {z-index: 922;}
+.category .curr .subNavs {position: relative; z-index: 924; border: 2px solid #f90; border-right: 0 none; background-color: #fff;}
 .category .item .last {border-bottom: 0 none solid;}
-.category .item .subitem {position: absolute; z-index: 93; top: -20px; left: 230px; border: 2px #f90 solid; width: 650px; display: none; background: url("../images/category/category-sub_bg.gif") repeat-y;}
+.category .item .subitem {position: absolute; z-index: 923; top: -20px; left: 230px; border: 2px #f90 solid; width: 650px; display: none; background: url("../images/category/category-sub_bg.gif") repeat-y;}
 .category .item .subitem dl {padding: 4px 0; border-top: 1px solid #f4f4f4; overflow: hidden;}
 .category .item .subitem dl a {color: #4d4d4d; text-decoration: none;}
 .category .item .subitem dl a:hover {text-decoration: underline; color: #e60000;}
@@ -215,4 +215,4 @@ input {border: 0 none; vertical-align: middle;}
 .fixRight {left: 50%; margin-left: 503px; top: 500px; width: 36px; height: 90px; overflow: hidden; position: fixed; _position: absolute; _top: expression(documentElement.scrollTop + 500); background-attachment: fixed;}
 .fixRight a {background: url("../images/survey.gif") no-repeat scroll transparent; width: 36px; height: 90px; display: block;}
 /*gotop*/
-.gotop {display: none; width: 36px; height: 36px; position: fixed; _position: absolute; left: 50%; margin-left: 520px; bottom: 100px; _bottom: "auto"; cursor: pointer; background: url("../images/gotop.gif") no-repeat 0 0; text-indent: -99999px;}
+.gotop {display: none; width: 36px; height: 36px; position: fixed; _position: absolute; left: 50%; margin-left: 502px; bottom: 250px; _bottom: "auto"; cursor: pointer; background: url("../images/gotop.gif") no-repeat 0 0; text-indent: -99999px;}
