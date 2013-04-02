@@ -2,12 +2,12 @@
 body {color: #4d4d4d;}
 strong {font-weight: 700;}
 .img {display: block; border: 1px solid #e0e0e0; height: 62px; margin-right: 5px; padding-top: 2px; text-align: center; width: 64px;}
-.gtlt {font-family: simsun; letter-spacing: -.5em; *zoom: 1;}
+.gtlt {font-family: simSun; letter-spacing: -.5em; *zoom: 1;}
 /**popwin**/
 *html, *html body {_background-attachment: fixed; _background-image: url(about: blank);}
 *html .pop-win {position: absolute; top: expression(eval(document.documentElement.scrollTop));}
 .pop-win {position: fixed; top: 0; left: 50%; display: none; border: 8px solid #878787; overflow: hidden; background-color: #fff; z-index: 9999;}
-.pop-win .hd {height: 30px; line-height: 30px; font-family: "macrosoft yahei"; background: url("../images/logindl_bg.gif") repeat-x scroll 0 -159px transparent;}
+.pop-win .hd {height: 30px; line-height: 30px; font-family: "Microsoft YaHei"; background: url("../images/logindl_bg.gif") repeat-x scroll 0 -159px transparent;}
 .close-win {width: 24px; height: 24px; position: absolute; right: 10px; top: 3px; text-indent: -999em; overflow: hidden; background: url(../images/logindl_bg.gif) no-repeat 0 -30px;}
 .w1000 {width: 1000px; margin-left: -508px;}
 /**购物流程**/

@@ -39,11 +39,10 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .control-group:after {clear: both;}
 .control-group .control-label {float: left; width: 90px; margin-right: 10px; font-size: 14px; color: #4d4d4d; text-align: right;}
 .control-group input {padding: 4px 6px; border-radius: 3px 3px 3px 3px; display: inline-block; font-size: 14px; height: 20px; line-height: 20px;}
-.g-ipt input {float: left; border: 1px solid #bababa;}
 .controls span {vertical-align: middle; font-size: 12px;}
 .controls .font-gray {margin-left: 10px;}
 .control-group strong {font-weight: 400;}
-.mod-info .g-ipt a {color: #619eb1;}
+.text-tips a {color: #619eb1;}
 .control-tel .controls span {float: left; margin-right: 10px;}
 .form-actions span {margin-left: 0;}
 .icon-help {margin-left: 10px; padding-left: 20px; height: 16px; background: url(../images/usercenter/icon_16x16.gif) no-repeat 0 -16px;}

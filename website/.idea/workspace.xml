@@ -25,17 +25,18 @@
       <file leaf-file-name="flash_sales.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="35" selection-start="608" selection-end="608" vertical-scroll-proportion="-6.785714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/category.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="0" selection-start="8063" selection-end="8063" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="1223" column="71" selection-start="61531" selection-end="61546" vertical-scroll-proportion="-6.1509433">
+              <folding>
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#ul#0;tag#div#0;tag#div#4;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,25 +44,7 @@
       <file leaf-file-name="flash_sales.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1329" column="0" selection-start="35254" selection-end="35254" vertical-scroll-proportion="0.9707602">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usercenter_baseinfo.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usercenter_baseinfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="277" selection-start="9842" selection-end="9842" vertical-scroll-proportion="-9.3396225">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usercenter.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/usercenter.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="36" selection-start="4404" selection-end="4404" vertical-scroll-proportion="-27.12">
+            <state line="77" column="57" selection-start="9033" selection-end="9033" vertical-scroll-proportion="0.54613465">
               <folding />
             </state>
           </provider>
@@ -78,8 +61,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/usercenter_baseinfo.html" />
-        <option value="$PROJECT_DIR$/css/usercenter.css" />
         <option value="$PROJECT_DIR$/css/category.css" />
+        <option value="$PROJECT_DIR$/usercenter_accountsafety.html" />
+        <option value="$PROJECT_DIR$/css/usercenter.css" />
+        <option value="$PROJECT_DIR$/css/shopcart.css" />
+        <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/flash_sales.html" />
         <option value="$PROJECT_DIR$/css/flash_sales.css" />
       </list>
@@ -187,8 +173,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67002237" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -197,7 +184,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -259,24 +245,42 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/usercenter_baseinfo.html">
+    <entry file="file://$PROJECT_DIR$/usercenter_accountsafety.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="277" selection-start="9842" selection-end="9842" vertical-scroll-proportion="-9.3396225">
+        <state line="76" column="48" selection-start="3448" selection-end="3458" vertical-scroll-proportion="0.038383838">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/usercenter.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="36" selection-start="4404" selection-end="4404" vertical-scroll-proportion="-27.12">
+        <state line="51" column="68" selection-start="4991" selection-end="4991" vertical-scroll-proportion="0.5879518">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flash_sales.html">
+    <entry file="file://$PROJECT_DIR$/usercenter_baseinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="608" selection-end="608" vertical-scroll-proportion="-6.785714">
+        <state line="184" column="61" selection-start="10181" selection-end="10181" vertical-scroll-proportion="0.7593516">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="40" selection-start="7447" selection-end="7447" vertical-scroll-proportion="-12.56">
+          <folding>
+            <marker date="1364876942029" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/shopcart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="26" selection-start="222" selection-end="222" vertical-scroll-proportion="0.08888889">
+          <folding>
+            <marker date="1364876467050" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -287,9 +291,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/flash_sales/images/index_V3_4_23-10.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flash_sales.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1223" column="71" selection-start="61531" selection-end="61546" vertical-scroll-proportion="-6.1509433">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#ul#0;tag#div#0;tag#div#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1329" column="0" selection-start="35254" selection-end="35254" vertical-scroll-proportion="0.9707602">
+        <state line="77" column="57" selection-start="9033" selection-end="9033" vertical-scroll-proportion="0.54613465">
           <folding />
         </state>
       </provider>
