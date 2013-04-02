@@ -8,7 +8,6 @@
     <link href="css/base.css" rel="stylesheet"/>
     <link href="css/usercenter.css" rel="stylesheet"/>
 
-    <script type="text/javascript" src="js/head.min.js"></script>
 
 </head>
 <body>
@@ -73,7 +72,7 @@
                     <div class="control-group">
                         <label class="control-label"><abbr title="required">*</abbr> 昵称：</label>
                         <div class="controls">
-                            <input class="text-input required" id="userName" name="userName" size="30" type="text" value="jinwyp" />
+                            <input class="g-ipt required" id="userName" name="userName" size="30" type="text" value="jinwyp" />
                             <div id="nickTip" class="stickTips"></div>
                         </div>
                         <div class="controls">
@@ -98,7 +97,7 @@
                     <div class="control-group">
                         <label class="control-label" for="realName"><abbr title="required">*</abbr> 真实姓名：</label>
                         <div class="controls">
-                            <input class="text-input required" id="realName" name="realName" size="30" type="text" value="" />
+                            <input class="g-ipt required" id="realName" name="realName" size="30" type="text" value="" />
                             <div id="nameTip" class="stickTips"></div>
                         </div>
                     </div>
@@ -170,26 +169,26 @@
                     <div class="control-group">
                         <label class="control-label" for="userMobile">手机：</label>
                         <div class="controls">
-                            <input class="text-input" id="userMobile" name="userMobile" size="30" type="text" />
+                            <input class="g-ipt" id="userMobile" name="userMobile" size="30" type="text" />
                         </div>
                     </div>
 
                     <div id="controlTel" class="control-group control-tel">
                         <label class="control-label">固定电话：</label>
                         <div class="controls">
-                            <input class="text-input mr10" id="areaCode" name="areaCode" size="5" type="text" placeholder="区号" /><span>-</span><input class="text-input mr10" id="phoneNumber" name="phoneNumber" size="18" type="text" placeholder="电话号码"  /><span>-</span><input class="text-input" id="extensionNumber" name="extensionNumber" size="6" type="text"  placeholder="分机号" />
+                            <input class="g-ipt mr10" id="areaCode" name="areaCode" size="5" type="text" placeholder="区号" /><span>-</span><input class="g-ipt mr10" id="phoneNumber" name="phoneNumber" size="18" type="text" placeholder="电话号码"  /><span>-</span><input class="g-ipt" id="extensionNumber" name="extensionNumber" size="6" type="text"  placeholder="分机号" />
                         </div>
                     </div>
 
                     <div class="control-group">
                         <label class="control-label" for="userOnline">QQ：</label>
-                        <div class="controls"><input class="text-input" id="userOnline" name="user_online" size="30" type="text" />
+                        <div class="controls"><input class="g-ipt" id="userOnline" name="user_online" size="30" type="text" />
                         </div>
                     </div>
 
                     <div class="control-group form-actions">
                         <label class="control-label">&nbsp;</label>
-                        <span class="btn_b btn_b_o" ><a herf="" id="submitbutton">&nbsp;保存修改&nbsp;</a></span>
+                        <span class="btn_b btn_b_o" ><a href="" id="submitbutton">&nbsp;保存修改&nbsp;</a></span>
                     </div>
                 </fieldset>
             </form>
@@ -199,20 +198,13 @@
 </div>
 </div>
 
-<script type="text/javascript">
-    head.js("js/jquery-1.7.2.min.js",
-            "js/jqueryplugin/formvalidator/formValidator-4.1.3.js",
-            "js/jqueryplugin/formvalidator/formValidatorRegex.js",
-            "js/my/usercenter.js"
-    );
-</script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidator-4.1.3.js"></script>
+<script type="text/javascript" src="js/jqueryplugin/formvalidator/formValidatorRegex.js"></script>
+<script type="text/javascript" src="js/my/usercenter.js"></script>
 
 
-<script type="text/javascript">
-    head.ready(function() {
 
-    });
-</script>
 
 </body>
 </html>
