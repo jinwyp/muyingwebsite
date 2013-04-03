@@ -215,4 +215,4 @@ input {border: 0 none; vertical-align: middle;}
 .fixRight {left: 50%; margin-left: 503px; top: 500px; width: 36px; height: 90px; overflow: hidden; position: fixed; _position: absolute; _top: expression(documentElement.scrollTop + 500); background-attachment: fixed;}
 .fixRight a {background: url("../images/survey.gif") no-repeat scroll transparent; width: 36px; height: 90px; display: block;}
 /*gotop*/
-.gotop {display: none; width: 36px; height: 36px; position: fixed; _position: absolute; left: 50%; margin-left: 502px; bottom: 250px; _bottom: "auto"; cursor: pointer; background: url("../images/gotop.gif") no-repeat 0 0; text-indent: -99999px;}
+.gotop {display: none; width: 36px; height: 36px; position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto"; cursor: pointer; background: url("../images/gotop.gif") no-repeat 0 0; text-indent: -99999px;}

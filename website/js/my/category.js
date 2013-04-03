@@ -244,3 +244,17 @@ $(document).ready(function () {
         }
     })
 })();
+
+//全部商品和分类
+$("#btn_categoryAll").bind("hover",function(){
+    $("#category_panel").removeClass("hide");
+});
+$("#category_panel").bind("mouseleave",function(){
+    $(this).addClass("hide");
+});
+$("#category_panel ul.subNavs ").bind("hover",function(){
+    $("#category_panel .subitem").hide();
+    $("#category_panel .item").removeClass("curr");
+    $(this).parent(".item").addClass("curr");
+    $(this).siblings(".subitem").show();
+});

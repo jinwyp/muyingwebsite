@@ -238,7 +238,7 @@ $(function(){
 });
 
 //gotop
-var $backToTopTxt = "回顶部", $backToTopEle = $('<div class="gotop"></div>').appendTo($("body"))
+var $backToTopTxt = "", $backToTopEle = $('<div class="gotop"></div>').appendTo($("body"))
     .text($backToTopTxt).attr("title", $backToTopTxt).click(function() {
         $("html, body").animate({ scrollTop: 0 }, 1000);
     }), $backToTopFun = function() {
