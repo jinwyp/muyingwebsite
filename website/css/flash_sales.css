@@ -1,5 +1,5 @@
 .flash-sales {margin-top: -2px; padding-bottom: 40px;overflow:hidden;background-color: #f4f4f4; font-family: "Microsoft YaHei", "simHei"; color: #1a1a1a;}
-.flash-sales .more-brand,.flash-sales .price-box,.flash-sales .time-box .icon, .flash-sales .item-img .corner, .fs-detail-list .corner ,.advance-week span,.commitment-box .icon, .popup-bar .btn_gotop span,.fs-compositor .sort-field span{background: url("../images/flash_sales/bg_flash_sales.png") no-repeat scroll 0 0 transparent;}
+.flash-sales .more-brand,.flash-sales .price-box,.flash-sales .time-box .icon, .flash-sales .item-img .corner, .fs-detail-list .corner ,.advance-week span,.commitment-box .icon, .popup-bar .btn-gotop span,.fs-compositor .sort-field span{background: url("../images/flash_sales/bg_flash_sales.png") no-repeat scroll 0 0 transparent;}
 .flash-sales .title-main {padding: 10px;height: 20px; line-height: 20px;background-color: #fff; box-shadow: 0 0 1px #e0e0e0; }
 .flash-sales .title-main h2 {float:left; font-size: 20px;}
 .flash-sales .title-main .en {font:400 10px/12px arial;color: #bababa;padding-left:5px;}
@@ -80,13 +80,12 @@
 .commitment-box .hotline { padding:0 0 0 34px;color: #bababa;font-size:11px;}
 
 /*popup*/
-.gotop {border:1px solid #e0e0e0; width: 78px; height: auto;bottom: 250px;background: #fff; text-indent: 0;}
-.popup-bar{display: none;font-family: "Microsoft YaHei", "simHei";}
+.popup-bar {font-family: "Microsoft YaHei", "simHei"; width: 36px; height: 36px; position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto"; cursor: pointer; border:1px solid #e0e0e0; width: 78px; height: auto;bottom: 250px;background: #fff; text-indent: 0;}
 .popup-bar li {padding:10px; border-top:1px solid #f4f4f4; font-size:14px; font-weight:400;text-align: center;}
 .popup-bar li a:hover {color:#f90; text-decoration: none;}
 .popup-bar li.status-on {background: #f90;color:#fff;}
 .popup-bar li.status-on a{color:#fff;}
-.popup-bar li.btn_gotop span{ display:inline-block;width:22px; height:11px; background-position: -214px -150px; overflow: hidden;}
+.popup-bar li.btn-gotop span{ display:inline-block;width:22px; height:11px; background-position: -214px -150px; overflow: hidden;}
 
 /**fs-detail**/
 .fs-detail-area{width:100%;display: inline-block;}

@@ -22,27 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="flash_sales_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1169" column="56" selection-start="48830" selection-end="48830" vertical-scroll-proportion="-7.769231">
-              <folding>
-                <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#body#0;tag#html#0" expanded="false" />
-                <marker date="1365313812927" expanded="true" signature="59815:59872" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category03.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/category03.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="63" vertical-scroll-proportion="369.67856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="category.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/my/category.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,10 +34,41 @@
       <file leaf-file-name="flash_sales.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1374" column="50" selection-start="70424" selection-end="70424" vertical-scroll-proportion="-18.0">
+            <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-21.392857">
               <folding>
-                <marker date="1365316033075" expanded="true" signature="70372:70436" placeholder="..." />
+                <marker date="1365322272984" expanded="true" signature="70383:70447" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flash_sales_detail.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1289" column="43" selection-start="56212" selection-end="56221" vertical-scroll-proportion="-19.357143">
+              <folding>
+                <marker date="1365322461227" expanded="true" signature="59824:59881" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1364987338282" expanded="true" signature="16197:16228" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hp1.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/my/hp1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="248" column="18" selection-start="7684" selection-end="7684" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +76,7 @@
       <file leaf-file-name="flash_sales.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="58" selection-start="921" selection-end="922" vertical-scroll-proportion="0.14214464">
+            <state line="1" column="194" selection-start="349" selection-end="349" vertical-scroll-proportion="0.022222223">
               <folding />
             </state>
           </provider>
@@ -92,10 +102,10 @@
         <option value="$PROJECT_DIR$/goods_detail.html" />
         <option value="$PROJECT_DIR$/js/my/category.js" />
         <option value="$PROJECT_DIR$/js/my/fs_popup.js" />
-        <option value="$PROJECT_DIR$/js/my/hp1.js" />
         <option value="$PROJECT_DIR$/css/base.css" />
-        <option value="$PROJECT_DIR$/flash_sales_detail.html" />
+        <option value="$PROJECT_DIR$/js/my/hp1.js" />
         <option value="$PROJECT_DIR$/flash_sales.html" />
+        <option value="$PROJECT_DIR$/flash_sales_detail.html" />
         <option value="$PROJECT_DIR$/css/flash_sales.css" />
       </list>
     </option>
@@ -131,16 +141,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,6 +247,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,6 +268,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -392,52 +409,53 @@
         <state line="1" column="25796" selection-start="25849" selection-end="25849" vertical-scroll-proportion="0.022222223" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/my/hp1.js">
+    <entry file="file://$PROJECT_DIR$/category03.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="21" selection-start="7257" selection-end="7257" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="63" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="0" selection-start="16626" selection-end="16626" vertical-scroll-proportion="0.8666667" />
+        <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1364987338282" expanded="true" signature="16197:16228" placeholder="{...}" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/my/category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="355" selection-end="368" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="42" selection-start="355" selection-end="368" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/category03.html">
+    <entry file="file://$PROJECT_DIR$/js/my/hp1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="63" vertical-scroll-proportion="369.67856">
+        <state line="248" column="18" selection-start="7684" selection-end="7684" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1169" column="56" selection-start="48830" selection-end="48830" vertical-scroll-proportion="-7.769231">
-          <folding>
-            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#4;tag#body#0;tag#html#0" expanded="false" />
-            <marker date="1365313812927" expanded="true" signature="59815:59872" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flash_sales.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1374" column="50" selection-start="70424" selection-end="70424" vertical-scroll-proportion="-18.0">
+        <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-21.392857">
           <folding>
-            <marker date="1365316033075" expanded="true" signature="70372:70436" placeholder="..." />
+            <marker date="1365322272984" expanded="true" signature="70383:70447" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1289" column="43" selection-start="56212" selection-end="56221" vertical-scroll-proportion="-19.357143">
+          <folding>
+            <marker date="1365322461227" expanded="true" signature="59824:59881" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="58" selection-start="921" selection-end="922" vertical-scroll-proportion="0.14214464">
+        <state line="1" column="194" selection-start="349" selection-end="349" vertical-scroll-proportion="0.022222223">
           <folding />
         </state>
       </provider>

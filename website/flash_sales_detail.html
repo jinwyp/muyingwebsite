@@ -1279,8 +1279,6 @@
                     </dl>
 
 
-
-
                 </div>
             </div>
         </div>
@@ -1289,7 +1287,7 @@
     <div id="popup_bar" class="popup-bar">
         <ul>
             <li class=""><a href="flash_sales.html">返回闪购</a></li>
-            <li class="btn_gotop"><span></span></li>
+            <li id="gotop" class="btn-gotop"><span></span></li>
         </ul>
     </div>
 </div>
@@ -1396,7 +1394,19 @@
         }
     });
     $(".detail-item:nth-child(3n)").addClass("row3");
-    $(".gotop").append($("#popup_bar").html()).addClass("popup-bar");
+    //gotop
+    var $backToTopEle = $("#gotop").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
 
 </script>
 </body>
