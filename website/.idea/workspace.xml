@@ -34,9 +34,9 @@
       <file leaf-file-name="flash_sales.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-21.392857">
+            <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-0.6785714">
               <folding>
-                <marker date="1365322272984" expanded="true" signature="70383:70447" placeholder="..." />
+                <marker date="1365322792050" expanded="true" signature="70383:70447" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -45,20 +45,9 @@
       <file leaf-file-name="flash_sales_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1289" column="43" selection-start="56212" selection-end="56221" vertical-scroll-proportion="-19.357143">
+            <state line="1046" column="100" selection-start="40635" selection-end="40635" vertical-scroll-proportion="43.107143">
               <folding>
-                <marker date="1365322461227" expanded="true" signature="59824:59881" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1364987338282" expanded="true" signature="16197:16228" placeholder="{...}" />
+                <marker date="1365326942946" expanded="true" signature="59833:59895" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -76,7 +65,7 @@
       <file leaf-file-name="flash_sales.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="194" selection-start="349" selection-end="349" vertical-scroll-proportion="0.022222223">
+            <state line="102" column="82" selection-start="8643" selection-end="8657" vertical-scroll-proportion="0.6666667">
               <folding />
             </state>
           </provider>
@@ -141,6 +130,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,16 +246,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,7 +259,7 @@
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -364,11 +353,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/shopcart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="222" selection-end="222" vertical-scroll-proportion="0.08888889" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/category.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="0" selection-start="8063" selection-end="8063" vertical-scroll-proportion="0.0" />
@@ -414,15 +398,6 @@
         <state line="0" column="0" selection-start="0" selection-end="63" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1364987338282" expanded="true" signature="16197:16228" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/my/category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="42" selection-start="355" selection-end="368" vertical-scroll-proportion="0.0" />
@@ -435,27 +410,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flash_sales.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-21.392857">
+        <state line="1295" column="13" selection-start="66625" selection-end="66625" vertical-scroll-proportion="-0.6785714">
           <folding>
-            <marker date="1365322272984" expanded="true" signature="70383:70447" placeholder="..." />
+            <marker date="1365322792050" expanded="true" signature="70383:70447" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="4.822222">
+          <folding>
+            <marker date="1364987338282" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1289" column="43" selection-start="56212" selection-end="56221" vertical-scroll-proportion="-19.357143">
+        <state line="1046" column="100" selection-start="40635" selection-end="40635" vertical-scroll-proportion="43.107143">
           <folding>
-            <marker date="1365322461227" expanded="true" signature="59824:59881" placeholder="..." />
+            <marker date="1365326942946" expanded="true" signature="59833:59895" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="194" selection-start="349" selection-end="349" vertical-scroll-proportion="0.022222223">
+        <state line="102" column="82" selection-start="8643" selection-end="8657" vertical-scroll-proportion="0.6666667">
           <folding />
         </state>
       </provider>

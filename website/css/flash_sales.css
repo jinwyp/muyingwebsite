@@ -1,4 +1,4 @@
-.flash-sales {margin-top: -2px; padding-bottom: 40px;overflow:hidden;background-color: #f4f4f4; font-family: "Microsoft YaHei", "simHei"; color: #1a1a1a;}
+.flash-sales {margin-top: -2px; padding-bottom: 40px;overflow:hidden;background-color: #f4f4f4; font-family: "Microsoft YaHei"; color: #1a1a1a;}
 .flash-sales .more-brand,.flash-sales .price-box,.flash-sales .time-box .icon, .flash-sales .item-img .corner, .fs-detail-list .corner ,.advance-week span,.commitment-box .icon, .popup-bar .btn-gotop span,.fs-compositor .sort-field span{background: url("../images/flash_sales/bg_flash_sales.png") no-repeat scroll 0 0 transparent;}
 .flash-sales .title-main {padding: 10px;height: 20px; line-height: 20px;background-color: #fff; box-shadow: 0 0 1px #e0e0e0; }
 .flash-sales .title-main h2 {float:left; font-size: 20px;}
@@ -13,7 +13,7 @@
 .mod-menu li{ float: left; height:14px; line-height:14px; margin-top:8px;font-size: 12px; padding: 0 10px;border-right:1px solid #e0e0e0;}
 .mod-menu a {color: #4d4d4d;}
 .mod-menu .menu-now{color: #ff7800;text-decoration: none; }
-.mod-menu .icon {float: left;height: 15px; margin: 0 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block; }
+.mod-menu .icon {float: left;height: 15px; margin: 0 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block;overflow: hidden;}
 .mod-menu .menu-bbfs .icon {background-position: -160px -180px; width: 15px;}
 .mod-menu .menu-bbfs:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
 .mod-menu .menu-wjts .icon {background-position: -175px -180px; width: 16px;}
@@ -71,7 +71,7 @@
 .commitment-box {color: #4d4d4d;}
 .commitment-box p{padding:5px 10px;}
 .commitment-box li {padding:10px; border-top:1px solid #f4f4f4; font-size:14px; font-weight:400;}
-.commitment-box li em {color: #f90;}
+.commitment-box li em {color: #f90; font-style:normal; }
 .commitment-box .icon {float:left; margin-top:-2px; width:24px;height:24px;margin-right:10px;}
 .commitment-box .icon-time {background-position: -160px -214px;}
 .commitment-box .icon-free {background-position: -184px -214px;}
@@ -80,7 +80,7 @@
 .commitment-box .hotline { padding:0 0 0 34px;color: #bababa;font-size:11px;}
 
 /*popup*/
-.popup-bar {font-family: "Microsoft YaHei", "simHei"; width: 36px; height: 36px; position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto"; cursor: pointer; border:1px solid #e0e0e0; width: 78px; height: auto;bottom: 250px;background: #fff; text-indent: 0;}
+.popup-bar {font-family: "Microsoft YaHei"; width: 36px; height: 36px; position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto"; cursor: pointer; border:1px solid #e0e0e0; width: 78px; height: auto;bottom: 250px;background: #fff; text-indent: 0;}
 .popup-bar li {padding:10px; border-top:1px solid #f4f4f4; font-size:14px; font-weight:400;text-align: center;}
 .popup-bar li a:hover {color:#f90; text-decoration: none;}
 .popup-bar li.status-on {background: #f90;color:#fff;}
@@ -101,13 +101,13 @@
 .fs-detail-area .detail-info .info-content .discount {color: #e60000; font-size: 30px; font-weight: 700;}
 
 .fs-detail-area .detail-taxis { margin: 10px 0; padding-right:10px; height: 40px; background-color: #fff; box-shadow: 0 1px 3px #ccc;}
-.fs-detail-area .detail-taxis .account {float: right; line-height: 40px;}
+.fs-detail-area .detail-taxis .account {float: right;line-height: 40px;}
 .fs-compositor {float: left;}
-.fs-compositor li {float: left; padding: 10px;display: inline; font-size: 12px;}
+.fs-compositor li {float: left; padding:10px;display: inline-block; font-size: 12px;}
 .fs-compositor li span {cursor: pointer;}
 .fs-compositor li label{padding-left:5px; vertical-align: middle;}
-.fs-compositor .sort-field {float:right; width: 7px;height: 16px;margin-top:2px; margin-left: 6px; display: inline; overflow: hidden;}
-.fs-compositor .order-asc, .fs-compositor .order-desc {width: 7px; height: 7px; display: inline-block; overflow: hidden;}
+.fs-compositor .sort-field { width: 7px;height: 16px;margin-left: 6px; display:inline-block; overflow: hidden;}
+.fs-compositor .order-asc, .fs-compositor .order-desc {float:left; width: 7px; height: 7px;  overflow: hidden;}
 .fs-compositor .sort-field .order-desc {background-position: -228px -163px;margin-top: 2px;}
 .fs-compositor .sort-field .order-asc {background-position: -221px -163px;}
 .fs-compositor .sort-asc .order-desc {background-position: -214px -163px; }
@@ -121,7 +121,7 @@
 .fs-detail-list .detail-item .title {font-size: 14px; height: 30px; line-height: 30px; display: inline-block; overflow: hidden;}
 .fs-detail-list .detail-item .price {color: #e60000; line-height: 1.2;}
 .fs-detail-list .detail-item .price-now {padding-right:10px;font-size:14px; font-weight: 700;}
-.fs-detail-list .detail-item .price-now em{ font-size:24px;}
+.fs-detail-list .detail-item .price-now em{ font-size:24px; font-style:normal; }
 .fs-detail-list .detail-item .discount {font-size:14px;}
 .fs-detail-list .detail-item .price-market {padding-left:20px; font-size: 12px; color:#878787; text-decoration: line-through;}
 .fs-detail-list .corner {display: inline-block; width: 90px;height: 70px; position: absolute; right: 0; top: 0;  z-index: 1;}
