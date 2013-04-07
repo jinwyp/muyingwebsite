@@ -1,14 +1,18 @@
 .flash-sales {margin-top: -2px; padding-bottom: 40px;overflow:hidden;background-color: #f4f4f4; font-family: "Microsoft YaHei", "simHei"; color: #1a1a1a;}
-.more-brand,.price-box, .time-box .icon, .item-img .corner, .advance-week span,.commitment-box .icon,.popup-bar .btn_gotop span{background: url("../images/flash_sales/bg_flash_sales.png") no-repeat scroll 0 0 transparent;}
-.title-main {padding: 10px;height: 20px; line-height: 20px;background-color: #fff; box-shadow: 0 0 1px #e0e0e0; }
-.title-main h2 {float:left; font-size: 20px;}
-.title-main .en {font:400 10px/12px arial;color: #bababa;padding-left:5px;}
+.flash-sales .more-brand,.flash-sales .price-box,.flash-sales .time-box .icon, .flash-sales .item-img .corner, .fs-detail-list .corner ,.advance-week span,.commitment-box .icon, .popup-bar .btn_gotop span,.fs-compositor .sort-field span{background: url("../images/flash_sales/bg_flash_sales.png") no-repeat scroll 0 0 transparent;}
+.flash-sales .title-main {padding: 10px;height: 20px; line-height: 20px;background-color: #fff; box-shadow: 0 0 1px #e0e0e0; }
+.flash-sales .title-main h2 {float:left; font-size: 20px;}
+.flash-sales .title-main .en {font:400 10px/12px arial;color: #bababa;padding-left:5px;}
+.flash-sales .time-box {color: #4d4d4d; display: inline-block;  margin-top: 10px; overflow: hidden;}
+.flash-sales .time-box .icon{ float: left;  margin-right: 5px; width:18px; height: 18px; background-position: -213px -132px;}
+.flash-sales .time-box span {font-weight: 700;}
+.flash-sales a:hover {color: #ff7800;text-decoration: none;}
 .mt20 {margin-top:20px;}
 /*mod-menu*/
 .mod-menu {height: 30px; background-color: #fff; box-shadow: 0 1px 3px #ccc;}
 .mod-menu li{ float: left; height:14px; line-height:14px; margin-top:8px;font-size: 12px; padding: 0 10px;border-right:1px solid #e0e0e0;}
 .mod-menu a {color: #4d4d4d;}
-.mod-menu a:hover,.mod-menu .menu-now{color: #ff7800;text-decoration: none; }
+.mod-menu .menu-now{color: #ff7800;text-decoration: none; }
 .mod-menu .icon {float: left;height: 15px; margin: 0 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block; }
 .mod-menu .menu-bbfs .icon {background-position: -160px -180px; width: 15px;}
 .mod-menu .menu-bbfs:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
@@ -34,17 +38,15 @@
 /*fs-selling*/
 .fs-area {float: left; width: 760px;display: inline-block; }
 .fs-list .title-notice {float:right; color: #878787;}
-.fs-list .fs-item { position: relative;border: 1px solid #fff; width: 758px; height: 240px; background-color:#fff;box-shadow: 0 1px 3px #ccc; clear: both; display: inline-block;margin-bottom: 10px;}
+.fs-list .fs-item { position: relative;margin-bottom: 10px; border: 1px solid #fff; width: 758px; height: 240px; background-color:#fff;box-shadow: 0 1px 3px #ccc; clear: both; display: inline-block; }
 .fs-list .fs-item-hover {border:1px solid #f90;}
 .fs-list .item-info {float: left; position:relative; z-index:99;padding: 10px 0 10px 10px; width: 188px;display: inline-block;}
 .fs-list .item-info .logo { width: 160px;height: 80px; overflow: hidden;}
 .fs-list .item-info .desc {color: #1a1a1a; font-size: 14px;}
-.fs-list .item-info .price-box {position: relative; width: 248px;height: 57px; line-height:50px; margin-top: 20px; left: -20px; background-position: 0 0; display: inline-block; overflow: hidden; }
+.fs-list .item-info .price-box {position: absolute; top:140px; left: -10px;width: 248px;height: 57px; line-height:50px;background-position: 0 0; overflow: hidden;}
 .fs-list .item-info .price-box .price { padding-left:20px;font-size: 22px;color: #fff; }
 .fs-list .item-info .price-box .go {display: inline-block; float: right; height: 30px; margin: 13px 23px 0 0; width: 65px;}
-.fs-list .item-info .time-box {color: #4d4d4d; display: inline-block;  margin-top: 10px; overflow: hidden;}
-.fs-list .item-info .time-box .icon{background-position: -214px -132px; display: inline-block; float: left; width:18px; height: 18px; margin: 1px 2px 0 0; overflow: hidden;}
-.fs-list .item-info .time-box span {font-weight: bold;}
+.flash-sales .fs-list .time-box {position: absolute; top:200px; left:10px;}
 .fs-list .item-img { position: relative;float: right; width: 540px; height: 240px; z-index:98;display: inline-block; overflow: hidden; }
 .fs-list .item-img .corner {display: inline-block; width: 105px;height: 63px; overflow: hidden; position: absolute; right: 0; top: 0;  z-index: 1;}
 .fs-list .item-img .corner-new {background-position: 0 -115px;}
@@ -84,4 +86,45 @@
 .popup-bar li a:hover {color:#f90; text-decoration: none;}
 .popup-bar li.status-on {background: #f90;color:#fff;}
 .popup-bar li.status-on a{color:#fff;}
-.popup-bar li.btn_gotop span{ display:inline-block;width:22px; height:11px; background-position: -214px -150px;}
+.popup-bar li.btn_gotop span{ display:inline-block;width:22px; height:11px; background-position: -214px -150px; overflow: hidden;}
+
+/**fs-detail**/
+.fs-detail-area{width:100%;display: inline-block;}
+.fs-detail-area .title-detail {background-color:#fff; border-bottom: 1px solid #f4f4f4;box-shadow: 0 1px 3px #ccc; height:50px;  padding: 0 10px;}
+.fs-detail-area .title-detail  h1{float:left; font-size: 20px; line-height: 50px;}
+.fs-detail-area .time-box {float:right;font-size:12px;margin-top: 15px;}
+
+.fs-detail-area .detail-info {padding:10px;height:333px; background-color:#fff; border-bottom: 1px solid #f4f4f4;overflow:hidden;box-shadow: 0 1px 3px #ccc; }
+.fs-detail-area .detail-info .info-pic {float: left; position: relative; width: 750px; height: 333px;  }
+.fs-detail-area .detail-info .info-content {float: right; width: 220px;}
+.fs-detail-area .detail-info .info-content .logo {height:77px;}
+.fs-detail-area .detail-info .info-content .text {color: #4d4d4d; height: 130px; line-height: 18px; margin: 10px 0; overflow: hidden; white-space: normal; word-break: break-all;}
+.fs-detail-area .detail-info .info-content .discount {color: #e60000; font-size: 30px; font-weight: 700;}
+
+.fs-detail-area .detail-taxis { margin: 10px 0; padding-right:10px; height: 40px; background-color: #fff; box-shadow: 0 1px 3px #ccc;}
+.fs-detail-area .detail-taxis .account {float: right; line-height: 40px;}
+.fs-compositor {float: left;}
+.fs-compositor li {float: left; padding: 10px;display: inline; font-size: 12px;}
+.fs-compositor li span {cursor: pointer;}
+.fs-compositor li label{padding-left:5px; vertical-align: middle;}
+.fs-compositor .sort-field {float:right; width: 7px;height: 16px;margin-top:2px; margin-left: 6px; display: inline; overflow: hidden;}
+.fs-compositor .order-asc, .fs-compositor .order-desc {width: 7px; height: 7px; display: inline-block; overflow: hidden;}
+.fs-compositor .sort-field .order-desc {background-position: -228px -163px;margin-top: 2px;}
+.fs-compositor .sort-field .order-asc {background-position: -221px -163px;}
+.fs-compositor .sort-asc .order-desc {background-position: -214px -163px; }
+.fs-compositor .sort-asc .order-asc {background-position: -235px -163px;}
+
+.fs-detail-list { display: inline-block;overflow: hidden;}
+.fs-detail-list .detail-item {float: left;position: relative; padding:9px; border: 1px solid #e0e0e0; margin: 0 20px 20px 0; width: 300px;height: 364px;overflow: hidden; box-shadow: 0 1px 3px #e0e0e0;background-color: #fff;}
+.fs-detail-list .row3 {margin-right:0;}
+.fs-detail-list .detail-item-hover {border-color:#f90;}
+.fs-detail-list .detail-item .pic { position: relative; height: 300px;width: 300px; overflow: hidden;}
+.fs-detail-list .detail-item .title {font-size: 14px; height: 30px; line-height: 30px; display: inline-block; overflow: hidden;}
+.fs-detail-list .detail-item .price {color: #e60000; line-height: 1.2;}
+.fs-detail-list .detail-item .price-now {padding-right:10px;font-size:14px; font-weight: 700;}
+.fs-detail-list .detail-item .price-now em{ font-size:24px;}
+.fs-detail-list .detail-item .discount {font-size:14px;}
+.fs-detail-list .detail-item .price-market {padding-left:20px; font-size: 12px; color:#878787; text-decoration: line-through;}
+.fs-detail-list .corner {display: inline-block; width: 90px;height: 70px; position: absolute; right: 0; top: 0;  z-index: 1;}
+.fs-detail-list .corner-end {background-position:0 -243px; }
+.fs-detail-list .corner-soonTheEnd{background-position:-90px -243px; }
