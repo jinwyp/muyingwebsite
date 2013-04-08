@@ -1364,50 +1364,11 @@
 </div>
 <!--wrapper end-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/jqueryplugin/slides.min.jquery.js"></script>
 <script type="text/javascript" src="js/my/category.js"></script>
-<script type="text/javascript" src="js/my/hp1.js"></script>
+<script type="text/javascript" src="js/my/flash_sales.js"></script>
 <!--[if IE 6]>
 <script src="js/jqueryplugin/iepng.js" type="text/javascript"></script>
-<script type="text/javascript">
-    EvPNG.fix('div,ul,img,li,input,dl,dt,dd,span');
-</script>
 <![endif]-->
-<script type="text/javascript">
-    //全部品牌
-    $(".more-brand").bind("click", function () {
-        if ($(this).hasClass("more-open")) {
-            $(".fs-brand-content").css("height", "auto");
-            $(this).removeClass("more-open").addClass("more-close");
-        }
-        else {
-            $(".fs-brand-content").css("height", "50px");
-            $(this).removeClass("more-close").addClass("more-open");
-        }
-    });
-    $(".detail-item").bind("hover", function () {
-        if ($(this).hasClass("detail-item-hover")) {
-            $(this).removeClass("detail-item-hover");
-        }
-        else {
-            $(this).addClass("detail-item-hover");
-        }
-    });
-    $(".detail-item:nth-child(3n)").addClass("row3");
-    //gotop
-    var $backToTopEle = $("#gotop").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, 1000);
-    }), $backToTopFun = function() {
-        var st = $(document).scrollTop(), winh = $(window).height();
-        (st > 0)? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();
-        //IE6下的定位
-        if (!window.XMLHttpRequest) {
-            $backToTopEle.css("top", st + winh - 166);
-        }
-    };
-    $(window).bind("scroll", $backToTopFun);
-    $(function() { $backToTopFun(); });
 
-</script>
 </body>
 </html>

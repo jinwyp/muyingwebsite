@@ -80,7 +80,7 @@
 .commitment-box .hotline { padding:0 0 0 34px;color: #bababa;font-size:11px;}
 
 /*popup*/
-.popup-bar {font-family: "Microsoft YaHei"; width: 36px; height: 36px; position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto"; cursor: pointer; border:1px solid #e0e0e0; width: 78px; height: auto;bottom: 250px;background: #fff; text-indent: 0;}
+.popup-bar {position: fixed; _position: absolute; right: 10px;bottom: 250px; _bottom: "auto";  border:1px solid #e0e0e0; width: 78px; height: auto;background: #fff; font-family: "Microsoft YaHei";cursor: pointer;}
 .popup-bar li {padding:10px; border-top:1px solid #f4f4f4; font-size:14px; font-weight:400;text-align: center;}
 .popup-bar li a:hover {color:#f90; text-decoration: none;}
 .popup-bar li.status-on {background: #f90;color:#fff;}
@@ -103,15 +103,15 @@
 .fs-detail-area .detail-taxis { margin: 10px 0; padding-right:10px; height: 40px; background-color: #fff; box-shadow: 0 1px 3px #ccc;}
 .fs-detail-area .detail-taxis .account {float: right;line-height: 40px;}
 .fs-compositor {float: left;}
-.fs-compositor li {float: left; padding:10px;display: inline-block; font-size: 12px;}
-.fs-compositor li span {cursor: pointer;}
-.fs-compositor li label{padding-left:5px; vertical-align: middle;}
-.fs-compositor .sort-field { width: 7px;height: 16px;margin-left: 6px; display:inline-block; overflow: hidden;}
-.fs-compositor .order-asc, .fs-compositor .order-desc {float:left; width: 7px; height: 7px;  overflow: hidden;}
+.fs-compositor li {float: left; height:16px;line-height:16px;margin-top:12px;padding:0 10px;font-size: 12px;}
+.fs-compositor li span {float:left;cursor: pointer;}
+.fs-compositor li label,.filter-field{padding-left:5px; vertical-align: middle;}
+.fs-compositor .sort-field { width: 7px;height: 16px;margin-left: 6px;overflow: hidden;}
+.fs-compositor .order-asc, .fs-compositor .order-desc {float:left; width: 7px; height: 7px;overflow: hidden;zoom:1;}
 .fs-compositor .sort-field .order-desc {background-position: -228px -163px;margin-top: 2px;}
-.fs-compositor .sort-field .order-asc {background-position: -221px -163px;}
+.fs-compositor .sort-field .order-asc {background-position: -221px -163px;_background-position: -220px -163px;}
 .fs-compositor .sort-asc .order-desc {background-position: -214px -163px; }
-.fs-compositor .sort-asc .order-asc {background-position: -235px -163px;}
+.fs-compositor .sort-asc .order-asc {background-position: -235px -163px;_background-position: -234px -163px;}
 
 .fs-detail-list { display: inline-block;overflow: hidden;}
 .fs-detail-list .detail-item {float: left;position: relative; padding:9px; border: 1px solid #e0e0e0; margin: 0 20px 20px 0; width: 300px;height: 364px;overflow: hidden; box-shadow: 0 1px 3px #e0e0e0;background-color: #fff;}
