@@ -10,10 +10,10 @@
 .mt20 {margin-top:20px;}
 /*mod-menu*/
 .mod-menu {height: 30px; background-color: #fff; box-shadow: 0 1px 3px #ccc;}
-.mod-menu li{ float: left; height:14px; line-height:14px; margin-top:8px;font-size: 12px; padding: 0 10px;border-right:1px solid #e0e0e0;}
-.mod-menu a {color: #4d4d4d;}
-.mod-menu .menu-now{color: #ff7800;text-decoration: none; }
-.mod-menu .icon {float: left;height: 15px; margin: 0 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block;overflow: hidden;}
+.mod-menu li{ float: left; height:14px; line-height:14px;margin-top:10px;font-size: 12px;border-right:1px solid #e0e0e0;}
+.mod-menu a { padding: 0 10px;margin-top:-6px;display:block;line-height: 24px;color: #4d4d4d;}
+.mod-menu a:hover,.mod-menu .menu-now{color: #ff7800;text-decoration: none; border-bottom: 2px solid #ff7800;}
+.mod-menu .icon {float: left;height: 15px; margin: 5px 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block;overflow: hidden;}
 .mod-menu .menu-bbfs .icon {background-position: -160px -180px; width: 15px;}
 .mod-menu .menu-bbfs:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
 .mod-menu .menu-wjts .icon {background-position: -175px -180px; width: 16px;}

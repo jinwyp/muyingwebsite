@@ -34,25 +34,7 @@
       <file leaf-file-name="flash_sales.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1369" column="53" selection-start="70164" selection-end="70175" vertical-scroll-proportion="-22.071428">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flash_sales.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/my/flash_sales.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="12" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hp1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/my/hp1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="18" selection-start="7684" selection-end="7684" vertical-scroll-proportion="0.0">
+            <state line="1035" column="60" selection-start="47463" selection-end="47463" vertical-scroll-proportion="-5.037736">
               <folding />
             </state>
           </provider>
@@ -61,17 +43,10 @@
       <file leaf-file-name="flash_sales_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1370" column="0" selection-start="59727" selection-end="59727" vertical-scroll-proportion="-23.428572">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iepng.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jqueryplugin/iepng.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="5110" selection-end="5110" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="1042" column="51" selection-start="40208" selection-end="40208" vertical-scroll-proportion="-5.037736">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +54,19 @@
       <file leaf-file-name="flash_sales.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="98" selection-start="9585" selection-end="9585" vertical-scroll-proportion="0.84444445">
+            <state line="14" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.31111112">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/base.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="89" selection-start="6444" selection-end="6444" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1365400989118" expanded="true" signature="16134:16165" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,16 +86,16 @@
         <option value="$PROJECT_DIR$/css/usercenter.css" />
         <option value="$PROJECT_DIR$/css/shopcart.css" />
         <option value="$PROJECT_DIR$/js/jquery-1.7.2.min.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/goods_detail.html" />
         <option value="$PROJECT_DIR$/js/my/category.js" />
         <option value="$PROJECT_DIR$/js/my/fs_popup.js" />
-        <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/js/my/hp1.js" />
-        <option value="$PROJECT_DIR$/flash_sales.html" />
         <option value="$PROJECT_DIR$/js/my/flash_sales.js" />
-        <option value="$PROJECT_DIR$/flash_sales_detail.html" />
         <option value="$PROJECT_DIR$/js/jqueryplugin/iepng.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/flash_sales_detail.html" />
+        <option value="$PROJECT_DIR$/flash_sales.html" />
         <option value="$PROJECT_DIR$/css/flash_sales.css" />
       </list>
     </option>
@@ -374,11 +360,6 @@
         <state line="0" column="0" selection-start="0" selection-end="122" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1825" column="67" selection-start="77505" selection-end="77505" vertical-scroll-proportion="0.24183796" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forgetpassword-success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="122" vertical-scroll-proportion="0.0" />
@@ -409,11 +390,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="0" selection-start="16399" selection-end="16626" vertical-scroll-proportion="4.822222" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/my/category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="42" selection-start="355" selection-end="368" vertical-scroll-proportion="0.0" />
@@ -433,20 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flash_sales.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1369" column="53" selection-start="70164" selection-end="70175" vertical-scroll-proportion="-22.071428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1370" column="0" selection-start="59727" selection-end="59727" vertical-scroll-proportion="-23.428572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jqueryplugin/iepng.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="5110" selection-end="5110" vertical-scroll-proportion="0.0">
@@ -454,9 +416,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="6" selection-start="4145" selection-end="4145" vertical-scroll-proportion="-19.571428">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="89" selection-start="6444" selection-end="6444" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1365400989118" expanded="true" signature="16134:16165" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flash_sales.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1035" column="60" selection-start="47463" selection-end="47463" vertical-scroll-proportion="-5.037736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1042" column="51" selection-start="40208" selection-end="40208" vertical-scroll-proportion="-5.037736">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="98" selection-start="9585" selection-end="9585" vertical-scroll-proportion="0.84444445">
+        <state line="14" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.31111112">
           <folding />
         </state>
       </provider>

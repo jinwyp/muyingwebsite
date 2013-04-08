@@ -90,11 +90,11 @@ input {border: 0 none; vertical-align: middle;}
 .toolbar .toolbar-nav .my-content li a {padding-right: 0;}
 
 /*header*/
-.header {height: 66px; position: relative;}
-.header .logo {float: left; _display: inline; margin-right: 10px;}
-.header .logo a {display: block; width: 268px; height: 64px; background: url(http://img.muyingzhijia.com/images/byw_logo3.gif) no-repeat 0 0;}
-.header .nav {float: left; _display: inline; padding-top: 34px;}
-.header .nav ul {height: 32px; line-height: 32px; width: 538px; background: url("../images/bg_nav.gif") no-repeat 0 0;}
+.header {height:94px; position: relative;}
+.header .logo {float: left;margin-top:8px;}
+.header .logo a {display: block; width:146px; height: 78px; background: url(../images/logo_header.gif) no-repeat 0 0;}
+.header .nav {float: right; margin-top:62px; width:840px;height:32px;background: url("../images/bg_header.png") no-repeat 0 0; }
+.header .nav ul {line-height: 32px;}
 .header .nav ul a {text-decoration: none;}
 .header .nav ul li {float: left; _display: inline; position: relative;}
 .header .nav ul li a {display: block; width: 95px; height: 32px; text-align: center; color: #fff; font-size: 13px; font-weight: 700;}
@@ -107,7 +107,7 @@ input {border: 0 none; vertical-align: middle;}
 .header .nav ul li.last .current, .header .nav ul li.last:hover {background-position: -441px -35px;}
 .header .hotline {position: absolute; right: 0; top: 2px; width: 184px; height: 42px; background: url("../images/banner_hotline.gif") no-repeat 0 0;}
 .header .qq-online {position: absolute; right: 0; top: 38px;}
-.menu {width: 100%; height: 45px; background: url("../images/bg_menu.gif") repeat-x 0 0;}
+.menu {width: 100%; height: 45px; background: url(../images/bg_header.png) repeat-x 0 -66px;}
 .menu .wrapper {padding-top: 8px;}
 .menu .search {float: left; _display: inline; padding-left: 250px; width: 512px;}
 .menu .search .search-input {border: #ff7800 1px solid; width: 206px;}
