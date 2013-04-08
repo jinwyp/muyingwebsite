@@ -57,12 +57,14 @@
     </div>
     <div class="nav">
         <ul>
-            <li class="home"><a href="#" class="current">首页</a></li>
-            <li class="first"><a href="#" target="_blank">准妈妈豪礼</a><span class="icon-hot"></span></li>
-            <li><a href="#" target="_blank">孕妈新生儿</a><span class="icon-new"></span></li>
-            <li><a href="#" target="_blank">会员专享</a></li>
-            <li><a href="#" target="_blank">清仓甩卖</a></li>
-            <li class="last"><a href="#" target="_blank">推荐品牌</a></li>
+            <li class="nav-home"><a href="#" >首页</a></li>
+            <li class="nav-first nav-mamagift"><a href="#" target="_blank">准妈妈豪礼</a><span class="icon-hot"></span></li>
+            <li class="nav-flashSales"><a href="#" target="_blank" class="current">闪购</a><span class="icon-flash"></span></li>
+            <li class="nav-phland"><a href="#" target="_blank">丽婴房馆</a></li>
+            <li class="nav-baby"><a href="#" target="_blank">孕妈新生儿</a><span class="icon-new"></span></li>
+            <li class="nav-vip"><a href="#" target="_blank">会员专享</a></li>
+            <li class="nav-clearance"><a href="#" target="_blank">清仓甩卖</a></li>
+            <li class="nav-last nav-brand"><a href="#" target="_blank">推荐品牌</a></li>
         </ul>
     </div>
     <div class="hotline">
@@ -72,8 +74,8 @@
         <script charset="utf-8" type="text/javascript"
                 src="http://static.b.qq.com/account/bizqq/js/wpa.js?wty=1&type=1&kfuin=4008201000&ws=www.muyingzhijia.com&title=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D&btn1=%E4%BC%81%E4%B8%9AQQ%E4%BA%A4%E8%B0%88&fsty=0&fposX=0&fposY=1&csty=7&tx=1&aty=0&a=&key=%01hPa%036SnRd%03eSbR%3B%03c%040TmR%3CTg%01o%5C%3A%0Ao%5C3QfPfSo"></script>
         <!-- WPA Button END --></div>
-</div><!--header end-->
-
+</div>
+<!--header end-->
 <div class="menu">
     <div class="wrapper">
         <div id="topSearch" class="search">
@@ -82,7 +84,7 @@
                     <label for="txSearchCondition" class="hide">搜索</label><input type="text" name="txSearchCondition"
                                                                                  id="txSearchCondition"
                                                                                  class="text-input search-input"/><input
-                        type="button" id="btnSearch" class="btn_m btn_m_r btn-search" value="搜索"/>
+                        type="button" id="btnSearch" class="btn-search" value="搜索"/>
                 </form>
             </div>
             <div class="hot-keywords">
@@ -91,7 +93,7 @@
         </div>
 
         <div class="shopcart">
-            <span id="cartInfo" class="fl"><a href="">购物车<em id="saleQty" class="fb">600</em>件</a></span>
+            <span id="cartInfo" ><a href="">购物车<em id="saleQty" class="fb">600</em>件</a><a href="http://www.muyingzhijia.com/CheckOut/ShoppingCart.aspx" class="checkOut">去结算&nbsp;</a></span>
 
             <div id="cartList" class="hide cart-list">
                 <dl>
@@ -100,7 +102,6 @@
                     <dd class="name"><a href="">喜多倍护润肤霜60G</a></dd>
                     <dd class="action"><p><span class="rmb">¥</span><span class="price">14.50</span><span
                             class="ride">x</span>1</p>
-
                         <p><a onclick="javascript:DeleteShopCart(5067077)" href="javascript:void(0);">[删除]</a></p></dd>
                 </dl>
                 <dl>
@@ -113,11 +114,9 @@
                         <p><a onclick="javascript:DeleteShopCart(5067077)" href="javascript:void(0);">[删除]</a></p></dd>
                 </dl>
                 <div class="amount">
-                    共<span id="cartNum">2</span>件商品，总计：<span id="cartAmount">¥29.00</span><span class="btn_m btn_m_r"><a
-                        title="去购物车结算" href="">立即结算</a></span>
+                    共<span id="cartNum">2</span>件商品，总计：<span id="cartAmount">¥29.00</span><span class="btn_m btn_m_r"><a href="" id="j_balance" title="去购物车结算" >立即结算</a></span>
                 </div>
             </div>
-            <a href="#" class="balance"><span class="hide">去结算</span></a>
         </div>
     </div>
 </div>

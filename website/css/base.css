@@ -1,4 +1,4 @@
-body {font: 12px/1.5 tahoma, arial, sans-serif; }
+body {font: 12px/1.5 "Microsoft YaHei", tahoma, arial, sans-serif; }
 
 /*font*/
 h1 {font-size: 16px;}
@@ -90,59 +90,63 @@ input {border: 0 none; vertical-align: middle;}
 .toolbar .toolbar-nav .my-content li a {padding-right: 0;}
 
 /*header*/
-.header {height:94px; position: relative;}
+.header .nav ,.menu ,.header .nav a,.header .nav .current,.header .nav  b,.menu .search .btn-search,.menu .shopcart ,.category .category-hd {background: url("../images/bg_header.png") no-repeat 0 0;}
+.header {height:94px; position: relative; }
 .header .logo {float: left;margin-top:8px;}
 .header .logo a {display: block; width:146px; height: 78px; background: url(../images/logo_header.gif) no-repeat 0 0;}
-.header .nav {float: right; margin-top:62px; width:840px;height:32px;background: url("../images/bg_header.png") no-repeat 0 0; }
+.header .nav {float: right; margin-top:62px; width:840px;height:32px;background-position: 0 0; }
 .header .nav ul {line-height: 32px;}
-.header .nav ul a {text-decoration: none;}
-.header .nav ul li {float: left; _display: inline; position: relative;}
-.header .nav ul li a {display: block; width: 95px; height: 32px; text-align: center; color: #fff; font-size: 13px; font-weight: 700;}
-.header .nav ul li .current, .header .nav ul li:hover {background-image: url("../images/bg_nav.gif"); background-position: -157px -35px; color: #ff7800;}
-.header .nav ul li.home {margin-right: 3px;}
-.header .nav ul li.home a {width: 58px;}
-.header .nav ul li.home .current, .header .nav ul li.home:hover {background-position: 0 -35px;}
-.header .nav ul li.first .current, .header .nav ul li.first:hover {background-position: -61px -35px;}
-.header .nav ul li.last a {width: 97px;}
-.header .nav ul li.last .current, .header .nav ul li.last:hover {background-position: -441px -35px;}
-.header .hotline {position: absolute; right: 0; top: 2px; width: 184px; height: 42px; background: url("../images/banner_hotline.gif") no-repeat 0 0;}
-.header .qq-online {position: absolute; right: 0; top: 38px;}
-.menu {width: 100%; height: 45px; background: url(../images/bg_header.png) repeat-x 0 -66px;}
+.header .nav li {float: left; margin-right:1px;position: relative;}
+.header .nav a {display:inline-block; width:90px;height:32px; text-align: center; color: #fff; font:700 13px/32px "Microsoft YaHei";background-position:right -115px;}
+.header .nav a:hover,.header .nav .current {background-position:-100px -33px;text-decoration: none; color: #ff7800;}
+.header .nav .nav-first a:hover,.header .nav .nav-first .current {background-position: -61px -33px;}
+.header .nav .nav-home a {padding:0;width: 60px;}
+.header .nav .nav-home a:hover,.header .nav .nav-home .current{background-position: 0 -33px;}
+.header .icon-hot,.header .icon-new,.header .icon-flash{ display: block;position: absolute; left:0 ;top: -25px; width: 79px;height: 34px; z-index: 999;background: url("../images/wing.gif") no-repeat scroll 0 0 transparent; }
+.header .icon-new{ left:20px ;top: -5px; width: 21px;height: 14px; background-image: url("../images/new.gif"); }
+.header .icon-flash{ left:10px ;top: -15px; width: 58px;height: 35px;background-image: url("../images/flash_sales/star.gif"); }
+
+.header .hotline {position: absolute; right: 110px; top: 18px; width: 184px; height: 42px; background: url("../images/banner_hotline.gif") no-repeat 0 0;}
+.header .qq-online {position: absolute; right: 0; top:18px;}
+
+/*menu*/
+.menu {width: 100%; height: 45px; background-repeat:repeat-x;background-position: 0 -66px;}
 .menu .wrapper {padding-top: 8px;}
-.menu .search {float: left; _display: inline; padding-left: 250px; width: 512px;}
-.menu .search .search-input {border: #ff7800 1px solid; width: 206px;}
-.menu .search .btn-search {padding-left: 3px; height: 26px; line-height: 26px; background-position: -5px -2px; color: #fff; font-weight: 700; letter-spacing: 2px;}
-.menu .search .search-bd {float: left; _display: inline;}
-.menu .search .hot-keywords {float: left; _display: inline; padding-left: 10px; height: 26px; line-height: 26px; color: #e60000; width: 240px;}
-.menu .search .hot-keywords a {margin-left: 5px; color: #e60000;}
-.menu .shopcart {float: right; position: relative; z-index: 10; padding-left: 40px; width: 170px; height: 30px; line-height: 28px; background: url("../images/bg_shopcart.gif") no-repeat right 0;}
+.menu .search {float: left;padding-left: 260px; width: 525px;}
+.menu .search .search-input {border:1px solid  #ffd100;height:20px; width: 206px;}
+.menu .search .btn-search {width:45px;height:26px;background-position:-241px -111px;color: #fff; letter-spacing: 2px;font: 700 12px/26px "Microsoft YaHei"; text-indent: -9999px;cursor: pointer;}
+.menu .search .search-bd {float: left; }
+.menu .search .hot-keywords {float: left; padding-left: 10px; height: 26px; line-height: 26px; color: #ff7800; width: 240px;}
+.menu .search .hot-keywords a {margin-left: 5px; color: #ff7800;}
+.menu .search .hot-keywords a:hover {color: #e60000;}
+.menu .shopcart {float: right; position: relative; z-index: 10; padding-left: 40px; width: 160px; height: 26px; line-height: 26px; background-position: -286px -111px;}
 .menu .shopcart a {margin-left:5px;color: #e60000; overflow: hidden; zoom: 1;}
 .menu .shopcart em {padding: 0 4px 0 2px; font-style: normal; }
-.menu .shopcart .balance {float: right; _display: inline; display: block; width: 80px; height: 28px;}
-.menu .shopcart .cart-list {position: absolute; right: 3px; top: 28px; border: 2px #f90 solid; padding: 0; background-color: #ffedb5; color: #878787;}
+.menu .shopcart .checkOut {padding-left:14px;width: 60px; height: 26px;color: #fff;font-weight:700;text-decoration: none;}
+.menu .shopcart .cart-list {position: absolute; right: 0; top: 26px; border: 2px #f90 solid; padding: 0; background-color: #ffedb5; color: #878787;}
 .menu .shopcart .cart-list a {color: #878787;}
 .menu .shopcart .cart-list a:hover {color: #e60000;}
-.menu .shopcart .cart-list dl {width: 300px; padding: 5px; border-bottom: 1px dotted #ccc; overflow: hidden; zoom: 1; background: #fff;}
-.menu .shopcart .cart-list dl dt {float: left; _display: inline;}
-.menu .shopcart .cart-list dl dd {float: left; _display: inline;}
+.menu .shopcart .cart-list dl {width: 300px; padding: 5px; border-bottom: 1px dotted #e0e0e0; overflow: hidden; zoom: 1; background: #fff;}
+.menu .shopcart .cart-list dl dt {float: left;}
+.menu .shopcart .cart-list dl dd {float: left;}
 .menu .shopcart .cart-list dl dd.name {width: 180px;}
-.menu .shopcart .cart-list dl dd.action {float: right; _display: inline; color: #e60000; line-height: 1.6;}
+.menu .shopcart .cart-list dl dd.action {float: right; color: #e60000; line-height: 1.6;}
 .menu .shopcart .cart-list dl dd.action span {padding-right: 2px;}
 .menu .shopcart .cart-list dl dd.action .ride {color: #878787;}
 .menu .shopcart .cart-list .amount {text-align: right; padding: 5px; overflow: hidden; zoom: 1; width: 300px;}
 .menu .shopcart .cart-list .amount span {color: #e60000; font-weight: 700;}
-.menu .shopcart .cart-list .amount .btn_m {margin: 0 5px; display: inline; float: right;}
+.menu .shopcart .cart-list .amount .btn_m {float: right;margin: 0 5px; }
 .menu .shopcart .cart-list .amount a {color: #fff; height: auto;}
 .menu .shopcart .cart-list .amount a:hover {color: #ff9;}
 
 /*category*/
-.category {float: left; display: inline; margin-top: -38px; position: relative; z-index: 900;}
-.category .category-hd {width: 240px; height: 36px; background: url("../images/category/category_hd.gif") no-repeat scroll 0 0 transparent; font-size: 14px; line-height: 36px; text-align: center;}
+.category {float: left; display: inline; margin-top: -45px; position: relative; z-index: 900;}
+.category .category-hd {width: 240px; height: 42px; background-position:0 -112px; background-color:#ff7800;font-size: 14px; line-height: 38px; }
 .category .category-hd h2 {font-weight: 700;}
-.category .category-hd h2 a {display: block; width: 240px; height: 36px; color: #ff7800; text-decoration: none;}
-.category .category-bd {position:absolute;top:36px;left:0;z-index:910; padding-top: 5px; border: #ffdd9b 1px solid; border-top: 0 none; width: 238px; height: 943px; background: #fffbe1;}
+.category .category-hd h2 a {display: block;padding-left:46px; color: #fff; text-decoration: none;}
+.category .category-bd {position:absolute;top:42px;left:0;z-index:910; padding-top: 5px; border: #ffdd9b 1px solid; border-top: 0 none; width: 238px; height: 943px; background: #fffbe1;}
 .category .search-quick {position: relative; z-index: 3; height: 30px; cursor: pointer; background: #ffab24 url("../images/category/arrow.gif") no-repeat -6px 2px;}
-.category .search-quick .search-title {color: #fff; font: 800 14px/30px "Microsoft YaHei", "SimHei";}
+.category .search-quick .search-title {color: #fff; font: 800 14px/30px "Microsoft YaHei";}
 .category .search-quick .search-title a {margin-left: 15px; font-size: 12px; color: #fff;}
 .category .search-quick .search-title strong {margin-left: 15px; padding-left: 30px; background: url("../images/category/icon_search.gif") no-repeat 0 -5px;}
 .category .search-quick .search-area {position: absolute; top: 0; left: 238px; z-index: 31; border: 2px #ff7800 solid; padding: 0 10px; width: 210px; background-color: #fff; color: #878787;}
@@ -151,7 +155,7 @@ input {border: 0 none; vertical-align: middle;}
 .category .search-quick .search-area .search-list .field {float: right; _display: inline; width: 180px; line-height: 20px; padding-bottom: 5px; text-align: center;}
 .category .search-quick .search-area .search-list label {float: left; _display: inline; width: 40px;}
 .category .search-quick .search-area .search-list select {float: right; _display: inline; width: 128px;}
-.category .search-quick .search-area .btn-quick {float: right; _display: inline; margin-top: 5px; width: 90px; height: 22px; background: url("../images/category/btn_quick.jpg") no-repeat 0 0; cursor: pointer;}
+.category .search-quick .search-area .btn-quick {float: right;  margin-top: 5px; width: 90px; height: 22px; background: url("../images/category/btn_quick.jpg") no-repeat 0 0; cursor: pointer;}
 .category .item {float: left; _display: inline; position: relative; z-index: 920; margin: 0 2px; width: 234px; display: inline; border-bottom: #fec9a1 1px solid;}
 .category .item a {color: #000;}
 .category .item a:hover {color: #ff7800;}
