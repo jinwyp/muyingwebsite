@@ -14,27 +14,26 @@
 .mod-menu a { padding: 0 10px;margin-top:-6px;display:block;line-height: 24px;color: #4d4d4d;}
 .mod-menu a:hover,.mod-menu .menu-now{color: #ff7800;text-decoration: none; border-bottom: 2px solid #ff7800;}
 .mod-menu .icon {float: left;height: 15px; margin: 5px 5px 0 0; background-image: url("../images/flash_sales/bg_flash_sales.png");background-repeat: no-repeat; display: inline-block;overflow: hidden;}
-.mod-menu .menu-bbfs .icon {background-position: -160px -180px; width: 15px;}
-.mod-menu .menu-bbfs:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
-.mod-menu .menu-wjts .icon {background-position: -175px -180px; width: 16px;}
-.mod-menu .menu-wjts:hover .icon, .mod-menu .menu-wjts .icon-now {background-position: -175px -196px;}
-.mod-menu .menu-ccqj .icon {background-position: -192px -180px; width: 17px;}
-.mod-menu .menu-ccqj:hover .icon, .mod-menu .menu-ccqj .icon-now {background-position: -192px -196px;}
-.mod-menu .menu-mama .icon {background-position: -209px -180px; width: 11px;}
-.mod-menu .menu-mama:hover .icon, .mod-menu .menu-mama .icon-now {background-position: -209px -196px;}
-.mod-menu .menu-bbyp .icon {background-position: -220px -180px; width: 19px;}
-.mod-menu .menu-bbyp:hover .icon, .mod-menu .menu-bbyp .icon-now {background-position: -220px -196px;}
-
-.mod-menu .menu-3 .icon {background-position: -160px -180px; width: 15px;}
-.mod-menu .menu-3:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
-.mod-menu .menu-9 .icon {background-position: -175px -180px; width: 16px;}
-.mod-menu .menu-9:hover .icon, .mod-menu .menu-wjts .icon-now {background-position: -175px -196px;}
-.mod-menu .menu-7 .icon {background-position: -192px -180px; width: 17px;}
-.mod-menu .menu-7:hover .icon, .mod-menu .menu-ccqj .icon-now {background-position: -192px -196px;}
-.mod-menu .menu-11 .icon {background-position: -209px -180px; width: 11px;}
-.mod-menu .menu-11:hover .icon, .mod-menu .menu-mama .icon-now {background-position: -209px -196px;}
-.mod-menu .menu-6 .icon {background-position: -220px -180px; width: 19px;}
-.mod-menu .menu-6:hover .icon, .mod-menu .menu-bbyp .icon-now {background-position: -220px -196px;}
+.mod-menu .menu-2 .icon {background-position: -208px -210px; width: 11px;}
+.mod-menu .menu-2:hover .icon, .mod-menu .menu-2 .icon-now {background-position: -208px -225px;}
+.mod-menu .menu-3 .icon {background-position: -160px -178px; width: 15px;}
+.mod-menu .menu-3:hover .icon, .mod-menu .menu-3 .icon-now {background-position: -160px -194px;}
+.mod-menu .menu-5 .icon {background-position: -177px -210px; width: 13px;}
+.mod-menu .menu-5:hover .icon, .mod-menu .menu-5 .icon-now {background-position: -177px -225px;}
+.mod-menu .menu-6 .icon {background-position: -220px -178px; width: 19px;}
+.mod-menu .menu-6:hover .icon, .mod-menu .menu-6 .icon-now {background-position: -220px -194px;}
+.mod-menu .menu-7 .icon {background-position: -192px -178px; width: 17px;}
+.mod-menu .menu-7:hover .icon, .mod-menu .menu-7 .icon-now {background-position: -192px -194px;}
+.mod-menu .menu-9 .icon {background-position: -175px -178px; width: 16px;}
+.mod-menu .menu-9:hover .icon, .mod-menu .menu-9 .icon-now {background-position: -175px -194px;}
+.mod-menu .menu-11 .icon {background-position: -209px -178px; width: 11px;}
+.mod-menu .menu-11:hover .icon, .mod-menu .menu-11 .icon-now {background-position: -209px -194px;}
+.mod-menu .menu-441 .icon {background-position: -160px -210px; width: 17px;}
+.mod-menu .menu-441:hover .icon, .mod-menu .menu-441 .icon-now {background-position: -160px -225px;}
+.mod-menu .menu-442 .icon {background-position: -190px -210px; width: 18px;}
+.mod-menu .menu-442:hover .icon, .mod-menu .menu-442 .icon-now {background-position: -190px -225px;}
+.mod-menu .menu-443 .icon {background-position: -218px -210px; width: 14px;}
+.mod-menu .menu-443:hover .icon, .mod-menu .menu-443 .icon-now {background-position: -218px -225px;}
 
 /*mod-brand-onsell*/
 .mod-brand-onsell {margin-top:10px; background-color: #fff;box-shadow: 0 1px 3px #ccc;  }
@@ -85,10 +84,10 @@
 .commitment-box li {padding:10px; border-top:1px solid #f4f4f4; font-size:14px; font-weight:400;}
 .commitment-box li em {color: #f90; font-style:normal; }
 .commitment-box .icon {float:left; margin-top:-2px; width:24px;height:24px;margin-right:10px;}
-.commitment-box .icon-time {background-position: -160px -214px;}
-.commitment-box .icon-free {background-position: -184px -214px;}
-.commitment-box .icon-return {background-position: -208px -214px;}
-.commitment-box .icon-tel {background-position: -232px -214px;}
+.commitment-box .icon-time {background-position: -180px -243px;}
+.commitment-box .icon-free {background-position: -204px -243px;}
+.commitment-box .icon-return {background-position: -180px -267px;}
+.commitment-box .icon-tel {background-position: -204px -267px;}
 .commitment-box .hotline { padding:0 0 0 34px;color: #bababa;font-size:11px;}
 
 /*popup*/
