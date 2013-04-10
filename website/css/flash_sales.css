@@ -24,6 +24,18 @@
 .mod-menu .menu-mama:hover .icon, .mod-menu .menu-mama .icon-now {background-position: -209px -196px;}
 .mod-menu .menu-bbyp .icon {background-position: -220px -180px; width: 19px;}
 .mod-menu .menu-bbyp:hover .icon, .mod-menu .menu-bbyp .icon-now {background-position: -220px -196px;}
+
+.mod-menu .menu-3 .icon {background-position: -160px -180px; width: 15px;}
+.mod-menu .menu-3:hover .icon, .mod-menu .menu-bbfs .icon-now {background-position: -160px -196px;}
+.mod-menu .menu-9 .icon {background-position: -175px -180px; width: 16px;}
+.mod-menu .menu-9:hover .icon, .mod-menu .menu-wjts .icon-now {background-position: -175px -196px;}
+.mod-menu .menu-7 .icon {background-position: -192px -180px; width: 17px;}
+.mod-menu .menu-7:hover .icon, .mod-menu .menu-ccqj .icon-now {background-position: -192px -196px;}
+.mod-menu .menu-11 .icon {background-position: -209px -180px; width: 11px;}
+.mod-menu .menu-11:hover .icon, .mod-menu .menu-mama .icon-now {background-position: -209px -196px;}
+.mod-menu .menu-6 .icon {background-position: -220px -180px; width: 19px;}
+.mod-menu .menu-6:hover .icon, .mod-menu .menu-bbyp .icon-now {background-position: -220px -196px;}
+
 /*mod-brand-onsell*/
 .mod-brand-onsell {margin-top:10px; background-color: #fff;box-shadow: 0 1px 3px #ccc;  }
 .mod-brand-onsell .fs-brand-content {padding-bottom:10px;height: 50px;overflow: hidden;}
