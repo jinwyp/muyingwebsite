@@ -34,7 +34,7 @@
       <file leaf-file-name="flash_sales.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flash_sales.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1039" column="60" selection-start="48211" selection-end="48211" vertical-scroll-proportion="0.52116084">
+            <state line="1039" column="60" selection-start="48211" selection-end="48211" vertical-scroll-proportion="0.022974607">
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="75" selection-start="3791" selection-end="3791" vertical-scroll-proportion="-0.6785714">
+            <state line="66" column="75" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,7 +52,7 @@
       <file leaf-file-name="flash_sales_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1038" column="60" selection-start="40383" selection-end="40384" vertical-scroll-proportion="-12.607142">
+            <state line="1038" column="60" selection-start="40383" selection-end="40384" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -275,7 +275,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1913" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -396,49 +396,43 @@
         <state line="1" column="0" selection-start="5059" selection-end="5106" vertical-scroll-proportion="0.022222223" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/my/flash_sales.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="12" selection-start="889" selection-end="889" vertical-scroll-proportion="0.562212" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="37" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.11111111" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/my/category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="42" selection-start="355" selection-end="368" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/my/flash_sales.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="889" selection-end="889" vertical-scroll-proportion="0.562212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="75" selection-start="3791" selection-end="3791" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="37" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.11111111">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="70" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.0">
+        <state line="66" column="75" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flash_sales_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1038" column="60" selection-start="40383" selection-end="40384" vertical-scroll-proportion="-12.607142">
+        <state line="1038" column="60" selection-start="40383" selection-end="40384" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/flash_sales.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="70" selection-start="1803" selection-end="1803" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flash_sales.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1039" column="60" selection-start="48211" selection-end="48211" vertical-scroll-proportion="0.52116084">
+        <state line="1039" column="60" selection-start="48211" selection-end="48211" vertical-scroll-proportion="0.022974607">
           <folding />
         </state>
       </provider>
