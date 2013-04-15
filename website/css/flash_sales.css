@@ -118,10 +118,10 @@
 .fs-compositor li span {float:left;cursor: pointer;}
 .fs-compositor li label,.filter-field{padding-left:5px; vertical-align: middle;}
 .fs-compositor .sort-field { width: 7px;height: 16px;margin-left: 6px;overflow: hidden;}
-.fs-compositor .order-asc, .fs-compositor .order-desc {float:left; width: 7px; height: 7px;overflow: hidden;zoom:1;}
-.fs-compositor .sort-field .order-desc {background-position: -228px -163px;margin-top: 2px;}
+.fs-compositor .sort-field span {float:left; width: 7px; height: 7px;overflow: hidden;zoom:1;}
+.fs-compositor .sort-field .order-desc {background-position: -214px -163px;margin-top: 2px;}
 .fs-compositor .sort-field .order-asc {background-position: -221px -163px;_background-position: -220px -163px;}
-.fs-compositor .sort-asc .order-desc {background-position: -214px -163px; }
+.fs-compositor .sort-desc .order-desc {background-position: -228px -163px; }
 .fs-compositor .sort-asc .order-asc {background-position: -235px -163px;_background-position: -234px -163px;}
 
 .fs-detail-list { display: inline-block;overflow: hidden;}
