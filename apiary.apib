@@ -1,0 +1,183 @@
+FORMAT: 1A
+
+# 麻辣堂
+API 地址：http://app.api.xx.com/mlt
+
+# Group APP
+APP调用的服务
+
+## Notes [/notes/{id}]
+
++ Parameters
+    + id (int) ... 笔记主键ID
+
++ Model (application/hal+json)
+
+    + Headers
+
+            SystemType:4
+            SystemKey:239847234
+            ToKen:xxxx
+            AreaId:9
+            UserIdentity:1357
+            Uid:aa
+            UserId:1
+            UserCode:123
+            UserLabels:[{GroupId:1,Values:[1,2]}]
+            Source:1
+            ClientVersion:'1.0'
+
+    + Body
+
+            {
+                "_links": {
+                    "self": { "href": "/gists/42" },
+                    "star": { "href": "/gists/42/star" },
+                },
+                "id": "42",
+                "created_at": "2014-04-14T02:15:15Z",
+                "description": "Description of Gist",
+                "content": "String contents"
+            }
+
+
+## 配置 [/getconfig]
+### 获取麻辣堂配置 [POST]
+
++ Request (application/json)
+        
+    + Headers
+    
+            SystemType:4
+            SystemKey:239847234
+            ToKen:xxxx
+            AreaId:9
+            UserIdentity:1357
+            Uid:aa
+            UserId:1
+            UserCode:123
+            UserLabels:[{GroupId:1,Values:[1,2]}]
+            Source:1
+            ClientVersion:'1.0'
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+                Success:true,
+                StatusCode:100,
+                ServerTime:'2015-1-1 12:00',
+                Data:{
+                    ActivityCount:4,
+                    TopicCount:4
+                }
+            }
+
+
+## 消息 [/getmsgtotla]
+### 获取未读消息 [POST]
++ Request (application/json)
+
+    + Headers
+    
+            SystemType:4
+            SystemKey:239847234
+            ToKen:xxxx
+            AreaId:9
+            UserIdentity:1357
+            Uid:aa
+            UserId:1
+            UserCode:123
+            UserLabels:[{GroupId:1,Values:[1,2]}]
+            Source:1
+            ClientVersion:'1.0'
+            
++ Response 200 (application/json)
+
+    + Parameters
+            + userid (int) ... 用户ID
+            
+    + Body
+    
+            {
+                Success:true,
+                StatusCode:100,
+                ServerTime:'2015-1-1 12:00',
+                Data:{
+                    Count:10
+                }
+            }
+
+## 笔记 [/notes]
+### 获取笔记明细 [POST]
++ Request (application/json)
+
+    + Headers
+        
+            SystemType:4
+            SystemKey:239847234
+            ToKen:xxxx
+            AreaId:9
+            UserIdentity:1357
+            Uid:aa
+            UserId:1
+            UserCode:123
+            UserLabels:[{GroupId:1,Values:[1,2]}]
+            Source:1
+            ClientVersion:'1.0'
+            
+    + Body
+    
+            {
+                NotesId:1
+            }
+
++ Response 200 (application/json)
+
+    + Body
+            
+            {
+                Success:true,
+                StatusCode:100,
+                ServerTime:'2015-1-1 12:00',
+                Data:{
+                    Id:1,
+                    Title:'',
+                    Content:'',
+                    TopicList:[{Id:1,Title:'',Id:2,Title:''}],
+                    CreateTime:'2015-1-1 12:00',
+                    PraiseCount:10,
+                    TagList:[{Id:1,Title:'xx',Type:1,X:12,Y:39},{Id:1,Title:'xx',Type:1,X:12,Y:39}]//type=1 品牌 type=2 商品
+                    UserId:12,
+                    UserNickName:'小张'
+                }
+            }
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
